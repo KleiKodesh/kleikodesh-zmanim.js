@@ -863,6 +863,46 @@
       ]
     }
   },
+  "tzeitRt90": {
+    "he": {
+      "title": "רבנו תם (90 דקות)",
+      "text": "ארבעה מילין אחרי השקיעה במיל של 22.5 דקות, 90 דקות קבועות.",
+      "sources": [
+        "שבת לה ע״א, תוספות ד״ה תרי",
+        "שו״ע או״ח רסא, ב",
+        "אגרות משה או״ח ד, סב"
+      ]
+    },
+    "en": {
+      "title": "Rabbeinu Tam (90 minutes)",
+      "text": "Four mil after sunset at 22.5 minutes a mil, as 90 fixed minutes.",
+      "sources": [
+        "Tosafot Shabbat 35a",
+        "Shulchan Aruch OC 261:2",
+        "Igrot Moshe OC 4:62"
+      ]
+    }
+  },
+  "tzeitRt96": {
+    "he": {
+      "title": "רבנו תם (96 דקות)",
+      "text": "ארבעה מילין אחרי השקיעה במיל של 24 דקות, 96 דקות קבועות. שולחן ערוך הרב פוסק כרבנו תם ומיל של 24 דקות הוא העיקר.",
+      "sources": [
+        "שולחן ערוך הרב או״ח רסא, ה",
+        "שולחן ערוך הרב או״ח תנט, י (מיל 24 דקות העיקר)",
+        "אגרות משה או״ח ד, סב (המחמיר 96)"
+      ]
+    },
+    "en": {
+      "title": "Rabbeinu Tam (96 minutes)",
+      "text": "Four mil after sunset at 24 minutes a mil, as 96 fixed minutes. The Shulchan Aruch HaRav rules like Rabbeinu Tam, with a 24-minute mil as the main view.",
+      "sources": [
+        "Shulchan Aruch HaRav OC 261:5",
+        "Shulchan Aruch HaRav OC 459:10 (24-minute mil the main view)",
+        "Igrot Moshe OC 4:62 (strictest 96)"
+      ]
+    }
+  },
   "sofShmaMga19": {
     "he": {
       "title": "סוף זמן קריאת שמע (מגן אברהם, 19.8 מעלות)",
@@ -1502,6 +1542,24 @@
         "Community custom (a fixed margin after sunset; no single published source)",
         "Shabbat 34b (twilight is three quarters of a mil, Rabba in the name of Shmuel)",
         "Igrot Moshe, Orach Chaim 1:24 (Rav Moshe Feinstein: 50 minutes in New York) (as cited)"
+      ]
+    }
+  },
+  "tzeit13p5z": {
+    "he": {
+      "title": "צאת הכוכבים (13.5 דקות זמניות)",
+      "text": "שלשה רבעי מיל אחרי השקיעה בדקות זמניות, כפסק הרב עובדיה יוסף.",
+      "sources": [
+        "קיצור שולחן ערוך ילקוט יוסף או״ח, הלכות שבת (צאת הכוכבים 13.5 דקות זמניות אחרי השקיעה הנראית)",
+        "שבת לד ע״ב"
+      ]
+    },
+    "en": {
+      "title": "Nightfall (13.5 seasonal minutes)",
+      "text": "Three quarters of a mil after sunset in seasonal minutes, as ruled by Rav Ovadia Yosef.",
+      "sources": [
+        "Kitzur Yalkut Yosef OC, Hilchot Shabbat (nightfall 13.5 seasonal minutes after the visible sunset)",
+        "Shabbat 34b"
       ]
     }
   },

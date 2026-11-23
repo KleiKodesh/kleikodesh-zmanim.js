@@ -520,6 +520,30 @@ The sun 16.1 degrees below the horizon in the evening, its depth 72 minutes afte
 - Tosafot Shabbat 35a
 - Shulchan Aruch OC 261:2 with Rema
 
+<a id="tzeitRt90"></a>
+
+## Rabbeinu Tam (90 minutes)
+
+Four mil after sunset at 22.5 minutes a mil, as 90 fixed minutes.
+
+**Sources:**
+
+- Tosafot Shabbat 35a
+- Shulchan Aruch OC 261:2
+- Igrot Moshe OC 4:62
+
+<a id="tzeitRt96"></a>
+
+## Rabbeinu Tam (96 minutes)
+
+Four mil after sunset at 24 minutes a mil, as 96 fixed minutes. The Shulchan Aruch HaRav rules like Rabbeinu Tam, with a 24-minute mil as the main view.
+
+**Sources:**
+
+- Shulchan Aruch HaRav OC 261:5
+- Shulchan Aruch HaRav OC 459:10 (24-minute mil the main view)
+- Igrot Moshe OC 4:62 (strictest 96)
+
 <a id="sofShmaMga19"></a>
 
 ## Latest Shema (Magen Avraham, 19.8 degrees)
@@ -898,6 +922,17 @@ Nightfall by Rav Yechiel Michel Tucazinsky's calculation: the sun 6.45 degrees b
 - Community custom (a fixed margin after sunset; no single published source)
 - Shabbat 34b (twilight is three quarters of a mil, Rabba in the name of Shmuel)
 - Igrot Moshe, Orach Chaim 1:24 (Rav Moshe Feinstein: 50 minutes in New York) (as cited)
+
+<a id="tzeit13p5z"></a>
+
+## Nightfall (13.5 seasonal minutes)
+
+Three quarters of a mil after sunset in seasonal minutes, as ruled by Rav Ovadia Yosef.
+
+**Sources:**
+
+- Kitzur Yalkut Yosef OC, Hilchot Shabbat (nightfall 13.5 seasonal minutes after the visible sunset)
+- Shabbat 34b
 
 <a id="beinHashmashotYereim"></a>
 

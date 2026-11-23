@@ -15,7 +15,7 @@ export const ZMAN_NAMES = [
   'minchaKetanaHarari40', 'minchaKetanaHarari25', 'plag', 'plagFixed', 'plagHillel', 'plagBaalHatanya', 'plagHarari40', 'plagHarari25', 'plagAsym', 'plagMga', 'plagMga72z', 'plagMga19', 'plagMga90z', 'plagMga90', 'plagMga120', 'plagAlot90Tzeit645', 'plagAlot72Tzeit645',
   'candles40', 'candles30', 'candles22', 'candles20', 'candles18', 'sunsetTerrain', 'sunset', 'sunsetElevated', 'sunsetBaalHatanya',
   'tzeitGeonim', 'tzeitGeonimVisible', 'tzeitBaalHatanya', 'tzeit13p5', 'tzeit18', 'tzeit18Sun', 'tzeit20', 'tzeit645', 'tzeit7083', 'tzeit', 'tzeitVisible', 'tzeit24', 'tzeit30',
-  'tzeit40', 'tzeit50', 'beinHashmashotYereim', 'beinHashmashotRt', 'tzeitRt72', 'tzeitRt72Zmanis', 'tzeitRt16', 'tzeit90z',
+  'tzeit40', 'tzeit50', 'tzeit13p5z', 'beinHashmashotYereim', 'beinHashmashotRt', 'tzeitRt72', 'tzeitRt72Zmanis', 'tzeitRt16', 'tzeitRt90', 'tzeitRt96', 'tzeit90z',
 ] as const
 
 export type ZmanName = typeof ZMAN_NAMES[number]
@@ -33,7 +33,7 @@ export const ROUNDING: Readonly<Record<ZmanName, Rounding>> = {
   chatzot: 'nearest', minchaGedola: 'up', minchaGedola30: 'up', minchaKetana: 'up', plag: 'up', plagMga: 'up',
   sunset: 'down', sunsetElevated: 'down', sunsetTerrain: 'down', tzeitGeonim: 'up', tzeitGeonimVisible: 'up', tzeit7083: 'up', tzeit18Sun: 'up', tzeit: 'up', tzeitVisible: 'up',
   candles40: 'down', candles30: 'down', candles22: 'down', candles20: 'down', candles18: 'down',
-  tzeitRt72: 'up', tzeitRt72Zmanis: 'up', tzeitRt16: 'up',
+  tzeitRt72: 'up', tzeitRt72Zmanis: 'up', tzeitRt16: 'up', tzeitRt90: 'up', tzeitRt96: 'up', tzeit13p5z: 'up',
   alot90z: 'up', alot72z: 'up', tzeit90z: 'up',
   sofShmaMga120: 'down', sofShmaMga90: 'down', sofShmaMga19: 'down', sofShmaMga90z: 'down', sofShmaMga72z: 'down',
   sofTfillaMga120: 'down', sofTfillaMga90: 'down', sofTfillaMga19: 'down', sofTfillaMga90z: 'down', sofTfillaMga72z: 'down',
@@ -59,7 +59,7 @@ export const ROUNDING: Readonly<Record<ZmanName, Rounding>> = {
 export const HORIZON_ZMANIM: ReadonlySet<ZmanName> = new Set<ZmanName>(['sunrise', 'sunset', 'sunriseElevated', 'sunsetElevated',
   'sofShmaMga', 'sofShmaGra', 'sofTfillaMga', 'sofTfillaGra', 'minchaGedola', 'minchaGedola30', 'minchaKetana', 'plag', 'plagMga',
   'alot90Visible', 'alotVisible', 'misheyakirVisible', 'tzeitGeonimVisible', 'tzeitVisible',
-  'candles40', 'candles30', 'candles22', 'candles20', 'candles18', 'tzeitRt72', 'tzeitRt72Zmanis', 'sunriseTerrain', 'sunsetTerrain',
+  'candles40', 'candles30', 'candles22', 'candles20', 'candles18', 'tzeitRt72', 'tzeitRt72Zmanis', 'tzeitRt90', 'tzeitRt96', 'tzeit13p5z', 'sunriseTerrain', 'sunsetTerrain',
   'alot90z', 'alot72z', 'tzeit90z', 'sofShmaMga120', 'sofShmaMga90', 'sofShmaMga90z', 'sofShmaMga72z', 'sofTfillaMga120', 'sofTfillaMga90',
   'sofTfillaMga90z', 'sofTfillaMga72z', 'plagMga120', 'plagMga90', 'plagMga90z', 'plagMga72z',
   'tzeit13p5', 'tzeit18', 'tzeit20', 'tzeit24', 'tzeit30', 'tzeit40', 'tzeit50', 'beinHashmashotRt',
@@ -157,21 +157,41 @@ export function horizonZenith(place: Coordinates, date: CivilDate, fromHeight = 
 }
 
 // Depressions of the sun's centre below the geometric horizon, degrees.
+/**
+ * Dawn 72 minutes (4 mil of 18 min) before sunrise, as the sun's depth at that time in Jerusalem at the equinox.
+ * Pesachim 94a (4 mil, R. Yehuda); Biur Halacha OC 89:1 ("sha'a vechomesh sha'a" before netz, per the Rambam) - checked in the text.
+ */
 const ALOT = 16.1
+/** Dawn 90 minutes (5 mil of 18 min). Pesachim 93b; SA OC 459:2 and Mishna Berura 459:15 (mil = 18 min). */
 const ALOT_90 = 19.8
+/** Misheyakir (earliest tallit and tefillin): Berachot 9b; SA OC 18:3. The angles are accepted estimates (about 50 / 48 / 44 min). */
 const MISHEYAKIR = 11.5
 const MISHEYAKIR_11 = 11
 const MISHEYAKIR_10_2 = 10.2
+/** Three small stars (about 36 min): Biur Halacha OC 293:2 ("three small stars") - checked in the text; the angle is an estimate. */
 const TZEIT = 8.5
 /** Three medium stars (an observational estimate), 7.083 deg. */
 const TZEIT_7083 = 7.083
+/**
+ * The Geonim: 3/4 mil (13.5 min) after sunset. Shabbat 34b; SA OC 261:2. Rav Ovadia Yosef rules 13.5 seasonal minutes after
+ * the visible sunset (Kitzur Yalkut Yosef OC, Hilchot Shabbat) - checked in the text; that is the tzeit13p5z line.
+ */
 const TZEIT_GEONIM = 3.7
 /** Rav Yaakov Moshe Hillel's nightfall for the afternoon zmanim, 3.8 deg. */
 const TZEIT_HILLEL = 3.8
-/** Misheyakir 7.65 deg (Igrot Moshe; Rav Yaakov Kamenetsky) and 12.85 deg (Birur Halacha OC 18, time of need). */
+/**
+ * Misheyakir 7.65 deg (about 36 min): Igrot Moshe OC 4:6 ("about 35, perhaps 40 minutes before netz") - checked in the text;
+ * Rav Yaakov Kamenetsky, Zmanei Yisrael p. 117 (as cited).
+ * 12.85 deg (about 57 min): Rav Binyamin Zilber, Birur Halacha OC 18, for a time of need (as cited).
+ */
 const MISHEYAKIR_7_65 = 7.65
 const MISHEYAKIR_12_85 = 12.85
-/** Baal HaTanya: netz / shkia amiti at the sun's centre 1.583 deg below the true horizon; dawn 16.9 deg; nightfall 6 deg. */
+/**
+ * Baal HaTanya (Chabad): netz / shkia amiti at the sun's centre 1.583 deg below the true horizon; dawn 16.9 deg; nightfall 6 deg
+ * (Siddur of the Baal HaTanya; chabad.org aid 3209349 - as cited; the Siddur is not in the local
+ * library). Note: Shulchan Aruch HaRav OC 261:5 rules like Rabbeinu Tam for the end of Shabbat (4 mil; a mil of 24 min is the
+ * main view, 18 min to be strict - OC 459:10) and OC 89:1 puts dawn 4 mil before netz - checked in the text; see tzeitRt96.
+ */
 const BAAL_HATANYA_HORIZON = 1.583
 const ALOT_BAAL_HATANYA = 16.9
 const TZEIT_BAAL_HATANYA = 6
@@ -425,6 +445,10 @@ export function zmanInstants(place: Coordinates, date: CivilDate, which: readonl
       case 'candles18': ms = today.sunset() - 18 * MINUTE_MS; break
       // Rabbeinu Tam: four mil after sunset (Tosafot Shabbat 35a, from Pesachim 94a), 72 min at 18 min a mil; SA OC 261:2.
       case 'tzeitRt72': ms = today.sunset() + 72 * MINUTE_MS; break
+      // Rabbeinu Tam 4 mil of 22.5 / 24 min: Igrot Moshe OC 4:62 (72, strictest 96); Shulchan Aruch HaRav OC 261:5 with
+      // OC 459:10 (mil of 24 min the main view) - checked in the text.
+      case 'tzeitRt90': ms = today.sunset() + 90 * MINUTE_MS; break
+      case 'tzeitRt96': ms = today.sunset() + 96 * MINUTE_MS; break
       // The same 72 as seasonal minutes: a tenth of the sunrise..sunset day (12 + 1.2 temporal hours).
       case 'tzeitRt72Zmanis': ms = today.gra(13.2); break
       // The same by degrees: the sun 16.1 deg below, its depth 72 minutes after sunset at the Jerusalem equinox.
@@ -458,11 +482,15 @@ export function zmanInstants(place: Coordinates, date: CivilDate, which: readonl
       case 'tzeit13p5': ms = today.sunset() + 13.5 * MINUTE_MS; break
       case 'tzeit18': ms = today.sunset() + 18 * MINUTE_MS; break
       case 'tzeit18Sun': ms = today.set(G + TZEIT_18_SUN); break
+      // Baghdad custom: a third of an hour after sunset - Ben Ish Chai, Shana Rishona, Vayakhel 4, checked in the text.
       case 'tzeit20': ms = today.sunset() + 20 * MINUTE_MS; break
       case 'tzeit24': ms = today.sunset() + 24 * MINUTE_MS; break
       case 'tzeit30': ms = today.sunset() + 30 * MINUTE_MS; break
       case 'tzeit40': ms = today.sunset() + 40 * MINUTE_MS; break
+      // New York: "not less than 50 minutes" for the end of Shabbat - Igrot Moshe OC 4:62, checked in the text.
       case 'tzeit50': ms = today.sunset() + 50 * MINUTE_MS; break
+      // Rav Ovadia Yosef: 13.5 seasonal minutes (3/4 mil) after sunset - Kitzur Yalkut Yosef OC, checked in the text.
+      case 'tzeit13p5z': ms = today.gra(12 + 13.5 / 60); break
       // Rabbeinu Tam: twilight starts 3.25 mil after sunset (4 mil less its last 3/4 mil; SA OC 261:2), 58.5 min.
       case 'beinHashmashotRt': ms = today.sunset() + 58.5 * MINUTE_MS; break
       case 'misheyakir7p65': ms = today.rise(G + MISHEYAKIR_7_65); break
