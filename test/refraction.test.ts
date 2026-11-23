@@ -1,7 +1,6 @@
 import { describe, expect, it } from 'vitest'
-import { julianDay, utcSunrise, utcSunset } from '../src/noaa'
 import { horizonRefractionArcmin, standardPressure, standardTemperature } from '../src/refraction'
-import { computeZmanim, getMonthlyTemperatures, getPlace, horizonZenith, zmanim, zmanInstants } from '../src/index'
+import { computeZmanim, getMonthlyTemperatures, getPlace, horizonDip, horizonZenith, sunEventMs, zmanim, zmanInstants } from '../src/index'
 import { tsvByKey, useFileAssets } from './helpers'
 
 describe('refraction model', () => {
@@ -36,17 +35,15 @@ describe('sunrise/sunset vs the old fixed 34 arcmin', () => {
       let max = 0; let sum = 0; let n = 0
       for (let m = 1; m <= 12; m++) {
         const date = { year: 2026, month: m, day: 15 }
-        const jd = julianDay(2026, m, 15)
+        const midnight = Date.UTC(2026, m - 1, 15)
         const z = horizonZenith({ ...p, monthlyTemperatureC: temps }, date)
-        for (const f of [utcSunrise, utcSunset]) {
-          const d = Math.abs(f(jd, p.lat, p.lng, z) - f(jd, p.lat, p.lng, FIXED)) * 3600
+        for (const kind of [-1, 1] as const) {
+          const d = Math.abs(sunEventMs(p.lat, p.lng, midnight, z, kind) - sunEventMs(p.lat, p.lng, midnight, FIXED, kind)) / 1000
           max = Math.max(max, d); sum += d; n++
         }
         const withT = zmanInstants({ ...p, monthlyTemperatureC: temps }, date, ['alot', 'misheyakir', 'tzeit', 'chatzot'])
         const noT = zmanInstants({ lat: p.lat, lng: p.lng, tzid: p.tzid }, date, ['alot', 'misheyakir', 'tzeit', 'chatzot'])
         expect(withT).toEqual(noT)
-        // degree zmanim equal the raw NOAA result at their geometric zenith
-        expect(utcSunrise(jd, p.lat, p.lng, 90 + 16.1)).toBe(utcSunrise(jd, p.lat, p.lng, 90 + 16.1))
       }
       lines.push(`${key} elev=${p.elevation} T=[${temps.join(',')}] mean=${(sum / n).toFixed(1)}s max=${max.toFixed(1)}s`)
       expect(max).toBeLessThan(90)
@@ -67,5 +64,29 @@ describe('lazy climate.bin', () => {
   it('computeZmanim without data files still works (standard atmosphere)', () => {
     const r = computeZmanim({ lat: 31.77, lng: 35.22, tzid: 'Asia/Jerusalem', elevation: 786 }, { year: 2026, month: 6, day: 21 }, ['sunrise'])
     expect(r.sunrise).toMatch(/^05:3\d$/)
+  })
+})
+
+describe('sunrise/sunset from the place height', () => {
+  it('dip grows with height; elevated sunset is later, sunrise earlier', () => {
+    expect(horizonDip(0)).toBe(0)
+    expect(horizonDip(-400)).toBe(0)
+    expect(horizonDip(800)).toBeCloseTo(0.908, 2)
+    const place = { lat: 31.77, lng: 35.22, tzid: 'Asia/Jerusalem', elevation: 800 }
+    const date = { year: 2026, month: 6, day: 21 }
+    const t = zmanInstants(place, date, ['sunrise', 'sunriseElevated', 'sunset', 'sunsetElevated'])
+    const min = (a: bigint | null | undefined, b: bigint | null | undefined) => Number(a! - b!) / 6e10
+    expect(min(t.sunsetElevated, t.sunset)).toBeGreaterThan(3)
+    expect(min(t.sunsetElevated, t.sunset)).toBeLessThan(8)
+    expect(min(t.sunrise, t.sunriseElevated)).toBeGreaterThan(3)
+    const sea = zmanInstants({ ...place, elevation: 0 }, date, ['sunset', 'sunsetElevated'])
+    expect(sea.sunsetElevated).toBe(sea.sunset)
+  })
+  it('extra opinions are in order', () => {
+    const r = computeZmanim({ lat: 31.77, lng: 35.22, tzid: 'Asia/Jerusalem', elevation: 786 }, { year: 2026, month: 3, day: 20 },
+      ['alot90', 'alot', 'plag', 'plagMga', 'sunset', 'tzeitGeonim', 'tzeit'])
+    expect(r.alot90! < r.alot!).toBe(true)
+    expect(r.plag! < r.plagMga!).toBe(true)
+    expect(r.sunset! < r.tzeitGeonim! && r.tzeitGeonim! < r.tzeit!).toBe(true)
   })
 })

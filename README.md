@@ -26,19 +26,24 @@ time zone, or `null` where the sun never reaches that depression that day.
 Also exported: `zmanInstants` (exact instants as BigInt epoch nanoseconds), `formatTime`, `epochMs`, `placeCount`,
 `RECORD_SIZE`, and the types.
 
-### Definitions (all from sea-level sunrise/sunset, standard NOAA calculator)
+### Definitions (sun position: NREL SPA, see below; sunrise/sunset at sea level unless named Elevated)
 
 | name | definition | rounding |
 |---|---|---|
 | chatzotNight | solar midnight between yesterday's and today's chatzot | up |
+| alot90 | sun 19.8 deg below the horizon, morning (the "90 minutes" opinion) | up |
 | alot | sun 16.1 deg below the horizon, morning | up |
 | misheyakir | sun 11.5 deg below, morning | up |
+| sunriseElevated | sunrise over the horizon seen from the place's own elevation (dip + refraction) | up |
 | sunrise | sea-level sunrise | up |
 | sofShmaMga / sofTfillaMga | 3 / 4 temporal hours of the day from 72 min before sunrise to 72 min after sunset | down |
 | sofShmaGra / sofTfillaGra | 3 / 4 temporal hours of sunrise..sunset | down |
 | chatzot | solar noon | nearest |
 | minchaGedola / minchaKetana / plag | 6.5 / 9.5 / 10.75 temporal hours (GRA) | up |
+| plagMga | 10.75 temporal hours of the same MGA day as sofShmaMga (72 min before sunrise .. 72 min after sunset) | up |
 | sunset | sea-level sunset | down |
+| sunsetElevated | sunset below the horizon seen from the place's own elevation | down |
+| tzeitGeonim | sun 3.7 deg below, evening (Geonim, about 13.5 minutes) | up |
 | tzeit | sun 8.5 deg below, evening | up |
 
 ### Sunrise/sunset refraction (pressure and temperature)
@@ -60,9 +65,14 @@ Only sunrise, sunset and the zmanim built from them (GRA / MGA hours, mincha, pl
 and chatzot are geometric and unchanged. Only those zmanim load climate.bin, once.
 `computeZmanim` takes optional `elevation` and `monthlyTemperatureC` (12 values) in its place argument.
 
+Elevated sunrise/sunset: the horizon seen from height H lies lower by the geometric dip arccos(R / (R + H))
+(R = 6371 km mean Earth radius; no dip below sea level), and refraction is taken at that depressed apparent
+altitude with the same pressure/temperature model. Each place uses its own elevation from places.bin.
+
 Stringent rounding: a start rounds up, a deadline rounds down, chatzot to the nearest minute.
-Degree zmanim and chatzot equal the KitveiHakodesh app's former `dayZmanim()` exactly; sunrise/sunset-based ones differ
-only by the refraction change above.
+Against the KitveiHakodesh app's former `dayZmanim()` (NOAA, fixed 34' refraction; recorded in
+test/fixtures/app-zmanim.json) every printed value is within 1 minute: degree zmanim and chatzot differ only by the
+NOAA -> SPA change (seconds, which can flip a printed minute), sunrise/sunset-based ones also by the refraction model.
 
 ## Data
 
@@ -111,14 +121,16 @@ and equation numbers; see PROVENANCE.md.
 ```
 npm install
 npm run build     # assets + dist/
-npm test          # vitest; parity tests need the KitveiHakodesh app checked out next to this folder
+npm test          # vitest; parity uses the recorded fixture test/fixtures/app-zmanim.json
 ```
 
 ## Credits and licenses
 
-- Code: LGPL-2.1 (see LICENSE). The calculator and calendar logic are ported from an earlier zmanim library
-  ( LGPL-2.1, commit ), itself a port of an earlier zmanim library zmanim
-  by Eliyahu  (LGPL-2.1). The NOAA algorithm is after Jean Meeus, Astronomical Algorithms.
+- Code: LGPL-2.1 (see LICENSE). The sun position is the clean-room NREL SPA (src/spa.ts, PROVENANCE.md); the
+  former NOAA port is gone. src/zmanim.ts was rewritten around SPA, but it was written by editing the earlier
+  port and keeps its design (per-day lazy cache, MGA 72-minute day, temporal-hour arithmetic, antimeridian date
+  rule), so it is still treated as derived from an earlier zmanim library (
+  LGPL-2.1, commit ), itself a port of an earlier zmanim library zmanim by Eliyahu  (LGPL-2.1).
 - Place data: contains data from GeoNames (geonames.org), licensed under CC BY 4.0.
   Some neighbourhood coordinates come from Wikidata (CC0). Where Wikidata has no elevation, it comes from the
   Open-Meteo elevation API (CC BY 4.0), based on the Copernicus DEM GLO-90 (produced using Copernicus WorldDEM-90

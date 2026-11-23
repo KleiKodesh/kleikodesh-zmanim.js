@@ -1,4 +1,4 @@
-import { computeZmanim, ZMAN_NAMES } from './zmanim.js';
+import { computeZmanim, HORIZON_ZMANIM, ZMAN_NAMES } from './zmanim.js';
 /** Bytes per record in places.bin: lat int32, lng int32 (degrees x 1e5), elevation int16, tz index uint8. */
 export const RECORD_SIZE = 11;
 const SCALE = 1e5;
@@ -31,8 +31,6 @@ const placeCache = new Map();
 export const CLIMATE_RECORD_SIZE = 12;
 const NO_TEMPERATURE = -128;
 /** Zmanim that depend on sunrise/sunset (and so on refraction); only these load climate.bin. */
-const HORIZON_ZMANIM = new Set(['sunrise', 'sunset', 'sofShmaMga', 'sofShmaGra',
-    'sofTfillaMga', 'sofTfillaGra', 'minchaGedola', 'minchaKetana', 'plag']);
 function climateTable() {
     if (!climate) {
         climate = loader('climate.bin').then((buffer) => new Int8Array(buffer));

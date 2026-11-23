@@ -1,9 +1,7 @@
 // Tests for src/spa.ts against the paper's own published values (Reda & Andreas, NREL/TP-560-34302,
-// rev. January 2008): Table A4.1 (Julian Day) and Table A5.1 (the A.5 example). Plus a sanity
-// comparison with the library's NOAA sunrise/transit/sunset.
+// rev. January 2008): Table A4.1 (Julian Day) and Table A5.1 (the A.5 example). 
 import { describe, expect, it } from 'vitest'
-import { julianDay as noaaJulianDay, utcNoon, utcSunrise, utcSunset } from '../src/noaa.js'
-import { julianDay, spa, spaDay, spaEvent, spaSunTimes, SUNRISE_SUNSET_H0, sunMeanLongitude, zenithToH0 } from '../src/spa.js'
+import { julianDay, spa, spaDay, spaEvent, spaSunTimes, SUNRISE_SUNSET_H0, sunMeanLongitude } from '../src/spa.js'
 
 /** Day fraction -> seconds of day. */
 const sec = (f: number): number => f * 86400
@@ -89,41 +87,7 @@ describe('A.5 example (Table A5.1)', () => {
   })
 })
 
-describe('sanity vs NOAA (under ~1 minute)', () => {
-  const places: Array<[string, number, number]> = [
-    ['Jerusalem', 31.778, 35.2354],
-    ['New York', 40.7128, -74.006],
-    ['London', 51.5074, -0.1278],
-    ['Melbourne', -37.8136, 144.9631],
-    ['Denver', 39.742476, -105.1786],
-  ]
-  const dates: Array<[number, number, number]> = [[2024, 1, 15], [2025, 3, 20], [2025, 6, 21], [2026, 9, 23], [2026, 12, 21]]
-  for (const [name, lat, lng] of places) {
-    for (const [y, m, d] of dates) {
-      it(`${name} ${y}-${m}-${d}`, () => {
-        // The paper's A.2 returns the event that falls on the given UT date, while NOAA returns the
-        // event of the given date wrapped into 0..24 h. Where an event crosses UT midnight the two
-        // belong to neighbouring days, so the best of the UT dates d-1, d, d+1 is compared.
-        const days = [spaDay(y, m, d - 1), spaDay(y, m, d), spaDay(y, m, d + 1)]
-        const jd = noaaJulianDay(y, m, d)
-        const diffMin = (h0: number, kind: -1 | 0 | 1, noaaHours: number): number => {
-          let best = Infinity
-          for (const day of days) {
-            let diff = spaEvent(day, lat, lng, h0, kind, { iterations: 3 }) * 24 - noaaHours
-            diff -= 24 * Math.round(diff / 24)
-            best = Math.min(best, Math.abs(diff * 60))
-          }
-          return best
-        }
-        expect(diffMin(0, 0, utcNoon(jd, lng))).toBeLessThan(1)
-        expect(diffMin(SUNRISE_SUNSET_H0, -1, utcSunrise(jd, lat, lng, 90))).toBeLessThan(1)
-        expect(diffMin(SUNRISE_SUNSET_H0, 1, utcSunset(jd, lat, lng, 90))).toBeLessThan(1)
-        // any zenith: 16.1 degrees below the horizon (skipped where the sun never gets that low)
-        const noaaDawn = utcSunrise(jd, lat, lng, 106.1)
-        if (!Number.isNaN(noaaDawn)) expect(diffMin(zenithToH0(106.1), -1, noaaDawn)).toBeLessThan(1)
-      })
-    }
-  }
+describe('edge cases', () => {
   it('polar night gives NaN', () => {
     expect(spaEvent(spaDay(2025, 12, 21), 80, 0, SUNRISE_SUNSET_H0, -1)).toBeNaN()
   })

@@ -6,7 +6,7 @@ export interface Place {
     id: number;
     lat: number;
     lng: number;
-    /** Meters. The zmanim are sea-level; elevation only sets the air pressure for sunrise/sunset refraction. */
+    /** Meters. Sets the air pressure for refraction and the horizon dip of sunriseElevated/sunsetElevated. */
     elevation: number;
     tzid: string;
     rawOffsetMinutes: number;

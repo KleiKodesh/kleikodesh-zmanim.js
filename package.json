@@ -1,7 +1,7 @@
 {
   "name": "kleikodesh-zmanim",
   "version": "0.1.0",
-  "description": "Offline zmanim (NOAA, sea level) and a compact place list. Framework-agnostic ES modules.",
+  "description": "Offline zmanim (NREL SPA, refraction from pressure and temperature) and a compact place list. Framework-agnostic ES modules.",
   "license": "LGPL-2.1-only",
   "type": "module",
   "main": "./dist/index.js",

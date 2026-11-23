@@ -91,3 +91,14 @@ black box only.
 
 Sanity (not a source): rise/transit/set and a 16.1-degree dawn compared with this library's NOAA
 results for 5 places x 5 dates, all within 1 minute (most within 0.03 minute).
+
+## Wiring into the zmanim (2026-11-23)
+
+src/zmanim.ts now takes every sun event from `spaDay` + `spaEvent` (A.2, 3 correction iterations):
+sunrise/sunset (sun-centre zenith 90 + 16' + refraction from src/refraction.ts, plus the horizon dip
+for the Elevated variants), all degree-based zmanim (`zenithToH0`), and chatzot (transit, kind 0).
+SPA returns the event of a UT date; zmanim.ts moves the UT date until the event falls inside the
+place's local mean solar day. src/noaa.ts (the an earlier zmanim library NOAA port) was deleted, and the NOAA
+sanity comparison in test/spa.test.ts with it. Parity with the app's old NOAA-based output is checked
+against the recorded fixture (all values within 1 printed minute). The wiring was done by the same
+AI, with the same "not consulted" list as above; no outside source was opened for it.

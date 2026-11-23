@@ -1,6 +1,6 @@
 // The place list: loaded lazily from the compact asset files, each at most once.
 import type { CivilDate, ZmanName } from './zmanim.js'
-import { computeZmanim, ZMAN_NAMES } from './zmanim.js'
+import { computeZmanim, HORIZON_ZMANIM, ZMAN_NAMES } from './zmanim.js'
 
 export type Lang = 'he' | 'en'
 
@@ -11,7 +11,7 @@ export interface Place {
   id: number
   lat: number
   lng: number
-  /** Meters. The zmanim are sea-level; elevation only sets the air pressure for sunrise/sunset refraction. */
+  /** Meters. Sets the air pressure for refraction and the horizon dip of sunriseElevated/sunsetElevated. */
   elevation: number
   tzid: string
   rawOffsetMinutes: number
@@ -50,8 +50,6 @@ const placeCache = new Map<number, Place>()
 export const CLIMATE_RECORD_SIZE = 12
 const NO_TEMPERATURE = -128
 /** Zmanim that depend on sunrise/sunset (and so on refraction); only these load climate.bin. */
-const HORIZON_ZMANIM: ReadonlySet<ZmanName> = new Set<ZmanName>(['sunrise', 'sunset', 'sofShmaMga', 'sofShmaGra',
-  'sofTfillaMga', 'sofTfillaGra', 'minchaGedola', 'minchaKetana', 'plag'])
 
 function climateTable(): Promise<Int8Array> {
   if (!climate) {

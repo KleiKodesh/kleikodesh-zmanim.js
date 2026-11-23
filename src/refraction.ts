@@ -27,11 +27,14 @@ export function refractionArcmin(h: number, pressure: number, temperature: numbe
   return 1.02 / Math.tan((h + 10.3 / (h + 5.11)) * DEG) * (pressure / 1010) * (283 / (273 + temperature))
 }
 
-/** Refraction (arcminutes) at the apparent horizon: solves h + R(h) = 0 for the true altitude h. */
-export function horizonRefractionArcmin(pressure: number, temperature: number): number {
+/**
+ * Refraction (arcminutes) at an apparent altitude [apparent] degrees (default 0, the sea-level horizon; negative
+ * for a horizon dipped by the observer's height): solves h + R(h) = apparent for the true altitude h.
+ */
+export function horizonRefractionArcmin(pressure: number, temperature: number, apparent = 0): number {
   let r = 34
   for (let i = 0; i < 8; i++) {
-    const next = refractionArcmin(-r / 60, pressure, temperature)
+    const next = refractionArcmin(apparent - r / 60, pressure, temperature)
     if (Math.abs(next - r) < 1e-4) return next
     r = next
   }
