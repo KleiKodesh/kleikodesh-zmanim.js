@@ -16,6 +16,11 @@ Report NREL/TP-560-34302, revised January 2008.
 - Downloaded manually by the maintainer in a browser on 2026-11-23 (not by the AI).
 - File size: 1272380 bytes.
 - SHA-256: 0860fa6039bbc33071523456ada989e73ca5874c4c993e28a2166444a724e9cd (checked before use).
+- Cross-check 2026-11-23: two further official copies (https://www.nlr.gov/docs/fy08osti/34302.pdf and the OSTI
+  copy https://www.osti.gov/servlets/purl/15003974, byte-identical to each other, SHA-256
+  1b9e2b6131d89ebc17fe4c047e64a0168143c949bfe6fafe06d856d651555cc2) have the same size (1,272,380 bytes) and the
+  same extracted text (pdftotext output identical, 7,995 words) as the copy used; only internal PDF bytes differ
+  (per-download document identifiers). The content used is therefore the official paper.
 - The PDF is not stored in this repository.
 
 ## Method

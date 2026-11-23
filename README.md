@@ -68,9 +68,11 @@ Also exported: `zmanInstants` (exact instants as BigInt epoch nanoseconds), `for
 Degree lines return null on days the sun never gets that low (high latitudes in summer); no rule is invented for
 them, except the explicit `...Chatzot` fallback lines:
 
-(1) Fallback to chatzot halaila (solar midnight, the lowest sun) when the angle is never reached: Moadim U'Zmanim
-(Rav M. Sternbuch) 2:155, glosses; Biur HaGra, Orach Chaim 261:2; STAR-K, Rabbi Dovid Heber with Rav Heinemann,
-https://www.star-k.org/articles/?p=515 (notes 21, 23).
+(1) Fallback to chatzot halaila (solar midnight, the lowest sun) when the angle is never reached:
+Beur HaGra, Orach Chaim 261:2 ("in lands leaning north, dawn begins in summer at midnight";
+https://www.sefaria.org/Beur_HaGra_on_Shulchan_Arukh,_Orach_Chayim.261.2); STAR-K, Rabbi Dovid Heber with
+Rav Moshe Heinemann, https://www.star-k.org/articles/?p=515 (notes 14, 15, 21, 23), which also cites
+Moadim U'Zmanim 2:155 (glosses) and Sefer Bein Hashmashos p. 55.
 
 "Visible" lines measure the depression from the apparent (refracted) sea-level horizon instead of the geometric one.
 Refraction lifts the image of the horizon line: a point that appears on the horizon is geometrically R0 below it,
