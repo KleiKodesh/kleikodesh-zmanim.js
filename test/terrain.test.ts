@@ -47,18 +47,20 @@ describe('terrain sunrise/sunset', () => {
     const place = await getPlace(JERUSALEM)
     const t = zmanInstants({ ...place, terrainHorizon: null }, summer, ['sunriseTerrain', 'sunsetTerrain'])
     expect(t).toEqual({ sunriseTerrain: null, sunsetTerrain: null })
-    const empty = new Int16Array(TERRAIN_BINS).fill(NO_TERRAIN)
+    const empty = new Uint8Array(TERRAIN_BINS).fill(NO_TERRAIN)
     expect(terrainAltitude(empty, 90)).toBeNaN()
-    expect(terrainAltitude(new Int16Array(TERRAIN_BINS), 180)).toBeNaN()
+    expect(terrainAltitude(new Uint8Array(TERRAIN_BINS), 180)).toBeNaN()
   })
 
-  it('horizon.bin loads only when a terrain line is asked for, once', async () => {
+  it('only the own horizon chunk of the place loads, only for a terrain line, once', async () => {
     const reads = useFileAssets()
     await zmanim(JERUSALEM, summer, ['sunrise', 'sunset'])
-    expect(reads).not.toContain('horizon.bin')
+    expect(reads.filter((f) => f.startsWith('horizon'))).toEqual([])
     const out = await zmanim(JERUSALEM, summer, ['sunriseTerrain', 'sunsetTerrain'])
-    await zmanim(SAFED, winter, ['sunsetTerrain'])
-    expect(reads.filter((f) => f === 'horizon.bin')).toEqual(['horizon.bin'])
+    await zmanim(SAFED, winter, ['sunsetTerrain']) // id 98 is in chunk 01 (98 / 64), Jerusalem in 00
+    expect(reads.filter((f) => f.startsWith('horizon'))).toEqual(['horizon-00.bin', 'horizon-01.bin'])
+    await zmanim(JERUSALEM, winter, ['sunriseTerrain'])
+    expect(reads.filter((f) => f.startsWith('horizon')).length).toBe(2)
     expect(out.sunriseTerrain).toMatch(/^\d\d:\d\d$/)
   })
 })

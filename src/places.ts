@@ -48,7 +48,7 @@ export function configure(options: { baseUrl?: string | URL, loader?: AssetLoade
   bin = null
   tz = null
   climate = null
-  horizon = null
+  horizon.clear()
   placeCache.clear()
 }
 
@@ -57,7 +57,7 @@ const names = new Map<Lang, Promise<readonly string[]>>()
 let bin: Promise<DataView> | null = null
 let tz: Promise<{ ids: string[], rawOffsetMinutes: number[] }> | null = null
 let climate: Promise<Int8Array> | null = null
-let horizon: Promise<Int16Array> | null = null
+const horizon = new Map<number, Promise<Uint8Array | null>>()
 const placeCache = new Map<number, Place>()
 
 /** Bytes per record in climate.bin: 12 monthly mean temperatures, int8 C; -128 = unknown. */
@@ -72,18 +72,26 @@ function climateTable(): Promise<Int8Array> {
   return climate
 }
 
+/** Places per horizon chunk file (assets/horizon-NN.bin, NN = id / HORIZON_CHUNK). */
+export const HORIZON_CHUNK = 64
+
 /**
- * A place's terrain horizon (TERRAIN_BINS values, hundredths of a degree; see Coordinates.terrainHorizon), or null
- * for a place without one (e.g. added after horizon.bin was built). Loads horizon.bin (about 0.9 MB) once, only here.
+ * A place's terrain horizon (TERRAIN_BINS uint8 values, tenths of a degree plus 30; see Coordinates.terrainHorizon), or null
+ * for a place without one (e.g. added after the horizon data was built). Loads only that place's chunk (about 15 KB).
  */
-export async function getTerrainHorizon(id: number): Promise<Int16Array | null> {
-  if (!horizon) {
-    horizon = loader('horizon.bin').then((buffer) => new Int16Array(buffer))
-    horizon.catch(() => { horizon = null })
+export async function getTerrainHorizon(id: number): Promise<Uint8Array | null> {
+  if (!Number.isInteger(id) || id < 1) return null
+  const c = Math.floor(id / HORIZON_CHUNK)
+  let chunk = horizon.get(c)
+  if (!chunk) {
+    const file = `horizon-${String(c).padStart(2, '0')}.bin`
+    const p = loader(file).then((buffer) => new Uint8Array(buffer), () => null)
+    horizon.set(c, p)
+    chunk = p
   }
-  const t = await horizon
-  const o = id * TERRAIN_BINS
-  if (!Number.isInteger(id) || id < 1 || o + TERRAIN_BINS > t.length) return null
+  const t = await chunk
+  const o = (id % HORIZON_CHUNK) * TERRAIN_BINS
+  if (!t || o + TERRAIN_BINS > t.length) return null
   const row = t.subarray(o, o + TERRAIN_BINS)
   return row.every((v) => v === NO_TERRAIN) ? null : row
 }
@@ -209,7 +217,7 @@ export async function zmanim(
   which: readonly ZmanName[] = ZMAN_NAMES,
 ): Promise<Partial<Record<ZmanName, string | null>>> {
   let p: Coordinates = typeof place === 'number' ? await getPlace(place) : place
-  // horizon.bin is loaded only when a terrain line is asked for.
+  // the place's horizon chunk is loaded only when a terrain line is asked for.
   if (p.terrainHorizon === undefined && typeof (p as Place).id === 'number' && which.some((n) => TERRAIN_ZMANIM.has(n))) {
     p = { ...p, terrainHorizon: await getTerrainHorizon((p as Place).id) }
   }

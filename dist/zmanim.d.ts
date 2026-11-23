@@ -1,5 +1,5 @@
 /** Every zman the library computes, in the order of the day. Each is computed only when requested. */
-export declare const ZMAN_NAMES: readonly ["chatzotNight", "alot90Visible", "alot90", "alot90Chatzot", "alotVisible", "alot", "alotChatzot", "misheyakirVisible", "misheyakir", "misheyakirChatzot", "misheyakir11", "misheyakir10p2", "sunriseElevated", "sunrise", "sofShmaMga", "sofShmaMga16", "sofShmaGra", "sofTfillaMga", "sofTfillaMga16", "sofTfillaGra", "chatzot", "minchaGedola", "minchaGedola30", "minchaKetana", "plag", "plagMga", "candles40", "candles30", "candles22", "candles20", "candles18", "sunset", "sunsetElevated", "tzeitGeonim", "tzeitGeonimVisible", "tzeit7083", "tzeit", "tzeitVisible", "tzeitRt72", "tzeitRt72Zmanis", "tzeitRt16"];
+export declare const ZMAN_NAMES: readonly ["chatzotNight", "alot90Visible", "alot90", "alot90Chatzot", "alotVisible", "alot", "alotChatzot", "misheyakirVisible", "misheyakir", "misheyakirChatzot", "misheyakir11", "misheyakir10p2", "sunriseElevated", "sunrise", "sunriseTerrain", "sofShmaMga", "sofShmaMga16", "sofShmaGra", "sofTfillaMga", "sofTfillaMga16", "sofTfillaGra", "chatzot", "minchaGedola", "minchaGedola30", "minchaKetana", "plag", "plagMga", "candles40", "candles30", "candles22", "candles20", "candles18", "sunsetTerrain", "sunset", "sunsetElevated", "tzeitGeonim", "tzeitGeonimVisible", "tzeit7083", "tzeit", "tzeitVisible", "tzeitRt72", "tzeitRt72Zmanis", "tzeitRt16"];
 export type ZmanName = typeof ZMAN_NAMES[number];
 export type Rounding = 'up' | 'down' | 'nearest';
 /**
@@ -12,6 +12,16 @@ export declare const ROUNDING: Readonly<Record<ZmanName, Rounding>>;
  * everything built from them, and the Visible degree lines. A place without `monthlyTemperatureC` throws for these.
  */
 export declare const HORIZON_ZMANIM: ReadonlySet<ZmanName>;
+/** Zmanim that need the place's terrain horizon (Coordinates.terrainHorizon); null without it. */
+export declare const TERRAIN_ZMANIM: ReadonlySet<ZmanName>;
+/** Azimuth bins of a terrain horizon: one per degree, 30..150 (east) then 210..330 (west). */
+export declare const TERRAIN_BINS = 242;
+/** Terrain horizon altitude (degrees, apparent) toward [azimuth] (from north, eastward); NaN outside the bins or without data. */
+export declare function terrainAltitude(profile: ArrayLike<number>, azimuth: number): number;
+/** Missing value in a terrain horizon (uint8: tenths of a degree + TERRAIN_OFFSET * 10). */
+export declare const NO_TERRAIN = 255;
+/** Degrees added before storing, so -3.0 .. +22.4 fits a byte. */
+export declare const TERRAIN_OFFSET = 3;
 /** A civil date; month 1-12. */
 export interface CivilDate {
     year: number;
@@ -33,6 +43,11 @@ export interface Coordinates {
      * bare { lat, lng } never silently loses the place's climate.
      */
     monthlyTemperatureC?: readonly number[] | 'standard';
+    /**
+     * Terrain horizon for sunriseTerrain/sunsetTerrain: TERRAIN_BINS uint8 values, apparent altitude in tenths
+     * of a degree plus 30 (NO_TERRAIN = none), as zmanim() attaches from horizon-NN.bin. Without it those lines are null.
+     */
+    terrainHorizon?: ArrayLike<number> | null;
 }
 /** The geometric horizon. */
 export declare const GEOMETRIC_ZENITH = 90;

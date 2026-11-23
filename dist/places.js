@@ -1,4 +1,4 @@
-import { computeZmanim, ZMAN_NAMES } from './zmanim.js';
+import { computeZmanim, NO_TERRAIN, TERRAIN_BINS, TERRAIN_ZMANIM, ZMAN_NAMES } from './zmanim.js';
 /** Bytes per record in places.bin: lat int32, lng int32 (degrees x 1e5), elevation int16, tz index uint8. */
 export const RECORD_SIZE = 11;
 const SCALE = 1e5;
@@ -25,6 +25,7 @@ export function configure(options) {
     bin = null;
     tz = null;
     climate = null;
+    horizon.clear();
     placeCache.clear();
 }
 // Caches: two name lists, one binary table, one zone table, and a few recent places.
@@ -32,6 +33,7 @@ const names = new Map();
 let bin = null;
 let tz = null;
 let climate = null;
+const horizon = new Map();
 const placeCache = new Map();
 /** Bytes per record in climate.bin: 12 monthly mean temperatures, int8 C; -128 = unknown. */
 export const CLIMATE_RECORD_SIZE = 12;
@@ -42,6 +44,30 @@ function climateTable() {
         climate.catch(() => { climate = null; });
     }
     return climate;
+}
+/** Places per horizon chunk file (assets/horizon-NN.bin, NN = id / HORIZON_CHUNK). */
+export const HORIZON_CHUNK = 64;
+/**
+ * A place's terrain horizon (TERRAIN_BINS uint8 values, tenths of a degree plus 30; see Coordinates.terrainHorizon), or null
+ * for a place without one (e.g. added after the horizon data was built). Loads only that place's chunk (about 15 KB).
+ */
+export async function getTerrainHorizon(id) {
+    if (!Number.isInteger(id) || id < 1)
+        return null;
+    const c = Math.floor(id / HORIZON_CHUNK);
+    let chunk = horizon.get(c);
+    if (!chunk) {
+        const file = `horizon-${String(c).padStart(2, '0')}.bin`;
+        const p = loader(file).then((buffer) => new Uint8Array(buffer), () => null);
+        horizon.set(c, p);
+        chunk = p;
+    }
+    const t = await chunk;
+    const o = (id % HORIZON_CHUNK) * TERRAIN_BINS;
+    if (!t || o + TERRAIN_BINS > t.length)
+        return null;
+    const row = t.subarray(o, o + TERRAIN_BINS);
+    return row.every((v) => v === NO_TERRAIN) ? null : row;
 }
 /** A place's 12 monthly mean temperatures (C; NaN where unknown). Loads climate.bin once. */
 export async function getMonthlyTemperatures(id) {
@@ -153,6 +179,10 @@ export function toCivilDate(date) {
 }
 /** Only the requested zmanim, printed HH:MM in the place's zone with the library's rounding. */
 export async function zmanim(place, date, which = ZMAN_NAMES) {
-    const p = typeof place === 'number' ? await getPlace(place) : place;
+    let p = typeof place === 'number' ? await getPlace(place) : place;
+    // the place's horizon chunk is loaded only when a terrain line is asked for.
+    if (p.terrainHorizon === undefined && typeof p.id === 'number' && which.some((n) => TERRAIN_ZMANIM.has(n))) {
+        p = { ...p, terrainHorizon: await getTerrainHorizon(p.id) };
+    }
     return computeZmanim(p, toCivilDate(date), which);
 }

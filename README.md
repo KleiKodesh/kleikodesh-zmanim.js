@@ -60,7 +60,7 @@ Also exported: `zmanInstants` (exact instants as BigInt epoch nanoseconds), `for
 | misheyakir11 / misheyakir10p2 | sun 11 / 10.2 deg below, morning (other published misheyakir angles) | up |
 | sunriseElevated | sunrise over the horizon seen from the place's own elevation (dip + refraction) | up |
 | sunrise | sea-level sunrise | up |
-| sunriseTerrain | the sun's upper limb clears the real terrain horizon at its azimuth (horizon.bin; null without data) | up |
+| sunriseTerrain | the sun's upper limb clears the real terrain horizon at its azimuth (horizon-NN.bin; null without data) | up |
 | sofShmaMga / sofTfillaMga | 3 / 4 temporal hours of the day from 72 min before sunrise to 72 min after sunset | down |
 | sofShmaMga16 / sofTfillaMga16 | 3 / 4 temporal hours of the MGA day by degrees: alot 16.1 deg to the sun 16.1 deg below in the evening | down |
 | sofShmaGra / sofTfillaGra | 3 / 4 temporal hours of sunrise..sunset | down |
@@ -68,7 +68,7 @@ Also exported: `zmanInstants` (exact instants as BigInt epoch nanoseconds), `for
 | minchaGedola / minchaKetana / plag | 6.5 / 9.5 / 10.75 temporal hours (GRA) | up |
 | minchaGedola30 | the later of 30 minutes after chatzot and minchaGedola (half a GRA temporal hour after chatzot) | up |
 | plagMga | 10.75 temporal hours of the same MGA day as sofShmaMga (72 min before sunrise .. 72 min after sunset) | up |
-| sunsetTerrain | the sun's upper limb sinks below the real terrain horizon at its azimuth (horizon.bin; null without data) | down |
+| sunsetTerrain | the sun's upper limb sinks below the real terrain horizon at its azimuth (horizon-NN.bin; null without data) | down |
 | sunset | sea-level sunset | down |
 | candles40 / candles30 / candles22 / candles20 / candles18 | candle lighting 40 / 30 / 22 / 20 / 18 minutes before sea-level sunset, by community custom (adding to Shabbat before sunset: SA OC 261:2) | down |
 | sunsetElevated | sunset below the horizon seen from the place's own elevation | down |
@@ -172,12 +172,15 @@ Every place has temperatures. For newly added places, run the fetch-climate-para
 `node scripts/fetch-climate.mjs`, which resumes from the rows already in data/climate.tsv), then rebuild the assets;
 until then a new place uses the standard-atmosphere temperature (-128 in climate.bin).
 
-### Terrain horizon (horizon.bin)
+### Terrain horizon (horizon-NN.bin)
 
-`assets/horizon.bin`: per id (record 0 unused) 242 int16 little endian = the apparent altitude of the terrain
-horizon in hundredths of a degree, azimuth 30..150 then 210..330 (from north, eastward), one bin per degree;
--32768 = no data. About 0.9 MB, loaded only when `zmanim()` is asked for sunriseTerrain/sunsetTerrain
-(`getTerrainHorizon(id)`); a place added after the last build has no row and those lines are null.
+`assets/horizon-NN.bin` (NN = id / 64, two digits): 64 places per file (row = id % 64), 242 bytes per place =
+the apparent altitude of the terrain horizon, uint8 = tenths of a degree + 30 (-3.0 .. +22.4 deg), 255 = no data;
+bins: azimuth 30..150 then 210..330 (from north, eastward), one per degree. 15,488 bytes per file. Only the chosen
+place's file loads, and only when sunriseTerrain/sunsetTerrain is asked for (`getTerrainHorizon(id)`); a place
+added after the last data run has no row (its chunk may be missing) and those lines are null. The full-precision
+source is `data/horizon.bin` (int16 hundredths, not shipped); `scripts/build-horizon-chunks.mjs` splits it, and a
+bin steeper than 22.4 deg is left empty.
 Made in CI (workflow horizon-parallel, scripts/compute-horizon.py + scripts/build-horizon.mjs) from the Copernicus
 DEM GLO-90: a grey-scale opening of about 450 m removes buildings and trees from the surface model; from the highest
 ground within 500 m of the place (+ 1.6 m eye height) rays every degree of azimuth sample the terrain from 500 m to 150 km; a point at
@@ -228,7 +231,7 @@ npm test          # vitest; parity uses the recorded fixture test/fixtures/app-z
 - Seven neighbourhood points (Ramat Beit Shemesh Aleph, Bet and Gimel, Nofei Aviv, Kiryat Sefer, Brachfeld,
   Green Park) (c) OpenStreetMap contributors, ODbL 1.0, https://www.openstreetmap.org/copyright. Their
   elevations come from the Open-Meteo elevation API (above).
-- Terrain horizon (horizon.bin): computed from the Copernicus DEM GLO-90, (c) DLR e.V. 2010-2014 and (c) Airbus
+- Terrain horizon (horizon-NN.bin): computed from the Copernicus DEM GLO-90, (c) DLR e.V. 2010-2014 and (c) Airbus
   Defence and Space GmbH 2014-2018, provided under COPERNICUS by the European Union and ESA; all rights reserved.
   Free use under the Copernicus DEM licence (https://spacedata.copernicus.eu/documents/20123/121286/CSCDA_ESA_Mission-specific+Annex_31_Oct_22.pdf);
   tiles from the AWS Open Data registry (https://registry.opendata.aws/copernicus-dem/).

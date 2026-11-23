@@ -12,6 +12,8 @@ export interface Place {
     rawOffsetMinutes: number;
     /** 12 monthly mean temperatures in C (NaN = unknown), for refraction; attached by getPlace(). */
     monthlyTemperatureC: readonly number[];
+    /** Terrain horizon for sunriseTerrain/sunsetTerrain; not set by getPlace() (see getTerrainHorizon). */
+    terrainHorizon?: ArrayLike<number> | null;
 }
 /** Bytes per record in places.bin: lat int32, lng int32 (degrees x 1e5), elevation int16, tz index uint8. */
 export declare const RECORD_SIZE = 11;
@@ -26,6 +28,13 @@ export declare function configure(options: {
 }): void;
 /** Bytes per record in climate.bin: 12 monthly mean temperatures, int8 C; -128 = unknown. */
 export declare const CLIMATE_RECORD_SIZE = 12;
+/** Places per horizon chunk file (assets/horizon-NN.bin, NN = id / HORIZON_CHUNK). */
+export declare const HORIZON_CHUNK = 64;
+/**
+ * A place's terrain horizon (TERRAIN_BINS uint8 values, tenths of a degree plus 30; see Coordinates.terrainHorizon), or null
+ * for a place without one (e.g. added after the horizon data was built). Loads only that place's chunk (about 15 KB).
+ */
+export declare function getTerrainHorizon(id: number): Promise<Uint8Array | null>;
 /** A place's 12 monthly mean temperatures (C; NaN where unknown). Loads climate.bin once. */
 export declare function getMonthlyTemperatures(id: number): Promise<number[]>;
 /** Every place name in [lang]; the index is the place id (index 0 is empty). Loads only that names file. */

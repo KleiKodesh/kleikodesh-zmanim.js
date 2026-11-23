@@ -1,4 +1,4 @@
-// TSV from scripts/compute-horizon.py (id, then one value per azimuth bin) -> assets/horizon.bin:
+// TSV from scripts/compute-horizon.py (id, then one value per azimuth bin) -> data/horizon.bin (split into assets/horizon-NN.bin by build-horizon-chunks.mjs):
 // per id (record 0 unused) HORIZON_BINS int16 LE, hundredths of a degree; -32768 = no data.
 // Bins: azimuth 30..150 then 210..330, one per degree (src/horizon.ts).
 import { readFileSync, writeFileSync } from 'node:fs'
@@ -13,5 +13,5 @@ for (const line of readFileSync(process.argv[2], 'utf8').trim().split(/\r?\n/)) 
   v.forEach((x, i) => { out[id * BINS + i] = Math.max(-32767, Math.min(32767, x)) })
   n++
 }
-writeFileSync('assets/horizon.bin', new Uint8Array(out.buffer))
+writeFileSync('data/horizon.bin', new Uint8Array(out.buffer))
 console.log(`${n} places, ${out.byteLength} bytes`)
