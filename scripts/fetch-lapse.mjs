@@ -23,7 +23,7 @@ const save = () => writeFileSync(OUT, 'id\t' + Array.from({ length: 12 }, (_, i)
   [...done.values()].sort((a, b) => Number(a.split('\t')[0]) - Number(b.split('\t')[0])).join('\n') + '\n')
 
 const RAD = Math.PI / 180
-// Sunrise/sunset in UTC hours for a day of year (NOAA-style low-precision formula; an hour's accuracy is plenty).
+// Sunrise/sunset in UTC hours for a day of year (a low-precision solar formula; an hour's accuracy is plenty).
 function riseSetUtc(lat, lng, doy) {
   const g = 2 * Math.PI / 365 * (doy - 1)
   const eqt = 229.18 * (0.000075 + 0.001868 * Math.cos(g) - 0.032077 * Math.sin(g) - 0.014615 * Math.cos(2 * g) - 0.040849 * Math.sin(2 * g))

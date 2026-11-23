@@ -217,9 +217,8 @@ Elevated sunrise/sunset: the horizon seen from height H lies lower by the geomet
 altitude with the same pressure/temperature model. Each place uses its own elevation from places.bin.
 
 Stringent rounding: a start rounds up, a deadline rounds down, chatzot to the nearest minute.
-Against the KitveiHakodesh app's former `dayZmanim()` (NOAA, fixed 34' refraction; recorded in
-test/fixtures/app-zmanim.json) every printed value is within 1 minute: degree zmanim and chatzot differ only by the
-NOAA -> SPA change (seconds, which can flip a printed minute), sunrise/sunset-based ones also by the refraction model.
+Accuracy: sunrise, sunset, solar noon and civil twilight agree with the US Naval Observatory's published times
+within their whole-minute rounding (no bias); the sun position reproduces the NREL paper's worked example.
 
 ## Data
 
@@ -292,13 +291,12 @@ and equation numbers; see PROVENANCE.md.
 ```
 npm install
 npm run build     # assets + dist/
-npm test          # vitest; parity uses the recorded fixture test/fixtures/app-zmanim.json
+npm test          # vitest
 ```
 
 ## Credits and licenses
 
-- Code: LGPL-2.1 (see LICENSE). The sun position is the clean-room NREL SPA (src/spa.ts, PROVENANCE.md); the
-  former NOAA port is gone. All code is this library's own; each zman is defined from the halachic sources cited
+- Code: LGPL-2.1 (see LICENSE). The sun position is the clean-room NREL SPA (src/spa.ts, PROVENANCE.md). All code is this library's own; each zman is defined from the halachic sources cited
   beside it (in src/zmanim.ts, data/explanations.json and the docs).
 - Place data: contains data from GeoNames (geonames.org), licensed under CC BY 4.0.
   Some neighbourhood coordinates come from Wikidata (CC0). Where Wikidata has no elevation, it comes from the

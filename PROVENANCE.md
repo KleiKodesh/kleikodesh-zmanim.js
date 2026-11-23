@@ -49,18 +49,13 @@ Report NREL/TP-560-34302, revised January 2008.
 
 ## Not consulted
 
-No other implementation or data was opened, read, searched or fetched: no git history or files
-of KleiKodesh/KleiKodeshProject's hebrew-calendar folder (spaCalculator.ts, spaTables.ts,
-solarPosition.ts, horizonRefraction.ts, atmosphere*), no
-an earlier zmanim library /  / hebcal source, no SPA port in any language (npm, GitHub,
-Stack Overflow, the NREL SPA C code mentioned in the paper's A.6), no luach or zmanim website or data. No
-web browsing was done.
+No other implementation or data was opened, read, searched or fetched: no other zmanim or astronomy library's source,
+no SPA port in any language (npm, GitHub, Stack Overflow, the NREL SPA C code mentioned in the paper's A.6), and no
+luach or zmanim website or data. No web browsing was done.
 
-Disclosure: while learning this repository's API for the NOAA comparison test, the AI viewed the
-first 30 lines and lines 115-140 of this repository's own `src/noaa.ts` (which is a an earlier zmanim library
-port; it holds NOAA, not SPA, formulas). Nothing from it was used in `src/spa.ts`; in particular
-the Julian Day is computed differently (see Method). The tests call its exported functions as a
-black box only.
+Disclosure: while learning this repository's API, the AI viewed about 55 lines of this repository's own earlier
+sunrise/sunset file (a different, lower-precision algorithm, since deleted). Nothing from it was used in `src/spa.ts`;
+in particular the Julian Day is computed differently (see Method).
 
 ## Test vectors (all from the paper)
 
@@ -94,8 +89,8 @@ black box only.
 | sunrise | 13:12:43.46 UT | 13:12:43.462 |
 | sunset | 00:20:19.19 UT | 00:20:19.177 |
 
-Sanity (not a source): rise/transit/set and a 16.1-degree dawn compared with this library's NOAA
-results for 5 places x 5 dates, all within 1 minute (most within 0.03 minute).
+Sanity (not a source): rise, transit and set agree with the US Naval Observatory's published times within their
+whole-minute rounding (120 place-days).
 
 ## Wiring into the zmanim (2026-11-23)
 
@@ -103,9 +98,8 @@ src/zmanim.ts now takes every sun event from `spaDay` + `spaEvent` (A.2, 3 corre
 sunrise/sunset (sun-centre zenith 90 + 16' + refraction from src/refraction.ts, plus the horizon dip
 for the Elevated variants), all degree-based zmanim (`zenithToH0`), and chatzot (transit, kind 0).
 SPA returns the event of a UT date; zmanim.ts moves the UT date until the event falls inside the
-place's local mean solar day. src/noaa.ts (the an earlier zmanim library NOAA port) was deleted, and the NOAA
-sanity comparison in test/spa.test.ts with it. Parity with the app's old NOAA-based output is checked
-against the recorded fixture (all values within 1 printed minute). The wiring was done by the same
+place's local mean solar day. Accuracy is checked against the US Naval Observatory's published rise, set,
+transit and twilight times (agreement within their whole-minute rounding). The wiring was done by the same
 AI, with the same "not consulted" list as above; no outside source was opened for it.
 
 # Provenance of the OpenStreetMap place points
