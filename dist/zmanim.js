@@ -59,12 +59,10 @@ export function terrainAltitude(profile, azimuth) {
     const v1 = profile[base + i + 1];
     if (v0 === NO_TERRAIN || v1 === NO_TERRAIN)
         return NaN;
-    return (v0 + (v1 - v0) * f) / 10 - TERRAIN_OFFSET;
+    return (v0 + (v1 - v0) * f) / 100;
 }
-/** Missing value in a terrain horizon (uint8: tenths of a degree + TERRAIN_OFFSET * 10). */
-export const NO_TERRAIN = 255;
-/** Degrees added before storing, so -3.0 .. +22.4 fits a byte. */
-export const TERRAIN_OFFSET = 3;
+/** Missing value in a terrain horizon (int16: hundredths of a degree). */
+export const NO_TERRAIN = -32768;
 /** The geometric horizon. */
 export const GEOMETRIC_ZENITH = 90;
 /** Solar semidiameter used for sunrise/sunset, degrees (16'). */

@@ -31,10 +31,10 @@ export declare const CLIMATE_RECORD_SIZE = 12;
 /** Places per horizon chunk file (assets/horizon-NN.bin, NN = id / HORIZON_CHUNK). */
 export declare const HORIZON_CHUNK = 64;
 /**
- * A place's terrain horizon (TERRAIN_BINS uint8 values, tenths of a degree plus 30; see Coordinates.terrainHorizon), or null
- * for a place without one (e.g. added after the horizon data was built). Loads only that place's chunk (about 15 KB).
+ * A place's terrain horizon (TERRAIN_BINS int16 values, hundredths of a degree; see Coordinates.terrainHorizon), or null
+ * for a place without one (e.g. added after the horizon data was built). Loads only that place's chunk (about 31 KB).
  */
-export declare function getTerrainHorizon(id: number): Promise<Uint8Array | null>;
+export declare function getTerrainHorizon(id: number): Promise<Int16Array | null>;
 /** A place's 12 monthly mean temperatures (C; NaN where unknown). Loads climate.bin once. */
 export declare function getMonthlyTemperatures(id: number): Promise<number[]>;
 /** Every place name in [lang]; the index is the place id (index 0 is empty). Loads only that names file. */
