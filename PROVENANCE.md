@@ -102,3 +102,22 @@ place's local mean solar day. src/noaa.ts (the an earlier zmanim library NOAA po
 sanity comparison in test/spa.test.ts with it. Parity with the app's old NOAA-based output is checked
 against the recorded fixture (all values within 1 printed minute). The wiring was done by the same
 AI, with the same "not consulted" list as above; no outside source was opened for it.
+
+# Provenance of the OpenStreetMap place points
+
+Seven rows of data/places.tsv take their coordinates (object centre, 5 decimals) and names from
+OpenStreetMap, (c) OpenStreetMap contributors, ODbL 1.0 (https://www.openstreetmap.org/copyright).
+They were looked up by scripts/osm-lookup.mjs (GitHub Actions, workflow osm-lookup) on 2026-11-23 and
+checked by hand. This is an insubstantial extract under the OSMF "Substantial Extract" community
+guideline (fewer than 100 features); nothing else in this repository comes from OpenStreetMap.
+Elevations: Open-Meteo elevation API.
+
+| id | key | OSM object |
+| --- | --- | --- |
+| 1804 | ramatBeitShemeshAleph | way/619125161 |
+| 1805 | ramatBeitShemeshBet | way/92395863 |
+| 1806 | ramatBeitShemeshGimel | node/1116270420 |
+| 1807 | nofeiAviv | node/1155956162 |
+| 1808 | kiryatSefer | node/12039482269 |
+| 1809 | brachfeld | node/12039420566 |
+| 1810 | greenPark | node/12039420564 |

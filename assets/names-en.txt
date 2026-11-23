@@ -1802,3 +1802,10 @@ Recife
 Curitiba
 Belo Horizonte
 Lucerne
+Ramat Beit Shemesh Aleph
+Ramat Beit Shemesh Bet
+Ramat Beit Shemesh Gimel
+Nofei Aviv (Beit Shemesh)
+Kiryat Sefer (Modi'in Illit)
+Brachfeld (Modi'in Illit)
+Green Park (Modi'in Illit)
