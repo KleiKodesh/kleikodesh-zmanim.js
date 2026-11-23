@@ -1,0 +1,79 @@
+# Near-surface temperature gradient per place and month (scripts/fetch-lapse.mjs), split across parallel
+# runners like fetch-climate-parallel.yml. Start: gh workflow run fetch-lapse-parallel.yml -f branch=lapse -f shards=20
+name: fetch-lapse-parallel
+on:
+  workflow_dispatch:
+    inputs:
+      branch:
+        description: Branch to fetch for and commit to
+        default: master
+      shards:
+        description: Number of parallel runners (max 20)
+        default: '12'
+permissions:
+  contents: write
+jobs:
+  plan:
+    runs-on: ubuntu-latest
+    outputs:
+      list: ${{ steps.m.outputs.list }}
+    steps:
+      - id: m
+        run: echo "list=$(seq -s, 0 $(( ${{ inputs.shards }} - 1 )) | sed 's/^/[/;s/$/]/')" >> "$GITHUB_OUTPUT"
+  fetch:
+    needs: plan
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+    strategy:
+      fail-fast: false
+      matrix:
+        shard: ${{ fromJson(needs.plan.outputs.list) }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ inputs.branch }}
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - name: Fetch shard ${{ matrix.shard }} of ${{ inputs.shards }}
+        env:
+          SHARD: ${{ matrix.shard }}
+          SHARDS: ${{ inputs.shards }}
+          OUT: data/lapse-part.tsv
+        run: |
+          node scripts/fetch-lapse.mjs
+          echo "rows in part: $(($(grep -c . data/lapse-part.tsv) - 1))"
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: lapse-part-${{ matrix.shard }}
+          path: data/lapse-part.tsv
+          if-no-files-found: ignore
+  merge:
+    needs: fetch
+    if: always()
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ inputs.branch }}
+      - uses: actions/download-artifact@v4
+        with:
+          path: parts
+      - name: Merge parts
+        run: |
+          # Every part also holds the rows that were already there; keep one row per id, sorted.
+          { echo "id m1 m2 m3 m4 m5 m6 m7 m8 m9 m10 m11 m12" | tr ' ' '\t'
+            { [ -f data/lapse.tsv ] && tail -n +2 data/lapse.tsv; for f in parts/*/lapse-part.tsv; do tail -n +2 "$f"; done; } |
+              awk -F'\t' '!seen[$1]++' | sort -n -k1,1; } > merged.tsv
+          mv merged.tsv data/lapse.tsv
+          echo "rows with data: $(($(grep -c . data/lapse.tsv) - 1)) of $(($(grep -c . data/places.tsv) - 1))"
+          awk -F'\t' 'NR>1 { e=0; for (i=2;i<=13;i++) if ($i=="") e++; if (e) print "id " $1 ": " e " empty months" }' data/lapse.tsv
+      - name: Commit
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898283+github-actions[bot]@users.noreply.github.com"
+          git add data/lapse.tsv
+          git diff --cached --quiet && echo "no change" && exit 0
+          git commit -m "data: climate.tsv from Open-Meteo (parallel CI fetch)" -m "User-facing: none"
+          git pull --rebase -q && git push
