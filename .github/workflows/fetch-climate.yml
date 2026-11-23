@@ -16,7 +16,7 @@ permissions:
 jobs:
   fetch:
     runs-on: ubuntu-latest
-    timeout-minutes: 340
+    timeout-minutes: 90
     steps:
       - uses: actions/checkout@v4
         with:
@@ -24,16 +24,21 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: 22
-      - name: Fetch (sequential, paced, resumable)
-        run: node scripts/fetch-climate.mjs
+      - name: Fetch (sequential, paced, resumable; pushes every 50 places)
+        env:
+          CHECKPOINT: '1'
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898283+github-actions[bot]@users.noreply.github.com"
+          node scripts/fetch-climate.mjs
       - name: Summary
+        if: always()
         run: |
           echo "rows with data: $(($(grep -c . data/climate.tsv) - 1)) of $(($(grep -c . data/places.tsv) - 1))"
           awk -F'\t' 'NR>1 { e=0; for (i=2;i<=13;i++) if ($i=="") e++; if (e) print "id " $1 ": " e " empty months" }' data/climate.tsv
       - name: Commit
+        if: always()
         run: |
-          git config user.name "github-actions[bot]"
-          git config user.email "41898283+github-actions[bot]@users.noreply.github.com"
           git add data/climate.tsv
           git diff --cached --quiet && echo "no change" && exit 0
           git commit -m "data: climate.tsv from Open-Meteo (CI fetch)" -m "User-facing: none"

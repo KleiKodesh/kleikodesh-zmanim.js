@@ -2,7 +2,22 @@
 // Source: Open-Meteo Historical Weather API (https://open-meteo.com/en/docs/historical-weather-api), CC BY 4.0,
 // ERA5 / ERA5-Land reanalysis (Copernicus Climate Change Service), downscaled by Open-Meteo to the place's elevation.
 // Mean of the daily means 2016-2025 per calendar month. Sequential requests with pauses, to be polite.
+import { execSync } from 'node:child_process'
 import { existsSync, readFileSync, writeFileSync } from 'node:fs'
+
+// In CI (CHECKPOINT=1): commit and push data/climate.tsv every CHECKPOINT_EVERY places, so progress shows in git.
+const CHECKPOINT = process.env.CHECKPOINT === '1'
+const CHECKPOINT_EVERY = 50
+const STALL_MS = 3_600_000 // stop when a whole hour passes without a successful request
+function checkpoint(label) {
+  if (!CHECKPOINT) return
+  execSync('git add data/climate.tsv')
+  try { execSync('git diff --cached --quiet') } catch {
+    execSync(`git commit -q -m "data: climate.tsv ${label} (CI fetch)" -m "User-facing: none"`)
+    execSync('git push -q')
+    console.log(`checkpoint pushed: ${label}`)
+  }
+}
 
 const OUT = 'data/climate.tsv'
 const BATCH = 10
@@ -21,6 +36,7 @@ for (let i = 0; i < todo.length; i += BATCH) {
     '&start_date=2016-01-01&end_date=2025-12-31&daily=temperature_2m_mean&timezone=GMT'
   // Per-request timeout; on failure back off (1, 2, 4 ... capped at 15 minutes; the free tier has hourly limits).
   let json
+  const since = Date.now()
   for (let wait = 60_000; ; wait = Math.min(wait * 2, 900_000)) {
     try {
       const res = await fetch(url, { signal: AbortSignal.timeout(60_000) })
@@ -28,6 +44,11 @@ for (let i = 0; i < todo.length; i += BATCH) {
       console.log(`HTTP ${res.status} ${(await res.text()).slice(0, 120)}; waiting ${wait / 1000} s`)
     } catch (e) {
       console.log(`${e.name}: ${e.message}; waiting ${wait / 1000} s`)
+    }
+    if (Date.now() - since > STALL_MS) {
+      checkpoint(`${done.size} rows (stalled)`)
+      console.log(`STALLED: no successful request for an hour at ${done.size}/${rows.length}; stopping`)
+      process.exit(2)
     }
     await pause(wait)
   }
@@ -44,7 +65,10 @@ for (let i = 0; i < todo.length; i += BATCH) {
     done.set(batch[k][0], [batch[k][0], ...vals].join('\t'))
   })
   save()
-  console.log(`${Math.min(i + BATCH, todo.length)}/${todo.length}`)
+  const n = Math.min(i + BATCH, todo.length)
+  console.log(`${n}/${todo.length} (${new Date().toISOString()})`)
+  if (n % CHECKPOINT_EVERY === 0) checkpoint(`${done.size} rows`)
   await pause(4000)
 }
+checkpoint(`${done.size} rows (complete)`)
 console.log(`done: ${done.size} of ${rows.length} places have rows`)
