@@ -1,0 +1,23 @@
+name: osm-lookup
+on:
+  push:
+    branches: [osm-points]
+    paths: [scripts/osm-lookup.mjs, .github/workflows/osm-lookup.yml]
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  run:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with: { node-version: 22 }
+      - run: node scripts/osm-lookup.mjs
+      - run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898283+github-actions[bot]@users.noreply.github.com"
+          git add data/osm-points.tsv
+          git diff --cached --quiet || git commit -m "places lookup: candidates" -m "User-facing: none"
+          git push origin HEAD:${GITHUB_REF_NAME}
