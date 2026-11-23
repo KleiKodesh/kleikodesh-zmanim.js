@@ -53,16 +53,22 @@ describe('sunrise/sunset vs the old fixed 34 arcmin', () => {
 })
 
 describe('lazy climate.bin', () => {
-  it('degree zmanim do not load climate.bin; sunrise does, once', async () => {
+  it('getPlace attaches the climate (climate.bin loaded once, with places.bin and tz.json)', async () => {
     const reads = useFileAssets()
     await zmanim(1, new Date(2026, 0, 1), ['alot', 'tzeit', 'chatzot'])
-    expect(reads.sort()).toEqual(['places.bin', 'tz.json'])
+    expect(reads.sort()).toEqual(['climate.bin', 'places.bin', 'tz.json'])
+    expect((await getPlace(1)).monthlyTemperatureC).toEqual(await getMonthlyTemperatures(1))
     await zmanim(1, new Date(2026, 0, 1), ['sunrise'])
     await zmanim(2, new Date(2026, 0, 1), ['plag'])
     expect(reads.sort()).toEqual(['climate.bin', 'places.bin', 'tz.json'])
   })
-  it('computeZmanim without data files still works (standard atmosphere)', () => {
-    const r = computeZmanim({ lat: 31.77, lng: 35.22, tzid: 'Asia/Jerusalem', elevation: 786 }, { year: 2026, month: 6, day: 21 }, ['sunrise'])
+  it('bare coordinates throw for climate zmanim; explicit standard atmosphere works', () => {
+    const bare = { lat: 31.77, lng: 35.22, tzid: 'Asia/Jerusalem', elevation: 786 }
+    const day = { year: 2026, month: 6, day: 21 }
+    expect(() => computeZmanim(bare, day, ['sunrise'])).toThrow(/temperatures/)
+    expect(() => zmanInstants(bare, day, ['tzeitVisible'])).toThrow(/temperatures/)
+    expect(computeZmanim(bare, day, ['alot', 'tzeit']).alot).toMatch(/^\d\d:\d\d$/)
+    const r = computeZmanim({ ...bare, monthlyTemperatureC: 'standard' }, { year: 2026, month: 6, day: 21 }, ['sunrise'])
     expect(r.sunrise).toMatch(/^05:3\d$/)
   })
 })
@@ -72,7 +78,7 @@ describe('sunrise/sunset from the place height', () => {
     expect(horizonDip(0)).toBe(0)
     expect(horizonDip(-400)).toBe(0)
     expect(horizonDip(800)).toBeCloseTo(0.908, 2)
-    const place = { lat: 31.77, lng: 35.22, tzid: 'Asia/Jerusalem', elevation: 800 }
+    const place = { lat: 31.77, lng: 35.22, tzid: 'Asia/Jerusalem', elevation: 800, monthlyTemperatureC: 'standard' as const }
     const date = { year: 2026, month: 6, day: 21 }
     const t = zmanInstants(place, date, ['sunrise', 'sunriseElevated', 'sunset', 'sunsetElevated'])
     const min = (a: bigint | null | undefined, b: bigint | null | undefined) => Number(a! - b!) / 6e10
@@ -83,7 +89,7 @@ describe('sunrise/sunset from the place height', () => {
     expect(sea.sunsetElevated).toBe(sea.sunset)
   })
   it('extra opinions are in order', () => {
-    const r = computeZmanim({ lat: 31.77, lng: 35.22, tzid: 'Asia/Jerusalem', elevation: 786 }, { year: 2026, month: 3, day: 20 },
+    const r = computeZmanim({ lat: 31.77, lng: 35.22, tzid: 'Asia/Jerusalem', elevation: 786, monthlyTemperatureC: 'standard' }, { year: 2026, month: 3, day: 20 },
       ['alot90', 'alot', 'plag', 'plagMga', 'sunset', 'tzeitGeonim', 'tzeit'])
     expect(r.alot90! < r.alot!).toBe(true)
     expect(r.plag! < r.plagMga!).toBe(true)

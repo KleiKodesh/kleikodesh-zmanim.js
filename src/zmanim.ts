@@ -6,9 +6,11 @@ import { spaDay, spaEvent, zenithToH0, type SpaDay } from './spa.js'
 
 /** Every zman the library computes, in the order of the day. Each is computed only when requested. */
 export const ZMAN_NAMES = [
-  'chatzotNight', 'alot90', 'alot', 'misheyakir', 'sunriseElevated', 'sunrise',
-  'sofShmaMga', 'sofShmaGra', 'sofTfillaMga', 'sofTfillaGra',
-  'chatzot', 'minchaGedola', 'minchaKetana', 'plag', 'plagMga', 'sunset', 'sunsetElevated', 'tzeitGeonim', 'tzeit',
+  'chatzotNight', 'alot90Visible', 'alot90', 'alot90Chatzot', 'alotVisible', 'alot', 'alotChatzot', 'misheyakirVisible',
+  'misheyakir', 'misheyakirChatzot', 'misheyakir11', 'misheyakir10p2', 'sunriseElevated', 'sunrise',
+  'sofShmaMga', 'sofShmaMga16', 'sofShmaGra', 'sofTfillaMga', 'sofTfillaMga16', 'sofTfillaGra',
+  'chatzot', 'minchaGedola', 'minchaGedola30', 'minchaKetana', 'plag', 'plagMga', 'sunset', 'sunsetElevated',
+  'tzeitGeonim', 'tzeitGeonimVisible', 'tzeit7083', 'tzeit', 'tzeitVisible',
 ] as const
 
 export type ZmanName = typeof ZMAN_NAMES[number]
@@ -19,15 +21,21 @@ export type Rounding = 'up' | 'down' | 'nearest'
  * rounds DOWN, chatzot (end of morning and start of afternoon) to the nearest minute.
  */
 export const ROUNDING: Readonly<Record<ZmanName, Rounding>> = {
-  chatzotNight: 'up', alot90: 'up', alot: 'up', misheyakir: 'up', sunriseElevated: 'up', sunrise: 'up',
-  sofShmaGra: 'down', sofShmaMga: 'down', sofTfillaGra: 'down', sofTfillaMga: 'down',
-  chatzot: 'nearest', minchaGedola: 'up', minchaKetana: 'up', plag: 'up', plagMga: 'up',
-  sunset: 'down', sunsetElevated: 'down', tzeitGeonim: 'up', tzeit: 'up',
+  alot90Chatzot: 'up', alotChatzot: 'up', misheyakirChatzot: 'up',
+  chatzotNight: 'up', alot90Visible: 'up', alot90: 'up', alotVisible: 'up', alot: 'up', misheyakirVisible: 'up',
+  misheyakir: 'up', misheyakir11: 'up', misheyakir10p2: 'up', sunriseElevated: 'up', sunrise: 'up',
+  sofShmaGra: 'down', sofShmaMga: 'down', sofShmaMga16: 'down', sofTfillaGra: 'down', sofTfillaMga: 'down', sofTfillaMga16: 'down',
+  chatzot: 'nearest', minchaGedola: 'up', minchaGedola30: 'up', minchaKetana: 'up', plag: 'up', plagMga: 'up',
+  sunset: 'down', sunsetElevated: 'down', tzeitGeonim: 'up', tzeitGeonimVisible: 'up', tzeit7083: 'up', tzeit: 'up', tzeitVisible: 'up',
 }
 
-/** Zmanim that depend on the sunrise/sunset horizon (and so on refraction / climate data). */
+/**
+ * Zmanim that depend on refraction at the horizon, and so on the place's monthly temperatures: sunrise/sunset,
+ * everything built from them, and the Visible degree lines. A place without `monthlyTemperatureC` throws for these.
+ */
 export const HORIZON_ZMANIM: ReadonlySet<ZmanName> = new Set<ZmanName>(['sunrise', 'sunset', 'sunriseElevated', 'sunsetElevated',
-  'sofShmaMga', 'sofShmaGra', 'sofTfillaMga', 'sofTfillaGra', 'minchaGedola', 'minchaKetana', 'plag', 'plagMga'])
+  'sofShmaMga', 'sofShmaGra', 'sofTfillaMga', 'sofTfillaGra', 'minchaGedola', 'minchaGedola30', 'minchaKetana', 'plag', 'plagMga',
+  'alot90Visible', 'alotVisible', 'misheyakirVisible', 'tzeitGeonimVisible', 'tzeitVisible'])
 
 /** A civil date; month 1-12. */
 export interface CivilDate { year: number, month: number, day: number }
@@ -41,8 +49,12 @@ export interface Coordinates {
   rawOffsetMinutes?: number
   /** Meters; sets the air pressure for refraction and the horizon dip of sunriseElevated/sunsetElevated. Default 0. */
   elevation?: number
-  /** 12 monthly mean air temperatures in C (NaN = unknown); default: standard atmosphere at [elevation]. */
-  monthlyTemperatureC?: readonly number[]
+  /**
+   * 12 monthly mean air temperatures in C (NaN = unknown), as getPlace() attaches them; or 'standard' to use the
+   * standard-atmosphere temperature at [elevation] on purpose. Required (else an Error) for HORIZON_ZMANIM, so a
+   * bare { lat, lng } never silently loses the place's climate.
+   */
+  monthlyTemperatureC?: readonly number[] | 'standard'
 }
 
 /** The geometric horizon. */
@@ -53,7 +65,8 @@ const SOLAR_RADIUS = 16 / 60
 const EARTH_RADIUS = 6_371_000
 
 function temperatureAt(place: Coordinates, date: CivilDate): number {
-  const t = place.monthlyTemperatureC ? temperatureOn(place.monthlyTemperatureC, date.month, date.day) : NaN
+  const m = place.monthlyTemperatureC
+  const t = Array.isArray(m) ? temperatureOn(m as readonly number[], date.month, date.day) : NaN
   return Number.isNaN(t) ? standardTemperature(place.elevation ?? 0) : t
 }
 
@@ -74,11 +87,16 @@ export function horizonZenith(place: Coordinates, date: CivilDate, fromHeight = 
   return GEOMETRIC_ZENITH + SOLAR_RADIUS + dip + r / 60
 }
 
-const ALOT = GEOMETRIC_ZENITH + 16.1
-const ALOT_90 = GEOMETRIC_ZENITH + 19.8
-const MISHEYAKIR = GEOMETRIC_ZENITH + 11.5
-const TZEIT = GEOMETRIC_ZENITH + 8.5
-const TZEIT_GEONIM = GEOMETRIC_ZENITH + 3.7
+// Depressions of the sun's centre below the geometric horizon, degrees.
+const ALOT = 16.1
+const ALOT_90 = 19.8
+const MISHEYAKIR = 11.5
+const MISHEYAKIR_11 = 11
+const MISHEYAKIR_10_2 = 10.2
+const TZEIT = 8.5
+/** Three medium stars, Rav Y. M. Tukaczinsky's measurement (Bein Hashmashos), 7.083 deg. */
+const TZEIT_7083 = 7.083
+const TZEIT_GEONIM = 3.7
 const MINUTE_MS = 60_000
 const DAY_MS = 86_400_000
 /** SPA A.2 correction step repeats (the paper does 1; 3 converges well under a second). */
@@ -158,6 +176,18 @@ class Day {
     return this.memo(fromHeight ? 'hh' : 'h', () => horizonZenith(this.place, this.date, fromHeight))
   }
 
+  /**
+   * Zenith of a sun [depression] degrees below the apparent (refracted) sea-level horizon rather than the geometric
+   * one: the visible horizon lies R0 (horizon refraction at this place's pressure/temperature) below the geometric
+   * horizon, so zenith = 90 + R0 + depression. No solar radius: degree lines refer to the sun's centre.
+   */
+  visible(depression: number): number {
+    return this.memo(`v${depression}`, () => {
+      const elevation = this.place.elevation ?? 0
+      return GEOMETRIC_ZENITH + depression + horizonRefractionArcmin(standardPressure(elevation), temperatureAt(this.place, this.date)) / 60
+    })
+  }
+
   rise(zenith: number): number { return this.event(zenith, -1) }
   set(zenith: number): number { return this.event(zenith, 1) }
   sunrise(fromHeight = false): number { return this.rise(this.horizon(fromHeight)) }
@@ -178,37 +208,68 @@ class Day {
   mga(hours: number): number {
     return Day.shaahBased(this.sunrise() - 72 * MINUTE_MS, this.sunset() + 72 * MINUTE_MS, hours)
   }
+
+  /** MGA day by degrees: from alot (16.1 deg) to tzeit at 16.1 deg in the evening. */
+  mga16(hours: number): number {
+    return Day.shaahBased(this.rise(GEOMETRIC_ZENITH + ALOT), this.set(GEOMETRIC_ZENITH + ALOT), hours)
+  }
 }
 
 const toNs = (ms: number): bigint | null => (Number.isNaN(ms) ? null : BigInt(Math.floor(ms)) * 1_000_000n)
 
 /** The instant (epoch nanoseconds, millisecond precision) of each requested zman; null where the sun never gets there. */
 export function zmanInstants(place: Coordinates, date: CivilDate, which: readonly ZmanName[] = ZMAN_NAMES): Partial<Record<ZmanName, bigint | null>> {
+  if (place.monthlyTemperatureC === undefined) {
+    const needs = which.find((n) => HORIZON_ZMANIM.has(n))
+    if (needs) {
+      throw new Error(`kleikodesh-zmanim: '${needs}' depends on the place's temperatures; pass a getPlace() result, `
+        + `or monthlyTemperatureC: [12 values] or 'standard' explicitly`)
+    }
+  }
+  const G = GEOMETRIC_ZENITH
   const today = new Day(place, date)
+  // The midnight that opens this day: halfway between yesterday's and today's chatzot.
+  const night = (): number => (new Day(place, addDays(date, -1)).chatzot + today.chatzot) / 2
+  // A morning degree line, or chatzot halaila (the lowest sun) on nights it is never reached.
+  const orNight = (v: number): number => (Number.isNaN(v) ? night() : v)
   const out: Partial<Record<ZmanName, bigint | null>> = {}
   for (const name of which) {
     let ms: number
     switch (name) {
-      // The midnight that opens this day: halfway between yesterday's and today's chatzot.
-      case 'chatzotNight': ms = (new Day(place, addDays(date, -1)).chatzot + today.chatzot) / 2; break
-      case 'alot90': ms = today.rise(ALOT_90); break
-      case 'alot': ms = today.rise(ALOT); break
-      case 'misheyakir': ms = today.rise(MISHEYAKIR); break
+      case 'chatzotNight': ms = night(); break
+      case 'alot90Chatzot': ms = orNight(today.rise(G + ALOT_90)); break
+      case 'alotChatzot': ms = orNight(today.rise(G + ALOT)); break
+      case 'misheyakirChatzot': ms = orNight(today.rise(G + MISHEYAKIR)); break
+      case 'alot90Visible': ms = today.rise(today.visible(ALOT_90)); break
+      case 'alot90': ms = today.rise(G + ALOT_90); break
+      case 'alotVisible': ms = today.rise(today.visible(ALOT)); break
+      case 'alot': ms = today.rise(G + ALOT); break
+      case 'misheyakirVisible': ms = today.rise(today.visible(MISHEYAKIR)); break
+      case 'misheyakir': ms = today.rise(G + MISHEYAKIR); break
+      case 'misheyakir11': ms = today.rise(G + MISHEYAKIR_11); break
+      case 'misheyakir10p2': ms = today.rise(G + MISHEYAKIR_10_2); break
       case 'sunriseElevated': ms = today.sunrise(true); break
       case 'sunrise': ms = today.sunrise(); break
       case 'sofShmaGra': ms = today.gra(3); break
       case 'sofShmaMga': ms = today.mga(3); break
+      case 'sofShmaMga16': ms = today.mga16(3); break
+      case 'sofTfillaMga16': ms = today.mga16(4); break
       case 'sofTfillaGra': ms = today.gra(4); break
       case 'sofTfillaMga': ms = today.mga(4); break
       case 'chatzot': ms = today.chatzot; break
       case 'minchaGedola': ms = today.gra(6.5); break
+      // The later of 30 minutes after chatzot and half a temporal hour (GRA) after chatzot.
+      case 'minchaGedola30': ms = Math.max(today.chatzot + 30 * MINUTE_MS, today.gra(6.5)); break
       case 'minchaKetana': ms = today.gra(9.5); break
       case 'plag': ms = today.gra(10.75); break
       case 'plagMga': ms = today.mga(10.75); break
       case 'sunset': ms = today.sunset(); break
       case 'sunsetElevated': ms = today.sunset(true); break
-      case 'tzeitGeonim': ms = today.set(TZEIT_GEONIM); break
-      case 'tzeit': ms = today.set(TZEIT); break
+      case 'tzeitGeonim': ms = today.set(G + TZEIT_GEONIM); break
+      case 'tzeitGeonimVisible': ms = today.set(today.visible(TZEIT_GEONIM)); break
+      case 'tzeit7083': ms = today.set(G + TZEIT_7083); break
+      case 'tzeit': ms = today.set(G + TZEIT); break
+      case 'tzeitVisible': ms = today.set(today.visible(TZEIT)); break
       default: throw new Error(`Unknown zman '${String(name)}'`)
     }
     out[name] = toNs(ms)

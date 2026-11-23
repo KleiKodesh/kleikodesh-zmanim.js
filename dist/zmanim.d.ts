@@ -1,5 +1,5 @@
 /** Every zman the library computes, in the order of the day. Each is computed only when requested. */
-export declare const ZMAN_NAMES: readonly ["chatzotNight", "alot90", "alot", "misheyakir", "sunriseElevated", "sunrise", "sofShmaMga", "sofShmaGra", "sofTfillaMga", "sofTfillaGra", "chatzot", "minchaGedola", "minchaKetana", "plag", "plagMga", "sunset", "sunsetElevated", "tzeitGeonim", "tzeit"];
+export declare const ZMAN_NAMES: readonly ["chatzotNight", "alot90Visible", "alot90", "alot90Chatzot", "alotVisible", "alot", "alotChatzot", "misheyakirVisible", "misheyakir", "misheyakirChatzot", "misheyakir11", "misheyakir10p2", "sunriseElevated", "sunrise", "sofShmaMga", "sofShmaMga16", "sofShmaGra", "sofTfillaMga", "sofTfillaMga16", "sofTfillaGra", "chatzot", "minchaGedola", "minchaGedola30", "minchaKetana", "plag", "plagMga", "sunset", "sunsetElevated", "tzeitGeonim", "tzeitGeonimVisible", "tzeit7083", "tzeit", "tzeitVisible"];
 export type ZmanName = typeof ZMAN_NAMES[number];
 export type Rounding = 'up' | 'down' | 'nearest';
 /**
@@ -7,7 +7,10 @@ export type Rounding = 'up' | 'down' | 'nearest';
  * rounds DOWN, chatzot (end of morning and start of afternoon) to the nearest minute.
  */
 export declare const ROUNDING: Readonly<Record<ZmanName, Rounding>>;
-/** Zmanim that depend on the sunrise/sunset horizon (and so on refraction / climate data). */
+/**
+ * Zmanim that depend on refraction at the horizon, and so on the place's monthly temperatures: sunrise/sunset,
+ * everything built from them, and the Visible degree lines. A place without `monthlyTemperatureC` throws for these.
+ */
 export declare const HORIZON_ZMANIM: ReadonlySet<ZmanName>;
 /** A civil date; month 1-12. */
 export interface CivilDate {
@@ -24,8 +27,12 @@ export interface Coordinates {
     rawOffsetMinutes?: number;
     /** Meters; sets the air pressure for refraction and the horizon dip of sunriseElevated/sunsetElevated. Default 0. */
     elevation?: number;
-    /** 12 monthly mean air temperatures in C (NaN = unknown); default: standard atmosphere at [elevation]. */
-    monthlyTemperatureC?: readonly number[];
+    /**
+     * 12 monthly mean air temperatures in C (NaN = unknown), as getPlace() attaches them; or 'standard' to use the
+     * standard-atmosphere temperature at [elevation] on purpose. Required (else an Error) for HORIZON_ZMANIM, so a
+     * bare { lat, lng } never silently loses the place's climate.
+     */
+    monthlyTemperatureC?: readonly number[] | 'standard';
 }
 /** The geometric horizon. */
 export declare const GEOMETRIC_ZENITH = 90;

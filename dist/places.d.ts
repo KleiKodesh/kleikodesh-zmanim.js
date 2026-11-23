@@ -10,6 +10,8 @@ export interface Place {
     elevation: number;
     tzid: string;
     rawOffsetMinutes: number;
+    /** 12 monthly mean temperatures in C (NaN = unknown), for refraction; attached by getPlace(). */
+    monthlyTemperatureC: readonly number[];
 }
 /** Bytes per record in places.bin: lat int32, lng int32 (degrees x 1e5), elevation int16, tz index uint8. */
 export declare const RECORD_SIZE = 11;

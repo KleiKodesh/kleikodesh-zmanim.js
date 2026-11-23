@@ -14,10 +14,17 @@ configure({ loader: async (file) => arrayBuffer })   // or bring your own reader
 
 await listPlaces('he')            // string[]; index = place id (index 0 empty). Loads names-he.txt only.
 await searchPlaces('jeru', 'en')  // [{ id, name }]; prefix matches first; ignores case, accents, Hebrew points
-await getPlace(1)                 // { id, lat, lng, elevation, tzid, rawOffsetMinutes }. Loads places.bin + tz.json once.
+await getPlace(1)                 // { id, lat, lng, elevation, tzid, rawOffsetMinutes, monthlyTemperatureC }.
+                                  // Loads places.bin + tz.json + climate.bin (21 KB) once, together.
 await zmanim(1, new Date(), ['sunrise', 'sunset'])     // { sunrise: '06:12', sunset: '17:01' }; only these are computed
-computeZmanim({ lat, lng, tzid }, { year, month, day }) // synchronous core, no data files at all
+computeZmanim(await getPlace(1), { year, month, day })  // synchronous core
+computeZmanim({ lat, lng, tzid, monthlyTemperatureC: 'standard' }, date) // bare coordinates: standard atmosphere, explicitly
 ```
+
+Climate safety: the zmanim in `HORIZON_ZMANIM` (sunrise/sunset, everything built from them, the `Visible` lines) need
+the place's monthly temperatures. Pass a `getPlace()` result (it carries them). A place object without
+`monthlyTemperatureC` throws for those zmanim instead of silently using the standard atmosphere; pass 12 values or
+`'standard'` to choose. Pure degree zmanim (alot, tzeit...) and chatzot need no temperatures.
 
 `zmanim(place, date, which?)`: `place` is an id or a `getPlace` result; `date` a `Date` (its local calendar date) or
 `{ year, month, day }`; `which` defaults to all of `ZMAN_NAMES`. Each value is `HH:MM` (hours 01-24) in the place's
@@ -32,19 +39,45 @@ Also exported: `zmanInstants` (exact instants as BigInt epoch nanoseconds), `for
 |---|---|---|
 | chatzotNight | solar midnight between yesterday's and today's chatzot | up |
 | alot90 | sun 19.8 deg below the horizon, morning (the "90 minutes" opinion) | up |
+| alot90Visible | sun 19.8 deg below the visible horizon (see below) | up |
+| alot90Chatzot | alot90, or chatzotNight on nights the sun never gets 19.8 deg down (1) | up |
 | alot | sun 16.1 deg below the horizon, morning | up |
+| alotVisible | sun 16.1 deg below the visible horizon | up |
+| alotChatzot | alot, or chatzotNight on nights the sun never gets 16.1 deg down (1) | up |
 | misheyakir | sun 11.5 deg below, morning | up |
+| misheyakirVisible | sun 11.5 deg below the visible horizon | up |
+| misheyakirChatzot | misheyakir, or chatzotNight on nights the sun never gets 11.5 deg down (1) | up |
+| misheyakir11 / misheyakir10p2 | sun 11 / 10.2 deg below, morning (other published misheyakir angles) | up |
 | sunriseElevated | sunrise over the horizon seen from the place's own elevation (dip + refraction) | up |
 | sunrise | sea-level sunrise | up |
 | sofShmaMga / sofTfillaMga | 3 / 4 temporal hours of the day from 72 min before sunrise to 72 min after sunset | down |
+| sofShmaMga16 / sofTfillaMga16 | 3 / 4 temporal hours of the MGA day by degrees: alot 16.1 deg to the sun 16.1 deg below in the evening | down |
 | sofShmaGra / sofTfillaGra | 3 / 4 temporal hours of sunrise..sunset | down |
 | chatzot | solar noon | nearest |
 | minchaGedola / minchaKetana / plag | 6.5 / 9.5 / 10.75 temporal hours (GRA) | up |
+| minchaGedola30 | the later of 30 minutes after chatzot and minchaGedola (half a GRA temporal hour after chatzot) | up |
 | plagMga | 10.75 temporal hours of the same MGA day as sofShmaMga (72 min before sunrise .. 72 min after sunset) | up |
 | sunset | sea-level sunset | down |
 | sunsetElevated | sunset below the horizon seen from the place's own elevation | down |
 | tzeitGeonim | sun 3.7 deg below, evening (Geonim, about 13.5 minutes) | up |
+| tzeitGeonimVisible | sun 3.7 deg below the visible horizon, evening | up |
+| tzeit7083 | sun 7.083 deg below, evening: three medium stars, Rav Y. M. Tukaczinsky's measurement (Sefer Bein Hashmashos) | up |
 | tzeit | sun 8.5 deg below, evening | up |
+| tzeitVisible | sun 8.5 deg below the visible horizon, evening | up |
+
+Degree lines return null on days the sun never gets that low (high latitudes in summer); no rule is invented for
+them, except the explicit `...Chatzot` fallback lines:
+
+(1) Fallback to chatzot halaila (solar midnight, the lowest sun) when the angle is never reached: Moadim U'Zmanim
+(Rav M. Sternbuch) 2:155, glosses; Biur HaGra, Orach Chaim 261:2; STAR-K, Rabbi Dovid Heber with Rav Heinemann,
+https://www.star-k.org/articles/?p=515 (notes 21, 23).
+
+"Visible" lines measure the depression from the apparent (refracted) sea-level horizon instead of the geometric one.
+Refraction lifts the image of the horizon line: a point that appears on the horizon is geometrically R0 below it,
+where R0 is the horizon refraction (the same Saemundsson/Meeus model as sunrise, at the place's pressure and monthly
+temperature, about 34'). So the sun's centre is at zenith 90 + R0 + depression (no solar radius); this is the
+convention of the standard sunrise altitude h0 = -0 deg 34' (Meeus, Astronomical Algorithms, 2nd ed., ch. 15)
+extended below the horizon. The Visible lines come out about 2-4 minutes beyond the geometric ones.
 
 ### Sunrise/sunset refraction (pressure and temperature)
 
@@ -62,8 +95,8 @@ Sunrise and sunset are when the upper limb of the sun touches the apparent sea-l
 
 Only sunrise, sunset and the zmanim built from them (GRA / MGA hours, mincha, plag) change, typically by
 5-35 seconds against the old fixed 34' (more at high places). Degree-based zmanim (alot, misheyakir, tzeit)
-and chatzot are geometric and unchanged. Only those zmanim load climate.bin, once.
-`computeZmanim` takes optional `elevation` and `monthlyTemperatureC` (12 values) in its place argument.
+and chatzot are geometric and unchanged. getPlace() loads climate.bin once with the place table.
+`computeZmanim` takes `elevation` and `monthlyTemperatureC` (12 values, or 'standard') in its place argument.
 
 Elevated sunrise/sunset: the horizon seen from height H lies lower by the geometric dip arccos(R / (R + H))
 (R = 6371 km mean Earth radius; no dip below sea level), and refraction is taken at that depressed apparent
