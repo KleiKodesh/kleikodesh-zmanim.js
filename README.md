@@ -1,3 +1,11 @@
+> **WARNING - not a halachic source.** This library was developed with AI (Claude Code). All times are approximations only. It is not a halachic authority: do not rely on it for halachic decisions. Always check a reliable luach and consult a rav. Provided as is, with no warranty of any kind.
+>
+> <div dir="rtl">
+>
+> **אזהרה - אינו מקור הלכתי.** פותח בעזרת בינה מלאכותית (Claude Code). הזמנים הם הערכה משוערת בלבד ואינם מקור הלכתי. אין לסמוך עליהם להכרעת הלכה; יש לבדוק בלוח אמין ולהתייעץ עם רב. מסופק כמות שהוא, ללא כל אחריות.
+>
+> </div>
+
 # kleikodesh-zmanim.js
 
 Offline zmanim and a compact list of 1803 places, as framework-agnostic ES modules (TypeScript source, `.d.ts` shipped).
