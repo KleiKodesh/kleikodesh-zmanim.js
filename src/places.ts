@@ -42,6 +42,7 @@ export function configure(options: { baseUrl?: string | URL, loader?: AssetLoade
   if (options.loader !== undefined) loader = options.loader
   assetGeneration++
   names.clear()
+  folded.clear()
   bin = null
   tz = null
   climate = null
@@ -91,14 +92,26 @@ export function listPlaces(lang: Lang): Promise<readonly string[]> {
 
 const fold = (s: string): string => s.normalize('NFD').replace(/[̀-֑ͯ-ׇ]/g, '').toLowerCase()
 
+// Each language's names folded for search, built on the first search in that language only.
+const folded = new Map<Lang, Promise<readonly string[]>>()
+function foldedNames(lang: Lang): Promise<readonly string[]> {
+  let list = folded.get(lang)
+  if (!list) {
+    list = listPlaces(lang).then((l) => l.map(fold))
+    list.catch(() => folded.delete(lang))
+    folded.set(lang, list)
+  }
+  return list
+}
+
 /** Places whose [lang] name contains [query] (case, accents and Hebrew points ignored); prefix matches first. */
 export async function searchPlaces(query: string, lang: Lang, limit = 50): Promise<Array<{ id: number, name: string }>> {
   const q = fold(query.trim())
-  const list = await listPlaces(lang)
+  const [list, keys] = await Promise.all([listPlaces(lang), foldedNames(lang)])
   const starts: Array<{ id: number, name: string }> = []
   const contains: Array<{ id: number, name: string }> = []
   for (let id = 1; id < list.length; id++) {
-    const at = fold(list[id]!).indexOf(q)
+    const at = keys[id]!.indexOf(q)
     if (at === 0) starts.push({ id, name: list[id]! })
     else if (at > 0) contains.push({ id, name: list[id]! })
   }
@@ -124,6 +137,20 @@ function zones(): Promise<{ ids: string[], rawOffsetMinutes: number[] }> {
     tz.catch(() => { tz = null })
   }
   return tz
+}
+
+/** The listed place nearest to a point (squared-degree distance). Reads places.bin only, builds no place objects. */
+export async function nearestPlaceId(lat: number, lng: number): Promise<number> {
+  const view = await table()
+  const count = view.byteLength / RECORD_SIZE - 1
+  let best = 1
+  let bestDistance = Infinity
+  for (let id = 1; id <= count; id++) {
+    const o = id * RECORD_SIZE
+    const distance = (view.getInt32(o, true) / SCALE - lat) ** 2 + (view.getInt32(o + 4, true) / SCALE - lng) ** 2
+    if (distance < bestDistance) { bestDistance = distance; best = id }
+  }
+  return best
 }
 
 /** One place's coordinates and zone. Record 0 is unused, so the record offset is id x RECORD_SIZE. */

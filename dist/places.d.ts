@@ -37,6 +37,8 @@ export declare function searchPlaces(query: string, lang: Lang, limit?: number):
 }>>;
 /** Number of places (ids are 1..count). Loads places.bin. */
 export declare function placeCount(): Promise<number>;
+/** The listed place nearest to a point (squared-degree distance). Reads places.bin only, builds no place objects. */
+export declare function nearestPlaceId(lat: number, lng: number): Promise<number>;
 /** One place's coordinates and zone. Record 0 is unused, so the record offset is id x RECORD_SIZE. */
 export declare function getPlace(id: number): Promise<Place>;
 /** A JS Date (its local calendar date is used) or a civil date. */

@@ -24,6 +24,8 @@ await listPlaces('he')            // string[]; index = place id (index 0 empty).
 await searchPlaces('jeru', 'en')  // [{ id, name }]; prefix matches first; ignores case, accents, Hebrew points
 await getPlace(1)                 // { id, lat, lng, elevation, tzid, rawOffsetMinutes, monthlyTemperatureC }.
                                   // Loads places.bin + tz.json + climate.bin (21 KB) once, together.
+await nearestPlaceId(lat, lng)     // id of the listed place nearest a point; reads places.bin only
+await placeTree('he')             // country > city > neighbourhood picker data; each list sorted on first ask
 await zmanim(1, new Date(), ['sunrise', 'sunset'])     // { sunrise: '06:12', sunset: '17:01' }; only these are computed
 computeZmanim(await getPlace(1), { year, month, day })  // synchronous core
 computeZmanim({ lat, lng, tzid, monthlyTemperatureC: 'standard' }, date) // bare coordinates: standard atmosphere, explicitly

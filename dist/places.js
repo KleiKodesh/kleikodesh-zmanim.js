@@ -21,6 +21,7 @@ export function configure(options) {
         loader = options.loader;
     assetGeneration++;
     names.clear();
+    folded.clear();
     bin = null;
     tz = null;
     climate = null;
@@ -63,14 +64,25 @@ export function listPlaces(lang) {
     return list;
 }
 const fold = (s) => s.normalize('NFD').replace(/[̀-֑ͯ-ׇ]/g, '').toLowerCase();
+// Each language's names folded for search, built on the first search in that language only.
+const folded = new Map();
+function foldedNames(lang) {
+    let list = folded.get(lang);
+    if (!list) {
+        list = listPlaces(lang).then((l) => l.map(fold));
+        list.catch(() => folded.delete(lang));
+        folded.set(lang, list);
+    }
+    return list;
+}
 /** Places whose [lang] name contains [query] (case, accents and Hebrew points ignored); prefix matches first. */
 export async function searchPlaces(query, lang, limit = 50) {
     const q = fold(query.trim());
-    const list = await listPlaces(lang);
+    const [list, keys] = await Promise.all([listPlaces(lang), foldedNames(lang)]);
     const starts = [];
     const contains = [];
     for (let id = 1; id < list.length; id++) {
-        const at = fold(list[id]).indexOf(q);
+        const at = keys[id].indexOf(q);
         if (at === 0)
             starts.push({ id, name: list[id] });
         else if (at > 0)
@@ -95,6 +107,22 @@ function zones() {
         tz.catch(() => { tz = null; });
     }
     return tz;
+}
+/** The listed place nearest to a point (squared-degree distance). Reads places.bin only, builds no place objects. */
+export async function nearestPlaceId(lat, lng) {
+    const view = await table();
+    const count = view.byteLength / RECORD_SIZE - 1;
+    let best = 1;
+    let bestDistance = Infinity;
+    for (let id = 1; id <= count; id++) {
+        const o = id * RECORD_SIZE;
+        const distance = (view.getInt32(o, true) / SCALE - lat) ** 2 + (view.getInt32(o + 4, true) / SCALE - lng) ** 2;
+        if (distance < bestDistance) {
+            bestDistance = distance;
+            best = id;
+        }
+    }
+    return best;
 }
 /** One place's coordinates and zone. Record 0 is unused, so the record offset is id x RECORD_SIZE. */
 export async function getPlace(id) {
