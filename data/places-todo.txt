@@ -1,0 +1,90 @@
+Ramat Beit Shemesh Aleph | Beit Shemesh, Israel | neighbourhood
+Ramat Beit Shemesh Bet | Beit Shemesh, Israel | neighbourhood
+Ramat Beit Shemesh Gimel | Beit Shemesh, Israel | neighbourhood
+Nofei Aviv | Beit Shemesh, Israel | neighbourhood
+Kiryat Sefer | Modiin Illit, Israel | neighbourhood
+Brachfeld | Modiin Illit, Israel | neighbourhood
+Green Park | Modiin Illit, Israel | neighbourhood
+Ramat Eshkol | Jerusalem, Israel | neighbourhood
+Arnona | Jerusalem, Israel | neighbourhood
+Kiryat Yovel | Jerusalem, Israel | neighbourhood
+Oceanside | New York, United States | hamlet
+West Hempstead | New York, United States | hamlet
+Kaser | New York, United States | village
+New Hempstead | New York, United States | village
+Monticello | New York, United States | village
+Liberty | New York, United States | village
+Scarsdale | New York, United States | village
+Yonkers | New York, United States | city
+White Plains | New York, United States | city
+Howell Township | New Jersey, United States | township
+Brick Township | New Jersey, United States | township
+Elizabeth | New Jersey, United States | city
+Ocean Township | Monmouth County, New Jersey, United States | township
+Rockville | Maryland, United States | city
+Potomac | Maryland, United States | census-designated place
+Boynton Beach | Florida, United States | city
+West Palm Beach | Florida, United States | city
+Calgary | Alberta, Canada | city
+Edmonton | Alberta, Canada | city
+Boisbriand | Quebec, Canada | city
+Atlantic Beach | New York, United States | village
+Belle Harbor | Queens, New York, United States | neighbourhood
+Airmont | New York, United States | village
+Pomona | New York, United States | village
+Montebello | New York, United States | village
+Bloomingburg | New York, United States | village
+Woodbourne | New York, United States | hamlet
+Deerfield | Illinois, United States | village
+Buffalo Grove | Illinois, United States | village
+Owings Mills | Maryland, United States | census-designated place
+Charenton-le-Pont | France | commune
+Nogent-sur-Marne | France | commune
+Saint-Maur-des-Fosses | France | commune
+Pantin | France | commune
+Bondy | France | commune
+Villiers-le-Bel | France | commune
+Bordeaux | France | city
+Lille | France | city
+Grenoble | France | city
+Montpellier | France | city
+Hamburg | Germany | city
+Cologne | Germany | city
+Dusseldorf | Germany | city
+Leipzig | Germany | city
+Bern | Switzerland | city
+Lausanne | Switzerland | city
+Lucerne | Switzerland | city
+Venice | Italy | city
+Turin | Italy | city
+Livorno | Italy | city
+Malaga | Spain | city
+Marbella | Spain | city
+Ceuta | Spain | city
+Lviv | Ukraine | city
+Vilnius | Lithuania | city
+Riga | Latvia | city
+Tallinn | Estonia | city
+Lodz | Poland | city
+Lezajsk | Poland | town
+Lublin | Poland | city
+Wroclaw | Poland | city
+Bratislava | Slovakia | city
+Helsinki | Finland | city
+Dublin | Ireland | city
+Sofia | Bulgaria | city
+Belgrade | Serbia | city
+Tunis | Tunisia | city
+Florence | Italy | city
+La Paz | Bolivia | city
+Casablanca | Morocco | city
+Marrakesh | Morocco | city
+Baku | Azerbaijan | city
+Tashkent | Uzbekistan | city
+Bukhara | Uzbekistan | city
+Brisbane | Australia | city
+Gold Coast | Australia | city
+Dubai | United Arab Emirates | city
+Recife | Brazil | city
+Curitiba | Brazil | city
+Belo Horizonte | Brazil | city

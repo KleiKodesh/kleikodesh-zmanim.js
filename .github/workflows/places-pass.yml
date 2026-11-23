@@ -1,0 +1,27 @@
+name: places-pass
+on:
+  push:
+    branches: [places]
+    paths: ['.github/workflows/places-pass.yml', 'scripts/places-pass.mjs']
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  run:
+    runs-on: ubuntu-latest
+    timeout-minutes: 90
+    steps:
+      - uses: actions/checkout@v4
+        with: { ref: places }
+      - uses: actions/setup-node@v4
+        with: { node-version: 22 }
+      - run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898283+github-actions[bot]@users.noreply.github.com"
+      - run: node scripts/places-pass.mjs
+        env: { CHECKPOINT: '1' }
+      - if: always()
+        run: |
+          git add data
+          git diff --cached --quiet || git commit -m "places pass: final data" -m "User-facing: none"
+          git push origin HEAD:places
