@@ -1,6 +1,6 @@
 // The place list: loaded lazily from the compact asset files, each at most once.
-import type { CivilDate, ZmanName } from './zmanim.js'
-import { computeZmanim, ZMAN_NAMES } from './zmanim.js'
+import type { CivilDate, Coordinates, ZmanName } from './zmanim.js'
+import { computeZmanim, NO_TERRAIN, TERRAIN_BINS, TERRAIN_ZMANIM, ZMAN_NAMES } from './zmanim.js'
 
 export type Lang = 'he' | 'en'
 
@@ -17,6 +17,8 @@ export interface Place {
   rawOffsetMinutes: number
   /** 12 monthly mean temperatures in C (NaN = unknown), for refraction; attached by getPlace(). */
   monthlyTemperatureC: readonly number[]
+  /** Terrain horizon for sunriseTerrain/sunsetTerrain; not set by getPlace() (see getTerrainHorizon). */
+  terrainHorizon?: ArrayLike<number> | null
 }
 
 /** Bytes per record in places.bin: lat int32, lng int32 (degrees x 1e5), elevation int16, tz index uint8. */
@@ -46,6 +48,7 @@ export function configure(options: { baseUrl?: string | URL, loader?: AssetLoade
   bin = null
   tz = null
   climate = null
+  horizon = null
   placeCache.clear()
 }
 
@@ -54,6 +57,7 @@ const names = new Map<Lang, Promise<readonly string[]>>()
 let bin: Promise<DataView> | null = null
 let tz: Promise<{ ids: string[], rawOffsetMinutes: number[] }> | null = null
 let climate: Promise<Int8Array> | null = null
+let horizon: Promise<Int16Array> | null = null
 const placeCache = new Map<number, Place>()
 
 /** Bytes per record in climate.bin: 12 monthly mean temperatures, int8 C; -128 = unknown. */
@@ -66,6 +70,22 @@ function climateTable(): Promise<Int8Array> {
     climate.catch(() => { climate = null })
   }
   return climate
+}
+
+/**
+ * A place's terrain horizon (TERRAIN_BINS values, hundredths of a degree; see Coordinates.terrainHorizon), or null
+ * for a place without one (e.g. added after horizon.bin was built). Loads horizon.bin (about 0.9 MB) once, only here.
+ */
+export async function getTerrainHorizon(id: number): Promise<Int16Array | null> {
+  if (!horizon) {
+    horizon = loader('horizon.bin').then((buffer) => new Int16Array(buffer))
+    horizon.catch(() => { horizon = null })
+  }
+  const t = await horizon
+  const o = id * TERRAIN_BINS
+  if (!Number.isInteger(id) || id < 1 || o + TERRAIN_BINS > t.length) return null
+  const row = t.subarray(o, o + TERRAIN_BINS)
+  return row.every((v) => v === NO_TERRAIN) ? null : row
 }
 
 /** A place's 12 monthly mean temperatures (C; NaN where unknown). Loads climate.bin once. */
@@ -188,6 +208,10 @@ export async function zmanim(
   date: DateInput,
   which: readonly ZmanName[] = ZMAN_NAMES,
 ): Promise<Partial<Record<ZmanName, string | null>>> {
-  const p = typeof place === 'number' ? await getPlace(place) : place
+  let p: Coordinates = typeof place === 'number' ? await getPlace(place) : place
+  // horizon.bin is loaded only when a terrain line is asked for.
+  if (p.terrainHorizon === undefined && typeof (p as Place).id === 'number' && which.some((n) => TERRAIN_ZMANIM.has(n))) {
+    p = { ...p, terrainHorizon: await getTerrainHorizon((p as Place).id) }
+  }
   return computeZmanim(p, toCivilDate(date), which)
 }

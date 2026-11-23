@@ -2,15 +2,15 @@
 // transit/set); sunrise/sunset refraction from src/refraction.ts. The zman definitions are the standard
 // halachic ones (temporal hours of a GRA or MGA day, degree depressions); see README.
 import { horizonRefractionArcmin, standardPressure, standardTemperature, temperatureOn } from './refraction.js'
-import { spaDay, spaEvent, zenithToH0, type SpaDay } from './spa.js'
+import { julianDayFromUtcMs, spa, spaDay, spaEvent, zenithToH0, type SpaDay } from './spa.js'
 
 /** Every zman the library computes, in the order of the day. Each is computed only when requested. */
 export const ZMAN_NAMES = [
   'chatzotNight', 'alot90Visible', 'alot90', 'alot90Chatzot', 'alotVisible', 'alot', 'alotChatzot', 'misheyakirVisible',
-  'misheyakir', 'misheyakirChatzot', 'misheyakir11', 'misheyakir10p2', 'sunriseElevated', 'sunrise',
+  'misheyakir', 'misheyakirChatzot', 'misheyakir11', 'misheyakir10p2', 'sunriseElevated', 'sunrise', 'sunriseTerrain',
   'sofShmaMga', 'sofShmaMga16', 'sofShmaGra', 'sofTfillaMga', 'sofTfillaMga16', 'sofTfillaGra',
   'chatzot', 'minchaGedola', 'minchaGedola30', 'minchaKetana', 'plag', 'plagMga',
-  'candles40', 'candles30', 'candles22', 'candles20', 'candles18', 'sunset', 'sunsetElevated',
+  'candles40', 'candles30', 'candles22', 'candles20', 'candles18', 'sunsetTerrain', 'sunset', 'sunsetElevated',
   'tzeitGeonim', 'tzeitGeonimVisible', 'tzeit7083', 'tzeit', 'tzeitVisible',
   'tzeitRt72', 'tzeitRt72Zmanis', 'tzeitRt16',
 ] as const
@@ -25,10 +25,10 @@ export type Rounding = 'up' | 'down' | 'nearest'
 export const ROUNDING: Readonly<Record<ZmanName, Rounding>> = {
   alot90Chatzot: 'up', alotChatzot: 'up', misheyakirChatzot: 'up',
   chatzotNight: 'up', alot90Visible: 'up', alot90: 'up', alotVisible: 'up', alot: 'up', misheyakirVisible: 'up',
-  misheyakir: 'up', misheyakir11: 'up', misheyakir10p2: 'up', sunriseElevated: 'up', sunrise: 'up',
+  misheyakir: 'up', misheyakir11: 'up', misheyakir10p2: 'up', sunriseElevated: 'up', sunrise: 'up', sunriseTerrain: 'up',
   sofShmaGra: 'down', sofShmaMga: 'down', sofShmaMga16: 'down', sofTfillaGra: 'down', sofTfillaMga: 'down', sofTfillaMga16: 'down',
   chatzot: 'nearest', minchaGedola: 'up', minchaGedola30: 'up', minchaKetana: 'up', plag: 'up', plagMga: 'up',
-  sunset: 'down', sunsetElevated: 'down', tzeitGeonim: 'up', tzeitGeonimVisible: 'up', tzeit7083: 'up', tzeit: 'up', tzeitVisible: 'up',
+  sunset: 'down', sunsetElevated: 'down', sunsetTerrain: 'down', tzeitGeonim: 'up', tzeitGeonimVisible: 'up', tzeit7083: 'up', tzeit: 'up', tzeitVisible: 'up',
   candles40: 'down', candles30: 'down', candles22: 'down', candles20: 'down', candles18: 'down',
   tzeitRt72: 'up', tzeitRt72Zmanis: 'up', tzeitRt16: 'up',
 }
@@ -40,7 +40,29 @@ export const ROUNDING: Readonly<Record<ZmanName, Rounding>> = {
 export const HORIZON_ZMANIM: ReadonlySet<ZmanName> = new Set<ZmanName>(['sunrise', 'sunset', 'sunriseElevated', 'sunsetElevated',
   'sofShmaMga', 'sofShmaGra', 'sofTfillaMga', 'sofTfillaGra', 'minchaGedola', 'minchaGedola30', 'minchaKetana', 'plag', 'plagMga',
   'alot90Visible', 'alotVisible', 'misheyakirVisible', 'tzeitGeonimVisible', 'tzeitVisible',
-  'candles40', 'candles30', 'candles22', 'candles20', 'candles18', 'tzeitRt72', 'tzeitRt72Zmanis'])
+  'candles40', 'candles30', 'candles22', 'candles20', 'candles18', 'tzeitRt72', 'tzeitRt72Zmanis', 'sunriseTerrain', 'sunsetTerrain'])
+
+/** Zmanim that need the place's terrain horizon (Coordinates.terrainHorizon); null without it. */
+export const TERRAIN_ZMANIM: ReadonlySet<ZmanName> = new Set<ZmanName>(['sunriseTerrain', 'sunsetTerrain'])
+
+/** Azimuth bins of a terrain horizon: one per degree, 30..150 (east) then 210..330 (west). */
+export const TERRAIN_BINS = 242
+
+/** Terrain horizon altitude (degrees, apparent) toward [azimuth] (from north, eastward); NaN outside the bins or without data. */
+export function terrainAltitude(profile: ArrayLike<number>, azimuth: number): number {
+  let base: number
+  let a: number
+  if (azimuth >= 30 && azimuth <= 150) { base = 0; a = azimuth - 30 } else if (azimuth >= 210 && azimuth <= 330) { base = 121; a = azimuth - 210 } else return NaN
+  const i = Math.min(Math.floor(a), 119)
+  const f = a - i
+  const v0 = profile[base + i]!
+  const v1 = profile[base + i + 1]!
+  if (v0 === NO_TERRAIN || v1 === NO_TERRAIN) return NaN
+  return (v0 + (v1 - v0) * f) / 100
+}
+
+/** Missing value in a terrain horizon (hundredths of a degree). */
+export const NO_TERRAIN = -32768
 
 /** A civil date; month 1-12. */
 export interface CivilDate { year: number, month: number, day: number }
@@ -60,6 +82,11 @@ export interface Coordinates {
    * bare { lat, lng } never silently loses the place's climate.
    */
   monthlyTemperatureC?: readonly number[] | 'standard'
+  /**
+   * Terrain horizon for sunriseTerrain/sunsetTerrain: TERRAIN_BINS int16 values, apparent altitude in hundredths
+   * of a degree (NO_TERRAIN = none), as zmanim() attaches from horizon.bin. Without it those lines are null.
+   */
+  terrainHorizon?: ArrayLike<number> | null
 }
 
 /** The geometric horizon. */
@@ -199,6 +226,32 @@ class Day {
   sunset(fromHeight = false): number { return this.set(this.horizon(fromHeight)) }
   get chatzot(): number { return this.event(0, 0) }
 
+  /**
+   * The sun's upper limb at the terrain horizon toward its own azimuth (kind -1 rise, +1 set): the horizon altitude
+   * A at the sun's azimuth, refraction at apparent altitude A, so the centre's zenith is 90 - A + R(A) + radius.
+   * The azimuth comes from SPA at the previous estimate, starting from sea-level sunrise/sunset; a few steps converge.
+   */
+  terrain(kind: -1 | 1): number {
+    const profile = this.place.terrainHorizon
+    if (!profile) return NaN
+    return this.memo(`t${kind}`, () => {
+      let t = kind < 0 ? this.sunrise() : this.sunset()
+      const pressure = standardPressure(this.place.elevation ?? 0)
+      const temperature = temperatureAt(this.place, this.date)
+      for (let i = 0; i < 6 && !Number.isNaN(t); i++) {
+        const azimuth = spa({ jd: julianDayFromUtcMs(t), latitude: this.place.lat, longitude: this.place.lng }).azimuth
+        const a = terrainAltitude(profile, azimuth)
+        if (Number.isNaN(a)) return NaN
+        const zenith = GEOMETRIC_ZENITH - a + horizonRefractionArcmin(pressure, temperature, a) / 60 + SOLAR_RADIUS
+        const next = this.event(zenith, kind)
+        const done = Math.abs(next - t) < 1000
+        t = next
+        if (done) break
+      }
+      return t
+    })
+  }
+
   /** [hours] temporal hours (a twelfth of [start]..[end]) counted from [start]. */
   static shaahBased(start: number, end: number, hours: number): number {
     return start + (end - start) / 12 * hours
@@ -255,6 +308,7 @@ export function zmanInstants(place: Coordinates, date: CivilDate, which: readonl
       case 'misheyakir10p2': ms = today.rise(G + MISHEYAKIR_10_2); break
       case 'sunriseElevated': ms = today.sunrise(true); break
       case 'sunrise': ms = today.sunrise(); break
+      case 'sunriseTerrain': ms = today.terrain(-1); break
       case 'sofShmaGra': ms = today.gra(3); break
       case 'sofShmaMga': ms = today.mga(3); break
       case 'sofShmaMga16': ms = today.mga16(3); break
@@ -269,6 +323,7 @@ export function zmanInstants(place: Coordinates, date: CivilDate, which: readonl
       case 'plag': ms = today.gra(10.75); break
       case 'plagMga': ms = today.mga(10.75); break
       case 'sunset': ms = today.sunset(); break
+      case 'sunsetTerrain': ms = today.terrain(1); break
       case 'sunsetElevated': ms = today.sunset(true); break
       case 'tzeitGeonim': ms = today.set(G + TZEIT_GEONIM); break
       case 'tzeitGeonimVisible': ms = today.set(today.visible(TZEIT_GEONIM)); break

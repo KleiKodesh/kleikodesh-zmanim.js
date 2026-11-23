@@ -170,6 +170,18 @@ The moment the top edge of the sun appears on the horizon, at sea level. It is t
 - Shulchan Aruch OC 89:1 (ideally the prayer starts at sunrise)
 - Astronomy: the upper limb of the sun on the horizon, with refraction from pressure and temperature (Meeus, Astronomical Algorithms, ch. 15-16)
 
+<a id="sunriseTerrain"></a>
+
+## Visible sunrise (over the mountains)
+
+The moment the sun's upper edge appears over the actual hills and mountains to the east, rather than over a flat sea-level horizon. A place with mountains to its east sees the sun later. The height of the surrounding land in every direction comes from an elevation map, with the Earth's curvature and refraction. Places without terrain data have no time for this line.
+
+**Sources:**
+
+- Shulchan Aruch OC 58:1 (the vasikin finish Shema at sunrise)
+- Shulchan Aruch OC 89:1 (the morning prayer is ideally at sunrise)
+- Calculation: Copernicus DEM GLO-90 elevation model, refraction (Meeus, Astronomical Algorithms, ch. 16), terrestrial refraction coefficient 0.13
+
 <a id="sofShmaMga"></a>
 
 ## Latest Shema (Magen Avraham)
@@ -322,6 +334,18 @@ Plag hamincha (10.75 temporal hours) of the same day as the Magen Avraham's late
 - Mishna Berachot 4:1
 - Shulchan Aruch OC 233:1
 - Magen Avraham 58:1 (counting from dawn; see siman 233)
+
+<a id="sunsetTerrain"></a>
+
+## Visible sunset (behind the mountains)
+
+The moment the sun's upper edge disappears behind the actual hills and mountains to the west, rather than below a flat sea-level horizon. A place with mountains to its west sees the sun set earlier; facing the sea it is close to the ordinary sunset. Places without terrain data have no time for this line.
+
+**Sources:**
+
+- Shabbat 34b-35a (sunset and bein hashmashot)
+- Shulchan Aruch OC 261:1-2
+- Calculation: Copernicus DEM GLO-90 elevation model, refraction (Meeus, Astronomical Algorithms, ch. 16), terrestrial refraction coefficient 0.13
 
 <a id="sunset"></a>
 
