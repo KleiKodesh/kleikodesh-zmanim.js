@@ -646,6 +646,32 @@ The end of four temporal hours of the Magen Avraham's day, counted from 120 fixe
 - Pesachim 93b (from dawn to sunrise five mil, in the name of Rabbi Yochanan)
 - Rambam, commentary on Mishna Pesachim 3:2 (a mil = two fifths of an hour, 24 minutes)
 
+<a id="plagAlot90Tzeit645"></a>
+
+## Plag hamincha (dawn 90 min to nightfall)
+
+Ten and three-quarter seasonal hours of a day counted from dawn (90 minutes) to Rav Tucazinsky's nightfall, in the Magen Avraham's way.
+
+**Sources:**
+
+- Mishna Berachot 4:1 (plag hamincha)
+- Magen Avraham 58:1 (the day counted from dawn to nightfall)
+- Shulchan Aruch OC 233:1
+- Birur Halacha, Yoreh De'ah 262 (nightfall at 6.45 deg)
+
+<a id="plagAlot72Tzeit645"></a>
+
+## Plag hamincha (dawn 72 min to nightfall)
+
+Ten and three-quarter seasonal hours of a day counted from dawn (72 minutes) to Rav Tucazinsky's nightfall, in the Magen Avraham's way.
+
+**Sources:**
+
+- Mishna Berachot 4:1 (plag hamincha)
+- Magen Avraham 58:1 (the day counted from dawn to nightfall)
+- Shulchan Aruch OC 233:1
+- Birur Halacha, Yoreh De'ah 262 (nightfall at 6.45 deg)
+
 <a id="sofShmaMga72z"></a>
 
 ## Latest Shema (Magen Avraham, 72 seasonal minutes)
@@ -816,6 +842,17 @@ Three quarters of a mil after sunset at 24 minutes a mil, measured by the sun's 
 
 - Community custom (a fixed margin after sunset; no single published source)
 - Shabbat 34b (twilight is three quarters of a mil, Rabba in the name of Shmuel)
+
+<a id="tzeit645"></a>
+
+## Nightfall (Rav Tucazinsky)
+
+Nightfall by Rav Yechiel Michel Tucazinsky's calculation: the sun 6.45 degrees below the horizon. About 26 minutes after sunset at the equinox in Jerusalem, about 31 in summer.
+
+**Sources:**
+
+- Birur Halacha, Yoreh De'ah 262 (Rav Y. M. Tucazinsky's nightfall, the sun 6.45 deg below the horizon), https://hebrewbooks.org/pdfpager.aspx?req=50536&st=&pgnum=51
+- Shabbat 35b (three medium stars)
 
 <a id="tzeit24"></a>
 

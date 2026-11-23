@@ -1079,6 +1079,50 @@
       ]
     }
   },
+  "plagAlot90Tzeit645": {
+    "he": {
+      "title": "פלג המנחה (מעלות השחר 90 דק׳ עד צאת הכוכבים)",
+      "text": "עשר שעות זמניות ושלושה רבעים, כשהיום נמנה מעלות השחר (90 דקות) עד צאת הכוכבים של הרב טוקצינסקי, כדרך המגן אברהם.",
+      "sources": [
+        "משנה ברכות ד, א (פלג המנחה)",
+        "מגן אברהם נח, א (היום נמנה מעלות השחר עד צאת הכוכבים)",
+        "שו״ע או״ח רלג, א",
+        "בירור הלכה יו״ד רסב (צאת הכוכבים, 6.45 מעלות)"
+      ]
+    },
+    "en": {
+      "title": "Plag hamincha (dawn 90 min to nightfall)",
+      "text": "Ten and three-quarter seasonal hours of a day counted from dawn (90 minutes) to Rav Tucazinsky's nightfall, in the Magen Avraham's way.",
+      "sources": [
+        "Mishna Berachot 4:1 (plag hamincha)",
+        "Magen Avraham 58:1 (the day counted from dawn to nightfall)",
+        "Shulchan Aruch OC 233:1",
+        "Birur Halacha, Yoreh De'ah 262 (nightfall at 6.45 deg)"
+      ]
+    }
+  },
+  "plagAlot72Tzeit645": {
+    "he": {
+      "title": "פלג המנחה (מעלות השחר 72 דק׳ עד צאת הכוכבים)",
+      "text": "עשר שעות זמניות ושלושה רבעים, כשהיום נמנה מעלות השחר (72 דקות) עד צאת הכוכבים של הרב טוקצינסקי, כדרך המגן אברהם.",
+      "sources": [
+        "משנה ברכות ד, א (פלג המנחה)",
+        "מגן אברהם נח, א (היום נמנה מעלות השחר עד צאת הכוכבים)",
+        "שו״ע או״ח רלג, א",
+        "בירור הלכה יו״ד רסב (צאת הכוכבים, 6.45 מעלות)"
+      ]
+    },
+    "en": {
+      "title": "Plag hamincha (dawn 72 min to nightfall)",
+      "text": "Ten and three-quarter seasonal hours of a day counted from dawn (72 minutes) to Rav Tucazinsky's nightfall, in the Magen Avraham's way.",
+      "sources": [
+        "Mishna Berachot 4:1 (plag hamincha)",
+        "Magen Avraham 58:1 (the day counted from dawn to nightfall)",
+        "Shulchan Aruch OC 233:1",
+        "Birur Halacha, Yoreh De'ah 262 (nightfall at 6.45 deg)"
+      ]
+    }
+  },
   "sofShmaMga72z": {
     "he": {
       "title": "סוף זמן קריאת שמע (מגן אברהם, 72 דקות זמניות)",
@@ -1366,6 +1410,24 @@
       "sources": [
         "Community custom (a fixed margin after sunset; no single published source)",
         "Shabbat 34b (twilight is three quarters of a mil, Rabba in the name of Shmuel)"
+      ]
+    }
+  },
+  "tzeit645": {
+    "he": {
+      "title": "צאת הכוכבים (הרב טוקצינסקי)",
+      "text": "צאת הכוכבים לפי חשבונו של הרב יחיאל מיכל טוקצינסקי: השמש 6.45 מעלות מתחת לאופק. כ־26 דקות אחרי השקיעה בימי השוויון בירושלים, וכ־31 דקות בקיץ.",
+      "sources": [
+        "בירור הלכה יו״ד רסב (חשבון הרב טוקצינסקי, 6.45 מעלות), https://hebrewbooks.org/pdfpager.aspx?req=50536&st=&pgnum=51",
+        "שבת לה ע״ב (שלשה כוכבים בינוניים)"
+      ]
+    },
+    "en": {
+      "title": "Nightfall (Rav Tucazinsky)",
+      "text": "Nightfall by Rav Yechiel Michel Tucazinsky's calculation: the sun 6.45 degrees below the horizon. About 26 minutes after sunset at the equinox in Jerusalem, about 31 in summer.",
+      "sources": [
+        "Birur Halacha, Yoreh De'ah 262 (Rav Y. M. Tucazinsky's nightfall, the sun 6.45 deg below the horizon), https://hebrewbooks.org/pdfpager.aspx?req=50536&st=&pgnum=51",
+        "Shabbat 35b (three medium stars)"
       ]
     }
   },

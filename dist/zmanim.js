@@ -9,9 +9,9 @@ export const ZMAN_NAMES = [
     'misheyakir', 'misheyakirChatzot', 'misheyakir11', 'misheyakir10p2', 'sunriseElevated', 'sunrise', 'sunriseTerrain',
     'sofShmaMga120', 'sofShmaMga90', 'sofShmaMga19', 'sofShmaMga90z', 'sofShmaMga', 'sofShmaMga16', 'sofShmaMga72z', 'sofShmaGra',
     'sofTfillaMga120', 'sofTfillaMga90', 'sofTfillaMga19', 'sofTfillaMga90z', 'sofTfillaMga', 'sofTfillaMga16', 'sofTfillaMga72z', 'sofTfillaGra',
-    'chatzot', 'minchaGedola', 'minchaGedola30', 'minchaKetana', 'plag', 'plagMga', 'plagMga72z', 'plagMga19', 'plagMga90z', 'plagMga90', 'plagMga120',
+    'chatzot', 'minchaGedola', 'minchaGedola30', 'minchaKetana', 'plag', 'plagMga', 'plagMga72z', 'plagMga19', 'plagMga90z', 'plagMga90', 'plagMga120', 'plagAlot90Tzeit645', 'plagAlot72Tzeit645',
     'candles40', 'candles30', 'candles22', 'candles20', 'candles18', 'sunsetTerrain', 'sunset', 'sunsetElevated',
-    'tzeitGeonim', 'tzeitGeonimVisible', 'tzeit13p5', 'tzeit18', 'tzeit18Sun', 'tzeit20', 'tzeit7083', 'tzeit', 'tzeitVisible', 'tzeit24', 'tzeit30',
+    'tzeitGeonim', 'tzeitGeonimVisible', 'tzeit13p5', 'tzeit18', 'tzeit18Sun', 'tzeit20', 'tzeit645', 'tzeit7083', 'tzeit', 'tzeitVisible', 'tzeit24', 'tzeit30',
     'tzeit40', 'tzeit50', 'beinHashmashotRt', 'tzeitRt72', 'tzeitRt72Zmanis', 'tzeitRt16', 'tzeit90z',
 ];
 /**
@@ -30,7 +30,7 @@ export const ROUNDING = {
     alot90z: 'up', alot72z: 'up', tzeit90z: 'up',
     sofShmaMga120: 'down', sofShmaMga90: 'down', sofShmaMga19: 'down', sofShmaMga90z: 'down', sofShmaMga72z: 'down',
     sofTfillaMga120: 'down', sofTfillaMga90: 'down', sofTfillaMga19: 'down', sofTfillaMga90z: 'down', sofTfillaMga72z: 'down',
-    plagMga120: 'up', plagMga90: 'up', plagMga19: 'up', plagMga90z: 'up', plagMga72z: 'up',
+    plagMga120: 'up', plagAlot90Tzeit645: 'up', plagAlot72Tzeit645: 'up', tzeit645: 'up', plagMga90: 'up', plagMga19: 'up', plagMga90z: 'up', plagMga72z: 'up',
     tzeit13p5: 'up', tzeit18: 'up', tzeit20: 'up', tzeit24: 'up', tzeit30: 'up', tzeit40: 'up', tzeit50: 'up',
     // The start of Rabbeinu Tam's twilight ends the time that is surely day (work before Shabbat): a deadline.
     beinHashmashotRt: 'down',
@@ -116,6 +116,8 @@ const TZEIT = 8.5;
 /** Three medium stars (an observational estimate), 7.083 deg. */
 const TZEIT_7083 = 7.083;
 const TZEIT_GEONIM = 3.7;
+/** Rav Y. M. Tucazinsky's tzeit (Birur Halacha, Yoreh De'ah 262): the sun 6.45 deg below the true horizon. */
+const TZEIT_645 = 6.45;
 /**
  * 18 minutes (3/4 mil at 24 minutes a mil) expressed by the sun's position: how far the sun is below
  * the true horizon 18 minutes after sea-level sunset in Jerusalem at the equinox, computed with this
@@ -262,6 +264,10 @@ class Day {
         return Day.shaahBased(this.gra(-p), this.gra(12 + p), hours);
     }
     /** MGA day by 19.8 deg: from alot90 to the sun 19.8 deg below in the evening. */
+    /** Magen Avraham's day from alot (degrees below the horizon) to Rav Tucazinsky's tzeit (6.45 deg). */
+    alotToTzeit645(alotDeg, hours) {
+        return Day.shaahBased(this.rise(GEOMETRIC_ZENITH + alotDeg), this.set(GEOMETRIC_ZENITH + TZEIT_645), hours);
+    }
     mga19(hours) {
         return Day.shaahBased(this.rise(GEOMETRIC_ZENITH + ALOT_90), this.set(GEOMETRIC_ZENITH + ALOT_90), hours);
     }
@@ -452,6 +458,15 @@ export function zmanInstants(place, date, which = ZMAN_NAMES) {
                 break;
             case 'plagMga19':
                 ms = today.mga19(10.75);
+                break;
+            case 'plagAlot90Tzeit645':
+                ms = today.alotToTzeit645(ALOT_90, 10.75);
+                break;
+            case 'plagAlot72Tzeit645':
+                ms = today.alotToTzeit645(ALOT, 10.75);
+                break;
+            case 'tzeit645':
+                ms = today.set(G + TZEIT_645);
                 break;
             case 'sofShmaMga90z':
                 ms = today.mgaSeasonal(1 / 8, 3);
