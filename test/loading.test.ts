@@ -28,7 +28,7 @@ describe('lazy loading', () => {
     for (let id = 1; id <= 1938; id++) await getPlace(id)
     await zmanim(42, new Date(2026, 0, 1), ['sunrise'])
     // sunrise needs the refraction temperature, so it adds climate.bin (see refraction.test.ts)
-    expect(reads.sort()).toEqual(['climate.bin', 'places.bin', 'tz.json'])
+    expect(reads.sort()).toEqual(['climate.bin', 'lapse.bin', 'places.bin', 'tz.json'])
     await expect(getPlace(1939)).rejects.toThrow(RangeError)
     await expect(getPlace(0)).rejects.toThrow(RangeError)
   })
@@ -41,6 +41,7 @@ describe('asset sizes', () => {
   })
   it('climate.bin is 12 bytes per id (plus unused record 0)', () => {
     expect(size('climate.bin')).toBe(1939 * 12)
+    expect(size('lapse.bin')).toBe(1939 * 12)
   })
   it('all assets together stay small', () => {
     const total = ['names-he.txt', 'names-en.txt', 'places.bin', 'tz.json', 'climate.bin'].reduce((s, f) => s + size(f), 0)

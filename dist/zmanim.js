@@ -1,7 +1,7 @@
 // The day's zmanim. Sun positions come from src/spa.ts (NREL SPA, Reda & Andreas 2008, appendix A.2 rise/
 // transit/set); sunrise/sunset refraction from src/refraction.ts. The zman definitions are the standard
 // halachic ones (temporal hours of a GRA or MGA day, degree depressions); see README.
-import { horizonRefractionArcmin, standardPressure, standardTemperature, temperatureOn } from './refraction.js';
+import { horizonRefractionArcmin, inversionFactor, standardPressure, standardTemperature, temperatureOn } from './refraction.js';
 import { julianDayFromUtcMs, spa, spaDay, spaEvent, zenithToH0 } from './spa.js';
 /** Every zman the library computes, in the order of the day. Each is computed only when requested. */
 export const ZMAN_NAMES = [
@@ -74,6 +74,12 @@ function temperatureAt(place, date) {
     const t = Array.isArray(m) ? temperatureOn(m, date.month, date.day) : NaN;
     return Number.isNaN(t) ? standardTemperature(place.elevation ?? 0) : t;
 }
+/** Horizon refraction (arcmin) at [apparent] degrees for [place] on [date]: pressure, temperature and inversion term. */
+function horizonRefraction(place, date, apparent = 0) {
+    const l = place.monthlyLapseKPerKm;
+    const factor = l ? inversionFactor(temperatureOn(l, date.month, date.day)) : 1;
+    return horizonRefractionArcmin(standardPressure(place.elevation ?? 0), temperatureAt(place, date), apparent) * factor;
+}
 /** Geometric dip of the sea horizon seen from [elevation] meters, degrees: arccos(R / (R + h)). None below sea level. */
 export function horizonDip(elevation) {
     return elevation > 0 ? Math.acos(EARTH_RADIUS / (EARTH_RADIUS + elevation)) * 180 / Math.PI : 0;
@@ -86,7 +92,7 @@ export function horizonDip(elevation) {
 export function horizonZenith(place, date, fromHeight = false) {
     const elevation = place.elevation ?? 0;
     const dip = fromHeight ? horizonDip(elevation) : 0;
-    const r = horizonRefractionArcmin(standardPressure(elevation), temperatureAt(place, date), -dip);
+    const r = horizonRefraction(place, date, -dip);
     return GEOMETRIC_ZENITH + SOLAR_RADIUS + dip + r / 60;
 }
 // Depressions of the sun's centre below the geometric horizon, degrees.
@@ -183,8 +189,7 @@ class Day {
      */
     visible(depression) {
         return this.memo(`v${depression}`, () => {
-            const elevation = this.place.elevation ?? 0;
-            return GEOMETRIC_ZENITH + depression + horizonRefractionArcmin(standardPressure(elevation), temperatureAt(this.place, this.date)) / 60;
+            return GEOMETRIC_ZENITH + depression + horizonRefraction(this.place, this.date) / 60;
         });
     }
     rise(zenith) { return this.event(zenith, -1); }
@@ -203,14 +208,12 @@ class Day {
             return NaN;
         return this.memo(`t${kind}`, () => {
             let t = kind < 0 ? this.sunrise() : this.sunset();
-            const pressure = standardPressure(this.place.elevation ?? 0);
-            const temperature = temperatureAt(this.place, this.date);
             for (let i = 0; i < 6 && !Number.isNaN(t); i++) {
                 const azimuth = spa({ jd: julianDayFromUtcMs(t), latitude: this.place.lat, longitude: this.place.lng }).azimuth;
                 const a = terrainAltitude(profile, azimuth);
                 if (Number.isNaN(a))
                     return NaN;
-                const zenith = GEOMETRIC_ZENITH - a + horizonRefractionArcmin(pressure, temperature, a) / 60 + SOLAR_RADIUS;
+                const zenith = GEOMETRIC_ZENITH - a + horizonRefraction(this.place, this.date, a) / 60 + SOLAR_RADIUS;
                 const next = this.event(zenith, kind);
                 const done = Math.abs(next - t) < 1000;
                 t = next;

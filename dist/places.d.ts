@@ -14,6 +14,8 @@ export interface Place {
     monthlyTemperatureC: readonly number[];
     /** Terrain horizon for sunriseTerrain/sunsetTerrain; not set by getPlace() (see getTerrainHorizon). */
     terrainHorizon?: ArrayLike<number> | null;
+    /** 12 monthly mean near-ground temperature gradients at sunrise/sunset, K/km (NaN = unknown); attached by getPlace(). */
+    monthlyLapseKPerKm: readonly number[];
 }
 /** Bytes per record in places.bin: lat int32, lng int32 (degrees x 1e5), elevation int16, tz index uint8. */
 export declare const RECORD_SIZE = 11;
@@ -37,6 +39,10 @@ export declare const HORIZON_CHUNK = 64;
 export declare function getTerrainHorizon(id: number): Promise<Int16Array | null>;
 /** A place's 12 monthly mean temperatures (C; NaN where unknown). Loads climate.bin once. */
 export declare function getMonthlyTemperatures(id: number): Promise<number[]>;
+/** lapse.bin: 12 int8 per id at offset id*12, gradient in units of LAPSE_SCALE K/km; -128 = unknown. */
+export declare const LAPSE_SCALE = 0.25;
+/** A place's 12 monthly mean near-ground temperature gradients at sunrise/sunset (K/km; NaN where unknown). Loads lapse.bin once. */
+export declare function getMonthlyLapseRates(id: number): Promise<number[]>;
 /** Every place name in [lang]; the index is the place id (index 0 is empty). Loads only that names file. */
 export declare function listPlaces(lang: Lang): Promise<readonly string[]>;
 /** Places whose [lang] name contains [query] (case, accents and Hebrew points ignored); prefix matches first. */

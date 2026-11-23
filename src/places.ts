@@ -19,6 +19,8 @@ export interface Place {
   monthlyTemperatureC: readonly number[]
   /** Terrain horizon for sunriseTerrain/sunsetTerrain; not set by getPlace() (see getTerrainHorizon). */
   terrainHorizon?: ArrayLike<number> | null
+  /** 12 monthly mean near-ground temperature gradients at sunrise/sunset, K/km (NaN = unknown); attached by getPlace(). */
+  monthlyLapseKPerKm: readonly number[]
 }
 
 /** Bytes per record in places.bin: lat int32, lng int32 (degrees x 1e5), elevation int16, tz index uint8. */
@@ -49,6 +51,7 @@ export function configure(options: { baseUrl?: string | URL, loader?: AssetLoade
   tz = null
   climate = null
   horizon.clear()
+  lapse = null
   placeCache.clear()
 }
 
@@ -58,6 +61,7 @@ let bin: Promise<DataView> | null = null
 let tz: Promise<{ ids: string[], rawOffsetMinutes: number[] }> | null = null
 let climate: Promise<Int8Array> | null = null
 const horizon = new Map<number, Promise<Int16Array | null>>()
+let lapse: Promise<Int8Array> | null = null
 const placeCache = new Map<number, Place>()
 
 /** Bytes per record in climate.bin: 12 monthly mean temperatures, int8 C; -128 = unknown. */
@@ -102,6 +106,25 @@ export async function getMonthlyTemperatures(id: number): Promise<number[]> {
   const o = id * CLIMATE_RECORD_SIZE
   if (o + CLIMATE_RECORD_SIZE > t.length) return new Array<number>(12).fill(NaN)
   return Array.from(t.subarray(o, o + CLIMATE_RECORD_SIZE), (v) => (v === NO_TEMPERATURE ? NaN : v))
+}
+
+/** lapse.bin: 12 int8 per id at offset id*12, gradient in units of LAPSE_SCALE K/km; -128 = unknown. */
+export const LAPSE_SCALE = 0.25
+
+function lapseTable(): Promise<Int8Array> {
+  if (!lapse) {
+    lapse = loader('lapse.bin').then((buffer) => new Int8Array(buffer))
+    lapse.catch(() => { lapse = null })
+  }
+  return lapse
+}
+
+/** A place's 12 monthly mean near-ground temperature gradients at sunrise/sunset (K/km; NaN where unknown). Loads lapse.bin once. */
+export async function getMonthlyLapseRates(id: number): Promise<number[]> {
+  const t = await lapseTable()
+  const o = id * CLIMATE_RECORD_SIZE
+  if (o + CLIMATE_RECORD_SIZE > t.length) return new Array<number>(12).fill(NaN)
+  return Array.from(t.subarray(o, o + CLIMATE_RECORD_SIZE), (v) => (v === NO_TEMPERATURE ? NaN : v * LAPSE_SCALE))
 }
 const PLACE_CACHE_SIZE = 16
 
@@ -185,7 +208,7 @@ export async function nearestPlaceId(lat: number, lng: number): Promise<number> 
 export async function getPlace(id: number): Promise<Place> {
   const cached = placeCache.get(id)
   if (cached) return cached
-  const [view, zoneTable, temps] = await Promise.all([table(), zones(), getMonthlyTemperatures(id)])
+  const [view, zoneTable, temps, lapses] = await Promise.all([table(), zones(), getMonthlyTemperatures(id), getMonthlyLapseRates(id)])
   const offset = id * RECORD_SIZE
   if (!Number.isInteger(id) || id < 1 || offset + RECORD_SIZE > view.byteLength) throw new RangeError(`No place with id ${id}`)
   const zone = view.getUint8(offset + 10)
@@ -197,6 +220,7 @@ export async function getPlace(id: number): Promise<Place> {
     tzid: zoneTable.ids[zone]!,
     rawOffsetMinutes: zoneTable.rawOffsetMinutes[zone]!,
     monthlyTemperatureC: Object.freeze(temps),
+    monthlyLapseKPerKm: Object.freeze(lapses),
   })
   if (placeCache.size >= PLACE_CACHE_SIZE) placeCache.delete(placeCache.keys().next().value!)
   placeCache.set(id, place)

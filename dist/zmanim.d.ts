@@ -46,6 +46,11 @@ export interface Coordinates {
      * hundredths of a degree (NO_TERRAIN = none), as zmanim() attaches from horizon-NN.bin. Without it those lines are null.
      */
     terrainHorizon?: ArrayLike<number> | null;
+    /**
+     * 12 monthly mean near-ground temperature gradients at sunrise/sunset in K/km (NaN = unknown), as getPlace()
+     * attaches them; adds the surface-inversion term to horizon refraction (refraction.ts). Missing: no term.
+     */
+    monthlyLapseKPerKm?: readonly number[];
 }
 /** The geometric horizon. */
 export declare const GEOMETRIC_ZENITH = 90;

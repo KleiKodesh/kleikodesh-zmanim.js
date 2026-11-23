@@ -50,3 +50,25 @@ export function temperatureOn(monthly, month, day) {
     const f = Math.abs(day - mid) / 30.44;
     return v + (o - v) * f;
 }
+// Near-ground temperature inversion term.
+// Ray curvature near the horizon is proportional to (P / T^2) * (0.0342 + dT/dz), dT/dz in K/m and 0.0342 K/m =
+// g / R_air the autoconvective gradient (A. T. Young, "Sunset science IV. Low-altitude refraction", Astron. J. 127
+// (2004) 3622-3637; B. E. Schaefer & W. Liller, PASP 102 (1990) 796-805). In a uniform layer the horizon refraction
+// therefore scales with (0.0342 + dT/dz) (c = 1 below). The Saemundsson / Bennett horizon value above is an empirical
+// mean of observations made in ordinary, non-inverted air, so it is kept for any gradient up to isothermal (0 K/km)
+// and only a surface inversion (dT/dz > 0) adds to it:
+//     R' = R * (1 + c * max(0, dT/dz) / (0.0342 - 0.0065)),   c = 1,
+// dT/dz being the place's monthly mean gradient at sunrise/sunset between 2 m and the first pressure level above the
+// ground (data/lapse.tsv). Checked, not tuned, against published Edmonton sunset observations (test/inversion.test.ts):
+// Sampson, Lozowski & Machel 2005 (26 winter sunsets, mean 0.699 deg, SD 0.118) and Peterson, Lozowski, Hube &
+// Sampson 2003 (135 sunsets, mean 0.579 deg, SD 0.108).
+export const INVERSION_C = 1;
+/** Physical range kept for the mean inversion gradient, K/km. */
+const INVERSION_MAX_K_PER_KM = 30;
+/** Factor on horizon refraction for a mean near-ground gradient [lapseKPerKm] (K/km); 1 for NaN or any non-inverted gradient. */
+export function inversionFactor(lapseKPerKm) {
+    if (Number.isNaN(lapseKPerKm))
+        return 1;
+    const g = Math.max(0, Math.min(INVERSION_MAX_K_PER_KM, lapseKPerKm));
+    return 1 + INVERSION_C * g / (34.2 - 6.5);
+}

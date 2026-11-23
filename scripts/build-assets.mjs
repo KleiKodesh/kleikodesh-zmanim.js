@@ -1,5 +1,5 @@
 // data/places.tsv + data/climate.tsv -> assets/: climate.bin, names-he.txt, names-en.txt (line index = id), places.bin (11-byte records), tz.json.
-import { mkdirSync, readFileSync, writeFileSync } from 'node:fs'
+import { existsSync, mkdirSync, readFileSync, writeFileSync } from 'node:fs'
 
 const RECORD_SIZE = 11
 const rows = readFileSync('data/places.tsv', 'utf8').trim().split(/\r?\n/).slice(1).map((line) => line.split('\t'))
@@ -52,5 +52,13 @@ for (const line of readFileSync('data/climate.tsv', 'utf8').trim().split(/\r?\n/
   months.forEach((v, m) => { if (v !== '' && v !== undefined) climate[Number(id) * 12 + m] = Math.max(-127, Math.min(127, Math.round(Number(v)))) })
 }
 writeFileSync('assets/climate.bin', climate)
+// lapse.bin: 12 int8 monthly mean near-ground temperature gradients per id at offset id*12, units of 0.25 K/km;
+// -128 = unknown (data/lapse.tsv, scripts/fetch-lapse.mjs).
+const lapse = new Int8Array((maxId + 1) * 12).fill(-128)
+if (existsSync('data/lapse.tsv')) for (const line of readFileSync('data/lapse.tsv', 'utf8').trim().split(/\r?\n/).slice(1)) {
+  const [id, ...months] = line.split('\t')
+  months.forEach((v, m) => { if (v !== '' && v !== undefined) lapse[Number(id) * 12 + m] = Math.max(-127, Math.min(127, Math.round(Number(v) / 0.25))) })
+}
+writeFileSync('assets/lapse.bin', lapse)
 writeFileSync('assets/tz.json', JSON.stringify({ ids: zones, rawOffsetMinutes: zones.map(rawOffsetMinutes) }))
 console.log(`${rows.length} places, ${zones.length} zones`)

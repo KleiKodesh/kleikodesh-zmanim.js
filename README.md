@@ -22,8 +22,8 @@ configure({ loader: async (file) => arrayBuffer })   // or bring your own reader
 
 await listPlaces('he')            // string[]; index = place id (index 0 empty). Loads names-he.txt only.
 await searchPlaces('jeru', 'en')  // [{ id, name }]; prefix matches first; ignores case, accents, Hebrew points
-await getPlace(1)                 // { id, lat, lng, elevation, tzid, rawOffsetMinutes, monthlyTemperatureC }.
-                                  // Loads places.bin + tz.json + climate.bin (21 KB) once, together.
+await getPlace(1)                 // { id, lat, lng, elevation, tzid, rawOffsetMinutes, monthlyTemperatureC, monthlyLapseKPerKm }.
+                                  // Loads places.bin + tz.json + climate.bin + lapse.bin (23 KB each) once, together.
 await nearestPlaceId(lat, lng)     // id of the listed place nearest a point; reads places.bin only
 await placeTree('he')             // country > city > neighbourhood picker data; each list sorted on first ask
 await zmanim(1, new Date(), ['sunrise', 'sunset'])     // { sunrise: '06:12', sunset: '17:01' }; only these are computed
@@ -135,6 +135,17 @@ Sunrise and sunset are when the upper limb of the sun touches the apparent sea-l
   P = 1013.25 * (1 - 0.0065 H / 288.15)^5.25588 hPa.
 - Temperature T: the place's monthly mean (climate.bin), interpolated linearly between mid-month values.
   Without data: the standard-atmosphere temperature 15 - 0.0065 H C.
+- Surface inversion: ray curvature near the horizon is proportional to (P / T^2) (0.0342 + dT/dz), dT/dz in K/m,
+  0.0342 = g / R_air (A. T. Young, Astron. J. 127, 2004, 3622-3637; Schaefer & Liller, PASP 102, 1990, 796-805).
+  The base formula is an empirical mean for ordinary air, so it is kept for any gradient up to isothermal, and a
+  mean inversion adds R' = R (1 + c max(0, dT/dz) / (0.0342 - 0.0065)) with c = 1 (the full curvature ratio, not
+  fitted; dT/dz clamped to 0..30 K/km). dT/dz is the place's monthly mean gradient at sunrise/sunset (lapse.bin),
+  interpolated like the temperature. Check against published Edmonton sunset observations (test/inversion.test.ts):
+  winter (Sampson, Lozowski & Machel 2005, 26 sunsets, 0.699 +- 0.118 deg) model 0.575 -> 0.682 deg; all year
+  (Peterson, Lozowski, Hube & Sampson 2003, 135 sunsets, 0.579 +- 0.108 deg) 0.542 -> 0.572 deg. A 1/SE^2-weighted
+  fit of c to those two means gives 1.20 +- 0.18, consistent with 1. Places whose mean sunrise/sunset air is not
+  inverted (all of Israel's coast, London, New York, Moscow, Montreal in this data) do not change; Edmonton in
+  January moves by about 54 s. Applies everywhere horizon refraction is used (sunrise/sunset, Elevated, Visible, Terrain).
 
 Only sunrise, sunset and the zmanim built from them (GRA / MGA hours, mincha, plag) change, typically by
 5-35 seconds against the old fixed 34' (more at high places). Degree-based zmanim (alot, misheyakir, tzeit)
@@ -161,6 +172,7 @@ Ids are stable: new places get new ids, an id is never reused (a removed place l
 | names-he.txt, names-en.txt | one name per line; line index = id (line 0 empty) |
 | places.bin | record of 11 bytes per id at offset id*11 (record 0 unused), little endian: lat int32, lng int32 (degrees x 1e5), elevation int16 (m), tz index uint8 |
 | climate.bin | 12 bytes per id at offset id*12 (record 0 unused): monthly mean temperature, int8 C, -128 = unknown |
+| lapse.bin | 12 bytes per id at offset id*12: monthly mean near-ground temperature gradient at sunrise/sunset, int8 in 0.25 K/km, -128 = unknown |
 | tz.json | `{ ids: [IANA zone...], rawOffsetMinutes: [...] }` (standard offset, for the antimeridian rule only) |
 
 Sizes (1803 places): names-he 27436 B, names-en 23595 B, places.bin 19844 B, tz.json 2023 B, climate.bin 21648 B.
@@ -171,6 +183,13 @@ daily mean 2 m temperature 2016-2025 from the Open-Meteo Historical Weather API 
 Every place has temperatures. For newly added places, run the fetch-climate-parallel workflow (or
 `node scripts/fetch-climate.mjs`, which resumes from the rows already in data/climate.tsv), then rebuild the assets;
 until then a new place uses the standard-atmosphere temperature (-128 in climate.bin).
+
+`data/lapse.tsv` (id, 12 monthly means, K/km) comes from `scripts/fetch-lapse.mjs` (workflow fetch-lapse-parallel,
+sharded across runners, resumable): Open-Meteo Historical Forecast API, hourly 2 m temperature at the place's
+elevation and temperature + geopotential height of the first pressure level above the ground (925 hPa below 500 m,
+850 hPa below 1200 m, else 700 hPa), 2023-2025 (the span with pressure levels in that API). Gradient =
+(T_level - T_2m) / (Z_level - elevation - 2), taken at each day's sunrise and sunset hour and averaged per month.
+Without data a place has no inversion term.
 
 ### Terrain horizon (horizon-NN.bin)
 
@@ -237,5 +256,7 @@ npm test          # vitest; parity uses the recorded fixture test/fixtures/app-z
   tiles from the AWS Open Data registry (https://registry.opendata.aws/copernicus-dem/).
 - Climate data (climate.bin): weather data by Open-Meteo.com (https://open-meteo.com/), CC BY 4.0, from the
   ERA5 / ERA5-Land reanalysis by the Copernicus Climate Change Service (Hersbach et al. 2018, Munoz Sabater 2019).
+- Near-ground gradients (lapse.bin): weather data by Open-Meteo.com, CC BY 4.0 (Historical Forecast API).
 - Refraction method: Saemundsson (1986), Bennett (1982), Meeus, Astronomical Algorithms (1998) ch. 16;
-  U.S. Standard Atmosphere 1976 / ICAO Doc 7488. Written independently from these publications.
+  U.S. Standard Atmosphere 1976 / ICAO Doc 7488; inversion term: Young (2004), Schaefer & Liller (1990),
+  checked against Peterson et al. (2003) and Sampson et al. (2005). Written independently from these publications.
