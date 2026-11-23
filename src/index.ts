@@ -5,8 +5,8 @@
  */
 /** One-sentence disclaimer that apps should show beside any zmanim they display. */
 export const DISCLAIMER = {
-  en: 'Developed with AI; these times are approximations only and not a halachic source - check a reliable luach and consult a rav.',
-  he: 'פותח בעזרת בינה מלאכותית; הזמנים משוערים בלבד ואינם מקור הלכתי - יש לבדוק בלוח אמין ולהתייעץ עם רב.',
+  en: 'Times are approximate and may be slightly inaccurate; check a reliable luach.',
+  he: 'הזמנים משוערים ועשויים להיות לא מדויקים מעט; יש לבדוק בלוח אמין.',
 } as const
 
 export { CLIMATE_RECORD_SIZE, configure, getMonthlyTemperatures, getPlace, listPlaces, placeCount, RECORD_SIZE, searchPlaces, toCivilDate, zmanim } from './places.js'
