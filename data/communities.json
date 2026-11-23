@@ -1,0 +1,52 @@
+{
+  "communities": [
+    {
+      "id": "ashkenaz",
+      "he": "אשכנז (כשיטת הגר\"א)",
+      "en": "Ashkenazi (Vilna Gaon)",
+      "groups": { "sofShma": "sofShmaGra", "sofTfilla": "sofTfillaGra", "plag": "plag" },
+      "sources": [
+        "https://he.wikipedia.org/wiki/%D7%96%D7%9E%D7%A0%D7%99_%D7%94%D7%99%D7%95%D7%9D_%D7%91%D7%94%D7%9C%D7%9B%D7%94 (section: sha'ah zmanit - the Gra method, day from sunrise to sunset, is the custom of many Ashkenazim)"
+      ]
+    },
+    {
+      "id": "mizrach",
+      "he": "ספרד ועדות המזרח",
+      "en": "Sephardi and Edot HaMizrach",
+      "groups": { "sofShma": "sofShmaMga", "sofTfilla": "sofTfillaMga", "plag": "plagMga" },
+      "sources": [
+        "https://he.wikipedia.org/wiki/%D7%96%D7%9E%D7%A0%D7%99_%D7%94%D7%99%D7%95%D7%9D_%D7%91%D7%94%D7%9C%D7%9B%D7%94 (section: sha'ah zmanit - counting the day from dawn to nightfall is the custom of Yemenite and all Edot HaMizrach communities)"
+      ]
+    },
+    {
+      "id": "chabad",
+      "he": "חב\"ד (שיטת אדמו\"ר הזקן)",
+      "en": "Chabad (Alter Rebbe)",
+      "groups": { "sofShma": "sofShmaGra", "sofTfilla": "sofTfillaGra", "plag": "plag" },
+      "sources": [
+        "https://he.wikipedia.org/wiki/%D7%96%D7%9E%D7%A0%D7%99_%D7%94%D7%99%D7%95%D7%9D_%D7%91%D7%94%D7%9C%D7%9B%D7%94 (section: sha'ah zmanit - Rabbi Shneur Zalman of Liadi ruled by the Gra method)"
+      ]
+    },
+    {
+      "id": "jerusalem",
+      "he": "מנהג ירושלים",
+      "en": "Jerusalem custom",
+      "groups": { "candles": "candles40" },
+      "sources": [
+        "https://he.wikipedia.org/wiki/%D7%94%D7%93%D7%9C%D7%A7%D7%AA_%D7%A0%D7%A8%D7%95%D7%AA_%D7%A9%D7%91%D7%AA (time of lighting: in Jerusalem 40 minutes before sunset)",
+        "https://en.wikipedia.org/wiki/Shabbat_candles (40 minutes in Jerusalem)"
+      ]
+    }
+  ],
+  "cities": {
+    "1": { "candles": "candles40", "community": "jerusalem" },
+    "52": { "candles": "candles30" },
+    "78": { "candles": "candles40" }
+  },
+  "countries": { "IL": "candles20", "*": "candles18" },
+  "placeSources": [
+    "https://he.wikipedia.org/wiki/%D7%94%D7%93%D7%9C%D7%A7%D7%AA_%D7%A0%D7%A8%D7%95%D7%AA_%D7%A9%D7%91%D7%AA (most of Israel about 20 minutes before sunset, Haifa about 30, Jerusalem and Petah Tikva 40)",
+    "https://www.chabad.org/library/article_cdo/aid/529865/jewish/About-Lighting-Times.htm (the most prevalent custom is 18 minutes before sunset)",
+    "https://oukosher.org/halacha-yomis/light-shabbos-candles-eighteen-minutes-shkia-sunset (the 18-minute custom)"
+  ]
+}

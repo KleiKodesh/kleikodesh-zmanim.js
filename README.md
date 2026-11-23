@@ -99,6 +99,25 @@ What each zman is, its method and its sources are documentation only, not shippe
 [docs/zmanim.md](docs/zmanim.md) (English) and [docs/zmanim.he.md](docs/zmanim.he.md) (Hebrew). Both are generated
 from `data/explanations.json` by `scripts/build-explanations.mjs` (part of `npm run build`).
 
+### Community customs
+
+`listCommunities(lang)`, `getCommunity(id)`, `defaultCommunityFor(placeId)`, `defaultCandlesFor(placeId)` and
+`primaryZmanim(communityId, placeId?)` read `assets/communities.json` (under 1 KB, loaded once on first call; built
+from `data/communities.json`). A community names the primary line only for groups (`ZMAN_GROUPS`) with a public,
+verifiable custom; other groups keep the app's default. Candle lighting falls back to the place's city, then country.
+
+| id | primary lines | source |
+|---|---|---|
+| ashkenaz | sofShmaGra, sofTfillaGra, plag | https://he.wikipedia.org/wiki/זמני_היום_בהלכה (sha'ah zmanit: Gra method, custom of many Ashkenazim) |
+| mizrach | sofShmaMga, sofTfillaMga, plagMga | same page (dawn to nightfall: custom of Yemenite and Edot HaMizrach communities) |
+| chabad | sofShmaGra, sofTfillaGra, plag | same page (Rabbi Shneur Zalman of Liadi ruled by the Gra method) |
+| jerusalem | candles40 | https://he.wikipedia.org/wiki/הדלקת_נרות_שבת ; https://en.wikipedia.org/wiki/Shabbat_candles |
+
+Place defaults: Jerusalem (and its neighbourhoods) community `jerusalem`, candles40; Petah Tikva candles40; Haifa
+candles30; elsewhere in Israel candles20 (https://he.wikipedia.org/wiki/הדלקת_נרות_שבת); outside Israel candles18
+(https://www.chabad.org/library/article_cdo/aid/529865/jewish/About-Lighting-Times.htm,
+https://oukosher.org/halacha-yomis/light-shabbos-candles-eighteen-minutes-shkia-sunset).
+
 ### Sunrise/sunset refraction (pressure and temperature)
 
 Sunrise and sunset are when the upper limb of the sun touches the apparent sea-level horizon: zenith =
