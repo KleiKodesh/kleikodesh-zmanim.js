@@ -28,10 +28,17 @@ let loader: AssetLoader = async (file) => {
   return response.arrayBuffer()
 }
 
+/** Bumped by configure(): other modules' asset caches (geo.ts) reload after it. */
+export let assetGeneration = 0
+
+/** Reads one asset file through the configured loader. */
+export const readAsset = (file: string): Promise<ArrayBuffer> => loader(file)
+
 /** Where the asset files are: a base URL for the default fetch loader, or a loader of your own. */
 export function configure(options: { baseUrl?: string | URL, loader?: AssetLoader }): void {
   if (options.baseUrl !== undefined) baseUrl = options.baseUrl
   if (options.loader !== undefined) loader = options.loader
+  assetGeneration++
   names.clear()
   bin = null
   tz = null

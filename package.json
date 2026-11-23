@@ -13,8 +13,8 @@
   "files": ["dist", "assets", "LICENSE", "README.md"],
   "sideEffects": false,
   "scripts": {
-    "build:assets": "node scripts/build-assets.mjs",
-    "build": "node scripts/build-assets.mjs && tsc -p tsconfig.json",
+    "build:assets": "node scripts/build-assets.mjs && node scripts/build-geo.mjs",
+    "build": "node scripts/build-assets.mjs && node scripts/build-geo.mjs && tsc -p tsconfig.json",
     "test": "vitest run"
   },
   "devDependencies": {
