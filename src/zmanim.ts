@@ -261,12 +261,16 @@ class Day {
   private readonly cache = new Map<string, number>()
 
   constructor(private readonly place: Coordinates, private readonly date: CivilDate) {
-    // Zones across the antimeridian (local mean time 20+ hours off the zone) roll the date.
+    // The requested day is the one whose local solar noon falls on [date] on the place's own clock. Solar noon is
+    // about 12:00 local mean time (UTC minus 4 minutes per degree of east longitude); if, read on the zone's clock,
+    // it lands on another date (only in zones far from their longitude, near the date line), shift by the difference.
     let d = date
     if (place.rawOffsetMinutes !== undefined) {
-      const hoursOff = (place.lng * 4 - place.rawOffsetMinutes) / 60
-      if (hoursOff >= 20) d = addDays(date, 1)
-      else if (hoursOff <= -20) d = addDays(date, -1)
+      const noonUtc = utcMidnight(date) + 12 * 3_600_000 - place.lng * 240_000
+      const onZoneClock = new Date(noonUtc + place.rawOffsetMinutes * MINUTE_MS)
+      const shownDay = Date.UTC(onZoneClock.getUTCFullYear(), onZoneClock.getUTCMonth(), onZoneClock.getUTCDate())
+      const dayDiff = Math.round((utcMidnight(date) - shownDay) / DAY_MS)
+      if (dayDiff !== 0) d = addDays(date, dayDiff)
     }
     this.lmtMidnight = utcMidnight(d)
   }
