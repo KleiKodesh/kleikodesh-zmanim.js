@@ -42,7 +42,7 @@ Also exported: `zmanInstants` (exact instants as BigInt epoch nanoseconds), `for
 | tzeit | sun 8.5 deg below, evening | up |
 
 Stringent rounding: a start rounds up, a deadline rounds down, chatzot to the nearest minute.
-The printed values equal the KitveiHakodesh app's `dayZmanim()` exactly (the tests compare against it directly).
+The printed values equal the KitveiHakodesh app's `dayZmanim()` exactly (test/fixtures/app-zmanim.json, recorded from it).
 
 ## Data
 
@@ -56,7 +56,7 @@ Ids are stable: new places get new ids, an id is never reused (a removed place l
 | places.bin | record of 11 bytes per id at offset id*11 (record 0 unused), little endian: lat int32, lng int32 (degrees x 1e5), elevation int16 (m), tz index uint8 |
 | tz.json | `{ ids: [IANA zone...], rawOffsetMinutes: [...] }` (standard offset, for the antimeridian rule only) |
 
-Sizes: names-he 9074 B, names-en 9322 B, places.bin 6215 B, tz.json 1028 B.
+Sizes: names-he 9100 B, names-en 9322 B, places.bin 6215 B, tz.json 1028 B.
 
 `scripts/import-from-app.mjs` created places.tsv from the app's city list once; edit the TSV from now on.
 
@@ -65,7 +65,7 @@ Sizes: names-he 9074 B, names-en 9322 B, places.bin 6215 B, tz.json 1028 B.
 ```
 npm install
 npm run build     # assets + dist/
-npm test          # vitest; parity tests need the KitveiHakodesh app checked out next to this folder
+npm test          # vitest; parity compares with the app's recorded output (test/fixtures/app-zmanim.json)
 ```
 
 ## Credits and licenses

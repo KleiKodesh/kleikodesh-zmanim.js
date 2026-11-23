@@ -5,13 +5,13 @@ id	key	he	en	lat	lng	elevation	tzid
 4	sanhedria	סנהדריה	Sanhedria (Jerusalem)	31.79711	35.21841	768	Asia/Jerusalem
 5	romemaJerusalem	רוממה	Romema (Jerusalem)	31.7918	35.20369	819	Asia/Jerusalem
 6	kiryatMosheJerusalem	קרית משה	Kiryat Moshe (Jerusalem)	31.784	35.19284	796	Asia/Jerusalem
-7	givatShaul	Giv‘at Sha’ul	Givat Shaul (Jerusalem)	31.79033	35.1935	823	Asia/Jerusalem
+7	givatShaul	גבעת שאול	Givat Shaul (Jerusalem)	31.79033	35.1935	823	Asia/Jerusalem
 8	kfarShaul	כפר שאול	Kfar Shaul (Jerusalem)	31.78599	35.17559	784	Asia/Jerusalem
 9	bayitVegan	בית וגן	Bayit Vegan (Jerusalem)	31.76982	35.18454	824	Asia/Jerusalem
 10	beitHakerem	בית הכרם	Beit HaKerem (Jerusalem)	31.77953	35.19004	778	Asia/Jerusalem
-11	yefeNof	Yafé Nof	Yefe Nof (Jerusalem)	31.778	35.18296	781	Asia/Jerusalem
+11	yefeNof	יפה נוף	Yefe Nof (Jerusalem)	31.778	35.18296	781	Asia/Jerusalem
 12	givatMordechai	גבעת מרדכי	Givat Mordechai (Jerusalem)	31.76667	35.2	725	Asia/Jerusalem
-13	neveShaananJerusalem	Newé Sha’anan	Neve Shaanan (Jerusalem)	31.77232	35.20106	750	Asia/Jerusalem
+13	neveShaananJerusalem	נווה שאנן	Neve Shaanan (Jerusalem)	31.77232	35.20106	750	Asia/Jerusalem
 14	musrara	מוסררה	Musrara (Jerusalem)	31.78333	35.21667	802	Asia/Jerusalem
 15	oldCityJerusalem	העיר העתיקה	Old City (Jerusalem)	31.77667	35.23417	760	Asia/Jerusalem
 16	maalotDafna	מעלות דפנה	Maalot Dafna (Jerusalem)	31.78333	35.21667	802	Asia/Jerusalem
@@ -45,7 +45,7 @@ id	key	he	en	lat	lng	elevation	tzid
 44	armonHanatziv	תלפיות מזרח	Armon HaNatziv - East Talpiot (Jerusalem)	31.75	35.235	724	Asia/Jerusalem
 45	telAviv	תל אביב-יפו	Tel Aviv-Yafo	32.08088	34.78057	15	Asia/Jerusalem
 46	jaffa	יפו	Jaffa (Tel Aviv)	32.05043	34.75224	26	Asia/Jerusalem
-47	neveTzedek	Nevé Tsedeq	Neve Tzedek (Tel Aviv)	32.06218	34.76478	11	Asia/Jerusalem
+47	neveTzedek	נווה צדק	Neve Tzedek (Tel Aviv)	32.06218	34.76478	11	Asia/Jerusalem
 48	florentin	פלורנטין	Florentin (Tel Aviv)	32.05749	34.76885	13	Asia/Jerusalem
 49	hatikva	שכונת התקוה	HaTikva (Tel Aviv)	32.05096	34.78891	21	Asia/Jerusalem
 50	yadEliyahu	יד אליהו	Yad Eliyahu (Tel Aviv)	32.05661	34.79289	29	Asia/Jerusalem
@@ -53,9 +53,9 @@ id	key	he	en	lat	lng	elevation	tzid
 52	haifa	חיפה	Haifa	32.81303	34.99928	101	Asia/Jerusalem
 53	hadarHacarmel	הדר הכרמל	Hadar HaCarmel (Haifa)	32.80856	34.99746	99	Asia/Jerusalem
 54	merkazHacarmel	מרכז הכרמל	Carmel Center (Haifa)	32.80351	34.98432	298	Asia/Jerusalem
-55	ahuza	Aẖuza	Ahuza (Haifa)	32.78616	34.97984	266	Asia/Jerusalem
+55	ahuza	אחוזה	Ahuza (Haifa)	32.78616	34.97984	266	Asia/Jerusalem
 56	hodHacarmel	דניה	Hod HaCarmel - Denya (Haifa)	32.76774	35.00391	364	Asia/Jerusalem
-57	neveShaananHaifa	Newé Sha’anan	Neve Shaanan (Haifa)	32.78571	35.01448	214	Asia/Jerusalem
+57	neveShaananHaifa	נווה שאנן	Neve Shaanan (Haifa)	32.78571	35.01448	214	Asia/Jerusalem
 58	kiryatEliezerHaifa	קריית אליעזר	Kiryat Eliezer (Haifa)	32.82742	34.98274	8	Asia/Jerusalem
 59	batGalim	בת גלים	Bat Galim (Haifa)	32.83615	34.98224	4	Asia/Jerusalem
 60	beerSheva	באר שבע	Beersheba	31.25181	34.7913	285	Asia/Jerusalem
@@ -63,25 +63,25 @@ id	key	he	en	lat	lng	elevation	tzid
 62	beerShevaDalet	שכונה ד'	Neighborhood D (Beersheba)	31.26447	34.79544	300	Asia/Jerusalem
 63	beerShevaHey	שכונה ה'	Neighborhood E (Beersheba)	31.25385	34.77484	266	Asia/Jerusalem
 64	ashdod	אשדוד	Ashdod	31.79213	34.64966	27	Asia/Jerusalem
-65	ashdodRovaAlef	Rova‘ Alef	Quarter A (Ashdod)	31.81236	34.647	33	Asia/Jerusalem
-66	ashdodRovaBet	Rova‘ Bet	Quarter B (Ashdod)	31.80747	34.65232	23	Asia/Jerusalem
-67	ashdodRovaGimel	Rova‘ Gimel	Quarter C (Ashdod)	31.80204	34.66058	27	Asia/Jerusalem
-68	ashdodRovaDalet	Rova‘ Dalet	Quarter D (Ashdod)	31.80104	34.64219	42	Asia/Jerusalem
-69	ashdodRovaZayin	Rova‘ Zayin	Quarter G (Ashdod)	31.7914	34.66201	27	Asia/Jerusalem
-70	ashdodRovaHet	Rova‘ H̱et	Quarter H (Ashdod)	31.78763	34.65237	26	Asia/Jerusalem
-71	ashdodRovaYodAlef	Rova‘ Yod Alef	Quarter 11 (Ashdod)	31.78318	34.63111	26	Asia/Jerusalem
-72	ashdodRovaTetVav	Rova‘ Tet Waw	Quarter 15 (Ashdod)	31.77391	34.62755	25	Asia/Jerusalem
+65	ashdodRovaAlef	רובע א'	Quarter A (Ashdod)	31.81236	34.647	33	Asia/Jerusalem
+66	ashdodRovaBet	רובע ב'	Quarter B (Ashdod)	31.80747	34.65232	23	Asia/Jerusalem
+67	ashdodRovaGimel	רובע ג'	Quarter C (Ashdod)	31.80204	34.66058	27	Asia/Jerusalem
+68	ashdodRovaDalet	רובע ד'	Quarter D (Ashdod)	31.80104	34.64219	42	Asia/Jerusalem
+69	ashdodRovaZayin	רובע ז'	Quarter G (Ashdod)	31.7914	34.66201	27	Asia/Jerusalem
+70	ashdodRovaHet	רובע ח'	Quarter H (Ashdod)	31.78763	34.65237	26	Asia/Jerusalem
+71	ashdodRovaYodAlef	רובע י"א	Quarter 11 (Ashdod)	31.78318	34.63111	26	Asia/Jerusalem
+72	ashdodRovaTetVav	רובע ט"ו	Quarter 15 (Ashdod)	31.77391	34.62755	25	Asia/Jerusalem
 73	netanya	נתניה	Netanya	32.33294	34.85917	38	Asia/Jerusalem
 74	kiryatSanz	קריית צאנז	Kiryat Sanz (Netanya)	32.34284	34.85694	46	Asia/Jerusalem
-75	kiryatNordau	Qiryat Norda’u	Kiryat Nordau (Netanya)	32.28266	34.85384	55	Asia/Jerusalem
+75	kiryatNordau	קריית נורדאו	Kiryat Nordau (Netanya)	32.28266	34.85384	55	Asia/Jerusalem
 76	ramatPoleg	רמת פולג	Ramat Poleg (Netanya)	32.27293	34.84488	48	Asia/Jerusalem
-77	irYamim	‘Ir Yammim	Ir Yamim (Netanya)	32.27848	34.84291	50	Asia/Jerusalem
+77	irYamim	עיר ימים	Ir Yamim (Netanya)	32.27848	34.84291	50	Asia/Jerusalem
 78	petachTikva	פתח תקווה	Petah Tikva	32.0888	34.88666	60	Asia/Jerusalem
 79	kfarGanim	כפר גנים	Kfar Ganim (Petah Tikva)	32.07567	34.87292	67	Asia/Jerusalem
 80	einGanim	עין גנים	Ein Ganim (Petah Tikva)	32.08836	34.8941	49	Asia/Jerusalem
 81	kfarAvraham	כפר אברהם	Kfar Avraham (Petah Tikva)	32.09485	34.89829	44	Asia/Jerusalem
-82	amishav	‘Ammishav	Amishav (Petah Tikva)	32.07407	34.90955	43	Asia/Jerusalem
-83	hadarHamoshavot	H̱adar HaMoshavot	Hadar HaMoshavot (Petah Tikva)	32.10265	34.87362	12	Asia/Jerusalem
+82	amishav	עמישב	Amishav (Petah Tikva)	32.07407	34.90955	43	Asia/Jerusalem
+83	hadarHamoshavot	הדר המושבות	Hadar HaMoshavot (Petah Tikva)	32.10265	34.87362	12	Asia/Jerusalem
 84	rishonLezion	ראשון לציון	Rishon LeZion	31.97102	34.78939	56	Asia/Jerusalem
 85	bneiBrak	בני ברק	Bnei Brak	32.08074	34.8338	51	Asia/Jerusalem
 86	kiryatHerzog	קרית הרצוג	Kiryat Herzog (Bnei Brak)	32.09813	34.83826	20	Asia/Jerusalem
@@ -93,7 +93,7 @@ id	key	he	en	lat	lng	elevation	tzid
 92	herzliya	הרצליה	Herzliya	32.16627	34.82536	28	Asia/Jerusalem
 93	rechovot	רחובות	Rehovot	31.89415	34.8095	46	Asia/Jerusalem
 94	modiin	מודיעין	Modi'in	31.89385	35.01504	276	Asia/Jerusalem
-95	reut	Re‘ut	Reut (Modiin)	31.88958	35.00529	276	Asia/Jerusalem
+95	reut	רעות	Reut (Modiin)	31.88958	35.00529	276	Asia/Jerusalem
 96	maccabim	מכבים	Maccabim (Modiin)	31.89111	35.03352	230	Asia/Jerusalem
 97	eilat	אילת	Eilat	29.55805	34.94821	63	Asia/Jerusalem
 98	tzfat	צפת	Safed	32.96465	35.496	779	Asia/Jerusalem
@@ -101,7 +101,7 @@ id	key	he	en	lat	lng	elevation	tzid
 100	tiberias	טבריה	Tiberias	32.79396	35.53152	-39	Asia/Jerusalem
 101	tiberiasBenGurion	שכונת בן גוריון	Ben Gurion quarter, upper city (Tiberias)	32.78302	35.51877	217	Asia/Jerusalem
 102	tiberiasRemez	שכונת דוד רמז	David Remez quarter (Tiberias)	32.79932	35.52319	86	Asia/Jerusalem
-103	tiberiasGeulim	Shekhunat Ge’ulim	Geulim quarter (Tiberias)	32.7816	35.5388	-158	Asia/Jerusalem
+103	tiberiasGeulim	גאולים	Geulim quarter (Tiberias)	32.7816	35.5388	-158	Asia/Jerusalem
 104	kiryatShmuelTiberias	קריית שמואל	Kiryat Shmuel (Tiberias)	32.79617	35.53111	-90	Asia/Jerusalem
 105	newYork	ניו יורק	New York	40.71427	-74.00597	10	America/New_York
 106	upperWestSide	אפר וסט סייד	Upper West Side (Manhattan)	40.78705	-73.97542	27	America/New_York
@@ -181,14 +181,14 @@ id	key	he	en	lat	lng	elevation	tzid
 180	villaCrespo	וייה קרספו	Villa Crespo (Buenos Aires)	-34.60001	-58.44735	16	America/Argentina/Buenos_Aires
 181	belgrano	בלגרנו	Belgrano (Buenos Aires)	-34.5627	-58.45829	18	America/Argentina/Buenos_Aires
 182	flores	פלורס	Flores (Buenos Aires)	-34.62997	-58.46329	34	America/Argentina/Buenos_Aires
-183	beitEl	Beit El	Beit El	31.94153	35.22241	866	Asia/Jerusalem
+183	beitEl	בית אל	Beit El	31.94153	35.22241	866	Asia/Jerusalem
 184	beitZayit	בית זית	Beit Zayit	31.78233	35.16161	604	Asia/Jerusalem
-185	beitHilkia	Bet H̱ilqiyya	Beit Hilkia	31.79281	34.81048	73	Asia/Jerusalem
+185	beitHilkia	בית חלקיה	Beit Hilkia	31.79281	34.81048	73	Asia/Jerusalem
 186	beitMeir	בית מאיר	Beit Meir	31.79393	35.03689	583	Asia/Jerusalem
 187	beitShean	בית שאן	Beit She'an	32.49658	35.4965	-121	Asia/Jerusalem
 188	beitShemesh	בית שמש	Beit Shemesh	31.73072	34.99293	282	Asia/Jerusalem
 189	ramatBeitShemesh	רמת בית שמש	Ramat Beit Shemesh	31.72339	34.99291	332	Asia/Jerusalem
-190	givatSharet	Giv‘at Sharet	Givat Sharet (Beit Shemesh)	31.73822	34.979	274	Asia/Jerusalem
+190	givatSharet	גבעת שרת	Givat Sharet (Beit Shemesh)	31.73822	34.979	274	Asia/Jerusalem
 191	beitarIllit	ביתר עילית	Beitar Illit	31.7	35.11667	675	Asia/Jerusalem
 192	brooklyn	ברוקלין	Brooklyn	40.6501	-73.94958	15	America/New_York
 193	boroughPark	בורו פארק	Borough Park (Brooklyn)	40.63399	-73.99681	20	America/New_York
@@ -222,12 +222,12 @@ id	key	he	en	lat	lng	elevation	tzid
 221	sunderland	סנדרלנד	Sunderland	54.90465	-1.38222	36	Europe/London
 222	gimzo	גמזו	Gimzo	31.92776	34.94045	92	Asia/Jerusalem
 223	ganYavne	גן יבנה	Gan Yavne	31.78737	34.70659	52	Asia/Jerusalem
-224	greatNeck	Great Neck	Great Neck	40.80066	-73.72846	33	America/New_York
+224	greatNeck	גרייט נק	Great Neck	40.80066	-73.72846	33	America/New_York
 225	dallas	דאלאס	Dallas	32.78306	-96.80667	128	America/Chicago
 226	northDallas	צפון דאלאס	North Dallas (Dallas)	32.90508	-96.78543	180	America/Chicago
 227	dimona	דימונה	Dimona	31.07079	35.03269	551	Asia/Jerusalem
 228	waterburyConnecticut	ווטרברי	Waterbury, Connecticut	41.55815	-73.0515	82	America/New_York
-229	washingtonDC	Washington, D.C.	Washington, D.C.	38.89511	-77.03637	7	America/New_York
+229	washingtonDC	וושינגטון די. סי.	Washington, D.C.	38.89511	-77.03637	7	America/New_York
 230	zikhronYaakov	זכרון יעקב	Zikhron Ya'akov	32.56883	34.95427	190	Asia/Jerusalem
 231	hadera	חדרה	Hadera	32.44192	34.9039	13	Asia/Jerusalem
 232	holon	חולון	Holon	32.0122	34.77826	24	Asia/Jerusalem
@@ -302,7 +302,7 @@ id	key	he	en	lat	lng	elevation	tzid
 301	maalot	מעלות תרשיחא	Ma'alot	33.01667	35.26667	484	Asia/Jerusalem
 302	mitzpeYericho	מצפה יריחו	Mitzpe Yericho	31.81672	35.39405	178	Asia/Jerusalem
 303	mitzpeRamon	מצפה רמון	Mitzpe Ramon	30.60944	34.80111	858	Asia/Jerusalem
-304	mexicoCuernavaca	Mexico - Cuernavaca	Cuernavaca	18.9261	-99.23075	1540	America/Mexico_City
+304	mexicoCuernavaca	קוארנבקה	Cuernavaca	18.9261	-99.23075	1540	America/Mexico_City
 305	marseille	מרסיי	Marseille	43.29695	5.38107	28	Europe/Paris
 306	nahariya	‏נהריה	Nahariya	33.00892	35.09814	15	Asia/Jerusalem
 307	nofAyalonShaalvim	נוף איילון	Nof Ayalon (Shaalvim)	31.87111	34.99081	195	Asia/Jerusalem
@@ -326,7 +326,7 @@ id	key	he	en	lat	lng	elevation	tzid
 325	pinskBelarus	פינסק	Pinsk, Belarus	52.12153	26.06726	148	Europe/Minsk
 326	panamaCity	פנמה סיטי	Panama City	8.9936	-79.51973	17	America/Panama
 327	paitilla	פונטה פאיטייה	Punta Paitilla (Panama City)	8.98063	-79.5159	18	America/Panama
-328	passaicNewJersey	Passaic, New Jersey	Passaic, New Jersey	40.85677	-74.12848	34	America/New_York
+328	passaicNewJersey	פסייק	Passaic, New Jersey	40.85677	-74.12848	34	America/New_York
 329	paris	פריז	Paris	48.85341	2.3488	42	Europe/Paris
 330	paris19	הרובע ה-19	19th arrondissement (Paris)	48.8817	2.3822	60	Europe/Paris
 331	paris17	הרובע ה-17	17th arrondissement (Paris)	48.8835	2.3219	61	Europe/Paris
@@ -371,7 +371,7 @@ id	key	he	en	lat	lng	elevation	tzid
 370	lincolnwood	לינקולנווד	Lincolnwood (Chicago)	42.00448	-87.73006	184	America/Chicago
 371	skokie	סקוקי	Skokie (Chicago)	42.03336	-87.73339	185	America/Chicago
 372	shlomi	שלומי	Shlomi	33.07186	35.14527	82	Asia/Jerusalem
-373	tifrah	Tifraẖ	Tifrah	31.32657	34.67689	156	Asia/Jerusalem
+373	tifrah	תפרח	Tifrah	31.32657	34.67689	156	Asia/Jerusalem
 374	elad	אלעד	El'ad	32.05108	34.95704	84	Asia/Jerusalem
 375	modiinIllit	מודיעין עילית	Modi'in Illit	31.93221	35.04416	280	Asia/Jerusalem
 376	givatayim	גבעתיים	Giv'atayim	32.07225	34.81253	50	Asia/Jerusalem
