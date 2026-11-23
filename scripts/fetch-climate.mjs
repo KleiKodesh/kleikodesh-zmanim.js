@@ -19,12 +19,15 @@ function checkpoint(label) {
   }
 }
 
-const OUT = 'data/climate.tsv'
+// Parallel CI: SHARD/SHARDS split the remaining places across runners (each runner has its own IP,
+// so Open-Meteo's per-IP limit applies per shard); each shard writes its own OUT file.
+const OUT = process.env.OUT || 'data/climate.tsv'
+const SHARD = Number(process.env.SHARD || 0), SHARDS = Number(process.env.SHARDS || 1)
 const BATCH = 10
 const rows = readFileSync('data/places.tsv', 'utf8').trim().split(/\r?\n/).slice(1).map((l) => l.split('\t'))
 const done = new Map()
-if (existsSync(OUT)) for (const l of readFileSync(OUT, 'utf8').trim().split(/\r?\n/).slice(1)) done.set(l.split('\t')[0], l)
-const todo = rows.filter((r) => !done.has(r[0]))
+for (const f of new Set(['data/climate.tsv', OUT])) if (existsSync(f)) for (const l of readFileSync(f, 'utf8').trim().split(/\r?\n/).slice(1)) done.set(l.split('\t')[0], l)
+const todo = rows.filter((r) => !done.has(r[0])).filter((_, i) => i % SHARDS === SHARD)
 const pause = (ms) => new Promise((r) => setTimeout(r, ms))
 const save = () => writeFileSync(OUT, 'id\t' + Array.from({ length: 12 }, (_, i) => `m${i + 1}`).join('\t') + '\n' +
   [...done.values()].sort((a, b) => Number(a.split('\t')[0]) - Number(b.split('\t')[0])).join('\n') + '\n')
