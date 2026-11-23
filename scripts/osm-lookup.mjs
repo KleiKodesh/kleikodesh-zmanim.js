@@ -19,7 +19,11 @@ const inBox = (b, lat, lng) => lat >= b.s && lat <= b.n && lng >= b.w && lng <= 
 // Review list: every place object inside the Modiin Illit box (names only, printed to the log).
 {
   const q = `[out:json][timeout:60];nwr[place~"^(neighbourhood|suburb|quarter)$"](${MI.s},${MI.w},${MI.n},${MI.e});out center tags;`;
-  const res = await (await fetch('https://overpass-api.de/api/interpreter', { method: 'POST', headers: { 'User-Agent': UA, 'Content-Type': 'application/x-www-form-urlencoded' }, body: 'data=' + encodeURIComponent(q) })).json();
+  let res = { elements: [] };
+  for (const ep of ['https://overpass-api.de/api/interpreter', 'https://overpass.kumi.systems/api/interpreter', 'https://overpass.private.coffee/api/interpreter']) {
+    try { res = await (await fetch(ep, { method: 'POST', headers: { 'User-Agent': UA, 'Content-Type': 'application/x-www-form-urlencoded' }, body: 'data=' + encodeURIComponent(q) })).json(); break; }
+    catch (err) { console.log(`overpass ${ep} failed: ${err.message}`); }
+  }
   for (const e of res.elements) console.log(`MI-AREA ${e.type}/${e.id} ${e.tags.place} ${(e.lat ?? e.center.lat).toFixed(5)},${(e.lon ?? e.center.lon).toFixed(5)} he=${e.tags['name:he'] ?? e.tags.name} en=${e.tags['name:en'] ?? ''}`);
 }
 const rows = ['key\the\ten\tlat\tlng\televation\ttzid\tsource'];
