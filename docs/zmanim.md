@@ -897,6 +897,7 @@ Nightfall by Rav Yechiel Michel Tucazinsky's calculation: the sun 6.45 degrees b
 
 - Community custom (a fixed margin after sunset; no single published source)
 - Shabbat 34b (twilight is three quarters of a mil, Rabba in the name of Shmuel)
+- Igrot Moshe, Orach Chaim 1:24 (Rav Moshe Feinstein: 50 minutes in New York) (as cited)
 
 <a id="beinHashmashotYereim"></a>
 
@@ -1090,3 +1091,375 @@ Until fifteen full days (24 hours each) after the molad, the view of the Shulcha
 - Mishna Berura 426:17 (fifteen full days counted from the hour of the molad)
 - Rambam, Kiddush HaChodesh 6:2-3 (an hour is 1080 chalakim; the mean month is 29 days 12 hours 793 chalakim)
 - Rambam, Kiddush HaChodesh 6:8 (the first molad: Monday night, 5 hours 204 chalakim)
+
+<a id="misheyakir7p65"></a>
+
+## Misheyakir (7.65 deg)
+
+The sun 7.65 deg below the true horizon: a lenient misheyakir, for a time of need.
+
+**Sources:**
+
+- Igrot Moshe (as cited)
+- Rav Yaakov Kamenetsky, Zmanei Yisrael p. 117 (as cited)
+- Lakewood custom (as cited)
+
+<a id="misheyakir12p85"></a>
+
+## Misheyakir (12.85 deg)
+
+The sun 12.85 deg below the true horizon: misheyakir for a time of need.
+
+**Sources:**
+
+- Birur Halacha, Orach Chaim 18 (as cited)
+
+<a id="alotBaalHatanya"></a>
+
+## Dawn - Baal HaTanya
+
+The sun 16.9 deg below the true horizon.
+
+**Sources:**
+
+- Shulchan Aruch HaRav (Baal HaTanya), Orach Chaim 89, and Seder Hachnasat Shabbat in his Siddur (as cited)
+- chabad.org, article 3209349 (the Chabad zmanim method)
+
+<a id="sunriseBaalHatanya"></a>
+
+## Netz amiti - Baal HaTanya
+
+The sun's centre 1.583 deg below the true horizon: the top of the sun seen over mountains as high as those of Eretz Yisrael. A little earlier than sea-level sunrise.
+
+**Sources:**
+
+- Shulchan Aruch HaRav (Baal HaTanya), Orach Chaim 89, and Seder Hachnasat Shabbat in his Siddur (as cited)
+- chabad.org, article 3209349 (the Chabad zmanim method)
+
+<a id="sunsetBaalHatanya"></a>
+
+## Shkia amiti - Baal HaTanya
+
+The sun's centre 1.583 deg below the true horizon, a little after sea-level sunset.
+
+**Sources:**
+
+- Shulchan Aruch HaRav (Baal HaTanya), Orach Chaim 89, and Seder Hachnasat Shabbat in his Siddur (as cited)
+- chabad.org, article 3209349 (the Chabad zmanim method)
+
+<a id="tzeitBaalHatanya"></a>
+
+## Nightfall - Baal HaTanya
+
+The sun 6 deg below the true horizon.
+
+**Sources:**
+
+- Shulchan Aruch HaRav (Baal HaTanya), Orach Chaim 89, and Seder Hachnasat Shabbat in his Siddur (as cited)
+- chabad.org, article 3209349 (the Chabad zmanim method)
+
+<a id="sofShmaBaalHatanya"></a>
+
+## Latest Shema - Baal HaTanya
+
+3 temporal hours after netz amiti, in a day from netz amiti to shkia amiti (the sun's centre 1.583 deg below the horizon).
+
+**Sources:**
+
+- Shulchan Aruch HaRav (Baal HaTanya), Orach Chaim 89, and Seder Hachnasat Shabbat in his Siddur (as cited)
+- chabad.org, article 3209349 (the Chabad zmanim method)
+
+<a id="sofShmaHarari40"></a>
+
+## Latest Shema - Chacham Yosef Harari-Raful (40)
+
+3 temporal hours after dawn, in a day from dawn (a tenth of the day before sunrise) to 40 minutes after sunset (outside Israel). This day's midpoint is not chatzot.
+
+**Sources:**
+
+- Chacham Yosef Harari-Raful's method: dawn a tenth of the day before sunrise, nightfall 40 minutes after sunset outside Israel and 25 in Israel (as cited)
+
+<a id="sofShmaHarari25"></a>
+
+## Latest Shema - Chacham Yosef Harari-Raful (25)
+
+3 temporal hours after dawn, in a day from dawn (a tenth of the day before sunrise) to 25 minutes after sunset (in Israel). This day's midpoint is not chatzot.
+
+**Sources:**
+
+- Chacham Yosef Harari-Raful's method: dawn a tenth of the day before sunrise, nightfall 40 minutes after sunset outside Israel and 25 in Israel (as cited)
+
+<a id="sofTfillaBaalHatanya"></a>
+
+## Latest Shacharit - Baal HaTanya
+
+4 temporal hours after netz amiti, in a day from netz amiti to shkia amiti (the sun's centre 1.583 deg below the horizon).
+
+**Sources:**
+
+- Shulchan Aruch HaRav (Baal HaTanya), Orach Chaim 89, and Seder Hachnasat Shabbat in his Siddur (as cited)
+- chabad.org, article 3209349 (the Chabad zmanim method)
+
+<a id="sofTfillaHarari40"></a>
+
+## Latest Shacharit - Chacham Yosef Harari-Raful (40)
+
+4 temporal hours after dawn, in a day from dawn (a tenth of the day before sunrise) to 40 minutes after sunset (outside Israel). This day's midpoint is not chatzot.
+
+**Sources:**
+
+- Chacham Yosef Harari-Raful's method: dawn a tenth of the day before sunrise, nightfall 40 minutes after sunset outside Israel and 25 in Israel (as cited)
+
+<a id="sofTfillaHarari25"></a>
+
+## Latest Shacharit - Chacham Yosef Harari-Raful (25)
+
+4 temporal hours after dawn, in a day from dawn (a tenth of the day before sunrise) to 25 minutes after sunset (in Israel). This day's midpoint is not chatzot.
+
+**Sources:**
+
+- Chacham Yosef Harari-Raful's method: dawn a tenth of the day before sunrise, nightfall 40 minutes after sunset outside Israel and 25 in Israel (as cited)
+
+<a id="minchaGedolaBaalHatanya"></a>
+
+## Mincha gedola - Baal HaTanya
+
+6.5 temporal hours after netz amiti, in a day from netz amiti to shkia amiti (the sun's centre 1.583 deg below the horizon).
+
+**Sources:**
+
+- Shulchan Aruch HaRav (Baal HaTanya), Orach Chaim 89, and Seder Hachnasat Shabbat in his Siddur (as cited)
+- chabad.org, article 3209349 (the Chabad zmanim method)
+
+<a id="minchaGedolaHarari40"></a>
+
+## Mincha gedola - Chacham Yosef Harari-Raful (40)
+
+6.5 temporal hours after dawn, in a day from dawn (a tenth of the day before sunrise) to 40 minutes after sunset (outside Israel). This day's midpoint is not chatzot.
+
+**Sources:**
+
+- Chacham Yosef Harari-Raful's method: dawn a tenth of the day before sunrise, nightfall 40 minutes after sunset outside Israel and 25 in Israel (as cited)
+
+<a id="minchaGedolaHarari25"></a>
+
+## Mincha gedola - Chacham Yosef Harari-Raful (25)
+
+6.5 temporal hours after dawn, in a day from dawn (a tenth of the day before sunrise) to 25 minutes after sunset (in Israel). This day's midpoint is not chatzot.
+
+**Sources:**
+
+- Chacham Yosef Harari-Raful's method: dawn a tenth of the day before sunrise, nightfall 40 minutes after sunset outside Israel and 25 in Israel (as cited)
+
+<a id="minchaKetanaBaalHatanya"></a>
+
+## Mincha ketana - Baal HaTanya
+
+9.5 temporal hours after netz amiti, in a day from netz amiti to shkia amiti (the sun's centre 1.583 deg below the horizon).
+
+**Sources:**
+
+- Shulchan Aruch HaRav (Baal HaTanya), Orach Chaim 89, and Seder Hachnasat Shabbat in his Siddur (as cited)
+- chabad.org, article 3209349 (the Chabad zmanim method)
+
+<a id="minchaKetanaHarari40"></a>
+
+## Mincha ketana - Chacham Yosef Harari-Raful (40)
+
+9.5 temporal hours after dawn, in a day from dawn (a tenth of the day before sunrise) to 40 minutes after sunset (outside Israel). This day's midpoint is not chatzot.
+
+**Sources:**
+
+- Chacham Yosef Harari-Raful's method: dawn a tenth of the day before sunrise, nightfall 40 minutes after sunset outside Israel and 25 in Israel (as cited)
+
+<a id="minchaKetanaHarari25"></a>
+
+## Mincha ketana - Chacham Yosef Harari-Raful (25)
+
+9.5 temporal hours after dawn, in a day from dawn (a tenth of the day before sunrise) to 25 minutes after sunset (in Israel). This day's midpoint is not chatzot.
+
+**Sources:**
+
+- Chacham Yosef Harari-Raful's method: dawn a tenth of the day before sunrise, nightfall 40 minutes after sunset outside Israel and 25 in Israel (as cited)
+
+<a id="plagBaalHatanya"></a>
+
+## Plag hamincha - Baal HaTanya
+
+10.75 temporal hours after netz amiti, in a day from netz amiti to shkia amiti (the sun's centre 1.583 deg below the horizon).
+
+**Sources:**
+
+- Shulchan Aruch HaRav (Baal HaTanya), Orach Chaim 89, and Seder Hachnasat Shabbat in his Siddur (as cited)
+- chabad.org, article 3209349 (the Chabad zmanim method)
+
+<a id="plagHarari40"></a>
+
+## Plag hamincha - Chacham Yosef Harari-Raful (40)
+
+10.75 temporal hours after dawn, in a day from dawn (a tenth of the day before sunrise) to 40 minutes after sunset (outside Israel). This day's midpoint is not chatzot.
+
+**Sources:**
+
+- Chacham Yosef Harari-Raful's method: dawn a tenth of the day before sunrise, nightfall 40 minutes after sunset outside Israel and 25 in Israel (as cited)
+
+<a id="plagHarari25"></a>
+
+## Plag hamincha - Chacham Yosef Harari-Raful (25)
+
+10.75 temporal hours after dawn, in a day from dawn (a tenth of the day before sunrise) to 25 minutes after sunset (in Israel). This day's midpoint is not chatzot.
+
+**Sources:**
+
+- Chacham Yosef Harari-Raful's method: dawn a tenth of the day before sunrise, nightfall 40 minutes after sunset outside Israel and 25 in Israel (as cited)
+
+<a id="minchaGedolaHillel"></a>
+
+## Mincha gedola - Rav Yaakov Moshe Hillel
+
+The later of half a temporal hour after chatzot (of a day from dawn at 16.1 deg to nightfall at 3.7 deg) and 30 minutes after chatzot.
+
+**Sources:**
+
+- Rav Yaakov Moshe Hillel's method: hours of a day from dawn at 16.1 deg to nightfall at 3.7 / 3.8 deg (as cited)
+
+<a id="minchaKetanaHillel"></a>
+
+## Mincha ketana - Rav Yaakov Moshe Hillel
+
+2.5 temporal hours before nightfall (3.8 deg), in a day from dawn at 16.1 deg to nightfall at 3.8 deg.
+
+**Sources:**
+
+- Rav Yaakov Moshe Hillel's method: hours of a day from dawn at 16.1 deg to nightfall at 3.7 / 3.8 deg (as cited)
+
+<a id="plagHillel"></a>
+
+## Plag hamincha - Rav Yaakov Moshe Hillel
+
+1.25 temporal hours before nightfall (3.8 deg), in a day from dawn at 16.1 deg to nightfall at 3.8 deg.
+
+**Sources:**
+
+- Rav Yaakov Moshe Hillel's method: hours of a day from dawn at 16.1 deg to nightfall at 3.7 / 3.8 deg (as cited)
+
+<a id="chatzotFixedLocal"></a>
+
+## Fixed chatzot (12:00 local time)
+
+12:00 local mean time (longitude / 15 hours from UTC), without the equation of time.
+
+**Sources:**
+
+- Aruch HaShulchan, Orach Chaim 233:14 (as cited)
+- Igrot Moshe, Orach Chaim 1:24 and 2:20 (as cited)
+
+<a id="sofShmaGraFixed"></a>
+
+## Latest Shema - GRA, fixed chatzot
+
+Halfway from sunrise to fixed chatzot (12:00 local mean time) - Rav Moshe Feinstein's method.
+
+**Sources:**
+
+- Aruch HaShulchan, Orach Chaim 233:14 (as cited)
+- Igrot Moshe, Orach Chaim 1:24 and 2:20 (as cited)
+
+<a id="sofTfillaGraFixed"></a>
+
+## Latest Shacharit - GRA, fixed chatzot
+
+Two thirds of the way from sunrise to fixed chatzot - Rav Moshe Feinstein's method.
+
+**Sources:**
+
+- Aruch HaShulchan, Orach Chaim 233:14 (as cited)
+- Igrot Moshe, Orach Chaim 1:24 and 2:20 (as cited)
+
+<a id="sofShmaMga72Fixed"></a>
+
+## Latest Shema - Magen Avraham 72, fixed chatzot
+
+Halfway from dawn (72 minutes before sunrise) to fixed chatzot.
+
+**Sources:**
+
+- Aruch HaShulchan, Orach Chaim 233:14 (as cited)
+- Igrot Moshe, Orach Chaim 1:24 and 2:20 (as cited)
+
+<a id="sofShmaMga16Fixed"></a>
+
+## Latest Shema - Magen Avraham 16.1, fixed chatzot
+
+Halfway from dawn (16.1 deg) to fixed chatzot.
+
+**Sources:**
+
+- Aruch HaShulchan, Orach Chaim 233:14 (as cited)
+- Igrot Moshe, Orach Chaim 1:24 and 2:20 (as cited)
+
+<a id="minchaGedolaFixed"></a>
+
+## Mincha gedola - fixed chatzot
+
+30 minutes after fixed chatzot (12:00 local mean time).
+
+**Sources:**
+
+- Aruch HaShulchan, Orach Chaim 233:14 (as cited)
+- Igrot Moshe, Orach Chaim 1:24 and 2:20 (as cited)
+
+<a id="minchaKetanaFixed"></a>
+
+## Mincha ketana - fixed chatzot
+
+3.5 hours after fixed chatzot, an hour being a sixth of fixed chatzot to sunset.
+
+**Sources:**
+
+- Aruch HaShulchan, Orach Chaim 233:14 (as cited)
+- Igrot Moshe, Orach Chaim 1:24 and 2:20 (as cited)
+
+<a id="plagFixed"></a>
+
+## Plag hamincha - fixed chatzot
+
+4.75 hours after fixed chatzot, an hour being a sixth of fixed chatzot to sunset.
+
+**Sources:**
+
+- Aruch HaShulchan, Orach Chaim 233:14 (as cited)
+- Igrot Moshe, Orach Chaim 1:24 and 2:20 (as cited)
+
+<a id="sofShmaAsym"></a>
+
+## Latest Shema - day 16.1 to 7.083 deg
+
+3 temporal hours after dawn, in a day from dawn (16.1 deg) to nightfall (7.083 deg).
+
+**Sources:**
+
+- Ben Ish Chai and others: a day from dawn 16.1 deg to nightfall 7.083 deg (as cited)
+- Yisrael Vehazmanim, vol. III, no. 22 (as cited)
+
+<a id="sofTfillaAsym"></a>
+
+## Latest Shacharit - day 16.1 to 7.083 deg
+
+4 temporal hours after dawn, in a day from dawn (16.1 deg) to nightfall (7.083 deg).
+
+**Sources:**
+
+- Ben Ish Chai and others: a day from dawn 16.1 deg to nightfall 7.083 deg (as cited)
+- Yisrael Vehazmanim, vol. III, no. 22 (as cited)
+
+<a id="plagAsym"></a>
+
+## Plag hamincha - day 16.1 to 7.083 deg
+
+10.75 temporal hours after dawn, in a day from dawn (16.1 deg) to nightfall (7.083 deg).
+
+**Sources:**
+
+- Ben Ish Chai and others: a day from dawn 16.1 deg to nightfall 7.083 deg (as cited)
+- Yisrael Vehazmanim, vol. III, no. 22 (as cited)

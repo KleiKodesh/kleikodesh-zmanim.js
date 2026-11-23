@@ -92,8 +92,20 @@ Also exported: `zmanInstants` (exact instants as BigInt epoch nanoseconds), `for
 | tzeit645 | Rav Y. M. Tucazinsky's nightfall: the sun 6.45 deg below the true horizon (Birur Halacha, Yoreh De'ah 262) | up |
 | beinHashmashotYereim | start of bein hashmashot per the Yereim: 3/4 mil (18 min) before sunset, as the sun 2.99 deg above the true horizon (its height 18 minutes before sunset in Jerusalem at the equinox); degree-based method per Rabbi Yedidya Manet, Zmanei HaHalacha Lema'aseh p. 11 | down |
 | plagAlot90Tzeit645 / plagAlot72Tzeit645 | plag (10.75 seasonal hours) of a day from dawn (19.8 / 16.1 deg) to tzeit645 - the Magen Avraham's day from dawn to nightfall (Magen Avraham 58:1; SA OC 233:1) | up |
-| tzeit20 / tzeit24 / tzeit30 / tzeit40 / tzeit50 | 20 / 24 / 30 / 40 / 50 fixed minutes after sunset, by community custom | up |
+| tzeit20 / tzeit24 / tzeit30 / tzeit40 / tzeit50 | 20 / 24 / 30 / 40 / 50 fixed minutes after sunset, by community custom (50: Rav Moshe Feinstein, Igrot Moshe OC 1:24) | up |
 | beinHashmashotRt | start of twilight per Rabbeinu Tam: sunset + 58.5 min (3.25 mil of 18 min; Tosafot Shabbat 35a, Pesachim 94a; SA OC 261:2). Twilight ends at tzeitRt72; by the Geonim it is sunset..tzeitGeonim | down |
+| misheyakir7p65 / misheyakir12p85 | sun 7.65 deg below (Igrot Moshe; Rav Yaakov Kamenetsky, Zmanei Yisrael p. 117; Lakewood custom) / 12.85 deg below (Birur Halacha OC 18, time of need), morning | up |
+| alotBaalHatanya / tzeitBaalHatanya | Baal HaTanya: sun 16.9 deg below, morning / 6 deg below, evening (Shulchan Aruch HaRav; chabad.org 3209349) | up |
+| sunriseBaalHatanya / sunsetBaalHatanya | Baal HaTanya's netz / shkia amiti: the sun's centre 1.583 deg below the true horizon (a few minutes before sea-level sunrise / after sea-level sunset) | up / down |
+| sofShmaBaalHatanya / sofTfillaBaalHatanya / minchaGedolaBaalHatanya / minchaKetanaBaalHatanya / plagBaalHatanya | 3 / 4 / 6.5 / 9.5 / 10.75 temporal hours of the day netz amiti..shkia amiti | down / down / up / up / up |
+| sofShmaHarari40/25, sofTfillaHarari40/25, minchaGedolaHarari40/25, minchaKetanaHarari40/25, plagHarari40/25 | Chacham Yosef Harari-Raful's method: 3 / 4 / 6.5 / 9.5 / 10.75 temporal hours of a day from alot72z to sunset + 40 min (outside Israel) / + 25 min (Israel); its midpoint is not chatzot | down / down / up / up / up |
+| minchaGedolaHillel | Rav Yaakov Moshe Hillel's method: the later of chatzot + half a temporal hour of a day 16.1 deg..3.7 deg and chatzot + 30 min | up |
+| minchaKetanaHillel / plagHillel | Rav Yaakov Moshe Hillel's method: 2.5 / 1.25 temporal hours (of a day 16.1 deg..3.8 deg) before the sun is 3.8 deg below | up |
+| chatzotFixedLocal | 12:00 local mean time (longitude / 15 hours from UTC); Aruch HaShulchan OC 233:14, Igrot Moshe OC 1:24, 2:20 | nearest |
+| sofShmaGraFixed / sofTfillaGraFixed | Rav Moshe Feinstein: sunrise + 1/2 / 2/3 of (chatzotFixedLocal - sunrise) | down |
+| sofShmaMga72Fixed / sofShmaMga16Fixed | dawn (72 min before sunrise / 16.1 deg) + half of (chatzotFixedLocal - dawn) | down |
+| minchaGedolaFixed / minchaKetanaFixed / plagFixed | chatzotFixedLocal + 30 min / + 3.5 / + 4.75 hours of (sunset - chatzotFixedLocal) / 6 | up |
+| sofShmaAsym / sofTfillaAsym / plagAsym | 3 / 4 / 10.75 temporal hours of a day from dawn 16.1 deg to nightfall 7.083 deg (Ben Ish Chai and others; Yisrael Vehazmanim vol. III no. 22) | down / down / up |
 
 Degree lines return null on days the sun never gets that low (high latitudes in summer); no rule is invented for
 them, except the explicit `...Chatzot` fallback lines:
