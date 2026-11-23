@@ -13,6 +13,10 @@ export interface Place {
 }
 /** Bytes per record in places.bin: lat int32, lng int32 (degrees x 1e5), elevation int16, tz index uint8. */
 export declare const RECORD_SIZE = 11;
+/** Bumped by configure(): other modules' asset caches (geo.ts) reload after it. */
+export declare let assetGeneration: number;
+/** Reads one asset file through the configured loader. */
+export declare const readAsset: (file: string) => Promise<ArrayBuffer>;
 /** Where the asset files are: a base URL for the default fetch loader, or a loader of your own. */
 export declare function configure(options: {
     baseUrl?: string | URL;

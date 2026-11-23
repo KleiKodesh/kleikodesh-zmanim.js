@@ -9,12 +9,17 @@ let loader = async (file) => {
         throw new Error(`kleikodesh-zmanim: cannot load ${file} (${response.status})`);
     return response.arrayBuffer();
 };
+/** Bumped by configure(): other modules' asset caches (geo.ts) reload after it. */
+export let assetGeneration = 0;
+/** Reads one asset file through the configured loader. */
+export const readAsset = (file) => loader(file);
 /** Where the asset files are: a base URL for the default fetch loader, or a loader of your own. */
 export function configure(options) {
     if (options.baseUrl !== undefined)
         baseUrl = options.baseUrl;
     if (options.loader !== undefined)
         loader = options.loader;
+    assetGeneration++;
     names.clear();
     bin = null;
     tz = null;
