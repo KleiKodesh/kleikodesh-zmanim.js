@@ -38,7 +38,7 @@ describe('place geo (country, city)', () => {
   })
 
   it('geo.bin is one 3-byte record per id (plus unused record 0)', () => {
-    expect(statSync(new URL('../assets/geo.bin', import.meta.url)).size).toBe(1882 * GEO_RECORD_SIZE)
+    expect(statSync(new URL('../assets/geo.bin', import.meta.url)).size).toBe(1939 * GEO_RECORD_SIZE)
   })
 
   it('placeTree groups and sorts lazily, loading geo and one names file', async () => {
