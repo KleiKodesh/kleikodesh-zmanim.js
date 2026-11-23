@@ -519,3 +519,344 @@ The sun 16.1 degrees below the horizon in the evening, its depth 72 minutes afte
 
 - Tosafot Shabbat 35a
 - Shulchan Aruch OC 261:2 with Rema
+
+<a id="sofShmaMga19"></a>
+
+## Latest Shema (Magen Avraham, 19.8 degrees)
+
+The end of three temporal hours of the Magen Avraham's day, counted from the sun 19.8 degrees below the horizon in the morning to the same depth in the evening.
+
+**Sources:**
+
+- Mishna Berachot 1:2 (Shema until three hours)
+- Shulchan Aruch OC 58:1; Magen Avraham 58:1 (the day counted from dawn to nightfall)
+- Mishna Berura 58:4 (Magen Avraham counts from dawn; the Vilna Gaon from sunrise)
+- Pesachim 93b (from dawn to sunrise five mil, in the name of Rabbi Yochanan)
+- Shulchan Aruch OC 459:2; Mishna Berura 459:15 (a mil = 18 minutes)
+- Astronomy: in Jerusalem at the equinox the sun is 19.8 degrees below the horizon about 90 minutes before sunrise
+
+<a id="sofTfillaMga19"></a>
+
+## Latest morning prayer (Magen Avraham, 19.8 degrees)
+
+The end of four temporal hours of the Magen Avraham's day, counted from the sun 19.8 degrees below the horizon in the morning to the same depth in the evening.
+
+**Sources:**
+
+- Mishna Berachot 4:1; Shulchan Aruch OC 89:1 (morning prayer until four hours)
+- Shulchan Aruch OC 58:1; Magen Avraham 58:1 (the day counted from dawn to nightfall)
+- Mishna Berura 58:4 (Magen Avraham counts from dawn; the Vilna Gaon from sunrise)
+- Pesachim 93b (from dawn to sunrise five mil, in the name of Rabbi Yochanan)
+- Shulchan Aruch OC 459:2; Mishna Berura 459:15 (a mil = 18 minutes)
+- Astronomy: in Jerusalem at the equinox the sun is 19.8 degrees below the horizon about 90 minutes before sunrise
+
+<a id="plagMga19"></a>
+
+## Plag hamincha (Magen Avraham, 19.8 degrees)
+
+10.75 temporal hours of the same Magen Avraham day as the latest Shema of this measure, counted from the sun 19.8 degrees below the horizon in the morning to the same depth in the evening.
+
+**Sources:**
+
+- Mishna Berachot 4:1; Shulchan Aruch OC 233:1 (plag hamincha, eleven hours less a quarter)
+- Shulchan Aruch OC 58:1; Magen Avraham 58:1 (the day counted from dawn to nightfall)
+- Pesachim 93b (from dawn to sunrise five mil, in the name of Rabbi Yochanan)
+- Shulchan Aruch OC 459:2; Mishna Berura 459:15 (a mil = 18 minutes)
+- Astronomy: in Jerusalem at the equinox the sun is 19.8 degrees below the horizon about 90 minutes before sunrise
+
+<a id="sofShmaMga90"></a>
+
+## Latest Shema (Magen Avraham, 90 minutes)
+
+The end of three temporal hours of the Magen Avraham's day, counted from 90 fixed minutes before sunrise to 90 minutes after sunset (five mil of 18 minutes).
+
+**Sources:**
+
+- Mishna Berachot 1:2 (Shema until three hours)
+- Shulchan Aruch OC 58:1; Magen Avraham 58:1 (the day counted from dawn to nightfall)
+- Mishna Berura 58:4 (Magen Avraham counts from dawn; the Vilna Gaon from sunrise)
+- Pesachim 93b (from dawn to sunrise five mil, in the name of Rabbi Yochanan)
+- Shulchan Aruch OC 459:2; Mishna Berura 459:15 (a mil = 18 minutes)
+
+<a id="sofTfillaMga90"></a>
+
+## Latest morning prayer (Magen Avraham, 90 minutes)
+
+The end of four temporal hours of the Magen Avraham's day, counted from 90 fixed minutes before sunrise to 90 minutes after sunset (five mil of 18 minutes).
+
+**Sources:**
+
+- Mishna Berachot 4:1; Shulchan Aruch OC 89:1 (morning prayer until four hours)
+- Shulchan Aruch OC 58:1; Magen Avraham 58:1 (the day counted from dawn to nightfall)
+- Mishna Berura 58:4 (Magen Avraham counts from dawn; the Vilna Gaon from sunrise)
+- Pesachim 93b (from dawn to sunrise five mil, in the name of Rabbi Yochanan)
+- Shulchan Aruch OC 459:2; Mishna Berura 459:15 (a mil = 18 minutes)
+
+<a id="plagMga90"></a>
+
+## Plag hamincha (Magen Avraham, 90 minutes)
+
+10.75 temporal hours of the same Magen Avraham day as the latest Shema of this measure, counted from 90 fixed minutes before sunrise to 90 minutes after sunset (five mil of 18 minutes).
+
+**Sources:**
+
+- Mishna Berachot 4:1; Shulchan Aruch OC 233:1 (plag hamincha, eleven hours less a quarter)
+- Shulchan Aruch OC 58:1; Magen Avraham 58:1 (the day counted from dawn to nightfall)
+- Pesachim 93b (from dawn to sunrise five mil, in the name of Rabbi Yochanan)
+- Shulchan Aruch OC 459:2; Mishna Berura 459:15 (a mil = 18 minutes)
+
+<a id="sofShmaMga120"></a>
+
+## Latest Shema (Magen Avraham, 120 minutes)
+
+The end of three temporal hours of the Magen Avraham's day, counted from 120 fixed minutes before sunrise to 120 minutes after sunset (five mil of 24 minutes).
+
+**Sources:**
+
+- Mishna Berachot 1:2 (Shema until three hours)
+- Shulchan Aruch OC 58:1; Magen Avraham 58:1 (the day counted from dawn to nightfall)
+- Mishna Berura 58:4 (Magen Avraham counts from dawn; the Vilna Gaon from sunrise)
+- Pesachim 93b (from dawn to sunrise five mil, in the name of Rabbi Yochanan)
+- Rambam, commentary on Mishna Pesachim 3:2 (a mil = two fifths of an hour, 24 minutes)
+
+<a id="sofTfillaMga120"></a>
+
+## Latest morning prayer (Magen Avraham, 120 minutes)
+
+The end of four temporal hours of the Magen Avraham's day, counted from 120 fixed minutes before sunrise to 120 minutes after sunset (five mil of 24 minutes).
+
+**Sources:**
+
+- Mishna Berachot 4:1; Shulchan Aruch OC 89:1 (morning prayer until four hours)
+- Shulchan Aruch OC 58:1; Magen Avraham 58:1 (the day counted from dawn to nightfall)
+- Mishna Berura 58:4 (Magen Avraham counts from dawn; the Vilna Gaon from sunrise)
+- Pesachim 93b (from dawn to sunrise five mil, in the name of Rabbi Yochanan)
+- Rambam, commentary on Mishna Pesachim 3:2 (a mil = two fifths of an hour, 24 minutes)
+
+<a id="plagMga120"></a>
+
+## Plag hamincha (Magen Avraham, 120 minutes)
+
+10.75 temporal hours of the same Magen Avraham day as the latest Shema of this measure, counted from 120 fixed minutes before sunrise to 120 minutes after sunset (five mil of 24 minutes).
+
+**Sources:**
+
+- Mishna Berachot 4:1; Shulchan Aruch OC 233:1 (plag hamincha, eleven hours less a quarter)
+- Shulchan Aruch OC 58:1; Magen Avraham 58:1 (the day counted from dawn to nightfall)
+- Pesachim 93b (from dawn to sunrise five mil, in the name of Rabbi Yochanan)
+- Rambam, commentary on Mishna Pesachim 3:2 (a mil = two fifths of an hour, 24 minutes)
+
+<a id="sofShmaMga72z"></a>
+
+## Latest Shema (Magen Avraham, 72 seasonal minutes)
+
+The end of three temporal hours of the Magen Avraham's day, counted from a tenth of the sunrise-to-sunset day before sunrise to a tenth of it after sunset (72 minutes on a 12-hour day).
+
+**Sources:**
+
+- Mishna Berachot 1:2 (Shema until three hours)
+- Shulchan Aruch OC 58:1; Magen Avraham 58:1 (the day counted from dawn to nightfall)
+- Mishna Berura 58:4 (Magen Avraham counts from dawn; the Vilna Gaon from sunrise)
+- Pesachim 94a (four mil according to Rabbi Yehuda)
+- Shulchan Aruch OC 459:2; Mishna Berura 459:15 (a mil = 18 minutes)
+- Shulchan Aruch OC 58:1 (hours of the day are a twelfth of the day, longer or shorter by season); here the minutes of dawn are counted the same way
+
+<a id="sofTfillaMga72z"></a>
+
+## Latest morning prayer (Magen Avraham, 72 seasonal minutes)
+
+The end of four temporal hours of the Magen Avraham's day, counted from a tenth of the sunrise-to-sunset day before sunrise to a tenth of it after sunset (72 minutes on a 12-hour day).
+
+**Sources:**
+
+- Mishna Berachot 4:1; Shulchan Aruch OC 89:1 (morning prayer until four hours)
+- Shulchan Aruch OC 58:1; Magen Avraham 58:1 (the day counted from dawn to nightfall)
+- Mishna Berura 58:4 (Magen Avraham counts from dawn; the Vilna Gaon from sunrise)
+- Pesachim 94a (four mil according to Rabbi Yehuda)
+- Shulchan Aruch OC 459:2; Mishna Berura 459:15 (a mil = 18 minutes)
+- Shulchan Aruch OC 58:1 (hours of the day are a twelfth of the day, longer or shorter by season); here the minutes of dawn are counted the same way
+
+<a id="plagMga72z"></a>
+
+## Plag hamincha (Magen Avraham, 72 seasonal minutes)
+
+10.75 temporal hours of the same Magen Avraham day as the latest Shema of this measure, counted from a tenth of the sunrise-to-sunset day before sunrise to a tenth of it after sunset (72 minutes on a 12-hour day).
+
+**Sources:**
+
+- Mishna Berachot 4:1; Shulchan Aruch OC 233:1 (plag hamincha, eleven hours less a quarter)
+- Shulchan Aruch OC 58:1; Magen Avraham 58:1 (the day counted from dawn to nightfall)
+- Pesachim 94a (four mil according to Rabbi Yehuda)
+- Shulchan Aruch OC 459:2; Mishna Berura 459:15 (a mil = 18 minutes)
+- Shulchan Aruch OC 58:1 (hours of the day are a twelfth of the day, longer or shorter by season); here the minutes of dawn are counted the same way
+
+<a id="sofShmaMga90z"></a>
+
+## Latest Shema (Magen Avraham, 90 seasonal minutes)
+
+The end of three temporal hours of the Magen Avraham's day, counted from an eighth of the sunrise-to-sunset day before sunrise to an eighth of it after sunset (90 minutes on a 12-hour day).
+
+**Sources:**
+
+- Mishna Berachot 1:2 (Shema until three hours)
+- Shulchan Aruch OC 58:1; Magen Avraham 58:1 (the day counted from dawn to nightfall)
+- Mishna Berura 58:4 (Magen Avraham counts from dawn; the Vilna Gaon from sunrise)
+- Pesachim 93b (from dawn to sunrise five mil, in the name of Rabbi Yochanan)
+- Shulchan Aruch OC 459:2; Mishna Berura 459:15 (a mil = 18 minutes)
+- Shulchan Aruch OC 58:1 (hours of the day are a twelfth of the day, longer or shorter by season); here the minutes of dawn are counted the same way
+
+<a id="sofTfillaMga90z"></a>
+
+## Latest morning prayer (Magen Avraham, 90 seasonal minutes)
+
+The end of four temporal hours of the Magen Avraham's day, counted from an eighth of the sunrise-to-sunset day before sunrise to an eighth of it after sunset (90 minutes on a 12-hour day).
+
+**Sources:**
+
+- Mishna Berachot 4:1; Shulchan Aruch OC 89:1 (morning prayer until four hours)
+- Shulchan Aruch OC 58:1; Magen Avraham 58:1 (the day counted from dawn to nightfall)
+- Mishna Berura 58:4 (Magen Avraham counts from dawn; the Vilna Gaon from sunrise)
+- Pesachim 93b (from dawn to sunrise five mil, in the name of Rabbi Yochanan)
+- Shulchan Aruch OC 459:2; Mishna Berura 459:15 (a mil = 18 minutes)
+- Shulchan Aruch OC 58:1 (hours of the day are a twelfth of the day, longer or shorter by season); here the minutes of dawn are counted the same way
+
+<a id="plagMga90z"></a>
+
+## Plag hamincha (Magen Avraham, 90 seasonal minutes)
+
+10.75 temporal hours of the same Magen Avraham day as the latest Shema of this measure, counted from an eighth of the sunrise-to-sunset day before sunrise to an eighth of it after sunset (90 minutes on a 12-hour day).
+
+**Sources:**
+
+- Mishna Berachot 4:1; Shulchan Aruch OC 233:1 (plag hamincha, eleven hours less a quarter)
+- Shulchan Aruch OC 58:1; Magen Avraham 58:1 (the day counted from dawn to nightfall)
+- Pesachim 93b (from dawn to sunrise five mil, in the name of Rabbi Yochanan)
+- Shulchan Aruch OC 459:2; Mishna Berura 459:15 (a mil = 18 minutes)
+- Shulchan Aruch OC 58:1 (hours of the day are a twelfth of the day, longer or shorter by season); here the minutes of dawn are counted the same way
+
+<a id="alot72z"></a>
+
+## Dawn (72 seasonal minutes)
+
+Dawn four mil before sunrise, counted in seasonal minutes: a tenth of the sunrise-to-sunset day before sunrise.
+
+**Sources:**
+
+- Pesachim 94a (four mil according to Rabbi Yehuda)
+- Shulchan Aruch OC 459:2; Mishna Berura 459:15 (a mil = 18 minutes)
+- Shulchan Aruch OC 58:1 (hours of the day are a twelfth of the day, longer or shorter by season); here the minutes of dawn are counted the same way
+
+<a id="alot90z"></a>
+
+## Dawn (90 seasonal minutes)
+
+Dawn five mil before sunrise, counted in seasonal minutes: an eighth of the sunrise-to-sunset day before sunrise.
+
+**Sources:**
+
+- Pesachim 93b (from dawn to sunrise five mil, in the name of Rabbi Yochanan)
+- Shulchan Aruch OC 459:2; Mishna Berura 459:15 (a mil = 18 minutes)
+- Shulchan Aruch OC 58:1 (hours of the day are a twelfth of the day, longer or shorter by season); here the minutes of dawn are counted the same way
+
+<a id="tzeit90z"></a>
+
+## Nightfall (90 seasonal minutes)
+
+Nightfall five mil after sunset, counted in seasonal minutes: an eighth of the sunrise-to-sunset day after sunset.
+
+**Sources:**
+
+- Pesachim 93b (from dawn to sunrise five mil, in the name of Rabbi Yochanan)
+- Shulchan Aruch OC 459:2; Mishna Berura 459:15 (a mil = 18 minutes)
+- Shulchan Aruch OC 58:1 (hours of the day are a twelfth of the day, longer or shorter by season); here the minutes of dawn are counted the same way
+
+<a id="tzeit13p5"></a>
+
+## Nightfall (13.5 minutes)
+
+Three quarters of a mil after sunset at 18 minutes a mil, as fixed minutes: the end of twilight by the Geonim.
+
+**Sources:**
+
+- Shabbat 34b (twilight is three quarters of a mil, Rabba in the name of Shmuel)
+- Shulchan Aruch OC 261:2 (from sunset to twilight 3.25 mil; twilight three quarters of a mil)
+- Shulchan Aruch OC 459:2; Mishna Berura 459:15 (a mil = 18 minutes)
+
+<a id="tzeit18"></a>
+
+## Nightfall (18 minutes)
+
+Three quarters of a mil after sunset at 24 minutes a mil, as fixed minutes.
+
+**Sources:**
+
+- Shabbat 34b (twilight is three quarters of a mil, Rabba in the name of Shmuel)
+- Shulchan Aruch OC 261:2 (from sunset to twilight 3.25 mil; twilight three quarters of a mil)
+- Rambam, commentary on Mishna Pesachim 3:2 (a mil = two fifths of an hour, 24 minutes)
+
+<a id="tzeit20"></a>
+
+## Nightfall (20 minutes)
+
+20 fixed minutes after sunset: a margin kept by some communities for the end of Shabbat and fast days.
+
+**Sources:**
+
+- Community custom (a fixed margin after sunset; no single published source)
+- Shabbat 34b (twilight is three quarters of a mil, Rabba in the name of Shmuel)
+
+<a id="tzeit24"></a>
+
+## Nightfall (24 minutes)
+
+24 fixed minutes after sunset: a margin kept by some communities for the end of Shabbat and fast days.
+
+**Sources:**
+
+- Community custom (a fixed margin after sunset; no single published source)
+- Shabbat 34b (twilight is three quarters of a mil, Rabba in the name of Shmuel)
+
+<a id="tzeit30"></a>
+
+## Nightfall (30 minutes)
+
+30 fixed minutes after sunset: a margin kept by some communities for the end of Shabbat and fast days.
+
+**Sources:**
+
+- Community custom (a fixed margin after sunset; no single published source)
+- Shabbat 34b (twilight is three quarters of a mil, Rabba in the name of Shmuel)
+
+<a id="tzeit40"></a>
+
+## Nightfall (40 minutes)
+
+40 fixed minutes after sunset: a margin kept by some communities for the end of Shabbat and fast days.
+
+**Sources:**
+
+- Community custom (a fixed margin after sunset; no single published source)
+- Shabbat 34b (twilight is three quarters of a mil, Rabba in the name of Shmuel)
+
+<a id="tzeit50"></a>
+
+## Nightfall (50 minutes)
+
+50 fixed minutes after sunset: a margin kept by some communities for the end of Shabbat and fast days.
+
+**Sources:**
+
+- Community custom (a fixed margin after sunset; no single published source)
+- Shabbat 34b (twilight is three quarters of a mil, Rabba in the name of Shmuel)
+
+<a id="beinHashmashotRt"></a>
+
+## Start of twilight (Rabbeinu Tam)
+
+By Rabbeinu Tam twilight begins 3.25 mil after sunset, 58.5 minutes at 18 minutes a mil, and lasts three quarters of a mil until his nightfall (72 minutes). Until then it is still day.
+
+**Sources:**
+
+- Tosafot Shabbat 35a and Pesachim 94a (Rabbeinu Tam: four mil from the start of sunset to night; twilight is the last three quarters of a mil)
+- Shulchan Aruch OC 261:2 (from sunset to twilight 3.25 mil; twilight three quarters of a mil)
+- Shulchan Aruch OC 459:2; Mishna Berura 459:15 (a mil = 18 minutes)

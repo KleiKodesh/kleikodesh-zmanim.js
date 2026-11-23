@@ -68,6 +68,11 @@ Also exported: `zmanInstants` (exact instants as BigInt epoch nanoseconds), `for
 | minchaGedola / minchaKetana / plag | 6.5 / 9.5 / 10.75 temporal hours (GRA) | up |
 | minchaGedola30 | the later of 30 minutes after chatzot and minchaGedola (half a GRA temporal hour after chatzot) | up |
 | plagMga | 10.75 temporal hours of the same MGA day as sofShmaMga (72 min before sunrise .. 72 min after sunset) | up |
+| sofShmaMga90 / sofTfillaMga90 / plagMga90 | 3 / 4 / 10.75 temporal hours of the MGA day from 90 fixed min before sunrise to 90 after sunset (5 mil of 18 min: Pesachim 93b; SA OC 459:2) | down / down / up |
+| sofShmaMga120 / sofTfillaMga120 / plagMga120 | the same for a day of 120 fixed min each side (5 mil of 24 min: Pesachim 93b; Rambam on Mishna Pesachim 3:2) | down / down / up |
+| sofShmaMga19 / sofTfillaMga19 / plagMga19 | the same for the day from the sun 19.8 deg below in the morning to 19.8 deg below in the evening | down / down / up |
+| sofShmaMga72z / sofTfillaMga72z / plagMga72z | the same for the day from alot72z to tzeitRt72Zmanis (a tenth of the GRA day each side) | down / down / up |
+| sofShmaMga90z / sofTfillaMga90z / plagMga90z | the same for the day from alot90z to tzeit90z (an eighth of the GRA day each side) | down / down / up |
 | sunsetTerrain | the sun's upper limb sinks below the real terrain horizon at its azimuth (horizon-NN.bin; null without data) | down |
 | sunset | sea-level sunset | down |
 | candles40 / candles30 / candles22 / candles20 / candles18 | candle lighting 40 / 30 / 22 / 20 / 18 minutes before sea-level sunset, by community custom (adding to Shabbat before sunset: SA OC 261:2) | down |
@@ -80,6 +85,11 @@ Also exported: `zmanInstants` (exact instants as BigInt epoch nanoseconds), `for
 | tzeitRt72 | Rabbeinu Tam: 72 fixed minutes after sunset (4 mil of 18 min; Tosafot Shabbat 35a, from Pesachim 94a; SA OC 261:2 with Rema) | up |
 | tzeitRt72Zmanis | Rabbeinu Tam in seasonal minutes: sunset plus a tenth of the sunrise..sunset day | up |
 | tzeitRt16 | Rabbeinu Tam by degrees: sun 16.1 deg below, evening (the depth 72 minutes after sunset at the Jerusalem equinox) | up |
+| alot72z / alot90z | dawn in seasonal minutes: a tenth / an eighth of the sunrise..sunset day before sunrise (4 mil, Pesachim 94a; 5 mil, Pesachim 93b) | up |
+| tzeit90z | nightfall in seasonal minutes: an eighth of the sunrise..sunset day after sunset (5 mil, Pesachim 93b) | up |
+| tzeit13p5 / tzeit18 | 13.5 / 18 fixed minutes after sunset: 3/4 mil (Shabbat 34b; SA OC 261:2) at 18 / 24 min a mil (SA OC 459:2; Rambam on Mishna Pesachim 3:2) | up |
+| tzeit20 / tzeit24 / tzeit30 / tzeit40 / tzeit50 | 20 / 24 / 30 / 40 / 50 fixed minutes after sunset, by community custom | up |
+| beinHashmashotRt | start of twilight per Rabbeinu Tam: sunset + 58.5 min (3.25 mil of 18 min; Tosafot Shabbat 35a, Pesachim 94a; SA OC 261:2). Twilight ends at tzeitRt72; by the Geonim it is sunset..tzeitGeonim | down |
 
 Degree lines return null on days the sun never gets that low (high latitudes in summer); no rule is invented for
 them, except the explicit `...Chatzot` fallback lines:

@@ -93,3 +93,40 @@ describe('candle lighting and Rabbeinu Tam', () => {
     expect(ROUNDING.candles18).toBe('down'); expect(ROUNDING.tzeitRt72).toBe('up')
   })
 })
+
+describe('more MGA days, seasonal and fixed-minute lines', () => {
+  it('are in order and at the right offsets', async () => {
+    useFileAssets()
+    const p = await getPlace(1)
+    for (const date of [{ year: 2026, month: 3, day: 20 }, { year: 2026, month: 6, day: 21 }, { year: 2026, month: 12, day: 21 }]) {
+      const t = zmanInstants(p, date)
+      const M = 60000
+      const day = ms(t.sunset) - ms(t.sunrise)
+      for (const [n, m] of [['tzeit13p5', 13.5], ['tzeit18', 18], ['tzeit20', 20], ['tzeit24', 24], ['tzeit30', 30], ['tzeit40', 40],
+        ['tzeit50', 50], ['beinHashmashotRt', 58.5]] as const) expect(ms(t[n]) - ms(t.sunset), n).toBe(m * M)
+      expect(ms(t.sunrise) - ms(t.alot72z)).toBeCloseTo(day / 10, -1)
+      expect(ms(t.sunrise) - ms(t.alot90z)).toBeCloseTo(day / 8, -1)
+      expect(ms(t.tzeit90z) - ms(t.sunset)).toBeCloseTo(day / 8, -1)
+      // Fixed-minute MGA days: the shaah is (day + 2x) / 12, counted from sunrise - x.
+      for (const [suf, x] of [['90', 90], ['120', 120]] as const) {
+        const start = ms(t.sunrise) - x * M, h = (day + 2 * x * M) / 12
+        expect(ms(t[`sofShmaMga${suf}`]) - start).toBeCloseTo(3 * h, -1)
+        expect(ms(t[`sofTfillaMga${suf}`]) - start).toBeCloseTo(4 * h, -1)
+        expect(ms(t[`plagMga${suf}`]) - start).toBeCloseTo(10.75 * h, -1)
+      }
+      // Longer MGA day = earlier deadlines and later plag; seasonal 72z matches the 72 fixed day at a 12-hour day.
+      expect(ms(t.sofShmaMga120)).toBeLessThan(ms(t.sofShmaMga90))
+      expect(ms(t.sofShmaMga90)).toBeLessThan(ms(t.sofShmaMga))
+      expect(ms(t.sofShmaMga90z)).toBeLessThan(ms(t.sofShmaMga72z))
+      expect(ms(t.sofShmaMga72z)).toBeLessThan(ms(t.sofShmaGra))
+      expect(ms(t.sofShmaMga19)).toBeLessThan(ms(t.sofShmaGra))
+      expect(ms(t.plagMga120)).toBeGreaterThan(ms(t.plagMga90))
+      expect(ms(t.plagMga90)).toBeGreaterThan(ms(t.plag))
+      expect(ms(t.plagMga19)).toBeGreaterThan(ms(t.plag))
+      expect(ms(t.tzeitRt72Zmanis) - ms(t.plagMga72z)).toBeCloseTo((ms(t.tzeitRt72Zmanis) - ms(t.alot72z)) / 12 * 1.25, -1)
+      expect(ms(t.beinHashmashotRt)).toBeLessThan(ms(t.tzeitRt72))
+    }
+    for (const n of ['sofShmaMga90', 'sofTfillaMga120', 'sofShmaMga19', 'sofShmaMga72z', 'beinHashmashotRt'] as const) expect(ROUNDING[n]).toBe('down')
+    for (const n of ['plagMga90', 'alot72z', 'alot90z', 'tzeit90z', 'tzeit13p5', 'tzeit50'] as const) expect(ROUNDING[n]).toBe('up')
+  })
+})

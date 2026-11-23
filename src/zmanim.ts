@@ -6,13 +6,14 @@ import { julianDayFromUtcMs, spa, spaDay, spaEvent, zenithToH0, type SpaDay } fr
 
 /** Every zman the library computes, in the order of the day. Each is computed only when requested. */
 export const ZMAN_NAMES = [
-  'chatzotNight', 'alot90Visible', 'alot90', 'alot90Chatzot', 'alotVisible', 'alot', 'alotChatzot', 'misheyakirVisible',
+  'chatzotNight', 'alot90Visible', 'alot90', 'alot90Chatzot', 'alot90z', 'alotVisible', 'alot', 'alotChatzot', 'alot72z', 'misheyakirVisible',
   'misheyakir', 'misheyakirChatzot', 'misheyakir11', 'misheyakir10p2', 'sunriseElevated', 'sunrise', 'sunriseTerrain',
-  'sofShmaMga', 'sofShmaMga16', 'sofShmaGra', 'sofTfillaMga', 'sofTfillaMga16', 'sofTfillaGra',
-  'chatzot', 'minchaGedola', 'minchaGedola30', 'minchaKetana', 'plag', 'plagMga',
+  'sofShmaMga120', 'sofShmaMga90', 'sofShmaMga19', 'sofShmaMga90z', 'sofShmaMga', 'sofShmaMga16', 'sofShmaMga72z', 'sofShmaGra',
+  'sofTfillaMga120', 'sofTfillaMga90', 'sofTfillaMga19', 'sofTfillaMga90z', 'sofTfillaMga', 'sofTfillaMga16', 'sofTfillaMga72z', 'sofTfillaGra',
+  'chatzot', 'minchaGedola', 'minchaGedola30', 'minchaKetana', 'plag', 'plagMga', 'plagMga72z', 'plagMga19', 'plagMga90z', 'plagMga90', 'plagMga120',
   'candles40', 'candles30', 'candles22', 'candles20', 'candles18', 'sunsetTerrain', 'sunset', 'sunsetElevated',
-  'tzeitGeonim', 'tzeitGeonimVisible', 'tzeit7083', 'tzeit', 'tzeitVisible',
-  'tzeitRt72', 'tzeitRt72Zmanis', 'tzeitRt16',
+  'tzeitGeonim', 'tzeitGeonimVisible', 'tzeit13p5', 'tzeit18', 'tzeit20', 'tzeit7083', 'tzeit', 'tzeitVisible', 'tzeit24', 'tzeit30',
+  'tzeit40', 'tzeit50', 'beinHashmashotRt', 'tzeitRt72', 'tzeitRt72Zmanis', 'tzeitRt16', 'tzeit90z',
 ] as const
 
 export type ZmanName = typeof ZMAN_NAMES[number]
@@ -31,6 +32,13 @@ export const ROUNDING: Readonly<Record<ZmanName, Rounding>> = {
   sunset: 'down', sunsetElevated: 'down', sunsetTerrain: 'down', tzeitGeonim: 'up', tzeitGeonimVisible: 'up', tzeit7083: 'up', tzeit: 'up', tzeitVisible: 'up',
   candles40: 'down', candles30: 'down', candles22: 'down', candles20: 'down', candles18: 'down',
   tzeitRt72: 'up', tzeitRt72Zmanis: 'up', tzeitRt16: 'up',
+  alot90z: 'up', alot72z: 'up', tzeit90z: 'up',
+  sofShmaMga120: 'down', sofShmaMga90: 'down', sofShmaMga19: 'down', sofShmaMga90z: 'down', sofShmaMga72z: 'down',
+  sofTfillaMga120: 'down', sofTfillaMga90: 'down', sofTfillaMga19: 'down', sofTfillaMga90z: 'down', sofTfillaMga72z: 'down',
+  plagMga120: 'up', plagMga90: 'up', plagMga19: 'up', plagMga90z: 'up', plagMga72z: 'up',
+  tzeit13p5: 'up', tzeit18: 'up', tzeit20: 'up', tzeit24: 'up', tzeit30: 'up', tzeit40: 'up', tzeit50: 'up',
+  // The start of Rabbeinu Tam's twilight ends the time that is surely day (work before Shabbat): a deadline.
+  beinHashmashotRt: 'down',
 }
 
 /**
@@ -40,7 +48,10 @@ export const ROUNDING: Readonly<Record<ZmanName, Rounding>> = {
 export const HORIZON_ZMANIM: ReadonlySet<ZmanName> = new Set<ZmanName>(['sunrise', 'sunset', 'sunriseElevated', 'sunsetElevated',
   'sofShmaMga', 'sofShmaGra', 'sofTfillaMga', 'sofTfillaGra', 'minchaGedola', 'minchaGedola30', 'minchaKetana', 'plag', 'plagMga',
   'alot90Visible', 'alotVisible', 'misheyakirVisible', 'tzeitGeonimVisible', 'tzeitVisible',
-  'candles40', 'candles30', 'candles22', 'candles20', 'candles18', 'tzeitRt72', 'tzeitRt72Zmanis', 'sunriseTerrain', 'sunsetTerrain'])
+  'candles40', 'candles30', 'candles22', 'candles20', 'candles18', 'tzeitRt72', 'tzeitRt72Zmanis', 'sunriseTerrain', 'sunsetTerrain',
+  'alot90z', 'alot72z', 'tzeit90z', 'sofShmaMga120', 'sofShmaMga90', 'sofShmaMga90z', 'sofShmaMga72z', 'sofTfillaMga120', 'sofTfillaMga90',
+  'sofTfillaMga90z', 'sofTfillaMga72z', 'plagMga120', 'plagMga90', 'plagMga90z', 'plagMga72z',
+  'tzeit13p5', 'tzeit18', 'tzeit20', 'tzeit24', 'tzeit30', 'tzeit40', 'tzeit50', 'beinHashmashotRt'])
 
 /** Zmanim that need the place's terrain horizon (Coordinates.terrainHorizon); null without it. */
 export const TERRAIN_ZMANIM: ReadonlySet<ZmanName> = new Set<ZmanName>(['sunriseTerrain', 'sunsetTerrain'])
@@ -276,6 +287,22 @@ class Day {
     return Day.shaahBased(this.sunrise() - 72 * MINUTE_MS, this.sunset() + 72 * MINUTE_MS, hours)
   }
 
+  /** MGA day of [before] fixed minutes before sea-level sunrise to as many after sea-level sunset. */
+  mgaFixed(before: number, hours: number): number {
+    return Day.shaahBased(this.sunrise() - before * MINUTE_MS, this.sunset() + before * MINUTE_MS, hours)
+  }
+
+  /** MGA day in seasonal minutes: [part] of the sunrise..sunset day before sunrise and after sunset (1/10 = 72z, 1/8 = 90z). */
+  mgaSeasonal(part: number, hours: number): number {
+    const p = 12 * part
+    return Day.shaahBased(this.gra(-p), this.gra(12 + p), hours)
+  }
+
+  /** MGA day by 19.8 deg: from alot90 to the sun 19.8 deg below in the evening. */
+  mga19(hours: number): number {
+    return Day.shaahBased(this.rise(GEOMETRIC_ZENITH + ALOT_90), this.set(GEOMETRIC_ZENITH + ALOT_90), hours)
+  }
+
   /** MGA day by degrees: from alot (16.1 deg) to tzeit at 16.1 deg in the evening. */
   mga16(hours: number): number {
     return Day.shaahBased(this.rise(GEOMETRIC_ZENITH + ALOT), this.set(GEOMETRIC_ZENITH + ALOT), hours)
@@ -351,6 +378,37 @@ export function zmanInstants(place: Coordinates, date: CivilDate, which: readonl
       case 'tzeitRt72Zmanis': ms = today.gra(13.2); break
       // The same by degrees: the sun 16.1 deg below, its depth 72 minutes after sunset at the Jerusalem equinox.
       case 'tzeitRt16': ms = today.set(G + ALOT); break
+      // Other measures of the Magen Avraham's dawn-to-nightfall day: 90 / 120 fixed minutes (5 mil of 18 min; 5 mil of
+      // 24 min, Pesachim 93b, Rambam on Mishna Pesachim 3:2), 19.8 deg, and 72 / 90 seasonal minutes (1/10, 1/8 of the GRA day).
+      case 'sofShmaMga120': ms = today.mgaFixed(120, 3); break
+      case 'sofTfillaMga120': ms = today.mgaFixed(120, 4); break
+      case 'plagMga120': ms = today.mgaFixed(120, 10.75); break
+      case 'sofShmaMga90': ms = today.mgaFixed(90, 3); break
+      case 'sofTfillaMga90': ms = today.mgaFixed(90, 4); break
+      case 'plagMga90': ms = today.mgaFixed(90, 10.75); break
+      case 'sofShmaMga19': ms = today.mga19(3); break
+      case 'sofTfillaMga19': ms = today.mga19(4); break
+      case 'plagMga19': ms = today.mga19(10.75); break
+      case 'sofShmaMga90z': ms = today.mgaSeasonal(1 / 8, 3); break
+      case 'sofTfillaMga90z': ms = today.mgaSeasonal(1 / 8, 4); break
+      case 'plagMga90z': ms = today.mgaSeasonal(1 / 8, 10.75); break
+      case 'sofShmaMga72z': ms = today.mgaSeasonal(1 / 10, 3); break
+      case 'sofTfillaMga72z': ms = today.mgaSeasonal(1 / 10, 4); break
+      case 'plagMga72z': ms = today.mgaSeasonal(1 / 10, 10.75); break
+      // Seasonal-minute dawn and nightfall: a tenth (72) or an eighth (90) of the sunrise..sunset day.
+      case 'alot72z': ms = today.gra(-1.2); break
+      case 'alot90z': ms = today.gra(-1.5); break
+      case 'tzeit90z': ms = today.gra(13.5); break
+      // Nightfall in fixed minutes after sunset (13.5 = 3/4 mil of 18; 18 = 3/4 mil of 24; the rest community customs).
+      case 'tzeit13p5': ms = today.sunset() + 13.5 * MINUTE_MS; break
+      case 'tzeit18': ms = today.sunset() + 18 * MINUTE_MS; break
+      case 'tzeit20': ms = today.sunset() + 20 * MINUTE_MS; break
+      case 'tzeit24': ms = today.sunset() + 24 * MINUTE_MS; break
+      case 'tzeit30': ms = today.sunset() + 30 * MINUTE_MS; break
+      case 'tzeit40': ms = today.sunset() + 40 * MINUTE_MS; break
+      case 'tzeit50': ms = today.sunset() + 50 * MINUTE_MS; break
+      // Rabbeinu Tam: twilight starts 3.25 mil after sunset (4 mil less its last 3/4 mil; SA OC 261:2), 58.5 min.
+      case 'beinHashmashotRt': ms = today.sunset() + 58.5 * MINUTE_MS; break
       default: throw new Error(`Unknown zman '${String(name)}'`)
     }
     out[name] = toNs(ms)
