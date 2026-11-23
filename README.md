@@ -82,6 +82,9 @@ Sizes: names-he 9074 B, names-en 9322 B, places.bin 6215 B, tz.json 1028 B, clim
 `data/climate.tsv` (id, 12 monthly means, 0.1 C) is made once by `node scripts/fetch-climate.mjs`: mean of the
 daily mean 2 m temperature 2016-2025 from the Open-Meteo Historical Weather API at each place's elevation
 (sequential, paused, resumable). It is not refetched by the normal build.
+Known gap: the fetch stopped at the Open-Meteo hourly limit, so only ids 1-190 have temperatures; the other places
+(-128 in climate.bin) use the standard-atmosphere temperature until `node scripts/fetch-climate.mjs` is rerun
+(it resumes from the rows already in data/climate.tsv) and the assets are rebuilt.
 
 `scripts/import-from-app.mjs` created places.tsv from the app's city list once; edit the TSV from now on.
 
