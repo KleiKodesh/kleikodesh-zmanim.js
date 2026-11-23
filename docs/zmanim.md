@@ -26,6 +26,8 @@ The first light of morning, by the longer measure of the time from dawn to sunri
 - Shulchan Aruch OC 459:2; Mishna Berura 459:15 (a mil = 18 minutes; 5 mil = 90 minutes)
 - Biur HaGra OC 261:2 (citing Rambam and Ibn Ezra: twilight is 20 degrees)
 - Astronomy: in Jerusalem at the equinox the sun is 19.8 degrees below the horizon about 90 minutes before sunrise
+- Birur Zmanim vol 1 p.66 (90 min is about 19.75 deg)
+- Bein Hashmashot (R. Y. M. Tukachinsky) p.105 (dawn an hour and a half before sunrise)
 
 <a id="alot90Visible"></a>
 
@@ -38,6 +40,8 @@ Like the 90-minute dawn (19.8 degrees), but the degrees are measured from the vi
 - Pesachim 94a
 - Shulchan Aruch OC 459:2; Mishna Berura 459:15
 - Astronomy: horizon refraction from the place's air pressure and temperature (Meeus, Astronomical Algorithms, ch. 16)
+- Birur Zmanim vol 1 p.66 (90 min is about 19.75 deg)
+- Bein Hashmashot (R. Y. M. Tukachinsky) p.105 (dawn an hour and a half before sunrise)
 
 <a id="alot90Chatzot"></a>
 
@@ -49,6 +53,8 @@ The 90-minute dawn (19.8 degrees). On summer nights in northern lands where the 
 
 - Pesachim 94a
 - Biur HaGra OC 261:2 (in northern lands dawn begins in summer at midnight)
+- Birur Zmanim vol 1 p.66 (90 min is about 19.75 deg)
+- Bein Hashmashot (R. Y. M. Tukachinsky) p.105 (dawn an hour and a half before sunrise)
 
 <a id="alot"></a>
 
@@ -62,6 +68,7 @@ The first light in the east. From this time one fulfils, after the fact, the mor
 - Shulchan Aruch OC 459:2; Mishna Berura 459:15 (a mil = 18 minutes)
 - Shulchan Aruch OC 89:1; Mishna Berura 89:2 (what dawn is; prayer from dawn after the fact)
 - Astronomy: in Jerusalem at the equinox the sun is 16.1 degrees below the horizon 72 minutes before sunrise
+- Birur Zmanim vol 1 p.66 (72 min in Eretz Yisrael at the equinox is about 16 deg)
 
 <a id="alotVisible"></a>
 
@@ -74,6 +81,7 @@ Like dawn (16.1 degrees), but the degrees are measured from the visible horizon,
 - Pesachim 94a
 - Shulchan Aruch OC 89:1
 - Astronomy: horizon refraction from the place's air pressure and temperature (Meeus, Astronomical Algorithms, ch. 16)
+- Birur Zmanim vol 1 p.66 (72 min in Eretz Yisrael at the equinox is about 16 deg)
 
 <a id="alotChatzot"></a>
 
@@ -85,6 +93,7 @@ Dawn (16.1 degrees). On summer nights in northern lands where the sun never gets
 
 - Pesachim 94a
 - Biur HaGra OC 261:2 (in northern lands dawn begins in summer at midnight)
+- Birur Zmanim vol 1 p.66 (72 min in Eretz Yisrael at the equinox is about 16 deg)
 
 <a id="misheyakir"></a>
 
@@ -156,6 +165,7 @@ Sunrise as seen from the place's own height: from a mountain or a high building 
 - Shulchan Aruch OC 58:1 (the vasikin finish Shema at sunrise)
 - Shulchan Aruch OC 89:1 (the morning prayer is ideally at sunrise)
 - Astronomy: horizon dip arccos(R/(R+h)) and refraction (Meeus, Astronomical Algorithms, ch. 16)
+- Bein Hashmashot (R. Y. M. Tukachinsky) p.105 (on Mount Carmel sunrise under 3 min earlier, sunset 2-3 min later)
 
 <a id="sunrise"></a>
 
@@ -195,6 +205,7 @@ The morning Shema may be read until the end of three temporal hours. By the Mage
 - Magen Avraham 58:1 (counted from dawn)
 - Mishna Berura 58:4 (Magen Avraham counts from dawn; the Vilna Gaon from sunrise)
 - Pesachim 94a; Shulchan Aruch OC 459:2 (four mil of 18 minutes = 72 minutes)
+- Birur Zmanim vol 2 p.209-239 (calendars set dawn at 90 min; MGA hours run dawn to nightfall)
 
 <a id="sofShmaMga16"></a>
 
@@ -209,6 +220,7 @@ Like the Magen Avraham's latest Shema, but the day is measured by degrees: from 
 - Magen Avraham 58:1
 - Mishna Berura 58:4
 - Astronomy: 16.1 degrees = 72 minutes in Jerusalem at the equinox
+- Birur Zmanim vol 1 p.66 (72 min in Eretz Yisrael at the equinox is about 16 deg)
 
 <a id="sofShmaGra"></a>
 
@@ -236,6 +248,7 @@ The morning prayer may be said until the end of four temporal hours. By the Mage
 - Magen Avraham 58:1
 - Mishna Berura 58:4
 - Pesachim 94a; Shulchan Aruch OC 459:2
+- Birur Zmanim vol 2 p.209-239 (calendars set dawn at 90 min; MGA hours run dawn to nightfall)
 
 <a id="sofTfillaMga16"></a>
 
@@ -249,6 +262,7 @@ Four temporal hours of a day measured by degrees: from the sun 16.1 degrees belo
 - Shulchan Aruch OC 89:1
 - Magen Avraham 58:1
 - Astronomy: 16.1 degrees = 72 minutes in Jerusalem at the equinox
+- Birur Zmanim vol 1 p.66 (72 min in Eretz Yisrael at the equinox is about 16 deg)
 
 <a id="sofTfillaGra"></a>
 
@@ -322,6 +336,8 @@ One and a quarter temporal hours before the end of the day: 10.75 temporal hours
 - Shulchan Aruch OC 233:1 (plag hamincha is eleven hours less a quarter)
 - Rambam, Hilchot Tefilla 3:4 (until an hour and a quarter of the day remains)
 - Rema OC 261:2 (accepting Shabbos from plag hamincha)
+- Birur Zmanim vol 1 p.320-321 (plag 1.25 hours before the end of the day)
+- Birur Zmanim vol 2 p.257-268 (plag and the end of mincha)
 
 <a id="plagMga"></a>
 
@@ -334,6 +350,7 @@ Plag hamincha (10.75 temporal hours) of the same day as the Magen Avraham's late
 - Mishna Berachot 4:1
 - Shulchan Aruch OC 233:1
 - Magen Avraham 58:1 (counting from dawn; see siman 233)
+- Birur Zmanim vol 2 p.209-239 (calendars set dawn at 90 min; MGA hours run dawn to nightfall)
 
 <a id="sunsetTerrain"></a>
 
@@ -371,6 +388,7 @@ Sunset as seen from the place's own height: from a mountain or a high building t
 - Shabbat 34b
 - Shulchan Aruch OC 261:2
 - Astronomy: horizon dip arccos(R/(R+h)) and refraction (Meeus, Astronomical Algorithms, ch. 16)
+- Bein Hashmashot (R. Y. M. Tukachinsky) p.105 (on Mount Carmel sunrise under 3 min earlier, sunset 2-3 min later)
 
 <a id="tzeitGeonim"></a>
 
@@ -385,6 +403,7 @@ The end of twilight by the Geonim: three quarters of a mil after sunset, about 1
 - Biur HaGra OC 261:2 (three quarters of a mil on the horizon of Babylon at the equinox)
 - Shulchan Aruch OC 459:2 (a mil = 18 minutes)
 - Astronomy: 3.7 degrees = 13.5 minutes in Jerusalem at the equinox
+- Birur Zmanim vol 2 p.11-14 (Rabbeinu Tam per the Minchat Kohen: nightfall when three stars are seen)
 
 <a id="tzeitGeonimVisible"></a>
 
@@ -497,6 +516,8 @@ Nightfall according to Rabbeinu Tam: four mil after sunset, at 18 minutes a mil,
 
 - Tosafot Shabbat 35a (four mil from sunset to the stars, based on Pesachim 94a)
 - Shulchan Aruch OC 261:2 with Rema
+- Birur Zmanim vol 2 p.33-35 (mil of 18 (Gra), 22.5 (most Rishonim), 24 (Rambam))
+- Bein Hashmashot (R. Y. M. Tukachinsky) p.18-19 (three views of a mil: 18, 22.5, 24 min)
 
 <a id="tzeitRt72Zmanis"></a>
 
@@ -519,6 +540,7 @@ The sun 16.1 degrees below the horizon in the evening, its depth 72 minutes afte
 
 - Tosafot Shabbat 35a
 - Shulchan Aruch OC 261:2 with Rema
+- Birur Zmanim vol 1 p.66 (72 min in Eretz Yisrael at the equinox is about 16 deg)
 
 <a id="tzeitRt90"></a>
 
@@ -531,6 +553,8 @@ Four mil after sunset at 22.5 minutes a mil, as 90 fixed minutes.
 - Tosafot Shabbat 35a
 - Shulchan Aruch OC 261:2
 - Igrot Moshe OC 4:62
+- Birur Zmanim vol 2 p.33-35 (mil of 18 (Gra), 22.5 (most Rishonim), 24 (Rambam))
+- Bein Hashmashot (R. Y. M. Tukachinsky) p.18-19 (three views of a mil: 18, 22.5, 24 min)
 
 <a id="tzeitRt96"></a>
 
@@ -543,6 +567,8 @@ Four mil after sunset at 24 minutes a mil, as 96 fixed minutes. The Shulchan Aru
 - Shulchan Aruch HaRav OC 261:5
 - Shulchan Aruch HaRav OC 459:10 (24-minute mil the main view)
 - Igrot Moshe OC 4:62 (strictest 96)
+- Birur Zmanim vol 2 p.33-35 (mil of 18 (Gra), 22.5 (most Rishonim), 24 (Rambam))
+- Bein Hashmashot (R. Y. M. Tukachinsky) p.18-19 (three views of a mil: 18, 22.5, 24 min)
 
 <a id="sofShmaMga19"></a>
 
@@ -558,6 +584,8 @@ The end of three temporal hours of the Magen Avraham's day, counted from the sun
 - Pesachim 93b (from dawn to sunrise five mil, in the name of Rabbi Yochanan)
 - Shulchan Aruch OC 459:2; Mishna Berura 459:15 (a mil = 18 minutes)
 - Astronomy: in Jerusalem at the equinox the sun is 19.8 degrees below the horizon about 90 minutes before sunrise
+- Birur Zmanim vol 1 p.66 (90 min is about 19.75 deg)
+- Bein Hashmashot (R. Y. M. Tukachinsky) p.105 (dawn an hour and a half before sunrise)
 
 <a id="sofTfillaMga19"></a>
 
@@ -573,6 +601,8 @@ The end of four temporal hours of the Magen Avraham's day, counted from the sun 
 - Pesachim 93b (from dawn to sunrise five mil, in the name of Rabbi Yochanan)
 - Shulchan Aruch OC 459:2; Mishna Berura 459:15 (a mil = 18 minutes)
 - Astronomy: in Jerusalem at the equinox the sun is 19.8 degrees below the horizon about 90 minutes before sunrise
+- Birur Zmanim vol 1 p.66 (90 min is about 19.75 deg)
+- Bein Hashmashot (R. Y. M. Tukachinsky) p.105 (dawn an hour and a half before sunrise)
 
 <a id="plagMga19"></a>
 
@@ -587,6 +617,8 @@ The end of four temporal hours of the Magen Avraham's day, counted from the sun 
 - Pesachim 93b (from dawn to sunrise five mil, in the name of Rabbi Yochanan)
 - Shulchan Aruch OC 459:2; Mishna Berura 459:15 (a mil = 18 minutes)
 - Astronomy: in Jerusalem at the equinox the sun is 19.8 degrees below the horizon about 90 minutes before sunrise
+- Birur Zmanim vol 1 p.66 (90 min is about 19.75 deg)
+- Bein Hashmashot (R. Y. M. Tukachinsky) p.105 (dawn an hour and a half before sunrise)
 
 <a id="sofShmaMga90"></a>
 
@@ -601,6 +633,7 @@ The end of three temporal hours of the Magen Avraham's day, counted from 90 fixe
 - Mishna Berura 58:4 (Magen Avraham counts from dawn; the Vilna Gaon from sunrise)
 - Pesachim 93b (from dawn to sunrise five mil, in the name of Rabbi Yochanan)
 - Shulchan Aruch OC 459:2; Mishna Berura 459:15 (a mil = 18 minutes)
+- Birur Zmanim vol 2 p.209-239 (calendars set dawn at 90 min; MGA hours run dawn to nightfall)
 
 <a id="sofTfillaMga90"></a>
 
@@ -615,6 +648,7 @@ The end of four temporal hours of the Magen Avraham's day, counted from 90 fixed
 - Mishna Berura 58:4 (Magen Avraham counts from dawn; the Vilna Gaon from sunrise)
 - Pesachim 93b (from dawn to sunrise five mil, in the name of Rabbi Yochanan)
 - Shulchan Aruch OC 459:2; Mishna Berura 459:15 (a mil = 18 minutes)
+- Birur Zmanim vol 2 p.209-239 (calendars set dawn at 90 min; MGA hours run dawn to nightfall)
 
 <a id="plagMga90"></a>
 
@@ -628,6 +662,7 @@ The end of four temporal hours of the Magen Avraham's day, counted from 90 fixed
 - Shulchan Aruch OC 58:1; Magen Avraham 58:1 (the day counted from dawn to nightfall)
 - Pesachim 93b (from dawn to sunrise five mil, in the name of Rabbi Yochanan)
 - Shulchan Aruch OC 459:2; Mishna Berura 459:15 (a mil = 18 minutes)
+- Birur Zmanim vol 2 p.209-239 (calendars set dawn at 90 min; MGA hours run dawn to nightfall)
 
 <a id="sofShmaMga120"></a>
 
@@ -682,6 +717,7 @@ Ten and three-quarter seasonal hours of a day counted from dawn (90 minutes) to 
 - Magen Avraham 58:1 (the day counted from dawn to nightfall)
 - Shulchan Aruch OC 233:1
 - Birur Halacha, Yoreh De'ah 262 (nightfall at 6.45 deg)
+- Bein Hashmashot (R. Y. M. Tukachinsky) p.105 (dawn an hour and a half before sunrise)
 
 <a id="plagAlot72Tzeit645"></a>
 
@@ -695,6 +731,7 @@ Ten and three-quarter seasonal hours of a day counted from dawn (72 minutes) to 
 - Magen Avraham 58:1 (the day counted from dawn to nightfall)
 - Shulchan Aruch OC 233:1
 - Birur Halacha, Yoreh De'ah 262 (nightfall at 6.45 deg)
+- Bein Hashmashot (R. Y. M. Tukachinsky) p.50, 67, 72 (three medium stars in Jerusalem 22-28 min, average 25)
 
 <a id="sofShmaMga72z"></a>
 
@@ -806,6 +843,8 @@ Four mil before sunrise at 24 minutes a mil, per the Shulchan Aruch HaRav.
 
 - Shulchan Aruch HaRav OC 89:1 (dawn 4 mil before netz)
 - Shulchan Aruch HaRav OC 459:10 (a mil of 24 minutes is the main view)
+- Birur Zmanim vol 2 p.33-35 (mil of 18 (Gra), 22.5 (most Rishonim), 24 (Rambam))
+- Bein Hashmashot (R. Y. M. Tukachinsky) p.18-19 (three views of a mil: 18, 22.5, 24 min)
 
 <a id="alot120"></a>
 
@@ -817,6 +856,8 @@ Five mil before sunrise at 24 minutes a mil; one reading of the Shulchan Aruch H
 
 - Pesachim 93b (five mil)
 - HaMichlol, "Alot HaShachar", note 3
+- Birur Zmanim vol 2 p.33-35 (mil of 18 (Gra), 22.5 (most Rishonim), 24 (Rambam))
+- Bein Hashmashot (R. Y. M. Tukachinsky) p.18-19 (three views of a mil: 18, 22.5, 24 min)
 
 <a id="alot90z"></a>
 
@@ -853,6 +894,8 @@ Three quarters of a mil after sunset at 18 minutes a mil, as fixed minutes: the 
 - Shabbat 34b (twilight is three quarters of a mil, Rabba in the name of Shmuel)
 - Shulchan Aruch OC 261:2 (from sunset to twilight 3.25 mil; twilight three quarters of a mil)
 - Shulchan Aruch OC 459:2; Mishna Berura 459:15 (a mil = 18 minutes)
+- Birur Zmanim vol 2 p.33-35 (mil of 18 (Gra), 22.5 (most Rishonim), 24 (Rambam))
+- Bein Hashmashot (R. Y. M. Tukachinsky) p.18-19 (three views of a mil: 18, 22.5, 24 min)
 
 <a id="tzeit18"></a>
 
@@ -865,6 +908,7 @@ Three quarters of a mil after sunset at 24 minutes a mil, as fixed minutes.
 - Shabbat 34b (twilight is three quarters of a mil, Rabba in the name of Shmuel)
 - Shulchan Aruch OC 261:2 (from sunset to twilight 3.25 mil; twilight three quarters of a mil)
 - Rambam, commentary on Mishna Pesachim 3:2 (a mil = two fifths of an hour, 24 minutes)
+- Bein Hashmashot (R. Y. M. Tukachinsky) p.71-72 (in Jerusalem maariv 17-18 min after sunset, per R. Shmuel Salant)
 
 <a id="tzeit18Sun"></a>
 
@@ -877,6 +921,7 @@ Three quarters of a mil after sunset at 24 minutes a mil, measured by the sun's 
 - Shabbat 34b (twilight is three quarters of a mil, Rabba in the name of Shmuel)
 - Shulchan Aruch OC 261:2
 - Rambam, commentary on Mishna Pesachim 3:2 (a mil = two fifths of an hour, 24 minutes)
+- Bein Hashmashot (R. Y. M. Tukachinsky) p.71-72 (in Jerusalem maariv 17-18 min after sunset, per R. Shmuel Salant)
 
 <a id="tzeit20"></a>
 
@@ -899,6 +944,7 @@ Nightfall by Rav Yechiel Michel Tucazinsky's calculation: the sun 6.45 degrees b
 
 - Birur Halacha, Yoreh De'ah 262 (Rav Y. M. Tucazinsky's nightfall, the sun 6.45 deg below the horizon), https://hebrewbooks.org/pdfpager.aspx?req=50536&st=&pgnum=51
 - Shabbat 35b (three medium stars)
+- Bein Hashmashot (R. Y. M. Tukachinsky) p.50, 67, 72 (three medium stars in Jerusalem 22-28 min, average 25)
 
 <a id="tzeit24"></a>
 
@@ -932,6 +978,7 @@ Nightfall by Rav Yechiel Michel Tucazinsky's calculation: the sun 6.45 degrees b
 
 - Community custom (a fixed margin after sunset; no single published source)
 - Shabbat 34b (twilight is three quarters of a mil, Rabba in the name of Shmuel)
+- Birur Zmanim vol 2 p.18 (Chazon Ish: Yom Kippur ends 40 min, Shabbat 45, a brit 35)
 
 <a id="tzeit50"></a>
 
@@ -967,6 +1014,8 @@ By the Yereim, bein hashmashot begins three quarters of a mil (18 minutes, at 24
 - Sefer Yereim (Rabbi Eliezer of Metz): bein hashmashot is the 3/4 mil before sunset
 - Shabbat 34b (bein hashmashot is three quarters of a mil)
 - , Zmanei HaHalacha Lema'aseh p. 11 (the degree-based Yereim calculation)
+- Bein Hashmashot (R. Y. M. Tukachinsky) p.33 (Yereim: bein hashmashot is before sunset)
+- Birur Zmanim vol 2 pp.228-231 (the Yereim view and those strict for it)
 
 <a id="beinHashmashotRt"></a>
 
@@ -979,6 +1028,7 @@ By Rabbeinu Tam twilight begins 3.25 mil after sunset, 58.5 minutes at 18 minute
 - Tosafot Shabbat 35a and Pesachim 94a (Rabbeinu Tam: four mil from the start of sunset to night; twilight is the last three quarters of a mil)
 - Shulchan Aruch OC 261:2 (from sunset to twilight 3.25 mil; twilight three quarters of a mil)
 - Shulchan Aruch OC 459:2; Mishna Berura 459:15 (a mil = 18 minutes)
+- Birur Zmanim vol 2 p.11-14 (Rabbeinu Tam per the Minchat Kohen: nightfall when three stars are seen)
 
 <a id="sofAchilatChametzMga"></a>
 

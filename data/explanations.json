@@ -27,7 +27,9 @@
         "פסחים צד ע״א (מעלות השחר ועד הנץ החמה חמשה מילין, לדברי רבי יוחנן; לרבי יהודה ארבעה מילין)",
         "שו״ע או״ח תנט, ב; משנה ברורה תנט, טו (מיל = 18 דקות; 5 מילין = 90 דקות)",
         "ביאור הגר״א או״ח רסא, ב (בשם הרמב״ם ואבן עזרא: שיעור הנשף כ׳ מעלות)",
-        "חישוב אסטרונומי: בירושלים בימי השוויון השמש נמצאת 19.8 מעלות מתחת לאופק כ־90 דקות לפני הנץ"
+        "חישוב אסטרונומי: בירושלים בימי השוויון השמש נמצאת 19.8 מעלות מתחת לאופק כ־90 דקות לפני הנץ",
+        "בירור זמנים ח״א עמ׳ 66 (90 דקות הן כ־19.75 מעלות)",
+        "בין השמשות (ר׳ י״מ טוקצינסקי) עמ׳ 105 (עלות השחר שעה וחצי לפני הנץ)"
       ]
     },
     "en": {
@@ -37,7 +39,9 @@
         "Pesachim 94a (from dawn to sunrise five mil, in Rabbi Yochanan's statement; four mil according to Rabbi Yehuda)",
         "Shulchan Aruch OC 459:2; Mishna Berura 459:15 (a mil = 18 minutes; 5 mil = 90 minutes)",
         "Biur HaGra OC 261:2 (citing Rambam and Ibn Ezra: twilight is 20 degrees)",
-        "Astronomy: in Jerusalem at the equinox the sun is 19.8 degrees below the horizon about 90 minutes before sunrise"
+        "Astronomy: in Jerusalem at the equinox the sun is 19.8 degrees below the horizon about 90 minutes before sunrise",
+        "Birur Zmanim vol 1 p.66 (90 min is about 19.75 deg)",
+        "Bein Hashmashot (R. Y. M. Tukachinsky) p.105 (dawn an hour and a half before sunrise)"
       ]
     }
   },
@@ -48,7 +52,9 @@
       "sources": [
         "פסחים צד ע״א",
         "שו״ע או״ח תנט, ב; משנה ברורה תנט, טו",
-        "חישוב אסטרונומי: שבירת האור באופק לפי לחץ האוויר והטמפרטורה של המקום (Meeus, Astronomical Algorithms, פרק 16)"
+        "חישוב אסטרונומי: שבירת האור באופק לפי לחץ האוויר והטמפרטורה של המקום (Meeus, Astronomical Algorithms, פרק 16)",
+        "בירור זמנים ח״א עמ׳ 66 (90 דקות הן כ־19.75 מעלות)",
+        "בין השמשות (ר׳ י״מ טוקצינסקי) עמ׳ 105 (עלות השחר שעה וחצי לפני הנץ)"
       ]
     },
     "en": {
@@ -57,7 +63,9 @@
       "sources": [
         "Pesachim 94a",
         "Shulchan Aruch OC 459:2; Mishna Berura 459:15",
-        "Astronomy: horizon refraction from the place's air pressure and temperature (Meeus, Astronomical Algorithms, ch. 16)"
+        "Astronomy: horizon refraction from the place's air pressure and temperature (Meeus, Astronomical Algorithms, ch. 16)",
+        "Birur Zmanim vol 1 p.66 (90 min is about 19.75 deg)",
+        "Bein Hashmashot (R. Y. M. Tukachinsky) p.105 (dawn an hour and a half before sunrise)"
       ]
     }
   },
@@ -67,7 +75,9 @@
       "text": "עלות השחר של 90 דקות (19.8 מעלות). בלילות קיץ בארצות הצפוניות שבהם השמש אינה יורדת כל כך נמוך, נותן חצות הלילה, כדברי הגר״א שבארצות אלו עלות השחר מתחיל בחצות.",
       "sources": [
         "פסחים צד ע״א",
-        "ביאור הגר״א או״ח רסא, ב (במדינות הנוטין לצפון שעלות השחר מתחיל בקיץ בחצי הלילה)"
+        "ביאור הגר״א או״ח רסא, ב (במדינות הנוטין לצפון שעלות השחר מתחיל בקיץ בחצי הלילה)",
+        "בירור זמנים ח״א עמ׳ 66 (90 דקות הן כ־19.75 מעלות)",
+        "בין השמשות (ר׳ י״מ טוקצינסקי) עמ׳ 105 (עלות השחר שעה וחצי לפני הנץ)"
       ]
     },
     "en": {
@@ -75,7 +85,9 @@
       "text": "The 90-minute dawn (19.8 degrees). On summer nights in northern lands where the sun never gets that low, it gives midnight instead, following the Vilna Gaon that in such lands dawn begins at midnight.",
       "sources": [
         "Pesachim 94a",
-        "Biur HaGra OC 261:2 (in northern lands dawn begins in summer at midnight)"
+        "Biur HaGra OC 261:2 (in northern lands dawn begins in summer at midnight)",
+        "Birur Zmanim vol 1 p.66 (90 min is about 19.75 deg)",
+        "Bein Hashmashot (R. Y. M. Tukachinsky) p.105 (dawn an hour and a half before sunrise)"
       ]
     }
   },
@@ -87,7 +99,8 @@
         "פסחים צד ע״א (רבי יהודה: מעלות השחר עד הנץ החמה ארבעת מילין)",
         "שו״ע או״ח תנט, ב; משנה ברורה תנט, טו (מיל = 18 דקות)",
         "שו״ע או״ח פט, א; משנה ברורה פט, ב (מה עלות השחר, ותפילה מעלות השחר בדיעבד)",
-        "חישוב אסטרונומי: בירושלים בימי השוויון השמש נמצאת 16.1 מעלות מתחת לאופק 72 דקות לפני הנץ"
+        "חישוב אסטרונומי: בירושלים בימי השוויון השמש נמצאת 16.1 מעלות מתחת לאופק 72 דקות לפני הנץ",
+        "בירור זמנים ח״א עמ׳ 66 (72 דקות בארץ ישראל בשוויון הן כ־16 מעלות)"
       ]
     },
     "en": {
@@ -97,7 +110,8 @@
         "Pesachim 94a (Rabbi Yehuda: from dawn to sunrise four mil)",
         "Shulchan Aruch OC 459:2; Mishna Berura 459:15 (a mil = 18 minutes)",
         "Shulchan Aruch OC 89:1; Mishna Berura 89:2 (what dawn is; prayer from dawn after the fact)",
-        "Astronomy: in Jerusalem at the equinox the sun is 16.1 degrees below the horizon 72 minutes before sunrise"
+        "Astronomy: in Jerusalem at the equinox the sun is 16.1 degrees below the horizon 72 minutes before sunrise",
+        "Birur Zmanim vol 1 p.66 (72 min in Eretz Yisrael at the equinox is about 16 deg)"
       ]
     }
   },
@@ -108,7 +122,8 @@
       "sources": [
         "פסחים צד ע״א",
         "שו״ע או״ח פט, א",
-        "חישוב אסטרונומי: שבירת האור באופק לפי לחץ האוויר והטמפרטורה של המקום (Meeus, Astronomical Algorithms, פרק 16)"
+        "חישוב אסטרונומי: שבירת האור באופק לפי לחץ האוויר והטמפרטורה של המקום (Meeus, Astronomical Algorithms, פרק 16)",
+        "בירור זמנים ח״א עמ׳ 66 (72 דקות בארץ ישראל בשוויון הן כ־16 מעלות)"
       ]
     },
     "en": {
@@ -117,7 +132,8 @@
       "sources": [
         "Pesachim 94a",
         "Shulchan Aruch OC 89:1",
-        "Astronomy: horizon refraction from the place's air pressure and temperature (Meeus, Astronomical Algorithms, ch. 16)"
+        "Astronomy: horizon refraction from the place's air pressure and temperature (Meeus, Astronomical Algorithms, ch. 16)",
+        "Birur Zmanim vol 1 p.66 (72 min in Eretz Yisrael at the equinox is about 16 deg)"
       ]
     }
   },
@@ -127,7 +143,8 @@
       "text": "עלות השחר (16.1 מעלות). בלילות קיץ בארצות הצפוניות שבהם השמש אינה יורדת כל כך נמוך, נותן חצות הלילה, כדברי הגר״א.",
       "sources": [
         "פסחים צד ע״א",
-        "ביאור הגר״א או״ח רסא, ב (במדינות הנוטין לצפון שעלות השחר מתחיל בקיץ בחצי הלילה)"
+        "ביאור הגר״א או״ח רסא, ב (במדינות הנוטין לצפון שעלות השחר מתחיל בקיץ בחצי הלילה)",
+        "בירור זמנים ח״א עמ׳ 66 (72 דקות בארץ ישראל בשוויון הן כ־16 מעלות)"
       ]
     },
     "en": {
@@ -135,7 +152,8 @@
       "text": "Dawn (16.1 degrees). On summer nights in northern lands where the sun never gets that low, it gives midnight instead, following the Vilna Gaon.",
       "sources": [
         "Pesachim 94a",
-        "Biur HaGra OC 261:2 (in northern lands dawn begins in summer at midnight)"
+        "Biur HaGra OC 261:2 (in northern lands dawn begins in summer at midnight)",
+        "Birur Zmanim vol 1 p.66 (72 min in Eretz Yisrael at the equinox is about 16 deg)"
       ]
     }
   },
@@ -244,7 +262,8 @@
       "sources": [
         "שו״ע או״ח נח, א (ותיקין: מסיימים קריאת שמע עם הנץ החמה)",
         "שו״ע או״ח פט, א (תפילת השחר מצותה עם הנץ החמה)",
-        "חישוב אסטרונומי: שקיעת האופק arccos(R/(R+h)) ושבירת האור (Meeus, Astronomical Algorithms, פרק 16)"
+        "חישוב אסטרונומי: שקיעת האופק arccos(R/(R+h)) ושבירת האור (Meeus, Astronomical Algorithms, פרק 16)",
+        "בין השמשות (ר׳ י״מ טוקצינסקי) עמ׳ 105 (בהר הכרמל הזריחה פחות מ־3 דקות קודם והשקיעה 2-3 דקות אחר כך)"
       ]
     },
     "en": {
@@ -253,7 +272,8 @@
       "sources": [
         "Shulchan Aruch OC 58:1 (the vasikin finish Shema at sunrise)",
         "Shulchan Aruch OC 89:1 (the morning prayer is ideally at sunrise)",
-        "Astronomy: horizon dip arccos(R/(R+h)) and refraction (Meeus, Astronomical Algorithms, ch. 16)"
+        "Astronomy: horizon dip arccos(R/(R+h)) and refraction (Meeus, Astronomical Algorithms, ch. 16)",
+        "Bein Hashmashot (R. Y. M. Tukachinsky) p.105 (on Mount Carmel sunrise under 3 min earlier, sunset 2-3 min later)"
       ]
     }
   },
@@ -308,7 +328,8 @@
         "שו״ע או״ח נח, א (עד סוף ג׳ שעות שהוא רביע היום)",
         "מגן אברהם נח, א (מונים מעלות השחר)",
         "משנה ברורה נח, ד (המ״א מונה מעמוד השחר, ודעת הגר״א משעת הנץ)",
-        "פסחים צד ע״א; שו״ע או״ח תנט, ב (ארבעה מילין של 18 דקות = 72 דקות)"
+        "פסחים צד ע״א; שו״ע או״ח תנט, ב (ארבעה מילין של 18 דקות = 72 דקות)",
+        "בירור זמנים ח״ב עמ׳ 209-239 (הלוחות קובעים עלות 90 דקות, ושעות מג״א מעלות עד צאת)"
       ]
     },
     "en": {
@@ -319,7 +340,8 @@
         "Shulchan Aruch OC 58:1 (until the end of three hours, a quarter of the day)",
         "Magen Avraham 58:1 (counted from dawn)",
         "Mishna Berura 58:4 (Magen Avraham counts from dawn; the Vilna Gaon from sunrise)",
-        "Pesachim 94a; Shulchan Aruch OC 459:2 (four mil of 18 minutes = 72 minutes)"
+        "Pesachim 94a; Shulchan Aruch OC 459:2 (four mil of 18 minutes = 72 minutes)",
+        "Birur Zmanim vol 2 p.209-239 (calendars set dawn at 90 min; MGA hours run dawn to nightfall)"
       ]
     }
   },
@@ -332,7 +354,8 @@
         "שו״ע או״ח נח, א",
         "מגן אברהם נח, א",
         "משנה ברורה נח, ד",
-        "חישוב אסטרונומי: 16.1 מעלות = 72 דקות בירושלים בימי השוויון"
+        "חישוב אסטרונומי: 16.1 מעלות = 72 דקות בירושלים בימי השוויון",
+        "בירור זמנים ח״א עמ׳ 66 (72 דקות בארץ ישראל בשוויון הן כ־16 מעלות)"
       ]
     },
     "en": {
@@ -343,7 +366,8 @@
         "Shulchan Aruch OC 58:1",
         "Magen Avraham 58:1",
         "Mishna Berura 58:4",
-        "Astronomy: 16.1 degrees = 72 minutes in Jerusalem at the equinox"
+        "Astronomy: 16.1 degrees = 72 minutes in Jerusalem at the equinox",
+        "Birur Zmanim vol 1 p.66 (72 min in Eretz Yisrael at the equinox is about 16 deg)"
       ]
     }
   },
@@ -378,7 +402,8 @@
         "שו״ע או״ח פט, א (עד סוף ד׳ שעות שהוא שליש היום)",
         "מגן אברהם נח, א",
         "משנה ברורה נח, ד",
-        "פסחים צד ע״א; שו״ע או״ח תנט, ב"
+        "פסחים צד ע״א; שו״ע או״ח תנט, ב",
+        "בירור זמנים ח״ב עמ׳ 209-239 (הלוחות קובעים עלות 90 דקות, ושעות מג״א מעלות עד צאת)"
       ]
     },
     "en": {
@@ -389,7 +414,8 @@
         "Shulchan Aruch OC 89:1 (until the end of four hours, a third of the day)",
         "Magen Avraham 58:1",
         "Mishna Berura 58:4",
-        "Pesachim 94a; Shulchan Aruch OC 459:2"
+        "Pesachim 94a; Shulchan Aruch OC 459:2",
+        "Birur Zmanim vol 2 p.209-239 (calendars set dawn at 90 min; MGA hours run dawn to nightfall)"
       ]
     }
   },
@@ -401,7 +427,8 @@
         "משנה ברכות ד, א",
         "שו״ע או״ח פט, א",
         "מגן אברהם נח, א",
-        "חישוב אסטרונומי: 16.1 מעלות = 72 דקות בירושלים בימי השוויון"
+        "חישוב אסטרונומי: 16.1 מעלות = 72 דקות בירושלים בימי השוויון",
+        "בירור זמנים ח״א עמ׳ 66 (72 דקות בארץ ישראל בשוויון הן כ־16 מעלות)"
       ]
     },
     "en": {
@@ -411,7 +438,8 @@
         "Mishna Berachot 4:1",
         "Shulchan Aruch OC 89:1",
         "Magen Avraham 58:1",
-        "Astronomy: 16.1 degrees = 72 minutes in Jerusalem at the equinox"
+        "Astronomy: 16.1 degrees = 72 minutes in Jerusalem at the equinox",
+        "Birur Zmanim vol 1 p.66 (72 min in Eretz Yisrael at the equinox is about 16 deg)"
       ]
     }
   },
@@ -523,7 +551,9 @@
         "משנה ברכות ד, א (רבי יהודה: עד פלג המנחה)",
         "שו״ע או״ח רלג, א (פלג המנחה שהוא עד סוף י״א שעות חסר רביע)",
         "רמב״ם הלכות תפילה ג, ד (עד שישאר מן היום שעה ורביע)",
-        "רמ״א או״ח רסא, ב (לקבל עליו השבת מפלג המנחה)"
+        "רמ״א או״ח רסא, ב (לקבל עליו השבת מפלג המנחה)",
+        "בירור זמנים ח״א עמ׳ 320-321 (פלג המנחה שעה ורבע לפני סוף היום)",
+        "בירור זמנים ח״ב עמ׳ 257-268 (פלג המנחה וסוף זמן מנחה)"
       ]
     },
     "en": {
@@ -533,7 +563,9 @@
         "Mishna Berachot 4:1 (Rabbi Yehuda: until plag hamincha)",
         "Shulchan Aruch OC 233:1 (plag hamincha is eleven hours less a quarter)",
         "Rambam, Hilchot Tefilla 3:4 (until an hour and a quarter of the day remains)",
-        "Rema OC 261:2 (accepting Shabbos from plag hamincha)"
+        "Rema OC 261:2 (accepting Shabbos from plag hamincha)",
+        "Birur Zmanim vol 1 p.320-321 (plag 1.25 hours before the end of the day)",
+        "Birur Zmanim vol 2 p.257-268 (plag and the end of mincha)"
       ]
     }
   },
@@ -544,7 +576,8 @@
       "sources": [
         "משנה ברכות ד, א",
         "שו״ע או״ח רלג, א",
-        "מגן אברהם נח, א (מונים מעלות השחר, ועיין סימן רלג)"
+        "מגן אברהם נח, א (מונים מעלות השחר, ועיין סימן רלג)",
+        "בירור זמנים ח״ב עמ׳ 209-239 (הלוחות קובעים עלות 90 דקות, ושעות מג״א מעלות עד צאת)"
       ]
     },
     "en": {
@@ -553,7 +586,8 @@
       "sources": [
         "Mishna Berachot 4:1",
         "Shulchan Aruch OC 233:1",
-        "Magen Avraham 58:1 (counting from dawn; see siman 233)"
+        "Magen Avraham 58:1 (counting from dawn; see siman 233)",
+        "Birur Zmanim vol 2 p.209-239 (calendars set dawn at 90 min; MGA hours run dawn to nightfall)"
       ]
     }
   },
@@ -606,7 +640,8 @@
       "sources": [
         "שבת לד ע״ב",
         "שו״ע או״ח רסא, ב",
-        "חישוב אסטרונומי: שקיעת האופק arccos(R/(R+h)) ושבירת האור (Meeus, Astronomical Algorithms, פרק 16)"
+        "חישוב אסטרונומי: שקיעת האופק arccos(R/(R+h)) ושבירת האור (Meeus, Astronomical Algorithms, פרק 16)",
+        "בין השמשות (ר׳ י״מ טוקצינסקי) עמ׳ 105 (בהר הכרמל הזריחה פחות מ־3 דקות קודם והשקיעה 2-3 דקות אחר כך)"
       ]
     },
     "en": {
@@ -615,7 +650,8 @@
       "sources": [
         "Shabbat 34b",
         "Shulchan Aruch OC 261:2",
-        "Astronomy: horizon dip arccos(R/(R+h)) and refraction (Meeus, Astronomical Algorithms, ch. 16)"
+        "Astronomy: horizon dip arccos(R/(R+h)) and refraction (Meeus, Astronomical Algorithms, ch. 16)",
+        "Bein Hashmashot (R. Y. M. Tukachinsky) p.105 (on Mount Carmel sunrise under 3 min earlier, sunset 2-3 min later)"
       ]
     }
   },
@@ -628,7 +664,8 @@
         "שו״ע או״ח רסא, ב (שיעור בין השמשות ג׳ רבעי מיל)",
         "ביאור הגר״א או״ח רסא, ב (ג׳ רביעי מיל באופק בבל בתקופת ניסן ותשרי)",
         "שו״ע או״ח תנט, ב (מיל = 18 דקות)",
-        "חישוב אסטרונומי: 3.7 מעלות = 13.5 דקות בירושלים בימי השוויון"
+        "חישוב אסטרונומי: 3.7 מעלות = 13.5 דקות בירושלים בימי השוויון",
+        "בירור זמנים ח״ב עמ׳ 11-14 (רבנו תם לפי המנחת כהן: צאת בראיית שלושה כוכבים)"
       ]
     },
     "en": {
@@ -639,7 +676,8 @@
         "Shulchan Aruch OC 261:2 (twilight is three quarters of a mil)",
         "Biur HaGra OC 261:2 (three quarters of a mil on the horizon of Babylon at the equinox)",
         "Shulchan Aruch OC 459:2 (a mil = 18 minutes)",
-        "Astronomy: 3.7 degrees = 13.5 minutes in Jerusalem at the equinox"
+        "Astronomy: 3.7 degrees = 13.5 minutes in Jerusalem at the equinox",
+        "Birur Zmanim vol 2 p.11-14 (Rabbeinu Tam per the Minchat Kohen: nightfall when three stars are seen)"
       ]
     }
   },
@@ -815,7 +853,9 @@
       "text": "צאת הכוכבים לשיטת רבינו תם: ארבעה מילין אחר השקיעה, מיל של 18 דקות, כלומר 72 דקות קבועות.",
       "sources": [
         "תוספות שבת לה ע״א (ארבעה מילין משקיעה ועד צאת הכוכבים, על פי פסחים צד ע״א)",
-        "שו״ע או״ח רסא, ב וברמ״א"
+        "שו״ע או״ח רסא, ב וברמ״א",
+        "בירור זמנים ח״ב עמ׳ 33-35 (מיל 18 (גר״א), 22.5 (רוב הראשונים), 24 (רמב״ם))",
+        "בין השמשות (ר׳ י״מ טוקצינסקי) עמ׳ 18-19 (שלוש שיטות בשיעור מיל: 18, 22.5, 24)"
       ]
     },
     "en": {
@@ -823,7 +863,9 @@
       "text": "Nightfall according to Rabbeinu Tam: four mil after sunset, at 18 minutes a mil, that is 72 fixed minutes.",
       "sources": [
         "Tosafot Shabbat 35a (four mil from sunset to the stars, based on Pesachim 94a)",
-        "Shulchan Aruch OC 261:2 with Rema"
+        "Shulchan Aruch OC 261:2 with Rema",
+        "Birur Zmanim vol 2 p.33-35 (mil of 18 (Gra), 22.5 (most Rishonim), 24 (Rambam))",
+        "Bein Hashmashot (R. Y. M. Tukachinsky) p.18-19 (three views of a mil: 18, 22.5, 24 min)"
       ]
     }
   },
@@ -851,7 +893,8 @@
       "text": "כשהשמש 16.1 מעלות מתחת לאופק בערב, עומקה 72 דקות אחרי השקיעה בירושלים בימי השוויון. מספר המעלות הוא חשבון, ואינו מן הגמרא.",
       "sources": [
         "תוספות שבת לה ע״א",
-        "שו״ע או״ח רסא, ב וברמ״א"
+        "שו״ע או״ח רסא, ב וברמ״א",
+        "בירור זמנים ח״א עמ׳ 66 (72 דקות בארץ ישראל בשוויון הן כ־16 מעלות)"
       ]
     },
     "en": {
@@ -859,7 +902,8 @@
       "text": "The sun 16.1 degrees below the horizon in the evening, its depth 72 minutes after sunset in Jerusalem at the equinox. The degree figure is a calculation, not from the Talmud.",
       "sources": [
         "Tosafot Shabbat 35a",
-        "Shulchan Aruch OC 261:2 with Rema"
+        "Shulchan Aruch OC 261:2 with Rema",
+        "Birur Zmanim vol 1 p.66 (72 min in Eretz Yisrael at the equinox is about 16 deg)"
       ]
     }
   },
@@ -870,7 +914,9 @@
       "sources": [
         "שבת לה ע״א, תוספות ד״ה תרי",
         "שו״ע או״ח רסא, ב",
-        "אגרות משה או״ח ד, סב"
+        "אגרות משה או״ח ד, סב",
+        "בירור זמנים ח״ב עמ׳ 33-35 (מיל 18 (גר״א), 22.5 (רוב הראשונים), 24 (רמב״ם))",
+        "בין השמשות (ר׳ י״מ טוקצינסקי) עמ׳ 18-19 (שלוש שיטות בשיעור מיל: 18, 22.5, 24)"
       ]
     },
     "en": {
@@ -879,7 +925,9 @@
       "sources": [
         "Tosafot Shabbat 35a",
         "Shulchan Aruch OC 261:2",
-        "Igrot Moshe OC 4:62"
+        "Igrot Moshe OC 4:62",
+        "Birur Zmanim vol 2 p.33-35 (mil of 18 (Gra), 22.5 (most Rishonim), 24 (Rambam))",
+        "Bein Hashmashot (R. Y. M. Tukachinsky) p.18-19 (three views of a mil: 18, 22.5, 24 min)"
       ]
     }
   },
@@ -890,7 +938,9 @@
       "sources": [
         "שולחן ערוך הרב או״ח רסא, ה",
         "שולחן ערוך הרב או״ח תנט, י (מיל 24 דקות העיקר)",
-        "אגרות משה או״ח ד, סב (המחמיר 96)"
+        "אגרות משה או״ח ד, סב (המחמיר 96)",
+        "בירור זמנים ח״ב עמ׳ 33-35 (מיל 18 (גר״א), 22.5 (רוב הראשונים), 24 (רמב״ם))",
+        "בין השמשות (ר׳ י״מ טוקצינסקי) עמ׳ 18-19 (שלוש שיטות בשיעור מיל: 18, 22.5, 24)"
       ]
     },
     "en": {
@@ -899,7 +949,9 @@
       "sources": [
         "Shulchan Aruch HaRav OC 261:5",
         "Shulchan Aruch HaRav OC 459:10 (24-minute mil the main view)",
-        "Igrot Moshe OC 4:62 (strictest 96)"
+        "Igrot Moshe OC 4:62 (strictest 96)",
+        "Birur Zmanim vol 2 p.33-35 (mil of 18 (Gra), 22.5 (most Rishonim), 24 (Rambam))",
+        "Bein Hashmashot (R. Y. M. Tukachinsky) p.18-19 (three views of a mil: 18, 22.5, 24 min)"
       ]
     }
   },
@@ -913,7 +965,9 @@
         "משנה ברורה נח, ד (המגן אברהם מונה מעלות השחר, והגר״א מהנץ החמה)",
         "פסחים צג ע״ב (מעלות השחר עד הנץ החמה חמשה מילין, בשם רבי יוחנן)",
         "שו״ע או״ח תנט, ב; משנה ברורה תנט, טו (מיל = 18 דקות)",
-        "אסטרונומיה: בירושלים בשוויון היום והלילה השמש 19.8 מעלות מתחת לאופק כ-90 דקות לפני הזריחה"
+        "אסטרונומיה: בירושלים בשוויון היום והלילה השמש 19.8 מעלות מתחת לאופק כ-90 דקות לפני הזריחה",
+        "בירור זמנים ח״א עמ׳ 66 (90 דקות הן כ־19.75 מעלות)",
+        "בין השמשות (ר׳ י״מ טוקצינסקי) עמ׳ 105 (עלות השחר שעה וחצי לפני הנץ)"
       ]
     },
     "en": {
@@ -925,7 +979,9 @@
         "Mishna Berura 58:4 (Magen Avraham counts from dawn; the Vilna Gaon from sunrise)",
         "Pesachim 93b (from dawn to sunrise five mil, in the name of Rabbi Yochanan)",
         "Shulchan Aruch OC 459:2; Mishna Berura 459:15 (a mil = 18 minutes)",
-        "Astronomy: in Jerusalem at the equinox the sun is 19.8 degrees below the horizon about 90 minutes before sunrise"
+        "Astronomy: in Jerusalem at the equinox the sun is 19.8 degrees below the horizon about 90 minutes before sunrise",
+        "Birur Zmanim vol 1 p.66 (90 min is about 19.75 deg)",
+        "Bein Hashmashot (R. Y. M. Tukachinsky) p.105 (dawn an hour and a half before sunrise)"
       ]
     }
   },
@@ -939,7 +995,9 @@
         "משנה ברורה נח, ד (המגן אברהם מונה מעלות השחר, והגר״א מהנץ החמה)",
         "פסחים צג ע״ב (מעלות השחר עד הנץ החמה חמשה מילין, בשם רבי יוחנן)",
         "שו״ע או״ח תנט, ב; משנה ברורה תנט, טו (מיל = 18 דקות)",
-        "אסטרונומיה: בירושלים בשוויון היום והלילה השמש 19.8 מעלות מתחת לאופק כ-90 דקות לפני הזריחה"
+        "אסטרונומיה: בירושלים בשוויון היום והלילה השמש 19.8 מעלות מתחת לאופק כ-90 דקות לפני הזריחה",
+        "בירור זמנים ח״א עמ׳ 66 (90 דקות הן כ־19.75 מעלות)",
+        "בין השמשות (ר׳ י״מ טוקצינסקי) עמ׳ 105 (עלות השחר שעה וחצי לפני הנץ)"
       ]
     },
     "en": {
@@ -951,7 +1009,9 @@
         "Mishna Berura 58:4 (Magen Avraham counts from dawn; the Vilna Gaon from sunrise)",
         "Pesachim 93b (from dawn to sunrise five mil, in the name of Rabbi Yochanan)",
         "Shulchan Aruch OC 459:2; Mishna Berura 459:15 (a mil = 18 minutes)",
-        "Astronomy: in Jerusalem at the equinox the sun is 19.8 degrees below the horizon about 90 minutes before sunrise"
+        "Astronomy: in Jerusalem at the equinox the sun is 19.8 degrees below the horizon about 90 minutes before sunrise",
+        "Birur Zmanim vol 1 p.66 (90 min is about 19.75 deg)",
+        "Bein Hashmashot (R. Y. M. Tukachinsky) p.105 (dawn an hour and a half before sunrise)"
       ]
     }
   },
@@ -964,7 +1024,9 @@
         "שו״ע או״ח נח, א; מגן אברהם נח, א (היום נמנה מעלות השחר עד צאת הכוכבים)",
         "פסחים צג ע״ב (מעלות השחר עד הנץ החמה חמשה מילין, בשם רבי יוחנן)",
         "שו״ע או״ח תנט, ב; משנה ברורה תנט, טו (מיל = 18 דקות)",
-        "אסטרונומיה: בירושלים בשוויון היום והלילה השמש 19.8 מעלות מתחת לאופק כ-90 דקות לפני הזריחה"
+        "אסטרונומיה: בירושלים בשוויון היום והלילה השמש 19.8 מעלות מתחת לאופק כ-90 דקות לפני הזריחה",
+        "בירור זמנים ח״א עמ׳ 66 (90 דקות הן כ־19.75 מעלות)",
+        "בין השמשות (ר׳ י״מ טוקצינסקי) עמ׳ 105 (עלות השחר שעה וחצי לפני הנץ)"
       ]
     },
     "en": {
@@ -975,7 +1037,9 @@
         "Shulchan Aruch OC 58:1; Magen Avraham 58:1 (the day counted from dawn to nightfall)",
         "Pesachim 93b (from dawn to sunrise five mil, in the name of Rabbi Yochanan)",
         "Shulchan Aruch OC 459:2; Mishna Berura 459:15 (a mil = 18 minutes)",
-        "Astronomy: in Jerusalem at the equinox the sun is 19.8 degrees below the horizon about 90 minutes before sunrise"
+        "Astronomy: in Jerusalem at the equinox the sun is 19.8 degrees below the horizon about 90 minutes before sunrise",
+        "Birur Zmanim vol 1 p.66 (90 min is about 19.75 deg)",
+        "Bein Hashmashot (R. Y. M. Tukachinsky) p.105 (dawn an hour and a half before sunrise)"
       ]
     }
   },
@@ -988,7 +1052,8 @@
         "שו״ע או״ח נח, א; מגן אברהם נח, א (היום נמנה מעלות השחר עד צאת הכוכבים)",
         "משנה ברורה נח, ד (המגן אברהם מונה מעלות השחר, והגר״א מהנץ החמה)",
         "פסחים צג ע״ב (מעלות השחר עד הנץ החמה חמשה מילין, בשם רבי יוחנן)",
-        "שו״ע או״ח תנט, ב; משנה ברורה תנט, טו (מיל = 18 דקות)"
+        "שו״ע או״ח תנט, ב; משנה ברורה תנט, טו (מיל = 18 דקות)",
+        "בירור זמנים ח״ב עמ׳ 209-239 (הלוחות קובעים עלות 90 דקות, ושעות מג״א מעלות עד צאת)"
       ]
     },
     "en": {
@@ -999,7 +1064,8 @@
         "Shulchan Aruch OC 58:1; Magen Avraham 58:1 (the day counted from dawn to nightfall)",
         "Mishna Berura 58:4 (Magen Avraham counts from dawn; the Vilna Gaon from sunrise)",
         "Pesachim 93b (from dawn to sunrise five mil, in the name of Rabbi Yochanan)",
-        "Shulchan Aruch OC 459:2; Mishna Berura 459:15 (a mil = 18 minutes)"
+        "Shulchan Aruch OC 459:2; Mishna Berura 459:15 (a mil = 18 minutes)",
+        "Birur Zmanim vol 2 p.209-239 (calendars set dawn at 90 min; MGA hours run dawn to nightfall)"
       ]
     }
   },
@@ -1012,7 +1078,8 @@
         "שו״ע או״ח נח, א; מגן אברהם נח, א (היום נמנה מעלות השחר עד צאת הכוכבים)",
         "משנה ברורה נח, ד (המגן אברהם מונה מעלות השחר, והגר״א מהנץ החמה)",
         "פסחים צג ע״ב (מעלות השחר עד הנץ החמה חמשה מילין, בשם רבי יוחנן)",
-        "שו״ע או״ח תנט, ב; משנה ברורה תנט, טו (מיל = 18 דקות)"
+        "שו״ע או״ח תנט, ב; משנה ברורה תנט, טו (מיל = 18 דקות)",
+        "בירור זמנים ח״ב עמ׳ 209-239 (הלוחות קובעים עלות 90 דקות, ושעות מג״א מעלות עד צאת)"
       ]
     },
     "en": {
@@ -1023,7 +1090,8 @@
         "Shulchan Aruch OC 58:1; Magen Avraham 58:1 (the day counted from dawn to nightfall)",
         "Mishna Berura 58:4 (Magen Avraham counts from dawn; the Vilna Gaon from sunrise)",
         "Pesachim 93b (from dawn to sunrise five mil, in the name of Rabbi Yochanan)",
-        "Shulchan Aruch OC 459:2; Mishna Berura 459:15 (a mil = 18 minutes)"
+        "Shulchan Aruch OC 459:2; Mishna Berura 459:15 (a mil = 18 minutes)",
+        "Birur Zmanim vol 2 p.209-239 (calendars set dawn at 90 min; MGA hours run dawn to nightfall)"
       ]
     }
   },
@@ -1035,7 +1103,8 @@
         "משנה ברכות ד, א; שו״ע או״ח רלג, א (פלג המנחה, אחת עשרה שעות פחות רביע)",
         "שו״ע או״ח נח, א; מגן אברהם נח, א (היום נמנה מעלות השחר עד צאת הכוכבים)",
         "פסחים צג ע״ב (מעלות השחר עד הנץ החמה חמשה מילין, בשם רבי יוחנן)",
-        "שו״ע או״ח תנט, ב; משנה ברורה תנט, טו (מיל = 18 דקות)"
+        "שו״ע או״ח תנט, ב; משנה ברורה תנט, טו (מיל = 18 דקות)",
+        "בירור זמנים ח״ב עמ׳ 209-239 (הלוחות קובעים עלות 90 דקות, ושעות מג״א מעלות עד צאת)"
       ]
     },
     "en": {
@@ -1045,7 +1114,8 @@
         "Mishna Berachot 4:1; Shulchan Aruch OC 233:1 (plag hamincha, eleven hours less a quarter)",
         "Shulchan Aruch OC 58:1; Magen Avraham 58:1 (the day counted from dawn to nightfall)",
         "Pesachim 93b (from dawn to sunrise five mil, in the name of Rabbi Yochanan)",
-        "Shulchan Aruch OC 459:2; Mishna Berura 459:15 (a mil = 18 minutes)"
+        "Shulchan Aruch OC 459:2; Mishna Berura 459:15 (a mil = 18 minutes)",
+        "Birur Zmanim vol 2 p.209-239 (calendars set dawn at 90 min; MGA hours run dawn to nightfall)"
       ]
     }
   },
@@ -1127,7 +1197,8 @@
         "משנה ברכות ד, א (פלג המנחה)",
         "מגן אברהם נח, א (היום נמנה מעלות השחר עד צאת הכוכבים)",
         "שו״ע או״ח רלג, א",
-        "בירור הלכה יו״ד רסב (צאת הכוכבים, 6.45 מעלות)"
+        "בירור הלכה יו״ד רסב (צאת הכוכבים, 6.45 מעלות)",
+        "בין השמשות (ר׳ י״מ טוקצינסקי) עמ׳ 105 (עלות השחר שעה וחצי לפני הנץ)"
       ]
     },
     "en": {
@@ -1137,7 +1208,8 @@
         "Mishna Berachot 4:1 (plag hamincha)",
         "Magen Avraham 58:1 (the day counted from dawn to nightfall)",
         "Shulchan Aruch OC 233:1",
-        "Birur Halacha, Yoreh De'ah 262 (nightfall at 6.45 deg)"
+        "Birur Halacha, Yoreh De'ah 262 (nightfall at 6.45 deg)",
+        "Bein Hashmashot (R. Y. M. Tukachinsky) p.105 (dawn an hour and a half before sunrise)"
       ]
     }
   },
@@ -1149,7 +1221,8 @@
         "משנה ברכות ד, א (פלג המנחה)",
         "מגן אברהם נח, א (היום נמנה מעלות השחר עד צאת הכוכבים)",
         "שו״ע או״ח רלג, א",
-        "בירור הלכה יו״ד רסב (צאת הכוכבים, 6.45 מעלות)"
+        "בירור הלכה יו״ד רסב (צאת הכוכבים, 6.45 מעלות)",
+        "בין השמשות (ר׳ י״מ טוקצינסקי) עמ׳ 50, 67, 72 (שלושה כוכבים בינוניים בירושלים 22-28 דקות, בממוצע 25)"
       ]
     },
     "en": {
@@ -1159,7 +1232,8 @@
         "Mishna Berachot 4:1 (plag hamincha)",
         "Magen Avraham 58:1 (the day counted from dawn to nightfall)",
         "Shulchan Aruch OC 233:1",
-        "Birur Halacha, Yoreh De'ah 262 (nightfall at 6.45 deg)"
+        "Birur Halacha, Yoreh De'ah 262 (nightfall at 6.45 deg)",
+        "Bein Hashmashot (R. Y. M. Tukachinsky) p.50, 67, 72 (three medium stars in Jerusalem 22-28 min, average 25)"
       ]
     }
   },
@@ -1341,7 +1415,9 @@
       "text": "ארבעה מילין לפני הנץ במיל של 24 דקות, כשולחן ערוך הרב.",
       "sources": [
         "שולחן ערוך הרב או״ח פט, א (עלות השחר מהלך ד׳ מילין קודם הנץ)",
-        "שולחן ערוך הרב או״ח תנט, י (מיל 24 דקות העיקר)"
+        "שולחן ערוך הרב או״ח תנט, י (מיל 24 דקות העיקר)",
+        "בירור זמנים ח״ב עמ׳ 33-35 (מיל 18 (גר״א), 22.5 (רוב הראשונים), 24 (רמב״ם))",
+        "בין השמשות (ר׳ י״מ טוקצינסקי) עמ׳ 18-19 (שלוש שיטות בשיעור מיל: 18, 22.5, 24)"
       ]
     },
     "en": {
@@ -1349,7 +1425,9 @@
       "text": "Four mil before sunrise at 24 minutes a mil, per the Shulchan Aruch HaRav.",
       "sources": [
         "Shulchan Aruch HaRav OC 89:1 (dawn 4 mil before netz)",
-        "Shulchan Aruch HaRav OC 459:10 (a mil of 24 minutes is the main view)"
+        "Shulchan Aruch HaRav OC 459:10 (a mil of 24 minutes is the main view)",
+        "Birur Zmanim vol 2 p.33-35 (mil of 18 (Gra), 22.5 (most Rishonim), 24 (Rambam))",
+        "Bein Hashmashot (R. Y. M. Tukachinsky) p.18-19 (three views of a mil: 18, 22.5, 24 min)"
       ]
     }
   },
@@ -1359,7 +1437,9 @@
       "text": "חמישה מילין לפני הנץ במיל של 24 דקות; כך יש שקראו בשולחן ערוך הרב.",
       "sources": [
         "פסחים צג ע״ב (חמשה מילין)",
-        "המכלול, ערך עלות השחר, הערה 3 (שיטת שולחן ערוך הרב כפי שנדפסה)"
+        "המכלול, ערך עלות השחר, הערה 3 (שיטת שולחן ערוך הרב כפי שנדפסה)",
+        "בירור זמנים ח״ב עמ׳ 33-35 (מיל 18 (גר״א), 22.5 (רוב הראשונים), 24 (רמב״ם))",
+        "בין השמשות (ר׳ י״מ טוקצינסקי) עמ׳ 18-19 (שלוש שיטות בשיעור מיל: 18, 22.5, 24)"
       ]
     },
     "en": {
@@ -1367,7 +1447,9 @@
       "text": "Five mil before sunrise at 24 minutes a mil; one reading of the Shulchan Aruch HaRav.",
       "sources": [
         "Pesachim 93b (five mil)",
-        "HaMichlol, \"Alot HaShachar\", note 3"
+        "HaMichlol, \"Alot HaShachar\", note 3",
+        "Birur Zmanim vol 2 p.33-35 (mil of 18 (Gra), 22.5 (most Rishonim), 24 (Rambam))",
+        "Bein Hashmashot (R. Y. M. Tukachinsky) p.18-19 (three views of a mil: 18, 22.5, 24 min)"
       ]
     }
   },
@@ -1418,7 +1500,9 @@
       "sources": [
         "שבת לד ע״ב (בין השמשות שלשה חלקי מיל, רבה בשם שמואל)",
         "שו״ע או״ח רסא, ב (מתחילת השקיעה עד בין השמשות ג׳ מילין ורביע; בין השמשות ג׳ רבעי מיל)",
-        "שו״ע או״ח תנט, ב; משנה ברורה תנט, טו (מיל = 18 דקות)"
+        "שו״ע או״ח תנט, ב; משנה ברורה תנט, טו (מיל = 18 דקות)",
+        "בירור זמנים ח״ב עמ׳ 33-35 (מיל 18 (גר״א), 22.5 (רוב הראשונים), 24 (רמב״ם))",
+        "בין השמשות (ר׳ י״מ טוקצינסקי) עמ׳ 18-19 (שלוש שיטות בשיעור מיל: 18, 22.5, 24)"
       ]
     },
     "en": {
@@ -1427,7 +1511,9 @@
       "sources": [
         "Shabbat 34b (twilight is three quarters of a mil, Rabba in the name of Shmuel)",
         "Shulchan Aruch OC 261:2 (from sunset to twilight 3.25 mil; twilight three quarters of a mil)",
-        "Shulchan Aruch OC 459:2; Mishna Berura 459:15 (a mil = 18 minutes)"
+        "Shulchan Aruch OC 459:2; Mishna Berura 459:15 (a mil = 18 minutes)",
+        "Birur Zmanim vol 2 p.33-35 (mil of 18 (Gra), 22.5 (most Rishonim), 24 (Rambam))",
+        "Bein Hashmashot (R. Y. M. Tukachinsky) p.18-19 (three views of a mil: 18, 22.5, 24 min)"
       ]
     }
   },
@@ -1438,7 +1524,8 @@
       "sources": [
         "שבת לד ע״ב (בין השמשות שלשה חלקי מיל, רבה בשם שמואל)",
         "שו״ע או״ח רסא, ב (מתחילת השקיעה עד בין השמשות ג׳ מילין ורביע; בין השמשות ג׳ רבעי מיל)",
-        "פירוש המשניות לרמב״ם פסחים ג, ב (מיל = שני חומשי שעה, 24 דקות)"
+        "פירוש המשניות לרמב״ם פסחים ג, ב (מיל = שני חומשי שעה, 24 דקות)",
+        "בין השמשות (ר׳ י״מ טוקצינסקי) עמ׳ 71-72 (בירושלים מתפללים ערבית 17-18 דקות אחר השקיעה, כמנהג ר׳ שמואל סלנט)"
       ]
     },
     "en": {
@@ -1447,7 +1534,8 @@
       "sources": [
         "Shabbat 34b (twilight is three quarters of a mil, Rabba in the name of Shmuel)",
         "Shulchan Aruch OC 261:2 (from sunset to twilight 3.25 mil; twilight three quarters of a mil)",
-        "Rambam, commentary on Mishna Pesachim 3:2 (a mil = two fifths of an hour, 24 minutes)"
+        "Rambam, commentary on Mishna Pesachim 3:2 (a mil = two fifths of an hour, 24 minutes)",
+        "Bein Hashmashot (R. Y. M. Tukachinsky) p.71-72 (in Jerusalem maariv 17-18 min after sunset, per R. Shmuel Salant)"
       ]
     }
   },
@@ -1458,7 +1546,8 @@
       "sources": [
         "שבת לד ע״ב (בין השמשות שלשה חלקי מיל, רבה בשם שמואל)",
         "שו״ע או״ח רסא, ב",
-        "פירוש המשניות לרמב״ם פסחים ג, ב (מיל = שני חומשי שעה, 24 דקות)"
+        "פירוש המשניות לרמב״ם פסחים ג, ב (מיל = שני חומשי שעה, 24 דקות)",
+        "בין השמשות (ר׳ י״מ טוקצינסקי) עמ׳ 71-72 (בירושלים מתפללים ערבית 17-18 דקות אחר השקיעה, כמנהג ר׳ שמואל סלנט)"
       ]
     },
     "en": {
@@ -1467,7 +1556,8 @@
       "sources": [
         "Shabbat 34b (twilight is three quarters of a mil, Rabba in the name of Shmuel)",
         "Shulchan Aruch OC 261:2",
-        "Rambam, commentary on Mishna Pesachim 3:2 (a mil = two fifths of an hour, 24 minutes)"
+        "Rambam, commentary on Mishna Pesachim 3:2 (a mil = two fifths of an hour, 24 minutes)",
+        "Bein Hashmashot (R. Y. M. Tukachinsky) p.71-72 (in Jerusalem maariv 17-18 min after sunset, per R. Shmuel Salant)"
       ]
     }
   },
@@ -1495,7 +1585,8 @@
       "text": "צאת הכוכבים לפי חשבונו של הרב יחיאל מיכל טוקצינסקי: השמש 6.45 מעלות מתחת לאופק. כ־26 דקות אחרי השקיעה בימי השוויון בירושלים, וכ־31 דקות בקיץ.",
       "sources": [
         "בירור הלכה יו״ד רסב (חשבון הרב טוקצינסקי, 6.45 מעלות), https://hebrewbooks.org/pdfpager.aspx?req=50536&st=&pgnum=51",
-        "שבת לה ע״ב (שלשה כוכבים בינוניים)"
+        "שבת לה ע״ב (שלשה כוכבים בינוניים)",
+        "בין השמשות (ר׳ י״מ טוקצינסקי) עמ׳ 50, 67, 72 (שלושה כוכבים בינוניים בירושלים 22-28 דקות, בממוצע 25)"
       ]
     },
     "en": {
@@ -1503,7 +1594,8 @@
       "text": "Nightfall by Rav Yechiel Michel Tucazinsky's calculation: the sun 6.45 degrees below the horizon. About 26 minutes after sunset at the equinox in Jerusalem, about 31 in summer.",
       "sources": [
         "Birur Halacha, Yoreh De'ah 262 (Rav Y. M. Tucazinsky's nightfall, the sun 6.45 deg below the horizon), https://hebrewbooks.org/pdfpager.aspx?req=50536&st=&pgnum=51",
-        "Shabbat 35b (three medium stars)"
+        "Shabbat 35b (three medium stars)",
+        "Bein Hashmashot (R. Y. M. Tukachinsky) p.50, 67, 72 (three medium stars in Jerusalem 22-28 min, average 25)"
       ]
     }
   },
@@ -1549,7 +1641,8 @@
       "text": "40 דקות קבועות אחרי השקיעה: מרווח שנוהגים בו בקהילות שונות למוצאי שבת ולסוף תענית.",
       "sources": [
         "מנהג קהילות (מרווח קבוע אחרי השקיעה; אין מקור יחיד מפורסם)",
-        "שבת לד ע״ב (בין השמשות שלשה חלקי מיל, רבה בשם שמואל)"
+        "שבת לד ע״ב (בין השמשות שלשה חלקי מיל, רבה בשם שמואל)",
+        "בירור זמנים ח״ב עמ׳ 18 (החזון איש: מוצאי יוה״כ 40 דקות, מוצ״ש 45, ברית 35)"
       ]
     },
     "en": {
@@ -1557,7 +1650,8 @@
       "text": "40 fixed minutes after sunset: a margin kept by some communities for the end of Shabbat and fast days.",
       "sources": [
         "Community custom (a fixed margin after sunset; no single published source)",
-        "Shabbat 34b (twilight is three quarters of a mil, Rabba in the name of Shmuel)"
+        "Shabbat 34b (twilight is three quarters of a mil, Rabba in the name of Shmuel)",
+        "Birur Zmanim vol 2 p.18 (Chazon Ish: Yom Kippur ends 40 min, Shabbat 45, a brit 35)"
       ]
     }
   },
@@ -1605,7 +1699,9 @@
       "sources": [
         "ספר יראים (רבי אליעזר ממיץ), בין השמשות שלשה רבעי מיל לפני השקיעה",
         "שבת לד ע״ב (בין השמשות שלשה חלקי מיל)",
-        ", זמני ההלכה למעשה עמ׳ 11 (חישוב לפי מעלות)"
+        ", זמני ההלכה למעשה עמ׳ 11 (חישוב לפי מעלות)",
+        "בין השמשות (ר׳ י״מ טוקצינסקי) עמ׳ 33 (לדעת היראים בין השמשות לפני השקיעה)",
+        "בירור זמנים ח״ב עמ׳ 228-231 (שיטת היראים, ומחמירים כמותה)"
       ]
     },
     "en": {
@@ -1614,7 +1710,9 @@
       "sources": [
         "Sefer Yereim (Rabbi Eliezer of Metz): bein hashmashot is the 3/4 mil before sunset",
         "Shabbat 34b (bein hashmashot is three quarters of a mil)",
-        ", Zmanei HaHalacha Lema'aseh p. 11 (the degree-based Yereim calculation)"
+        ", Zmanei HaHalacha Lema'aseh p. 11 (the degree-based Yereim calculation)",
+        "Bein Hashmashot (R. Y. M. Tukachinsky) p.33 (Yereim: bein hashmashot is before sunset)",
+        "Birur Zmanim vol 2 pp.228-231 (the Yereim view and those strict for it)"
       ]
     }
   },
@@ -1625,7 +1723,8 @@
       "sources": [
         "תוספות שבת לה ע״א ופסחים צד ע״א (רבנו תם: ארבעה מילין מתחילת השקיעה עד הלילה; בין השמשות הוא שלשה רבעי מיל האחרונים)",
         "שו״ע או״ח רסא, ב (מתחילת השקיעה עד בין השמשות ג׳ מילין ורביע; בין השמשות ג׳ רבעי מיל)",
-        "שו״ע או״ח תנט, ב; משנה ברורה תנט, טו (מיל = 18 דקות)"
+        "שו״ע או״ח תנט, ב; משנה ברורה תנט, טו (מיל = 18 דקות)",
+        "בירור זמנים ח״ב עמ׳ 11-14 (רבנו תם לפי המנחת כהן: צאת בראיית שלושה כוכבים)"
       ]
     },
     "en": {
@@ -1634,7 +1733,8 @@
       "sources": [
         "Tosafot Shabbat 35a and Pesachim 94a (Rabbeinu Tam: four mil from the start of sunset to night; twilight is the last three quarters of a mil)",
         "Shulchan Aruch OC 261:2 (from sunset to twilight 3.25 mil; twilight three quarters of a mil)",
-        "Shulchan Aruch OC 459:2; Mishna Berura 459:15 (a mil = 18 minutes)"
+        "Shulchan Aruch OC 459:2; Mishna Berura 459:15 (a mil = 18 minutes)",
+        "Birur Zmanim vol 2 p.11-14 (Rabbeinu Tam per the Minchat Kohen: nightfall when three stars are seen)"
       ]
     }
   },

@@ -160,9 +160,12 @@ export function horizonZenith(place: Coordinates, date: CivilDate, fromHeight = 
 /**
  * Dawn 72 minutes (4 mil of 18 min) before sunrise, as the sun's depth at that time in Jerusalem at the equinox.
  * Pesachim 94a (4 mil, R. Yehuda); Biur Halacha OC 89:1 ("sha'a vechomesh sha'a" before netz, per the Rambam) - checked in the text.
+ * Birur Zmanim vol 1 p.66: 72 min in Eretz Yisrael at the equinox is about 16 deg (see SOURCES.md).
  */
 const ALOT = 16.1
-/** Dawn 90 minutes (5 mil of 18 min). Pesachim 93b; SA OC 459:2 and Mishna Berura 459:15 (mil = 18 min). */
+/** Dawn 90 minutes (5 mil of 18 min). Pesachim 93b; SA OC 459:2 and Mishna Berura 459:15 (mil = 18 min).
+ * Birur Zmanim vol 1 p.66: 90 min is about 19.75 deg; Bein Hashmashot (Tukachinsky) p.105: dawn 1.5 hours before sunrise;
+ * Birur Zmanim vol 2 pp.209-239: calendars rightly use 90, MGA hours run dawn to nightfall. */
 const ALOT_90 = 19.8
 /** Misheyakir (earliest tallit and tefillin): Berachot 9b; SA OC 18:3. The angles are accepted estimates (about 50 / 48 / 44 min). */
 const MISHEYAKIR = 11.5
@@ -194,19 +197,21 @@ const MISHEYAKIR_12_85 = 12.85
 const BAAL_HATANYA_HORIZON = 1.583
 const ALOT_BAAL_HATANYA = 16.9
 const TZEIT_BAAL_HATANYA = 6
-/** Rav Y. M. Tucazinsky's tzeit (Birur Halacha, Yoreh De'ah 262): the sun 6.45 deg below the true horizon. */
+/** Rav Y. M. Tucazinsky's tzeit (Birur Halacha, Yoreh De'ah 262): the sun 6.45 deg below the true horizon.
+ * Bein Hashmashot (Tukachinsky) pp.50, 67, 72: three medium stars in Jerusalem 22-28 min after sunset, average 25. */
 const TZEIT_645 = 6.45
 /**
  * The Yereim's bein hashmashot: 3/4 mil (24 minutes a mil = 18 minutes) before sunset, by the sun's position: its
  * height above the true horizon 18 minutes before sea-level sunset in Jerusalem at the equinox, computed with this
  * library's own SPA (2.990 deg in March, 2.995 deg in September 2026). Sefer Yereim: bein hashmashot is 3/4 mil, beginning
- * before Ulla's sunset - checked in the text.
+ * before Ulla's sunset - checked in the text. Bein Hashmashot (Tukachinsky) p.33; Birur Zmanim vol 2 pp.228-231.
  */
 const BH_YEREIM = 2.99
 /**
  * 18 minutes (3/4 mil at 24 minutes a mil) expressed by the sun's position: how far the sun is below
  * the true horizon 18 minutes after sea-level sunset in Jerusalem at the equinox, computed with this
- * library's own SPA (4.655 deg in March, 4.661 deg in September 2026).
+ * library's own SPA (4.655 deg in March, 4.661 deg in September 2026). Jerusalem maariv 17-18 min after sunset per
+ * R. Shmuel Salant: Bein Hashmashot (Tukachinsky) pp.71-72.
  */
 const TZEIT_18_SUN = 4.66
 const MINUTE_MS = 60_000
@@ -431,10 +436,12 @@ export function zmanInstants(place: Coordinates, date: CivilDate, which: readonl
       // The later of 30 minutes after chatzot and half a temporal hour (GRA) after chatzot.
       case 'minchaGedola30': ms = Math.max(today.chatzot + 30 * MINUTE_MS, today.gra(6.5)); break
       case 'minchaKetana': ms = today.gra(9.5); break
+      // Plag 1.25 hours before the end of the day: Birur Zmanim vol 1 pp.320-321; vol 2 pp.257-268.
       case 'plag': ms = today.gra(10.75); break
       case 'plagMga': ms = today.mga(10.75); break
       case 'sunset': ms = today.sunset(); break
       case 'sunsetTerrain': ms = today.terrain(1); break
+      // Height: on Mount Carmel sunrise under 3 min earlier, sunset 2-3 min later - Bein Hashmashot (Tukachinsky) p.105.
       case 'sunsetElevated': ms = today.sunset(true); break
       case 'tzeitGeonim': ms = today.set(G + TZEIT_GEONIM); break
       case 'tzeitGeonimVisible': ms = today.set(today.visible(TZEIT_GEONIM)); break
@@ -448,6 +455,7 @@ export function zmanInstants(place: Coordinates, date: CivilDate, which: readonl
       case 'candles20': ms = today.sunset() - 20 * MINUTE_MS; break
       case 'candles18': ms = today.sunset() - 18 * MINUTE_MS; break
       // Rabbeinu Tam: four mil after sunset (Tosafot Shabbat 35a, from Pesachim 94a), 72 min at 18 min a mil; SA OC 261:2.
+      // Mil of 18 / 22.5 / 24 min and who holds each: Bein Hashmashot (Tukachinsky) pp.18-19; Birur Zmanim vol 2 pp.33-35.
       case 'tzeitRt72': ms = today.sunset() + 72 * MINUTE_MS; break
       // Rabbeinu Tam 4 mil of 22.5 / 24 min: Igrot Moshe OC 4:62 (72, strictest 96); Shulchan Aruch HaRav OC 261:5 with
       // OC 459:10 (mil of 24 min the main view) - checked in the text.
@@ -495,12 +503,14 @@ export function zmanInstants(place: Coordinates, date: CivilDate, which: readonl
       case 'tzeit20': ms = today.sunset() + 20 * MINUTE_MS; break
       case 'tzeit24': ms = today.sunset() + 24 * MINUTE_MS; break
       case 'tzeit30': ms = today.sunset() + 30 * MINUTE_MS; break
+      // Chazon Ish: Yom Kippur ends 40 min after sunset, Shabbat 45, a brit 35 - Birur Zmanim vol 2 p.18.
       case 'tzeit40': ms = today.sunset() + 40 * MINUTE_MS; break
       // New York: "not less than 50 minutes" for the end of Shabbat - Igrot Moshe OC 4:62, checked in the text.
       case 'tzeit50': ms = today.sunset() + 50 * MINUTE_MS; break
       // Rav Ovadia Yosef: 13.5 seasonal minutes (3/4 mil) after sunset - Kitzur Yalkut Yosef OC, checked in the text.
       case 'tzeit13p5z': ms = today.gra(12 + 13.5 / 60); break
       // Rabbeinu Tam: twilight starts 3.25 mil after sunset (4 mil less its last 3/4 mil; SA OC 261:2), 58.5 min.
+      // The Minchat Kohen's reading of Rabbeinu Tam (nightfall when three stars are seen): Birur Zmanim vol 2 pp.11-14.
       case 'beinHashmashotRt': ms = today.sunset() + 58.5 * MINUTE_MS; break
       case 'misheyakir7p65': ms = today.rise(G + MISHEYAKIR_7_65); break
       case 'misheyakir12p85': ms = today.rise(G + MISHEYAKIR_12_85); break
