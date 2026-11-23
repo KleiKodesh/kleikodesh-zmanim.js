@@ -794,6 +794,18 @@ Three quarters of a mil after sunset at 24 minutes a mil, as fixed minutes.
 - Shulchan Aruch OC 261:2 (from sunset to twilight 3.25 mil; twilight three quarters of a mil)
 - Rambam, commentary on Mishna Pesachim 3:2 (a mil = two fifths of an hour, 24 minutes)
 
+<a id="tzeit18Sun"></a>
+
+## Nightfall (18 minutes by the sun's position)
+
+Three quarters of a mil after sunset at 24 minutes a mil, measured by the sun's position: the sun's depth below the horizon 18 minutes after sunset in Jerusalem at the equinox (about 4.66 degrees). A little later in summer and earlier in winter.
+
+**Sources:**
+
+- Shabbat 34b (twilight is three quarters of a mil, Rabba in the name of Shmuel)
+- Shulchan Aruch OC 261:2
+- Rambam, commentary on Mishna Pesachim 3:2 (a mil = two fifths of an hour, 24 minutes)
+
 <a id="tzeit20"></a>
 
 ## Nightfall (20 minutes)

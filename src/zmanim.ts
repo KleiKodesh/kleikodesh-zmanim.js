@@ -12,7 +12,7 @@ export const ZMAN_NAMES = [
   'sofTfillaMga120', 'sofTfillaMga90', 'sofTfillaMga19', 'sofTfillaMga90z', 'sofTfillaMga', 'sofTfillaMga16', 'sofTfillaMga72z', 'sofTfillaGra',
   'chatzot', 'minchaGedola', 'minchaGedola30', 'minchaKetana', 'plag', 'plagMga', 'plagMga72z', 'plagMga19', 'plagMga90z', 'plagMga90', 'plagMga120',
   'candles40', 'candles30', 'candles22', 'candles20', 'candles18', 'sunsetTerrain', 'sunset', 'sunsetElevated',
-  'tzeitGeonim', 'tzeitGeonimVisible', 'tzeit13p5', 'tzeit18', 'tzeit20', 'tzeit7083', 'tzeit', 'tzeitVisible', 'tzeit24', 'tzeit30',
+  'tzeitGeonim', 'tzeitGeonimVisible', 'tzeit13p5', 'tzeit18', 'tzeit18Sun', 'tzeit20', 'tzeit7083', 'tzeit', 'tzeitVisible', 'tzeit24', 'tzeit30',
   'tzeit40', 'tzeit50', 'beinHashmashotRt', 'tzeitRt72', 'tzeitRt72Zmanis', 'tzeitRt16', 'tzeit90z',
 ] as const
 
@@ -29,7 +29,7 @@ export const ROUNDING: Readonly<Record<ZmanName, Rounding>> = {
   misheyakir: 'up', misheyakir11: 'up', misheyakir10p2: 'up', sunriseElevated: 'up', sunrise: 'up', sunriseTerrain: 'up',
   sofShmaGra: 'down', sofShmaMga: 'down', sofShmaMga16: 'down', sofTfillaGra: 'down', sofTfillaMga: 'down', sofTfillaMga16: 'down',
   chatzot: 'nearest', minchaGedola: 'up', minchaGedola30: 'up', minchaKetana: 'up', plag: 'up', plagMga: 'up',
-  sunset: 'down', sunsetElevated: 'down', sunsetTerrain: 'down', tzeitGeonim: 'up', tzeitGeonimVisible: 'up', tzeit7083: 'up', tzeit: 'up', tzeitVisible: 'up',
+  sunset: 'down', sunsetElevated: 'down', sunsetTerrain: 'down', tzeitGeonim: 'up', tzeitGeonimVisible: 'up', tzeit7083: 'up', tzeit18Sun: 'up', tzeit: 'up', tzeitVisible: 'up',
   candles40: 'down', candles30: 'down', candles22: 'down', candles20: 'down', candles18: 'down',
   tzeitRt72: 'up', tzeitRt72Zmanis: 'up', tzeitRt16: 'up',
   alot90z: 'up', alot72z: 'up', tzeit90z: 'up',
@@ -152,6 +152,12 @@ const TZEIT = 8.5
 /** Three medium stars (an observational estimate), 7.083 deg. */
 const TZEIT_7083 = 7.083
 const TZEIT_GEONIM = 3.7
+/**
+ * 18 minutes (3/4 mil at 24 minutes a mil) expressed by the sun's position: how far the sun is below
+ * the true horizon 18 minutes after sea-level sunset in Jerusalem at the equinox, computed with this
+ * library's own SPA (4.655 deg in March, 4.661 deg in September 2026).
+ */
+const TZEIT_18_SUN = 4.66
 const MINUTE_MS = 60_000
 const DAY_MS = 86_400_000
 /** SPA A.2 correction step repeats (the paper does 1; 3 converges well under a second). */
@@ -402,6 +408,7 @@ export function zmanInstants(place: Coordinates, date: CivilDate, which: readonl
       // Nightfall in fixed minutes after sunset (13.5 = 3/4 mil of 18; 18 = 3/4 mil of 24; the rest community customs).
       case 'tzeit13p5': ms = today.sunset() + 13.5 * MINUTE_MS; break
       case 'tzeit18': ms = today.sunset() + 18 * MINUTE_MS; break
+      case 'tzeit18Sun': ms = today.set(G + TZEIT_18_SUN); break
       case 'tzeit20': ms = today.sunset() + 20 * MINUTE_MS; break
       case 'tzeit24': ms = today.sunset() + 24 * MINUTE_MS; break
       case 'tzeit30': ms = today.sunset() + 30 * MINUTE_MS; break

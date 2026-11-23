@@ -1,330 +1,1750 @@
 {
   "chatzotNight": {
-    "he": { "title": "חצות הלילה", "text": "אמצע הלילה: הרגע שבו השמש בנקודה הנמוכה ביותר שלה מתחת לאופק. כאן מחושב כאמצע הזמן שבין חצות היום של אתמול לחצות היום של היום. עד זמן זה צריך לכתחילה לקרוא קריאת שמע של ערבית, ובו קם דוד המלך לעסוק בתורה.", "sources": ["ברכות ג ע״ב (כנור היה תלוי למעלה ממטתו של דוד... כיון שהגיע חצות לילה)", "שו״ע או״ח רלה, ג (קריאת שמע של ערבית: זמנה עד חצי הלילה, לכתחילה)", "ביאור הגר״א או״ח רסא, ב (במדינות הנוטות לצפון עלות השחר מתחיל בקיץ בחצי הלילה)"] },
-    "en": { "title": "Midnight (chatzot halaila)", "text": "The middle of the night: the moment the sun is at its lowest point below the horizon. Here it is computed as halfway between yesterday's and today's midday. The evening Shema should be read before this time, and King David rose at this hour to learn Torah.", "sources": ["Berachot 3b (King David's harp sounded at midnight)", "Shulchan Aruch OC 235:3 (evening Shema: its time is until midnight, ideally)", "Biur HaGra OC 261:2 (in northern lands dawn begins in summer at midnight)"] }
+    "he": {
+      "title": "חצות הלילה",
+      "text": "אמצע הלילה: הרגע שבו השמש בנקודה הנמוכה ביותר שלה מתחת לאופק. כאן מחושב כאמצע הזמן שבין חצות היום של אתמול לחצות היום של היום. עד זמן זה צריך לכתחילה לקרוא קריאת שמע של ערבית, ובו קם דוד המלך לעסוק בתורה.",
+      "sources": [
+        "ברכות ג ע״ב (כנור היה תלוי למעלה ממטתו של דוד... כיון שהגיע חצות לילה)",
+        "שו״ע או״ח רלה, ג (קריאת שמע של ערבית: זמנה עד חצי הלילה, לכתחילה)",
+        "ביאור הגר״א או״ח רסא, ב (במדינות הנוטות לצפון עלות השחר מתחיל בקיץ בחצי הלילה)"
+      ]
+    },
+    "en": {
+      "title": "Midnight (chatzot halaila)",
+      "text": "The middle of the night: the moment the sun is at its lowest point below the horizon. Here it is computed as halfway between yesterday's and today's midday. The evening Shema should be read before this time, and King David rose at this hour to learn Torah.",
+      "sources": [
+        "Berachot 3b (King David's harp sounded at midnight)",
+        "Shulchan Aruch OC 235:3 (evening Shema: its time is until midnight, ideally)",
+        "Biur HaGra OC 261:2 (in northern lands dawn begins in summer at midnight)"
+      ]
+    }
   },
   "alot90": {
-    "he": { "title": "עלות השחר (90 דקות)", "text": "תחילת האור הראשון בבוקר, לפי השיטה המאוחרת יותר בשיעור הזמן שמעלות השחר ועד הנץ: כ־90 דקות לפני הנץ. כאן: כשהשמש 19.8 מעלות מתחת לאופק הגאומטרי בבוקר, שהוא 90 דקות לפני הנץ בירושלים בימי ניסן ותשרי.", "sources": ["פסחים צד ע״א (מעלות השחר ועד הנץ החמה חמשה מילין, לדברי רבי יוחנן; לרבי יהודה ארבעה מילין)", "שו״ע או״ח תנט, ב; משנה ברורה תנט, טו (מיל = 18 דקות; 5 מילין = 90 דקות)", "ביאור הגר״א או״ח רסא, ב (בשם הרמב״ם ואבן עזרא: שיעור הנשף כ׳ מעלות)", "חישוב אסטרונומי: בירושלים בימי השוויון השמש נמצאת 19.8 מעלות מתחת לאופק כ־90 דקות לפני הנץ"] },
-    "en": { "title": "Dawn (90 minutes)", "text": "The first light of morning, by the longer measure of the time from dawn to sunrise: about 90 minutes before sunrise. Here: the sun 19.8 degrees below the geometric horizon in the morning, which is 90 minutes before sunrise in Jerusalem at the equinox.", "sources": ["Pesachim 94a (from dawn to sunrise five mil, in Rabbi Yochanan's statement; four mil according to Rabbi Yehuda)", "Shulchan Aruch OC 459:2; Mishna Berura 459:15 (a mil = 18 minutes; 5 mil = 90 minutes)", "Biur HaGra OC 261:2 (citing Rambam and Ibn Ezra: twilight is 20 degrees)", "Astronomy: in Jerusalem at the equinox the sun is 19.8 degrees below the horizon about 90 minutes before sunrise"] }
+    "he": {
+      "title": "עלות השחר (90 דקות)",
+      "text": "תחילת האור הראשון בבוקר, לפי השיטה המאוחרת יותר בשיעור הזמן שמעלות השחר ועד הנץ: כ־90 דקות לפני הנץ. כאן: כשהשמש 19.8 מעלות מתחת לאופק הגאומטרי בבוקר, שהוא 90 דקות לפני הנץ בירושלים בימי ניסן ותשרי.",
+      "sources": [
+        "פסחים צד ע״א (מעלות השחר ועד הנץ החמה חמשה מילין, לדברי רבי יוחנן; לרבי יהודה ארבעה מילין)",
+        "שו״ע או״ח תנט, ב; משנה ברורה תנט, טו (מיל = 18 דקות; 5 מילין = 90 דקות)",
+        "ביאור הגר״א או״ח רסא, ב (בשם הרמב״ם ואבן עזרא: שיעור הנשף כ׳ מעלות)",
+        "חישוב אסטרונומי: בירושלים בימי השוויון השמש נמצאת 19.8 מעלות מתחת לאופק כ־90 דקות לפני הנץ"
+      ]
+    },
+    "en": {
+      "title": "Dawn (90 minutes)",
+      "text": "The first light of morning, by the longer measure of the time from dawn to sunrise: about 90 minutes before sunrise. Here: the sun 19.8 degrees below the geometric horizon in the morning, which is 90 minutes before sunrise in Jerusalem at the equinox.",
+      "sources": [
+        "Pesachim 94a (from dawn to sunrise five mil, in Rabbi Yochanan's statement; four mil according to Rabbi Yehuda)",
+        "Shulchan Aruch OC 459:2; Mishna Berura 459:15 (a mil = 18 minutes; 5 mil = 90 minutes)",
+        "Biur HaGra OC 261:2 (citing Rambam and Ibn Ezra: twilight is 20 degrees)",
+        "Astronomy: in Jerusalem at the equinox the sun is 19.8 degrees below the horizon about 90 minutes before sunrise"
+      ]
+    }
   },
   "alot90Visible": {
-    "he": { "title": "עלות השחר (90 דקות, מהאופק הנראה)", "text": "כמו עלות השחר של 90 דקות (19.8 מעלות), אלא שהמעלות נמדדות מהאופק הנראה לעין, שהשבירה באוויר מגביהה אותו. יוצא כ־2 עד 4 דקות מוקדם יותר.", "sources": ["פסחים צד ע״א", "שו״ע או״ח תנט, ב; משנה ברורה תנט, טו", "חישוב אסטרונומי: שבירת האור באופק לפי לחץ האוויר והטמפרטורה של המקום (Meeus, Astronomical Algorithms, פרק 16)"] },
-    "en": { "title": "Dawn (90 minutes, from the visible horizon)", "text": "Like the 90-minute dawn (19.8 degrees), but the degrees are measured from the visible horizon, which refraction in the air lifts. It comes out about 2 to 4 minutes earlier.", "sources": ["Pesachim 94a", "Shulchan Aruch OC 459:2; Mishna Berura 459:15", "Astronomy: horizon refraction from the place's air pressure and temperature (Meeus, Astronomical Algorithms, ch. 16)"] }
+    "he": {
+      "title": "עלות השחר (90 דקות, מהאופק הנראה)",
+      "text": "כמו עלות השחר של 90 דקות (19.8 מעלות), אלא שהמעלות נמדדות מהאופק הנראה לעין, שהשבירה באוויר מגביהה אותו. יוצא כ־2 עד 4 דקות מוקדם יותר.",
+      "sources": [
+        "פסחים צד ע״א",
+        "שו״ע או״ח תנט, ב; משנה ברורה תנט, טו",
+        "חישוב אסטרונומי: שבירת האור באופק לפי לחץ האוויר והטמפרטורה של המקום (Meeus, Astronomical Algorithms, פרק 16)"
+      ]
+    },
+    "en": {
+      "title": "Dawn (90 minutes, from the visible horizon)",
+      "text": "Like the 90-minute dawn (19.8 degrees), but the degrees are measured from the visible horizon, which refraction in the air lifts. It comes out about 2 to 4 minutes earlier.",
+      "sources": [
+        "Pesachim 94a",
+        "Shulchan Aruch OC 459:2; Mishna Berura 459:15",
+        "Astronomy: horizon refraction from the place's air pressure and temperature (Meeus, Astronomical Algorithms, ch. 16)"
+      ]
+    }
   },
   "alot90Chatzot": {
-    "he": { "title": "עלות השחר (90 דקות, או חצות)", "text": "עלות השחר של 90 דקות (19.8 מעלות). בלילות קיץ בארצות הצפוניות שבהם השמש אינה יורדת כל כך נמוך, נותן חצות הלילה, כדברי הגר״א שבארצות אלו עלות השחר מתחיל בחצות.", "sources": ["פסחים צד ע״א", "ביאור הגר״א או״ח רסא, ב (במדינות הנוטין לצפון שעלות השחר מתחיל בקיץ בחצי הלילה)"] },
-    "en": { "title": "Dawn (90 minutes, or midnight)", "text": "The 90-minute dawn (19.8 degrees). On summer nights in northern lands where the sun never gets that low, it gives midnight instead, following the Vilna Gaon that in such lands dawn begins at midnight.", "sources": ["Pesachim 94a", "Biur HaGra OC 261:2 (in northern lands dawn begins in summer at midnight)"] }
+    "he": {
+      "title": "עלות השחר (90 דקות, או חצות)",
+      "text": "עלות השחר של 90 דקות (19.8 מעלות). בלילות קיץ בארצות הצפוניות שבהם השמש אינה יורדת כל כך נמוך, נותן חצות הלילה, כדברי הגר״א שבארצות אלו עלות השחר מתחיל בחצות.",
+      "sources": [
+        "פסחים צד ע״א",
+        "ביאור הגר״א או״ח רסא, ב (במדינות הנוטין לצפון שעלות השחר מתחיל בקיץ בחצי הלילה)"
+      ]
+    },
+    "en": {
+      "title": "Dawn (90 minutes, or midnight)",
+      "text": "The 90-minute dawn (19.8 degrees). On summer nights in northern lands where the sun never gets that low, it gives midnight instead, following the Vilna Gaon that in such lands dawn begins at midnight.",
+      "sources": [
+        "Pesachim 94a",
+        "Biur HaGra OC 261:2 (in northern lands dawn begins in summer at midnight)"
+      ]
+    }
   },
   "alot": {
-    "he": { "title": "עלות השחר", "text": "תחילת האור הראשון במזרח. מזמן זה בדיעבד יוצאים בתפילת שחרית ובמצוות היום. כאן: כשהשמש 16.1 מעלות מתחת לאופק בבוקר, שהוא 72 דקות (ארבעה מילין של 18 דקות) לפני הנץ בירושלים בימי ניסן ותשרי.", "sources": ["פסחים צד ע״א (רבי יהודה: מעלות השחר עד הנץ החמה ארבעת מילין)", "שו״ע או״ח תנט, ב; משנה ברורה תנט, טו (מיל = 18 דקות)", "שו״ע או״ח פט, א; משנה ברורה פט, ב (מה עלות השחר, ותפילה מעלות השחר בדיעבד)", "חישוב אסטרונומי: בירושלים בימי השוויון השמש נמצאת 16.1 מעלות מתחת לאופק 72 דקות לפני הנץ"] },
-    "en": { "title": "Dawn (alot hashachar)", "text": "The first light in the east. From this time one fulfils, after the fact, the morning prayer and the daytime mitzvos. Here: the sun 16.1 degrees below the horizon in the morning, which is 72 minutes (four mil of 18 minutes) before sunrise in Jerusalem at the equinox.", "sources": ["Pesachim 94a (Rabbi Yehuda: from dawn to sunrise four mil)", "Shulchan Aruch OC 459:2; Mishna Berura 459:15 (a mil = 18 minutes)", "Shulchan Aruch OC 89:1; Mishna Berura 89:2 (what dawn is; prayer from dawn after the fact)", "Astronomy: in Jerusalem at the equinox the sun is 16.1 degrees below the horizon 72 minutes before sunrise"] }
+    "he": {
+      "title": "עלות השחר",
+      "text": "תחילת האור הראשון במזרח. מזמן זה בדיעבד יוצאים בתפילת שחרית ובמצוות היום. כאן: כשהשמש 16.1 מעלות מתחת לאופק בבוקר, שהוא 72 דקות (ארבעה מילין של 18 דקות) לפני הנץ בירושלים בימי ניסן ותשרי.",
+      "sources": [
+        "פסחים צד ע״א (רבי יהודה: מעלות השחר עד הנץ החמה ארבעת מילין)",
+        "שו״ע או״ח תנט, ב; משנה ברורה תנט, טו (מיל = 18 דקות)",
+        "שו״ע או״ח פט, א; משנה ברורה פט, ב (מה עלות השחר, ותפילה מעלות השחר בדיעבד)",
+        "חישוב אסטרונומי: בירושלים בימי השוויון השמש נמצאת 16.1 מעלות מתחת לאופק 72 דקות לפני הנץ"
+      ]
+    },
+    "en": {
+      "title": "Dawn (alot hashachar)",
+      "text": "The first light in the east. From this time one fulfils, after the fact, the morning prayer and the daytime mitzvos. Here: the sun 16.1 degrees below the horizon in the morning, which is 72 minutes (four mil of 18 minutes) before sunrise in Jerusalem at the equinox.",
+      "sources": [
+        "Pesachim 94a (Rabbi Yehuda: from dawn to sunrise four mil)",
+        "Shulchan Aruch OC 459:2; Mishna Berura 459:15 (a mil = 18 minutes)",
+        "Shulchan Aruch OC 89:1; Mishna Berura 89:2 (what dawn is; prayer from dawn after the fact)",
+        "Astronomy: in Jerusalem at the equinox the sun is 16.1 degrees below the horizon 72 minutes before sunrise"
+      ]
+    }
   },
   "alotVisible": {
-    "he": { "title": "עלות השחר (מהאופק הנראה)", "text": "כמו עלות השחר (16.1 מעלות), אלא שהמעלות נמדדות מהאופק הנראה לעין, שהשבירה באוויר מגביהה אותו. יוצא כ־2 עד 4 דקות מוקדם יותר.", "sources": ["פסחים צד ע״א", "שו״ע או״ח פט, א", "חישוב אסטרונומי: שבירת האור באופק לפי לחץ האוויר והטמפרטורה של המקום (Meeus, Astronomical Algorithms, פרק 16)"] },
-    "en": { "title": "Dawn (from the visible horizon)", "text": "Like dawn (16.1 degrees), but the degrees are measured from the visible horizon, which refraction in the air lifts. It comes out about 2 to 4 minutes earlier.", "sources": ["Pesachim 94a", "Shulchan Aruch OC 89:1", "Astronomy: horizon refraction from the place's air pressure and temperature (Meeus, Astronomical Algorithms, ch. 16)"] }
+    "he": {
+      "title": "עלות השחר (מהאופק הנראה)",
+      "text": "כמו עלות השחר (16.1 מעלות), אלא שהמעלות נמדדות מהאופק הנראה לעין, שהשבירה באוויר מגביהה אותו. יוצא כ־2 עד 4 דקות מוקדם יותר.",
+      "sources": [
+        "פסחים צד ע״א",
+        "שו״ע או״ח פט, א",
+        "חישוב אסטרונומי: שבירת האור באופק לפי לחץ האוויר והטמפרטורה של המקום (Meeus, Astronomical Algorithms, פרק 16)"
+      ]
+    },
+    "en": {
+      "title": "Dawn (from the visible horizon)",
+      "text": "Like dawn (16.1 degrees), but the degrees are measured from the visible horizon, which refraction in the air lifts. It comes out about 2 to 4 minutes earlier.",
+      "sources": [
+        "Pesachim 94a",
+        "Shulchan Aruch OC 89:1",
+        "Astronomy: horizon refraction from the place's air pressure and temperature (Meeus, Astronomical Algorithms, ch. 16)"
+      ]
+    }
   },
   "alotChatzot": {
-    "he": { "title": "עלות השחר (או חצות)", "text": "עלות השחר (16.1 מעלות). בלילות קיץ בארצות הצפוניות שבהם השמש אינה יורדת כל כך נמוך, נותן חצות הלילה, כדברי הגר״א.", "sources": ["פסחים צד ע״א", "ביאור הגר״א או״ח רסא, ב (במדינות הנוטין לצפון שעלות השחר מתחיל בקיץ בחצי הלילה)"] },
-    "en": { "title": "Dawn (or midnight)", "text": "Dawn (16.1 degrees). On summer nights in northern lands where the sun never gets that low, it gives midnight instead, following the Vilna Gaon.", "sources": ["Pesachim 94a", "Biur HaGra OC 261:2 (in northern lands dawn begins in summer at midnight)"] }
+    "he": {
+      "title": "עלות השחר (או חצות)",
+      "text": "עלות השחר (16.1 מעלות). בלילות קיץ בארצות הצפוניות שבהם השמש אינה יורדת כל כך נמוך, נותן חצות הלילה, כדברי הגר״א.",
+      "sources": [
+        "פסחים צד ע״א",
+        "ביאור הגר״א או״ח רסא, ב (במדינות הנוטין לצפון שעלות השחר מתחיל בקיץ בחצי הלילה)"
+      ]
+    },
+    "en": {
+      "title": "Dawn (or midnight)",
+      "text": "Dawn (16.1 degrees). On summer nights in northern lands where the sun never gets that low, it gives midnight instead, following the Vilna Gaon.",
+      "sources": [
+        "Pesachim 94a",
+        "Biur HaGra OC 261:2 (in northern lands dawn begins in summer at midnight)"
+      ]
+    }
   },
   "misheyakir": {
-    "he": { "title": "משיכיר", "text": "כשיש די אור כדי להבחין בין תכלת ללבן, ולהכיר חבר מוכר ממרחק ארבע אמות. מזמן זה מברכים על ציצית ותפילין, ומתחיל זמן קריאת שמע של שחרית. כאן: כשהשמש 11.5 מעלות מתחת לאופק בבוקר (כ־50 דקות לפני הנץ בירושלים בימי השוויון). מספר המעלות אינו מן הגמרא אלא אומדן של המדידה.", "sources": ["ברכות ט ע״ב (משיכיר בין תכלת ללבן)", "שו״ע או״ח יח, ג (מברך על הציצית משיכיר בין תכלת שבה ללבן שבה)", "שו״ע או״ח נח, א (משיראה את חבירו ברחוק ד׳ אמות ויכירנו)"] },
-    "en": { "title": "Misheyakir", "text": "When there is enough light to tell blue from white, and to recognize a familiar friend four amos away. From now one says the blessing on tzitzis and tefillin, and the time of the morning Shema begins. Here: the sun 11.5 degrees below the horizon in the morning (about 50 minutes before sunrise in Jerusalem at the equinox). The degree figure is not from the Talmud; it is an estimate of when this light appears.", "sources": ["Berachot 9b (when one can tell blue from white)", "Shulchan Aruch OC 18:3 (blessing on tzitzis from when one can tell its blue from its white)", "Shulchan Aruch OC 58:1 (when one sees a friend four amos away and recognizes him)"] }
+    "he": {
+      "title": "משיכיר",
+      "text": "כשיש די אור כדי להבחין בין תכלת ללבן, ולהכיר חבר מוכר ממרחק ארבע אמות. מזמן זה מברכים על ציצית ותפילין, ומתחיל זמן קריאת שמע של שחרית. כאן: כשהשמש 11.5 מעלות מתחת לאופק בבוקר (כ־50 דקות לפני הנץ בירושלים בימי השוויון). מספר המעלות אינו מן הגמרא אלא אומדן של המדידה.",
+      "sources": [
+        "ברכות ט ע״ב (משיכיר בין תכלת ללבן)",
+        "שו״ע או״ח יח, ג (מברך על הציצית משיכיר בין תכלת שבה ללבן שבה)",
+        "שו״ע או״ח נח, א (משיראה את חבירו ברחוק ד׳ אמות ויכירנו)"
+      ]
+    },
+    "en": {
+      "title": "Misheyakir",
+      "text": "When there is enough light to tell blue from white, and to recognize a familiar friend four amos away. From now one says the blessing on tzitzis and tefillin, and the time of the morning Shema begins. Here: the sun 11.5 degrees below the horizon in the morning (about 50 minutes before sunrise in Jerusalem at the equinox). The degree figure is not from the Talmud; it is an estimate of when this light appears.",
+      "sources": [
+        "Berachot 9b (when one can tell blue from white)",
+        "Shulchan Aruch OC 18:3 (blessing on tzitzis from when one can tell its blue from its white)",
+        "Shulchan Aruch OC 58:1 (when one sees a friend four amos away and recognizes him)"
+      ]
+    }
   },
   "misheyakirVisible": {
-    "he": { "title": "משיכיר (מהאופק הנראה)", "text": "כמו משיכיר (11.5 מעלות), אלא שהמעלות נמדדות מהאופק הנראה לעין. יוצא כ־2 עד 4 דקות מוקדם יותר.", "sources": ["ברכות ט ע״ב", "שו״ע או״ח יח, ג", "חישוב אסטרונומי: שבירת האור באופק (Meeus, Astronomical Algorithms, פרק 16)"] },
-    "en": { "title": "Misheyakir (from the visible horizon)", "text": "Like misheyakir (11.5 degrees), but the degrees are measured from the visible horizon. It comes out about 2 to 4 minutes earlier.", "sources": ["Berachot 9b", "Shulchan Aruch OC 18:3", "Astronomy: horizon refraction (Meeus, Astronomical Algorithms, ch. 16)"] }
+    "he": {
+      "title": "משיכיר (מהאופק הנראה)",
+      "text": "כמו משיכיר (11.5 מעלות), אלא שהמעלות נמדדות מהאופק הנראה לעין. יוצא כ־2 עד 4 דקות מוקדם יותר.",
+      "sources": [
+        "ברכות ט ע״ב",
+        "שו״ע או״ח יח, ג",
+        "חישוב אסטרונומי: שבירת האור באופק (Meeus, Astronomical Algorithms, פרק 16)"
+      ]
+    },
+    "en": {
+      "title": "Misheyakir (from the visible horizon)",
+      "text": "Like misheyakir (11.5 degrees), but the degrees are measured from the visible horizon. It comes out about 2 to 4 minutes earlier.",
+      "sources": [
+        "Berachot 9b",
+        "Shulchan Aruch OC 18:3",
+        "Astronomy: horizon refraction (Meeus, Astronomical Algorithms, ch. 16)"
+      ]
+    }
   },
   "misheyakirChatzot": {
-    "he": { "title": "משיכיר (או חצות)", "text": "משיכיר (11.5 מעלות). בלילות קיץ בארצות הצפוניות שבהם השמש אינה יורדת כל כך נמוך, נותן חצות הלילה.", "sources": ["ברכות ט ע״ב", "ביאור הגר״א או״ח רסא, ב (במדינות הנוטין לצפון שעלות השחר מתחיל בקיץ בחצי הלילה)"] },
-    "en": { "title": "Misheyakir (or midnight)", "text": "Misheyakir (11.5 degrees). On summer nights in northern lands where the sun never gets that low, it gives midnight instead.", "sources": ["Berachot 9b", "Biur HaGra OC 261:2 (in northern lands dawn begins in summer at midnight)"] }
+    "he": {
+      "title": "משיכיר (או חצות)",
+      "text": "משיכיר (11.5 מעלות). בלילות קיץ בארצות הצפוניות שבהם השמש אינה יורדת כל כך נמוך, נותן חצות הלילה.",
+      "sources": [
+        "ברכות ט ע״ב",
+        "ביאור הגר״א או״ח רסא, ב (במדינות הנוטין לצפון שעלות השחר מתחיל בקיץ בחצי הלילה)"
+      ]
+    },
+    "en": {
+      "title": "Misheyakir (or midnight)",
+      "text": "Misheyakir (11.5 degrees). On summer nights in northern lands where the sun never gets that low, it gives midnight instead.",
+      "sources": [
+        "Berachot 9b",
+        "Biur HaGra OC 261:2 (in northern lands dawn begins in summer at midnight)"
+      ]
+    }
   },
   "misheyakir11": {
-    "he": { "title": "משיכיר (11 מעלות)", "text": "משיכיר לפי אומדן אחר: כשהשמש 11 מעלות מתחת לאופק בבוקר (כ־48 דקות לפני הנץ בירושלים בימי השוויון). מעט מאוחר מ־11.5 מעלות.", "sources": ["ברכות ט ע״ב", "שו״ע או״ח יח, ג", "שו״ע או״ח נח, א"] },
-    "en": { "title": "Misheyakir (11 degrees)", "text": "Misheyakir by another estimate: the sun 11 degrees below the horizon in the morning (about 48 minutes before sunrise in Jerusalem at the equinox). A little later than 11.5 degrees.", "sources": ["Berachot 9b", "Shulchan Aruch OC 18:3", "Shulchan Aruch OC 58:1"] }
+    "he": {
+      "title": "משיכיר (11 מעלות)",
+      "text": "משיכיר לפי אומדן אחר: כשהשמש 11 מעלות מתחת לאופק בבוקר (כ־48 דקות לפני הנץ בירושלים בימי השוויון). מעט מאוחר מ־11.5 מעלות.",
+      "sources": [
+        "ברכות ט ע״ב",
+        "שו״ע או״ח יח, ג",
+        "שו״ע או״ח נח, א"
+      ]
+    },
+    "en": {
+      "title": "Misheyakir (11 degrees)",
+      "text": "Misheyakir by another estimate: the sun 11 degrees below the horizon in the morning (about 48 minutes before sunrise in Jerusalem at the equinox). A little later than 11.5 degrees.",
+      "sources": [
+        "Berachot 9b",
+        "Shulchan Aruch OC 18:3",
+        "Shulchan Aruch OC 58:1"
+      ]
+    }
   },
   "misheyakir10p2": {
-    "he": { "title": "משיכיר (10.2 מעלות)", "text": "משיכיר לפי אומדן מאוחר יותר: כשהשמש 10.2 מעלות מתחת לאופק בבוקר (כ־44 דקות לפני הנץ בירושלים בימי השוויון).", "sources": ["ברכות ט ע״ב", "שו״ע או״ח יח, ג", "שו״ע או״ח נח, א"] },
-    "en": { "title": "Misheyakir (10.2 degrees)", "text": "Misheyakir by a later estimate: the sun 10.2 degrees below the horizon in the morning (about 44 minutes before sunrise in Jerusalem at the equinox).", "sources": ["Berachot 9b", "Shulchan Aruch OC 18:3", "Shulchan Aruch OC 58:1"] }
+    "he": {
+      "title": "משיכיר (10.2 מעלות)",
+      "text": "משיכיר לפי אומדן מאוחר יותר: כשהשמש 10.2 מעלות מתחת לאופק בבוקר (כ־44 דקות לפני הנץ בירושלים בימי השוויון).",
+      "sources": [
+        "ברכות ט ע״ב",
+        "שו״ע או״ח יח, ג",
+        "שו״ע או״ח נח, א"
+      ]
+    },
+    "en": {
+      "title": "Misheyakir (10.2 degrees)",
+      "text": "Misheyakir by a later estimate: the sun 10.2 degrees below the horizon in the morning (about 44 minutes before sunrise in Jerusalem at the equinox).",
+      "sources": [
+        "Berachot 9b",
+        "Shulchan Aruch OC 18:3",
+        "Shulchan Aruch OC 58:1"
+      ]
+    }
   },
   "sunriseElevated": {
-    "he": { "title": "הנץ החמה (לפי גובה המקום)", "text": "הנץ החמה כפי שהוא נראה מגובה המקום עצמו: מהר או מבניין גבוה האופק נמוך יותר, ולכן השמש נראית מוקדם יותר. החישוב מוסיף את שקיעת האופק לפי הגובה ואת שבירת האור.", "sources": ["שו״ע או״ח נח, א (ותיקין: מסיימים קריאת שמע עם הנץ החמה)", "שו״ע או״ח פט, א (תפילת השחר מצותה עם הנץ החמה)", "חישוב אסטרונומי: שקיעת האופק arccos(R/(R+h)) ושבירת האור (Meeus, Astronomical Algorithms, פרק 16)"] },
-    "en": { "title": "Sunrise (from the place's elevation)", "text": "Sunrise as seen from the place's own height: from a mountain or a high building the horizon is lower, so the sun appears earlier. The calculation adds the dip of the horizon for that height and refraction.", "sources": ["Shulchan Aruch OC 58:1 (the vasikin finish Shema at sunrise)", "Shulchan Aruch OC 89:1 (the morning prayer is ideally at sunrise)", "Astronomy: horizon dip arccos(R/(R+h)) and refraction (Meeus, Astronomical Algorithms, ch. 16)"] }
+    "he": {
+      "title": "הנץ החמה (לפי גובה המקום)",
+      "text": "הנץ החמה כפי שהוא נראה מגובה המקום עצמו: מהר או מבניין גבוה האופק נמוך יותר, ולכן השמש נראית מוקדם יותר. החישוב מוסיף את שקיעת האופק לפי הגובה ואת שבירת האור.",
+      "sources": [
+        "שו״ע או״ח נח, א (ותיקין: מסיימים קריאת שמע עם הנץ החמה)",
+        "שו״ע או״ח פט, א (תפילת השחר מצותה עם הנץ החמה)",
+        "חישוב אסטרונומי: שקיעת האופק arccos(R/(R+h)) ושבירת האור (Meeus, Astronomical Algorithms, פרק 16)"
+      ]
+    },
+    "en": {
+      "title": "Sunrise (from the place's elevation)",
+      "text": "Sunrise as seen from the place's own height: from a mountain or a high building the horizon is lower, so the sun appears earlier. The calculation adds the dip of the horizon for that height and refraction.",
+      "sources": [
+        "Shulchan Aruch OC 58:1 (the vasikin finish Shema at sunrise)",
+        "Shulchan Aruch OC 89:1 (the morning prayer is ideally at sunrise)",
+        "Astronomy: horizon dip arccos(R/(R+h)) and refraction (Meeus, Astronomical Algorithms, ch. 16)"
+      ]
+    }
   },
   "sunrise": {
-    "he": { "title": "הנץ החמה", "text": "הרגע שבו הקצה העליון של השמש נראה על האופק, בגובה פני הים. זה הזמן המובחר לתפילת שחרית (ותיקין), ומכאן מונים את השעות לשיטת הגר״א.", "sources": ["ברכות ט ע״ב (ותיקין)", "שו״ע או״ח נח, א (ותיקין: מסיימים קריאת שמע עם הנץ החמה וסומכים לה התפילה)", "שו״ע או״ח פט, א (מצותה שיתחיל עם הנץ החמה)", "חישוב אסטרונומי: קצה השמש העליון באופק, עם שבירת האור לפי לחץ וטמפרטורה (Meeus, Astronomical Algorithms, פרקים 15-16)"] },
-    "en": { "title": "Sunrise", "text": "The moment the top edge of the sun appears on the horizon, at sea level. It is the best time for the morning prayer (vasikin), and the hours of the Vilna Gaon's method are counted from it.", "sources": ["Berachot 9b (vasikin)", "Shulchan Aruch OC 58:1 (the vasikin finish Shema at sunrise and pray right after)", "Shulchan Aruch OC 89:1 (ideally the prayer starts at sunrise)", "Astronomy: the upper limb of the sun on the horizon, with refraction from pressure and temperature (Meeus, Astronomical Algorithms, ch. 15-16)"] }
+    "he": {
+      "title": "הנץ החמה",
+      "text": "הרגע שבו הקצה העליון של השמש נראה על האופק, בגובה פני הים. זה הזמן המובחר לתפילת שחרית (ותיקין), ומכאן מונים את השעות לשיטת הגר״א.",
+      "sources": [
+        "ברכות ט ע״ב (ותיקין)",
+        "שו״ע או״ח נח, א (ותיקין: מסיימים קריאת שמע עם הנץ החמה וסומכים לה התפילה)",
+        "שו״ע או״ח פט, א (מצותה שיתחיל עם הנץ החמה)",
+        "חישוב אסטרונומי: קצה השמש העליון באופק, עם שבירת האור לפי לחץ וטמפרטורה (Meeus, Astronomical Algorithms, פרקים 15-16)"
+      ]
+    },
+    "en": {
+      "title": "Sunrise",
+      "text": "The moment the top edge of the sun appears on the horizon, at sea level. It is the best time for the morning prayer (vasikin), and the hours of the Vilna Gaon's method are counted from it.",
+      "sources": [
+        "Berachot 9b (vasikin)",
+        "Shulchan Aruch OC 58:1 (the vasikin finish Shema at sunrise and pray right after)",
+        "Shulchan Aruch OC 89:1 (ideally the prayer starts at sunrise)",
+        "Astronomy: the upper limb of the sun on the horizon, with refraction from pressure and temperature (Meeus, Astronomical Algorithms, ch. 15-16)"
+      ]
+    }
   },
   "sunriseTerrain": {
-    "he": { "title": "הנץ החמה הנראה (לפי ההרים)", "text": "הרגע שבו קצה השמש העליון נראה מעל ההרים שבמזרח, ולא מעל אופק ישר בגובה פני הים. מקום שיש הרים ממזרחו רואה את השמש מאוחר יותר. גובה ההרים בכל כיוון מחושב ממפת גבהים, עם עקמומיות כדור הארץ ושבירת האור. מקום שאין לו נתוני הרים - אין לו זמן זה.", "sources": ["שו״ע או״ח נח, א (ותיקין: מסיימים קריאת שמע עם הנץ החמה)", "שו״ע או״ח פט, א (תפילת השחר מצותה עם הנץ החמה)", "חישוב: מפת הגבהים Copernicus DEM GLO-90, שבירת אור (Meeus, Astronomical Algorithms, פרק 16), מקדם שבירה ארצית 0.13"] },
-    "en": { "title": "Visible sunrise (over the mountains)", "text": "The moment the sun's upper edge appears over the actual hills and mountains to the east, rather than over a flat sea-level horizon. A place with mountains to its east sees the sun later. The height of the surrounding land in every direction comes from an elevation map, with the Earth's curvature and refraction. Places without terrain data have no time for this line.", "sources": ["Shulchan Aruch OC 58:1 (the vasikin finish Shema at sunrise)", "Shulchan Aruch OC 89:1 (the morning prayer is ideally at sunrise)", "Calculation: Copernicus DEM GLO-90 elevation model, refraction (Meeus, Astronomical Algorithms, ch. 16), terrestrial refraction coefficient 0.13"] }
+    "he": {
+      "title": "הנץ החמה הנראה (לפי ההרים)",
+      "text": "הרגע שבו קצה השמש העליון נראה מעל ההרים שבמזרח, ולא מעל אופק ישר בגובה פני הים. מקום שיש הרים ממזרחו רואה את השמש מאוחר יותר. גובה ההרים בכל כיוון מחושב ממפת גבהים, עם עקמומיות כדור הארץ ושבירת האור. מקום שאין לו נתוני הרים - אין לו זמן זה.",
+      "sources": [
+        "שו״ע או״ח נח, א (ותיקין: מסיימים קריאת שמע עם הנץ החמה)",
+        "שו״ע או״ח פט, א (תפילת השחר מצותה עם הנץ החמה)",
+        "חישוב: מפת הגבהים Copernicus DEM GLO-90, שבירת אור (Meeus, Astronomical Algorithms, פרק 16), מקדם שבירה ארצית 0.13"
+      ]
+    },
+    "en": {
+      "title": "Visible sunrise (over the mountains)",
+      "text": "The moment the sun's upper edge appears over the actual hills and mountains to the east, rather than over a flat sea-level horizon. A place with mountains to its east sees the sun later. The height of the surrounding land in every direction comes from an elevation map, with the Earth's curvature and refraction. Places without terrain data have no time for this line.",
+      "sources": [
+        "Shulchan Aruch OC 58:1 (the vasikin finish Shema at sunrise)",
+        "Shulchan Aruch OC 89:1 (the morning prayer is ideally at sunrise)",
+        "Calculation: Copernicus DEM GLO-90 elevation model, refraction (Meeus, Astronomical Algorithms, ch. 16), terrestrial refraction coefficient 0.13"
+      ]
+    }
   },
   "sofShmaMga": {
-    "he": { "title": "סוף זמן קריאת שמע (מגן אברהם)", "text": "קריאת שמע של שחרית זמנה עד סוף שלוש שעות זמניות. לשיטת המגן אברהם מונים את היום מעלות השחר ועד צאת הכוכבים: כאן 72 דקות לפני הנץ עד 72 דקות אחרי השקיעה, וכל שעה היא שנים עשר של זמן זה.", "sources": ["משנה ברכות א, ב (עד שלש שעות)", "שו״ע או״ח נח, א (עד סוף ג׳ שעות שהוא רביע היום)", "מגן אברהם נח, א (מונים מעלות השחר)", "משנה ברורה נח, ד (המ״א מונה מעמוד השחר, ודעת הגר״א משעת הנץ)", "פסחים צד ע״א; שו״ע או״ח תנט, ב (ארבעה מילין של 18 דקות = 72 דקות)"] },
-    "en": { "title": "Latest Shema (Magen Avraham)", "text": "The morning Shema may be read until the end of three temporal hours. By the Magen Avraham the day is counted from dawn to nightfall: here from 72 minutes before sunrise to 72 minutes after sunset, and each hour is a twelfth of that span.", "sources": ["Mishna Berachot 1:2 (until three hours)", "Shulchan Aruch OC 58:1 (until the end of three hours, a quarter of the day)", "Magen Avraham 58:1 (counted from dawn)", "Mishna Berura 58:4 (Magen Avraham counts from dawn; the Vilna Gaon from sunrise)", "Pesachim 94a; Shulchan Aruch OC 459:2 (four mil of 18 minutes = 72 minutes)"] }
+    "he": {
+      "title": "סוף זמן קריאת שמע (מגן אברהם)",
+      "text": "קריאת שמע של שחרית זמנה עד סוף שלוש שעות זמניות. לשיטת המגן אברהם מונים את היום מעלות השחר ועד צאת הכוכבים: כאן 72 דקות לפני הנץ עד 72 דקות אחרי השקיעה, וכל שעה היא שנים עשר של זמן זה.",
+      "sources": [
+        "משנה ברכות א, ב (עד שלש שעות)",
+        "שו״ע או״ח נח, א (עד סוף ג׳ שעות שהוא רביע היום)",
+        "מגן אברהם נח, א (מונים מעלות השחר)",
+        "משנה ברורה נח, ד (המ״א מונה מעמוד השחר, ודעת הגר״א משעת הנץ)",
+        "פסחים צד ע״א; שו״ע או״ח תנט, ב (ארבעה מילין של 18 דקות = 72 דקות)"
+      ]
+    },
+    "en": {
+      "title": "Latest Shema (Magen Avraham)",
+      "text": "The morning Shema may be read until the end of three temporal hours. By the Magen Avraham the day is counted from dawn to nightfall: here from 72 minutes before sunrise to 72 minutes after sunset, and each hour is a twelfth of that span.",
+      "sources": [
+        "Mishna Berachot 1:2 (until three hours)",
+        "Shulchan Aruch OC 58:1 (until the end of three hours, a quarter of the day)",
+        "Magen Avraham 58:1 (counted from dawn)",
+        "Mishna Berura 58:4 (Magen Avraham counts from dawn; the Vilna Gaon from sunrise)",
+        "Pesachim 94a; Shulchan Aruch OC 459:2 (four mil of 18 minutes = 72 minutes)"
+      ]
+    }
   },
   "sofShmaMga16": {
-    "he": { "title": "סוף זמן קריאת שמע (מגן אברהם, במעלות)", "text": "כמו סוף זמן קריאת שמע לשיטת המגן אברהם, אלא שהיום נמדד במעלות: מעלות השחר (השמש 16.1 מעלות מתחת לאופק בבוקר) עד שהשמש 16.1 מעלות מתחת לאופק בערב. כך אורך היום משתנה לפי העונה והמקום.", "sources": ["משנה ברכות א, ב", "שו״ע או״ח נח, א", "מגן אברהם נח, א", "משנה ברורה נח, ד", "חישוב אסטרונומי: 16.1 מעלות = 72 דקות בירושלים בימי השוויון"] },
-    "en": { "title": "Latest Shema (Magen Avraham, by degrees)", "text": "Like the Magen Avraham's latest Shema, but the day is measured by degrees: from dawn (sun 16.1 degrees below the horizon in the morning) to the sun 16.1 degrees below the horizon in the evening. So the length follows the season and the place.", "sources": ["Mishna Berachot 1:2", "Shulchan Aruch OC 58:1", "Magen Avraham 58:1", "Mishna Berura 58:4", "Astronomy: 16.1 degrees = 72 minutes in Jerusalem at the equinox"] }
+    "he": {
+      "title": "סוף זמן קריאת שמע (מגן אברהם, במעלות)",
+      "text": "כמו סוף זמן קריאת שמע לשיטת המגן אברהם, אלא שהיום נמדד במעלות: מעלות השחר (השמש 16.1 מעלות מתחת לאופק בבוקר) עד שהשמש 16.1 מעלות מתחת לאופק בערב. כך אורך היום משתנה לפי העונה והמקום.",
+      "sources": [
+        "משנה ברכות א, ב",
+        "שו״ע או״ח נח, א",
+        "מגן אברהם נח, א",
+        "משנה ברורה נח, ד",
+        "חישוב אסטרונומי: 16.1 מעלות = 72 דקות בירושלים בימי השוויון"
+      ]
+    },
+    "en": {
+      "title": "Latest Shema (Magen Avraham, by degrees)",
+      "text": "Like the Magen Avraham's latest Shema, but the day is measured by degrees: from dawn (sun 16.1 degrees below the horizon in the morning) to the sun 16.1 degrees below the horizon in the evening. So the length follows the season and the place.",
+      "sources": [
+        "Mishna Berachot 1:2",
+        "Shulchan Aruch OC 58:1",
+        "Magen Avraham 58:1",
+        "Mishna Berura 58:4",
+        "Astronomy: 16.1 degrees = 72 minutes in Jerusalem at the equinox"
+      ]
+    }
   },
   "sofShmaGra": {
-    "he": { "title": "סוף זמן קריאת שמע (גר״א)", "text": "קריאת שמע של שחרית זמנה עד סוף שלוש שעות זמניות. לשיטת הגר״א מונים את היום מהנץ החמה עד השקיעה, וכל שעה היא שנים עשר של זמן זה.", "sources": ["משנה ברכות א, ב (עד שלש שעות)", "שו״ע או״ח נח, א (עד סוף ג׳ שעות שהוא רביע היום)", "משנה ברורה נח, ד (דעת הגר״א משעת הנץ החמה)", "רמ״א או״ח רלג, א (שעות זמניות: היום נחלק לי״ב שעות)"] },
-    "en": { "title": "Latest Shema (Vilna Gaon)", "text": "The morning Shema may be read until the end of three temporal hours. By the Vilna Gaon the day runs from sunrise to sunset, and each hour is a twelfth of that span.", "sources": ["Mishna Berachot 1:2 (until three hours)", "Shulchan Aruch OC 58:1 (until the end of three hours, a quarter of the day)", "Mishna Berura 58:4 (the Vilna Gaon counts from sunrise)", "Rema OC 233:1 (temporal hours: the day is divided into 12 hours)"] }
+    "he": {
+      "title": "סוף זמן קריאת שמע (גר״א)",
+      "text": "קריאת שמע של שחרית זמנה עד סוף שלוש שעות זמניות. לשיטת הגר״א מונים את היום מהנץ החמה עד השקיעה, וכל שעה היא שנים עשר של זמן זה.",
+      "sources": [
+        "משנה ברכות א, ב (עד שלש שעות)",
+        "שו״ע או״ח נח, א (עד סוף ג׳ שעות שהוא רביע היום)",
+        "משנה ברורה נח, ד (דעת הגר״א משעת הנץ החמה)",
+        "רמ״א או״ח רלג, א (שעות זמניות: היום נחלק לי״ב שעות)"
+      ]
+    },
+    "en": {
+      "title": "Latest Shema (Vilna Gaon)",
+      "text": "The morning Shema may be read until the end of three temporal hours. By the Vilna Gaon the day runs from sunrise to sunset, and each hour is a twelfth of that span.",
+      "sources": [
+        "Mishna Berachot 1:2 (until three hours)",
+        "Shulchan Aruch OC 58:1 (until the end of three hours, a quarter of the day)",
+        "Mishna Berura 58:4 (the Vilna Gaon counts from sunrise)",
+        "Rema OC 233:1 (temporal hours: the day is divided into 12 hours)"
+      ]
+    }
   },
   "sofTfillaMga": {
-    "he": { "title": "סוף זמן תפילה (מגן אברהם)", "text": "תפילת שחרית זמנה עד סוף ארבע שעות זמניות. לשיטת המגן אברהם היום מ־72 דקות לפני הנץ עד 72 דקות אחרי השקיעה.", "sources": ["משנה ברכות ד, א (רבי יהודה: עד ארבע שעות)", "שו״ע או״ח פט, א (עד סוף ד׳ שעות שהוא שליש היום)", "מגן אברהם נח, א", "משנה ברורה נח, ד", "פסחים צד ע״א; שו״ע או״ח תנט, ב"] },
-    "en": { "title": "Latest morning prayer (Magen Avraham)", "text": "The morning prayer may be said until the end of four temporal hours. By the Magen Avraham the day runs from 72 minutes before sunrise to 72 minutes after sunset.", "sources": ["Mishna Berachot 4:1 (Rabbi Yehuda: until four hours)", "Shulchan Aruch OC 89:1 (until the end of four hours, a third of the day)", "Magen Avraham 58:1", "Mishna Berura 58:4", "Pesachim 94a; Shulchan Aruch OC 459:2"] }
+    "he": {
+      "title": "סוף זמן תפילה (מגן אברהם)",
+      "text": "תפילת שחרית זמנה עד סוף ארבע שעות זמניות. לשיטת המגן אברהם היום מ־72 דקות לפני הנץ עד 72 דקות אחרי השקיעה.",
+      "sources": [
+        "משנה ברכות ד, א (רבי יהודה: עד ארבע שעות)",
+        "שו״ע או״ח פט, א (עד סוף ד׳ שעות שהוא שליש היום)",
+        "מגן אברהם נח, א",
+        "משנה ברורה נח, ד",
+        "פסחים צד ע״א; שו״ע או״ח תנט, ב"
+      ]
+    },
+    "en": {
+      "title": "Latest morning prayer (Magen Avraham)",
+      "text": "The morning prayer may be said until the end of four temporal hours. By the Magen Avraham the day runs from 72 minutes before sunrise to 72 minutes after sunset.",
+      "sources": [
+        "Mishna Berachot 4:1 (Rabbi Yehuda: until four hours)",
+        "Shulchan Aruch OC 89:1 (until the end of four hours, a third of the day)",
+        "Magen Avraham 58:1",
+        "Mishna Berura 58:4",
+        "Pesachim 94a; Shulchan Aruch OC 459:2"
+      ]
+    }
   },
   "sofTfillaMga16": {
-    "he": { "title": "סוף זמן תפילה (מגן אברהם, במעלות)", "text": "ארבע שעות זמניות של יום שנמדד במעלות: מהשמש 16.1 מעלות מתחת לאופק בבוקר עד 16.1 מעלות מתחת לאופק בערב.", "sources": ["משנה ברכות ד, א", "שו״ע או״ח פט, א", "מגן אברהם נח, א", "חישוב אסטרונומי: 16.1 מעלות = 72 דקות בירושלים בימי השוויון"] },
-    "en": { "title": "Latest morning prayer (Magen Avraham, by degrees)", "text": "Four temporal hours of a day measured by degrees: from the sun 16.1 degrees below the horizon in the morning to 16.1 degrees below in the evening.", "sources": ["Mishna Berachot 4:1", "Shulchan Aruch OC 89:1", "Magen Avraham 58:1", "Astronomy: 16.1 degrees = 72 minutes in Jerusalem at the equinox"] }
+    "he": {
+      "title": "סוף זמן תפילה (מגן אברהם, במעלות)",
+      "text": "ארבע שעות זמניות של יום שנמדד במעלות: מהשמש 16.1 מעלות מתחת לאופק בבוקר עד 16.1 מעלות מתחת לאופק בערב.",
+      "sources": [
+        "משנה ברכות ד, א",
+        "שו״ע או״ח פט, א",
+        "מגן אברהם נח, א",
+        "חישוב אסטרונומי: 16.1 מעלות = 72 דקות בירושלים בימי השוויון"
+      ]
+    },
+    "en": {
+      "title": "Latest morning prayer (Magen Avraham, by degrees)",
+      "text": "Four temporal hours of a day measured by degrees: from the sun 16.1 degrees below the horizon in the morning to 16.1 degrees below in the evening.",
+      "sources": [
+        "Mishna Berachot 4:1",
+        "Shulchan Aruch OC 89:1",
+        "Magen Avraham 58:1",
+        "Astronomy: 16.1 degrees = 72 minutes in Jerusalem at the equinox"
+      ]
+    }
   },
   "sofTfillaGra": {
-    "he": { "title": "סוף זמן תפילה (גר״א)", "text": "תפילת שחרית זמנה עד סוף ארבע שעות זמניות, כשהיום נמדד מהנץ החמה עד השקיעה.", "sources": ["משנה ברכות ד, א (רבי יהודה: עד ארבע שעות)", "שו״ע או״ח פט, א (עד סוף ד׳ שעות שהוא שליש היום)", "משנה ברורה נח, ד (דעת הגר״א משעת הנץ)"] },
-    "en": { "title": "Latest morning prayer (Vilna Gaon)", "text": "The morning prayer may be said until the end of four temporal hours, with the day measured from sunrise to sunset.", "sources": ["Mishna Berachot 4:1 (Rabbi Yehuda: until four hours)", "Shulchan Aruch OC 89:1 (until the end of four hours, a third of the day)", "Mishna Berura 58:4 (the Vilna Gaon counts from sunrise)"] }
+    "he": {
+      "title": "סוף זמן תפילה (גר״א)",
+      "text": "תפילת שחרית זמנה עד סוף ארבע שעות זמניות, כשהיום נמדד מהנץ החמה עד השקיעה.",
+      "sources": [
+        "משנה ברכות ד, א (רבי יהודה: עד ארבע שעות)",
+        "שו״ע או״ח פט, א (עד סוף ד׳ שעות שהוא שליש היום)",
+        "משנה ברורה נח, ד (דעת הגר״א משעת הנץ)"
+      ]
+    },
+    "en": {
+      "title": "Latest morning prayer (Vilna Gaon)",
+      "text": "The morning prayer may be said until the end of four temporal hours, with the day measured from sunrise to sunset.",
+      "sources": [
+        "Mishna Berachot 4:1 (Rabbi Yehuda: until four hours)",
+        "Shulchan Aruch OC 89:1 (until the end of four hours, a third of the day)",
+        "Mishna Berura 58:4 (the Vilna Gaon counts from sunrise)"
+      ]
+    }
   },
   "chatzot": {
-    "he": { "title": "חצות היום", "text": "אמצע היום: הרגע שבו השמש בנקודה הגבוהה ביותר שלה, באמצע בין הנץ לשקיעה. עד זמן זה אפשר בדיעבד להתפלל שחרית, ואחריו מתחיל זמן מנחה.", "sources": ["משנה ברכות ד, א (תפילת השחר עד חצות)", "שו״ע או״ח פט, א (אחר ד׳ שעות עד חצות, שכר תפילה מיהא איכא)", "חישוב אסטרונומי: מעבר השמש במרידיאן (NREL SPA)"] },
-    "en": { "title": "Midday (chatzot)", "text": "The middle of the day: the moment the sun is at its highest point, halfway between sunrise and sunset. Until then one may still say the morning prayer after the fact; afterwards the time of Mincha begins.", "sources": ["Mishna Berachot 4:1 (the morning prayer until midday)", "Shulchan Aruch OC 89:1 (after four hours until midday one still has reward for prayer)", "Astronomy: the sun's transit of the meridian (NREL SPA)"] }
+    "he": {
+      "title": "חצות היום",
+      "text": "אמצע היום: הרגע שבו השמש בנקודה הגבוהה ביותר שלה, באמצע בין הנץ לשקיעה. עד זמן זה אפשר בדיעבד להתפלל שחרית, ואחריו מתחיל זמן מנחה.",
+      "sources": [
+        "משנה ברכות ד, א (תפילת השחר עד חצות)",
+        "שו״ע או״ח פט, א (אחר ד׳ שעות עד חצות, שכר תפילה מיהא איכא)",
+        "חישוב אסטרונומי: מעבר השמש במרידיאן (NREL SPA)"
+      ]
+    },
+    "en": {
+      "title": "Midday (chatzot)",
+      "text": "The middle of the day: the moment the sun is at its highest point, halfway between sunrise and sunset. Until then one may still say the morning prayer after the fact; afterwards the time of Mincha begins.",
+      "sources": [
+        "Mishna Berachot 4:1 (the morning prayer until midday)",
+        "Shulchan Aruch OC 89:1 (after four hours until midday one still has reward for prayer)",
+        "Astronomy: the sun's transit of the meridian (NREL SPA)"
+      ]
+    }
   },
   "minchaGedola": {
-    "he": { "title": "מנחה גדולה", "text": "הזמן המוקדם ביותר לתפילת מנחה: שש שעות זמניות וחצי מהנץ (חצי שעה זמנית אחרי חצות), כנגד זמן תמיד של בין הערבים בערב פסח שחל בערב שבת.", "sources": ["רמב״ם הלכות תפילה ג, ב (המתפלל מאחר שש שעות ומחצה יצא, והיא מנחה גדולה)", "שו״ע או״ח רלג, א (מי שהתפלל לאחר שש שעות ומחצה יצא)", "משנה ברורה רלג, א"] },
-    "en": { "title": "Earliest Mincha (mincha gedola)", "text": "The earliest time for the afternoon prayer: six and a half temporal hours after sunrise (half a temporal hour after midday), matching the afternoon tamid offering on an Erev Pesach that fell on Friday.", "sources": ["Rambam, Hilchot Tefilla 3:2 (one who prays after six and a half hours has fulfilled it; this is mincha gedola)", "Shulchan Aruch OC 233:1 (one who prayed after six and a half hours has fulfilled it)", "Mishna Berura 233:1"] }
+    "he": {
+      "title": "מנחה גדולה",
+      "text": "הזמן המוקדם ביותר לתפילת מנחה: שש שעות זמניות וחצי מהנץ (חצי שעה זמנית אחרי חצות), כנגד זמן תמיד של בין הערבים בערב פסח שחל בערב שבת.",
+      "sources": [
+        "רמב״ם הלכות תפילה ג, ב (המתפלל מאחר שש שעות ומחצה יצא, והיא מנחה גדולה)",
+        "שו״ע או״ח רלג, א (מי שהתפלל לאחר שש שעות ומחצה יצא)",
+        "משנה ברורה רלג, א"
+      ]
+    },
+    "en": {
+      "title": "Earliest Mincha (mincha gedola)",
+      "text": "The earliest time for the afternoon prayer: six and a half temporal hours after sunrise (half a temporal hour after midday), matching the afternoon tamid offering on an Erev Pesach that fell on Friday.",
+      "sources": [
+        "Rambam, Hilchot Tefilla 3:2 (one who prays after six and a half hours has fulfilled it; this is mincha gedola)",
+        "Shulchan Aruch OC 233:1 (one who prayed after six and a half hours has fulfilled it)",
+        "Mishna Berura 233:1"
+      ]
+    }
   },
   "minchaGedola30": {
-    "he": { "title": "מנחה גדולה (לפחות חצי שעה)", "text": "המאוחר מבין שניים: חצי שעה רגילה אחרי חצות, וחצי שעה זמנית אחרי חצות. בחורף, כשהשעה הזמנית קצרה, יוצא חצי שעה שלמה.", "sources": ["משנה ברורה רלג, א (שש שעות ומחצה, דהיינו חצי שעה אחר חצות היום)", "רמב״ם הלכות תפילה ג, ב", "שו״ע או״ח רלג, א"] },
-    "en": { "title": "Earliest Mincha (at least 30 minutes)", "text": "The later of two: half a clock hour after midday, and half a temporal hour after midday. In winter, when the temporal hour is short, it comes out a full half hour.", "sources": ["Mishna Berura 233:1 (six and a half hours, that is half an hour after midday)", "Rambam, Hilchot Tefilla 3:2", "Shulchan Aruch OC 233:1"] }
+    "he": {
+      "title": "מנחה גדולה (לפחות חצי שעה)",
+      "text": "המאוחר מבין שניים: חצי שעה רגילה אחרי חצות, וחצי שעה זמנית אחרי חצות. בחורף, כשהשעה הזמנית קצרה, יוצא חצי שעה שלמה.",
+      "sources": [
+        "משנה ברורה רלג, א (שש שעות ומחצה, דהיינו חצי שעה אחר חצות היום)",
+        "רמב״ם הלכות תפילה ג, ב",
+        "שו״ע או״ח רלג, א"
+      ]
+    },
+    "en": {
+      "title": "Earliest Mincha (at least 30 minutes)",
+      "text": "The later of two: half a clock hour after midday, and half a temporal hour after midday. In winter, when the temporal hour is short, it comes out a full half hour.",
+      "sources": [
+        "Mishna Berura 233:1 (six and a half hours, that is half an hour after midday)",
+        "Rambam, Hilchot Tefilla 3:2",
+        "Shulchan Aruch OC 233:1"
+      ]
+    }
   },
   "minchaKetana": {
-    "he": { "title": "מנחה קטנה", "text": "עיקר זמן תפילת מנחה: תשע שעות זמניות וחצי מהנץ, כנגד הזמן שבו הקריבו בכל יום את תמיד של בין הערבים.", "sources": ["רמב״ם הלכות תפילה ג, ב (התמיד קרב בכל יום בתשע שעות ומחצה, והיא מנחה קטנה)", "שו״ע או״ח רלג, א (ועיקר זמנה מט׳ שעות ומחצה ולמעלה)", "משנה ברורה רלג, א"] },
-    "en": { "title": "Mincha ketana", "text": "The main time for the afternoon prayer: nine and a half temporal hours after sunrise, matching when the daily afternoon tamid was offered.", "sources": ["Rambam, Hilchot Tefilla 3:2 (the tamid was offered daily at nine and a half hours; this is mincha ketana)", "Shulchan Aruch OC 233:1 (its main time is from nine and a half hours)", "Mishna Berura 233:1"] }
+    "he": {
+      "title": "מנחה קטנה",
+      "text": "עיקר זמן תפילת מנחה: תשע שעות זמניות וחצי מהנץ, כנגד הזמן שבו הקריבו בכל יום את תמיד של בין הערבים.",
+      "sources": [
+        "רמב״ם הלכות תפילה ג, ב (התמיד קרב בכל יום בתשע שעות ומחצה, והיא מנחה קטנה)",
+        "שו״ע או״ח רלג, א (ועיקר זמנה מט׳ שעות ומחצה ולמעלה)",
+        "משנה ברורה רלג, א"
+      ]
+    },
+    "en": {
+      "title": "Mincha ketana",
+      "text": "The main time for the afternoon prayer: nine and a half temporal hours after sunrise, matching when the daily afternoon tamid was offered.",
+      "sources": [
+        "Rambam, Hilchot Tefilla 3:2 (the tamid was offered daily at nine and a half hours; this is mincha ketana)",
+        "Shulchan Aruch OC 233:1 (its main time is from nine and a half hours)",
+        "Mishna Berura 233:1"
+      ]
+    }
   },
   "plag": {
-    "he": { "title": "פלג המנחה (גר״א)", "text": "שעה ורבע זמנית לפני סוף היום: 10.75 שעות זמניות מהנץ, כשהיום מהנץ עד השקיעה. לרבי יהודה זמן מנחה עד כאן, ומכאן אפשר להתפלל ערבית ולקבל שבת.", "sources": ["משנה ברכות ד, א (רבי יהודה: עד פלג המנחה)", "שו״ע או״ח רלג, א (פלג המנחה שהוא עד סוף י״א שעות חסר רביע)", "רמב״ם הלכות תפילה ג, ד (עד שישאר מן היום שעה ורביע)", "רמ״א או״ח רסא, ב (לקבל עליו השבת מפלג המנחה)"] },
-    "en": { "title": "Plag hamincha (Vilna Gaon)", "text": "One and a quarter temporal hours before the end of the day: 10.75 temporal hours after sunrise, with the day from sunrise to sunset. For Rabbi Yehuda Mincha lasts until here, and from here one may pray Maariv and accept Shabbos.", "sources": ["Mishna Berachot 4:1 (Rabbi Yehuda: until plag hamincha)", "Shulchan Aruch OC 233:1 (plag hamincha is eleven hours less a quarter)", "Rambam, Hilchot Tefilla 3:4 (until an hour and a quarter of the day remains)", "Rema OC 261:2 (accepting Shabbos from plag hamincha)"] }
+    "he": {
+      "title": "פלג המנחה (גר״א)",
+      "text": "שעה ורבע זמנית לפני סוף היום: 10.75 שעות זמניות מהנץ, כשהיום מהנץ עד השקיעה. לרבי יהודה זמן מנחה עד כאן, ומכאן אפשר להתפלל ערבית ולקבל שבת.",
+      "sources": [
+        "משנה ברכות ד, א (רבי יהודה: עד פלג המנחה)",
+        "שו״ע או״ח רלג, א (פלג המנחה שהוא עד סוף י״א שעות חסר רביע)",
+        "רמב״ם הלכות תפילה ג, ד (עד שישאר מן היום שעה ורביע)",
+        "רמ״א או״ח רסא, ב (לקבל עליו השבת מפלג המנחה)"
+      ]
+    },
+    "en": {
+      "title": "Plag hamincha (Vilna Gaon)",
+      "text": "One and a quarter temporal hours before the end of the day: 10.75 temporal hours after sunrise, with the day from sunrise to sunset. For Rabbi Yehuda Mincha lasts until here, and from here one may pray Maariv and accept Shabbos.",
+      "sources": [
+        "Mishna Berachot 4:1 (Rabbi Yehuda: until plag hamincha)",
+        "Shulchan Aruch OC 233:1 (plag hamincha is eleven hours less a quarter)",
+        "Rambam, Hilchot Tefilla 3:4 (until an hour and a quarter of the day remains)",
+        "Rema OC 261:2 (accepting Shabbos from plag hamincha)"
+      ]
+    }
   },
   "plagMga": {
-    "he": { "title": "פלג המנחה (מגן אברהם)", "text": "פלג המנחה (10.75 שעות זמניות) של אותו יום כמו בסוף זמן קריאת שמע למגן אברהם: מ־72 דקות לפני הנץ עד 72 דקות אחרי השקיעה.", "sources": ["משנה ברכות ד, א", "שו״ע או״ח רלג, א", "מגן אברהם נח, א (מונים מעלות השחר, ועיין סימן רלג)"] },
-    "en": { "title": "Plag hamincha (Magen Avraham)", "text": "Plag hamincha (10.75 temporal hours) of the same day as the Magen Avraham's latest Shema: from 72 minutes before sunrise to 72 minutes after sunset.", "sources": ["Mishna Berachot 4:1", "Shulchan Aruch OC 233:1", "Magen Avraham 58:1 (counting from dawn; see siman 233)"] }
+    "he": {
+      "title": "פלג המנחה (מגן אברהם)",
+      "text": "פלג המנחה (10.75 שעות זמניות) של אותו יום כמו בסוף זמן קריאת שמע למגן אברהם: מ־72 דקות לפני הנץ עד 72 דקות אחרי השקיעה.",
+      "sources": [
+        "משנה ברכות ד, א",
+        "שו״ע או״ח רלג, א",
+        "מגן אברהם נח, א (מונים מעלות השחר, ועיין סימן רלג)"
+      ]
+    },
+    "en": {
+      "title": "Plag hamincha (Magen Avraham)",
+      "text": "Plag hamincha (10.75 temporal hours) of the same day as the Magen Avraham's latest Shema: from 72 minutes before sunrise to 72 minutes after sunset.",
+      "sources": [
+        "Mishna Berachot 4:1",
+        "Shulchan Aruch OC 233:1",
+        "Magen Avraham 58:1 (counting from dawn; see siman 233)"
+      ]
+    }
   },
   "sunsetTerrain": {
-    "he": { "title": "שקיעה הנראית (לפי ההרים)", "text": "הרגע שבו קצה השמש העליון נעלם מאחורי ההרים שבמערב, ולא מתחת לאופק ישר בגובה פני הים. מקום שיש הרים ממערבו רואה את השמש שוקעת מוקדם יותר. מול הים הזמן קרוב לשקיעה הרגילה. מקום שאין לו נתוני הרים - אין לו זמן זה.", "sources": ["שבת לד ע״ב - לה ע״א (שקיעת החמה ובין השמשות)", "שו״ע או״ח רסא, א-ב", "חישוב: מפת הגבהים Copernicus DEM GLO-90, שבירת אור (Meeus, Astronomical Algorithms, פרק 16), מקדם שבירה ארצית 0.13"] },
-    "en": { "title": "Visible sunset (behind the mountains)", "text": "The moment the sun's upper edge disappears behind the actual hills and mountains to the west, rather than below a flat sea-level horizon. A place with mountains to its west sees the sun set earlier; facing the sea it is close to the ordinary sunset. Places without terrain data have no time for this line.", "sources": ["Shabbat 34b-35a (sunset and bein hashmashot)", "Shulchan Aruch OC 261:1-2", "Calculation: Copernicus DEM GLO-90 elevation model, refraction (Meeus, Astronomical Algorithms, ch. 16), terrestrial refraction coefficient 0.13"] }
+    "he": {
+      "title": "שקיעה הנראית (לפי ההרים)",
+      "text": "הרגע שבו קצה השמש העליון נעלם מאחורי ההרים שבמערב, ולא מתחת לאופק ישר בגובה פני הים. מקום שיש הרים ממערבו רואה את השמש שוקעת מוקדם יותר. מול הים הזמן קרוב לשקיעה הרגילה. מקום שאין לו נתוני הרים - אין לו זמן זה.",
+      "sources": [
+        "שבת לד ע״ב - לה ע״א (שקיעת החמה ובין השמשות)",
+        "שו״ע או״ח רסא, א-ב",
+        "חישוב: מפת הגבהים Copernicus DEM GLO-90, שבירת אור (Meeus, Astronomical Algorithms, פרק 16), מקדם שבירה ארצית 0.13"
+      ]
+    },
+    "en": {
+      "title": "Visible sunset (behind the mountains)",
+      "text": "The moment the sun's upper edge disappears behind the actual hills and mountains to the west, rather than below a flat sea-level horizon. A place with mountains to its west sees the sun set earlier; facing the sea it is close to the ordinary sunset. Places without terrain data have no time for this line.",
+      "sources": [
+        "Shabbat 34b-35a (sunset and bein hashmashot)",
+        "Shulchan Aruch OC 261:1-2",
+        "Calculation: Copernicus DEM GLO-90 elevation model, refraction (Meeus, Astronomical Algorithms, ch. 16), terrestrial refraction coefficient 0.13"
+      ]
+    }
   },
   "sunset": {
-    "he": { "title": "שקיעת החמה", "text": "הרגע שבו הקצה העליון של השמש נעלם מתחת לאופק, בגובה פני הים. כאן מתחיל בין השמשות לשיטת הגאונים, וצריך להקדים את קבלת השבת לפני זמן זה.", "sources": ["שבת לד ע״ב (משתשקע החמה)", "שו״ע או״ח רסא, ב (תוספת שבת מתחלת השקיעה)", "ביאור הגר״א או״ח רסא, ב (בין השמשות מתחיל תיכף בשקיעת החמה)", "חישוב אסטרונומי: קצה השמש העליון באופק, עם שבירת האור (Meeus, Astronomical Algorithms, פרקים 15-16)"] },
-    "en": { "title": "Sunset", "text": "The moment the top edge of the sun disappears below the horizon, at sea level. Twilight (bein hashmashos) begins here by the Geonim's view, and Shabbos must be accepted before it.", "sources": ["Shabbat 34b (from when the sun sets)", "Shulchan Aruch OC 261:2 (adding to Shabbos from the start of sunset)", "Biur HaGra OC 261:2 (twilight begins right at sunset)", "Astronomy: the upper limb of the sun on the horizon, with refraction (Meeus, Astronomical Algorithms, ch. 15-16)"] }
+    "he": {
+      "title": "שקיעת החמה",
+      "text": "הרגע שבו הקצה העליון של השמש נעלם מתחת לאופק, בגובה פני הים. כאן מתחיל בין השמשות לשיטת הגאונים, וצריך להקדים את קבלת השבת לפני זמן זה.",
+      "sources": [
+        "שבת לד ע״ב (משתשקע החמה)",
+        "שו״ע או״ח רסא, ב (תוספת שבת מתחלת השקיעה)",
+        "ביאור הגר״א או״ח רסא, ב (בין השמשות מתחיל תיכף בשקיעת החמה)",
+        "חישוב אסטרונומי: קצה השמש העליון באופק, עם שבירת האור (Meeus, Astronomical Algorithms, פרקים 15-16)"
+      ]
+    },
+    "en": {
+      "title": "Sunset",
+      "text": "The moment the top edge of the sun disappears below the horizon, at sea level. Twilight (bein hashmashos) begins here by the Geonim's view, and Shabbos must be accepted before it.",
+      "sources": [
+        "Shabbat 34b (from when the sun sets)",
+        "Shulchan Aruch OC 261:2 (adding to Shabbos from the start of sunset)",
+        "Biur HaGra OC 261:2 (twilight begins right at sunset)",
+        "Astronomy: the upper limb of the sun on the horizon, with refraction (Meeus, Astronomical Algorithms, ch. 15-16)"
+      ]
+    }
   },
   "sunsetElevated": {
-    "he": { "title": "שקיעה (לפי גובה המקום)", "text": "השקיעה כפי שהיא נראית מגובה המקום עצמו: מהר או מבניין גבוה האופק נמוך יותר, ולכן השמש נעלמת מאוחר יותר.", "sources": ["שבת לד ע״ב", "שו״ע או״ח רסא, ב", "חישוב אסטרונומי: שקיעת האופק arccos(R/(R+h)) ושבירת האור (Meeus, Astronomical Algorithms, פרק 16)"] },
-    "en": { "title": "Sunset (from the place's elevation)", "text": "Sunset as seen from the place's own height: from a mountain or a high building the horizon is lower, so the sun disappears later.", "sources": ["Shabbat 34b", "Shulchan Aruch OC 261:2", "Astronomy: horizon dip arccos(R/(R+h)) and refraction (Meeus, Astronomical Algorithms, ch. 16)"] }
+    "he": {
+      "title": "שקיעה (לפי גובה המקום)",
+      "text": "השקיעה כפי שהיא נראית מגובה המקום עצמו: מהר או מבניין גבוה האופק נמוך יותר, ולכן השמש נעלמת מאוחר יותר.",
+      "sources": [
+        "שבת לד ע״ב",
+        "שו״ע או״ח רסא, ב",
+        "חישוב אסטרונומי: שקיעת האופק arccos(R/(R+h)) ושבירת האור (Meeus, Astronomical Algorithms, פרק 16)"
+      ]
+    },
+    "en": {
+      "title": "Sunset (from the place's elevation)",
+      "text": "Sunset as seen from the place's own height: from a mountain or a high building the horizon is lower, so the sun disappears later.",
+      "sources": [
+        "Shabbat 34b",
+        "Shulchan Aruch OC 261:2",
+        "Astronomy: horizon dip arccos(R/(R+h)) and refraction (Meeus, Astronomical Algorithms, ch. 16)"
+      ]
+    }
   },
   "tzeitGeonim": {
-    "he": { "title": "צאת הכוכבים (גאונים)", "text": "סוף בין השמשות לשיטת הגאונים: שלושה רבעי מיל אחרי השקיעה, כ־13.5 דקות. כאן: כשהשמש 3.7 מעלות מתחת לאופק בערב, שהוא 13.5 דקות אחרי השקיעה בירושלים בימי השוויון.", "sources": ["שבת לד ע״ב (שיעור בין השמשות תלתא ריבעי מילא)", "שו״ע או״ח רסא, ב (שיעור בין השמשות ג׳ רבעי מיל)", "ביאור הגר״א או״ח רסא, ב (ג׳ רביעי מיל באופק בבל בתקופת ניסן ותשרי)", "שו״ע או״ח תנט, ב (מיל = 18 דקות)", "חישוב אסטרונומי: 3.7 מעלות = 13.5 דקות בירושלים בימי השוויון"] },
-    "en": { "title": "Nightfall (Geonim)", "text": "The end of twilight by the Geonim: three quarters of a mil after sunset, about 13.5 minutes. Here: the sun 3.7 degrees below the horizon in the evening, which is 13.5 minutes after sunset in Jerusalem at the equinox.", "sources": ["Shabbat 34b (twilight is three quarters of a mil)", "Shulchan Aruch OC 261:2 (twilight is three quarters of a mil)", "Biur HaGra OC 261:2 (three quarters of a mil on the horizon of Babylon at the equinox)", "Shulchan Aruch OC 459:2 (a mil = 18 minutes)", "Astronomy: 3.7 degrees = 13.5 minutes in Jerusalem at the equinox"] }
+    "he": {
+      "title": "צאת הכוכבים (גאונים)",
+      "text": "סוף בין השמשות לשיטת הגאונים: שלושה רבעי מיל אחרי השקיעה, כ־13.5 דקות. כאן: כשהשמש 3.7 מעלות מתחת לאופק בערב, שהוא 13.5 דקות אחרי השקיעה בירושלים בימי השוויון.",
+      "sources": [
+        "שבת לד ע״ב (שיעור בין השמשות תלתא ריבעי מילא)",
+        "שו״ע או״ח רסא, ב (שיעור בין השמשות ג׳ רבעי מיל)",
+        "ביאור הגר״א או״ח רסא, ב (ג׳ רביעי מיל באופק בבל בתקופת ניסן ותשרי)",
+        "שו״ע או״ח תנט, ב (מיל = 18 דקות)",
+        "חישוב אסטרונומי: 3.7 מעלות = 13.5 דקות בירושלים בימי השוויון"
+      ]
+    },
+    "en": {
+      "title": "Nightfall (Geonim)",
+      "text": "The end of twilight by the Geonim: three quarters of a mil after sunset, about 13.5 minutes. Here: the sun 3.7 degrees below the horizon in the evening, which is 13.5 minutes after sunset in Jerusalem at the equinox.",
+      "sources": [
+        "Shabbat 34b (twilight is three quarters of a mil)",
+        "Shulchan Aruch OC 261:2 (twilight is three quarters of a mil)",
+        "Biur HaGra OC 261:2 (three quarters of a mil on the horizon of Babylon at the equinox)",
+        "Shulchan Aruch OC 459:2 (a mil = 18 minutes)",
+        "Astronomy: 3.7 degrees = 13.5 minutes in Jerusalem at the equinox"
+      ]
+    }
   },
   "tzeitGeonimVisible": {
-    "he": { "title": "צאת הכוכבים (גאונים, מהאופק הנראה)", "text": "כמו צאת הכוכבים לשיטת הגאונים (3.7 מעלות), אלא שהמעלות נמדדות מהאופק הנראה לעין. יוצא כ־2 עד 4 דקות מאוחר יותר.", "sources": ["שבת לד ע״ב", "שו״ע או״ח רסא, ב", "חישוב אסטרונומי: שבירת האור באופק (Meeus, Astronomical Algorithms, פרק 16)"] },
-    "en": { "title": "Nightfall (Geonim, from the visible horizon)", "text": "Like the Geonim's nightfall (3.7 degrees), but the degrees are measured from the visible horizon. It comes out about 2 to 4 minutes later.", "sources": ["Shabbat 34b", "Shulchan Aruch OC 261:2", "Astronomy: horizon refraction (Meeus, Astronomical Algorithms, ch. 16)"] }
+    "he": {
+      "title": "צאת הכוכבים (גאונים, מהאופק הנראה)",
+      "text": "כמו צאת הכוכבים לשיטת הגאונים (3.7 מעלות), אלא שהמעלות נמדדות מהאופק הנראה לעין. יוצא כ־2 עד 4 דקות מאוחר יותר.",
+      "sources": [
+        "שבת לד ע״ב",
+        "שו״ע או״ח רסא, ב",
+        "חישוב אסטרונומי: שבירת האור באופק (Meeus, Astronomical Algorithms, פרק 16)"
+      ]
+    },
+    "en": {
+      "title": "Nightfall (Geonim, from the visible horizon)",
+      "text": "Like the Geonim's nightfall (3.7 degrees), but the degrees are measured from the visible horizon. It comes out about 2 to 4 minutes later.",
+      "sources": [
+        "Shabbat 34b",
+        "Shulchan Aruch OC 261:2",
+        "Astronomy: horizon refraction (Meeus, Astronomical Algorithms, ch. 16)"
+      ]
+    }
   },
   "tzeit7083": {
-    "he": { "title": "צאת הכוכבים (7.083 מעלות)", "text": "צאת שלושה כוכבים בינוניים, שבו מתחיל הלילה. כאן: כשהשמש 7.083 מעלות (7 מעלות ו־5 דקות קשת) מתחת לאופק בערב, כ־29 דקות אחרי השקיעה בירושלים בימי השוויון. מספר המעלות הוא אומדן מתצפית, ואינו מן הגמרא.", "sources": ["שבת לה ע״ב (כוכב אחד יום, שנים בין השמשות, שלשה לילה; לא גדולים ולא קטנים אלא בינונים)", "ביאור הגר״א או״ח רסא, ב (צאת הכוכבים הוא בג׳ כוכבים בינונים)"] },
-    "en": { "title": "Nightfall (7.083 degrees)", "text": "When three medium stars appear and night begins. Here: the sun 7.083 degrees (7 degrees 5 arcminutes) below the horizon in the evening, about 29 minutes after sunset in Jerusalem at the equinox. The degree figure is an estimate from observation, not from the Talmud.", "sources": ["Shabbat 35b (one star is day, two twilight, three night; not large or small stars but medium ones)", "Biur HaGra OC 261:2 (nightfall is at three medium stars)"] }
+    "he": {
+      "title": "צאת הכוכבים (7.083 מעלות)",
+      "text": "צאת שלושה כוכבים בינוניים, שבו מתחיל הלילה. כאן: כשהשמש 7.083 מעלות (7 מעלות ו־5 דקות קשת) מתחת לאופק בערב, כ־29 דקות אחרי השקיעה בירושלים בימי השוויון. מספר המעלות הוא אומדן מתצפית, ואינו מן הגמרא.",
+      "sources": [
+        "שבת לה ע״ב (כוכב אחד יום, שנים בין השמשות, שלשה לילה; לא גדולים ולא קטנים אלא בינונים)",
+        "ביאור הגר״א או״ח רסא, ב (צאת הכוכבים הוא בג׳ כוכבים בינונים)"
+      ]
+    },
+    "en": {
+      "title": "Nightfall (7.083 degrees)",
+      "text": "When three medium stars appear and night begins. Here: the sun 7.083 degrees (7 degrees 5 arcminutes) below the horizon in the evening, about 29 minutes after sunset in Jerusalem at the equinox. The degree figure is an estimate from observation, not from the Talmud.",
+      "sources": [
+        "Shabbat 35b (one star is day, two twilight, three night; not large or small stars but medium ones)",
+        "Biur HaGra OC 261:2 (nightfall is at three medium stars)"
+      ]
+    }
   },
   "tzeit": {
-    "he": { "title": "צאת הכוכבים", "text": "צאת שלושה כוכבים בינוניים, שבו מתחיל הלילה ומסתיימים שבת ותענית. כאן: כשהשמש 8.5 מעלות מתחת לאופק בערב, כ־36 דקות אחרי השקיעה בירושלים בימי השוויון. מספר המעלות הוא אומדן מתצפית, ואינו מן הגמרא.", "sources": ["שבת לה ע״ב (שלשה כוכבים בינונים - לילה)", "שו״ע או״ח רלה, ג (קריאת שמע של ערבית מיד בצאת הכוכבים)", "ביאור הגר״א או״ח רסא, ב"] },
-    "en": { "title": "Nightfall", "text": "When three medium stars appear: night begins, and Shabbos and fasts end. Here: the sun 8.5 degrees below the horizon in the evening, about 36 minutes after sunset in Jerusalem at the equinox. The degree figure is an estimate from observation, not from the Talmud.", "sources": ["Shabbat 35b (three medium stars - night)", "Shulchan Aruch OC 235:3 (evening Shema right at nightfall)", "Biur HaGra OC 261:2"] }
+    "he": {
+      "title": "צאת הכוכבים",
+      "text": "צאת שלושה כוכבים בינוניים, שבו מתחיל הלילה ומסתיימים שבת ותענית. כאן: כשהשמש 8.5 מעלות מתחת לאופק בערב, כ־36 דקות אחרי השקיעה בירושלים בימי השוויון. מספר המעלות הוא אומדן מתצפית, ואינו מן הגמרא.",
+      "sources": [
+        "שבת לה ע״ב (שלשה כוכבים בינונים - לילה)",
+        "שו״ע או״ח רלה, ג (קריאת שמע של ערבית מיד בצאת הכוכבים)",
+        "ביאור הגר״א או״ח רסא, ב"
+      ]
+    },
+    "en": {
+      "title": "Nightfall",
+      "text": "When three medium stars appear: night begins, and Shabbos and fasts end. Here: the sun 8.5 degrees below the horizon in the evening, about 36 minutes after sunset in Jerusalem at the equinox. The degree figure is an estimate from observation, not from the Talmud.",
+      "sources": [
+        "Shabbat 35b (three medium stars - night)",
+        "Shulchan Aruch OC 235:3 (evening Shema right at nightfall)",
+        "Biur HaGra OC 261:2"
+      ]
+    }
   },
   "tzeitVisible": {
-    "he": { "title": "צאת הכוכבים (מהאופק הנראה)", "text": "כמו צאת הכוכבים (8.5 מעלות), אלא שהמעלות נמדדות מהאופק הנראה לעין. יוצא כ־2 עד 4 דקות מאוחר יותר.", "sources": ["שבת לה ע״ב", "חישוב אסטרונומי: שבירת האור באופק (Meeus, Astronomical Algorithms, פרק 16)"] },
-    "en": { "title": "Nightfall (from the visible horizon)", "text": "Like nightfall (8.5 degrees), but the degrees are measured from the visible horizon. It comes out about 2 to 4 minutes later.", "sources": ["Shabbat 35b", "Astronomy: horizon refraction (Meeus, Astronomical Algorithms, ch. 16)"] }
+    "he": {
+      "title": "צאת הכוכבים (מהאופק הנראה)",
+      "text": "כמו צאת הכוכבים (8.5 מעלות), אלא שהמעלות נמדדות מהאופק הנראה לעין. יוצא כ־2 עד 4 דקות מאוחר יותר.",
+      "sources": [
+        "שבת לה ע״ב",
+        "חישוב אסטרונומי: שבירת האור באופק (Meeus, Astronomical Algorithms, פרק 16)"
+      ]
+    },
+    "en": {
+      "title": "Nightfall (from the visible horizon)",
+      "text": "Like nightfall (8.5 degrees), but the degrees are measured from the visible horizon. It comes out about 2 to 4 minutes later.",
+      "sources": [
+        "Shabbat 35b",
+        "Astronomy: horizon refraction (Meeus, Astronomical Algorithms, ch. 16)"
+      ]
+    }
   },
   "candles40": {
-    "he": { "title": "הדלקת נרות (40 דקות)", "text": "זמן הדלקת נרות שבת, 40 דקות לפני השקיעה. מספר הדקות לפי מנהג הקהילה.", "sources": ["שו״ע או״ח רסא, ב (מוסיפין מחול על הקודש)", "שו״ע או״ח רסג (הדלקת נר שבת)"] },
-    "en": { "title": "Candle lighting (40 minutes)", "text": "Shabbat candle lighting, 40 minutes before sunset. The number of minutes follows community custom.", "sources": ["Shulchan Aruch OC 261:2 (adding from the weekday to Shabbat)", "Shulchan Aruch OC 263 (lighting the Shabbat candles)"] }
+    "he": {
+      "title": "הדלקת נרות (40 דקות)",
+      "text": "זמן הדלקת נרות שבת, 40 דקות לפני השקיעה. מספר הדקות לפי מנהג הקהילה.",
+      "sources": [
+        "שו״ע או״ח רסא, ב (מוסיפין מחול על הקודש)",
+        "שו״ע או״ח רסג (הדלקת נר שבת)"
+      ]
+    },
+    "en": {
+      "title": "Candle lighting (40 minutes)",
+      "text": "Shabbat candle lighting, 40 minutes before sunset. The number of minutes follows community custom.",
+      "sources": [
+        "Shulchan Aruch OC 261:2 (adding from the weekday to Shabbat)",
+        "Shulchan Aruch OC 263 (lighting the Shabbat candles)"
+      ]
+    }
   },
   "candles30": {
-    "he": { "title": "הדלקת נרות (30 דקות)", "text": "זמן הדלקת נרות שבת, 30 דקות לפני השקיעה. מספר הדקות לפי מנהג הקהילה.", "sources": ["שו״ע או״ח רסא, ב (מוסיפין מחול על הקודש)", "שו״ע או״ח רסג (הדלקת נר שבת)"] },
-    "en": { "title": "Candle lighting (30 minutes)", "text": "Shabbat candle lighting, 30 minutes before sunset. The number of minutes follows community custom.", "sources": ["Shulchan Aruch OC 261:2 (adding from the weekday to Shabbat)", "Shulchan Aruch OC 263 (lighting the Shabbat candles)"] }
+    "he": {
+      "title": "הדלקת נרות (30 דקות)",
+      "text": "זמן הדלקת נרות שבת, 30 דקות לפני השקיעה. מספר הדקות לפי מנהג הקהילה.",
+      "sources": [
+        "שו״ע או״ח רסא, ב (מוסיפין מחול על הקודש)",
+        "שו״ע או״ח רסג (הדלקת נר שבת)"
+      ]
+    },
+    "en": {
+      "title": "Candle lighting (30 minutes)",
+      "text": "Shabbat candle lighting, 30 minutes before sunset. The number of minutes follows community custom.",
+      "sources": [
+        "Shulchan Aruch OC 261:2 (adding from the weekday to Shabbat)",
+        "Shulchan Aruch OC 263 (lighting the Shabbat candles)"
+      ]
+    }
   },
   "candles22": {
-    "he": { "title": "הדלקת נרות (22 דקות)", "text": "זמן הדלקת נרות שבת, 22 דקות לפני השקיעה. מספר הדקות לפי מנהג הקהילה.", "sources": ["שו״ע או״ח רסא, ב (מוסיפין מחול על הקודש)", "שו״ע או״ח רסג (הדלקת נר שבת)"] },
-    "en": { "title": "Candle lighting (22 minutes)", "text": "Shabbat candle lighting, 22 minutes before sunset. The number of minutes follows community custom.", "sources": ["Shulchan Aruch OC 261:2 (adding from the weekday to Shabbat)", "Shulchan Aruch OC 263 (lighting the Shabbat candles)"] }
+    "he": {
+      "title": "הדלקת נרות (22 דקות)",
+      "text": "זמן הדלקת נרות שבת, 22 דקות לפני השקיעה. מספר הדקות לפי מנהג הקהילה.",
+      "sources": [
+        "שו״ע או״ח רסא, ב (מוסיפין מחול על הקודש)",
+        "שו״ע או״ח רסג (הדלקת נר שבת)"
+      ]
+    },
+    "en": {
+      "title": "Candle lighting (22 minutes)",
+      "text": "Shabbat candle lighting, 22 minutes before sunset. The number of minutes follows community custom.",
+      "sources": [
+        "Shulchan Aruch OC 261:2 (adding from the weekday to Shabbat)",
+        "Shulchan Aruch OC 263 (lighting the Shabbat candles)"
+      ]
+    }
   },
   "candles20": {
-    "he": { "title": "הדלקת נרות (20 דקות)", "text": "זמן הדלקת נרות שבת, 20 דקות לפני השקיעה. מספר הדקות לפי מנהג הקהילה.", "sources": ["שו״ע או״ח רסא, ב (מוסיפין מחול על הקודש)", "שו״ע או״ח רסג (הדלקת נר שבת)"] },
-    "en": { "title": "Candle lighting (20 minutes)", "text": "Shabbat candle lighting, 20 minutes before sunset. The number of minutes follows community custom.", "sources": ["Shulchan Aruch OC 261:2 (adding from the weekday to Shabbat)", "Shulchan Aruch OC 263 (lighting the Shabbat candles)"] }
+    "he": {
+      "title": "הדלקת נרות (20 דקות)",
+      "text": "זמן הדלקת נרות שבת, 20 דקות לפני השקיעה. מספר הדקות לפי מנהג הקהילה.",
+      "sources": [
+        "שו״ע או״ח רסא, ב (מוסיפין מחול על הקודש)",
+        "שו״ע או״ח רסג (הדלקת נר שבת)"
+      ]
+    },
+    "en": {
+      "title": "Candle lighting (20 minutes)",
+      "text": "Shabbat candle lighting, 20 minutes before sunset. The number of minutes follows community custom.",
+      "sources": [
+        "Shulchan Aruch OC 261:2 (adding from the weekday to Shabbat)",
+        "Shulchan Aruch OC 263 (lighting the Shabbat candles)"
+      ]
+    }
   },
   "candles18": {
-    "he": { "title": "הדלקת נרות (18 דקות)", "text": "זמן הדלקת נרות שבת, 18 דקות לפני השקיעה. מספר הדקות לפי מנהג הקהילה.", "sources": ["שו״ע או״ח רסא, ב (מוסיפין מחול על הקודש)", "שו״ע או״ח רסג (הדלקת נר שבת)"] },
-    "en": { "title": "Candle lighting (18 minutes)", "text": "Shabbat candle lighting, 18 minutes before sunset. The number of minutes follows community custom.", "sources": ["Shulchan Aruch OC 261:2 (adding from the weekday to Shabbat)", "Shulchan Aruch OC 263 (lighting the Shabbat candles)"] }
+    "he": {
+      "title": "הדלקת נרות (18 דקות)",
+      "text": "זמן הדלקת נרות שבת, 18 דקות לפני השקיעה. מספר הדקות לפי מנהג הקהילה.",
+      "sources": [
+        "שו״ע או״ח רסא, ב (מוסיפין מחול על הקודש)",
+        "שו״ע או״ח רסג (הדלקת נר שבת)"
+      ]
+    },
+    "en": {
+      "title": "Candle lighting (18 minutes)",
+      "text": "Shabbat candle lighting, 18 minutes before sunset. The number of minutes follows community custom.",
+      "sources": [
+        "Shulchan Aruch OC 261:2 (adding from the weekday to Shabbat)",
+        "Shulchan Aruch OC 263 (lighting the Shabbat candles)"
+      ]
+    }
   },
   "tzeitRt72": {
-    "he": { "title": "צאת הכוכבים לרבינו תם (72 דקות)", "text": "צאת הכוכבים לשיטת רבינו תם: ארבעה מילין אחר השקיעה, מיל של 18 דקות, כלומר 72 דקות קבועות.", "sources": ["תוספות שבת לה ע״א (ארבעה מילין משקיעה ועד צאת הכוכבים, על פי פסחים צד ע״א)", "שו״ע או״ח רסא, ב וברמ״א"] },
-    "en": { "title": "Nightfall of Rabbeinu Tam (72 minutes)", "text": "Nightfall according to Rabbeinu Tam: four mil after sunset, at 18 minutes a mil, that is 72 fixed minutes.", "sources": ["Tosafot Shabbat 35a (four mil from sunset to the stars, based on Pesachim 94a)", "Shulchan Aruch OC 261:2 with Rema"] }
+    "he": {
+      "title": "צאת הכוכבים לרבינו תם (72 דקות)",
+      "text": "צאת הכוכבים לשיטת רבינו תם: ארבעה מילין אחר השקיעה, מיל של 18 דקות, כלומר 72 דקות קבועות.",
+      "sources": [
+        "תוספות שבת לה ע״א (ארבעה מילין משקיעה ועד צאת הכוכבים, על פי פסחים צד ע״א)",
+        "שו״ע או״ח רסא, ב וברמ״א"
+      ]
+    },
+    "en": {
+      "title": "Nightfall of Rabbeinu Tam (72 minutes)",
+      "text": "Nightfall according to Rabbeinu Tam: four mil after sunset, at 18 minutes a mil, that is 72 fixed minutes.",
+      "sources": [
+        "Tosafot Shabbat 35a (four mil from sunset to the stars, based on Pesachim 94a)",
+        "Shulchan Aruch OC 261:2 with Rema"
+      ]
+    }
   },
   "tzeitRt72Zmanis": {
-    "he": { "title": "צאת הכוכבים לרבינו תם (72 דקות זמניות)", "text": "אותן 72 דקות כדקות זמניות: השקיעה ועוד עשירית היום מהנץ עד השקיעה.", "sources": ["תוספות שבת לה ע״א", "שו״ע או״ח רסא, ב וברמ״א"] },
-    "en": { "title": "Nightfall of Rabbeinu Tam (72 seasonal minutes)", "text": "The same 72 minutes as seasonal minutes: sunset plus a tenth of the day from sunrise to sunset.", "sources": ["Tosafot Shabbat 35a", "Shulchan Aruch OC 261:2 with Rema"] }
+    "he": {
+      "title": "צאת הכוכבים לרבינו תם (72 דקות זמניות)",
+      "text": "אותן 72 דקות כדקות זמניות: השקיעה ועוד עשירית היום מהנץ עד השקיעה.",
+      "sources": [
+        "תוספות שבת לה ע״א",
+        "שו״ע או״ח רסא, ב וברמ״א"
+      ]
+    },
+    "en": {
+      "title": "Nightfall of Rabbeinu Tam (72 seasonal minutes)",
+      "text": "The same 72 minutes as seasonal minutes: sunset plus a tenth of the day from sunrise to sunset.",
+      "sources": [
+        "Tosafot Shabbat 35a",
+        "Shulchan Aruch OC 261:2 with Rema"
+      ]
+    }
   },
   "tzeitRt16": {
-    "he": { "title": "צאת הכוכבים לרבינו תם (16.1 מעלות)", "text": "כשהשמש 16.1 מעלות מתחת לאופק בערב, עומקה 72 דקות אחרי השקיעה בירושלים בימי השוויון. מספר המעלות הוא חשבון, ואינו מן הגמרא.", "sources": ["תוספות שבת לה ע״א", "שו״ע או״ח רסא, ב וברמ״א"] },
-    "en": { "title": "Nightfall of Rabbeinu Tam (16.1 degrees)", "text": "The sun 16.1 degrees below the horizon in the evening, its depth 72 minutes after sunset in Jerusalem at the equinox. The degree figure is a calculation, not from the Talmud.", "sources": ["Tosafot Shabbat 35a", "Shulchan Aruch OC 261:2 with Rema"] }
+    "he": {
+      "title": "צאת הכוכבים לרבינו תם (16.1 מעלות)",
+      "text": "כשהשמש 16.1 מעלות מתחת לאופק בערב, עומקה 72 דקות אחרי השקיעה בירושלים בימי השוויון. מספר המעלות הוא חשבון, ואינו מן הגמרא.",
+      "sources": [
+        "תוספות שבת לה ע״א",
+        "שו״ע או״ח רסא, ב וברמ״א"
+      ]
+    },
+    "en": {
+      "title": "Nightfall of Rabbeinu Tam (16.1 degrees)",
+      "text": "The sun 16.1 degrees below the horizon in the evening, its depth 72 minutes after sunset in Jerusalem at the equinox. The degree figure is a calculation, not from the Talmud.",
+      "sources": [
+        "Tosafot Shabbat 35a",
+        "Shulchan Aruch OC 261:2 with Rema"
+      ]
+    }
   },
   "sofShmaMga19": {
-    "he": { "title": "סוף זמן קריאת שמע (מגן אברהם, 19.8 מעלות)", "text": "סוף שלש שעות זמניות של היום לשיטת המגן אברהם, הנמנה מהשמש 19.8 מעלות מתחת לאופק בבוקר עד אותו עומק בערב.", "sources": ["משנה ברכות א, ב (קריאת שמע עד שלש שעות)", "שו״ע או״ח נח, א; מגן אברהם נח, א (היום נמנה מעלות השחר עד צאת הכוכבים)", "משנה ברורה נח, ד (המגן אברהם מונה מעלות השחר, והגר״א מהנץ החמה)", "פסחים צג ע״ב (מעלות השחר עד הנץ החמה חמשה מילין, בשם רבי יוחנן)", "שו״ע או״ח תנט, ב; משנה ברורה תנט, טו (מיל = 18 דקות)", "אסטרונומיה: בירושלים בשוויון היום והלילה השמש 19.8 מעלות מתחת לאופק כ-90 דקות לפני הזריחה"] },
-    "en": { "title": "Latest Shema (Magen Avraham, 19.8 degrees)", "text": "The end of three temporal hours of the Magen Avraham's day, counted from the sun 19.8 degrees below the horizon in the morning to the same depth in the evening.", "sources": ["Mishna Berachot 1:2 (Shema until three hours)", "Shulchan Aruch OC 58:1; Magen Avraham 58:1 (the day counted from dawn to nightfall)", "Mishna Berura 58:4 (Magen Avraham counts from dawn; the Vilna Gaon from sunrise)", "Pesachim 93b (from dawn to sunrise five mil, in the name of Rabbi Yochanan)", "Shulchan Aruch OC 459:2; Mishna Berura 459:15 (a mil = 18 minutes)", "Astronomy: in Jerusalem at the equinox the sun is 19.8 degrees below the horizon about 90 minutes before sunrise"] }
+    "he": {
+      "title": "סוף זמן קריאת שמע (מגן אברהם, 19.8 מעלות)",
+      "text": "סוף שלש שעות זמניות של היום לשיטת המגן אברהם, הנמנה מהשמש 19.8 מעלות מתחת לאופק בבוקר עד אותו עומק בערב.",
+      "sources": [
+        "משנה ברכות א, ב (קריאת שמע עד שלש שעות)",
+        "שו״ע או״ח נח, א; מגן אברהם נח, א (היום נמנה מעלות השחר עד צאת הכוכבים)",
+        "משנה ברורה נח, ד (המגן אברהם מונה מעלות השחר, והגר״א מהנץ החמה)",
+        "פסחים צג ע״ב (מעלות השחר עד הנץ החמה חמשה מילין, בשם רבי יוחנן)",
+        "שו״ע או״ח תנט, ב; משנה ברורה תנט, טו (מיל = 18 דקות)",
+        "אסטרונומיה: בירושלים בשוויון היום והלילה השמש 19.8 מעלות מתחת לאופק כ-90 דקות לפני הזריחה"
+      ]
+    },
+    "en": {
+      "title": "Latest Shema (Magen Avraham, 19.8 degrees)",
+      "text": "The end of three temporal hours of the Magen Avraham's day, counted from the sun 19.8 degrees below the horizon in the morning to the same depth in the evening.",
+      "sources": [
+        "Mishna Berachot 1:2 (Shema until three hours)",
+        "Shulchan Aruch OC 58:1; Magen Avraham 58:1 (the day counted from dawn to nightfall)",
+        "Mishna Berura 58:4 (Magen Avraham counts from dawn; the Vilna Gaon from sunrise)",
+        "Pesachim 93b (from dawn to sunrise five mil, in the name of Rabbi Yochanan)",
+        "Shulchan Aruch OC 459:2; Mishna Berura 459:15 (a mil = 18 minutes)",
+        "Astronomy: in Jerusalem at the equinox the sun is 19.8 degrees below the horizon about 90 minutes before sunrise"
+      ]
+    }
   },
   "sofTfillaMga19": {
-    "he": { "title": "סוף זמן תפילה (מגן אברהם, 19.8 מעלות)", "text": "סוף ארבע שעות זמניות של היום לשיטת המגן אברהם, הנמנה מהשמש 19.8 מעלות מתחת לאופק בבוקר עד אותו עומק בערב.", "sources": ["משנה ברכות ד, א; שו״ע או״ח פט, א (תפילת שחרית עד ארבע שעות)", "שו״ע או״ח נח, א; מגן אברהם נח, א (היום נמנה מעלות השחר עד צאת הכוכבים)", "משנה ברורה נח, ד (המגן אברהם מונה מעלות השחר, והגר״א מהנץ החמה)", "פסחים צג ע״ב (מעלות השחר עד הנץ החמה חמשה מילין, בשם רבי יוחנן)", "שו״ע או״ח תנט, ב; משנה ברורה תנט, טו (מיל = 18 דקות)", "אסטרונומיה: בירושלים בשוויון היום והלילה השמש 19.8 מעלות מתחת לאופק כ-90 דקות לפני הזריחה"] },
-    "en": { "title": "Latest morning prayer (Magen Avraham, 19.8 degrees)", "text": "The end of four temporal hours of the Magen Avraham's day, counted from the sun 19.8 degrees below the horizon in the morning to the same depth in the evening.", "sources": ["Mishna Berachot 4:1; Shulchan Aruch OC 89:1 (morning prayer until four hours)", "Shulchan Aruch OC 58:1; Magen Avraham 58:1 (the day counted from dawn to nightfall)", "Mishna Berura 58:4 (Magen Avraham counts from dawn; the Vilna Gaon from sunrise)", "Pesachim 93b (from dawn to sunrise five mil, in the name of Rabbi Yochanan)", "Shulchan Aruch OC 459:2; Mishna Berura 459:15 (a mil = 18 minutes)", "Astronomy: in Jerusalem at the equinox the sun is 19.8 degrees below the horizon about 90 minutes before sunrise"] }
+    "he": {
+      "title": "סוף זמן תפילה (מגן אברהם, 19.8 מעלות)",
+      "text": "סוף ארבע שעות זמניות של היום לשיטת המגן אברהם, הנמנה מהשמש 19.8 מעלות מתחת לאופק בבוקר עד אותו עומק בערב.",
+      "sources": [
+        "משנה ברכות ד, א; שו״ע או״ח פט, א (תפילת שחרית עד ארבע שעות)",
+        "שו״ע או״ח נח, א; מגן אברהם נח, א (היום נמנה מעלות השחר עד צאת הכוכבים)",
+        "משנה ברורה נח, ד (המגן אברהם מונה מעלות השחר, והגר״א מהנץ החמה)",
+        "פסחים צג ע״ב (מעלות השחר עד הנץ החמה חמשה מילין, בשם רבי יוחנן)",
+        "שו״ע או״ח תנט, ב; משנה ברורה תנט, טו (מיל = 18 דקות)",
+        "אסטרונומיה: בירושלים בשוויון היום והלילה השמש 19.8 מעלות מתחת לאופק כ-90 דקות לפני הזריחה"
+      ]
+    },
+    "en": {
+      "title": "Latest morning prayer (Magen Avraham, 19.8 degrees)",
+      "text": "The end of four temporal hours of the Magen Avraham's day, counted from the sun 19.8 degrees below the horizon in the morning to the same depth in the evening.",
+      "sources": [
+        "Mishna Berachot 4:1; Shulchan Aruch OC 89:1 (morning prayer until four hours)",
+        "Shulchan Aruch OC 58:1; Magen Avraham 58:1 (the day counted from dawn to nightfall)",
+        "Mishna Berura 58:4 (Magen Avraham counts from dawn; the Vilna Gaon from sunrise)",
+        "Pesachim 93b (from dawn to sunrise five mil, in the name of Rabbi Yochanan)",
+        "Shulchan Aruch OC 459:2; Mishna Berura 459:15 (a mil = 18 minutes)",
+        "Astronomy: in Jerusalem at the equinox the sun is 19.8 degrees below the horizon about 90 minutes before sunrise"
+      ]
+    }
   },
   "plagMga19": {
-    "he": { "title": "פלג המנחה (מגן אברהם, 19.8 מעלות)", "text": "עשר שעות ושלושה רבעים זמניות של אותו יום לשיטת המגן אברהם, הנמנה מהשמש 19.8 מעלות מתחת לאופק בבוקר עד אותו עומק בערב.", "sources": ["משנה ברכות ד, א; שו״ע או״ח רלג, א (פלג המנחה, אחת עשרה שעות פחות רביע)", "שו״ע או״ח נח, א; מגן אברהם נח, א (היום נמנה מעלות השחר עד צאת הכוכבים)", "פסחים צג ע״ב (מעלות השחר עד הנץ החמה חמשה מילין, בשם רבי יוחנן)", "שו״ע או״ח תנט, ב; משנה ברורה תנט, טו (מיל = 18 דקות)", "אסטרונומיה: בירושלים בשוויון היום והלילה השמש 19.8 מעלות מתחת לאופק כ-90 דקות לפני הזריחה"] },
-    "en": { "title": "Plag hamincha (Magen Avraham, 19.8 degrees)", "text": "10.75 temporal hours of the same Magen Avraham day as the latest Shema of this measure, counted from the sun 19.8 degrees below the horizon in the morning to the same depth in the evening.", "sources": ["Mishna Berachot 4:1; Shulchan Aruch OC 233:1 (plag hamincha, eleven hours less a quarter)", "Shulchan Aruch OC 58:1; Magen Avraham 58:1 (the day counted from dawn to nightfall)", "Pesachim 93b (from dawn to sunrise five mil, in the name of Rabbi Yochanan)", "Shulchan Aruch OC 459:2; Mishna Berura 459:15 (a mil = 18 minutes)", "Astronomy: in Jerusalem at the equinox the sun is 19.8 degrees below the horizon about 90 minutes before sunrise"] }
+    "he": {
+      "title": "פלג המנחה (מגן אברהם, 19.8 מעלות)",
+      "text": "עשר שעות ושלושה רבעים זמניות של אותו יום לשיטת המגן אברהם, הנמנה מהשמש 19.8 מעלות מתחת לאופק בבוקר עד אותו עומק בערב.",
+      "sources": [
+        "משנה ברכות ד, א; שו״ע או״ח רלג, א (פלג המנחה, אחת עשרה שעות פחות רביע)",
+        "שו״ע או״ח נח, א; מגן אברהם נח, א (היום נמנה מעלות השחר עד צאת הכוכבים)",
+        "פסחים צג ע״ב (מעלות השחר עד הנץ החמה חמשה מילין, בשם רבי יוחנן)",
+        "שו״ע או״ח תנט, ב; משנה ברורה תנט, טו (מיל = 18 דקות)",
+        "אסטרונומיה: בירושלים בשוויון היום והלילה השמש 19.8 מעלות מתחת לאופק כ-90 דקות לפני הזריחה"
+      ]
+    },
+    "en": {
+      "title": "Plag hamincha (Magen Avraham, 19.8 degrees)",
+      "text": "10.75 temporal hours of the same Magen Avraham day as the latest Shema of this measure, counted from the sun 19.8 degrees below the horizon in the morning to the same depth in the evening.",
+      "sources": [
+        "Mishna Berachot 4:1; Shulchan Aruch OC 233:1 (plag hamincha, eleven hours less a quarter)",
+        "Shulchan Aruch OC 58:1; Magen Avraham 58:1 (the day counted from dawn to nightfall)",
+        "Pesachim 93b (from dawn to sunrise five mil, in the name of Rabbi Yochanan)",
+        "Shulchan Aruch OC 459:2; Mishna Berura 459:15 (a mil = 18 minutes)",
+        "Astronomy: in Jerusalem at the equinox the sun is 19.8 degrees below the horizon about 90 minutes before sunrise"
+      ]
+    }
   },
   "sofShmaMga90": {
-    "he": { "title": "סוף זמן קריאת שמע (מגן אברהם, 90 דקות)", "text": "סוף שלש שעות זמניות של היום לשיטת המגן אברהם, הנמנה מ-90 דקות קבועות לפני הזריחה עד 90 דקות אחרי השקיעה (חמשה מילין של 18 דקות).", "sources": ["משנה ברכות א, ב (קריאת שמע עד שלש שעות)", "שו״ע או״ח נח, א; מגן אברהם נח, א (היום נמנה מעלות השחר עד צאת הכוכבים)", "משנה ברורה נח, ד (המגן אברהם מונה מעלות השחר, והגר״א מהנץ החמה)", "פסחים צג ע״ב (מעלות השחר עד הנץ החמה חמשה מילין, בשם רבי יוחנן)", "שו״ע או״ח תנט, ב; משנה ברורה תנט, טו (מיל = 18 דקות)"] },
-    "en": { "title": "Latest Shema (Magen Avraham, 90 minutes)", "text": "The end of three temporal hours of the Magen Avraham's day, counted from 90 fixed minutes before sunrise to 90 minutes after sunset (five mil of 18 minutes).", "sources": ["Mishna Berachot 1:2 (Shema until three hours)", "Shulchan Aruch OC 58:1; Magen Avraham 58:1 (the day counted from dawn to nightfall)", "Mishna Berura 58:4 (Magen Avraham counts from dawn; the Vilna Gaon from sunrise)", "Pesachim 93b (from dawn to sunrise five mil, in the name of Rabbi Yochanan)", "Shulchan Aruch OC 459:2; Mishna Berura 459:15 (a mil = 18 minutes)"] }
+    "he": {
+      "title": "סוף זמן קריאת שמע (מגן אברהם, 90 דקות)",
+      "text": "סוף שלש שעות זמניות של היום לשיטת המגן אברהם, הנמנה מ-90 דקות קבועות לפני הזריחה עד 90 דקות אחרי השקיעה (חמשה מילין של 18 דקות).",
+      "sources": [
+        "משנה ברכות א, ב (קריאת שמע עד שלש שעות)",
+        "שו״ע או״ח נח, א; מגן אברהם נח, א (היום נמנה מעלות השחר עד צאת הכוכבים)",
+        "משנה ברורה נח, ד (המגן אברהם מונה מעלות השחר, והגר״א מהנץ החמה)",
+        "פסחים צג ע״ב (מעלות השחר עד הנץ החמה חמשה מילין, בשם רבי יוחנן)",
+        "שו״ע או״ח תנט, ב; משנה ברורה תנט, טו (מיל = 18 דקות)"
+      ]
+    },
+    "en": {
+      "title": "Latest Shema (Magen Avraham, 90 minutes)",
+      "text": "The end of three temporal hours of the Magen Avraham's day, counted from 90 fixed minutes before sunrise to 90 minutes after sunset (five mil of 18 minutes).",
+      "sources": [
+        "Mishna Berachot 1:2 (Shema until three hours)",
+        "Shulchan Aruch OC 58:1; Magen Avraham 58:1 (the day counted from dawn to nightfall)",
+        "Mishna Berura 58:4 (Magen Avraham counts from dawn; the Vilna Gaon from sunrise)",
+        "Pesachim 93b (from dawn to sunrise five mil, in the name of Rabbi Yochanan)",
+        "Shulchan Aruch OC 459:2; Mishna Berura 459:15 (a mil = 18 minutes)"
+      ]
+    }
   },
   "sofTfillaMga90": {
-    "he": { "title": "סוף זמן תפילה (מגן אברהם, 90 דקות)", "text": "סוף ארבע שעות זמניות של היום לשיטת המגן אברהם, הנמנה מ-90 דקות קבועות לפני הזריחה עד 90 דקות אחרי השקיעה (חמשה מילין של 18 דקות).", "sources": ["משנה ברכות ד, א; שו״ע או״ח פט, א (תפילת שחרית עד ארבע שעות)", "שו״ע או״ח נח, א; מגן אברהם נח, א (היום נמנה מעלות השחר עד צאת הכוכבים)", "משנה ברורה נח, ד (המגן אברהם מונה מעלות השחר, והגר״א מהנץ החמה)", "פסחים צג ע״ב (מעלות השחר עד הנץ החמה חמשה מילין, בשם רבי יוחנן)", "שו״ע או״ח תנט, ב; משנה ברורה תנט, טו (מיל = 18 דקות)"] },
-    "en": { "title": "Latest morning prayer (Magen Avraham, 90 minutes)", "text": "The end of four temporal hours of the Magen Avraham's day, counted from 90 fixed minutes before sunrise to 90 minutes after sunset (five mil of 18 minutes).", "sources": ["Mishna Berachot 4:1; Shulchan Aruch OC 89:1 (morning prayer until four hours)", "Shulchan Aruch OC 58:1; Magen Avraham 58:1 (the day counted from dawn to nightfall)", "Mishna Berura 58:4 (Magen Avraham counts from dawn; the Vilna Gaon from sunrise)", "Pesachim 93b (from dawn to sunrise five mil, in the name of Rabbi Yochanan)", "Shulchan Aruch OC 459:2; Mishna Berura 459:15 (a mil = 18 minutes)"] }
+    "he": {
+      "title": "סוף זמן תפילה (מגן אברהם, 90 דקות)",
+      "text": "סוף ארבע שעות זמניות של היום לשיטת המגן אברהם, הנמנה מ-90 דקות קבועות לפני הזריחה עד 90 דקות אחרי השקיעה (חמשה מילין של 18 דקות).",
+      "sources": [
+        "משנה ברכות ד, א; שו״ע או״ח פט, א (תפילת שחרית עד ארבע שעות)",
+        "שו״ע או״ח נח, א; מגן אברהם נח, א (היום נמנה מעלות השחר עד צאת הכוכבים)",
+        "משנה ברורה נח, ד (המגן אברהם מונה מעלות השחר, והגר״א מהנץ החמה)",
+        "פסחים צג ע״ב (מעלות השחר עד הנץ החמה חמשה מילין, בשם רבי יוחנן)",
+        "שו״ע או״ח תנט, ב; משנה ברורה תנט, טו (מיל = 18 דקות)"
+      ]
+    },
+    "en": {
+      "title": "Latest morning prayer (Magen Avraham, 90 minutes)",
+      "text": "The end of four temporal hours of the Magen Avraham's day, counted from 90 fixed minutes before sunrise to 90 minutes after sunset (five mil of 18 minutes).",
+      "sources": [
+        "Mishna Berachot 4:1; Shulchan Aruch OC 89:1 (morning prayer until four hours)",
+        "Shulchan Aruch OC 58:1; Magen Avraham 58:1 (the day counted from dawn to nightfall)",
+        "Mishna Berura 58:4 (Magen Avraham counts from dawn; the Vilna Gaon from sunrise)",
+        "Pesachim 93b (from dawn to sunrise five mil, in the name of Rabbi Yochanan)",
+        "Shulchan Aruch OC 459:2; Mishna Berura 459:15 (a mil = 18 minutes)"
+      ]
+    }
   },
   "plagMga90": {
-    "he": { "title": "פלג המנחה (מגן אברהם, 90 דקות)", "text": "עשר שעות ושלושה רבעים זמניות של אותו יום לשיטת המגן אברהם, הנמנה מ-90 דקות קבועות לפני הזריחה עד 90 דקות אחרי השקיעה (חמשה מילין של 18 דקות).", "sources": ["משנה ברכות ד, א; שו״ע או״ח רלג, א (פלג המנחה, אחת עשרה שעות פחות רביע)", "שו״ע או״ח נח, א; מגן אברהם נח, א (היום נמנה מעלות השחר עד צאת הכוכבים)", "פסחים צג ע״ב (מעלות השחר עד הנץ החמה חמשה מילין, בשם רבי יוחנן)", "שו״ע או״ח תנט, ב; משנה ברורה תנט, טו (מיל = 18 דקות)"] },
-    "en": { "title": "Plag hamincha (Magen Avraham, 90 minutes)", "text": "10.75 temporal hours of the same Magen Avraham day as the latest Shema of this measure, counted from 90 fixed minutes before sunrise to 90 minutes after sunset (five mil of 18 minutes).", "sources": ["Mishna Berachot 4:1; Shulchan Aruch OC 233:1 (plag hamincha, eleven hours less a quarter)", "Shulchan Aruch OC 58:1; Magen Avraham 58:1 (the day counted from dawn to nightfall)", "Pesachim 93b (from dawn to sunrise five mil, in the name of Rabbi Yochanan)", "Shulchan Aruch OC 459:2; Mishna Berura 459:15 (a mil = 18 minutes)"] }
+    "he": {
+      "title": "פלג המנחה (מגן אברהם, 90 דקות)",
+      "text": "עשר שעות ושלושה רבעים זמניות של אותו יום לשיטת המגן אברהם, הנמנה מ-90 דקות קבועות לפני הזריחה עד 90 דקות אחרי השקיעה (חמשה מילין של 18 דקות).",
+      "sources": [
+        "משנה ברכות ד, א; שו״ע או״ח רלג, א (פלג המנחה, אחת עשרה שעות פחות רביע)",
+        "שו״ע או״ח נח, א; מגן אברהם נח, א (היום נמנה מעלות השחר עד צאת הכוכבים)",
+        "פסחים צג ע״ב (מעלות השחר עד הנץ החמה חמשה מילין, בשם רבי יוחנן)",
+        "שו״ע או״ח תנט, ב; משנה ברורה תנט, טו (מיל = 18 דקות)"
+      ]
+    },
+    "en": {
+      "title": "Plag hamincha (Magen Avraham, 90 minutes)",
+      "text": "10.75 temporal hours of the same Magen Avraham day as the latest Shema of this measure, counted from 90 fixed minutes before sunrise to 90 minutes after sunset (five mil of 18 minutes).",
+      "sources": [
+        "Mishna Berachot 4:1; Shulchan Aruch OC 233:1 (plag hamincha, eleven hours less a quarter)",
+        "Shulchan Aruch OC 58:1; Magen Avraham 58:1 (the day counted from dawn to nightfall)",
+        "Pesachim 93b (from dawn to sunrise five mil, in the name of Rabbi Yochanan)",
+        "Shulchan Aruch OC 459:2; Mishna Berura 459:15 (a mil = 18 minutes)"
+      ]
+    }
   },
   "sofShmaMga120": {
-    "he": { "title": "סוף זמן קריאת שמע (מגן אברהם, 120 דקות)", "text": "סוף שלש שעות זמניות של היום לשיטת המגן אברהם, הנמנה מ-120 דקות קבועות לפני הזריחה עד 120 דקות אחרי השקיעה (חמשה מילין של 24 דקות).", "sources": ["משנה ברכות א, ב (קריאת שמע עד שלש שעות)", "שו״ע או״ח נח, א; מגן אברהם נח, א (היום נמנה מעלות השחר עד צאת הכוכבים)", "משנה ברורה נח, ד (המגן אברהם מונה מעלות השחר, והגר״א מהנץ החמה)", "פסחים צג ע״ב (מעלות השחר עד הנץ החמה חמשה מילין, בשם רבי יוחנן)", "פירוש המשניות לרמב״ם פסחים ג, ב (מיל = שני חומשי שעה, 24 דקות)"] },
-    "en": { "title": "Latest Shema (Magen Avraham, 120 minutes)", "text": "The end of three temporal hours of the Magen Avraham's day, counted from 120 fixed minutes before sunrise to 120 minutes after sunset (five mil of 24 minutes).", "sources": ["Mishna Berachot 1:2 (Shema until three hours)", "Shulchan Aruch OC 58:1; Magen Avraham 58:1 (the day counted from dawn to nightfall)", "Mishna Berura 58:4 (Magen Avraham counts from dawn; the Vilna Gaon from sunrise)", "Pesachim 93b (from dawn to sunrise five mil, in the name of Rabbi Yochanan)", "Rambam, commentary on Mishna Pesachim 3:2 (a mil = two fifths of an hour, 24 minutes)"] }
+    "he": {
+      "title": "סוף זמן קריאת שמע (מגן אברהם, 120 דקות)",
+      "text": "סוף שלש שעות זמניות של היום לשיטת המגן אברהם, הנמנה מ-120 דקות קבועות לפני הזריחה עד 120 דקות אחרי השקיעה (חמשה מילין של 24 דקות).",
+      "sources": [
+        "משנה ברכות א, ב (קריאת שמע עד שלש שעות)",
+        "שו״ע או״ח נח, א; מגן אברהם נח, א (היום נמנה מעלות השחר עד צאת הכוכבים)",
+        "משנה ברורה נח, ד (המגן אברהם מונה מעלות השחר, והגר״א מהנץ החמה)",
+        "פסחים צג ע״ב (מעלות השחר עד הנץ החמה חמשה מילין, בשם רבי יוחנן)",
+        "פירוש המשניות לרמב״ם פסחים ג, ב (מיל = שני חומשי שעה, 24 דקות)"
+      ]
+    },
+    "en": {
+      "title": "Latest Shema (Magen Avraham, 120 minutes)",
+      "text": "The end of three temporal hours of the Magen Avraham's day, counted from 120 fixed minutes before sunrise to 120 minutes after sunset (five mil of 24 minutes).",
+      "sources": [
+        "Mishna Berachot 1:2 (Shema until three hours)",
+        "Shulchan Aruch OC 58:1; Magen Avraham 58:1 (the day counted from dawn to nightfall)",
+        "Mishna Berura 58:4 (Magen Avraham counts from dawn; the Vilna Gaon from sunrise)",
+        "Pesachim 93b (from dawn to sunrise five mil, in the name of Rabbi Yochanan)",
+        "Rambam, commentary on Mishna Pesachim 3:2 (a mil = two fifths of an hour, 24 minutes)"
+      ]
+    }
   },
   "sofTfillaMga120": {
-    "he": { "title": "סוף זמן תפילה (מגן אברהם, 120 דקות)", "text": "סוף ארבע שעות זמניות של היום לשיטת המגן אברהם, הנמנה מ-120 דקות קבועות לפני הזריחה עד 120 דקות אחרי השקיעה (חמשה מילין של 24 דקות).", "sources": ["משנה ברכות ד, א; שו״ע או״ח פט, א (תפילת שחרית עד ארבע שעות)", "שו״ע או״ח נח, א; מגן אברהם נח, א (היום נמנה מעלות השחר עד צאת הכוכבים)", "משנה ברורה נח, ד (המגן אברהם מונה מעלות השחר, והגר״א מהנץ החמה)", "פסחים צג ע״ב (מעלות השחר עד הנץ החמה חמשה מילין, בשם רבי יוחנן)", "פירוש המשניות לרמב״ם פסחים ג, ב (מיל = שני חומשי שעה, 24 דקות)"] },
-    "en": { "title": "Latest morning prayer (Magen Avraham, 120 minutes)", "text": "The end of four temporal hours of the Magen Avraham's day, counted from 120 fixed minutes before sunrise to 120 minutes after sunset (five mil of 24 minutes).", "sources": ["Mishna Berachot 4:1; Shulchan Aruch OC 89:1 (morning prayer until four hours)", "Shulchan Aruch OC 58:1; Magen Avraham 58:1 (the day counted from dawn to nightfall)", "Mishna Berura 58:4 (Magen Avraham counts from dawn; the Vilna Gaon from sunrise)", "Pesachim 93b (from dawn to sunrise five mil, in the name of Rabbi Yochanan)", "Rambam, commentary on Mishna Pesachim 3:2 (a mil = two fifths of an hour, 24 minutes)"] }
+    "he": {
+      "title": "סוף זמן תפילה (מגן אברהם, 120 דקות)",
+      "text": "סוף ארבע שעות זמניות של היום לשיטת המגן אברהם, הנמנה מ-120 דקות קבועות לפני הזריחה עד 120 דקות אחרי השקיעה (חמשה מילין של 24 דקות).",
+      "sources": [
+        "משנה ברכות ד, א; שו״ע או״ח פט, א (תפילת שחרית עד ארבע שעות)",
+        "שו״ע או״ח נח, א; מגן אברהם נח, א (היום נמנה מעלות השחר עד צאת הכוכבים)",
+        "משנה ברורה נח, ד (המגן אברהם מונה מעלות השחר, והגר״א מהנץ החמה)",
+        "פסחים צג ע״ב (מעלות השחר עד הנץ החמה חמשה מילין, בשם רבי יוחנן)",
+        "פירוש המשניות לרמב״ם פסחים ג, ב (מיל = שני חומשי שעה, 24 דקות)"
+      ]
+    },
+    "en": {
+      "title": "Latest morning prayer (Magen Avraham, 120 minutes)",
+      "text": "The end of four temporal hours of the Magen Avraham's day, counted from 120 fixed minutes before sunrise to 120 minutes after sunset (five mil of 24 minutes).",
+      "sources": [
+        "Mishna Berachot 4:1; Shulchan Aruch OC 89:1 (morning prayer until four hours)",
+        "Shulchan Aruch OC 58:1; Magen Avraham 58:1 (the day counted from dawn to nightfall)",
+        "Mishna Berura 58:4 (Magen Avraham counts from dawn; the Vilna Gaon from sunrise)",
+        "Pesachim 93b (from dawn to sunrise five mil, in the name of Rabbi Yochanan)",
+        "Rambam, commentary on Mishna Pesachim 3:2 (a mil = two fifths of an hour, 24 minutes)"
+      ]
+    }
   },
   "plagMga120": {
-    "he": { "title": "פלג המנחה (מגן אברהם, 120 דקות)", "text": "עשר שעות ושלושה רבעים זמניות של אותו יום לשיטת המגן אברהם, הנמנה מ-120 דקות קבועות לפני הזריחה עד 120 דקות אחרי השקיעה (חמשה מילין של 24 דקות).", "sources": ["משנה ברכות ד, א; שו״ע או״ח רלג, א (פלג המנחה, אחת עשרה שעות פחות רביע)", "שו״ע או״ח נח, א; מגן אברהם נח, א (היום נמנה מעלות השחר עד צאת הכוכבים)", "פסחים צג ע״ב (מעלות השחר עד הנץ החמה חמשה מילין, בשם רבי יוחנן)", "פירוש המשניות לרמב״ם פסחים ג, ב (מיל = שני חומשי שעה, 24 דקות)"] },
-    "en": { "title": "Plag hamincha (Magen Avraham, 120 minutes)", "text": "10.75 temporal hours of the same Magen Avraham day as the latest Shema of this measure, counted from 120 fixed minutes before sunrise to 120 minutes after sunset (five mil of 24 minutes).", "sources": ["Mishna Berachot 4:1; Shulchan Aruch OC 233:1 (plag hamincha, eleven hours less a quarter)", "Shulchan Aruch OC 58:1; Magen Avraham 58:1 (the day counted from dawn to nightfall)", "Pesachim 93b (from dawn to sunrise five mil, in the name of Rabbi Yochanan)", "Rambam, commentary on Mishna Pesachim 3:2 (a mil = two fifths of an hour, 24 minutes)"] }
+    "he": {
+      "title": "פלג המנחה (מגן אברהם, 120 דקות)",
+      "text": "עשר שעות ושלושה רבעים זמניות של אותו יום לשיטת המגן אברהם, הנמנה מ-120 דקות קבועות לפני הזריחה עד 120 דקות אחרי השקיעה (חמשה מילין של 24 דקות).",
+      "sources": [
+        "משנה ברכות ד, א; שו״ע או״ח רלג, א (פלג המנחה, אחת עשרה שעות פחות רביע)",
+        "שו״ע או״ח נח, א; מגן אברהם נח, א (היום נמנה מעלות השחר עד צאת הכוכבים)",
+        "פסחים צג ע״ב (מעלות השחר עד הנץ החמה חמשה מילין, בשם רבי יוחנן)",
+        "פירוש המשניות לרמב״ם פסחים ג, ב (מיל = שני חומשי שעה, 24 דקות)"
+      ]
+    },
+    "en": {
+      "title": "Plag hamincha (Magen Avraham, 120 minutes)",
+      "text": "10.75 temporal hours of the same Magen Avraham day as the latest Shema of this measure, counted from 120 fixed minutes before sunrise to 120 minutes after sunset (five mil of 24 minutes).",
+      "sources": [
+        "Mishna Berachot 4:1; Shulchan Aruch OC 233:1 (plag hamincha, eleven hours less a quarter)",
+        "Shulchan Aruch OC 58:1; Magen Avraham 58:1 (the day counted from dawn to nightfall)",
+        "Pesachim 93b (from dawn to sunrise five mil, in the name of Rabbi Yochanan)",
+        "Rambam, commentary on Mishna Pesachim 3:2 (a mil = two fifths of an hour, 24 minutes)"
+      ]
+    }
   },
   "sofShmaMga72z": {
-    "he": { "title": "סוף זמן קריאת שמע (מגן אברהם, 72 דקות זמניות)", "text": "סוף שלש שעות זמניות של היום לשיטת המגן אברהם, הנמנה מעשירית היום (מהזריחה עד השקיעה) לפני הזריחה עד עשירית ממנו אחרי השקיעה (72 דקות ביום של 12 שעות).", "sources": ["משנה ברכות א, ב (קריאת שמע עד שלש שעות)", "שו״ע או״ח נח, א; מגן אברהם נח, א (היום נמנה מעלות השחר עד צאת הכוכבים)", "משנה ברורה נח, ד (המגן אברהם מונה מעלות השחר, והגר״א מהנץ החמה)", "פסחים צד ע״א (לרבי יהודה ארבעה מילין)", "שו״ע או״ח תנט, ב; משנה ברורה תנט, טו (מיל = 18 דקות)", "שו״ע או״ח נח, א (שעות זמניות: חלק משנים עשר ביום, לפי אורך היום); כאן גם דקות עלות השחר נמדדות כך"] },
-    "en": { "title": "Latest Shema (Magen Avraham, 72 seasonal minutes)", "text": "The end of three temporal hours of the Magen Avraham's day, counted from a tenth of the sunrise-to-sunset day before sunrise to a tenth of it after sunset (72 minutes on a 12-hour day).", "sources": ["Mishna Berachot 1:2 (Shema until three hours)", "Shulchan Aruch OC 58:1; Magen Avraham 58:1 (the day counted from dawn to nightfall)", "Mishna Berura 58:4 (Magen Avraham counts from dawn; the Vilna Gaon from sunrise)", "Pesachim 94a (four mil according to Rabbi Yehuda)", "Shulchan Aruch OC 459:2; Mishna Berura 459:15 (a mil = 18 minutes)", "Shulchan Aruch OC 58:1 (hours of the day are a twelfth of the day, longer or shorter by season); here the minutes of dawn are counted the same way"] }
+    "he": {
+      "title": "סוף זמן קריאת שמע (מגן אברהם, 72 דקות זמניות)",
+      "text": "סוף שלש שעות זמניות של היום לשיטת המגן אברהם, הנמנה מעשירית היום (מהזריחה עד השקיעה) לפני הזריחה עד עשירית ממנו אחרי השקיעה (72 דקות ביום של 12 שעות).",
+      "sources": [
+        "משנה ברכות א, ב (קריאת שמע עד שלש שעות)",
+        "שו״ע או״ח נח, א; מגן אברהם נח, א (היום נמנה מעלות השחר עד צאת הכוכבים)",
+        "משנה ברורה נח, ד (המגן אברהם מונה מעלות השחר, והגר״א מהנץ החמה)",
+        "פסחים צד ע״א (לרבי יהודה ארבעה מילין)",
+        "שו״ע או״ח תנט, ב; משנה ברורה תנט, טו (מיל = 18 דקות)",
+        "שו״ע או״ח נח, א (שעות זמניות: חלק משנים עשר ביום, לפי אורך היום); כאן גם דקות עלות השחר נמדדות כך"
+      ]
+    },
+    "en": {
+      "title": "Latest Shema (Magen Avraham, 72 seasonal minutes)",
+      "text": "The end of three temporal hours of the Magen Avraham's day, counted from a tenth of the sunrise-to-sunset day before sunrise to a tenth of it after sunset (72 minutes on a 12-hour day).",
+      "sources": [
+        "Mishna Berachot 1:2 (Shema until three hours)",
+        "Shulchan Aruch OC 58:1; Magen Avraham 58:1 (the day counted from dawn to nightfall)",
+        "Mishna Berura 58:4 (Magen Avraham counts from dawn; the Vilna Gaon from sunrise)",
+        "Pesachim 94a (four mil according to Rabbi Yehuda)",
+        "Shulchan Aruch OC 459:2; Mishna Berura 459:15 (a mil = 18 minutes)",
+        "Shulchan Aruch OC 58:1 (hours of the day are a twelfth of the day, longer or shorter by season); here the minutes of dawn are counted the same way"
+      ]
+    }
   },
   "sofTfillaMga72z": {
-    "he": { "title": "סוף זמן תפילה (מגן אברהם, 72 דקות זמניות)", "text": "סוף ארבע שעות זמניות של היום לשיטת המגן אברהם, הנמנה מעשירית היום (מהזריחה עד השקיעה) לפני הזריחה עד עשירית ממנו אחרי השקיעה (72 דקות ביום של 12 שעות).", "sources": ["משנה ברכות ד, א; שו״ע או״ח פט, א (תפילת שחרית עד ארבע שעות)", "שו״ע או״ח נח, א; מגן אברהם נח, א (היום נמנה מעלות השחר עד צאת הכוכבים)", "משנה ברורה נח, ד (המגן אברהם מונה מעלות השחר, והגר״א מהנץ החמה)", "פסחים צד ע״א (לרבי יהודה ארבעה מילין)", "שו״ע או״ח תנט, ב; משנה ברורה תנט, טו (מיל = 18 דקות)", "שו״ע או״ח נח, א (שעות זמניות: חלק משנים עשר ביום, לפי אורך היום); כאן גם דקות עלות השחר נמדדות כך"] },
-    "en": { "title": "Latest morning prayer (Magen Avraham, 72 seasonal minutes)", "text": "The end of four temporal hours of the Magen Avraham's day, counted from a tenth of the sunrise-to-sunset day before sunrise to a tenth of it after sunset (72 minutes on a 12-hour day).", "sources": ["Mishna Berachot 4:1; Shulchan Aruch OC 89:1 (morning prayer until four hours)", "Shulchan Aruch OC 58:1; Magen Avraham 58:1 (the day counted from dawn to nightfall)", "Mishna Berura 58:4 (Magen Avraham counts from dawn; the Vilna Gaon from sunrise)", "Pesachim 94a (four mil according to Rabbi Yehuda)", "Shulchan Aruch OC 459:2; Mishna Berura 459:15 (a mil = 18 minutes)", "Shulchan Aruch OC 58:1 (hours of the day are a twelfth of the day, longer or shorter by season); here the minutes of dawn are counted the same way"] }
+    "he": {
+      "title": "סוף זמן תפילה (מגן אברהם, 72 דקות זמניות)",
+      "text": "סוף ארבע שעות זמניות של היום לשיטת המגן אברהם, הנמנה מעשירית היום (מהזריחה עד השקיעה) לפני הזריחה עד עשירית ממנו אחרי השקיעה (72 דקות ביום של 12 שעות).",
+      "sources": [
+        "משנה ברכות ד, א; שו״ע או״ח פט, א (תפילת שחרית עד ארבע שעות)",
+        "שו״ע או״ח נח, א; מגן אברהם נח, א (היום נמנה מעלות השחר עד צאת הכוכבים)",
+        "משנה ברורה נח, ד (המגן אברהם מונה מעלות השחר, והגר״א מהנץ החמה)",
+        "פסחים צד ע״א (לרבי יהודה ארבעה מילין)",
+        "שו״ע או״ח תנט, ב; משנה ברורה תנט, טו (מיל = 18 דקות)",
+        "שו״ע או״ח נח, א (שעות זמניות: חלק משנים עשר ביום, לפי אורך היום); כאן גם דקות עלות השחר נמדדות כך"
+      ]
+    },
+    "en": {
+      "title": "Latest morning prayer (Magen Avraham, 72 seasonal minutes)",
+      "text": "The end of four temporal hours of the Magen Avraham's day, counted from a tenth of the sunrise-to-sunset day before sunrise to a tenth of it after sunset (72 minutes on a 12-hour day).",
+      "sources": [
+        "Mishna Berachot 4:1; Shulchan Aruch OC 89:1 (morning prayer until four hours)",
+        "Shulchan Aruch OC 58:1; Magen Avraham 58:1 (the day counted from dawn to nightfall)",
+        "Mishna Berura 58:4 (Magen Avraham counts from dawn; the Vilna Gaon from sunrise)",
+        "Pesachim 94a (four mil according to Rabbi Yehuda)",
+        "Shulchan Aruch OC 459:2; Mishna Berura 459:15 (a mil = 18 minutes)",
+        "Shulchan Aruch OC 58:1 (hours of the day are a twelfth of the day, longer or shorter by season); here the minutes of dawn are counted the same way"
+      ]
+    }
   },
   "plagMga72z": {
-    "he": { "title": "פלג המנחה (מגן אברהם, 72 דקות זמניות)", "text": "עשר שעות ושלושה רבעים זמניות של אותו יום לשיטת המגן אברהם, הנמנה מעשירית היום (מהזריחה עד השקיעה) לפני הזריחה עד עשירית ממנו אחרי השקיעה (72 דקות ביום של 12 שעות).", "sources": ["משנה ברכות ד, א; שו״ע או״ח רלג, א (פלג המנחה, אחת עשרה שעות פחות רביע)", "שו״ע או״ח נח, א; מגן אברהם נח, א (היום נמנה מעלות השחר עד צאת הכוכבים)", "פסחים צד ע״א (לרבי יהודה ארבעה מילין)", "שו״ע או״ח תנט, ב; משנה ברורה תנט, טו (מיל = 18 דקות)", "שו״ע או״ח נח, א (שעות זמניות: חלק משנים עשר ביום, לפי אורך היום); כאן גם דקות עלות השחר נמדדות כך"] },
-    "en": { "title": "Plag hamincha (Magen Avraham, 72 seasonal minutes)", "text": "10.75 temporal hours of the same Magen Avraham day as the latest Shema of this measure, counted from a tenth of the sunrise-to-sunset day before sunrise to a tenth of it after sunset (72 minutes on a 12-hour day).", "sources": ["Mishna Berachot 4:1; Shulchan Aruch OC 233:1 (plag hamincha, eleven hours less a quarter)", "Shulchan Aruch OC 58:1; Magen Avraham 58:1 (the day counted from dawn to nightfall)", "Pesachim 94a (four mil according to Rabbi Yehuda)", "Shulchan Aruch OC 459:2; Mishna Berura 459:15 (a mil = 18 minutes)", "Shulchan Aruch OC 58:1 (hours of the day are a twelfth of the day, longer or shorter by season); here the minutes of dawn are counted the same way"] }
+    "he": {
+      "title": "פלג המנחה (מגן אברהם, 72 דקות זמניות)",
+      "text": "עשר שעות ושלושה רבעים זמניות של אותו יום לשיטת המגן אברהם, הנמנה מעשירית היום (מהזריחה עד השקיעה) לפני הזריחה עד עשירית ממנו אחרי השקיעה (72 דקות ביום של 12 שעות).",
+      "sources": [
+        "משנה ברכות ד, א; שו״ע או״ח רלג, א (פלג המנחה, אחת עשרה שעות פחות רביע)",
+        "שו״ע או״ח נח, א; מגן אברהם נח, א (היום נמנה מעלות השחר עד צאת הכוכבים)",
+        "פסחים צד ע״א (לרבי יהודה ארבעה מילין)",
+        "שו״ע או״ח תנט, ב; משנה ברורה תנט, טו (מיל = 18 דקות)",
+        "שו״ע או״ח נח, א (שעות זמניות: חלק משנים עשר ביום, לפי אורך היום); כאן גם דקות עלות השחר נמדדות כך"
+      ]
+    },
+    "en": {
+      "title": "Plag hamincha (Magen Avraham, 72 seasonal minutes)",
+      "text": "10.75 temporal hours of the same Magen Avraham day as the latest Shema of this measure, counted from a tenth of the sunrise-to-sunset day before sunrise to a tenth of it after sunset (72 minutes on a 12-hour day).",
+      "sources": [
+        "Mishna Berachot 4:1; Shulchan Aruch OC 233:1 (plag hamincha, eleven hours less a quarter)",
+        "Shulchan Aruch OC 58:1; Magen Avraham 58:1 (the day counted from dawn to nightfall)",
+        "Pesachim 94a (four mil according to Rabbi Yehuda)",
+        "Shulchan Aruch OC 459:2; Mishna Berura 459:15 (a mil = 18 minutes)",
+        "Shulchan Aruch OC 58:1 (hours of the day are a twelfth of the day, longer or shorter by season); here the minutes of dawn are counted the same way"
+      ]
+    }
   },
   "sofShmaMga90z": {
-    "he": { "title": "סוף זמן קריאת שמע (מגן אברהם, 90 דקות זמניות)", "text": "סוף שלש שעות זמניות של היום לשיטת המגן אברהם, הנמנה משמינית היום (מהזריחה עד השקיעה) לפני הזריחה עד שמינית ממנו אחרי השקיעה (90 דקות ביום של 12 שעות).", "sources": ["משנה ברכות א, ב (קריאת שמע עד שלש שעות)", "שו״ע או״ח נח, א; מגן אברהם נח, א (היום נמנה מעלות השחר עד צאת הכוכבים)", "משנה ברורה נח, ד (המגן אברהם מונה מעלות השחר, והגר״א מהנץ החמה)", "פסחים צג ע״ב (מעלות השחר עד הנץ החמה חמשה מילין, בשם רבי יוחנן)", "שו״ע או״ח תנט, ב; משנה ברורה תנט, טו (מיל = 18 דקות)", "שו״ע או״ח נח, א (שעות זמניות: חלק משנים עשר ביום, לפי אורך היום); כאן גם דקות עלות השחר נמדדות כך"] },
-    "en": { "title": "Latest Shema (Magen Avraham, 90 seasonal minutes)", "text": "The end of three temporal hours of the Magen Avraham's day, counted from an eighth of the sunrise-to-sunset day before sunrise to an eighth of it after sunset (90 minutes on a 12-hour day).", "sources": ["Mishna Berachot 1:2 (Shema until three hours)", "Shulchan Aruch OC 58:1; Magen Avraham 58:1 (the day counted from dawn to nightfall)", "Mishna Berura 58:4 (Magen Avraham counts from dawn; the Vilna Gaon from sunrise)", "Pesachim 93b (from dawn to sunrise five mil, in the name of Rabbi Yochanan)", "Shulchan Aruch OC 459:2; Mishna Berura 459:15 (a mil = 18 minutes)", "Shulchan Aruch OC 58:1 (hours of the day are a twelfth of the day, longer or shorter by season); here the minutes of dawn are counted the same way"] }
+    "he": {
+      "title": "סוף זמן קריאת שמע (מגן אברהם, 90 דקות זמניות)",
+      "text": "סוף שלש שעות זמניות של היום לשיטת המגן אברהם, הנמנה משמינית היום (מהזריחה עד השקיעה) לפני הזריחה עד שמינית ממנו אחרי השקיעה (90 דקות ביום של 12 שעות).",
+      "sources": [
+        "משנה ברכות א, ב (קריאת שמע עד שלש שעות)",
+        "שו״ע או״ח נח, א; מגן אברהם נח, א (היום נמנה מעלות השחר עד צאת הכוכבים)",
+        "משנה ברורה נח, ד (המגן אברהם מונה מעלות השחר, והגר״א מהנץ החמה)",
+        "פסחים צג ע״ב (מעלות השחר עד הנץ החמה חמשה מילין, בשם רבי יוחנן)",
+        "שו״ע או״ח תנט, ב; משנה ברורה תנט, טו (מיל = 18 דקות)",
+        "שו״ע או״ח נח, א (שעות זמניות: חלק משנים עשר ביום, לפי אורך היום); כאן גם דקות עלות השחר נמדדות כך"
+      ]
+    },
+    "en": {
+      "title": "Latest Shema (Magen Avraham, 90 seasonal minutes)",
+      "text": "The end of three temporal hours of the Magen Avraham's day, counted from an eighth of the sunrise-to-sunset day before sunrise to an eighth of it after sunset (90 minutes on a 12-hour day).",
+      "sources": [
+        "Mishna Berachot 1:2 (Shema until three hours)",
+        "Shulchan Aruch OC 58:1; Magen Avraham 58:1 (the day counted from dawn to nightfall)",
+        "Mishna Berura 58:4 (Magen Avraham counts from dawn; the Vilna Gaon from sunrise)",
+        "Pesachim 93b (from dawn to sunrise five mil, in the name of Rabbi Yochanan)",
+        "Shulchan Aruch OC 459:2; Mishna Berura 459:15 (a mil = 18 minutes)",
+        "Shulchan Aruch OC 58:1 (hours of the day are a twelfth of the day, longer or shorter by season); here the minutes of dawn are counted the same way"
+      ]
+    }
   },
   "sofTfillaMga90z": {
-    "he": { "title": "סוף זמן תפילה (מגן אברהם, 90 דקות זמניות)", "text": "סוף ארבע שעות זמניות של היום לשיטת המגן אברהם, הנמנה משמינית היום (מהזריחה עד השקיעה) לפני הזריחה עד שמינית ממנו אחרי השקיעה (90 דקות ביום של 12 שעות).", "sources": ["משנה ברכות ד, א; שו״ע או״ח פט, א (תפילת שחרית עד ארבע שעות)", "שו״ע או״ח נח, א; מגן אברהם נח, א (היום נמנה מעלות השחר עד צאת הכוכבים)", "משנה ברורה נח, ד (המגן אברהם מונה מעלות השחר, והגר״א מהנץ החמה)", "פסחים צג ע״ב (מעלות השחר עד הנץ החמה חמשה מילין, בשם רבי יוחנן)", "שו״ע או״ח תנט, ב; משנה ברורה תנט, טו (מיל = 18 דקות)", "שו״ע או״ח נח, א (שעות זמניות: חלק משנים עשר ביום, לפי אורך היום); כאן גם דקות עלות השחר נמדדות כך"] },
-    "en": { "title": "Latest morning prayer (Magen Avraham, 90 seasonal minutes)", "text": "The end of four temporal hours of the Magen Avraham's day, counted from an eighth of the sunrise-to-sunset day before sunrise to an eighth of it after sunset (90 minutes on a 12-hour day).", "sources": ["Mishna Berachot 4:1; Shulchan Aruch OC 89:1 (morning prayer until four hours)", "Shulchan Aruch OC 58:1; Magen Avraham 58:1 (the day counted from dawn to nightfall)", "Mishna Berura 58:4 (Magen Avraham counts from dawn; the Vilna Gaon from sunrise)", "Pesachim 93b (from dawn to sunrise five mil, in the name of Rabbi Yochanan)", "Shulchan Aruch OC 459:2; Mishna Berura 459:15 (a mil = 18 minutes)", "Shulchan Aruch OC 58:1 (hours of the day are a twelfth of the day, longer or shorter by season); here the minutes of dawn are counted the same way"] }
+    "he": {
+      "title": "סוף זמן תפילה (מגן אברהם, 90 דקות זמניות)",
+      "text": "סוף ארבע שעות זמניות של היום לשיטת המגן אברהם, הנמנה משמינית היום (מהזריחה עד השקיעה) לפני הזריחה עד שמינית ממנו אחרי השקיעה (90 דקות ביום של 12 שעות).",
+      "sources": [
+        "משנה ברכות ד, א; שו״ע או״ח פט, א (תפילת שחרית עד ארבע שעות)",
+        "שו״ע או״ח נח, א; מגן אברהם נח, א (היום נמנה מעלות השחר עד צאת הכוכבים)",
+        "משנה ברורה נח, ד (המגן אברהם מונה מעלות השחר, והגר״א מהנץ החמה)",
+        "פסחים צג ע״ב (מעלות השחר עד הנץ החמה חמשה מילין, בשם רבי יוחנן)",
+        "שו״ע או״ח תנט, ב; משנה ברורה תנט, טו (מיל = 18 דקות)",
+        "שו״ע או״ח נח, א (שעות זמניות: חלק משנים עשר ביום, לפי אורך היום); כאן גם דקות עלות השחר נמדדות כך"
+      ]
+    },
+    "en": {
+      "title": "Latest morning prayer (Magen Avraham, 90 seasonal minutes)",
+      "text": "The end of four temporal hours of the Magen Avraham's day, counted from an eighth of the sunrise-to-sunset day before sunrise to an eighth of it after sunset (90 minutes on a 12-hour day).",
+      "sources": [
+        "Mishna Berachot 4:1; Shulchan Aruch OC 89:1 (morning prayer until four hours)",
+        "Shulchan Aruch OC 58:1; Magen Avraham 58:1 (the day counted from dawn to nightfall)",
+        "Mishna Berura 58:4 (Magen Avraham counts from dawn; the Vilna Gaon from sunrise)",
+        "Pesachim 93b (from dawn to sunrise five mil, in the name of Rabbi Yochanan)",
+        "Shulchan Aruch OC 459:2; Mishna Berura 459:15 (a mil = 18 minutes)",
+        "Shulchan Aruch OC 58:1 (hours of the day are a twelfth of the day, longer or shorter by season); here the minutes of dawn are counted the same way"
+      ]
+    }
   },
   "plagMga90z": {
-    "he": { "title": "פלג המנחה (מגן אברהם, 90 דקות זמניות)", "text": "עשר שעות ושלושה רבעים זמניות של אותו יום לשיטת המגן אברהם, הנמנה משמינית היום (מהזריחה עד השקיעה) לפני הזריחה עד שמינית ממנו אחרי השקיעה (90 דקות ביום של 12 שעות).", "sources": ["משנה ברכות ד, א; שו״ע או״ח רלג, א (פלג המנחה, אחת עשרה שעות פחות רביע)", "שו״ע או״ח נח, א; מגן אברהם נח, א (היום נמנה מעלות השחר עד צאת הכוכבים)", "פסחים צג ע״ב (מעלות השחר עד הנץ החמה חמשה מילין, בשם רבי יוחנן)", "שו״ע או״ח תנט, ב; משנה ברורה תנט, טו (מיל = 18 דקות)", "שו״ע או״ח נח, א (שעות זמניות: חלק משנים עשר ביום, לפי אורך היום); כאן גם דקות עלות השחר נמדדות כך"] },
-    "en": { "title": "Plag hamincha (Magen Avraham, 90 seasonal minutes)", "text": "10.75 temporal hours of the same Magen Avraham day as the latest Shema of this measure, counted from an eighth of the sunrise-to-sunset day before sunrise to an eighth of it after sunset (90 minutes on a 12-hour day).", "sources": ["Mishna Berachot 4:1; Shulchan Aruch OC 233:1 (plag hamincha, eleven hours less a quarter)", "Shulchan Aruch OC 58:1; Magen Avraham 58:1 (the day counted from dawn to nightfall)", "Pesachim 93b (from dawn to sunrise five mil, in the name of Rabbi Yochanan)", "Shulchan Aruch OC 459:2; Mishna Berura 459:15 (a mil = 18 minutes)", "Shulchan Aruch OC 58:1 (hours of the day are a twelfth of the day, longer or shorter by season); here the minutes of dawn are counted the same way"] }
+    "he": {
+      "title": "פלג המנחה (מגן אברהם, 90 דקות זמניות)",
+      "text": "עשר שעות ושלושה רבעים זמניות של אותו יום לשיטת המגן אברהם, הנמנה משמינית היום (מהזריחה עד השקיעה) לפני הזריחה עד שמינית ממנו אחרי השקיעה (90 דקות ביום של 12 שעות).",
+      "sources": [
+        "משנה ברכות ד, א; שו״ע או״ח רלג, א (פלג המנחה, אחת עשרה שעות פחות רביע)",
+        "שו״ע או״ח נח, א; מגן אברהם נח, א (היום נמנה מעלות השחר עד צאת הכוכבים)",
+        "פסחים צג ע״ב (מעלות השחר עד הנץ החמה חמשה מילין, בשם רבי יוחנן)",
+        "שו״ע או״ח תנט, ב; משנה ברורה תנט, טו (מיל = 18 דקות)",
+        "שו״ע או״ח נח, א (שעות זמניות: חלק משנים עשר ביום, לפי אורך היום); כאן גם דקות עלות השחר נמדדות כך"
+      ]
+    },
+    "en": {
+      "title": "Plag hamincha (Magen Avraham, 90 seasonal minutes)",
+      "text": "10.75 temporal hours of the same Magen Avraham day as the latest Shema of this measure, counted from an eighth of the sunrise-to-sunset day before sunrise to an eighth of it after sunset (90 minutes on a 12-hour day).",
+      "sources": [
+        "Mishna Berachot 4:1; Shulchan Aruch OC 233:1 (plag hamincha, eleven hours less a quarter)",
+        "Shulchan Aruch OC 58:1; Magen Avraham 58:1 (the day counted from dawn to nightfall)",
+        "Pesachim 93b (from dawn to sunrise five mil, in the name of Rabbi Yochanan)",
+        "Shulchan Aruch OC 459:2; Mishna Berura 459:15 (a mil = 18 minutes)",
+        "Shulchan Aruch OC 58:1 (hours of the day are a twelfth of the day, longer or shorter by season); here the minutes of dawn are counted the same way"
+      ]
+    }
   },
   "alot72z": {
-    "he": { "title": "עלות השחר (72 דקות זמניות)", "text": "עלות השחר ארבעה מילין לפני הזריחה, בדקות זמניות: עשירית היום (מהזריחה עד השקיעה) לפני הזריחה.", "sources": ["פסחים צד ע״א (לרבי יהודה ארבעה מילין)", "שו״ע או״ח תנט, ב; משנה ברורה תנט, טו (מיל = 18 דקות)", "שו״ע או״ח נח, א (שעות זמניות: חלק משנים עשר ביום, לפי אורך היום); כאן גם דקות עלות השחר נמדדות כך"] },
-    "en": { "title": "Dawn (72 seasonal minutes)", "text": "Dawn four mil before sunrise, counted in seasonal minutes: a tenth of the sunrise-to-sunset day before sunrise.", "sources": ["Pesachim 94a (four mil according to Rabbi Yehuda)", "Shulchan Aruch OC 459:2; Mishna Berura 459:15 (a mil = 18 minutes)", "Shulchan Aruch OC 58:1 (hours of the day are a twelfth of the day, longer or shorter by season); here the minutes of dawn are counted the same way"] }
+    "he": {
+      "title": "עלות השחר (72 דקות זמניות)",
+      "text": "עלות השחר ארבעה מילין לפני הזריחה, בדקות זמניות: עשירית היום (מהזריחה עד השקיעה) לפני הזריחה.",
+      "sources": [
+        "פסחים צד ע״א (לרבי יהודה ארבעה מילין)",
+        "שו״ע או״ח תנט, ב; משנה ברורה תנט, טו (מיל = 18 דקות)",
+        "שו״ע או״ח נח, א (שעות זמניות: חלק משנים עשר ביום, לפי אורך היום); כאן גם דקות עלות השחר נמדדות כך"
+      ]
+    },
+    "en": {
+      "title": "Dawn (72 seasonal minutes)",
+      "text": "Dawn four mil before sunrise, counted in seasonal minutes: a tenth of the sunrise-to-sunset day before sunrise.",
+      "sources": [
+        "Pesachim 94a (four mil according to Rabbi Yehuda)",
+        "Shulchan Aruch OC 459:2; Mishna Berura 459:15 (a mil = 18 minutes)",
+        "Shulchan Aruch OC 58:1 (hours of the day are a twelfth of the day, longer or shorter by season); here the minutes of dawn are counted the same way"
+      ]
+    }
   },
   "alot90z": {
-    "he": { "title": "עלות השחר (90 דקות זמניות)", "text": "עלות השחר חמשה מילין לפני הזריחה, בדקות זמניות: שמינית היום (מהזריחה עד השקיעה) לפני הזריחה.", "sources": ["פסחים צג ע״ב (מעלות השחר עד הנץ החמה חמשה מילין, בשם רבי יוחנן)", "שו״ע או״ח תנט, ב; משנה ברורה תנט, טו (מיל = 18 דקות)", "שו״ע או״ח נח, א (שעות זמניות: חלק משנים עשר ביום, לפי אורך היום); כאן גם דקות עלות השחר נמדדות כך"] },
-    "en": { "title": "Dawn (90 seasonal minutes)", "text": "Dawn five mil before sunrise, counted in seasonal minutes: an eighth of the sunrise-to-sunset day before sunrise.", "sources": ["Pesachim 93b (from dawn to sunrise five mil, in the name of Rabbi Yochanan)", "Shulchan Aruch OC 459:2; Mishna Berura 459:15 (a mil = 18 minutes)", "Shulchan Aruch OC 58:1 (hours of the day are a twelfth of the day, longer or shorter by season); here the minutes of dawn are counted the same way"] }
+    "he": {
+      "title": "עלות השחר (90 דקות זמניות)",
+      "text": "עלות השחר חמשה מילין לפני הזריחה, בדקות זמניות: שמינית היום (מהזריחה עד השקיעה) לפני הזריחה.",
+      "sources": [
+        "פסחים צג ע״ב (מעלות השחר עד הנץ החמה חמשה מילין, בשם רבי יוחנן)",
+        "שו״ע או״ח תנט, ב; משנה ברורה תנט, טו (מיל = 18 דקות)",
+        "שו״ע או״ח נח, א (שעות זמניות: חלק משנים עשר ביום, לפי אורך היום); כאן גם דקות עלות השחר נמדדות כך"
+      ]
+    },
+    "en": {
+      "title": "Dawn (90 seasonal minutes)",
+      "text": "Dawn five mil before sunrise, counted in seasonal minutes: an eighth of the sunrise-to-sunset day before sunrise.",
+      "sources": [
+        "Pesachim 93b (from dawn to sunrise five mil, in the name of Rabbi Yochanan)",
+        "Shulchan Aruch OC 459:2; Mishna Berura 459:15 (a mil = 18 minutes)",
+        "Shulchan Aruch OC 58:1 (hours of the day are a twelfth of the day, longer or shorter by season); here the minutes of dawn are counted the same way"
+      ]
+    }
   },
   "tzeit90z": {
-    "he": { "title": "צאת הכוכבים (90 דקות זמניות)", "text": "צאת הכוכבים חמשה מילין אחרי השקיעה, בדקות זמניות: שמינית היום (מהזריחה עד השקיעה) אחרי השקיעה.", "sources": ["פסחים צג ע״ב (מעלות השחר עד הנץ החמה חמשה מילין, בשם רבי יוחנן)", "שו״ע או״ח תנט, ב; משנה ברורה תנט, טו (מיל = 18 דקות)", "שו״ע או״ח נח, א (שעות זמניות: חלק משנים עשר ביום, לפי אורך היום); כאן גם דקות עלות השחר נמדדות כך"] },
-    "en": { "title": "Nightfall (90 seasonal minutes)", "text": "Nightfall five mil after sunset, counted in seasonal minutes: an eighth of the sunrise-to-sunset day after sunset.", "sources": ["Pesachim 93b (from dawn to sunrise five mil, in the name of Rabbi Yochanan)", "Shulchan Aruch OC 459:2; Mishna Berura 459:15 (a mil = 18 minutes)", "Shulchan Aruch OC 58:1 (hours of the day are a twelfth of the day, longer or shorter by season); here the minutes of dawn are counted the same way"] }
+    "he": {
+      "title": "צאת הכוכבים (90 דקות זמניות)",
+      "text": "צאת הכוכבים חמשה מילין אחרי השקיעה, בדקות זמניות: שמינית היום (מהזריחה עד השקיעה) אחרי השקיעה.",
+      "sources": [
+        "פסחים צג ע״ב (מעלות השחר עד הנץ החמה חמשה מילין, בשם רבי יוחנן)",
+        "שו״ע או״ח תנט, ב; משנה ברורה תנט, טו (מיל = 18 דקות)",
+        "שו״ע או״ח נח, א (שעות זמניות: חלק משנים עשר ביום, לפי אורך היום); כאן גם דקות עלות השחר נמדדות כך"
+      ]
+    },
+    "en": {
+      "title": "Nightfall (90 seasonal minutes)",
+      "text": "Nightfall five mil after sunset, counted in seasonal minutes: an eighth of the sunrise-to-sunset day after sunset.",
+      "sources": [
+        "Pesachim 93b (from dawn to sunrise five mil, in the name of Rabbi Yochanan)",
+        "Shulchan Aruch OC 459:2; Mishna Berura 459:15 (a mil = 18 minutes)",
+        "Shulchan Aruch OC 58:1 (hours of the day are a twelfth of the day, longer or shorter by season); here the minutes of dawn are counted the same way"
+      ]
+    }
   },
   "tzeit13p5": {
-    "he": { "title": "צאת הכוכבים (13.5 דקות)", "text": "שלשה רבעי מיל אחרי השקיעה, במיל של 18 דקות, בדקות קבועות: סוף בין השמשות לשיטת הגאונים.", "sources": ["שבת לד ע״ב (בין השמשות שלשה חלקי מיל, רבה בשם שמואל)", "שו״ע או״ח רסא, ב (מתחילת השקיעה עד בין השמשות ג׳ מילין ורביע; בין השמשות ג׳ רבעי מיל)", "שו״ע או״ח תנט, ב; משנה ברורה תנט, טו (מיל = 18 דקות)"] },
-    "en": { "title": "Nightfall (13.5 minutes)", "text": "Three quarters of a mil after sunset at 18 minutes a mil, as fixed minutes: the end of twilight by the Geonim.", "sources": ["Shabbat 34b (twilight is three quarters of a mil, Rabba in the name of Shmuel)", "Shulchan Aruch OC 261:2 (from sunset to twilight 3.25 mil; twilight three quarters of a mil)", "Shulchan Aruch OC 459:2; Mishna Berura 459:15 (a mil = 18 minutes)"] }
+    "he": {
+      "title": "צאת הכוכבים (13.5 דקות)",
+      "text": "שלשה רבעי מיל אחרי השקיעה, במיל של 18 דקות, בדקות קבועות: סוף בין השמשות לשיטת הגאונים.",
+      "sources": [
+        "שבת לד ע״ב (בין השמשות שלשה חלקי מיל, רבה בשם שמואל)",
+        "שו״ע או״ח רסא, ב (מתחילת השקיעה עד בין השמשות ג׳ מילין ורביע; בין השמשות ג׳ רבעי מיל)",
+        "שו״ע או״ח תנט, ב; משנה ברורה תנט, טו (מיל = 18 דקות)"
+      ]
+    },
+    "en": {
+      "title": "Nightfall (13.5 minutes)",
+      "text": "Three quarters of a mil after sunset at 18 minutes a mil, as fixed minutes: the end of twilight by the Geonim.",
+      "sources": [
+        "Shabbat 34b (twilight is three quarters of a mil, Rabba in the name of Shmuel)",
+        "Shulchan Aruch OC 261:2 (from sunset to twilight 3.25 mil; twilight three quarters of a mil)",
+        "Shulchan Aruch OC 459:2; Mishna Berura 459:15 (a mil = 18 minutes)"
+      ]
+    }
   },
   "tzeit18": {
-    "he": { "title": "צאת הכוכבים (18 דקות)", "text": "שלשה רבעי מיל אחרי השקיעה, במיל של 24 דקות, בדקות קבועות.", "sources": ["שבת לד ע״ב (בין השמשות שלשה חלקי מיל, רבה בשם שמואל)", "שו״ע או״ח רסא, ב (מתחילת השקיעה עד בין השמשות ג׳ מילין ורביע; בין השמשות ג׳ רבעי מיל)", "פירוש המשניות לרמב״ם פסחים ג, ב (מיל = שני חומשי שעה, 24 דקות)"] },
-    "en": { "title": "Nightfall (18 minutes)", "text": "Three quarters of a mil after sunset at 24 minutes a mil, as fixed minutes.", "sources": ["Shabbat 34b (twilight is three quarters of a mil, Rabba in the name of Shmuel)", "Shulchan Aruch OC 261:2 (from sunset to twilight 3.25 mil; twilight three quarters of a mil)", "Rambam, commentary on Mishna Pesachim 3:2 (a mil = two fifths of an hour, 24 minutes)"] }
+    "he": {
+      "title": "צאת הכוכבים (18 דקות)",
+      "text": "שלשה רבעי מיל אחרי השקיעה, במיל של 24 דקות, בדקות קבועות.",
+      "sources": [
+        "שבת לד ע״ב (בין השמשות שלשה חלקי מיל, רבה בשם שמואל)",
+        "שו״ע או״ח רסא, ב (מתחילת השקיעה עד בין השמשות ג׳ מילין ורביע; בין השמשות ג׳ רבעי מיל)",
+        "פירוש המשניות לרמב״ם פסחים ג, ב (מיל = שני חומשי שעה, 24 דקות)"
+      ]
+    },
+    "en": {
+      "title": "Nightfall (18 minutes)",
+      "text": "Three quarters of a mil after sunset at 24 minutes a mil, as fixed minutes.",
+      "sources": [
+        "Shabbat 34b (twilight is three quarters of a mil, Rabba in the name of Shmuel)",
+        "Shulchan Aruch OC 261:2 (from sunset to twilight 3.25 mil; twilight three quarters of a mil)",
+        "Rambam, commentary on Mishna Pesachim 3:2 (a mil = two fifths of an hour, 24 minutes)"
+      ]
+    }
+  },
+  "tzeit18Sun": {
+    "he": {
+      "title": "צאת הכוכבים (18 דקות לפי מצב השמש)",
+      "text": "שלשה רבעי מיל אחרי השקיעה במיל של 24 דקות, כשהם נמדדים לפי מצב השמש: עומק השמש מתחת לאופק 18 דקות אחרי השקיעה בירושלים בימי השוויון (כ־4.66 מעלות). בקיץ יוצא מעט מאוחר יותר ובחורף מעט מוקדם יותר.",
+      "sources": [
+        "שבת לד ע״ב (בין השמשות שלשה חלקי מיל, רבה בשם שמואל)",
+        "שו״ע או״ח רסא, ב",
+        "פירוש המשניות לרמב״ם פסחים ג, ב (מיל = שני חומשי שעה, 24 דקות)"
+      ]
+    },
+    "en": {
+      "title": "Nightfall (18 minutes by the sun's position)",
+      "text": "Three quarters of a mil after sunset at 24 minutes a mil, measured by the sun's position: the sun's depth below the horizon 18 minutes after sunset in Jerusalem at the equinox (about 4.66 degrees). A little later in summer and earlier in winter.",
+      "sources": [
+        "Shabbat 34b (twilight is three quarters of a mil, Rabba in the name of Shmuel)",
+        "Shulchan Aruch OC 261:2",
+        "Rambam, commentary on Mishna Pesachim 3:2 (a mil = two fifths of an hour, 24 minutes)"
+      ]
+    }
   },
   "tzeit20": {
-    "he": { "title": "צאת הכוכבים (20 דקות)", "text": "20 דקות קבועות אחרי השקיעה: מרווח שנוהגים בו בקהילות שונות למוצאי שבת ולסוף תענית.", "sources": ["מנהג קהילות (מרווח קבוע אחרי השקיעה; אין מקור יחיד מפורסם)", "שבת לד ע״ב (בין השמשות שלשה חלקי מיל, רבה בשם שמואל)"] },
-    "en": { "title": "Nightfall (20 minutes)", "text": "20 fixed minutes after sunset: a margin kept by some communities for the end of Shabbat and fast days.", "sources": ["Community custom (a fixed margin after sunset; no single published source)", "Shabbat 34b (twilight is three quarters of a mil, Rabba in the name of Shmuel)"] }
+    "he": {
+      "title": "צאת הכוכבים (20 דקות)",
+      "text": "20 דקות קבועות אחרי השקיעה: מרווח שנוהגים בו בקהילות שונות למוצאי שבת ולסוף תענית.",
+      "sources": [
+        "מנהג קהילות (מרווח קבוע אחרי השקיעה; אין מקור יחיד מפורסם)",
+        "שבת לד ע״ב (בין השמשות שלשה חלקי מיל, רבה בשם שמואל)"
+      ]
+    },
+    "en": {
+      "title": "Nightfall (20 minutes)",
+      "text": "20 fixed minutes after sunset: a margin kept by some communities for the end of Shabbat and fast days.",
+      "sources": [
+        "Community custom (a fixed margin after sunset; no single published source)",
+        "Shabbat 34b (twilight is three quarters of a mil, Rabba in the name of Shmuel)"
+      ]
+    }
   },
   "tzeit24": {
-    "he": { "title": "צאת הכוכבים (24 דקות)", "text": "24 דקות קבועות אחרי השקיעה: מרווח שנוהגים בו בקהילות שונות למוצאי שבת ולסוף תענית.", "sources": ["מנהג קהילות (מרווח קבוע אחרי השקיעה; אין מקור יחיד מפורסם)", "שבת לד ע״ב (בין השמשות שלשה חלקי מיל, רבה בשם שמואל)"] },
-    "en": { "title": "Nightfall (24 minutes)", "text": "24 fixed minutes after sunset: a margin kept by some communities for the end of Shabbat and fast days.", "sources": ["Community custom (a fixed margin after sunset; no single published source)", "Shabbat 34b (twilight is three quarters of a mil, Rabba in the name of Shmuel)"] }
+    "he": {
+      "title": "צאת הכוכבים (24 דקות)",
+      "text": "24 דקות קבועות אחרי השקיעה: מרווח שנוהגים בו בקהילות שונות למוצאי שבת ולסוף תענית.",
+      "sources": [
+        "מנהג קהילות (מרווח קבוע אחרי השקיעה; אין מקור יחיד מפורסם)",
+        "שבת לד ע״ב (בין השמשות שלשה חלקי מיל, רבה בשם שמואל)"
+      ]
+    },
+    "en": {
+      "title": "Nightfall (24 minutes)",
+      "text": "24 fixed minutes after sunset: a margin kept by some communities for the end of Shabbat and fast days.",
+      "sources": [
+        "Community custom (a fixed margin after sunset; no single published source)",
+        "Shabbat 34b (twilight is three quarters of a mil, Rabba in the name of Shmuel)"
+      ]
+    }
   },
   "tzeit30": {
-    "he": { "title": "צאת הכוכבים (30 דקות)", "text": "30 דקות קבועות אחרי השקיעה: מרווח שנוהגים בו בקהילות שונות למוצאי שבת ולסוף תענית.", "sources": ["מנהג קהילות (מרווח קבוע אחרי השקיעה; אין מקור יחיד מפורסם)", "שבת לד ע״ב (בין השמשות שלשה חלקי מיל, רבה בשם שמואל)"] },
-    "en": { "title": "Nightfall (30 minutes)", "text": "30 fixed minutes after sunset: a margin kept by some communities for the end of Shabbat and fast days.", "sources": ["Community custom (a fixed margin after sunset; no single published source)", "Shabbat 34b (twilight is three quarters of a mil, Rabba in the name of Shmuel)"] }
+    "he": {
+      "title": "צאת הכוכבים (30 דקות)",
+      "text": "30 דקות קבועות אחרי השקיעה: מרווח שנוהגים בו בקהילות שונות למוצאי שבת ולסוף תענית.",
+      "sources": [
+        "מנהג קהילות (מרווח קבוע אחרי השקיעה; אין מקור יחיד מפורסם)",
+        "שבת לד ע״ב (בין השמשות שלשה חלקי מיל, רבה בשם שמואל)"
+      ]
+    },
+    "en": {
+      "title": "Nightfall (30 minutes)",
+      "text": "30 fixed minutes after sunset: a margin kept by some communities for the end of Shabbat and fast days.",
+      "sources": [
+        "Community custom (a fixed margin after sunset; no single published source)",
+        "Shabbat 34b (twilight is three quarters of a mil, Rabba in the name of Shmuel)"
+      ]
+    }
   },
   "tzeit40": {
-    "he": { "title": "צאת הכוכבים (40 דקות)", "text": "40 דקות קבועות אחרי השקיעה: מרווח שנוהגים בו בקהילות שונות למוצאי שבת ולסוף תענית.", "sources": ["מנהג קהילות (מרווח קבוע אחרי השקיעה; אין מקור יחיד מפורסם)", "שבת לד ע״ב (בין השמשות שלשה חלקי מיל, רבה בשם שמואל)"] },
-    "en": { "title": "Nightfall (40 minutes)", "text": "40 fixed minutes after sunset: a margin kept by some communities for the end of Shabbat and fast days.", "sources": ["Community custom (a fixed margin after sunset; no single published source)", "Shabbat 34b (twilight is three quarters of a mil, Rabba in the name of Shmuel)"] }
+    "he": {
+      "title": "צאת הכוכבים (40 דקות)",
+      "text": "40 דקות קבועות אחרי השקיעה: מרווח שנוהגים בו בקהילות שונות למוצאי שבת ולסוף תענית.",
+      "sources": [
+        "מנהג קהילות (מרווח קבוע אחרי השקיעה; אין מקור יחיד מפורסם)",
+        "שבת לד ע״ב (בין השמשות שלשה חלקי מיל, רבה בשם שמואל)"
+      ]
+    },
+    "en": {
+      "title": "Nightfall (40 minutes)",
+      "text": "40 fixed minutes after sunset: a margin kept by some communities for the end of Shabbat and fast days.",
+      "sources": [
+        "Community custom (a fixed margin after sunset; no single published source)",
+        "Shabbat 34b (twilight is three quarters of a mil, Rabba in the name of Shmuel)"
+      ]
+    }
   },
   "tzeit50": {
-    "he": { "title": "צאת הכוכבים (50 דקות)", "text": "50 דקות קבועות אחרי השקיעה: מרווח שנוהגים בו בקהילות שונות למוצאי שבת ולסוף תענית.", "sources": ["מנהג קהילות (מרווח קבוע אחרי השקיעה; אין מקור יחיד מפורסם)", "שבת לד ע״ב (בין השמשות שלשה חלקי מיל, רבה בשם שמואל)"] },
-    "en": { "title": "Nightfall (50 minutes)", "text": "50 fixed minutes after sunset: a margin kept by some communities for the end of Shabbat and fast days.", "sources": ["Community custom (a fixed margin after sunset; no single published source)", "Shabbat 34b (twilight is three quarters of a mil, Rabba in the name of Shmuel)"] }
+    "he": {
+      "title": "צאת הכוכבים (50 דקות)",
+      "text": "50 דקות קבועות אחרי השקיעה: מרווח שנוהגים בו בקהילות שונות למוצאי שבת ולסוף תענית.",
+      "sources": [
+        "מנהג קהילות (מרווח קבוע אחרי השקיעה; אין מקור יחיד מפורסם)",
+        "שבת לד ע״ב (בין השמשות שלשה חלקי מיל, רבה בשם שמואל)"
+      ]
+    },
+    "en": {
+      "title": "Nightfall (50 minutes)",
+      "text": "50 fixed minutes after sunset: a margin kept by some communities for the end of Shabbat and fast days.",
+      "sources": [
+        "Community custom (a fixed margin after sunset; no single published source)",
+        "Shabbat 34b (twilight is three quarters of a mil, Rabba in the name of Shmuel)"
+      ]
+    }
   },
   "beinHashmashotRt": {
-    "he": { "title": "תחילת בין השמשות (רבנו תם)", "text": "לשיטת רבנו תם בין השמשות מתחיל ג׳ מילין ורביע אחרי השקיעה, 58.5 דקות במיל של 18 דקות, ונמשך שלשה רבעי מיל עד צאת הכוכבים שלו (72 דקות). עד אז הוא ודאי יום.", "sources": ["תוספות שבת לה ע״א ופסחים צד ע״א (רבנו תם: ארבעה מילין מתחילת השקיעה עד הלילה; בין השמשות הוא שלשה רבעי מיל האחרונים)", "שו״ע או״ח רסא, ב (מתחילת השקיעה עד בין השמשות ג׳ מילין ורביע; בין השמשות ג׳ רבעי מיל)", "שו״ע או״ח תנט, ב; משנה ברורה תנט, טו (מיל = 18 דקות)"] },
-    "en": { "title": "Start of twilight (Rabbeinu Tam)", "text": "By Rabbeinu Tam twilight begins 3.25 mil after sunset, 58.5 minutes at 18 minutes a mil, and lasts three quarters of a mil until his nightfall (72 minutes). Until then it is still day.", "sources": ["Tosafot Shabbat 35a and Pesachim 94a (Rabbeinu Tam: four mil from the start of sunset to night; twilight is the last three quarters of a mil)", "Shulchan Aruch OC 261:2 (from sunset to twilight 3.25 mil; twilight three quarters of a mil)", "Shulchan Aruch OC 459:2; Mishna Berura 459:15 (a mil = 18 minutes)"] }
+    "he": {
+      "title": "תחילת בין השמשות (רבנו תם)",
+      "text": "לשיטת רבנו תם בין השמשות מתחיל ג׳ מילין ורביע אחרי השקיעה, 58.5 דקות במיל של 18 דקות, ונמשך שלשה רבעי מיל עד צאת הכוכבים שלו (72 דקות). עד אז הוא ודאי יום.",
+      "sources": [
+        "תוספות שבת לה ע״א ופסחים צד ע״א (רבנו תם: ארבעה מילין מתחילת השקיעה עד הלילה; בין השמשות הוא שלשה רבעי מיל האחרונים)",
+        "שו״ע או״ח רסא, ב (מתחילת השקיעה עד בין השמשות ג׳ מילין ורביע; בין השמשות ג׳ רבעי מיל)",
+        "שו״ע או״ח תנט, ב; משנה ברורה תנט, טו (מיל = 18 דקות)"
+      ]
+    },
+    "en": {
+      "title": "Start of twilight (Rabbeinu Tam)",
+      "text": "By Rabbeinu Tam twilight begins 3.25 mil after sunset, 58.5 minutes at 18 minutes a mil, and lasts three quarters of a mil until his nightfall (72 minutes). Until then it is still day.",
+      "sources": [
+        "Tosafot Shabbat 35a and Pesachim 94a (Rabbeinu Tam: four mil from the start of sunset to night; twilight is the last three quarters of a mil)",
+        "Shulchan Aruch OC 261:2 (from sunset to twilight 3.25 mil; twilight three quarters of a mil)",
+        "Shulchan Aruch OC 459:2; Mishna Berura 459:15 (a mil = 18 minutes)"
+      ]
+    }
   },
   "sofAchilatChametzMga": {
-    "he": { "title": "סוף זמן אכילת חמץ (מג״א, 72 דקות)", "text": "בערב פסח אוכלים חמץ עד סוף השעה הרביעית של היום. היום נמנה מ־72 דקות לפני הנץ ועד 72 דקות אחר השקיעה.", "sources": ["משנה פסחים א, ד (רבי יהודה: אוכלין כל ארבע, תולין כל חמש, ושורפין בתחלת שש)", "פסחים יא ע״ב - יב ע״ב (הלכה כרבי יהודה)", "שו״ע או״ח תמג, א (חמץ אסור משש שעות ולמעלה, וחכמים אסרו משעה חמישית)", "מגן אברהם נח, א; משנה ברורה נח, ד (המ״א מונה מעמוד השחר, ודעת הגר״א משעת הנץ)", "פסחים צד ע״א; שו״ע או״ח תנט, ב (ארבעה מילין של 18 דקות = 72 דקות)"] },
-    "en": { "title": "Latest time to eat chametz (MGA, 72 minutes)", "text": "On erev Pesach chametz may be eaten until the end of the fourth hour of the day. The day runs from 72 minutes before sunrise to 72 minutes after sunset.", "sources": ["Mishna Pesachim 1:4 (Rabbi Yehuda: eat all of the fourth hour, suspend during the fifth, burn at the start of the sixth)", "Pesachim 11b-12b (the halacha follows Rabbi Yehuda)", "Shulchan Aruch OC 443:1 (chametz forbidden from the sixth hour; the Sages forbade it from the start of the fifth)", "Magen Avraham 58:1 and Mishna Berura 58:4 (Magen Avraham counts the day from dawn; the Vilna Gaon from sunrise)", "Pesachim 94a; Shulchan Aruch OC 459:2 (four mil of 18 minutes = 72 minutes)"] }
+    "he": {
+      "title": "סוף זמן אכילת חמץ (מג״א, 72 דקות)",
+      "text": "בערב פסח אוכלים חמץ עד סוף השעה הרביעית של היום. היום נמנה מ־72 דקות לפני הנץ ועד 72 דקות אחר השקיעה.",
+      "sources": [
+        "משנה פסחים א, ד (רבי יהודה: אוכלין כל ארבע, תולין כל חמש, ושורפין בתחלת שש)",
+        "פסחים יא ע״ב - יב ע״ב (הלכה כרבי יהודה)",
+        "שו״ע או״ח תמג, א (חמץ אסור משש שעות ולמעלה, וחכמים אסרו משעה חמישית)",
+        "מגן אברהם נח, א; משנה ברורה נח, ד (המ״א מונה מעמוד השחר, ודעת הגר״א משעת הנץ)",
+        "פסחים צד ע״א; שו״ע או״ח תנט, ב (ארבעה מילין של 18 דקות = 72 דקות)"
+      ]
+    },
+    "en": {
+      "title": "Latest time to eat chametz (MGA, 72 minutes)",
+      "text": "On erev Pesach chametz may be eaten until the end of the fourth hour of the day. The day runs from 72 minutes before sunrise to 72 minutes after sunset.",
+      "sources": [
+        "Mishna Pesachim 1:4 (Rabbi Yehuda: eat all of the fourth hour, suspend during the fifth, burn at the start of the sixth)",
+        "Pesachim 11b-12b (the halacha follows Rabbi Yehuda)",
+        "Shulchan Aruch OC 443:1 (chametz forbidden from the sixth hour; the Sages forbade it from the start of the fifth)",
+        "Magen Avraham 58:1 and Mishna Berura 58:4 (Magen Avraham counts the day from dawn; the Vilna Gaon from sunrise)",
+        "Pesachim 94a; Shulchan Aruch OC 459:2 (four mil of 18 minutes = 72 minutes)"
+      ]
+    }
   },
   "sofBiurChametzMga": {
-    "he": { "title": "סוף זמן שריפת חמץ (מג״א, 72 דקות)", "text": "בערב פסח שורפים ומבטלים את החמץ עד סוף השעה החמישית של היום. היום נמנה מ־72 דקות לפני הנץ ועד 72 דקות אחר השקיעה.", "sources": ["משנה פסחים א, ד (רבי יהודה: אוכלין כל ארבע, תולין כל חמש, ושורפין בתחלת שש)", "פסחים יא ע״ב - יב ע״ב (הלכה כרבי יהודה)", "שו״ע או״ח תמג, א (חמץ אסור משש שעות ולמעלה, וחכמים אסרו משעה חמישית)", "מגן אברהם נח, א; משנה ברורה נח, ד (המ״א מונה מעמוד השחר, ודעת הגר״א משעת הנץ)", "פסחים צד ע״א; שו״ע או״ח תנט, ב (ארבעה מילין של 18 דקות = 72 דקות)"] },
-    "en": { "title": "Latest time to burn chametz (MGA, 72 minutes)", "text": "On erev Pesach chametz must be burnt and nullified by the end of the fifth hour of the day. The day runs from 72 minutes before sunrise to 72 minutes after sunset.", "sources": ["Mishna Pesachim 1:4 (Rabbi Yehuda: eat all of the fourth hour, suspend during the fifth, burn at the start of the sixth)", "Pesachim 11b-12b (the halacha follows Rabbi Yehuda)", "Shulchan Aruch OC 443:1 (chametz forbidden from the sixth hour; the Sages forbade it from the start of the fifth)", "Magen Avraham 58:1 and Mishna Berura 58:4 (Magen Avraham counts the day from dawn; the Vilna Gaon from sunrise)", "Pesachim 94a; Shulchan Aruch OC 459:2 (four mil of 18 minutes = 72 minutes)"] }
+    "he": {
+      "title": "סוף זמן שריפת חמץ (מג״א, 72 דקות)",
+      "text": "בערב פסח שורפים ומבטלים את החמץ עד סוף השעה החמישית של היום. היום נמנה מ־72 דקות לפני הנץ ועד 72 דקות אחר השקיעה.",
+      "sources": [
+        "משנה פסחים א, ד (רבי יהודה: אוכלין כל ארבע, תולין כל חמש, ושורפין בתחלת שש)",
+        "פסחים יא ע״ב - יב ע״ב (הלכה כרבי יהודה)",
+        "שו״ע או״ח תמג, א (חמץ אסור משש שעות ולמעלה, וחכמים אסרו משעה חמישית)",
+        "מגן אברהם נח, א; משנה ברורה נח, ד (המ״א מונה מעמוד השחר, ודעת הגר״א משעת הנץ)",
+        "פסחים צד ע״א; שו״ע או״ח תנט, ב (ארבעה מילין של 18 דקות = 72 דקות)"
+      ]
+    },
+    "en": {
+      "title": "Latest time to burn chametz (MGA, 72 minutes)",
+      "text": "On erev Pesach chametz must be burnt and nullified by the end of the fifth hour of the day. The day runs from 72 minutes before sunrise to 72 minutes after sunset.",
+      "sources": [
+        "Mishna Pesachim 1:4 (Rabbi Yehuda: eat all of the fourth hour, suspend during the fifth, burn at the start of the sixth)",
+        "Pesachim 11b-12b (the halacha follows Rabbi Yehuda)",
+        "Shulchan Aruch OC 443:1 (chametz forbidden from the sixth hour; the Sages forbade it from the start of the fifth)",
+        "Magen Avraham 58:1 and Mishna Berura 58:4 (Magen Avraham counts the day from dawn; the Vilna Gaon from sunrise)",
+        "Pesachim 94a; Shulchan Aruch OC 459:2 (four mil of 18 minutes = 72 minutes)"
+      ]
+    }
   },
   "sofAchilatChametzMga16": {
-    "he": { "title": "סוף זמן אכילת חמץ (מג״א, 16.1 מעלות)", "text": "בערב פסח אוכלים חמץ עד סוף השעה הרביעית של היום. היום נמנה מעלות השחר (השמש 16.1 מעלות מתחת לאופק) ועד שהשמש באותו עומק בערב.", "sources": ["משנה פסחים א, ד (רבי יהודה: אוכלין כל ארבע, תולין כל חמש, ושורפין בתחלת שש)", "פסחים יא ע״ב - יב ע״ב (הלכה כרבי יהודה)", "שו״ע או״ח תמג, א (חמץ אסור משש שעות ולמעלה, וחכמים אסרו משעה חמישית)", "מגן אברהם נח, א; משנה ברורה נח, ד (המ״א מונה מעמוד השחר, ודעת הגר״א משעת הנץ)", "חישוב אסטרונומי: בירושלים בימי השוויון השמש נמצאת 16.1 מעלות מתחת לאופק 72 דקות לפני הנץ"] },
-    "en": { "title": "Latest time to eat chametz (MGA, 16.1 degrees)", "text": "On erev Pesach chametz may be eaten until the end of the fourth hour of the day. The day runs from dawn (sun 16.1 degrees below the horizon) to the sun at the same depth in the evening.", "sources": ["Mishna Pesachim 1:4 (Rabbi Yehuda: eat all of the fourth hour, suspend during the fifth, burn at the start of the sixth)", "Pesachim 11b-12b (the halacha follows Rabbi Yehuda)", "Shulchan Aruch OC 443:1 (chametz forbidden from the sixth hour; the Sages forbade it from the start of the fifth)", "Magen Avraham 58:1 and Mishna Berura 58:4 (Magen Avraham counts the day from dawn; the Vilna Gaon from sunrise)", "Astronomy: in Jerusalem at the equinox the sun is 16.1 degrees below the horizon 72 minutes before sunrise"] }
+    "he": {
+      "title": "סוף זמן אכילת חמץ (מג״א, 16.1 מעלות)",
+      "text": "בערב פסח אוכלים חמץ עד סוף השעה הרביעית של היום. היום נמנה מעלות השחר (השמש 16.1 מעלות מתחת לאופק) ועד שהשמש באותו עומק בערב.",
+      "sources": [
+        "משנה פסחים א, ד (רבי יהודה: אוכלין כל ארבע, תולין כל חמש, ושורפין בתחלת שש)",
+        "פסחים יא ע״ב - יב ע״ב (הלכה כרבי יהודה)",
+        "שו״ע או״ח תמג, א (חמץ אסור משש שעות ולמעלה, וחכמים אסרו משעה חמישית)",
+        "מגן אברהם נח, א; משנה ברורה נח, ד (המ״א מונה מעמוד השחר, ודעת הגר״א משעת הנץ)",
+        "חישוב אסטרונומי: בירושלים בימי השוויון השמש נמצאת 16.1 מעלות מתחת לאופק 72 דקות לפני הנץ"
+      ]
+    },
+    "en": {
+      "title": "Latest time to eat chametz (MGA, 16.1 degrees)",
+      "text": "On erev Pesach chametz may be eaten until the end of the fourth hour of the day. The day runs from dawn (sun 16.1 degrees below the horizon) to the sun at the same depth in the evening.",
+      "sources": [
+        "Mishna Pesachim 1:4 (Rabbi Yehuda: eat all of the fourth hour, suspend during the fifth, burn at the start of the sixth)",
+        "Pesachim 11b-12b (the halacha follows Rabbi Yehuda)",
+        "Shulchan Aruch OC 443:1 (chametz forbidden from the sixth hour; the Sages forbade it from the start of the fifth)",
+        "Magen Avraham 58:1 and Mishna Berura 58:4 (Magen Avraham counts the day from dawn; the Vilna Gaon from sunrise)",
+        "Astronomy: in Jerusalem at the equinox the sun is 16.1 degrees below the horizon 72 minutes before sunrise"
+      ]
+    }
   },
   "sofBiurChametzMga16": {
-    "he": { "title": "סוף זמן שריפת חמץ (מג״א, 16.1 מעלות)", "text": "בערב פסח שורפים ומבטלים את החמץ עד סוף השעה החמישית של היום. היום נמנה מעלות השחר (השמש 16.1 מעלות מתחת לאופק) ועד שהשמש באותו עומק בערב.", "sources": ["משנה פסחים א, ד (רבי יהודה: אוכלין כל ארבע, תולין כל חמש, ושורפין בתחלת שש)", "פסחים יא ע״ב - יב ע״ב (הלכה כרבי יהודה)", "שו״ע או״ח תמג, א (חמץ אסור משש שעות ולמעלה, וחכמים אסרו משעה חמישית)", "מגן אברהם נח, א; משנה ברורה נח, ד (המ״א מונה מעמוד השחר, ודעת הגר״א משעת הנץ)", "חישוב אסטרונומי: בירושלים בימי השוויון השמש נמצאת 16.1 מעלות מתחת לאופק 72 דקות לפני הנץ"] },
-    "en": { "title": "Latest time to burn chametz (MGA, 16.1 degrees)", "text": "On erev Pesach chametz must be burnt and nullified by the end of the fifth hour of the day. The day runs from dawn (sun 16.1 degrees below the horizon) to the sun at the same depth in the evening.", "sources": ["Mishna Pesachim 1:4 (Rabbi Yehuda: eat all of the fourth hour, suspend during the fifth, burn at the start of the sixth)", "Pesachim 11b-12b (the halacha follows Rabbi Yehuda)", "Shulchan Aruch OC 443:1 (chametz forbidden from the sixth hour; the Sages forbade it from the start of the fifth)", "Magen Avraham 58:1 and Mishna Berura 58:4 (Magen Avraham counts the day from dawn; the Vilna Gaon from sunrise)", "Astronomy: in Jerusalem at the equinox the sun is 16.1 degrees below the horizon 72 minutes before sunrise"] }
+    "he": {
+      "title": "סוף זמן שריפת חמץ (מג״א, 16.1 מעלות)",
+      "text": "בערב פסח שורפים ומבטלים את החמץ עד סוף השעה החמישית של היום. היום נמנה מעלות השחר (השמש 16.1 מעלות מתחת לאופק) ועד שהשמש באותו עומק בערב.",
+      "sources": [
+        "משנה פסחים א, ד (רבי יהודה: אוכלין כל ארבע, תולין כל חמש, ושורפין בתחלת שש)",
+        "פסחים יא ע״ב - יב ע״ב (הלכה כרבי יהודה)",
+        "שו״ע או״ח תמג, א (חמץ אסור משש שעות ולמעלה, וחכמים אסרו משעה חמישית)",
+        "מגן אברהם נח, א; משנה ברורה נח, ד (המ״א מונה מעמוד השחר, ודעת הגר״א משעת הנץ)",
+        "חישוב אסטרונומי: בירושלים בימי השוויון השמש נמצאת 16.1 מעלות מתחת לאופק 72 דקות לפני הנץ"
+      ]
+    },
+    "en": {
+      "title": "Latest time to burn chametz (MGA, 16.1 degrees)",
+      "text": "On erev Pesach chametz must be burnt and nullified by the end of the fifth hour of the day. The day runs from dawn (sun 16.1 degrees below the horizon) to the sun at the same depth in the evening.",
+      "sources": [
+        "Mishna Pesachim 1:4 (Rabbi Yehuda: eat all of the fourth hour, suspend during the fifth, burn at the start of the sixth)",
+        "Pesachim 11b-12b (the halacha follows Rabbi Yehuda)",
+        "Shulchan Aruch OC 443:1 (chametz forbidden from the sixth hour; the Sages forbade it from the start of the fifth)",
+        "Magen Avraham 58:1 and Mishna Berura 58:4 (Magen Avraham counts the day from dawn; the Vilna Gaon from sunrise)",
+        "Astronomy: in Jerusalem at the equinox the sun is 16.1 degrees below the horizon 72 minutes before sunrise"
+      ]
+    }
   },
   "sofAchilatChametzGra": {
-    "he": { "title": "סוף זמן אכילת חמץ (גר״א)", "text": "בערב פסח אוכלים חמץ עד סוף השעה הרביעית של היום. שעה זמנית היא חלק י״ב מהנץ ועד השקיעה.", "sources": ["משנה פסחים א, ד (רבי יהודה: אוכלין כל ארבע, תולין כל חמש, ושורפין בתחלת שש)", "פסחים יא ע״ב - יב ע״ב (הלכה כרבי יהודה)", "שו״ע או״ח תמג, א (חמץ אסור משש שעות ולמעלה, וחכמים אסרו משעה חמישית)", "משנה ברורה נח, ד (דעת הגר״א משעת הנץ החמה)", "רמ״א או״ח רלג, א (שעות זמניות: היום נחלק לי״ב שעות)"] },
-    "en": { "title": "Latest time to eat chametz (GRA)", "text": "On erev Pesach chametz may be eaten until the end of the fourth hour of the day. A temporal hour is a twelfth of sunrise to sunset.", "sources": ["Mishna Pesachim 1:4 (Rabbi Yehuda: eat all of the fourth hour, suspend during the fifth, burn at the start of the sixth)", "Pesachim 11b-12b (the halacha follows Rabbi Yehuda)", "Shulchan Aruch OC 443:1 (chametz forbidden from the sixth hour; the Sages forbade it from the start of the fifth)", "Mishna Berura 58:4 (the Vilna Gaon counts from sunrise)", "Rema OC 233:1 (temporal hours: the day is divided into 12 hours)"] }
+    "he": {
+      "title": "סוף זמן אכילת חמץ (גר״א)",
+      "text": "בערב פסח אוכלים חמץ עד סוף השעה הרביעית של היום. שעה זמנית היא חלק י״ב מהנץ ועד השקיעה.",
+      "sources": [
+        "משנה פסחים א, ד (רבי יהודה: אוכלין כל ארבע, תולין כל חמש, ושורפין בתחלת שש)",
+        "פסחים יא ע״ב - יב ע״ב (הלכה כרבי יהודה)",
+        "שו״ע או״ח תמג, א (חמץ אסור משש שעות ולמעלה, וחכמים אסרו משעה חמישית)",
+        "משנה ברורה נח, ד (דעת הגר״א משעת הנץ החמה)",
+        "רמ״א או״ח רלג, א (שעות זמניות: היום נחלק לי״ב שעות)"
+      ]
+    },
+    "en": {
+      "title": "Latest time to eat chametz (GRA)",
+      "text": "On erev Pesach chametz may be eaten until the end of the fourth hour of the day. A temporal hour is a twelfth of sunrise to sunset.",
+      "sources": [
+        "Mishna Pesachim 1:4 (Rabbi Yehuda: eat all of the fourth hour, suspend during the fifth, burn at the start of the sixth)",
+        "Pesachim 11b-12b (the halacha follows Rabbi Yehuda)",
+        "Shulchan Aruch OC 443:1 (chametz forbidden from the sixth hour; the Sages forbade it from the start of the fifth)",
+        "Mishna Berura 58:4 (the Vilna Gaon counts from sunrise)",
+        "Rema OC 233:1 (temporal hours: the day is divided into 12 hours)"
+      ]
+    }
   },
   "sofBiurChametzGra": {
-    "he": { "title": "סוף זמן שריפת חמץ (גר״א)", "text": "בערב פסח שורפים ומבטלים את החמץ עד סוף השעה החמישית של היום. שעה זמנית היא חלק י״ב מהנץ ועד השקיעה.", "sources": ["משנה פסחים א, ד (רבי יהודה: אוכלין כל ארבע, תולין כל חמש, ושורפין בתחלת שש)", "פסחים יא ע״ב - יב ע״ב (הלכה כרבי יהודה)", "שו״ע או״ח תמג, א (חמץ אסור משש שעות ולמעלה, וחכמים אסרו משעה חמישית)", "משנה ברורה נח, ד (דעת הגר״א משעת הנץ החמה)", "רמ״א או״ח רלג, א (שעות זמניות: היום נחלק לי״ב שעות)"] },
-    "en": { "title": "Latest time to burn chametz (GRA)", "text": "On erev Pesach chametz must be burnt and nullified by the end of the fifth hour of the day. A temporal hour is a twelfth of sunrise to sunset.", "sources": ["Mishna Pesachim 1:4 (Rabbi Yehuda: eat all of the fourth hour, suspend during the fifth, burn at the start of the sixth)", "Pesachim 11b-12b (the halacha follows Rabbi Yehuda)", "Shulchan Aruch OC 443:1 (chametz forbidden from the sixth hour; the Sages forbade it from the start of the fifth)", "Mishna Berura 58:4 (the Vilna Gaon counts from sunrise)", "Rema OC 233:1 (temporal hours: the day is divided into 12 hours)"] }
+    "he": {
+      "title": "סוף זמן שריפת חמץ (גר״א)",
+      "text": "בערב פסח שורפים ומבטלים את החמץ עד סוף השעה החמישית של היום. שעה זמנית היא חלק י״ב מהנץ ועד השקיעה.",
+      "sources": [
+        "משנה פסחים א, ד (רבי יהודה: אוכלין כל ארבע, תולין כל חמש, ושורפין בתחלת שש)",
+        "פסחים יא ע״ב - יב ע״ב (הלכה כרבי יהודה)",
+        "שו״ע או״ח תמג, א (חמץ אסור משש שעות ולמעלה, וחכמים אסרו משעה חמישית)",
+        "משנה ברורה נח, ד (דעת הגר״א משעת הנץ החמה)",
+        "רמ״א או״ח רלג, א (שעות זמניות: היום נחלק לי״ב שעות)"
+      ]
+    },
+    "en": {
+      "title": "Latest time to burn chametz (GRA)",
+      "text": "On erev Pesach chametz must be burnt and nullified by the end of the fifth hour of the day. A temporal hour is a twelfth of sunrise to sunset.",
+      "sources": [
+        "Mishna Pesachim 1:4 (Rabbi Yehuda: eat all of the fourth hour, suspend during the fifth, burn at the start of the sixth)",
+        "Pesachim 11b-12b (the halacha follows Rabbi Yehuda)",
+        "Shulchan Aruch OC 443:1 (chametz forbidden from the sixth hour; the Sages forbade it from the start of the fifth)",
+        "Mishna Berura 58:4 (the Vilna Gaon counts from sunrise)",
+        "Rema OC 233:1 (temporal hours: the day is divided into 12 hours)"
+      ]
+    }
   },
   "fastStart90": {
-    "he": { "title": "תחילת התענית (90 דקות)", "text": "תענית ציבור קלה מתחילה בעלות השחר. כאן עלות השחר 90 דקות קבועות לפני הנץ (חמשה מילין של 18 דקות).", "sources": ["שו״ע או״ח תקסד, א (בכל תענית שאוכלים בלילה, מותר לאכול ולשתות עד שיעלה עמוד השחר)", "פסחים צד ע״א (מעלות השחר ועד הנץ החמה חמשה מילין, לדברי רבי יוחנן)", "שו״ע או״ח תנט, ב; משנה ברורה תנט, טו (מיל = 18 דקות)"] },
-    "en": { "title": "Start of the fast (90 minutes)", "text": "A minor fast begins at dawn. Here dawn is 90 fixed minutes before sunrise (five mil of 18 minutes).", "sources": ["Shulchan Aruch OC 564:1 (on a fast with eating the night before, one may eat and drink until dawn)", "Pesachim 94a (from dawn to sunrise five mil, in Rabbi Yochanan's statement)", "Shulchan Aruch OC 459:2; Mishna Berura 459:15 (a mil = 18 minutes)"] }
+    "he": {
+      "title": "תחילת התענית (90 דקות)",
+      "text": "תענית ציבור קלה מתחילה בעלות השחר. כאן עלות השחר 90 דקות קבועות לפני הנץ (חמשה מילין של 18 דקות).",
+      "sources": [
+        "שו״ע או״ח תקסד, א (בכל תענית שאוכלים בלילה, מותר לאכול ולשתות עד שיעלה עמוד השחר)",
+        "פסחים צד ע״א (מעלות השחר ועד הנץ החמה חמשה מילין, לדברי רבי יוחנן)",
+        "שו״ע או״ח תנט, ב; משנה ברורה תנט, טו (מיל = 18 דקות)"
+      ]
+    },
+    "en": {
+      "title": "Start of the fast (90 minutes)",
+      "text": "A minor fast begins at dawn. Here dawn is 90 fixed minutes before sunrise (five mil of 18 minutes).",
+      "sources": [
+        "Shulchan Aruch OC 564:1 (on a fast with eating the night before, one may eat and drink until dawn)",
+        "Pesachim 94a (from dawn to sunrise five mil, in Rabbi Yochanan's statement)",
+        "Shulchan Aruch OC 459:2; Mishna Berura 459:15 (a mil = 18 minutes)"
+      ]
+    }
   },
   "fastStart72": {
-    "he": { "title": "תחילת התענית (72 דקות)", "text": "תענית ציבור קלה מתחילה בעלות השחר. כאן עלות השחר 72 דקות קבועות לפני הנץ (ארבעה מילין של 18 דקות).", "sources": ["שו״ע או״ח תקסד, א (בכל תענית שאוכלים בלילה, מותר לאכול ולשתות עד שיעלה עמוד השחר)", "פסחים צד ע״א (רבי יהודה: מעלות השחר עד הנץ החמה ארבעת מילין)", "שו״ע או״ח תנט, ב; משנה ברורה תנט, טו (מיל = 18 דקות)"] },
-    "en": { "title": "Start of the fast (72 minutes)", "text": "A minor fast begins at dawn. Here dawn is 72 fixed minutes before sunrise (four mil of 18 minutes).", "sources": ["Shulchan Aruch OC 564:1 (on a fast with eating the night before, one may eat and drink until dawn)", "Pesachim 94a (Rabbi Yehuda: from dawn to sunrise four mil)", "Shulchan Aruch OC 459:2; Mishna Berura 459:15 (a mil = 18 minutes)"] }
+    "he": {
+      "title": "תחילת התענית (72 דקות)",
+      "text": "תענית ציבור קלה מתחילה בעלות השחר. כאן עלות השחר 72 דקות קבועות לפני הנץ (ארבעה מילין של 18 דקות).",
+      "sources": [
+        "שו״ע או״ח תקסד, א (בכל תענית שאוכלים בלילה, מותר לאכול ולשתות עד שיעלה עמוד השחר)",
+        "פסחים צד ע״א (רבי יהודה: מעלות השחר עד הנץ החמה ארבעת מילין)",
+        "שו״ע או״ח תנט, ב; משנה ברורה תנט, טו (מיל = 18 דקות)"
+      ]
+    },
+    "en": {
+      "title": "Start of the fast (72 minutes)",
+      "text": "A minor fast begins at dawn. Here dawn is 72 fixed minutes before sunrise (four mil of 18 minutes).",
+      "sources": [
+        "Shulchan Aruch OC 564:1 (on a fast with eating the night before, one may eat and drink until dawn)",
+        "Pesachim 94a (Rabbi Yehuda: from dawn to sunrise four mil)",
+        "Shulchan Aruch OC 459:2; Mishna Berura 459:15 (a mil = 18 minutes)"
+      ]
+    }
   },
   "fastStart16": {
-    "he": { "title": "תחילת התענית (16.1 מעלות)", "text": "תענית ציבור קלה מתחילה בעלות השחר. כאן עלות השחר כשהשמש 16.1 מעלות מתחת לאופק.", "sources": ["שו״ע או״ח תקסד, א (בכל תענית שאוכלים בלילה, מותר לאכול ולשתות עד שיעלה עמוד השחר)", "פסחים צד ע״א (רבי יהודה: מעלות השחר עד הנץ החמה ארבעת מילין)", "חישוב אסטרונומי: בירושלים בימי השוויון השמש נמצאת 16.1 מעלות מתחת לאופק 72 דקות לפני הנץ"] },
-    "en": { "title": "Start of the fast (16.1 degrees)", "text": "A minor fast begins at dawn. Here dawn is the sun 16.1 degrees below the horizon.", "sources": ["Shulchan Aruch OC 564:1 (on a fast with eating the night before, one may eat and drink until dawn)", "Pesachim 94a (Rabbi Yehuda: from dawn to sunrise four mil)", "Astronomy: in Jerusalem at the equinox the sun is 16.1 degrees below the horizon 72 minutes before sunrise"] }
+    "he": {
+      "title": "תחילת התענית (16.1 מעלות)",
+      "text": "תענית ציבור קלה מתחילה בעלות השחר. כאן עלות השחר כשהשמש 16.1 מעלות מתחת לאופק.",
+      "sources": [
+        "שו״ע או״ח תקסד, א (בכל תענית שאוכלים בלילה, מותר לאכול ולשתות עד שיעלה עמוד השחר)",
+        "פסחים צד ע״א (רבי יהודה: מעלות השחר עד הנץ החמה ארבעת מילין)",
+        "חישוב אסטרונומי: בירושלים בימי השוויון השמש נמצאת 16.1 מעלות מתחת לאופק 72 דקות לפני הנץ"
+      ]
+    },
+    "en": {
+      "title": "Start of the fast (16.1 degrees)",
+      "text": "A minor fast begins at dawn. Here dawn is the sun 16.1 degrees below the horizon.",
+      "sources": [
+        "Shulchan Aruch OC 564:1 (on a fast with eating the night before, one may eat and drink until dawn)",
+        "Pesachim 94a (Rabbi Yehuda: from dawn to sunrise four mil)",
+        "Astronomy: in Jerusalem at the equinox the sun is 16.1 degrees below the horizon 72 minutes before sunrise"
+      ]
+    }
   },
   "kiddushLevanaStart3": {
-    "he": { "title": "תחילת זמן קידוש לבנה (3 ימים)", "text": "שלושה ימים שלמים (72 שעות) אחר המולד, לדעת רוב האחרונים.", "sources": ["משנה ברורה תכו, כ (לרוב האחרונים לאחר ג׳ ימים מעת לעת מעת המולד)", "רמב״ם הלכות קידוש החודש ו, ב-ג (שעה = 1080 חלקים; חודש הלבנה כ״ט יום י״ב שעות ותשצ״ג חלקים)", "רמב״ם הלכות קידוש החודש ו, ח (המולד הראשון: ליל שני, ה׳ שעות ור״ד חלקים)"] },
-    "en": { "title": "Earliest kiddush levana (3 days)", "text": "Three full days (72 hours) after the molad, the view of most later authorities.", "sources": ["Mishna Berura 426:20 (most later authorities: after three full days from the molad)", "Rambam, Kiddush HaChodesh 6:2-3 (an hour is 1080 chalakim; the mean month is 29 days 12 hours 793 chalakim)", "Rambam, Kiddush HaChodesh 6:8 (the first molad: Monday night, 5 hours 204 chalakim)"] }
+    "he": {
+      "title": "תחילת זמן קידוש לבנה (3 ימים)",
+      "text": "שלושה ימים שלמים (72 שעות) אחר המולד, לדעת רוב האחרונים.",
+      "sources": [
+        "משנה ברורה תכו, כ (לרוב האחרונים לאחר ג׳ ימים מעת לעת מעת המולד)",
+        "רמב״ם הלכות קידוש החודש ו, ב-ג (שעה = 1080 חלקים; חודש הלבנה כ״ט יום י״ב שעות ותשצ״ג חלקים)",
+        "רמב״ם הלכות קידוש החודש ו, ח (המולד הראשון: ליל שני, ה׳ שעות ור״ד חלקים)"
+      ]
+    },
+    "en": {
+      "title": "Earliest kiddush levana (3 days)",
+      "text": "Three full days (72 hours) after the molad, the view of most later authorities.",
+      "sources": [
+        "Mishna Berura 426:20 (most later authorities: after three full days from the molad)",
+        "Rambam, Kiddush HaChodesh 6:2-3 (an hour is 1080 chalakim; the mean month is 29 days 12 hours 793 chalakim)",
+        "Rambam, Kiddush HaChodesh 6:8 (the first molad: Monday night, 5 hours 204 chalakim)"
+      ]
+    }
   },
   "kiddushLevanaStart7": {
-    "he": { "title": "תחילת זמן קידוש לבנה (7 ימים)", "text": "שבעה ימים שלמים אחר המולד, לדעת השולחן ערוך.", "sources": ["שו״ע או״ח תכו, ד (אין מברכין עליה עד שיעברו עליה ז׳ ימים)", "רמב״ם הלכות קידוש החודש ו, ב-ג (שעה = 1080 חלקים; חודש הלבנה כ״ט יום י״ב שעות ותשצ״ג חלקים)", "רמב״ם הלכות קידוש החודש ו, ח (המולד הראשון: ליל שני, ה׳ שעות ור״ד חלקים)"] },
-    "en": { "title": "Earliest kiddush levana (7 days)", "text": "Seven full days after the molad, the view of the Shulchan Aruch.", "sources": ["Shulchan Aruch OC 426:4 (not until seven days have passed)", "Rambam, Kiddush HaChodesh 6:2-3 (an hour is 1080 chalakim; the mean month is 29 days 12 hours 793 chalakim)", "Rambam, Kiddush HaChodesh 6:8 (the first molad: Monday night, 5 hours 204 chalakim)"] }
+    "he": {
+      "title": "תחילת זמן קידוש לבנה (7 ימים)",
+      "text": "שבעה ימים שלמים אחר המולד, לדעת השולחן ערוך.",
+      "sources": [
+        "שו״ע או״ח תכו, ד (אין מברכין עליה עד שיעברו עליה ז׳ ימים)",
+        "רמב״ם הלכות קידוש החודש ו, ב-ג (שעה = 1080 חלקים; חודש הלבנה כ״ט יום י״ב שעות ותשצ״ג חלקים)",
+        "רמב״ם הלכות קידוש החודש ו, ח (המולד הראשון: ליל שני, ה׳ שעות ור״ד חלקים)"
+      ]
+    },
+    "en": {
+      "title": "Earliest kiddush levana (7 days)",
+      "text": "Seven full days after the molad, the view of the Shulchan Aruch.",
+      "sources": [
+        "Shulchan Aruch OC 426:4 (not until seven days have passed)",
+        "Rambam, Kiddush HaChodesh 6:2-3 (an hour is 1080 chalakim; the mean month is 29 days 12 hours 793 chalakim)",
+        "Rambam, Kiddush HaChodesh 6:8 (the first molad: Monday night, 5 hours 204 chalakim)"
+      ]
+    }
   },
   "kiddushLevanaEndHalf": {
-    "he": { "title": "סוף זמן קידוש לבנה (חצי החודש)", "text": "עד חצי כ״ט יום י״ב שעות ותשצ״ג חלקים מן המולד: 14 יום, 18 שעות, 22 דקות ושתי שניות בקירוב.", "sources": ["רמ״א או״ח תכו, ג (ואין לקדש אלא עד חצי כ״ט י״ב תשצ״ג מן המולד; תשובת מהרי״ל)", "רמב״ם הלכות קידוש החודש ו, ב-ג (שעה = 1080 חלקים; חודש הלבנה כ״ט יום י״ב שעות ותשצ״ג חלקים)", "רמב״ם הלכות קידוש החודש ו, ח (המולד הראשון: ליל שני, ה׳ שעות ור״ד חלקים)"] },
-    "en": { "title": "Latest kiddush levana (half the month)", "text": "Until half of 29 days 12 hours 793 chalakim after the molad: 14 days 18 hours 22 minutes and about 2 seconds.", "sources": ["Rema OC 426:3 (only until half of 29 days 12 hours 793 chalakim from the molad; Teshuvot Maharil)", "Rambam, Kiddush HaChodesh 6:2-3 (an hour is 1080 chalakim; the mean month is 29 days 12 hours 793 chalakim)", "Rambam, Kiddush HaChodesh 6:8 (the first molad: Monday night, 5 hours 204 chalakim)"] }
+    "he": {
+      "title": "סוף זמן קידוש לבנה (חצי החודש)",
+      "text": "עד חצי כ״ט יום י״ב שעות ותשצ״ג חלקים מן המולד: 14 יום, 18 שעות, 22 דקות ושתי שניות בקירוב.",
+      "sources": [
+        "רמ״א או״ח תכו, ג (ואין לקדש אלא עד חצי כ״ט י״ב תשצ״ג מן המולד; תשובת מהרי״ל)",
+        "רמב״ם הלכות קידוש החודש ו, ב-ג (שעה = 1080 חלקים; חודש הלבנה כ״ט יום י״ב שעות ותשצ״ג חלקים)",
+        "רמב״ם הלכות קידוש החודש ו, ח (המולד הראשון: ליל שני, ה׳ שעות ור״ד חלקים)"
+      ]
+    },
+    "en": {
+      "title": "Latest kiddush levana (half the month)",
+      "text": "Until half of 29 days 12 hours 793 chalakim after the molad: 14 days 18 hours 22 minutes and about 2 seconds.",
+      "sources": [
+        "Rema OC 426:3 (only until half of 29 days 12 hours 793 chalakim from the molad; Teshuvot Maharil)",
+        "Rambam, Kiddush HaChodesh 6:2-3 (an hour is 1080 chalakim; the mean month is 29 days 12 hours 793 chalakim)",
+        "Rambam, Kiddush HaChodesh 6:8 (the first molad: Monday night, 5 hours 204 chalakim)"
+      ]
+    }
   },
   "kiddushLevanaEnd15": {
-    "he": { "title": "סוף זמן קידוש לבנה (15 יום)", "text": "עד ט״ו ימים שלמים (מעת לעת) מן המולד, לדעת השולחן ערוך.", "sources": ["שו״ע או״ח תכו, ג (עד ט״ז מיום המולד ולא ט״ז בכלל)", "משנה ברורה תכו, יז (משעת המולד מונים ט״ו יום מעת לעת)", "רמב״ם הלכות קידוש החודש ו, ב-ג (שעה = 1080 חלקים; חודש הלבנה כ״ט יום י״ב שעות ותשצ״ג חלקים)", "רמב״ם הלכות קידוש החודש ו, ח (המולד הראשון: ליל שני, ה׳ שעות ור״ד חלקים)"] },
-    "en": { "title": "Latest kiddush levana (15 days)", "text": "Until fifteen full days (24 hours each) after the molad, the view of the Shulchan Aruch.", "sources": ["Shulchan Aruch OC 426:3 (until the 16th day from the molad, not including it)", "Mishna Berura 426:17 (fifteen full days counted from the hour of the molad)", "Rambam, Kiddush HaChodesh 6:2-3 (an hour is 1080 chalakim; the mean month is 29 days 12 hours 793 chalakim)", "Rambam, Kiddush HaChodesh 6:8 (the first molad: Monday night, 5 hours 204 chalakim)"] }
+    "he": {
+      "title": "סוף זמן קידוש לבנה (15 יום)",
+      "text": "עד ט״ו ימים שלמים (מעת לעת) מן המולד, לדעת השולחן ערוך.",
+      "sources": [
+        "שו״ע או״ח תכו, ג (עד ט״ז מיום המולד ולא ט״ז בכלל)",
+        "משנה ברורה תכו, יז (משעת המולד מונים ט״ו יום מעת לעת)",
+        "רמב״ם הלכות קידוש החודש ו, ב-ג (שעה = 1080 חלקים; חודש הלבנה כ״ט יום י״ב שעות ותשצ״ג חלקים)",
+        "רמב״ם הלכות קידוש החודש ו, ח (המולד הראשון: ליל שני, ה׳ שעות ור״ד חלקים)"
+      ]
+    },
+    "en": {
+      "title": "Latest kiddush levana (15 days)",
+      "text": "Until fifteen full days (24 hours each) after the molad, the view of the Shulchan Aruch.",
+      "sources": [
+        "Shulchan Aruch OC 426:3 (until the 16th day from the molad, not including it)",
+        "Mishna Berura 426:17 (fifteen full days counted from the hour of the molad)",
+        "Rambam, Kiddush HaChodesh 6:2-3 (an hour is 1080 chalakim; the mean month is 29 days 12 hours 793 chalakim)",
+        "Rambam, Kiddush HaChodesh 6:8 (the first molad: Monday night, 5 hours 204 chalakim)"
+      ]
+    }
   }
 }
