@@ -1809,3 +1809,74 @@ id	key	he	en	lat	lng	elevation	tzid
 1808	kiryatSefer	קרית ספר	Kiryat Sefer (Modi'in Illit)	31.93217	35.04331	317	Asia/Jerusalem
 1809	brachfeld	ברכפלד	Brachfeld (Modi'in Illit)	31.93957	35.04174	323	Asia/Jerusalem
 1810	greenPark	גרין פארק	Green Park (Modi'in Illit)	31.92426	35.04690	235	Asia/Jerusalem
+1811	ohad	אוהד	Ohad	31.23718	34.43139	131	Asia/Jerusalem
+1812	urim	אורים	Urim	31.30418	34.52263	94	Asia/Jerusalem
+1813	elRom	אל -רום	El-Rom	33.18075	35.77126	1049	Asia/Jerusalem
+1814	erez	ארז	Erez	31.56022	34.56651	41	Asia/Jerusalem
+1815	beeri	בארי	Be'eri	31.42385	34.49086	88	Asia/Jerusalem
+1816	betHogla	בית חוגלה	Bet Hogla	31.82124	35.50686	-339	Asia/Jerusalem
+1817	beneAyish	בני עי"ש	Bene Ayish	31.78952	34.76059	72	Asia/Jerusalem
+1818	binyaminaGivatAda	בנימינה-גבעת עדה	Binyamina-Giv'at Ada	32.52151	34.96205	36	Asia/Jerusalem
+1819	geulim	גאולים	Ge'ulim	32.29797	34.94549	55	Asia/Jerusalem
+1820	gevulot	גבולות	Gevulot	31.21084	34.46549	131	Asia/Jerusalem
+1821	givotEden	גבעות עדן	Giv'ot Eden	31.66304	35.01317	380	Asia/Jerusalem
+1822	gilgal	גלגל	Gilgal	31.99949	35.44691	-249	Asia/Jerusalem
+1823	geshur	גשור	Geshur	32.81884	35.71700	347	Asia/Jerusalem
+1824	zimrat	זמרת	Zimrat	31.44804	34.55258	122	Asia/Jerusalem
+1825	holit	חולית	Holit	31.23068	34.32574	76	Asia/Jerusalem
+1826	yadHanna	יד חנה	Yad Hanna	32.32608	35.00618	53	Asia/Jerusalem
+1827	yadMordekhay	יד מרדכי	Yad Mordekhay	31.58896	34.55842	42	Asia/Jerusalem
+1828	yodefat	יודפת	Yodefat	32.83761	35.27191	430	Asia/Jerusalem
+1829	yesha	ישע	Yesha	31.24755	34.40255	119	Asia/Jerusalem
+1830	yated	יתד	Yated	31.20635	34.32694	83	Asia/Jerusalem
+1831	kaddita	כדיתה	Kaddita	33.00472	35.46414	767	Asia/Jerusalem
+1832	kissufim	כיסופים	Kissufim	31.37526	34.39910	85	Asia/Jerusalem
+1833	kefarHaruv	כפר חרוב	Kefar Haruv	32.76274	35.66333	310	Asia/Jerusalem
+1834	kefarMaymon	כפר מימון	Kefar Maymon	31.43218	34.53590	99	Asia/Jerusalem
+1835	kefarAzza	כפר עזה	Kefar Azza	31.48360	34.53191	89	Asia/Jerusalem
+1836	keremShalom	כרם שלום	Kerem Shalom	31.22770	34.28432	88	Asia/Jerusalem
+1837	mevoHamma	מבוא חמה	Mevo Hamma	32.73767	35.65540	347	Asia/Jerusalem
+1838	mivtahim	מבטחים	Mivtahim	31.24039	34.40787	129	Asia/Jerusalem
+1839	migdalim	מגדלים	Migdalim	32.09060	35.34244	774	Asia/Jerusalem
+1840	magen	מגן	Magen	31.29974	34.42695	119	Asia/Jerusalem
+1841	mahaneYattir	מחנה יתיר	Mahane Yattir	31.34743	35.06014	653	Asia/Jerusalem
+1842	maon	מעון	Ma'on	31.41371	35.16385	773	Asia/Jerusalem
+1843	mefallesim	מפלסים	Mefallesim	31.50204	34.56138	94	Asia/Jerusalem
+1844	mizpeNetofa	מצפה נטופה	Mizpe Netofa	32.80253	35.38577	396	Asia/Jerusalem
+1845	mizpeShalem	מצפה שלם	Mizpe Shalem	31.56763	35.40077	-302	Asia/Jerusalem
+1846	meromGolan	מרום גולן	Merom Golan	33.13311	35.77583	977	Asia/Jerusalem
+1847	maskiyyot	משכיות	Maskiyyot	32.31772	35.50385	-46	Asia/Jerusalem
+1848	negohot	נגוהות	Negohot	31.49309	34.98345	674	Asia/Jerusalem
+1849	neveTsuf	נווה צוף	Neve Tsuf	32.00642	35.12677	557	Asia/Jerusalem
+1850	neweShalom	נווה שלום	Newe Shalom	31.81799	34.97864	276	Asia/Jerusalem
+1851	nahalOz	נחל עוז	Nahal Oz	31.47277	34.49746	70	Asia/Jerusalem
+1852	natur	נטור	Natur	32.85316	35.75312	411	Asia/Jerusalem
+1853	nirYizhaq	ניר יצחק	Nir Yizhaq	31.23768	34.35765	91	Asia/Jerusalem
+1854	nirOz	ניר עוז	Nir Oz	31.31079	34.40175	105	Asia/Jerusalem
+1855	nirim	נירים	Nirim	31.33597	34.39494	109	Asia/Jerusalem
+1856	nesAmmim	נס עמים	Nes Ammim	32.96615	35.12121	26	Asia/Jerusalem
+1857	netivHaasara	נתיב העשרה	Netiv HaAsara	31.57215	34.53960	59	Asia/Jerusalem
+1858	sufa	סופה	Sufa	31.23732	34.34215	85	Asia/Jerusalem
+1859	samar	סמר	Samar	29.83233	35.02252	94	Asia/Jerusalem
+1860	saad	סעד	Sa'ad	31.47068	34.53445	103	Asia/Jerusalem
+1861	ateret	עטרת	Ateret	32.00069	35.17707	698	Asia/Jerusalem
+1862	enHabesor	עין הבשור	En HaBesor	31.28145	34.44245	116	Asia/Jerusalem
+1863	enHashelosha	עין השלושה	En HaShelosha	31.35147	34.40158	100	Asia/Jerusalem
+1864	enZiwan	עין זיוון	En Ziwan	33.09647	35.79603	969	Asia/Jerusalem
+1865	alumim	עלומים	Alumim	31.45228	34.51334	98	Asia/Jerusalem
+1866	ammioz	עמיעוז	Ammi'oz	31.24846	34.41295	127	Asia/Jerusalem
+1867	amqa	עמקה	Amqa	32.97917	35.16191	81	Asia/Jerusalem
+1868	paran	פארן	Paran	30.36319	35.15462	106	Asia/Jerusalem
+1869	pattish	פטיש	Pattish	31.32739	34.56004	96	Asia/Jerusalem
+1870	periGan	פרי גן	Peri Gan	31.22169	34.35541	92	Asia/Jerusalem
+1871	zeelim	צאלים	Ze'elim	31.20370	34.53417	143	Asia/Jerusalem
+1872	zoharCbs	צוחר	Zohar	31.23635	34.42571	135	Asia/Jerusalem
+1873	reim	רעים	Re'im	31.38552	34.45932	49	Asia/Jerusalem
+1874	shaveZiyyon	שבי ציון	Shave Ziyyon	32.98178	35.08405	7	Asia/Jerusalem
+1875	sedeNizzan	שדה ניצן	Sede Nizzan	31.23015	34.41932	135	Asia/Jerusalem
+1876	sedeAvraham	שדי אברהם	Sede Avraham	31.21139	34.33702	86	Asia/Jerusalem
+1877	shuva	שובה	Shuva	31.45170	34.54414	108	Asia/Jerusalem
+1878	shoqeda	שוקדה	Shoqeda	31.42200	34.52471	82	Asia/Jerusalem
+1879	tushiyya	תושייה	Tushiyya	31.43379	34.54088	108	Asia/Jerusalem
+1880	talmeEliyyahu	תלמי אליהו	Talme Eliyyahu	31.22901	34.42903	136	Asia/Jerusalem
+1881	talmeYosef	תלמי יוסף	Talme Yosef	31.20137	34.36203	111	Asia/Jerusalem

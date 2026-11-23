@@ -9,7 +9,7 @@ describe('lazy loading', () => {
     expect(reads).toEqual([])
     const en = await listPlaces('en')
     expect(en[1]).toBe('Jerusalem')
-    expect(en.length).toBe(1811)
+    expect(en.length).toBe(1882)
     await listPlaces('en')
     expect(reads).toEqual(['names-en.txt'])
   })
@@ -25,11 +25,11 @@ describe('lazy loading', () => {
     const reads = useFileAssets()
     const place = await getPlace(1)
     expect(place).toMatchObject({ lat: 31.76904, lng: 35.21633, elevation: 786, tzid: 'Asia/Jerusalem' })
-    for (let id = 1; id <= 1810; id++) await getPlace(id)
+    for (let id = 1; id <= 1881; id++) await getPlace(id)
     await zmanim(42, new Date(2026, 0, 1), ['sunrise'])
     // sunrise needs the refraction temperature, so it adds climate.bin (see refraction.test.ts)
     expect(reads.sort()).toEqual(['climate.bin', 'places.bin', 'tz.json'])
-    await expect(getPlace(1811)).rejects.toThrow(RangeError)
+    await expect(getPlace(1882)).rejects.toThrow(RangeError)
     await expect(getPlace(0)).rejects.toThrow(RangeError)
   })
 })
@@ -37,13 +37,13 @@ describe('lazy loading', () => {
 describe('asset sizes', () => {
   const size = (f: string): number => statSync(new URL(`../assets/${f}`, import.meta.url)).size
   it('places.bin is one 11-byte record per id (plus unused record 0)', () => {
-    expect(size('places.bin')).toBe(1811 * RECORD_SIZE)
+    expect(size('places.bin')).toBe(1882 * RECORD_SIZE)
   })
   it('climate.bin is 12 bytes per id (plus unused record 0)', () => {
-    expect(size('climate.bin')).toBe(1811 * 12)
+    expect(size('climate.bin')).toBe(1882 * 12)
   })
   it('all assets together stay small', () => {
     const total = ['names-he.txt', 'names-en.txt', 'places.bin', 'tz.json', 'climate.bin'].reduce((s, f) => s + size(f), 0)
-    expect(total).toBeLessThan(120 * 1024) // 1810 places: about 92 KB
+    expect(total).toBeLessThan(120 * 1024) // 1881 places: about 92 KB
   })
 })
