@@ -136,6 +136,9 @@ npm test          # vitest; parity uses the recorded fixture test/fixtures/app-z
   Open-Meteo elevation API (CC BY 4.0), based on the Copernicus DEM GLO-90 (produced using Copernicus WorldDEM-90
   (c) DLR e.V. 2010-2014 and (c) Airbus Defence and Space GmbH 2014-2018, provided under COPERNICUS by the European
   Union and ESA; all rights reserved).
+- Seven neighbourhood points (Ramat Beit Shemesh Aleph, Bet and Gimel, Nofei Aviv, Kiryat Sefer, Brachfeld,
+  Green Park) (c) OpenStreetMap contributors, ODbL 1.0, https://www.openstreetmap.org/copyright. Their
+  elevations come from the Open-Meteo elevation API (above).
 - Climate data (climate.bin): weather data by Open-Meteo.com (https://open-meteo.com/), CC BY 4.0, from the
   ERA5 / ERA5-Land reanalysis by the Copernicus Climate Change Service (Hersbach et al. 2018, Munoz Sabater 2019).
 - Refraction method: Saemundsson (1986), Bennett (1982), Meeus, Astronomical Algorithms (1998) ch. 16;

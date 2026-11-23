@@ -1802,3 +1802,10 @@ id	key	he	en	lat	lng	elevation	tzid
 1801	curitiba	קוריטיבה	Curitiba	-25.42972	-49.27194	913	America/Sao_Paulo
 1802	beloHorizonte	בלו הוריזונטה	Belo Horizonte	-19.92806	-43.94194	860	America/Sao_Paulo
 1803	lucerne	לוצרן	Lucerne	47.05230	8.30590	436	Europe/Zurich
+1804	ramatBeitShemeshAleph	רמת בית שמש א'	Ramat Beit Shemesh Aleph	31.71451	34.99473	393	Asia/Jerusalem
+1805	ramatBeitShemeshBet	רמת בית שמש ב'	Ramat Beit Shemesh Bet	31.72724	34.99356	306	Asia/Jerusalem
+1806	ramatBeitShemeshGimel	רמת בית שמש ג'	Ramat Beit Shemesh Gimel	31.70411	34.98870	374	Asia/Jerusalem
+1807	nofeiAviv	נופי אביב	Nofei Aviv (Beit Shemesh)	31.73677	34.97780	248	Asia/Jerusalem
+1808	kiryatSefer	קרית ספר	Kiryat Sefer (Modi'in Illit)	31.93217	35.04331	317	Asia/Jerusalem
+1809	brachfeld	ברכפלד	Brachfeld (Modi'in Illit)	31.93957	35.04174	323	Asia/Jerusalem
+1810	greenPark	גרין פארק	Green Park (Modi'in Illit)	31.92426	35.04690	235	Asia/Jerusalem
