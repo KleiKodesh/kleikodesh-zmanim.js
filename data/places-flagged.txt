@@ -1,0 +1,24 @@
+NOT FOUND: Ramat Beit Shemesh Aleph | Beit Shemesh, Israel | neighbourhood
+NOT FOUND: Ramat Beit Shemesh Bet | Beit Shemesh, Israel | neighbourhood
+NOT FOUND: Ramat Beit Shemesh Gimel | Beit Shemesh, Israel | neighbourhood
+NOT FOUND: Nofei Aviv | Beit Shemesh, Israel | neighbourhood
+NOT FOUND: Kiryat Sefer | Modiin Illit, Israel | neighbourhood
+NOT FOUND: Brachfeld | Modiin Illit, Israel | neighbourhood
+NOT FOUND: Green Park | Modiin Illit, Israel | neighbourhood
+NO HEBREW: New Hempstead Q3452737
+NO HEBREW: Monticello Q432255
+NO HEBREW: Howell Township Q2678621
+NO HEBREW: Brick Township Q2637971
+NO HEBREW: Boisbriand Q139474
+NO HEBREW: Atlantic Beach Q1190594
+NO HEBREW: Belle Harbor Q2894717
+NO HEBREW: Airmont Q2210910
+NO HEBREW: Pomona Q2990298
+NO HEBREW: Montebello Q3453075
+NO HEBREW: Bloomingburg Q3461457
+NO HEBREW: Woodbourne Q8032390
+NO HEBREW: Deerfield Q287895
+NO HEBREW: Buffalo Grove Q4985742
+NO HEBREW: Owings Mills Q755623
+NO HEBREW: Villiers-le-Bel Q236136
+NOT FOUND: Lucerne | Switzerland | city
