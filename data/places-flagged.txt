@@ -45,3 +45,4 @@ NO HEBREW: Lodz Q471231
 NOT FOUND: Lezajsk | Poland | town
 NOT FOUND: Lublin | Poland | city
 NOT FOUND: Wroclaw | Poland | city
+NOT FOUND: Dubai | United Arab Emirates | city
