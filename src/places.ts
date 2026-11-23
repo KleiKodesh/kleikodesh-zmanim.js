@@ -1,0 +1,134 @@
+// The place list: loaded lazily from the compact asset files, each at most once.
+import type { CivilDate, ZmanName } from './zmanim.js'
+import { computeZmanim, ZMAN_NAMES } from './zmanim.js'
+
+export type Lang = 'he' | 'en'
+
+/** Reads one asset file (e.g. 'places.bin') and returns its bytes. */
+export type AssetLoader = (file: string) => Promise<ArrayBuffer>
+
+export interface Place {
+  id: number
+  lat: number
+  lng: number
+  /** Meters (the zmanim are sea-level; kept for consumers). */
+  elevation: number
+  tzid: string
+  rawOffsetMinutes: number
+}
+
+/** Bytes per record in places.bin: lat int32, lng int32 (degrees x 1e5), elevation int16, tz index uint8. */
+export const RECORD_SIZE = 11
+const SCALE = 1e5
+
+let baseUrl: string | URL = new URL('../assets/', import.meta.url)
+let loader: AssetLoader = async (file) => {
+  const response = await fetch(new URL(file, baseUrl))
+  if (!response.ok) throw new Error(`kleikodesh-zmanim: cannot load ${file} (${response.status})`)
+  return response.arrayBuffer()
+}
+
+/** Where the asset files are: a base URL for the default fetch loader, or a loader of your own. */
+export function configure(options: { baseUrl?: string | URL, loader?: AssetLoader }): void {
+  if (options.baseUrl !== undefined) baseUrl = options.baseUrl
+  if (options.loader !== undefined) loader = options.loader
+  names.clear()
+  bin = null
+  tz = null
+  placeCache.clear()
+}
+
+// Caches: two name lists, one binary table, one zone table, and a few recent places.
+const names = new Map<Lang, Promise<readonly string[]>>()
+let bin: Promise<DataView> | null = null
+let tz: Promise<{ ids: string[], rawOffsetMinutes: number[] }> | null = null
+const placeCache = new Map<number, Place>()
+const PLACE_CACHE_SIZE = 16
+
+const text = async (file: string): Promise<string> => new TextDecoder().decode(await loader(file))
+
+/** Every place name in [lang]; the index is the place id (index 0 is empty). Loads only that names file. */
+export function listPlaces(lang: Lang): Promise<readonly string[]> {
+  let list = names.get(lang)
+  if (!list) {
+    list = text(`names-${lang}.txt`).then((t) => Object.freeze(t.replace(/\r?\n$/, '').split(/\r?\n/)))
+    list.catch(() => names.delete(lang))
+    names.set(lang, list)
+  }
+  return list
+}
+
+const fold = (s: string): string => s.normalize('NFD').replace(/[̀-֑ͯ-ׇ]/g, '').toLowerCase()
+
+/** Places whose [lang] name contains [query] (case, accents and Hebrew points ignored); prefix matches first. */
+export async function searchPlaces(query: string, lang: Lang, limit = 50): Promise<Array<{ id: number, name: string }>> {
+  const q = fold(query.trim())
+  const list = await listPlaces(lang)
+  const starts: Array<{ id: number, name: string }> = []
+  const contains: Array<{ id: number, name: string }> = []
+  for (let id = 1; id < list.length; id++) {
+    const at = fold(list[id]!).indexOf(q)
+    if (at === 0) starts.push({ id, name: list[id]! })
+    else if (at > 0) contains.push({ id, name: list[id]! })
+  }
+  return starts.concat(contains).slice(0, limit)
+}
+
+/** Number of places (ids are 1..count). Loads places.bin. */
+export async function placeCount(): Promise<number> {
+  return (await table()).byteLength / RECORD_SIZE - 1
+}
+
+function table(): Promise<DataView> {
+  if (!bin) {
+    bin = loader('places.bin').then((buffer) => new DataView(buffer))
+    bin.catch(() => { bin = null })
+  }
+  return bin
+}
+
+function zones(): Promise<{ ids: string[], rawOffsetMinutes: number[] }> {
+  if (!tz) {
+    tz = text('tz.json').then((t) => JSON.parse(t) as { ids: string[], rawOffsetMinutes: number[] })
+    tz.catch(() => { tz = null })
+  }
+  return tz
+}
+
+/** One place's coordinates and zone. Record 0 is unused, so the record offset is id x RECORD_SIZE. */
+export async function getPlace(id: number): Promise<Place> {
+  const cached = placeCache.get(id)
+  if (cached) return cached
+  const [view, zoneTable] = await Promise.all([table(), zones()])
+  const offset = id * RECORD_SIZE
+  if (!Number.isInteger(id) || id < 1 || offset + RECORD_SIZE > view.byteLength) throw new RangeError(`No place with id ${id}`)
+  const zone = view.getUint8(offset + 10)
+  const place: Place = Object.freeze({
+    id,
+    lat: view.getInt32(offset, true) / SCALE,
+    lng: view.getInt32(offset + 4, true) / SCALE,
+    elevation: view.getInt16(offset + 8, true),
+    tzid: zoneTable.ids[zone]!,
+    rawOffsetMinutes: zoneTable.rawOffsetMinutes[zone]!,
+  })
+  if (placeCache.size >= PLACE_CACHE_SIZE) placeCache.delete(placeCache.keys().next().value!)
+  placeCache.set(id, place)
+  return place
+}
+
+/** A JS Date (its local calendar date is used) or a civil date. */
+export type DateInput = Date | CivilDate
+
+export function toCivilDate(date: DateInput): CivilDate {
+  return date instanceof Date ? { year: date.getFullYear(), month: date.getMonth() + 1, day: date.getDate() } : date
+}
+
+/** Only the requested zmanim, printed HH:MM in the place's zone with the library's rounding. */
+export async function zmanim(
+  place: number | Place,
+  date: DateInput,
+  which: readonly ZmanName[] = ZMAN_NAMES,
+): Promise<Partial<Record<ZmanName, string | null>>> {
+  const p = typeof place === 'number' ? await getPlace(place) : place
+  return computeZmanim(p, toCivilDate(date), which)
+}

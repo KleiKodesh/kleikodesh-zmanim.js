@@ -1,0 +1,565 @@
+
+Jerusalem
+Ramot Alon (Jerusalem)
+Ramot Eshkol (Jerusalem)
+Sanhedria (Jerusalem)
+Romema (Jerusalem)
+Kiryat Moshe (Jerusalem)
+Givat Shaul (Jerusalem)
+Kfar Shaul (Jerusalem)
+Bayit Vegan (Jerusalem)
+Beit HaKerem (Jerusalem)
+Yefe Nof (Jerusalem)
+Givat Mordechai (Jerusalem)
+Neve Shaanan (Jerusalem)
+Musrara (Jerusalem)
+Old City (Jerusalem)
+Maalot Dafna (Jerusalem)
+Talbiya - Komemiyut (Jerusalem)
+German Colony (Jerusalem)
+Baka - Geulim (Jerusalem)
+Katamon - Gonen (Jerusalem)
+Mekor Chaim (Jerusalem)
+Talpiot (Jerusalem)
+Ramat Rachel (Jerusalem)
+Har Homa (Jerusalem)
+Gilo (Jerusalem)
+Malcha - Manahat (Jerusalem)
+Kiryat HaYovel (Jerusalem)
+Kiryat Menachem (Jerusalem)
+Ir Ganim (Jerusalem)
+Ein Kerem (Jerusalem)
+French Hill (Jerusalem)
+Pisgat Zeev (Jerusalem)
+Neve Yaakov (Jerusalem)
+Har Nof (Jerusalem)
+Ramat Shlomo (Jerusalem)
+Geula (Jerusalem)
+Mea Shearim (Jerusalem)
+Zichron Moshe (Jerusalem)
+Mekor Baruch (Jerusalem)
+Rechavia (Jerusalem)
+Kiryat Belz (Jerusalem)
+Kiryat Sanz (Jerusalem)
+Givat HaMivtar (Jerusalem)
+Armon HaNatziv - East Talpiot (Jerusalem)
+Tel Aviv-Yafo
+Jaffa (Tel Aviv)
+Neve Tzedek (Tel Aviv)
+Florentin (Tel Aviv)
+HaTikva (Tel Aviv)
+Yad Eliyahu (Tel Aviv)
+Ramat Aviv (Tel Aviv)
+Haifa
+Hadar HaCarmel (Haifa)
+Carmel Center (Haifa)
+Ahuza (Haifa)
+Hod HaCarmel - Denya (Haifa)
+Neve Shaanan (Haifa)
+Kiryat Eliezer (Haifa)
+Bat Galim (Haifa)
+Beersheba
+Old City (Beersheba)
+Neighborhood D (Beersheba)
+Neighborhood E (Beersheba)
+Ashdod
+Quarter A (Ashdod)
+Quarter B (Ashdod)
+Quarter C (Ashdod)
+Quarter D (Ashdod)
+Quarter G (Ashdod)
+Quarter H (Ashdod)
+Quarter 11 (Ashdod)
+Quarter 15 (Ashdod)
+Netanya
+Kiryat Sanz (Netanya)
+Kiryat Nordau (Netanya)
+Ramat Poleg (Netanya)
+Ir Yamim (Netanya)
+Petah Tikva
+Kfar Ganim (Petah Tikva)
+Ein Ganim (Petah Tikva)
+Kfar Avraham (Petah Tikva)
+Amishav (Petah Tikva)
+Hadar HaMoshavot (Petah Tikva)
+Rishon LeZion
+Bnei Brak
+Kiryat Herzog (Bnei Brak)
+Pardes Katz (Bnei Brak)
+Ramat Elchanan (Bnei Brak)
+Zichron Meir (Bnei Brak)
+Kiryat Vizhnitz (Bnei Brak)
+Ramat Gan
+Herzliya
+Rehovot
+Modi'in
+Reut (Modiin)
+Maccabim (Modiin)
+Eilat
+Safed
+Old City (Safed)
+Tiberias
+Ben Gurion quarter, upper city (Tiberias)
+David Remez quarter (Tiberias)
+Geulim quarter (Tiberias)
+Kiryat Shmuel (Tiberias)
+New York
+Upper West Side (Manhattan)
+Lower East Side (Manhattan)
+Washington Heights (Manhattan)
+London
+Stamford Hill (London)
+Golders Green (London)
+Hendon (London)
+Finchley (London)
+Edgware (London)
+Stanmore (London)
+Hampstead (London)
+Hampstead Garden Suburb (London)
+Belsize Park (London)
+St John's Wood (London)
+Highgate (London)
+Muswell Hill (London)
+Cricklewood (London)
+Mill Hill (London)
+Kingsbury (London)
+Kenton (London)
+Wembley (London)
+Harrow (London)
+Pinner (London)
+Northwood (London)
+Barnet (London)
+Southgate (London)
+Upper Clapton (London)
+Ilford (London)
+Gants Hill (London)
+Redbridge (London)
+Woodford (London)
+Chigwell (London)
+Loughton (London)
+Wimbledon (London)
+Richmond (London)
+Kingston upon Thames (London)
+Borehamwood (London)
+Elstree (London)
+Radlett (London)
+Bushey (London)
+Potters Bar
+Watford
+St Albans
+Southend-on-Sea
+Westcliff-on-Sea (Southend)
+Canvey Island
+Antwerp
+Klein-Antwerpen (Antwerp)
+Montreal
+Outremont (Montreal)
+Cote-Saint-Luc (Montreal)
+Hampstead (Montreal)
+Snowdon (Montreal)
+Uman
+Austin, Texas
+Ofakim
+Or HaGanuz
+Itamar
+Elon Moreh
+Alon Shvut
+Amirim
+Amsterdam
+Buitenveldert (Amsterdam)
+Amstelveen (Amsterdam)
+Efrat
+Ariel
+Ashkelon
+Baltimore
+Pikesville (Baltimore)
+Cheswolde (Baltimore)
+Park Heights (Baltimore)
+Be'er Ya'akov
+Buenos Aires
+Once (Buenos Aires)
+Villa Crespo (Buenos Aires)
+Belgrano (Buenos Aires)
+Flores (Buenos Aires)
+Beit El
+Beit Zayit
+Beit Hilkia
+Beit Meir
+Beit She'an
+Beit Shemesh
+Ramat Beit Shemesh
+Givat Sharet (Beit Shemesh)
+Beitar Illit
+Brooklyn
+Borough Park (Brooklyn)
+Williamsburg (Brooklyn)
+Crown Heights (Brooklyn)
+Flatbush (Brooklyn)
+Midwood (Brooklyn)
+Marine Park (Brooklyn)
+Kensington (Brooklyn)
+Bensonhurst (Brooklyn)
+Manhattan Beach (Brooklyn)
+Sea Gate (Brooklyn)
+The Bronx
+Riverdale (Bronx)
+Queens
+Kew Gardens (Queens)
+Kew Gardens Hills (Queens)
+Forest Hills (Queens)
+Fresh Meadows (Queens)
+Jamaica Estates (Queens)
+Far Rockaway (Queens)
+Staten Island
+Bat Yam
+Bat Ayin
+Geva Binyamin (Adam)
+Givat Ze'ev
+Gedera
+Gateshead
+Newcastle upon Tyne
+Gosforth (Newcastle)
+Sunderland
+Gimzo
+Gan Yavne
+Great Neck
+Dallas
+North Dallas (Dallas)
+Dimona
+Waterbury, Connecticut
+Washington, D.C.
+Zikhron Ya'akov
+Hadera
+Holon
+Hatzor HaGlilit
+Harish
+Toronto, Canada
+Thornhill (Toronto)
+Bathurst Manor (Toronto)
+Clanton Park (Toronto)
+Lawrence Manor (Toronto)
+Forest Hill (Toronto)
+Tirat Carmel
+Yavne'el
+Johannesburg
+Glenhazel (Johannesburg)
+Sandringham (Johannesburg)
+Waverley (Johannesburg)
+Houghton Estate (Johannesburg)
+Killarney (Johannesburg)
+Sandton (Johannesburg)
+Houston
+Meyerland (Houston)
+Bellaire (Houston)
+Yesodot
+Yitzhar
+Yeruham
+Kochav HaShachar
+Kfar Saba
+Kfar Shamai
+Karmi'el
+Las Vegas
+Los Angeles
+Pico-Robertson (Los Angeles)
+Beverlywood (Los Angeles)
+Fairfax (Los Angeles)
+Hancock Park (Los Angeles)
+Beverly Hills (Los Angeles)
+Valley Village (Los Angeles)
+North Hollywood (Los Angeles)
+Lakewood
+Monsey
+Mevo Horon
+Mevaseret Zion
+Migdal
+Migdal HaEmek
+Madrid
+Miami
+Miami Beach
+Surfside (Miami)
+Bal Harbour (Miami)
+North Miami Beach
+Metzad
+Meron
+Melbourne
+Caulfield (Melbourne)
+Caulfield North (Melbourne)
+Caulfield South (Melbourne)
+St Kilda East (Melbourne)
+Elsternwick (Melbourne)
+Manchester
+Broughton Park (Manchester)
+Prestwich (Manchester)
+Whitefield (Manchester)
+Cheadle (Manchester)
+Gatley (Manchester)
+Sale (Manchester)
+Hale (Manchester)
+Altrincham (Manchester)
+Bowdon (Manchester)
+Ma'ale Adumim
+Ma'ale Amos
+Ma'alot
+Mitzpe Yericho
+Mitzpe Ramon
+Cuernavaca
+Marseille
+Nahariya
+Nof Ayalon (Shaalvim)
+Nof HaGalil
+Nahli'el
+Nir Etzion
+Netivot
+Sao Paulo
+Higienopolis (Sao Paulo)
+Bom Retiro (Sao Paulo)
+San Antonio
+Saint-Louis (France)
+Sasa
+Acre
+Eli
+Emmanuel
+Afula
+Aix-les-Bains
+Arad
+Fallsburg, New York
+Pinsk, Belarus
+Panama City
+Punta Paitilla (Panama City)
+Passaic, New Jersey
+Paris
+19th arrondissement (Paris)
+17th arrondissement (Paris)
+Le Marais (Paris)
+Saint-Mande (Paris)
+Vincennes (Paris)
+Creteil (Paris)
+Boulogne-Billancourt (Paris)
+Neuilly-sur-Seine (Paris)
+Levallois-Perret (Paris)
+Garges-les-Gonesse (Paris)
+Zurich
+Enge (Zurich)
+Wiedikon (Zurich)
+Komemiyut
+Caesarea
+Cleveland
+Cleveland Heights (Cleveland)
+University Heights (Cleveland)
+Beachwood (Cleveland)
+Kiryat Arba
+Kiryat Ata
+Kiryat Gat
+Kiryat Tiv'on
+Kiryas Joel, New York
+Kiryat Yearim (Telz-Stone)
+Kiryat Malakhi
+Kiryat Shmona
+Rosh HaAyin
+Revava
+Rekhasim
+Ramla
+Ramat HaSharon
+Ramat Magshimim
+Le Raincy
+Ra'anana
+Sderot
+Strasbourg
+Chicago
+West Rogers Park - West Ridge (Chicago)
+Rogers Park (Chicago)
+Lincolnwood (Chicago)
+Skokie (Chicago)
+Shlomi
+Tifrah
+El'ad
+Modi'in Illit
+Giv'atayim
+Giv'at Shmuel
+Hod HaSharon
+Kfar Yona
+Kiryat Bialik
+Kiryat Motzkin
+Kiryat Ono
+Kiryat Yam
+Lod
+Ganei Aviv (Lod)
+Nesher
+Ness Ziona
+Or Akiva
+Or Yehuda
+Yavne
+Yehud-Monosson
+Yokneam Illit
+Kokhav Ya'akov
+Kfar Chabad
+Hashmonaim
+Kedumim
+Karnei Shomron
+Elkana
+Shoham
+Mazkeret Batya
+Yad Binyamin
+Tel Mond
+Kiryat Ekron
+Teaneck
+Englewood
+Lawrence, New York
+New Square
+Toms River
+Silver Spring
+Kemp Mill (Silver Spring)
+Detroit
+Oak Park (Detroit)
+Southfield (Detroit)
+West Bloomfield (Detroit)
+Boca Raton
+Hollywood, Florida
+Aventura
+Philadelphia
+Bala Cynwyd (Philadelphia)
+Wynnewood (Philadelphia)
+Boston
+Brookline (Boston)
+Newton (Boston)
+San Francisco
+Richmond District (San Francisco)
+Atlanta
+San Diego
+La Jolla (San Diego)
+Denver
+West Colfax (Denver)
+Phoenix
+Scottsdale (Phoenix)
+Seattle
+Seward Park (Seattle)
+Pittsburgh
+Squirrel Hill (Pittsburgh)
+St. Louis, Missouri
+University City (St. Louis)
+Minneapolis
+St. Louis Park (Minneapolis)
+Cincinnati
+Golf Manor (Cincinnati)
+Amberley Village (Cincinnati)
+Ottawa
+Vancouver
+Winnipeg
+Leeds
+Alwoodley (Leeds)
+Moortown (Leeds)
+Bradford
+Harrogate
+York
+Glasgow
+Giffnock (Glasgow)
+Newton Mearns (Glasgow)
+Salford
+Liverpool
+Childwall (Liverpool)
+Allerton (Liverpool)
+Southport
+Birmingham
+Edgbaston (Birmingham)
+Solihull
+Coventry
+Leicester
+Nottingham
+Sheffield
+Hull
+Luton
+Milton Keynes
+Reading
+Oxford
+Cambridge
+Norwich
+Brighton
+Hove (Brighton)
+Bournemouth
+Southampton
+Southsea (Portsmouth)
+Plymouth
+Exeter
+Bristol
+Cardiff
+Swansea
+Edinburgh
+Aberdeen
+Dundee
+Belfast
+Lyon
+Villeurbanne (Lyon)
+Nice
+Toulouse
+Sarcelles
+Brussels
+Uccle (Brussels)
+Forest (Brussels)
+Geneva
+Basel
+Lugano
+Vienna
+Leopoldstadt (Vienna)
+Berlin
+Charlottenburg (Berlin)
+Wilmersdorf (Berlin)
+Frankfurt
+Westend (Frankfurt)
+Munich
+Rome
+Ghetto - Sant'Angelo (Rome)
+Milan
+Bande Nere (Milan)
+Barcelona
+Sant Gervasi (Barcelona)
+Moscow
+Maryina Roshcha (Moscow)
+Saint Petersburg
+Kyiv
+Podil (Kyiv)
+Odesa
+Dnipro
+Kharkiv
+Budapest
+Erzsebetvaros - 7th district (Budapest)
+Ujlipotvaros - 13th district (Budapest)
+Prague
+Istanbul
+Nisantasi (Istanbul)
+Warsaw
+Krakow
+Kazimierz (Krakow)
+Bucharest
+Athens
+Minsk
+Tbilisi
+Gibraltar
+Copenhagen
+Stockholm
+Rio de Janeiro
+Copacabana (Rio de Janeiro)
+Mexico City
+Polanco (Mexico City)
+Lomas de Tecamachalco (Mexico City)
+Bosques de las Lomas (Mexico City)
+Interlomas (Mexico City)
+Montevideo
+Pocitos (Montevideo)
+Santiago
+Las Condes (Santiago)
+Vitacura (Santiago)
+Cape Town
+Sea Point (Cape Town)
+Durban
+Sydney
+Bondi (Sydney)
+Dover Heights (Sydney)
+St Ives (Sydney)
+Perth
+Yokine (Perth)
+Dianella (Perth)
+Auckland
+Remuera (Auckland)
+Singapore
+Hong Kong
+Mid-Levels (Hong Kong)

@@ -1,0 +1,565 @@
+id	key	he	en	lat	lng	elevation	tzid
+1	jerusalem	ירושלים	Jerusalem	31.76904	35.21633	786	Asia/Jerusalem
+2	ramotAlon	רמות אלון	Ramot Alon (Jerusalem)	31.81667	35.2	746	Asia/Jerusalem
+3	ramotEshkol	רמת אשכול	Ramot Eshkol (Jerusalem)	31.80263	35.21948	683	Asia/Jerusalem
+4	sanhedria	סנהדריה	Sanhedria (Jerusalem)	31.79711	35.21841	768	Asia/Jerusalem
+5	romemaJerusalem	רוממה	Romema (Jerusalem)	31.7918	35.20369	819	Asia/Jerusalem
+6	kiryatMosheJerusalem	קרית משה	Kiryat Moshe (Jerusalem)	31.784	35.19284	796	Asia/Jerusalem
+7	givatShaul	Giv‘at Sha’ul	Givat Shaul (Jerusalem)	31.79033	35.1935	823	Asia/Jerusalem
+8	kfarShaul	כפר שאול	Kfar Shaul (Jerusalem)	31.78599	35.17559	784	Asia/Jerusalem
+9	bayitVegan	בית וגן	Bayit Vegan (Jerusalem)	31.76982	35.18454	824	Asia/Jerusalem
+10	beitHakerem	בית הכרם	Beit HaKerem (Jerusalem)	31.77953	35.19004	778	Asia/Jerusalem
+11	yefeNof	Yafé Nof	Yefe Nof (Jerusalem)	31.778	35.18296	781	Asia/Jerusalem
+12	givatMordechai	גבעת מרדכי	Givat Mordechai (Jerusalem)	31.76667	35.2	725	Asia/Jerusalem
+13	neveShaananJerusalem	Newé Sha’anan	Neve Shaanan (Jerusalem)	31.77232	35.20106	750	Asia/Jerusalem
+14	musrara	מוסררה	Musrara (Jerusalem)	31.78333	35.21667	802	Asia/Jerusalem
+15	oldCityJerusalem	העיר העתיקה	Old City (Jerusalem)	31.77667	35.23417	760	Asia/Jerusalem
+16	maalotDafna	מעלות דפנה	Maalot Dafna (Jerusalem)	31.78333	35.21667	802	Asia/Jerusalem
+17	talbiya	טלביה	Talbiya - Komemiyut (Jerusalem)	31.76798	35.22148	762	Asia/Jerusalem
+18	germanColony	המושבה הגרמנית	German Colony (Jerusalem)	31.76317	35.22105	747	Asia/Jerusalem
+19	baka	בקעה	Baka - Geulim (Jerusalem)	31.76667	35.21667	751	Asia/Jerusalem
+20	katamon	קטמון	Katamon - Gonen (Jerusalem)	31.75976	35.20707	766	Asia/Jerusalem
+21	mekorChaim	מקור חיים	Mekor Chaim (Jerusalem)	31.75292	35.21496	745	Asia/Jerusalem
+22	talpiot	תלפיות	Talpiot (Jerusalem)	31.75	35.21667	755	Asia/Jerusalem
+23	ramatRachel	רמת רחל	Ramat Rachel (Jerusalem)	31.73841	35.21817	821	Asia/Jerusalem
+24	harHoma	הר חומה	Har Homa (Jerusalem)	31.73881	35.2082	787	Asia/Jerusalem
+25	gilo	גילה	Gilo (Jerusalem)	31.73003	35.19062	830	Asia/Jerusalem
+26	malcha	מלחה	Malcha - Manahat (Jerusalem)	31.75725	35.17791	770	Asia/Jerusalem
+27	kiryatYovel	קריית היובל	Kiryat HaYovel (Jerusalem)	31.76667	35.16667	683	Asia/Jerusalem
+28	kiryatMenachem	קרית מנחם	Kiryat Menachem (Jerusalem)	31.75804	35.16497	813	Asia/Jerusalem
+29	irGanim	עיר גנים	Ir Ganim (Jerusalem)	31.75	35.15	799	Asia/Jerusalem
+30	einKerem	עין כרם	Ein Kerem (Jerusalem)	31.76895	35.1646	665	Asia/Jerusalem
+31	frenchHill	הגבעה הצרפתית	French Hill (Jerusalem)	31.80516	35.23816	840	Asia/Jerusalem
+32	pisgatZeev	פסגת זאב	Pisgat Zeev (Jerusalem)	31.81667	35.23333	787	Asia/Jerusalem
+33	neveYaakov	נווה יעקב	Neve Yaakov (Jerusalem)	31.83333	35.23333	762	Asia/Jerusalem
+34	harNof	הר נוף	Har Nof (Jerusalem)	31.78472	35.175	765	Asia/Jerusalem
+35	ramatShlomo	רמת שלמה	Ramat Shlomo (Jerusalem)	31.81048	35.21805	796	Asia/Jerusalem
+36	geula	גאולה	Geula (Jerusalem)	31.78	35.21	779	Asia/Jerusalem
+37	meaShearim	מאה שערים	Mea Shearim (Jerusalem)	31.78694	35.22222	790	Asia/Jerusalem
+38	zichronMoshe	זיכרון משה	Zichron Moshe (Jerusalem)	31.7874	35.2167	804	Asia/Jerusalem
+39	mekorBaruch	מקור ברוך	Mekor Baruch (Jerusalem)	31.78863	35.21064	813	Asia/Jerusalem
+40	rechavia	רחביה	Rechavia (Jerusalem)	31.77447	35.212	798	Asia/Jerusalem
+41	kiryatBelz	קריית בעלז	Kiryat Belz (Jerusalem)	31.79756	35.20754	768	Asia/Jerusalem
+42	kiryatSanzJerusalem	קריית צאנז	Kiryat Sanz (Jerusalem)	31.79798	35.21103	732	Asia/Jerusalem
+43	givatHamivtar	גבעת המבתר	Givat HaMivtar (Jerusalem)	31.80306	35.23129	809	Asia/Jerusalem
+44	armonHanatziv	תלפיות מזרח	Armon HaNatziv - East Talpiot (Jerusalem)	31.75	35.235	724	Asia/Jerusalem
+45	telAviv	תל אביב-יפו	Tel Aviv-Yafo	32.08088	34.78057	15	Asia/Jerusalem
+46	jaffa	יפו	Jaffa (Tel Aviv)	32.05043	34.75224	26	Asia/Jerusalem
+47	neveTzedek	Nevé Tsedeq	Neve Tzedek (Tel Aviv)	32.06218	34.76478	11	Asia/Jerusalem
+48	florentin	פלורנטין	Florentin (Tel Aviv)	32.05749	34.76885	13	Asia/Jerusalem
+49	hatikva	שכונת התקוה	HaTikva (Tel Aviv)	32.05096	34.78891	21	Asia/Jerusalem
+50	yadEliyahu	יד אליהו	Yad Eliyahu (Tel Aviv)	32.05661	34.79289	29	Asia/Jerusalem
+51	ramatAviv	רמת אביב החדשה	Ramat Aviv (Tel Aviv)	32.1081	34.79576	15	Asia/Jerusalem
+52	haifa	חיפה	Haifa	32.81303	34.99928	101	Asia/Jerusalem
+53	hadarHacarmel	הדר הכרמל	Hadar HaCarmel (Haifa)	32.80856	34.99746	99	Asia/Jerusalem
+54	merkazHacarmel	מרכז הכרמל	Carmel Center (Haifa)	32.80351	34.98432	298	Asia/Jerusalem
+55	ahuza	Aẖuza	Ahuza (Haifa)	32.78616	34.97984	266	Asia/Jerusalem
+56	hodHacarmel	דניה	Hod HaCarmel - Denya (Haifa)	32.76774	35.00391	364	Asia/Jerusalem
+57	neveShaananHaifa	Newé Sha’anan	Neve Shaanan (Haifa)	32.78571	35.01448	214	Asia/Jerusalem
+58	kiryatEliezerHaifa	קריית אליעזר	Kiryat Eliezer (Haifa)	32.82742	34.98274	8	Asia/Jerusalem
+59	batGalim	בת גלים	Bat Galim (Haifa)	32.83615	34.98224	4	Asia/Jerusalem
+60	beerSheva	באר שבע	Beersheba	31.25181	34.7913	285	Asia/Jerusalem
+61	beerShevaOldCity	העיר העתיקה	Old City (Beersheba)	31.2407	34.78784	278	Asia/Jerusalem
+62	beerShevaDalet	שכונה ד'	Neighborhood D (Beersheba)	31.26447	34.79544	300	Asia/Jerusalem
+63	beerShevaHey	שכונה ה'	Neighborhood E (Beersheba)	31.25385	34.77484	266	Asia/Jerusalem
+64	ashdod	אשדוד	Ashdod	31.79213	34.64966	27	Asia/Jerusalem
+65	ashdodRovaAlef	Rova‘ Alef	Quarter A (Ashdod)	31.81236	34.647	33	Asia/Jerusalem
+66	ashdodRovaBet	Rova‘ Bet	Quarter B (Ashdod)	31.80747	34.65232	23	Asia/Jerusalem
+67	ashdodRovaGimel	Rova‘ Gimel	Quarter C (Ashdod)	31.80204	34.66058	27	Asia/Jerusalem
+68	ashdodRovaDalet	Rova‘ Dalet	Quarter D (Ashdod)	31.80104	34.64219	42	Asia/Jerusalem
+69	ashdodRovaZayin	Rova‘ Zayin	Quarter G (Ashdod)	31.7914	34.66201	27	Asia/Jerusalem
+70	ashdodRovaHet	Rova‘ H̱et	Quarter H (Ashdod)	31.78763	34.65237	26	Asia/Jerusalem
+71	ashdodRovaYodAlef	Rova‘ Yod Alef	Quarter 11 (Ashdod)	31.78318	34.63111	26	Asia/Jerusalem
+72	ashdodRovaTetVav	Rova‘ Tet Waw	Quarter 15 (Ashdod)	31.77391	34.62755	25	Asia/Jerusalem
+73	netanya	נתניה	Netanya	32.33294	34.85917	38	Asia/Jerusalem
+74	kiryatSanz	קריית צאנז	Kiryat Sanz (Netanya)	32.34284	34.85694	46	Asia/Jerusalem
+75	kiryatNordau	Qiryat Norda’u	Kiryat Nordau (Netanya)	32.28266	34.85384	55	Asia/Jerusalem
+76	ramatPoleg	רמת פולג	Ramat Poleg (Netanya)	32.27293	34.84488	48	Asia/Jerusalem
+77	irYamim	‘Ir Yammim	Ir Yamim (Netanya)	32.27848	34.84291	50	Asia/Jerusalem
+78	petachTikva	פתח תקווה	Petah Tikva	32.0888	34.88666	60	Asia/Jerusalem
+79	kfarGanim	כפר גנים	Kfar Ganim (Petah Tikva)	32.07567	34.87292	67	Asia/Jerusalem
+80	einGanim	עין גנים	Ein Ganim (Petah Tikva)	32.08836	34.8941	49	Asia/Jerusalem
+81	kfarAvraham	כפר אברהם	Kfar Avraham (Petah Tikva)	32.09485	34.89829	44	Asia/Jerusalem
+82	amishav	‘Ammishav	Amishav (Petah Tikva)	32.07407	34.90955	43	Asia/Jerusalem
+83	hadarHamoshavot	H̱adar HaMoshavot	Hadar HaMoshavot (Petah Tikva)	32.10265	34.87362	12	Asia/Jerusalem
+84	rishonLezion	ראשון לציון	Rishon LeZion	31.97102	34.78939	56	Asia/Jerusalem
+85	bneiBrak	בני ברק	Bnei Brak	32.08074	34.8338	51	Asia/Jerusalem
+86	kiryatHerzog	קרית הרצוג	Kiryat Herzog (Bnei Brak)	32.09813	34.83826	20	Asia/Jerusalem
+87	pardesKatz	פרדס כץ	Pardes Katz (Bnei Brak)	32.09442	34.83605	25	Asia/Jerusalem
+88	ramatElchanan	רמת אלחנן	Ramat Elchanan (Bnei Brak)	32.08162	34.84316	39	Asia/Jerusalem
+89	zichronMeir	זכרון מאיר	Zichron Meir (Bnei Brak)	32.08267	34.83844	44	Asia/Jerusalem
+90	kiryatVizhnitz	קריית ויז'ניץ	Kiryat Vizhnitz (Bnei Brak)	32.07355	34.83628	64	Asia/Jerusalem
+91	ramatGan	רמת גן	Ramat Gan	32.08227	34.81065	57	Asia/Jerusalem
+92	herzliya	הרצליה	Herzliya	32.16627	34.82536	28	Asia/Jerusalem
+93	rechovot	רחובות	Rehovot	31.89415	34.8095	46	Asia/Jerusalem
+94	modiin	מודיעין	Modi'in	31.89385	35.01504	276	Asia/Jerusalem
+95	reut	Re‘ut	Reut (Modiin)	31.88958	35.00529	276	Asia/Jerusalem
+96	maccabim	מכבים	Maccabim (Modiin)	31.89111	35.03352	230	Asia/Jerusalem
+97	eilat	אילת	Eilat	29.55805	34.94821	63	Asia/Jerusalem
+98	tzfat	צפת	Safed	32.96465	35.496	779	Asia/Jerusalem
+99	tzfatOldCity	העיר העתיקה	Old City (Safed)	32.96631	35.49329	744	Asia/Jerusalem
+100	tiberias	טבריה	Tiberias	32.79396	35.53152	-39	Asia/Jerusalem
+101	tiberiasBenGurion	שכונת בן גוריון	Ben Gurion quarter, upper city (Tiberias)	32.78302	35.51877	217	Asia/Jerusalem
+102	tiberiasRemez	שכונת דוד רמז	David Remez quarter (Tiberias)	32.79932	35.52319	86	Asia/Jerusalem
+103	tiberiasGeulim	Shekhunat Ge’ulim	Geulim quarter (Tiberias)	32.7816	35.5388	-158	Asia/Jerusalem
+104	kiryatShmuelTiberias	קריית שמואל	Kiryat Shmuel (Tiberias)	32.79617	35.53111	-90	Asia/Jerusalem
+105	newYork	ניו יורק	New York	40.71427	-74.00597	10	America/New_York
+106	upperWestSide	אפר וסט סייד	Upper West Side (Manhattan)	40.78705	-73.97542	27	America/New_York
+107	lowerEastSide	לואר איסט סייד	Lower East Side (Manhattan)	40.71594	-73.98681	10	America/New_York
+108	washingtonHeights	וושינגטון הייטס	Washington Heights (Manhattan)	40.8501	-73.93541	54	America/New_York
+109	london	לונדון	London	51.50853	-0.12574	25	Europe/London
+110	stamfordHill	סטמפורד היל	Stamford Hill (London)	51.56872	-0.07334	34	Europe/London
+111	goldersGreen	גולדרס גרין	Golders Green (London)	51.57482	-0.2127	50	Europe/London
+112	hendon	הנדון	Hendon (London)	51.59113	-0.22438	85	Europe/London
+113	finchley	פינצלי	Finchley (London)	51.60096	-0.19518	93	Europe/London
+114	edgware	אדג'וור	Edgware (London)	51.60314	-0.27961	57	Europe/London
+115	stanmore	סטנמור	Stanmore (London)	51.61667	-0.31667	92	Europe/London
+116	hampstead	המפסטד	Hampstead (London)	51.55744	-0.18213	118	Europe/London
+117	hampsteadGardenSuburb	המפסטד גארדן סברב	Hampstead Garden Suburb (London)	51.583	-0.185	69	Europe/London
+118	belsizePark	בלסייז פארק	Belsize Park (London)	51.54767	-0.17228	67	Europe/London
+119	stJohnsWood	סנט ג'ונס ווד	St John's Wood (London)	51.52991	-0.17467	45	Europe/London
+120	highgate	הייגייט	Highgate (London)	51.56565	-0.15904	78	Europe/London
+121	muswellHill	מוסוול היל	Muswell Hill (London)	51.59054	-0.14212	106	Europe/London
+122	cricklewood	קריקלווד	Cricklewood (London)	51.5567	-0.21549	54	Europe/London
+123	millHill	מיל היל	Mill Hill (London)	51.61429	-0.24822	67	Europe/London
+124	kingsbury	קינגסברי	Kingsbury (London)	51.58571	-0.27693	49	Europe/London
+125	kenton	קנטון	Kenton (London)	51.58544	-0.31157	47	Europe/London
+126	wembley	ומבלי	Wembley (London)	51.55242	-0.29686	46	Europe/London
+127	harrow	הרו	Harrow (London)	51.57835	-0.33208	69	Europe/London
+128	pinner	פינר	Pinner (London)	51.59384	-0.38216	53	Europe/London
+129	northwood	נורת'ווד	Northwood (London)	51.61162	-0.42454	79	Europe/London
+130	barnet	ברנט	Barnet (London)	51.65	-0.2	117	Europe/London
+131	southgate	סאות'גייט	Southgate (London)	51.61667	-0.1	30	Europe/London
+132	upperClapton	אפר קלפטון	Upper Clapton (London)	51.564	-0.05808	29	Europe/London
+133	ilford	אילפורד	Ilford (London)	51.55765	0.07278	15	Europe/London
+134	gantsHill	גאנטס היל	Gants Hill (London)	51.57896	0.06403	25	Europe/London
+135	redbridge	רדברידג'	Redbridge (London)	51.57403	0.05081	19	Europe/London
+136	woodford	וודפורד	Woodford (London)	51.6	0.01667	64	Europe/London
+137	chigwell	צ'יגוול	Chigwell (London)	51.61999	0.07596	36	Europe/London
+138	loughton	לאוטון	Loughton (London)	51.64601	0.05382	36	Europe/London
+139	wimbledon	וימבלדון	Wimbledon (London)	51.42212	-0.20805	29	Europe/London
+140	richmond	ריצ'מונד	Richmond (London)	51.46171	-0.30633	10	Europe/London
+141	kingstonUponThames	קינגסטון	Kingston upon Thames (London)	51.41259	-0.2974	12	Europe/London
+142	borehamwood	בורהאמווד	Borehamwood (London)	51.65468	-0.27762	92	Europe/London
+143	elstree	אלסטרי	Elstree (London)	51.6403	-0.29693	129	Europe/London
+144	radlett	רדלט	Radlett (London)	51.68593	-0.31868	74	Europe/London
+145	bushey	בושי	Bushey (London)	51.64316	-0.36053	99	Europe/London
+146	pottersBar	פוטרס בר	Potters Bar	51.69353	-0.17835	125	Europe/London
+147	watford	ווטפורד	Watford	51.65531	-0.39602	77	Europe/London
+148	stAlbans	סנט אולבנס	St Albans	51.75	-0.33333	98	Europe/London
+149	southendOnSea	סאות'אנד-און-סי	Southend-on-Sea	51.53782	0.71433	31	Europe/London
+150	westcliffOnSea	וסטקליף	Westcliff-on-Sea (Southend)	51.54424	0.69179	38	Europe/London
+151	canveyIsland	קאנוויי איילנד	Canvey Island	51.52199	0.5809	3	Europe/London
+152	antwerp	אנטוורפן	Antwerp	51.22047	4.40026	13	Europe/Brussels
+153	kleinAntwerpen	קליין אנטוורפן	Klein-Antwerpen (Antwerp)	51.20722	4.415	11	Europe/Brussels
+154	montreal	מונטריאול	Montreal	45.50884	-73.58781	216	America/Toronto
+155	outremont	אוטרמון	Outremont (Montreal)	45.51564	-73.60865	79	America/Toronto
+156	coteSaintLuc	קוט סן לוק	Cote-Saint-Luc (Montreal)	45.46536	-73.66585	47	America/Toronto
+157	hampsteadMontreal	המפסטד	Hampstead (Montreal)	45.48075	-73.6467	55	America/Toronto
+158	snowdon	סנואודן	Snowdon (Montreal)	45.4859	-73.63103	70	America/Toronto
+159	uman	אומן	Uman	48.7501	30.21944	197	Europe/Kyiv
+160	austinTexas	אוסטין	Austin, Texas	30.26715	-97.74306	149	America/Chicago
+161	ofakim	אופקים	Ofakim	31.3141	34.62025	137	Asia/Jerusalem
+162	orHaganuz	אור הגנוז	Or HaGanuz	33.00508	35.44651	728	Asia/Jerusalem
+163	itamar	איתמר	Itamar	32.17474	35.30941	621	Asia/Jerusalem
+164	elonMorehShechem	אלון מורה	Elon Moreh	32.23419	35.33298	748	Asia/Jerusalem
+165	alonShvut	אלון שבות	Alon Shvut	31.65483	35.12587	960	Asia/Jerusalem
+166	amirim	אמירים	Amirim	32.93792	35.45187	557	Asia/Jerusalem
+167	amsterdam	אמסטרדם	Amsterdam	52.37403	4.88969	13	Europe/Amsterdam
+168	buitenveldert	בויטנפלדרט	Buitenveldert (Amsterdam)	52.33093	4.87518	2	Europe/Amsterdam
+169	amstelveen	אמסטלפיין	Amstelveen (Amsterdam)	52.30083	4.86389	0	Europe/Amsterdam
+170	efrat	אפרת	Efrat	31.65305	35.15013	942	Asia/Jerusalem
+171	ariel	אריאל	Ariel	32.1065	35.18449	560	Asia/Jerusalem
+172	ashkelon	אשקלון	Ashkelon	31.66926	34.57149	42	Asia/Jerusalem
+173	baltimore	בולטימור	Baltimore	39.29038	-76.61219	10	America/New_York
+174	pikesville	פייקסוויל	Pikesville (Baltimore)	39.37427	-76.72247	155	America/New_York
+175	cheswolde	צ'סוולד	Cheswolde (Baltimore)	39.364	-76.68914	117	America/New_York
+176	parkHeights	פארק הייטס	Park Heights (Baltimore)	39.33694	-76.66417	125	America/New_York
+177	beerYaakov	באר יעקב	Be'er Ya'akov	31.94433	34.83902	92	Asia/Jerusalem
+178	buenosAires	בואנוס איירס	Buenos Aires	-34.61315	-58.37723	31	America/Argentina/Buenos_Aires
+179	once	אונסה	Once (Buenos Aires)	-34.60923	-58.40808	25	America/Argentina/Buenos_Aires
+180	villaCrespo	וייה קרספו	Villa Crespo (Buenos Aires)	-34.60001	-58.44735	16	America/Argentina/Buenos_Aires
+181	belgrano	בלגרנו	Belgrano (Buenos Aires)	-34.5627	-58.45829	18	America/Argentina/Buenos_Aires
+182	flores	פלורס	Flores (Buenos Aires)	-34.62997	-58.46329	34	America/Argentina/Buenos_Aires
+183	beitEl	Beit El	Beit El	31.94153	35.22241	866	Asia/Jerusalem
+184	beitZayit	בית זית	Beit Zayit	31.78233	35.16161	604	Asia/Jerusalem
+185	beitHilkia	Bet H̱ilqiyya	Beit Hilkia	31.79281	34.81048	73	Asia/Jerusalem
+186	beitMeir	בית מאיר	Beit Meir	31.79393	35.03689	583	Asia/Jerusalem
+187	beitShean	בית שאן	Beit She'an	32.49658	35.4965	-121	Asia/Jerusalem
+188	beitShemesh	בית שמש	Beit Shemesh	31.73072	34.99293	282	Asia/Jerusalem
+189	ramatBeitShemesh	רמת בית שמש	Ramat Beit Shemesh	31.72339	34.99291	332	Asia/Jerusalem
+190	givatSharet	Giv‘at Sharet	Givat Sharet (Beit Shemesh)	31.73822	34.979	274	Asia/Jerusalem
+191	beitarIllit	ביתר עילית	Beitar Illit	31.7	35.11667	675	Asia/Jerusalem
+192	brooklyn	ברוקלין	Brooklyn	40.6501	-73.94958	15	America/New_York
+193	boroughPark	בורו פארק	Borough Park (Brooklyn)	40.63399	-73.99681	20	America/New_York
+194	williamsburg	ויליאמסבורג	Williamsburg (Brooklyn)	40.71427	-73.95347	4	America/New_York
+195	crownHeights	קראון הייטס	Crown Heights (Brooklyn)	40.66797	-73.9448	37	America/New_York
+196	flatbush	פלטבוש	Flatbush (Brooklyn)	40.65205	-73.95903	16	America/New_York
+197	midwood	מידווד	Midwood (Brooklyn)	40.61901	-73.96539	12	America/New_York
+198	marinePark	מרין פארק	Marine Park (Brooklyn)	40.61196	-73.93309	5	America/New_York
+199	kensingtonBrooklyn	קנזינגטון	Kensington (Brooklyn)	40.64621	-73.97069	14	America/New_York
+200	bensonhurst	בנסונהרסט	Bensonhurst (Brooklyn)	40.60177	-73.99403	4	America/New_York
+201	manhattanBeach	מנהטן ביץ'	Manhattan Beach (Brooklyn)	40.57733	-73.94708	1	America/New_York
+202	seaGate	סי גייט	Sea Gate (Brooklyn)	40.57719	-74.00803	6	America/New_York
+203	theBronx	הברונקס	The Bronx	40.84985	-73.86641	23	America/New_York
+204	riverdale	ריוורדייל	Riverdale (Bronx)	40.90056	-73.90639	55	America/New_York
+205	queens	קווינס	Queens	40.68149	-73.83652	12	America/New_York
+206	kewGardens	קיו גרדנס	Kew Gardens (Queens)	40.71427	-73.83097	28	America/New_York
+207	kewGardensHills	קיו גרדנס הילס	Kew Gardens Hills (Queens)	40.73002	-73.8234	24	America/New_York
+208	forestHills	פורסט הילס	Forest Hills (Queens)	40.71621	-73.85014	18	America/New_York
+209	freshMeadows	פרש מדואוז	Fresh Meadows (Queens)	40.73482	-73.79347	11	America/New_York
+210	jamaicaEstates	ג'מייקה אסטייטס	Jamaica Estates (Queens)	40.71782	-73.77429	41	America/New_York
+211	farRockaway	פאר רוקאוויי	Far Rockaway (Queens)	40.60538	-73.75513	5	America/New_York
+212	statenIsland	סטאטן איילנד	Staten Island	40.56233	-74.13986	21	America/New_York
+213	batYam	בת ים	Bat Yam	32.01798	34.75003	52	Asia/Jerusalem
+214	batAyin	בת עין	Bat Ayin	31.65756	35.10345	857	Asia/Jerusalem
+215	gevaBinyaminAdam	גבע בנימין	Geva Binyamin (Adam)	31.85031	35.27405	644	Asia/Jerusalem
+216	givatZeev	גבעת זאב	Givat Ze'ev	31.86145	35.16861	770	Asia/Jerusalem
+217	gedera	גדרה	Gedera	31.81456	34.77998	64	Asia/Jerusalem
+218	gateshead	גייטסהד	Gateshead	54.96209	-1.60168	53	Europe/London
+219	newcastleUponTyne	ניוקאסל	Newcastle upon Tyne	54.97328	-1.61396	54	Europe/London
+220	gosforth	גוספורת'	Gosforth (Newcastle)	55	-1.61667	67	Europe/London
+221	sunderland	סנדרלנד	Sunderland	54.90465	-1.38222	36	Europe/London
+222	gimzo	גמזו	Gimzo	31.92776	34.94045	92	Asia/Jerusalem
+223	ganYavne	גן יבנה	Gan Yavne	31.78737	34.70659	52	Asia/Jerusalem
+224	greatNeck	Great Neck	Great Neck	40.80066	-73.72846	33	America/New_York
+225	dallas	דאלאס	Dallas	32.78306	-96.80667	128	America/Chicago
+226	northDallas	צפון דאלאס	North Dallas (Dallas)	32.90508	-96.78543	180	America/Chicago
+227	dimona	דימונה	Dimona	31.07079	35.03269	551	Asia/Jerusalem
+228	waterburyConnecticut	ווטרברי	Waterbury, Connecticut	41.55815	-73.0515	82	America/New_York
+229	washingtonDC	Washington, D.C.	Washington, D.C.	38.89511	-77.03637	7	America/New_York
+230	zikhronYaakov	זכרון יעקב	Zikhron Ya'akov	32.56883	34.95427	190	Asia/Jerusalem
+231	hadera	חדרה	Hadera	32.44192	34.9039	13	Asia/Jerusalem
+232	holon	חולון	Holon	32.0122	34.77826	24	Asia/Jerusalem
+233	hatzorHaglilit	חצור הגלילית	Hatzor HaGlilit	32.98234	35.54494	379	Asia/Jerusalem
+234	harish	חריש	Harish	32.46182	35.04555	140	Asia/Jerusalem
+235	torontoCanada	טורונטו	Toronto, Canada	43.65333	-79.38389	92	America/Toronto
+236	thornhill	תורנהיל	Thornhill (Toronto)	43.815	-79.4242	175	America/Toronto
+237	bathurstManor	באת'רסט מנור	Bathurst Manor (Toronto)	43.76481	-79.45606	192	America/Toronto
+238	clantonPark	קלנטון פארק	Clanton Park (Toronto)	43.74198	-79.4463	189	America/Toronto
+239	lawrenceManor	לורנס מנור	Lawrence Manor (Toronto)	43.7219	-79.43678	184	America/Toronto
+240	forestHillToronto	פורסט היל	Forest Hill (Toronto)	43.69711	-79.40839	163	America/Toronto
+241	tiratCarmel	טירת כרמל	Tirat Carmel	32.76025	34.96874	34	Asia/Jerusalem
+242	yavneel	יבנאל	Yavne'el	32.70598	35.50409	-18	Asia/Jerusalem
+243	johannesburg	יוהנסבורג	Johannesburg	-26.20227	28.04363	1767	Africa/Johannesburg
+244	glenhazel	גלנהייזל	Glenhazel (Johannesburg)	-26.13799	28.09454	1644	Africa/Johannesburg
+245	sandringham	סנדרינגהם	Sandringham (Johannesburg)	-26.14542	28.11058	1606	Africa/Johannesburg
+246	waverleyJohannesburg	ווברלי	Waverley (Johannesburg)	-26.13648	28.07994	1637	Africa/Johannesburg
+247	houghtonEstate	הוטון	Houghton Estate (Johannesburg)	-26.16253	28.0614	1681	Africa/Johannesburg
+248	killarney	קילרני	Killarney (Johannesburg)	-26.16857	28.05187	1704	Africa/Johannesburg
+249	sandton	סנדטון	Sandton (Johannesburg)	-26.104	28.054	1626	Africa/Johannesburg
+250	houston	יוסטון	Houston	29.76328	-95.36327	12	America/Chicago
+251	meyerland	מאיירלנד	Meyerland (Houston)	29.68495	-95.46744	15	America/Chicago
+252	bellaire	בלייר	Bellaire (Houston)	29.70579	-95.45883	16	America/Chicago
+253	yesodot	יסודות	Yesodot	31.81479	34.86559	116	Asia/Jerusalem
+254	yitzhar	יצהר	Yitzhar	32.16744	35.23875	790	Asia/Jerusalem
+255	yeruham	ירוחם	Yeruham	30.98822	34.93176	499	Asia/Jerusalem
+256	kochavHashachar	כוכב השחר	Kochav HaShachar	31.96028	35.34923	584	Asia/Jerusalem
+257	kfarSaba	כפר סבא	Kfar Saba	32.175	34.90694	57	Asia/Jerusalem
+258	kfarShamai	כפר שמאי	Kfar Shamai	32.9573	35.45711	618	Asia/Jerusalem
+259	karmiel	כרמיאל	Karmi'el	32.90951	35.29768	314	Asia/Jerusalem
+260	lasVegas	לאס וגאס	Las Vegas	36.17497	-115.13722	610	America/Los_Angeles
+261	losAngeles	לוס אנגלס	Los Angeles	34.05223	-118.24368	89	America/Los_Angeles
+262	picoRobertson	פיקו-רוברטסון	Pico-Robertson (Los Angeles)	34.05575	-118.38	44	America/Los_Angeles
+263	beverlywood	בוורליווד	Beverlywood (Los Angeles)	34.05018	-118.39583	60	America/Los_Angeles
+264	fairfaxLA	פיירפקס	Fairfax (Los Angeles)	34.07912	-118.3523	71	America/Los_Angeles
+265	hancockPark	הנקוק פארק	Hancock Park (Los Angeles)	34.06779	-118.33258	64	America/Los_Angeles
+266	beverlyHills	בוורלי הילס	Beverly Hills (Los Angeles)	34.07362	-118.40036	79	America/Los_Angeles
+267	valleyVillage	ואלי וילג'	Valley Village (Los Angeles)	34.16488	-118.3965	200	America/Los_Angeles
+268	northHollywood	צפון הוליווד	North Hollywood (Los Angeles)	34.17223	-118.37897	196	America/Los_Angeles
+269	lakewood	לייקווד	Lakewood	40.09789	-74.21764	23	America/New_York
+270	monsey	מונסי	Monsey	41.11121	-74.06848	167	America/New_York
+271	mevoHoron	מבוא חורון	Mevo Horon	31.84923	35.0359	258	Asia/Jerusalem
+272	mevaseretZion	מבשרת ציון	Mevaseret Zion	31.80186	35.15072	711	Asia/Jerusalem
+273	migdal	מגדל	Migdal	32.83931	35.50206	-157	Asia/Jerusalem
+274	migdalHaemek	מגדל העמק	Migdal HaEmek	32.67788	35.24158	231	Asia/Jerusalem
+275	madrid	מדריד	Madrid	40.4165	-3.70256	665	Europe/Madrid
+276	miami	מיאמי	Miami	25.77427	-80.19366	2	America/New_York
+277	miamiBeach	מיאמי ביץ'	Miami Beach	25.79065	-80.13005	1	America/New_York
+278	surfside	סרפסייד	Surfside (Miami)	25.87843	-80.1256	0	America/New_York
+279	balHarbour	באל הארבור	Bal Harbour (Miami)	25.89176	-80.12699	0	America/New_York
+280	northMiamiBeach	צפון מיאמי ביץ'	North Miami Beach	25.93315	-80.16255	3	America/New_York
+281	metzad	אספר	Metzad	31.58661	35.18865	944	Asia/Jerusalem
+282	meron	מירון	Meron	32.98635	35.43986	653	Asia/Jerusalem
+283	melbourne	מלבורן	Melbourne	-37.814	144.96332	25	Australia/Melbourne
+284	caulfield	קופילד	Caulfield (Melbourne)	-37.88251	145.02288	36	Australia/Melbourne
+285	caulfieldNorth	קולפילד צפון	Caulfield North (Melbourne)	-37.8739	145.02485	47	Australia/Melbourne
+286	caulfieldSouth	קולפילד דרום	Caulfield South (Melbourne)	-37.89562	145.02597	28	Australia/Melbourne
+287	stKildaEast	סנט קילדה מזרח	St Kilda East (Melbourne)	-37.86594	145.00018	21	Australia/Melbourne
+288	elsternwick	אלסטרנוויק	Elsternwick (Melbourne)	-37.88639	145.0025	22	Australia/Melbourne
+289	manchester	מנצ'סטר	Manchester	53.48095	-2.23743	51	Europe/London
+290	broughtonPark	ברוטון פארק	Broughton Park (Manchester)	53.5159	-2.26134	84	Europe/London
+291	prestwich	פרסטוויץ'	Prestwich (Manchester)	53.53333	-2.28333	97	Europe/London
+292	whitefield	וייטפילד	Whitefield (Manchester)	53.55	-2.3	124	Europe/London
+293	cheadle	צ'ידל	Cheadle (Manchester)	53.4	-2.21667	41	Europe/London
+294	gatley	גטלי	Gatley (Manchester)	53.39286	-2.23502	42	Europe/London
+295	sale	סייל	Sale (Manchester)	53.42519	-2.32443	30	Europe/London
+296	hale	הייל	Hale (Manchester)	53.37831	-2.33271	47	Europe/London
+297	altrincham	אלטרינצ'ם	Altrincham (Manchester)	53.38752	-2.34848	42	Europe/London
+298	bowdon	באודן	Bowdon (Manchester)	53.37644	-2.36532	58	Europe/London
+299	maaleAdumim	מעלה אדומים	Ma'ale Adumim	31.7774	35.29875	498	Asia/Jerusalem
+300	maaleAmos	מעלה עמוס	Ma'ale Amos	31.59608	35.22981	716	Asia/Jerusalem
+301	maalot	מעלות תרשיחא	Ma'alot	33.01667	35.26667	484	Asia/Jerusalem
+302	mitzpeYericho	מצפה יריחו	Mitzpe Yericho	31.81672	35.39405	178	Asia/Jerusalem
+303	mitzpeRamon	מצפה רמון	Mitzpe Ramon	30.60944	34.80111	858	Asia/Jerusalem
+304	mexicoCuernavaca	Mexico - Cuernavaca	Cuernavaca	18.9261	-99.23075	1540	America/Mexico_City
+305	marseille	מרסיי	Marseille	43.29695	5.38107	28	Europe/Paris
+306	nahariya	‏נהריה	Nahariya	33.00892	35.09814	15	Asia/Jerusalem
+307	nofAyalonShaalvim	נוף איילון	Nof Ayalon (Shaalvim)	31.87111	34.99081	195	Asia/Jerusalem
+308	nofHagalil	נוף הגליל	Nof HaGalil	32.70816	35.32469	506	Asia/Jerusalem
+309	nahliel	נחליאל	Nahli'el	31.97415	35.13994	590	Asia/Jerusalem
+310	nirEtzion	ניר עציון	Nir Etzion	32.69854	34.99128	117	Asia/Jerusalem
+311	netivot	נתיבות	Netivot	31.42305	34.58911	151	Asia/Jerusalem
+312	saoPaulo	סאו פאולו	Sao Paulo	-23.5475	-46.63611	769	America/Sao_Paulo
+313	higienopolis	איג'יינופוליס	Higienopolis (Sao Paulo)	-23.54472	-46.65722	784	America/Sao_Paulo
+314	bomRetiro	בום רטירו	Bom Retiro (Sao Paulo)	-23.52508	-46.63889	733	America/Sao_Paulo
+315	sanAntonio	סן אנטוניו	San Antonio	29.42412	-98.49363	198	America/Chicago
+316	stLouis	סן לואי (צרפת)	Saint-Louis (France)	47.59206	7.55923	248	Europe/Paris
+317	sasa	סאסא	Sasa	33.02704	35.39369	870	Asia/Jerusalem
+318	acre	עכו	Acre	32.92814	35.07647	8	Asia/Jerusalem
+319	eli	עלי	Eli	32.06999	35.26371	700	Asia/Jerusalem
+320	emmanuel	עמנואל	Emmanuel	32.16075	35.13611	404	Asia/Jerusalem
+321	afula	עפולה	Afula	32.60907	35.2892	62	Asia/Jerusalem
+322	aixLesBains	אקס-לה-בן	Aix-les-Bains	45.69173	5.90863	246	Europe/Paris
+323	arad	ערד	Arad	31.25882	35.21282	613	Asia/Jerusalem
+324	fallsburg	פאלסבורג	Fallsburg, New York	41.73204	-74.60127	368	America/New_York
+325	pinskBelarus	פינסק	Pinsk, Belarus	52.12153	26.06726	148	Europe/Minsk
+326	panamaCity	פנמה סיטי	Panama City	8.9936	-79.51973	17	America/Panama
+327	paitilla	פונטה פאיטייה	Punta Paitilla (Panama City)	8.98063	-79.5159	18	America/Panama
+328	passaicNewJersey	Passaic, New Jersey	Passaic, New Jersey	40.85677	-74.12848	34	America/New_York
+329	paris	פריז	Paris	48.85341	2.3488	42	Europe/Paris
+330	paris19	הרובע ה-19	19th arrondissement (Paris)	48.8817	2.3822	60	Europe/Paris
+331	paris17	הרובע ה-17	17th arrondissement (Paris)	48.8835	2.3219	61	Europe/Paris
+332	leMarais	המארה	Le Marais (Paris)	48.86042	2.36296	47	Europe/Paris
+333	saintMande	סן-מנדה	Saint-Mande (Paris)	48.83864	2.41579	57	Europe/Paris
+334	vincennes	ונסן	Vincennes (Paris)	48.8486	2.43769	57	Europe/Paris
+335	creteil	קרטיי	Creteil (Paris)	48.79266	2.46569	49	Europe/Paris
+336	boulogneBillancourt	בולון-ביאנקור	Boulogne-Billancourt (Paris)	48.83545	2.24128	35	Europe/Paris
+337	neuillySurSeine	ניי-סיר-סן	Neuilly-sur-Seine (Paris)	48.8846	2.26965	40	Europe/Paris
+338	levalloisPerret	לבאלואה-פרה	Levallois-Perret (Paris)	48.89389	2.28864	38	Europe/Paris
+339	gargesLesGonesse	גארז'-לה-גונס	Garges-les-Gonesse (Paris)	48.96791	2.39781	64	Europe/Paris
+340	zurich	ציריך	Zurich	47.36667	8.55	429	Europe/Zurich
+341	engeZurich	אנגה	Enge (Zurich)	47.3605	8.53127	421	Europe/Zurich
+342	wiedikon	וידיקון	Wiedikon (Zurich)	47.36201	8.51497	431	Europe/Zurich
+343	komemiyut	קוממיות	Komemiyut	31.66259	34.72976	80	Asia/Jerusalem
+344	caesarea	קיסריה	Caesarea	32.51888	34.90459	16	Asia/Jerusalem
+345	cleveland	קליבלנד	Cleveland	41.4995	-81.69541	199	America/New_York
+346	clevelandHeights	קליבלנד הייטס	Cleveland Heights (Cleveland)	41.52005	-81.55624	285	America/New_York
+347	universityHeights	יוניברסיטי הייטס	University Heights (Cleveland)	41.49783	-81.53735	313	America/New_York
+348	beachwood	ביצ'ווד	Beachwood (Cleveland)	41.4645	-81.50873	361	America/New_York
+349	kiryatArba	קריית ארבע	Kiryat Arba	31.52838	35.11897	956	Asia/Jerusalem
+350	kiryatAta	קריית אתא	Kiryat Ata	32.81149	35.11323	46	Asia/Jerusalem
+351	kiryatGat	קריית גת	Kiryat Gat	31.60998	34.76422	133	Asia/Jerusalem
+352	kiryatTivon	קרית טבעון	Kiryat Tiv'on	32.71217	35.12505	122	Asia/Jerusalem
+353	kiryasJoelNewYork	קריית יואל	Kiryas Joel, New York	41.34204	-74.16792	209	America/New_York
+354	kiryatYearimTelzStone	קרית יערים	Kiryat Yearim (Telz-Stone)	31.803	35.102	754	Asia/Jerusalem
+355	kiryatMalakhi	קריית מלאכי	Kiryat Malakhi	31.72888	34.74632	68	Asia/Jerusalem
+356	kiryatShmona	קריית שמונה	Kiryat Shmona	33.21204	35.57044	122	Asia/Jerusalem
+357	roshHaayin	ראש העין	Rosh HaAyin	32.09547	34.95444	30	Asia/Jerusalem
+358	revava	רבבה	Revava	32.11926	35.12896	420	Asia/Jerusalem
+359	rekhasim	רכסים	Rekhasim	32.74958	35.10057	105	Asia/Jerusalem
+360	ramla	רמלה	Ramla	31.92624	34.8635	100	Asia/Jerusalem
+361	ramatHasharon	רמת השרון	Ramat HaSharon	32.1459	34.83859	68	Asia/Jerusalem
+362	ramatMagshimim	רמת מגשימים	Ramat Magshimim	32.84463	35.80679	428	Asia/Jerusalem
+363	leRaincy	רנסי	Le Raincy	48.89916	2.52298	86	Europe/Paris
+364	raanana	רעננה	Ra'anana	32.1836	34.87386	49	Asia/Jerusalem
+365	sderot	שדרות	Sderot	31.525	34.59693	90	Asia/Jerusalem
+366	strasbourg	שטרסבורג	Strasbourg	48.58392	7.74553	147	Europe/Paris
+367	chicago	שיקגו	Chicago	41.85003	-87.65005	179	America/Chicago
+368	westRogersPark	ווסט רוג'רס פארק	West Rogers Park - West Ridge (Chicago)	41.99975	-87.69284	182	America/Chicago
+369	rogersPark	רוג'רס פארק	Rogers Park (Chicago)	42.00864	-87.66672	185	America/Chicago
+370	lincolnwood	לינקולנווד	Lincolnwood (Chicago)	42.00448	-87.73006	184	America/Chicago
+371	skokie	סקוקי	Skokie (Chicago)	42.03336	-87.73339	185	America/Chicago
+372	shlomi	שלומי	Shlomi	33.07186	35.14527	82	Asia/Jerusalem
+373	tifrah	Tifraẖ	Tifrah	31.32657	34.67689	156	Asia/Jerusalem
+374	elad	אלעד	El'ad	32.05108	34.95704	84	Asia/Jerusalem
+375	modiinIllit	מודיעין עילית	Modi'in Illit	31.93221	35.04416	280	Asia/Jerusalem
+376	givatayim	גבעתיים	Giv'atayim	32.07225	34.81253	50	Asia/Jerusalem
+377	givatShmuel	גבעת שמואל	Giv'at Shmuel	32.07817	34.84858	53	Asia/Jerusalem
+378	hodHasharon	הוד השרון	Hod HaSharon	32.15912	34.89277	57	Asia/Jerusalem
+379	kfarYona	כפר יונה	Kfar Yona	32.31517	34.9357	49	Asia/Jerusalem
+380	kiryatBialik	קריית ביאליק	Kiryat Bialik	32.8275	35.08583	12	Asia/Jerusalem
+381	kiryatMotzkin	קריית מוצקין	Kiryat Motzkin	32.83706	35.0776	10	Asia/Jerusalem
+382	kiryatOno	קריית אונו	Kiryat Ono	32.06124	34.85618	69	Asia/Jerusalem
+383	kiryatYam	קריית ים	Kiryat Yam	32.84966	35.06973	9	Asia/Jerusalem
+384	lod	לוד	Lod	31.95257	34.89167	63	Asia/Jerusalem
+385	ganeiAviv	גני אביב	Ganei Aviv (Lod)	31.95826	34.87953	52	Asia/Jerusalem
+386	nesher	נשר	Nesher	32.76622	35.04425	125	Asia/Jerusalem
+387	nessZiona	נס ציונה	Ness Ziona	31.92933	34.79868	35	Asia/Jerusalem
+388	orAkiva	אור עקיבא	Or Akiva	32.5064	34.92087	17	Asia/Jerusalem
+389	orYehuda	אור יהודה	Or Yehuda	32.02936	34.85281	27	Asia/Jerusalem
+390	yavne	יבנה	Yavne	31.87808	34.73983	37	Asia/Jerusalem
+391	yehudMonosson	יהוד	Yehud-Monosson	32.0325	34.8884	46	Asia/Jerusalem
+392	yokneamIllit	יקנעם עילית	Yokneam Illit	32.64661	35.09202	120	Asia/Jerusalem
+393	kokhavYaakov	כוכב יעקב	Kokhav Ya'akov	31.88102	35.24384	752	Asia/Jerusalem
+394	kfarChabad	כפר חב"ד	Kfar Chabad	31.98951	34.85005	57	Asia/Jerusalem
+395	hashmonaim	חשמונאים	Hashmonaim	31.92973	35.0215	190	Asia/Jerusalem
+396	kedumim	קדומים	Kedumim	32.21207	35.1575	405	Asia/Jerusalem
+397	karneiShomron	קרני שומרון	Karnei Shomron	32.16667	35.08333	331	Asia/Jerusalem
+398	elkana	אלקנה	Elkana	32.11012	35.03233	223	Asia/Jerusalem
+399	shoham	שוהם	Shoham	31.9987	34.94624	82	Asia/Jerusalem
+400	mazkeretBatya	מזכרת בתיה	Mazkeret Batya	31.85357	34.84646	75	Asia/Jerusalem
+401	yadBinyamin	יד בנימין	Yad Binyamin	31.7974	34.82083	73	Asia/Jerusalem
+402	telMond	תל מונד	Tel Mond	32.25318	34.91817	75	Asia/Jerusalem
+403	kiryatEkron	קריית עקרון	Kiryat Ekron	31.86119	34.82275	58	Asia/Jerusalem
+404	teaneck	טינק	Teaneck	40.8976	-74.01597	35	America/New_York
+405	englewood	אנגלווד	Englewood	40.89288	-73.97264	14	America/New_York
+406	lawrence	לורנס	Lawrence, New York	40.61566	-73.72958	6	America/New_York
+407	newSquare	ניו סקוור	New Square	41.13956	-74.02942	150	America/New_York
+408	tomsRiver	טומס ריבר	Toms River	39.95373	-74.19792	6	America/New_York
+409	silverSpring	סילבר ספרינג	Silver Spring	38.99067	-77.02609	104	America/New_York
+410	kempMill	קמפ מיל	Kemp Mill (Silver Spring)	39.039	-77.01914	103	America/New_York
+411	detroit	דטרויט	Detroit	42.33143	-83.04575	183	America/Detroit
+412	oakParkMichigan	אוק פארק	Oak Park (Detroit)	42.45948	-83.18271	203	America/Detroit
+413	southfield	סאות'פילד	Southfield (Detroit)	42.47337	-83.22187	208	America/Detroit
+414	westBloomfield	וסט בלומפיליד	West Bloomfield (Detroit)	42.56891	-83.38356	301	America/Detroit
+415	bocaRaton	בוקה רטון	Boca Raton	26.35869	-80.0831	4	America/New_York
+416	hollywoodFlorida	הוליווד (פלורידה)	Hollywood, Florida	26.0112	-80.14949	3	America/New_York
+417	aventura	אוונטורה	Aventura	25.95648	-80.13921	1	America/New_York
+418	philadelphia	פילדלפיה	Philadelphia	39.95238	-75.16362	12	America/New_York
+419	balaCynwyd	באלה קינוויד	Bala Cynwyd (Philadelphia)	40.00761	-75.23407	93	America/New_York
+420	wynnewood	וינווד	Wynnewood (Philadelphia)	40.00289	-75.27074	90	America/New_York
+421	boston	בוסטון	Boston	42.35843	-71.05977	14	America/New_York
+422	brookline	ברוקליין	Brookline (Boston)	42.33176	-71.12116	10	America/New_York
+423	newtonMassachusetts	ניוטון	Newton (Boston)	42.33704	-71.20922	30	America/New_York
+424	sanFrancisco	סן פרנסיסקו	San Francisco	37.77493	-122.41942	16	America/Los_Angeles
+425	richmondDistrict	רובע ריצ'מונד	Richmond District (San Francisco)	37.78049	-122.47247	52	America/Los_Angeles
+426	atlanta	אטלנטה	Atlanta	33.749	-84.38798	320	America/New_York
+427	sanDiego	סן דייגו	San Diego	32.71571	-117.16472	20	America/Los_Angeles
+428	laJolla	לה חויה	La Jolla (San Diego)	32.84727	-117.2742	32	America/Los_Angeles
+429	denver	דנוור	Denver	39.73915	-104.9847	1609	America/Denver
+430	westColfax	ווסט קולפקס	West Colfax (Denver)	39.7403	-105.039	1623	America/Denver
+431	phoenix	פיניקס	Phoenix	33.44838	-112.07404	331	America/Phoenix
+432	scottsdale	סקוטסדייל	Scottsdale (Phoenix)	33.50921	-111.89903	383	America/Phoenix
+433	seattle	סיאטל	Seattle	47.60621	-122.33207	56	America/Los_Angeles
+434	sewardPark	סיוארד פארק	Seward Park (Seattle)	47.55083	-122.26083	20	America/Los_Angeles
+435	pittsburgh	פיטסבורג	Pittsburgh	40.44062	-79.99589	233	America/New_York
+436	squirrelHill	סקווירל היל	Squirrel Hill (Pittsburgh)	40.43812	-79.91922	344	America/New_York
+437	stLouisMissouri	סנט לואיס (מיזורי)	St. Louis, Missouri	38.62727	-90.19789	142	America/Chicago
+438	universityCity	יוניברסיטי סיטי	University City (St. Louis)	38.65588	-90.30928	161	America/Chicago
+439	minneapolis	מיניאפוליס	Minneapolis	44.97997	-93.26384	253	America/Chicago
+440	stLouisPark	סנט לואיס פארק	St. Louis Park (Minneapolis)	44.9483	-93.34801	274	America/Chicago
+441	cincinnati	סינסינטי	Cincinnati	39.12711	-84.51439	191	America/New_York
+442	golfManor	גולף מנור	Golf Manor (Cincinnati)	39.18728	-84.44633	201	America/New_York
+443	amberley	אמברלי וילג'	Amberley Village (Cincinnati)	39.20478	-84.428	243	America/New_York
+444	ottawa	אוטווה	Ottawa	45.41117	-75.69812	71	America/Toronto
+445	vancouver	ונקובר	Vancouver	49.24966	-123.11934	70	America/Vancouver
+446	winnipeg	ויניפג	Winnipeg	49.8844	-97.14704	245	America/Winnipeg
+447	leeds	לידס	Leeds	53.79648	-1.54785	50	Europe/London
+448	alwoodley	אלוודלי	Alwoodley (Leeds)	53.85169	-1.54086	154	Europe/London
+449	moortown	מורטאון	Moortown (Leeds)	53.85	-1.51667	138	Europe/London
+450	bradford	ברדפורד	Bradford	53.79391	-1.75206	110	Europe/London
+451	harrogate	הרוגייט	Harrogate	53.99078	-1.5373	127	Europe/London
+452	york	יורק	York	53.95763	-1.08271	17	Europe/London
+453	glasgow	גלאזגו	Glasgow	55.86515	-4.25763	40	Europe/London
+454	giffnock	גיפנוק	Giffnock (Glasgow)	55.80373	-4.29488	45	Europe/London
+455	newtonMearns	ניוטון מרנס	Newton Mearns (Glasgow)	55.77334	-4.33339	137	Europe/London
+456	salford	סלפורד	Salford	53.48771	-2.29042	44	Europe/London
+457	liverpool	ליברפול	Liverpool	53.41058	-2.97794	30	Europe/London
+458	childwall	צ'יילדוול	Childwall (Liverpool)	53.39719	-2.897	55	Europe/London
+459	allerton	אלרטון	Allerton (Liverpool)	53.36697	-2.894	33	Europe/London
+460	southport	סאות'פורט	Southport	53.64581	-3.01008	9	Europe/London
+461	birmingham	ברמינגהאם	Birmingham	52.48142	-1.89983	149	Europe/London
+462	edgbaston	אדג'בסטון	Edgbaston (Birmingham)	52.4623	-1.92115	151	Europe/London
+463	solihull	סוליהול	Solihull	52.41426	-1.78094	132	Europe/London
+464	coventry	קובנטרי	Coventry	52.40656	-1.51217	89	Europe/London
+465	leicester	לסטר	Leicester	52.6386	-1.13169	65	Europe/London
+466	nottingham	נוטינגהאם	Nottingham	52.9536	-1.15047	46	Europe/London
+467	sheffield	שפילד	Sheffield	53.38297	-1.4659	75	Europe/London
+468	kingstonUponHull	האל	Hull	53.7446	-0.33525	8	Europe/London
+469	luton	לוטון	Luton	51.87967	-0.41748	117	Europe/London
+470	miltonKeynes	מילטון קינס	Milton Keynes	52.04172	-0.75583	114	Europe/London
+471	reading	רדינג	Reading	51.45625	-0.97113	51	Europe/London
+472	oxford	אוקספורד	Oxford	51.75222	-1.25596	72	Europe/London
+473	cambridge	קיימברידג'	Cambridge	52.2	0.11667	12	Europe/London
+474	norwich	נוריץ'	Norwich	52.62783	1.29834	19	Europe/London
+475	brighton	ברייטון	Brighton	50.82838	-0.13947	29	Europe/London
+476	hove	הוב	Hove (Brighton)	50.83088	-0.1672	24	Europe/London
+477	bournemouth	בורנמות'	Bournemouth	50.72048	-1.8795	19	Europe/London
+478	southampton	סאות'המפטון	Southampton	50.90395	-1.40428	19	Europe/London
+479	southsea	סאות'סי	Southsea (Portsmouth)	50.78351	-1.09071	3	Europe/London
+480	plymouth	פלימות'	Plymouth	50.37153	-4.14305	14	Europe/London
+481	exeter	אקסטר	Exeter	50.7236	-3.52751	46	Europe/London
+482	bristol	בריסטול	Bristol	51.45523	-2.59665	21	Europe/London
+483	cardiff	קארדיף	Cardiff	51.48	-3.18	17	Europe/London
+484	swansea	סוונסי	Swansea	51.62079	-3.94323	18	Europe/London
+485	edinburgh	אדינבורו	Edinburgh	55.95206	-3.19648	66	Europe/London
+486	aberdeen	אברדין	Aberdeen	57.14369	-2.09814	13	Europe/London
+487	dundee	דנדי	Dundee	56.46913	-2.97489	77	Europe/London
+488	belfast	בלפסט	Belfast	54.59682	-5.92541	7	Europe/London
+489	lyon	ליון	Lyon	45.74906	4.84789	173	Europe/Paris
+490	villeurbanne	וילרבאן	Villeurbanne (Lyon)	45.76601	4.8795	177	Europe/Paris
+491	nice	ניס	Nice	43.70313	7.26608	25	Europe/Paris
+492	toulouse	טולוז	Toulouse	43.60426	1.44367	150	Europe/Paris
+493	sarcelles	סרסל	Sarcelles	48.99739	2.37821	62	Europe/Paris
+494	brussels	בריסל	Brussels	50.85045	4.34878	28	Europe/Brussels
+495	uccle	אוקלה	Uccle (Brussels)	50.80225	4.33943	48	Europe/Brussels
+496	forestBrussels	פורה	Forest (Brussels)	50.81678	4.32775	52	Europe/Brussels
+497	geneva	ז'נבה	Geneva	46.20222	6.14569	400	Europe/Zurich
+498	basel	בזל	Basel	47.55839	7.57327	279	Europe/Zurich
+499	lugano	לוגאנו	Lugano	46.01008	8.96004	284	Europe/Zurich
+500	vienna	וינה	Vienna	48.20849	16.37208	171	Europe/Vienna
+501	leopoldstadt	לאופולדשטאט	Leopoldstadt (Vienna)	48.21821	16.38997	163	Europe/Vienna
+502	berlin	ברלין	Berlin	52.52437	13.41053	74	Europe/Berlin
+503	charlottenburg	שרלוטנבורג	Charlottenburg (Berlin)	52.51667	13.28333	46	Europe/Berlin
+504	wilmersdorf	וילמרסדורף	Wilmersdorf (Berlin)	52.48333	13.31667	39	Europe/Berlin
+505	frankfurt	פרנקפורט	Frankfurt	50.11552	8.68417	113	Europe/Berlin
+506	westendFrankfurt	וסטנד	Westend (Frankfurt)	50.11651	8.66375	106	Europe/Berlin
+507	munich	מינכן	Munich	48.13743	11.57549	524	Europe/Berlin
+508	rome	רומא	Rome	41.89193	12.51133	20	Europe/Rome
+509	romanGhetto	הגטו	Ghetto - Sant'Angelo (Rome)	41.89206	12.47867	13	Europe/Rome
+510	milan	מילאנו	Milan	45.46427	9.18951	122	Europe/Rome
+511	bandeNere	באנדה נרה	Bande Nere (Milan)	45.45924	9.13943	121	Europe/Rome
+512	barcelona	ברצלונה	Barcelona	41.38879	2.15899	15	Europe/Madrid
+513	santGervasi	סנט ז'רווסי	Sant Gervasi (Barcelona)	41.3975	2.14301	85	Europe/Madrid
+514	moscow	מוסקבה	Moscow	55.75204	37.61781	155	Europe/Moscow
+515	maryinaRoshcha	מרינה רושצ'ה	Maryina Roshcha (Moscow)	55.79352	37.61622	169	Europe/Moscow
+516	saintPetersburg	סנקט פטרבורג	Saint Petersburg	59.93863	30.31413	11	Europe/Moscow
+517	kyiv	קייב	Kyiv	50.45466	30.5238	187	Europe/Kyiv
+518	podil	פודיל	Podil (Kyiv)	50.46936	30.51627	104	Europe/Kyiv
+519	odessa	אודסה	Odesa	46.48572	30.74383	50	Europe/Kyiv
+520	dnipro	דניפרו	Dnipro	48.46664	35.04066	120	Europe/Kyiv
+521	kharkiv	חרקוב	Kharkiv	49.98177	36.25475	94	Europe/Kyiv
+522	budapest	בודפשט	Budapest	47.49835	19.04045	104	Europe/Budapest
+523	erzsebetvaros	ארז'בטווארוש	Erzsebetvaros - 7th district (Budapest)	47.50207	19.07218	114	Europe/Budapest
+524	ujlipotvaros	אויליפוטווארוש	Ujlipotvaros - 13th district (Budapest)	47.51606	19.05279	97	Europe/Budapest
+525	prague	פראג	Prague	50.08804	14.42076	202	Europe/Prague
+526	istanbul	איסטנבול	Istanbul	41.01384	28.94966	39	Europe/Istanbul
+527	nisantasi	נישאנטאשי	Nisantasi (Istanbul)	41.05167	28.99139	113	Europe/Istanbul
+528	warsaw	ורשה	Warsaw	52.22977	21.01178	113	Europe/Warsaw
+529	krakow	קרקוב	Krakow	50.06143	19.93658	219	Europe/Warsaw
+530	kazimierz	קז'ימייז'	Kazimierz (Krakow)	50.05064	19.94267	209	Europe/Warsaw
+531	bucharest	בוקרשט	Bucharest	44.43225	26.10626	83	Europe/Bucharest
+532	athens	אתונה	Athens	37.98376	23.72784	70	Europe/Athens
+533	minsk	מינסק	Minsk	53.90019	27.56653	222	Europe/Minsk
+534	tbilisi	טביליסי	Tbilisi	41.69143	44.83412	433	Asia/Tbilisi
+535	gibraltar	גיברלטר	Gibraltar	36.14474	-5.35257	11	Europe/Gibraltar
+536	copenhagen	קופנהגן	Copenhagen	55.67594	12.56553	14	Europe/Copenhagen
+537	stockholm	סטוקהולם	Stockholm	59.32938	18.06871	17	Europe/Stockholm
+538	rioDeJaneiro	ריו דה ז'ניירו	Rio de Janeiro	-22.90642	-43.18223	12	America/Sao_Paulo
+539	copacabana	קופקבנה	Copacabana (Rio de Janeiro)	-22.96898	-43.18563	28	America/Sao_Paulo
+540	mexicoCity	מקסיקו סיטי	Mexico City	19.42847	-99.12766	2240	America/Mexico_City
+541	polanco	פולנקו	Polanco (Mexico City)	19.43332	-99.19919	2264	America/Mexico_City
+542	tecamachalco	טקמצ'לקו	Lomas de Tecamachalco (Mexico City)	19.42234	-99.23698	2358	America/Mexico_City
+543	bosquesDeLasLomas	בוסקס דה לאס לומאס	Bosques de las Lomas (Mexico City)	19.40284	-99.24568	2422	America/Mexico_City
+544	interlomas	אינטרלומאס	Interlomas (Mexico City)	19.40099	-99.27774	2482	America/Mexico_City
+545	montevideo	מונטווידאו	Montevideo	-34.90328	-56.18816	34	America/Montevideo
+546	pocitos	פוסיטוס	Pocitos (Montevideo)	-34.90972	-56.15222	33	America/Montevideo
+547	santiago	סנטיאגו	Santiago	-33.45694	-70.64827	556	America/Santiago
+548	lasCondes	לאס קונדס	Las Condes (Santiago)	-33.41636	-70.56413	684	America/Santiago
+549	vitacura	ויטקורה	Vitacura (Santiago)	-33.39227	-70.58275	684	America/Santiago
+550	capeTown	קייפטאון	Cape Town	-33.92584	18.42322	25	Africa/Johannesburg
+551	seaPoint	סיפוינט	Sea Point (Cape Town)	-33.91858	18.38968	24	Africa/Johannesburg
+552	durban	דרבן	Durban	-29.8579	31.0292	21	Africa/Johannesburg
+553	sydney	סידני	Sydney	-33.86785	151.20732	58	Australia/Sydney
+554	bondi	בונדיי	Bondi (Sydney)	-33.89429	151.26444	76	Australia/Sydney
+555	doverHeights	דובר הייטס	Dover Heights (Sydney)	-33.87083	151.27917	61	Australia/Sydney
+556	stIves	סנט אייבס	St Ives (Sydney)	-33.73167	151.15944	165	Australia/Sydney
+557	perth	פרת'	Perth	-31.95224	115.8614	34	Australia/Perth
+558	yokine	יוקיין	Yokine (Perth)	-31.90113	115.85319	39	Australia/Perth
+559	dianella	דיאנלה	Dianella (Perth)	-31.88822	115.87186	30	Australia/Perth
+560	auckland	אוקלנד	Auckland	-36.84853	174.76349	43	Pacific/Auckland
+561	remuera	רמוארה	Remuera (Auckland)	-36.88041	174.79819	88	Pacific/Auckland
+562	singapore	סינגפור	Singapore	1.28967	103.85007	23	Asia/Singapore
+563	hongKong	הונג קונג	Hong Kong	22.27832	114.17469	60	Asia/Hong_Kong
+564	midLevels	מיד-לוולס	Mid-Levels (Hong Kong)	22.28399	114.14958	50	Asia/Hong_Kong

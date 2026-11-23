@@ -1,0 +1,24 @@
+{
+  "name": "kleikodesh-zmanim",
+  "version": "0.1.0",
+  "description": "Offline zmanim (NOAA, sea level) and a compact place list. Framework-agnostic ES modules.",
+  "license": "LGPL-2.1-only",
+  "type": "module",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": { "types": "./dist/index.d.ts", "import": "./dist/index.js" },
+    "./assets/*": "./assets/*"
+  },
+  "files": ["dist", "assets", "LICENSE", "README.md"],
+  "sideEffects": false,
+  "scripts": {
+    "build:assets": "node scripts/build-assets.mjs",
+    "build": "node scripts/build-assets.mjs && tsc -p tsconfig.json",
+    "test": "vitest run"
+  },
+  "devDependencies": {
+    "typescript": "5.9.3",
+    "vitest": "2.1.9"
+  }
+}
