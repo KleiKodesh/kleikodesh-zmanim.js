@@ -1,31 +1,25 @@
+import { execFileSync } from 'node:child_process'
 import { readFileSync } from 'node:fs'
 import { describe, expect, it } from 'vitest'
-import { getExplanation, ZMAN_NAMES } from '../src/index'
-import { useFileAssets } from './helpers'
+import { ZMAN_NAMES } from '../src/index'
 
-describe('explanations', () => {
+describe('explanation docs', () => {
   const data = JSON.parse(readFileSync(new URL('../data/explanations.json', import.meta.url), 'utf8'))
+  execFileSync(process.execPath, ['scripts/build-explanations.mjs'], { cwd: new URL('..', import.meta.url) })
 
-  it('every zman has a Hebrew and an English explanation with sources, and nothing extra', () => {
+  it('source covers every zman in both languages, and nothing extra', () => {
     expect(Object.keys(data).sort()).toEqual([...ZMAN_NAMES].sort())
-    for (const name of ZMAN_NAMES) {
-      for (const lang of ['he', 'en']) {
-        const e = data[name][lang]
-        expect(e.title, `${name} ${lang}`).toBeTruthy()
-        expect(e.text, `${name} ${lang}`).toBeTruthy()
-        expect(e.sources.length, `${name} ${lang}`).toBeGreaterThan(0)
-      }
-    }
   })
 
-  it('loads only the asked language, once', async () => {
-    const reads = useFileAssets()
-    expect(reads).toEqual([])
-    const sunrise = await getExplanation('sunrise', 'en')
-    expect(sunrise?.title).toBe('Sunrise')
-    for (const name of ZMAN_NAMES) expect((await getExplanation(name, 'en'))?.text).toBeTruthy()
-    expect(reads).toEqual(['explanations-en.json'])
-    expect((await getExplanation('sunrise', 'he'))?.sources.length).toBeGreaterThan(0)
-    expect(reads).toEqual(['explanations-en.json', 'explanations-he.json'])
-  })
+  for (const [lang, file] of [['en', 'zmanim.md'], ['he', 'zmanim.he.md']] as const) {
+    it(`docs/${file} has a section for every zman`, () => {
+      const md = readFileSync(new URL(`../docs/${file}`, import.meta.url), 'utf8')
+      for (const name of ZMAN_NAMES) {
+        const e = data[name][lang]
+        expect(md, `${name} ${lang}`).toContain(`<a id="${name}"></a>`)
+        expect(md, `${name} ${lang}`).toContain(`## ${e.title}`)
+        for (const s of e.sources) expect(md, `${name} ${lang}`).toContain(`- ${s}`)
+      }
+    })
+  }
 })

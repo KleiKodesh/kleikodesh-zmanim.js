@@ -17,5 +17,3 @@ export type { CivilDate, Coordinates, Rounding, ZmanName } from './zmanim.js';
 export { horizonRefractionArcmin, refractionArcmin, standardPressure, standardTemperature } from './refraction.js';
 export { defaultDeltaT, julianDay, spa, spaDay, spaEvent, spaSunTimes, SUNRISE_SUNSET_H0, zenithToH0 } from './spa.js';
 export type { SpaDay, SpaEventOptions, SpaInput, SpaResult } from './spa.js';
-export { getExplanation } from './explanations.js';
-export type { Explanation } from './explanations.js';

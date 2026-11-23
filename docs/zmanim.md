@@ -1,0 +1,409 @@
+# Zmanim explanations
+
+Generated from `data/explanations.json` by `scripts/build-explanations.mjs`. Do not edit by hand.
+
+<a id="chatzotNight"></a>
+
+## Midnight (chatzot halaila)
+
+The middle of the night: the moment the sun is at its lowest point below the horizon. Here it is computed as halfway between yesterday's and today's midday. The evening Shema should be read before this time, and King David rose at this hour to learn Torah.
+
+**Sources:**
+
+- Berachot 3b (King David's harp sounded at midnight)
+- Shulchan Aruch OC 235:3 (evening Shema: its time is until midnight, ideally)
+- Biur HaGra OC 261:2 (in northern lands dawn begins in summer at midnight)
+
+<a id="alot90"></a>
+
+## Dawn (90 minutes)
+
+The first light of morning, by the longer measure of the time from dawn to sunrise: about 90 minutes before sunrise. Here: the sun 19.8 degrees below the geometric horizon in the morning, which is 90 minutes before sunrise in Jerusalem at the equinox.
+
+**Sources:**
+
+- Pesachim 94a (from dawn to sunrise five mil, in Rabbi Yochanan's statement; four mil according to Rabbi Yehuda)
+- Shulchan Aruch OC 459:2; Mishna Berura 459:15 (a mil = 18 minutes; 5 mil = 90 minutes)
+- Biur HaGra OC 261:2 (citing Rambam and Ibn Ezra: twilight is 20 degrees)
+- Astronomy: in Jerusalem at the equinox the sun is 19.8 degrees below the horizon about 90 minutes before sunrise
+
+<a id="alot90Visible"></a>
+
+## Dawn (90 minutes, from the visible horizon)
+
+Like the 90-minute dawn (19.8 degrees), but the degrees are measured from the visible horizon, which refraction in the air lifts. It comes out about 2 to 4 minutes earlier.
+
+**Sources:**
+
+- Pesachim 94a
+- Shulchan Aruch OC 459:2; Mishna Berura 459:15
+- Astronomy: horizon refraction from the place's air pressure and temperature (Meeus, Astronomical Algorithms, ch. 16)
+
+<a id="alot90Chatzot"></a>
+
+## Dawn (90 minutes, or midnight)
+
+The 90-minute dawn (19.8 degrees). On summer nights in northern lands where the sun never gets that low, it gives midnight instead, following the Vilna Gaon that in such lands dawn begins at midnight.
+
+**Sources:**
+
+- Pesachim 94a
+- Biur HaGra OC 261:2 (in northern lands dawn begins in summer at midnight)
+
+<a id="alot"></a>
+
+## Dawn (alot hashachar)
+
+The first light in the east. From this time one fulfils, after the fact, the morning prayer and the daytime mitzvos. Here: the sun 16.1 degrees below the horizon in the morning, which is 72 minutes (four mil of 18 minutes) before sunrise in Jerusalem at the equinox.
+
+**Sources:**
+
+- Pesachim 94a (Rabbi Yehuda: from dawn to sunrise four mil)
+- Shulchan Aruch OC 459:2; Mishna Berura 459:15 (a mil = 18 minutes)
+- Shulchan Aruch OC 89:1; Mishna Berura 89:2 (what dawn is; prayer from dawn after the fact)
+- Astronomy: in Jerusalem at the equinox the sun is 16.1 degrees below the horizon 72 minutes before sunrise
+
+<a id="alotVisible"></a>
+
+## Dawn (from the visible horizon)
+
+Like dawn (16.1 degrees), but the degrees are measured from the visible horizon, which refraction in the air lifts. It comes out about 2 to 4 minutes earlier.
+
+**Sources:**
+
+- Pesachim 94a
+- Shulchan Aruch OC 89:1
+- Astronomy: horizon refraction from the place's air pressure and temperature (Meeus, Astronomical Algorithms, ch. 16)
+
+<a id="alotChatzot"></a>
+
+## Dawn (or midnight)
+
+Dawn (16.1 degrees). On summer nights in northern lands where the sun never gets that low, it gives midnight instead, following the Vilna Gaon.
+
+**Sources:**
+
+- Pesachim 94a
+- Biur HaGra OC 261:2 (in northern lands dawn begins in summer at midnight)
+
+<a id="misheyakir"></a>
+
+## Misheyakir
+
+When there is enough light to tell blue from white, and to recognize a familiar friend four amos away. From now one says the blessing on tzitzis and tefillin, and the time of the morning Shema begins. Here: the sun 11.5 degrees below the horizon in the morning (about 50 minutes before sunrise in Jerusalem at the equinox). The degree figure is not from the Talmud; it is an estimate of when this light appears.
+
+**Sources:**
+
+- Berachot 9b (when one can tell blue from white)
+- Shulchan Aruch OC 18:3 (blessing on tzitzis from when one can tell its blue from its white)
+- Shulchan Aruch OC 58:1 (when one sees a friend four amos away and recognizes him)
+
+<a id="misheyakirVisible"></a>
+
+## Misheyakir (from the visible horizon)
+
+Like misheyakir (11.5 degrees), but the degrees are measured from the visible horizon. It comes out about 2 to 4 minutes earlier.
+
+**Sources:**
+
+- Berachot 9b
+- Shulchan Aruch OC 18:3
+- Astronomy: horizon refraction (Meeus, Astronomical Algorithms, ch. 16)
+
+<a id="misheyakirChatzot"></a>
+
+## Misheyakir (or midnight)
+
+Misheyakir (11.5 degrees). On summer nights in northern lands where the sun never gets that low, it gives midnight instead.
+
+**Sources:**
+
+- Berachot 9b
+- Biur HaGra OC 261:2 (in northern lands dawn begins in summer at midnight)
+
+<a id="misheyakir11"></a>
+
+## Misheyakir (11 degrees)
+
+Misheyakir by another estimate: the sun 11 degrees below the horizon in the morning (about 48 minutes before sunrise in Jerusalem at the equinox). A little later than 11.5 degrees.
+
+**Sources:**
+
+- Berachot 9b
+- Shulchan Aruch OC 18:3
+- Shulchan Aruch OC 58:1
+
+<a id="misheyakir10p2"></a>
+
+## Misheyakir (10.2 degrees)
+
+Misheyakir by a later estimate: the sun 10.2 degrees below the horizon in the morning (about 44 minutes before sunrise in Jerusalem at the equinox).
+
+**Sources:**
+
+- Berachot 9b
+- Shulchan Aruch OC 18:3
+- Shulchan Aruch OC 58:1
+
+<a id="sunriseElevated"></a>
+
+## Sunrise (from the place's elevation)
+
+Sunrise as seen from the place's own height: from a mountain or a high building the horizon is lower, so the sun appears earlier. The calculation adds the dip of the horizon for that height and refraction.
+
+**Sources:**
+
+- Shulchan Aruch OC 58:1 (the vasikin finish Shema at sunrise)
+- Shulchan Aruch OC 89:1 (the morning prayer is ideally at sunrise)
+- Astronomy: horizon dip arccos(R/(R+h)) and refraction (Meeus, Astronomical Algorithms, ch. 16)
+
+<a id="sunrise"></a>
+
+## Sunrise
+
+The moment the top edge of the sun appears on the horizon, at sea level. It is the best time for the morning prayer (vasikin), and the hours of the Vilna Gaon's method are counted from it.
+
+**Sources:**
+
+- Berachot 9b (vasikin)
+- Shulchan Aruch OC 58:1 (the vasikin finish Shema at sunrise and pray right after)
+- Shulchan Aruch OC 89:1 (ideally the prayer starts at sunrise)
+- Astronomy: the upper limb of the sun on the horizon, with refraction from pressure and temperature (Meeus, Astronomical Algorithms, ch. 15-16)
+
+<a id="sofShmaMga"></a>
+
+## Latest Shema (Magen Avraham)
+
+The morning Shema may be read until the end of three temporal hours. By the Magen Avraham the day is counted from dawn to nightfall: here from 72 minutes before sunrise to 72 minutes after sunset, and each hour is a twelfth of that span.
+
+**Sources:**
+
+- Mishna Berachot 1:2 (until three hours)
+- Shulchan Aruch OC 58:1 (until the end of three hours, a quarter of the day)
+- Magen Avraham 58:1 (counted from dawn)
+- Mishna Berura 58:4 (Magen Avraham counts from dawn; the Vilna Gaon from sunrise)
+- Pesachim 94a; Shulchan Aruch OC 459:2 (four mil of 18 minutes = 72 minutes)
+
+<a id="sofShmaMga16"></a>
+
+## Latest Shema (Magen Avraham, by degrees)
+
+Like the Magen Avraham's latest Shema, but the day is measured by degrees: from dawn (sun 16.1 degrees below the horizon in the morning) to the sun 16.1 degrees below the horizon in the evening. So the length follows the season and the place.
+
+**Sources:**
+
+- Mishna Berachot 1:2
+- Shulchan Aruch OC 58:1
+- Magen Avraham 58:1
+- Mishna Berura 58:4
+- Astronomy: 16.1 degrees = 72 minutes in Jerusalem at the equinox
+
+<a id="sofShmaGra"></a>
+
+## Latest Shema (Vilna Gaon)
+
+The morning Shema may be read until the end of three temporal hours. By the Vilna Gaon the day runs from sunrise to sunset, and each hour is a twelfth of that span.
+
+**Sources:**
+
+- Mishna Berachot 1:2 (until three hours)
+- Shulchan Aruch OC 58:1 (until the end of three hours, a quarter of the day)
+- Mishna Berura 58:4 (the Vilna Gaon counts from sunrise)
+- Rema OC 233:1 (temporal hours: the day is divided into 12 hours)
+
+<a id="sofTfillaMga"></a>
+
+## Latest morning prayer (Magen Avraham)
+
+The morning prayer may be said until the end of four temporal hours. By the Magen Avraham the day runs from 72 minutes before sunrise to 72 minutes after sunset.
+
+**Sources:**
+
+- Mishna Berachot 4:1 (Rabbi Yehuda: until four hours)
+- Shulchan Aruch OC 89:1 (until the end of four hours, a third of the day)
+- Magen Avraham 58:1
+- Mishna Berura 58:4
+- Pesachim 94a; Shulchan Aruch OC 459:2
+
+<a id="sofTfillaMga16"></a>
+
+## Latest morning prayer (Magen Avraham, by degrees)
+
+Four temporal hours of a day measured by degrees: from the sun 16.1 degrees below the horizon in the morning to 16.1 degrees below in the evening.
+
+**Sources:**
+
+- Mishna Berachot 4:1
+- Shulchan Aruch OC 89:1
+- Magen Avraham 58:1
+- Astronomy: 16.1 degrees = 72 minutes in Jerusalem at the equinox
+
+<a id="sofTfillaGra"></a>
+
+## Latest morning prayer (Vilna Gaon)
+
+The morning prayer may be said until the end of four temporal hours, with the day measured from sunrise to sunset.
+
+**Sources:**
+
+- Mishna Berachot 4:1 (Rabbi Yehuda: until four hours)
+- Shulchan Aruch OC 89:1 (until the end of four hours, a third of the day)
+- Mishna Berura 58:4 (the Vilna Gaon counts from sunrise)
+
+<a id="chatzot"></a>
+
+## Midday (chatzot)
+
+The middle of the day: the moment the sun is at its highest point, halfway between sunrise and sunset. Until then one may still say the morning prayer after the fact; afterwards the time of Mincha begins.
+
+**Sources:**
+
+- Mishna Berachot 4:1 (the morning prayer until midday)
+- Shulchan Aruch OC 89:1 (after four hours until midday one still has reward for prayer)
+- Astronomy: the sun's transit of the meridian (NREL SPA)
+
+<a id="minchaGedola"></a>
+
+## Earliest Mincha (mincha gedola)
+
+The earliest time for the afternoon prayer: six and a half temporal hours after sunrise (half a temporal hour after midday), matching the afternoon tamid offering on an Erev Pesach that fell on Friday.
+
+**Sources:**
+
+- Rambam, Hilchot Tefilla 3:2 (one who prays after six and a half hours has fulfilled it; this is mincha gedola)
+- Shulchan Aruch OC 233:1 (one who prayed after six and a half hours has fulfilled it)
+- Mishna Berura 233:1
+
+<a id="minchaGedola30"></a>
+
+## Earliest Mincha (at least 30 minutes)
+
+The later of two: half a clock hour after midday, and half a temporal hour after midday. In winter, when the temporal hour is short, it comes out a full half hour.
+
+**Sources:**
+
+- Mishna Berura 233:1 (six and a half hours, that is half an hour after midday)
+- Rambam, Hilchot Tefilla 3:2
+- Shulchan Aruch OC 233:1
+
+<a id="minchaKetana"></a>
+
+## Mincha ketana
+
+The main time for the afternoon prayer: nine and a half temporal hours after sunrise, matching when the daily afternoon tamid was offered.
+
+**Sources:**
+
+- Rambam, Hilchot Tefilla 3:2 (the tamid was offered daily at nine and a half hours; this is mincha ketana)
+- Shulchan Aruch OC 233:1 (its main time is from nine and a half hours)
+- Mishna Berura 233:1
+
+<a id="plag"></a>
+
+## Plag hamincha (Vilna Gaon)
+
+One and a quarter temporal hours before the end of the day: 10.75 temporal hours after sunrise, with the day from sunrise to sunset. For Rabbi Yehuda Mincha lasts until here, and from here one may pray Maariv and accept Shabbos.
+
+**Sources:**
+
+- Mishna Berachot 4:1 (Rabbi Yehuda: until plag hamincha)
+- Shulchan Aruch OC 233:1 (plag hamincha is eleven hours less a quarter)
+- Rambam, Hilchot Tefilla 3:4 (until an hour and a quarter of the day remains)
+- Rema OC 261:2 (accepting Shabbos from plag hamincha)
+
+<a id="plagMga"></a>
+
+## Plag hamincha (Magen Avraham)
+
+Plag hamincha (10.75 temporal hours) of the same day as the Magen Avraham's latest Shema: from 72 minutes before sunrise to 72 minutes after sunset.
+
+**Sources:**
+
+- Mishna Berachot 4:1
+- Shulchan Aruch OC 233:1
+- Magen Avraham 58:1 (counting from dawn; see siman 233)
+
+<a id="sunset"></a>
+
+## Sunset
+
+The moment the top edge of the sun disappears below the horizon, at sea level. Twilight (bein hashmashos) begins here by the Geonim's view, and Shabbos must be accepted before it.
+
+**Sources:**
+
+- Shabbat 34b (from when the sun sets)
+- Shulchan Aruch OC 261:2 (adding to Shabbos from the start of sunset)
+- Biur HaGra OC 261:2 (twilight begins right at sunset)
+- Astronomy: the upper limb of the sun on the horizon, with refraction (Meeus, Astronomical Algorithms, ch. 15-16)
+
+<a id="sunsetElevated"></a>
+
+## Sunset (from the place's elevation)
+
+Sunset as seen from the place's own height: from a mountain or a high building the horizon is lower, so the sun disappears later.
+
+**Sources:**
+
+- Shabbat 34b
+- Shulchan Aruch OC 261:2
+- Astronomy: horizon dip arccos(R/(R+h)) and refraction (Meeus, Astronomical Algorithms, ch. 16)
+
+<a id="tzeitGeonim"></a>
+
+## Nightfall (Geonim)
+
+The end of twilight by the Geonim: three quarters of a mil after sunset, about 13.5 minutes. Here: the sun 3.7 degrees below the horizon in the evening, which is 13.5 minutes after sunset in Jerusalem at the equinox.
+
+**Sources:**
+
+- Shabbat 34b (twilight is three quarters of a mil)
+- Shulchan Aruch OC 261:2 (twilight is three quarters of a mil)
+- Biur HaGra OC 261:2 (three quarters of a mil on the horizon of Babylon at the equinox)
+- Shulchan Aruch OC 459:2 (a mil = 18 minutes)
+- Astronomy: 3.7 degrees = 13.5 minutes in Jerusalem at the equinox
+
+<a id="tzeitGeonimVisible"></a>
+
+## Nightfall (Geonim, from the visible horizon)
+
+Like the Geonim's nightfall (3.7 degrees), but the degrees are measured from the visible horizon. It comes out about 2 to 4 minutes later.
+
+**Sources:**
+
+- Shabbat 34b
+- Shulchan Aruch OC 261:2
+- Astronomy: horizon refraction (Meeus, Astronomical Algorithms, ch. 16)
+
+<a id="tzeit7083"></a>
+
+## Nightfall (7.083 degrees)
+
+When three medium stars appear and night begins. Here: the sun 7.083 degrees (7 degrees 5 arcminutes) below the horizon in the evening, about 29 minutes after sunset in Jerusalem at the equinox. The degree figure is an estimate from observation, not from the Talmud.
+
+**Sources:**
+
+- Shabbat 35b (one star is day, two twilight, three night; not large or small stars but medium ones)
+- Biur HaGra OC 261:2 (nightfall is at three medium stars)
+
+<a id="tzeit"></a>
+
+## Nightfall
+
+When three medium stars appear: night begins, and Shabbos and fasts end. Here: the sun 8.5 degrees below the horizon in the evening, about 36 minutes after sunset in Jerusalem at the equinox. The degree figure is an estimate from observation, not from the Talmud.
+
+**Sources:**
+
+- Shabbat 35b (three medium stars - night)
+- Shulchan Aruch OC 235:3 (evening Shema right at nightfall)
+- Biur HaGra OC 261:2
+
+<a id="tzeitVisible"></a>
+
+## Nightfall (from the visible horizon)
+
+Like nightfall (8.5 degrees), but the degrees are measured from the visible horizon. It comes out about 2 to 4 minutes later.
+
+**Sources:**
+
+- Shabbat 35b
+- Astronomy: horizon refraction (Meeus, Astronomical Algorithms, ch. 16)
