@@ -1,0 +1,77 @@
+# Terrain horizon of every place from the Copernicus DEM GLO-90 (scripts/compute-horizon.py), split across
+# parallel runners by tile neighbourhood; the merge job builds assets/horizon.bin and commits it.
+# Start: gh workflow run horizon-parallel.yml -f shards=16
+name: horizon-parallel
+on:
+  workflow_dispatch:
+    inputs:
+      branch:
+        description: Branch to compute for and commit to
+        default: master
+      shards:
+        description: Number of parallel runners (max 20)
+        default: '16'
+permissions:
+  contents: write
+jobs:
+  plan:
+    runs-on: ubuntu-latest
+    outputs:
+      list: ${{ steps.m.outputs.list }}
+    steps:
+      - id: m
+        run: echo "list=$(seq -s, 0 $(( ${{ inputs.shards }} - 1 )) | sed 's/^/[/;s/$/]/')" >> "$GITHUB_OUTPUT"
+  compute:
+    needs: plan
+    runs-on: ubuntu-latest
+    timeout-minutes: 120
+    strategy:
+      fail-fast: false
+      matrix:
+        shard: ${{ fromJson(needs.plan.outputs.list) }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ inputs.branch }}
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: pip install -q numpy rasterio
+      - name: Shard ${{ matrix.shard }} of ${{ inputs.shards }}
+        env:
+          SHARD: ${{ matrix.shard }}
+          SHARDS: ${{ inputs.shards }}
+          OUT: horizon-part.tsv
+        run: python scripts/compute-horizon.py
+      - uses: actions/upload-artifact@v4
+        with:
+          name: horizon-part-${{ matrix.shard }}
+          path: horizon-part.tsv
+  merge:
+    needs: compute
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ inputs.branch }}
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - uses: actions/download-artifact@v4
+        with:
+          path: parts
+      - name: Build assets/horizon.bin
+        run: |
+          cat parts/*/horizon-part.tsv > horizon-all.tsv
+          echo "places: $(wc -l < horizon-all.tsv) of $(($(grep -c . data/places.tsv) - 1))"
+          node scripts/build-horizon.mjs horizon-all.tsv
+          ls -l assets/horizon.bin
+          for id in 1 45 97 98; do grep "^$id	" horizon-all.tsv | cut -c1-200; done
+      - name: Commit
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898283+github-actions[bot]@users.noreply.github.com"
+          git add assets/horizon.bin
+          git diff --cached --quiet && echo "no change" && exit 0
+          git commit -m "data: horizon.bin from Copernicus GLO-90 (parallel CI)" -m "User-facing: none"
+          git pull --rebase -q && git push
