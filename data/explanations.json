@@ -130,5 +130,37 @@
   "tzeitVisible": {
     "he": { "title": "צאת הכוכבים (מהאופק הנראה)", "text": "כמו צאת הכוכבים (8.5 מעלות), אלא שהמעלות נמדדות מהאופק הנראה לעין. יוצא כ־2 עד 4 דקות מאוחר יותר.", "sources": ["שבת לה ע״ב", "חישוב אסטרונומי: שבירת האור באופק (Meeus, Astronomical Algorithms, פרק 16)"] },
     "en": { "title": "Nightfall (from the visible horizon)", "text": "Like nightfall (8.5 degrees), but the degrees are measured from the visible horizon. It comes out about 2 to 4 minutes later.", "sources": ["Shabbat 35b", "Astronomy: horizon refraction (Meeus, Astronomical Algorithms, ch. 16)"] }
+  },
+  "candles40": {
+    "he": { "title": "הדלקת נרות (40 דקות)", "text": "זמן הדלקת נרות שבת, 40 דקות לפני השקיעה. מספר הדקות לפי מנהג הקהילה.", "sources": ["שו״ע או״ח רסא, ב (מוסיפין מחול על הקודש)", "שו״ע או״ח רסג (הדלקת נר שבת)"] },
+    "en": { "title": "Candle lighting (40 minutes)", "text": "Shabbat candle lighting, 40 minutes before sunset. The number of minutes follows community custom.", "sources": ["Shulchan Aruch OC 261:2 (adding from the weekday to Shabbat)", "Shulchan Aruch OC 263 (lighting the Shabbat candles)"] }
+  },
+  "candles30": {
+    "he": { "title": "הדלקת נרות (30 דקות)", "text": "זמן הדלקת נרות שבת, 30 דקות לפני השקיעה. מספר הדקות לפי מנהג הקהילה.", "sources": ["שו״ע או״ח רסא, ב (מוסיפין מחול על הקודש)", "שו״ע או״ח רסג (הדלקת נר שבת)"] },
+    "en": { "title": "Candle lighting (30 minutes)", "text": "Shabbat candle lighting, 30 minutes before sunset. The number of minutes follows community custom.", "sources": ["Shulchan Aruch OC 261:2 (adding from the weekday to Shabbat)", "Shulchan Aruch OC 263 (lighting the Shabbat candles)"] }
+  },
+  "candles22": {
+    "he": { "title": "הדלקת נרות (22 דקות)", "text": "זמן הדלקת נרות שבת, 22 דקות לפני השקיעה. מספר הדקות לפי מנהג הקהילה.", "sources": ["שו״ע או״ח רסא, ב (מוסיפין מחול על הקודש)", "שו״ע או״ח רסג (הדלקת נר שבת)"] },
+    "en": { "title": "Candle lighting (22 minutes)", "text": "Shabbat candle lighting, 22 minutes before sunset. The number of minutes follows community custom.", "sources": ["Shulchan Aruch OC 261:2 (adding from the weekday to Shabbat)", "Shulchan Aruch OC 263 (lighting the Shabbat candles)"] }
+  },
+  "candles20": {
+    "he": { "title": "הדלקת נרות (20 דקות)", "text": "זמן הדלקת נרות שבת, 20 דקות לפני השקיעה. מספר הדקות לפי מנהג הקהילה.", "sources": ["שו״ע או״ח רסא, ב (מוסיפין מחול על הקודש)", "שו״ע או״ח רסג (הדלקת נר שבת)"] },
+    "en": { "title": "Candle lighting (20 minutes)", "text": "Shabbat candle lighting, 20 minutes before sunset. The number of minutes follows community custom.", "sources": ["Shulchan Aruch OC 261:2 (adding from the weekday to Shabbat)", "Shulchan Aruch OC 263 (lighting the Shabbat candles)"] }
+  },
+  "candles18": {
+    "he": { "title": "הדלקת נרות (18 דקות)", "text": "זמן הדלקת נרות שבת, 18 דקות לפני השקיעה. מספר הדקות לפי מנהג הקהילה.", "sources": ["שו״ע או״ח רסא, ב (מוסיפין מחול על הקודש)", "שו״ע או״ח רסג (הדלקת נר שבת)"] },
+    "en": { "title": "Candle lighting (18 minutes)", "text": "Shabbat candle lighting, 18 minutes before sunset. The number of minutes follows community custom.", "sources": ["Shulchan Aruch OC 261:2 (adding from the weekday to Shabbat)", "Shulchan Aruch OC 263 (lighting the Shabbat candles)"] }
+  },
+  "tzeitRt72": {
+    "he": { "title": "צאת הכוכבים לרבינו תם (72 דקות)", "text": "צאת הכוכבים לשיטת רבינו תם: ארבעה מילין אחר השקיעה, מיל של 18 דקות, כלומר 72 דקות קבועות.", "sources": ["תוספות שבת לה ע״א (ארבעה מילין משקיעה ועד צאת הכוכבים, על פי פסחים צד ע״א)", "שו״ע או״ח רסא, ב וברמ״א"] },
+    "en": { "title": "Nightfall of Rabbeinu Tam (72 minutes)", "text": "Nightfall according to Rabbeinu Tam: four mil after sunset, at 18 minutes a mil, that is 72 fixed minutes.", "sources": ["Tosafot Shabbat 35a (four mil from sunset to the stars, based on Pesachim 94a)", "Shulchan Aruch OC 261:2 with Rema"] }
+  },
+  "tzeitRt72Zmanis": {
+    "he": { "title": "צאת הכוכבים לרבינו תם (72 דקות זמניות)", "text": "אותן 72 דקות כדקות זמניות: השקיעה ועוד עשירית היום מהנץ עד השקיעה.", "sources": ["תוספות שבת לה ע״א", "שו״ע או״ח רסא, ב וברמ״א"] },
+    "en": { "title": "Nightfall of Rabbeinu Tam (72 seasonal minutes)", "text": "The same 72 minutes as seasonal minutes: sunset plus a tenth of the day from sunrise to sunset.", "sources": ["Tosafot Shabbat 35a", "Shulchan Aruch OC 261:2 with Rema"] }
+  },
+  "tzeitRt16": {
+    "he": { "title": "צאת הכוכבים לרבינו תם (16.1 מעלות)", "text": "כשהשמש 16.1 מעלות מתחת לאופק בערב, עומקה 72 דקות אחרי השקיעה בירושלים בימי השוויון. מספר המעלות הוא חשבון, ואינו מן הגמרא.", "sources": ["תוספות שבת לה ע״א", "שו״ע או״ח רסא, ב וברמ״א"] },
+    "en": { "title": "Nightfall of Rabbeinu Tam (16.1 degrees)", "text": "The sun 16.1 degrees below the horizon in the evening, its depth 72 minutes after sunset in Jerusalem at the equinox. The degree figure is a calculation, not from the Talmud.", "sources": ["Tosafot Shabbat 35a", "Shulchan Aruch OC 261:2 with Rema"] }
   }
 }

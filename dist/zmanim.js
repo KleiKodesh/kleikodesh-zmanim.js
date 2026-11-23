@@ -8,8 +8,10 @@ export const ZMAN_NAMES = [
     'chatzotNight', 'alot90Visible', 'alot90', 'alot90Chatzot', 'alotVisible', 'alot', 'alotChatzot', 'misheyakirVisible',
     'misheyakir', 'misheyakirChatzot', 'misheyakir11', 'misheyakir10p2', 'sunriseElevated', 'sunrise',
     'sofShmaMga', 'sofShmaMga16', 'sofShmaGra', 'sofTfillaMga', 'sofTfillaMga16', 'sofTfillaGra',
-    'chatzot', 'minchaGedola', 'minchaGedola30', 'minchaKetana', 'plag', 'plagMga', 'sunset', 'sunsetElevated',
+    'chatzot', 'minchaGedola', 'minchaGedola30', 'minchaKetana', 'plag', 'plagMga',
+    'candles40', 'candles30', 'candles22', 'candles20', 'candles18', 'sunset', 'sunsetElevated',
     'tzeitGeonim', 'tzeitGeonimVisible', 'tzeit7083', 'tzeit', 'tzeitVisible',
+    'tzeitRt72', 'tzeitRt72Zmanis', 'tzeitRt16',
 ];
 /**
  * How each printed minute is rounded, the stringent way: a zman that starts something rounds UP, a deadline
@@ -22,6 +24,8 @@ export const ROUNDING = {
     sofShmaGra: 'down', sofShmaMga: 'down', sofShmaMga16: 'down', sofTfillaGra: 'down', sofTfillaMga: 'down', sofTfillaMga16: 'down',
     chatzot: 'nearest', minchaGedola: 'up', minchaGedola30: 'up', minchaKetana: 'up', plag: 'up', plagMga: 'up',
     sunset: 'down', sunsetElevated: 'down', tzeitGeonim: 'up', tzeitGeonimVisible: 'up', tzeit7083: 'up', tzeit: 'up', tzeitVisible: 'up',
+    candles40: 'down', candles30: 'down', candles22: 'down', candles20: 'down', candles18: 'down',
+    tzeitRt72: 'up', tzeitRt72Zmanis: 'up', tzeitRt16: 'up',
 };
 /**
  * Zmanim that depend on refraction at the horizon, and so on the place's monthly temperatures: sunrise/sunset,
@@ -29,7 +33,8 @@ export const ROUNDING = {
  */
 export const HORIZON_ZMANIM = new Set(['sunrise', 'sunset', 'sunriseElevated', 'sunsetElevated',
     'sofShmaMga', 'sofShmaGra', 'sofTfillaMga', 'sofTfillaGra', 'minchaGedola', 'minchaGedola30', 'minchaKetana', 'plag', 'plagMga',
-    'alot90Visible', 'alotVisible', 'misheyakirVisible', 'tzeitGeonimVisible', 'tzeitVisible']);
+    'alot90Visible', 'alotVisible', 'misheyakirVisible', 'tzeitGeonimVisible', 'tzeitVisible',
+    'candles40', 'candles30', 'candles22', 'candles20', 'candles18', 'tzeitRt72', 'tzeitRt72Zmanis']);
 /** The geometric horizon. */
 export const GEOMETRIC_ZENITH = 90;
 /** Solar semidiameter used for sunrise/sunset, degrees (16'). */
@@ -295,6 +300,34 @@ export function zmanInstants(place, date, which = ZMAN_NAMES) {
                 break;
             case 'tzeitVisible':
                 ms = today.set(today.visible(TZEIT));
+                break;
+            // Candle lighting: a fixed number of minutes before sunset, by community custom (SA OC 261:2, 263).
+            case 'candles40':
+                ms = today.sunset() - 40 * MINUTE_MS;
+                break;
+            case 'candles30':
+                ms = today.sunset() - 30 * MINUTE_MS;
+                break;
+            case 'candles22':
+                ms = today.sunset() - 22 * MINUTE_MS;
+                break;
+            case 'candles20':
+                ms = today.sunset() - 20 * MINUTE_MS;
+                break;
+            case 'candles18':
+                ms = today.sunset() - 18 * MINUTE_MS;
+                break;
+            // Rabbeinu Tam: four mil after sunset (Tosafot Shabbat 35a, from Pesachim 94a), 72 min at 18 min a mil; SA OC 261:2.
+            case 'tzeitRt72':
+                ms = today.sunset() + 72 * MINUTE_MS;
+                break;
+            // The same 72 as seasonal minutes: a tenth of the sunrise..sunset day (12 + 1.2 temporal hours).
+            case 'tzeitRt72Zmanis':
+                ms = today.gra(13.2);
+                break;
+            // The same by degrees: the sun 16.1 deg below, its depth 72 minutes after sunset at the Jerusalem equinox.
+            case 'tzeitRt16':
+                ms = today.set(G + ALOT);
                 break;
             default: throw new Error(`Unknown zman '${String(name)}'`);
         }

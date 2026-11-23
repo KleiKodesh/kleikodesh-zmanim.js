@@ -66,12 +66,16 @@ Also exported: `zmanInstants` (exact instants as BigInt epoch nanoseconds), `for
 | minchaGedola30 | the later of 30 minutes after chatzot and minchaGedola (half a GRA temporal hour after chatzot) | up |
 | plagMga | 10.75 temporal hours of the same MGA day as sofShmaMga (72 min before sunrise .. 72 min after sunset) | up |
 | sunset | sea-level sunset | down |
+| candles40 / candles30 / candles22 / candles20 / candles18 | candle lighting 40 / 30 / 22 / 20 / 18 minutes before sea-level sunset, by community custom (adding to Shabbat before sunset: SA OC 261:2) | down |
 | sunsetElevated | sunset below the horizon seen from the place's own elevation | down |
 | tzeitGeonim | sun 3.7 deg below, evening (Geonim, about 13.5 minutes) | up |
 | tzeitGeonimVisible | sun 3.7 deg below the visible horizon, evening | up |
 | tzeit7083 | sun 7.083 deg below, evening: three medium stars (an observational estimate) | up |
 | tzeit | sun 8.5 deg below, evening | up |
 | tzeitVisible | sun 8.5 deg below the visible horizon, evening | up |
+| tzeitRt72 | Rabbeinu Tam: 72 fixed minutes after sunset (4 mil of 18 min; Tosafot Shabbat 35a, from Pesachim 94a; SA OC 261:2 with Rema) | up |
+| tzeitRt72Zmanis | Rabbeinu Tam in seasonal minutes: sunset plus a tenth of the sunrise..sunset day | up |
+| tzeitRt16 | Rabbeinu Tam by degrees: sun 16.1 deg below, evening (the depth 72 minutes after sunset at the Jerusalem equinox) | up |
 
 Degree lines return null on days the sun never gets that low (high latitudes in summer); no rule is invented for
 them, except the explicit `...Chatzot` fallback lines:

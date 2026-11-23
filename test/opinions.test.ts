@@ -72,3 +72,24 @@ describe('high latitudes in June: null or a correct time, never garbage', () => 
     })
   }
 })
+
+describe('candle lighting and Rabbeinu Tam', () => {
+  it('are in order and at the right offsets', async () => {
+    useFileAssets()
+    const p = await getPlace(1)
+    for (const date of [{ year: 2026, month: 3, day: 20 }, { year: 2026, month: 6, day: 21 }, { year: 2026, month: 12, day: 21 }]) {
+      const t = zmanInstants(p, date, ['candles40', 'candles30', 'candles22', 'candles20', 'candles18', 'sunrise', 'sunset', 'tzeit',
+        'tzeitRt72', 'tzeitRt72Zmanis', 'tzeitRt16'])
+      const order: ZmanName[] = ['candles40', 'candles30', 'candles22', 'candles20', 'candles18', 'sunset', 'tzeit', 'tzeitRt72']
+      for (let i = 1; i < order.length; i++) expect(ms(t[order[i]!]), order[i]).toBeGreaterThan(ms(t[order[i - 1]!]))
+      expect(ms(t.sunset) - ms(t.candles18)).toBe(18 * 60000)
+      expect(ms(t.sunset) - ms(t.candles40)).toBe(40 * 60000)
+      expect(ms(t.tzeitRt72) - ms(t.sunset)).toBe(72 * 60000)
+      expect(ms(t.tzeitRt72Zmanis) - ms(t.sunset)).toBeCloseTo((ms(t.sunset) - ms(t.sunrise)) / 10, -1)
+      // 16.1 deg is roughly 72 minutes after sunset in Jerusalem (more in summer).
+      const rt16 = (ms(t.tzeitRt16) - ms(t.sunset)) / 60000
+      expect(rt16).toBeGreaterThan(65); expect(rt16).toBeLessThan(95)
+    }
+    expect(ROUNDING.candles18).toBe('down'); expect(ROUNDING.tzeitRt72).toBe('up')
+  })
+})

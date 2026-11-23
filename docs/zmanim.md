@@ -407,3 +407,91 @@ Like nightfall (8.5 degrees), but the degrees are measured from the visible hori
 
 - Shabbat 35b
 - Astronomy: horizon refraction (Meeus, Astronomical Algorithms, ch. 16)
+
+<a id="candles40"></a>
+
+## Candle lighting (40 minutes)
+
+Shabbat candle lighting, 40 minutes before sunset. The number of minutes follows community custom.
+
+**Sources:**
+
+- Shulchan Aruch OC 261:2 (adding from the weekday to Shabbat)
+- Shulchan Aruch OC 263 (lighting the Shabbat candles)
+
+<a id="candles30"></a>
+
+## Candle lighting (30 minutes)
+
+Shabbat candle lighting, 30 minutes before sunset. The number of minutes follows community custom.
+
+**Sources:**
+
+- Shulchan Aruch OC 261:2 (adding from the weekday to Shabbat)
+- Shulchan Aruch OC 263 (lighting the Shabbat candles)
+
+<a id="candles22"></a>
+
+## Candle lighting (22 minutes)
+
+Shabbat candle lighting, 22 minutes before sunset. The number of minutes follows community custom.
+
+**Sources:**
+
+- Shulchan Aruch OC 261:2 (adding from the weekday to Shabbat)
+- Shulchan Aruch OC 263 (lighting the Shabbat candles)
+
+<a id="candles20"></a>
+
+## Candle lighting (20 minutes)
+
+Shabbat candle lighting, 20 minutes before sunset. The number of minutes follows community custom.
+
+**Sources:**
+
+- Shulchan Aruch OC 261:2 (adding from the weekday to Shabbat)
+- Shulchan Aruch OC 263 (lighting the Shabbat candles)
+
+<a id="candles18"></a>
+
+## Candle lighting (18 minutes)
+
+Shabbat candle lighting, 18 minutes before sunset. The number of minutes follows community custom.
+
+**Sources:**
+
+- Shulchan Aruch OC 261:2 (adding from the weekday to Shabbat)
+- Shulchan Aruch OC 263 (lighting the Shabbat candles)
+
+<a id="tzeitRt72"></a>
+
+## Nightfall of Rabbeinu Tam (72 minutes)
+
+Nightfall according to Rabbeinu Tam: four mil after sunset, at 18 minutes a mil, that is 72 fixed minutes.
+
+**Sources:**
+
+- Tosafot Shabbat 35a (four mil from sunset to the stars, based on Pesachim 94a)
+- Shulchan Aruch OC 261:2 with Rema
+
+<a id="tzeitRt72Zmanis"></a>
+
+## Nightfall of Rabbeinu Tam (72 seasonal minutes)
+
+The same 72 minutes as seasonal minutes: sunset plus a tenth of the day from sunrise to sunset.
+
+**Sources:**
+
+- Tosafot Shabbat 35a
+- Shulchan Aruch OC 261:2 with Rema
+
+<a id="tzeitRt16"></a>
+
+## Nightfall of Rabbeinu Tam (16.1 degrees)
+
+The sun 16.1 degrees below the horizon in the evening, its depth 72 minutes after sunset in Jerusalem at the equinox. The degree figure is a calculation, not from the Talmud.
+
+**Sources:**
+
+- Tosafot Shabbat 35a
+- Shulchan Aruch OC 261:2 with Rema
