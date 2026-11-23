@@ -69,7 +69,7 @@ Also exported: `zmanInstants` (exact instants as BigInt epoch nanoseconds), `for
 | sunsetElevated | sunset below the horizon seen from the place's own elevation | down |
 | tzeitGeonim | sun 3.7 deg below, evening (Geonim, about 13.5 minutes) | up |
 | tzeitGeonimVisible | sun 3.7 deg below the visible horizon, evening | up |
-| tzeit7083 | sun 7.083 deg below, evening: three medium stars, Rav Y. M. Tukaczinsky's measurement (Sefer Bein Hashmashos) | up |
+| tzeit7083 | sun 7.083 deg below, evening: three medium stars (an observational estimate) | up |
 | tzeit | sun 8.5 deg below, evening | up |
 | tzeitVisible | sun 8.5 deg below the visible horizon, evening | up |
 

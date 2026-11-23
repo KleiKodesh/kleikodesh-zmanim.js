@@ -94,7 +94,7 @@ const MISHEYAKIR = 11.5
 const MISHEYAKIR_11 = 11
 const MISHEYAKIR_10_2 = 10.2
 const TZEIT = 8.5
-/** Three medium stars, Rav Y. M. Tukaczinsky's measurement (Bein Hashmashos), 7.083 deg. */
+/** Three medium stars (an observational estimate), 7.083 deg. */
 const TZEIT_7083 = 7.083
 const TZEIT_GEONIM = 3.7
 const MINUTE_MS = 60_000
