@@ -47,3 +47,4 @@ for (let i = 0; i < todo.length; i += BATCH) {
   console.log(`${Math.min(i + BATCH, todo.length)}/${todo.length}`)
   await pause(4000)
 }
+console.log(`done: ${done.size} of ${rows.length} places have rows`)
