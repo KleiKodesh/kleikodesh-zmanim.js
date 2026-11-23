@@ -1,0 +1,54 @@
+# Checks every Hebrew place name against Wikidata / Hebrew Wikipedia, in parallel shards.
+# The merge job commits data/he-name-report.tsv to the branch that ran.
+name: check-he-names
+on:
+  workflow_dispatch:
+  push:
+    branches: [he-names]
+    paths: [scripts/check-he-names.mjs, .github/workflows/check-he-names.yml]
+permissions:
+  contents: write
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+    strategy:
+      fail-fast: false
+      matrix:
+        shard: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - name: Check shard ${{ matrix.shard }}
+        env:
+          SHARD: ${{ matrix.shard }}
+          SHARDS: 10
+          OUT: data/he-part.tsv
+        run: node scripts/check-he-names.mjs
+      - uses: actions/upload-artifact@v4
+        with:
+          name: he-part-${{ matrix.shard }}
+          path: data/he-part.tsv
+  merge:
+    needs: check
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/download-artifact@v4
+        with:
+          path: parts
+      - name: Merge
+        run: |
+          { head -1 parts/he-part-0/he-part.tsv
+            for f in parts/*/he-part.tsv; do tail -n +2 "$f"; done | sort -n -k1,1; } > data/he-name-report.tsv
+          cut -f6 data/he-name-report.tsv | tail -n +2 | sort | uniq -c
+      - name: Commit
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898283+github-actions[bot]@users.noreply.github.com"
+          git add data/he-name-report.tsv
+          git diff --cached --quiet && exit 0
+          git commit -m "data: Hebrew name report from Wikidata (CI)" -m "User-facing: none"
+          git pull --rebase -q && git push
