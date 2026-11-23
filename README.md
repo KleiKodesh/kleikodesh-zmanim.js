@@ -265,7 +265,7 @@ distance d and height H is seen at atan((H - h - d^2 (1 - k) / 2R) / d), with te
 R = 6371 km; the horizon is the highest such angle. The zman: refraction (refraction.ts) at that apparent altitude,
 the sun's azimuth from SPA, iterated from the sea-level time.
 
-`scripts/import-from-app.mjs` created places.tsv from the app's city list once; edit the TSV from now on.
+data/places.tsv is the source of truth: built from open sources (GeoNames, Wikidata, the Israeli CBS list of localities, Open-Meteo elevations, seven OpenStreetMap points); edit the TSV and rebuild.
 
 ## Solar Position Algorithm (src/spa.ts, standalone)
 
@@ -296,10 +296,10 @@ npm test          # vitest; parity uses the recorded fixture test/fixtures/app-z
 ## Credits and licenses
 
 - Code: LGPL-2.1 (see LICENSE). The sun position is the clean-room NREL SPA (src/spa.ts, PROVENANCE.md); the
-  former NOAA port is gone. src/zmanim.ts was rewritten around SPA, but it was written by editing the earlier
-  port and keeps its design (per-day lazy cache, MGA 72-minute day, temporal-hour arithmetic, antimeridian date
-  rule), so it is still treated as derived from an earlier zmanim library (
-  LGPL-2.1, commit ), itself a port of an earlier zmanim library zmanim by Eliyahu  (LGPL-2.1).
+  former NOAA port is gone, and there is no refraction, climate or luach-specific code from any other library.
+  The general zmanim design in src/zmanim.ts (temporal hours, the 72-minute Magen Avraham day, per-day caching,
+  the date-line rule) follows an earlier zmanim library zmanim by Eliyahu  (LGPL-2.1), as ported to Kotlin by
+  an earlier zmanim library ( LGPL-2.1), and is credited to them.
 - Place data: contains data from GeoNames (geonames.org), licensed under CC BY 4.0.
   Some neighbourhood coordinates come from Wikidata (CC0). Where Wikidata has no elevation, it comes from the
   Open-Meteo elevation API (CC BY 4.0), based on the Copernicus DEM GLO-90 (produced using Copernicus WorldDEM-90
