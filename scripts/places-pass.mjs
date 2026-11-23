@@ -35,7 +35,7 @@ const COUNTRY = { // context word -> [Wikidata country QID, default tz]
   Australia: ['Q408', 'Australia/Brisbane'], 'United Arab Emirates': ['Q878', 'Asia/Dubai'], Brazil: ['Q155', 'America/Sao_Paulo'],
 };
 const REGION_TZ = { Illinois: 'America/Chicago', Alberta: 'America/Edmonton', Quebec: 'America/Toronto', Recife: 'America/Recife', Ceuta: 'Africa/Ceuta' };
-const BAD_DESC = /arab|palestin|refugee camp|disambiguation|family name|surname|given name|film|album|song|band|ship|street|station|airport|heliport|county\b|river|lake|mountain|school|church|synagogue|company|library|mall|reservoir|cemetery|bridge|college|university|building|chamber|plantation|arena|country in|gmina|stadium|hospital|park\b|house|museum/i;
+const BAD_DESC = /\barab(?! emirates)|palestin|refugee camp|disambiguation|family name|surname|given name|\bfilm\b|album|\bsong\b|\bband\b|\bship\b|\bstreet\b|\bstation\b|airport|heliport|\briver\b|\blake\b|mountain|\bschool\b|church|synagogue|company|library|\bmall\b|reservoir|cemetery|bridge|college|university|building|chamber|plantation|arena|country in|gmina|stadium|hospital|\bpark\b|\bhouse\b|museum/i;
 
 const fold = s => s.normalize('NFD').replace(/[̀-ͯ]/g, '').replace(/[Łł]/g, 'l').replace(/['’-]/g, ' ').replace(/\s+/g, ' ').trim().toLowerCase();
 const camel = s => s.normalize('NFD').replace(/[̀-ͯ]/g, '').replace(/[^A-Za-z0-9]+(.)?/g, (_, c) => c ? c.toUpperCase() : '').replace(/^./, c => c.toLowerCase());
