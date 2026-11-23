@@ -19,7 +19,7 @@ from scipy.ndimage import grey_opening
 
 EYE = 1.6
 MAX_KM = 150
-MIN_M = 300            # nearer points are mostly buildings and trees in a surface model
+MIN_M = 500            # the observer stands on the highest ground within this radius (see profile)
 R = 6_371_000.0
 K = 0.13
 OPEN_CELLS = 5
@@ -81,7 +81,13 @@ while x < MAX_KM * 1000:
 D = np.array(d)
 
 def profile(lat, lng):
-    h0 = float(heights(np.array([lat]), np.array([lng]))[0]) + EYE
+    # A place is a town, not a point: look from its highest ground within MIN_M (rings every 100 m, 10 deg),
+    # so a street-level bump of a few metres next to the point does not hide the real horizon.
+    rr = np.arange(0, MIN_M + 1, 100.0)[:, None] / R; bb = np.radians(np.arange(0, 360, 10.0))[None, :]
+    q1 = math.radians(lat)
+    q2 = np.arcsin(np.sin(q1) * np.cos(rr) + np.cos(q1) * np.sin(rr) * np.cos(bb))
+    g2 = math.radians(lng) + np.arctan2(np.sin(bb) * np.sin(rr) * np.cos(q1), np.cos(rr) - np.sin(q1) * np.sin(q2))
+    h0 = float(heights(np.degrees(q2).ravel(), np.degrees(g2).ravel()).max()) + EYE
     az = np.radians(np.array(AZ, float))[:, None]
     p1 = math.radians(lat); l1 = math.radians(lng); dd = (D / R)[None, :]
     p2 = np.arcsin(np.sin(p1) * np.cos(dd) + np.cos(p1) * np.sin(dd) * np.cos(az))
