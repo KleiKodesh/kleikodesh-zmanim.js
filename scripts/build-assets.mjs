@@ -1,4 +1,4 @@
-// data/places.tsv -> assets/: names-he.txt, names-en.txt (line index = id), places.bin (11-byte records), tz.json.
+// data/places.tsv + data/climate.tsv -> assets/: climate.bin, names-he.txt, names-en.txt (line index = id), places.bin (11-byte records), tz.json.
 import { mkdirSync, readFileSync, writeFileSync } from 'node:fs'
 
 const RECORD_SIZE = 11
@@ -45,5 +45,12 @@ mkdirSync('assets', { recursive: true })
 writeFileSync('assets/names-he.txt', he.join('\n') + '\n')
 writeFileSync('assets/names-en.txt', en.join('\n') + '\n')
 writeFileSync('assets/places.bin', new Uint8Array(bin.buffer))
+// climate.bin: 12 int8 monthly mean temperatures (C) per id at offset id*12; -128 = unknown (data/climate.tsv).
+const climate = new Int8Array((maxId + 1) * 12).fill(-128)
+for (const line of readFileSync('data/climate.tsv', 'utf8').trim().split(/\r?\n/).slice(1)) {
+  const [id, ...months] = line.split('\t')
+  months.forEach((v, m) => { if (v !== '' && v !== undefined) climate[Number(id) * 12 + m] = Math.max(-127, Math.min(127, Math.round(Number(v)))) })
+}
+writeFileSync('assets/climate.bin', climate)
 writeFileSync('assets/tz.json', JSON.stringify({ ids: zones, rawOffsetMinutes: zones.map(rawOffsetMinutes) }))
 console.log(`${rows.length} places, ${zones.length} zones`)

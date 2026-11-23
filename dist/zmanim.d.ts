@@ -20,7 +20,16 @@ export interface Coordinates {
     tzid: string;
     /** Standard (raw) UTC offset of the zone in minutes; only used for zones across the antimeridian. */
     rawOffsetMinutes?: number;
+    /** Meters; sets the air pressure for refraction (sunrise/sunset stay sea-level, at the geometric horizon). Default 0. */
+    elevation?: number;
+    /** 12 monthly mean air temperatures in C (NaN = unknown); default: standard atmosphere at [elevation]. */
+    monthlyTemperatureC?: readonly number[];
 }
+/**
+ * Zenith of sea-level sunrise/sunset for [place] on [date]: 90 + radius + refraction at the apparent horizon,
+ * with pressure from the elevation and temperature from the monthly means (see refraction.ts).
+ */
+export declare function horizonZenith(place: Coordinates, date: CivilDate): number;
 /** Kotlin Instant.toEpochMilliseconds(): floors. */
 declare function toMs(ns: bigint): number;
 export declare function addDays(d: CivilDate, days: number): CivilDate;

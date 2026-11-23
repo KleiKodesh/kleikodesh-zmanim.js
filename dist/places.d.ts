@@ -6,7 +6,7 @@ export interface Place {
     id: number;
     lat: number;
     lng: number;
-    /** Meters (the zmanim are sea-level; kept for consumers). */
+    /** Meters. The zmanim are sea-level; elevation only sets the air pressure for sunrise/sunset refraction. */
     elevation: number;
     tzid: string;
     rawOffsetMinutes: number;
@@ -18,6 +18,10 @@ export declare function configure(options: {
     baseUrl?: string | URL;
     loader?: AssetLoader;
 }): void;
+/** Bytes per record in climate.bin: 12 monthly mean temperatures, int8 C; -128 = unknown. */
+export declare const CLIMATE_RECORD_SIZE = 12;
+/** A place's 12 monthly mean temperatures (C; NaN where unknown). Loads climate.bin once. */
+export declare function getMonthlyTemperatures(id: number): Promise<number[]>;
 /** Every place name in [lang]; the index is the place id (index 0 is empty). Loads only that names file. */
 export declare function listPlaces(lang: Lang): Promise<readonly string[]>;
 /** Places whose [lang] name contains [query] (case, accents and Hebrew points ignored); prefix matches first. */
