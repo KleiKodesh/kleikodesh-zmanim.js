@@ -8,11 +8,11 @@ import { julianDayFromUtcMs, spa, spaDay, spaEvent, zenithToH0, type SpaDay } fr
 export const ZMAN_NAMES = [
   'chatzotNight', 'alot90Visible', 'alot90', 'alot90Chatzot', 'alot90z', 'alotVisible', 'alot', 'alotChatzot', 'alot72z', 'alot96', 'alot120', 'misheyakirVisible',
   'misheyakir', 'misheyakirChatzot', 'misheyakir11', 'misheyakir10p2', 'misheyakir7p65', 'misheyakir12p85', 'alotBaalHatanya', 'sunriseBaalHatanya', 'sunriseElevated', 'sunrise', 'sunriseTerrain',
-  'sofShmaMga120', 'sofShmaMga90', 'sofShmaMga19', 'sofShmaMga90z', 'sofShmaMga', 'sofShmaMga16', 'sofShmaMga72z', 'sofShmaMga72Fixed', 'sofShmaMga16Fixed', 'sofShmaHarari40', 'sofShmaHarari25', 'sofShmaAsym', 'sofShmaBaalHatanya', 'sofShmaGra', 'sofShmaGraFixed',
-  'sofTfillaMga120', 'sofTfillaMga90', 'sofTfillaMga19', 'sofTfillaMga90z', 'sofTfillaMga', 'sofTfillaMga16', 'sofTfillaMga72z', 'sofTfillaHarari40', 'sofTfillaHarari25', 'sofTfillaAsym', 'sofTfillaBaalHatanya', 'sofTfillaGra', 'sofTfillaGraFixed',
+  'sofShmaMga120', 'sofShmaMga90', 'sofShmaMga19', 'sofShmaMga90z', 'sofShmaMga', 'sofShmaMga16', 'sofShmaMga72z', 'sofShmaMga72Fixed', 'sofShmaMga16Fixed', 'sofShmaHarari40', 'sofShmaHarari25', 'sofShmaAsym', 'sofShmaBaalHatanya', 'sofShmaBenIshChai', 'sofShmaGra', 'sofShmaGraFixed',
+  'sofTfillaMga120', 'sofTfillaMga90', 'sofTfillaMga19', 'sofTfillaMga90z', 'sofTfillaMga', 'sofTfillaMga16', 'sofTfillaMga72z', 'sofTfillaHarari40', 'sofTfillaHarari25', 'sofTfillaAsym', 'sofTfillaBaalHatanya', 'sofTfillaBenIshChai', 'sofTfillaGra', 'sofTfillaGraFixed',
   'chatzot', 'chatzotFixedLocal', 'minchaGedola', 'minchaGedola30', 'minchaGedolaFixed', 'minchaGedolaHillel', 'minchaGedolaBaalHatanya',
   'minchaGedolaHarari40', 'minchaGedolaHarari25', 'minchaKetana', 'minchaKetanaFixed', 'minchaKetanaHillel', 'minchaKetanaBaalHatanya',
-  'minchaKetanaHarari40', 'minchaKetanaHarari25', 'plag', 'plagFixed', 'plagHillel', 'plagBaalHatanya', 'plagHarari40', 'plagHarari25', 'plagAsym', 'plagMga', 'plagMga72z', 'plagMga19', 'plagMga90z', 'plagMga90', 'plagMga120', 'plagAlot90Tzeit645', 'plagAlot72Tzeit645',
+  'minchaKetanaHarari40', 'minchaKetanaHarari25', 'plag', 'plagFixed', 'plagHillel', 'plagBaalHatanya', 'plagHarari40', 'plagHarari25', 'plagAsym', 'plagBenIshChai', 'plagMga', 'plagMga72z', 'plagMga19', 'plagMga90z', 'plagMga90', 'plagMga120', 'plagAlot90Tzeit645', 'plagAlot72Tzeit645',
   'candles40', 'candles30', 'candles22', 'candles20', 'candles18', 'sunsetTerrain', 'sunset', 'sunsetElevated', 'sunsetBaalHatanya',
   'tzeitGeonim', 'tzeitGeonimVisible', 'tzeitBaalHatanya', 'tzeit13p5', 'tzeit18', 'tzeit18Sun', 'tzeit20', 'tzeit645', 'tzeit7083', 'tzeit', 'tzeitVisible', 'tzeit24', 'tzeit30',
   'tzeit40', 'tzeit50', 'tzeit13p5z', 'beinHashmashotYereim', 'beinHashmashotRt', 'tzeitRt72', 'tzeitRt72Zmanis', 'tzeitRt16', 'tzeitRt90', 'tzeitRt96', 'tzeit90z',
@@ -49,7 +49,7 @@ export const ROUNDING: Readonly<Record<ZmanName, Rounding>> = {
   minchaGedolaHillel: 'up', minchaKetanaHillel: 'up', plagHillel: 'up',
   sofShmaGraFixed: 'down', sofTfillaGraFixed: 'down', sofShmaMga72Fixed: 'down', sofShmaMga16Fixed: 'down',
   minchaGedolaFixed: 'up', minchaKetanaFixed: 'up', plagFixed: 'up',
-  sofShmaAsym: 'down', sofTfillaAsym: 'down', plagAsym: 'up',
+  sofShmaAsym: 'down', sofTfillaAsym: 'down', plagAsym: 'up', plagBenIshChai: 'up', sofShmaBenIshChai: 'down', sofTfillaBenIshChai: 'down',
 }
 
 /**
@@ -65,7 +65,7 @@ export const HORIZON_ZMANIM: ReadonlySet<ZmanName> = new Set<ZmanName>(['sunrise
   'tzeit13p5', 'tzeit18', 'tzeit20', 'tzeit24', 'tzeit30', 'tzeit40', 'tzeit50', 'beinHashmashotRt',
   'sofShmaHarari40', 'sofShmaHarari25', 'sofTfillaHarari40', 'sofTfillaHarari25', 'minchaGedolaHarari40', 'minchaGedolaHarari25',
   'minchaKetanaHarari40', 'minchaKetanaHarari25', 'plagHarari40', 'plagHarari25',
-  'sofShmaGraFixed', 'sofTfillaGraFixed', 'sofShmaMga72Fixed', 'minchaKetanaFixed', 'plagFixed'])
+  'sofShmaBenIshChai', 'sofTfillaBenIshChai', 'plagBenIshChai', 'sofShmaGraFixed', 'sofTfillaGraFixed', 'sofShmaMga72Fixed', 'minchaKetanaFixed', 'plagFixed'])
 
 /** Zmanim that need the place's terrain horizon (Coordinates.terrainHorizon); null without it. */
 export const TERRAIN_ZMANIM: ReadonlySet<ZmanName> = new Set<ZmanName>(['sunriseTerrain', 'sunsetTerrain'])
@@ -181,15 +181,14 @@ const TZEIT_GEONIM = 3.7
 const TZEIT_HILLEL = 3.8
 /**
  * Misheyakir 7.65 deg (about 36 min): Igrot Moshe OC 4:6 ("about 35, perhaps 40 minutes before netz") - checked in the text;
- * Rav Yaakov Kamenetsky, Zmanei Yisrael p. 117 (as cited).
- * 12.85 deg (about 57 min): Rav Binyamin Zilber, Birur Halacha OC 18, for a time of need (as cited).
+ * 12.85 deg (about 57 min): Rav Binyamin Zilber, Birur Halacha OC 18, for a time of need (cited at shulchanaruchharav.com/?p=13111).
  */
 const MISHEYAKIR_7_65 = 7.65
 const MISHEYAKIR_12_85 = 12.85
 /**
  * Baal HaTanya (Chabad): netz / shkia amiti at the sun's centre 1.583 deg below the true horizon; dawn 16.9 deg; nightfall 6 deg
- * (Siddur of the Baal HaTanya; chabad.org aid 3209349 - as cited; the Siddur is not in the local
- * library). Note: Shulchan Aruch HaRav OC 261:5 rules like Rabbeinu Tam for the end of Shabbat (4 mil; a mil of 24 min is the
+ * (chabad.org, "About Our Zmanim Calculations", aid 3209349: netz/shkia amiti at the sun's centre 1.583 deg below the
+ * horizon, dawn 16.9 deg, nightfall 6 deg). Note: Shulchan Aruch HaRav OC 261:5 rules like Rabbeinu Tam for the end of Shabbat (4 mil; a mil of 24 min is the
  * main view, 18 min to be strict - OC 459:10) and OC 89:1 puts dawn 4 mil before netz - checked in the text; see tzeitRt96.
  */
 const BAAL_HATANYA_HORIZON = 1.583
@@ -200,7 +199,8 @@ const TZEIT_645 = 6.45
 /**
  * The Yereim's bein hashmashot: 3/4 mil (24 minutes a mil = 18 minutes) before sunset, by the sun's position: its
  * height above the true horizon 18 minutes before sea-level sunset in Jerusalem at the equinox, computed with this
- * library's own SPA (2.990 deg in March, 2.995 deg in September 2026).
+ * library's own SPA (2.990 deg in March, 2.995 deg in September 2026). Sefer Yereim: bein hashmashot is 3/4 mil, beginning
+ * before Ulla's sunset - checked in the text.
  */
 const BH_YEREIM = 2.99
 /**
@@ -542,6 +542,11 @@ export function zmanInstants(place: Coordinates, date: CivilDate, which: readonl
       // An asymmetric day: dawn 16.1 deg to nightfall 7.083 deg (Ben Ish Chai and others).
       case 'sofShmaAsym': ms = asym(3); break
       case 'sofTfillaAsym': ms = asym(4); break
+      // Ben Ish Chai (Shana Rishona, Vayakhel): hours counted from dawn to nightfall, nightfall being a third of an
+      // hour after sunset (the Baghdad custom he received) - checked in the text. Dawn: 72 minutes (Pesachim 94a).
+      case 'sofShmaBenIshChai': ms = Day.shaahBased(today.rise(G + ALOT), today.sunset() + 20 * MINUTE_MS, 3); break
+      case 'sofTfillaBenIshChai': ms = Day.shaahBased(today.rise(G + ALOT), today.sunset() + 20 * MINUTE_MS, 4); break
+      case 'plagBenIshChai': ms = Day.shaahBased(today.rise(G + ALOT), today.sunset() + 20 * MINUTE_MS, 10.75); break
       case 'plagAsym': ms = asym(10.75); break
       default: throw new Error(`Unknown zman '${String(name)}'`)
     }

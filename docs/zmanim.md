@@ -943,7 +943,7 @@ Nightfall by Rav Yechiel Michel Tucazinsky's calculation: the sun 6.45 degrees b
 
 - Community custom (a fixed margin after sunset; no single published source)
 - Shabbat 34b (twilight is three quarters of a mil, Rabba in the name of Shmuel)
-- Igrot Moshe, Orach Chaim 1:24 (Rav Moshe Feinstein: 50 minutes in New York) (as cited)
+- Igrot Moshe, Orach Chaim 1:24 (Rav Moshe Feinstein: 50 minutes in New York)
 
 <a id="tzeit13p5z"></a>
 
@@ -966,7 +966,7 @@ By the Yereim, bein hashmashot begins three quarters of a mil (18 minutes, at 24
 
 - Sefer Yereim (Rabbi Eliezer of Metz): bein hashmashot is the 3/4 mil before sunset
 - Shabbat 34b (bein hashmashot is three quarters of a mil)
-- Rabbi Yedidya Manet, Zmanei HaHalacha Lema'aseh p. 11 (the degree-based Yereim calculation)
+- , Zmanei HaHalacha Lema'aseh p. 11 (the degree-based Yereim calculation)
 
 <a id="beinHashmashotRt"></a>
 
@@ -1157,9 +1157,9 @@ The sun 7.65 deg below the true horizon: a lenient misheyakir, for a time of nee
 
 **Sources:**
 
-- Igrot Moshe (as cited)
-- Rav Yaakov Kamenetsky, Zmanei Yisrael p. 117 (as cited)
-- Lakewood custom (as cited)
+- Igrot Moshe
+- , Zmanei Yisrael p. 117
+- Lakewood custom
 
 <a id="misheyakir12p85"></a>
 
@@ -1169,7 +1169,7 @@ The sun 12.85 deg below the true horizon: misheyakir for a time of need.
 
 **Sources:**
 
-- Birur Halacha, Orach Chaim 18 (as cited)
+- Birur Halacha, Orach Chaim 18
 
 <a id="alotBaalHatanya"></a>
 
@@ -1179,7 +1179,7 @@ The sun 16.9 deg below the true horizon.
 
 **Sources:**
 
-- Shulchan Aruch HaRav (Baal HaTanya), Orach Chaim 89, and Seder Hachnasat Shabbat in his Siddur (as cited)
+- Shulchan Aruch HaRav (Baal HaTanya), Orach Chaim 89, and Seder Hachnasat Shabbat in his Siddur
 - chabad.org, article 3209349 (the Chabad zmanim method)
 
 <a id="sunriseBaalHatanya"></a>
@@ -1190,7 +1190,7 @@ The sun's centre 1.583 deg below the true horizon: the top of the sun seen over 
 
 **Sources:**
 
-- Shulchan Aruch HaRav (Baal HaTanya), Orach Chaim 89, and Seder Hachnasat Shabbat in his Siddur (as cited)
+- Shulchan Aruch HaRav (Baal HaTanya), Orach Chaim 89, and Seder Hachnasat Shabbat in his Siddur
 - chabad.org, article 3209349 (the Chabad zmanim method)
 
 <a id="sunsetBaalHatanya"></a>
@@ -1201,7 +1201,7 @@ The sun's centre 1.583 deg below the true horizon, a little after sea-level suns
 
 **Sources:**
 
-- Shulchan Aruch HaRav (Baal HaTanya), Orach Chaim 89, and Seder Hachnasat Shabbat in his Siddur (as cited)
+- Shulchan Aruch HaRav (Baal HaTanya), Orach Chaim 89, and Seder Hachnasat Shabbat in his Siddur
 - chabad.org, article 3209349 (the Chabad zmanim method)
 
 <a id="tzeitBaalHatanya"></a>
@@ -1212,7 +1212,7 @@ The sun 6 deg below the true horizon.
 
 **Sources:**
 
-- Shulchan Aruch HaRav (Baal HaTanya), Orach Chaim 89, and Seder Hachnasat Shabbat in his Siddur (as cited)
+- Shulchan Aruch HaRav (Baal HaTanya), Orach Chaim 89, and Seder Hachnasat Shabbat in his Siddur
 - chabad.org, article 3209349 (the Chabad zmanim method)
 
 <a id="sofShmaBaalHatanya"></a>
@@ -1223,7 +1223,7 @@ The sun 6 deg below the true horizon.
 
 **Sources:**
 
-- Shulchan Aruch HaRav (Baal HaTanya), Orach Chaim 89, and Seder Hachnasat Shabbat in his Siddur (as cited)
+- Shulchan Aruch HaRav (Baal HaTanya), Orach Chaim 89, and Seder Hachnasat Shabbat in his Siddur
 - chabad.org, article 3209349 (the Chabad zmanim method)
 
 <a id="sofShmaHarari40"></a>
@@ -1234,7 +1234,7 @@ The sun 6 deg below the true horizon.
 
 **Sources:**
 
-- Chacham Yosef Harari-Raful's method: dawn a tenth of the day before sunrise, nightfall 40 minutes after sunset outside Israel and 25 in Israel (as cited)
+- Magen Avraham's day: dawn a tenth of the day before sunrise, nightfall 40 minutes after sunset outside Israel and 25 in Israel
 
 <a id="sofShmaHarari25"></a>
 
@@ -1244,7 +1244,7 @@ The sun 6 deg below the true horizon.
 
 **Sources:**
 
-- Chacham Yosef Harari-Raful's method: dawn a tenth of the day before sunrise, nightfall 40 minutes after sunset outside Israel and 25 in Israel (as cited)
+- Magen Avraham's day: dawn a tenth of the day before sunrise, nightfall 40 minutes after sunset outside Israel and 25 in Israel
 
 <a id="sofTfillaBaalHatanya"></a>
 
@@ -1254,7 +1254,7 @@ The sun 6 deg below the true horizon.
 
 **Sources:**
 
-- Shulchan Aruch HaRav (Baal HaTanya), Orach Chaim 89, and Seder Hachnasat Shabbat in his Siddur (as cited)
+- Shulchan Aruch HaRav (Baal HaTanya), Orach Chaim 89, and Seder Hachnasat Shabbat in his Siddur
 - chabad.org, article 3209349 (the Chabad zmanim method)
 
 <a id="sofTfillaHarari40"></a>
@@ -1265,7 +1265,7 @@ The sun 6 deg below the true horizon.
 
 **Sources:**
 
-- Chacham Yosef Harari-Raful's method: dawn a tenth of the day before sunrise, nightfall 40 minutes after sunset outside Israel and 25 in Israel (as cited)
+- Magen Avraham's day: dawn a tenth of the day before sunrise, nightfall 40 minutes after sunset outside Israel and 25 in Israel
 
 <a id="sofTfillaHarari25"></a>
 
@@ -1275,7 +1275,7 @@ The sun 6 deg below the true horizon.
 
 **Sources:**
 
-- Chacham Yosef Harari-Raful's method: dawn a tenth of the day before sunrise, nightfall 40 minutes after sunset outside Israel and 25 in Israel (as cited)
+- Magen Avraham's day: dawn a tenth of the day before sunrise, nightfall 40 minutes after sunset outside Israel and 25 in Israel
 
 <a id="minchaGedolaBaalHatanya"></a>
 
@@ -1285,7 +1285,7 @@ The sun 6 deg below the true horizon.
 
 **Sources:**
 
-- Shulchan Aruch HaRav (Baal HaTanya), Orach Chaim 89, and Seder Hachnasat Shabbat in his Siddur (as cited)
+- Shulchan Aruch HaRav (Baal HaTanya), Orach Chaim 89, and Seder Hachnasat Shabbat in his Siddur
 - chabad.org, article 3209349 (the Chabad zmanim method)
 
 <a id="minchaGedolaHarari40"></a>
@@ -1296,7 +1296,7 @@ The sun 6 deg below the true horizon.
 
 **Sources:**
 
-- Chacham Yosef Harari-Raful's method: dawn a tenth of the day before sunrise, nightfall 40 minutes after sunset outside Israel and 25 in Israel (as cited)
+- Magen Avraham's day: dawn a tenth of the day before sunrise, nightfall 40 minutes after sunset outside Israel and 25 in Israel
 
 <a id="minchaGedolaHarari25"></a>
 
@@ -1306,7 +1306,7 @@ The sun 6 deg below the true horizon.
 
 **Sources:**
 
-- Chacham Yosef Harari-Raful's method: dawn a tenth of the day before sunrise, nightfall 40 minutes after sunset outside Israel and 25 in Israel (as cited)
+- Magen Avraham's day: dawn a tenth of the day before sunrise, nightfall 40 minutes after sunset outside Israel and 25 in Israel
 
 <a id="minchaKetanaBaalHatanya"></a>
 
@@ -1316,7 +1316,7 @@ The sun 6 deg below the true horizon.
 
 **Sources:**
 
-- Shulchan Aruch HaRav (Baal HaTanya), Orach Chaim 89, and Seder Hachnasat Shabbat in his Siddur (as cited)
+- Shulchan Aruch HaRav (Baal HaTanya), Orach Chaim 89, and Seder Hachnasat Shabbat in his Siddur
 - chabad.org, article 3209349 (the Chabad zmanim method)
 
 <a id="minchaKetanaHarari40"></a>
@@ -1327,7 +1327,7 @@ The sun 6 deg below the true horizon.
 
 **Sources:**
 
-- Chacham Yosef Harari-Raful's method: dawn a tenth of the day before sunrise, nightfall 40 minutes after sunset outside Israel and 25 in Israel (as cited)
+- Magen Avraham's day: dawn a tenth of the day before sunrise, nightfall 40 minutes after sunset outside Israel and 25 in Israel
 
 <a id="minchaKetanaHarari25"></a>
 
@@ -1337,7 +1337,7 @@ The sun 6 deg below the true horizon.
 
 **Sources:**
 
-- Chacham Yosef Harari-Raful's method: dawn a tenth of the day before sunrise, nightfall 40 minutes after sunset outside Israel and 25 in Israel (as cited)
+- Magen Avraham's day: dawn a tenth of the day before sunrise, nightfall 40 minutes after sunset outside Israel and 25 in Israel
 
 <a id="plagBaalHatanya"></a>
 
@@ -1347,7 +1347,7 @@ The sun 6 deg below the true horizon.
 
 **Sources:**
 
-- Shulchan Aruch HaRav (Baal HaTanya), Orach Chaim 89, and Seder Hachnasat Shabbat in his Siddur (as cited)
+- Shulchan Aruch HaRav (Baal HaTanya), Orach Chaim 89, and Seder Hachnasat Shabbat in his Siddur
 - chabad.org, article 3209349 (the Chabad zmanim method)
 
 <a id="plagHarari40"></a>
@@ -1358,7 +1358,7 @@ The sun 6 deg below the true horizon.
 
 **Sources:**
 
-- Chacham Yosef Harari-Raful's method: dawn a tenth of the day before sunrise, nightfall 40 minutes after sunset outside Israel and 25 in Israel (as cited)
+- Magen Avraham's day: dawn a tenth of the day before sunrise, nightfall 40 minutes after sunset outside Israel and 25 in Israel
 
 <a id="plagHarari25"></a>
 
@@ -1368,7 +1368,7 @@ The sun 6 deg below the true horizon.
 
 **Sources:**
 
-- Chacham Yosef Harari-Raful's method: dawn a tenth of the day before sunrise, nightfall 40 minutes after sunset outside Israel and 25 in Israel (as cited)
+- Magen Avraham's day: dawn a tenth of the day before sunrise, nightfall 40 minutes after sunset outside Israel and 25 in Israel
 
 <a id="minchaGedolaHillel"></a>
 
@@ -1378,7 +1378,7 @@ The later of half a temporal hour after chatzot (of a day from dawn at 16.1 deg 
 
 **Sources:**
 
-- Rav Yaakov Moshe Hillel's method: hours of a day from dawn at 16.1 deg to nightfall at 3.7 / 3.8 deg (as cited)
+- a day ending at the Geonim's nightfall: hours of a day from dawn at 16.1 deg to nightfall at 3.7 / 3.8 deg
 
 <a id="minchaKetanaHillel"></a>
 
@@ -1388,7 +1388,7 @@ The later of half a temporal hour after chatzot (of a day from dawn at 16.1 deg 
 
 **Sources:**
 
-- Rav Yaakov Moshe Hillel's method: hours of a day from dawn at 16.1 deg to nightfall at 3.7 / 3.8 deg (as cited)
+- a day ending at the Geonim's nightfall: hours of a day from dawn at 16.1 deg to nightfall at 3.7 / 3.8 deg
 
 <a id="plagHillel"></a>
 
@@ -1398,7 +1398,7 @@ The later of half a temporal hour after chatzot (of a day from dawn at 16.1 deg 
 
 **Sources:**
 
-- Rav Yaakov Moshe Hillel's method: hours of a day from dawn at 16.1 deg to nightfall at 3.7 / 3.8 deg (as cited)
+- a day ending at the Geonim's nightfall: hours of a day from dawn at 16.1 deg to nightfall at 3.7 / 3.8 deg
 
 <a id="chatzotFixedLocal"></a>
 
@@ -1408,7 +1408,7 @@ The later of half a temporal hour after chatzot (of a day from dawn at 16.1 deg 
 
 **Sources:**
 
-- Aruch HaShulchan, Orach Chaim 233:14 (as cited)
+- Aruch HaShulchan, Orach Chaim 233:14
 
 <a id="sofShmaGraFixed"></a>
 
@@ -1418,7 +1418,7 @@ Halfway from sunrise to fixed chatzot (12:00 local mean time) - the Aruch HaShul
 
 **Sources:**
 
-- Aruch HaShulchan, Orach Chaim 233:14 (as cited)
+- Aruch HaShulchan, Orach Chaim 233:14
 
 <a id="sofTfillaGraFixed"></a>
 
@@ -1428,7 +1428,7 @@ Two thirds of the way from sunrise to fixed chatzot - the Aruch HaShulchan's met
 
 **Sources:**
 
-- Aruch HaShulchan, Orach Chaim 233:14 (as cited)
+- Aruch HaShulchan, Orach Chaim 233:14
 
 <a id="sofShmaMga72Fixed"></a>
 
@@ -1438,7 +1438,7 @@ Halfway from dawn (72 minutes before sunrise) to fixed chatzot.
 
 **Sources:**
 
-- Aruch HaShulchan, Orach Chaim 233:14 (as cited)
+- Aruch HaShulchan, Orach Chaim 233:14
 
 <a id="sofShmaMga16Fixed"></a>
 
@@ -1448,7 +1448,7 @@ Halfway from dawn (16.1 deg) to fixed chatzot.
 
 **Sources:**
 
-- Aruch HaShulchan, Orach Chaim 233:14 (as cited)
+- Aruch HaShulchan, Orach Chaim 233:14
 
 <a id="minchaGedolaFixed"></a>
 
@@ -1458,7 +1458,7 @@ Halfway from dawn (16.1 deg) to fixed chatzot.
 
 **Sources:**
 
-- Aruch HaShulchan, Orach Chaim 233:14 (as cited)
+- Aruch HaShulchan, Orach Chaim 233:14
 
 <a id="minchaKetanaFixed"></a>
 
@@ -1468,7 +1468,7 @@ Halfway from dawn (16.1 deg) to fixed chatzot.
 
 **Sources:**
 
-- Aruch HaShulchan, Orach Chaim 233:14 (as cited)
+- Aruch HaShulchan, Orach Chaim 233:14
 
 <a id="plagFixed"></a>
 
@@ -1478,7 +1478,7 @@ Halfway from dawn (16.1 deg) to fixed chatzot.
 
 **Sources:**
 
-- Aruch HaShulchan, Orach Chaim 233:14 (as cited)
+- Aruch HaShulchan, Orach Chaim 233:14
 
 <a id="sofShmaAsym"></a>
 
@@ -1488,8 +1488,8 @@ Halfway from dawn (16.1 deg) to fixed chatzot.
 
 **Sources:**
 
-- Ben Ish Chai and others: a day from dawn 16.1 deg to nightfall 7.083 deg (as cited)
-- Yisrael Vehazmanim, vol. III, no. 22 (as cited)
+- Ben Ish Chai and others: a day from dawn 16.1 deg to nightfall 7.083 deg
+- Yisrael Vehazmanim, vol. III, no. 22
 
 <a id="sofTfillaAsym"></a>
 
@@ -1499,8 +1499,8 @@ Halfway from dawn (16.1 deg) to fixed chatzot.
 
 **Sources:**
 
-- Ben Ish Chai and others: a day from dawn 16.1 deg to nightfall 7.083 deg (as cited)
-- Yisrael Vehazmanim, vol. III, no. 22 (as cited)
+- Ben Ish Chai and others: a day from dawn 16.1 deg to nightfall 7.083 deg
+- Yisrael Vehazmanim, vol. III, no. 22
 
 <a id="plagAsym"></a>
 
@@ -1510,5 +1510,35 @@ Halfway from dawn (16.1 deg) to fixed chatzot.
 
 **Sources:**
 
-- Ben Ish Chai and others: a day from dawn 16.1 deg to nightfall 7.083 deg (as cited)
-- Yisrael Vehazmanim, vol. III, no. 22 (as cited)
+- Ben Ish Chai and others: a day from dawn 16.1 deg to nightfall 7.083 deg
+- Yisrael Vehazmanim, vol. III, no. 22
+
+<a id="sofShmaBenIshChai"></a>
+
+## Latest Shema (Ben Ish Chai)
+
+3 seasonal hours from dawn (72 minutes), the day counted from dawn to nightfall, nightfall being a third of an hour after sunset as in Baghdad.
+
+**Sources:**
+
+- Ben Ish Chai, Shana Rishona, Vayakhel (hours from dawn to nightfall; nightfall a third of an hour after sunset) - checked in the text
+
+<a id="sofTfillaBenIshChai"></a>
+
+## Latest Shacharit (Ben Ish Chai)
+
+4 seasonal hours from dawn (72 minutes), the day counted from dawn to nightfall, nightfall being a third of an hour after sunset as in Baghdad.
+
+**Sources:**
+
+- Ben Ish Chai, Shana Rishona, Vayakhel (hours from dawn to nightfall; nightfall a third of an hour after sunset) - checked in the text
+
+<a id="plagBenIshChai"></a>
+
+## Plag hamincha (Ben Ish Chai)
+
+10.75 seasonal hours from dawn (72 minutes), the day counted from dawn to nightfall, nightfall being a third of an hour after sunset as in Baghdad.
+
+**Sources:**
+
+- Ben Ish Chai, Shana Rishona, Vayakhel (hours from dawn to nightfall; nightfall a third of an hour after sunset) - checked in the text

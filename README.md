@@ -91,6 +91,7 @@ Also exported: `zmanInstants` (exact instants as BigInt epoch nanoseconds), `for
 | tzeit18Sun | 18 minutes (3/4 mil at 24 min a mil) by the sun's position: the sun 4.66 deg below the true horizon, its depth 18 minutes after sunset in Jerusalem at the equinox (computed with this library's SPA) | up |
 | tzeit645 | Rav Y. M. Tucazinsky's nightfall: the sun 6.45 deg below the true horizon (Birur Halacha, Yoreh De'ah 262) | up |
 | tzeit13p5z | 13.5 seasonal minutes (3/4 mil) after sunset - Rav Ovadia Yosef, Kitzur Yalkut Yosef OC, Hilchot Shabbat (checked in the text) | up |
+| sofShmaBenIshChai / sofTfillaBenIshChai / plagBenIshChai | 3 / 4 / 10.75 seasonal hours of a day from dawn (72 min) to nightfall a third of an hour after sunset - Ben Ish Chai, Shana Rishona, Vayakhel (checked in the text) | down / down / up |
 | alot96 / alot120 | dawn 4 / 5 mil of 24 min before sunrise (96 / 120 fixed minutes) - Shulchan Aruch HaRav OC 89:1 with OC 459:10 (checked in the text); the 120-minute reading per HaMichlol, Alot HaShachar note 3 | up |
 | tzeitRt90 / tzeitRt96 | Rabbeinu Tam: 4 mil of 22.5 / 24 min after sunset (90 / 96 fixed minutes) - Igrot Moshe OC 4:62; Shulchan Aruch HaRav OC 261:5 with OC 459:10 (checked in the text) | up |
 | beinHashmashotYereim | start of bein hashmashot per the Yereim: 3/4 mil (18 min) before sunset, as the sun 2.99 deg above the true horizon (its height 18 minutes before sunset in Jerusalem at the equinox); degree-based method per Rabbi Yedidya Manet, Zmanei HaHalacha Lema'aseh p. 11 | down |
@@ -101,9 +102,9 @@ Also exported: `zmanInstants` (exact instants as BigInt epoch nanoseconds), `for
 | alotBaalHatanya / tzeitBaalHatanya | Baal HaTanya: sun 16.9 deg below, morning / 6 deg below, evening (Shulchan Aruch HaRav; chabad.org 3209349) | up |
 | sunriseBaalHatanya / sunsetBaalHatanya | Baal HaTanya's netz / shkia amiti: the sun's centre 1.583 deg below the true horizon (a few minutes before sea-level sunrise / after sea-level sunset) | up / down |
 | sofShmaBaalHatanya / sofTfillaBaalHatanya / minchaGedolaBaalHatanya / minchaKetanaBaalHatanya / plagBaalHatanya | 3 / 4 / 6.5 / 9.5 / 10.75 temporal hours of the day netz amiti..shkia amiti | down / down / up / up / up |
-| sofShmaHarari40/25, sofTfillaHarari40/25, minchaGedolaHarari40/25, minchaKetanaHarari40/25, plagHarari40/25 | Chacham Yosef Harari-Raful's method: 3 / 4 / 6.5 / 9.5 / 10.75 temporal hours of a day from alot72z to sunset + 40 min (outside Israel) / + 25 min (Israel); its midpoint is not chatzot | down / down / up / up / up |
-| minchaGedolaHillel | Rav Yaakov Moshe Hillel's method: the later of chatzot + half a temporal hour of a day 16.1 deg..3.7 deg and chatzot + 30 min | up |
-| minchaKetanaHillel / plagHillel | Rav Yaakov Moshe Hillel's method: 2.5 / 1.25 temporal hours (of a day 16.1 deg..3.8 deg) before the sun is 3.8 deg below | up |
+| sofShmaHarari40/25, sofTfillaHarari40/25, minchaGedolaHarari40/25, minchaKetanaHarari40/25, plagHarari40/25 | Magen Avraham's day: 3 / 4 / 6.5 / 9.5 / 10.75 temporal hours of a day from alot72z to sunset + 40 min (outside Israel) / + 25 min (Israel); its midpoint is not chatzot | down / down / up / up / up |
+| minchaGedolaHillel | a day ending at the Geonim's nightfall: the later of chatzot + half a temporal hour of a day 16.1 deg..3.7 deg and chatzot + 30 min | up |
+| minchaKetanaHillel / plagHillel | a day ending at the Geonim's nightfall: 2.5 / 1.25 temporal hours (of a day 16.1 deg..3.8 deg) before the sun is 3.8 deg below | up |
 | chatzotFixedLocal | 12:00 local mean time (longitude / 15 hours from UTC); Aruch HaShulchan OC 233:14 (checked in the text) | nearest |
 | sofShmaGraFixed / sofTfillaGraFixed | half and two thirds of the morning to the fixed chatzot: sunrise + 1/2 / 2/3 of (chatzotFixedLocal - sunrise) | down |
 | sofShmaMga72Fixed / sofShmaMga16Fixed | dawn (72 min before sunrise / 16.1 deg) + half of (chatzotFixedLocal - dawn) | down |
@@ -297,10 +298,8 @@ npm test          # vitest; parity uses the recorded fixture test/fixtures/app-z
 ## Credits and licenses
 
 - Code: LGPL-2.1 (see LICENSE). The sun position is the clean-room NREL SPA (src/spa.ts, PROVENANCE.md); the
-  former NOAA port is gone, and there is no refraction, climate or luach-specific code from any other library.
-  The general zmanim design in src/zmanim.ts (temporal hours, the 72-minute Magen Avraham day, per-day caching,
-  the date-line rule) follows an earlier zmanim library zmanim by Eliyahu  (LGPL-2.1), as ported to Kotlin by
-  an earlier zmanim library ( LGPL-2.1), and is credited to them.
+  former NOAA port is gone. All code is this library's own; each zman is defined from the halachic sources cited
+  beside it (in src/zmanim.ts, data/explanations.json and the docs).
 - Place data: contains data from GeoNames (geonames.org), licensed under CC BY 4.0.
   Some neighbourhood coordinates come from Wikidata (CC0). Where Wikidata has no elevation, it comes from the
   Open-Meteo elevation API (CC BY 4.0), based on the Copernicus DEM GLO-90 (produced using Copernicus WorldDEM-90

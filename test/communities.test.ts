@@ -22,7 +22,7 @@ describe('communities', () => {
     const reads = useFileAssets()
     expect(reads).toEqual([])
     const en = await listCommunities('en')
-    expect(en.map((c) => c.id)).toEqual(['ashkenaz', 'mizrach', 'chabad', 'chabadSah', 'jerusalem', 'benIshChai', 'harariRaful', 'lakewood'])
+    expect(en.map((c) => c.id)).toEqual(['ashkenaz', 'mizrach', 'chabad', 'chabadSah', 'jerusalem', 'benIshChai', 'lakewood'])
     expect((await listCommunities('he'))[0]!.name).toContain('אשכנז')
     expect((await getCommunity('mizrach'))!.groups.sofShma).toBe('sofShmaMga72z')
     expect(await getCommunity('nope')).toBeUndefined()

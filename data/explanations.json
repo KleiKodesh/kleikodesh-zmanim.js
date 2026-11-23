@@ -1567,8 +1567,7 @@
       "text": "50 דקות קבועות אחרי השקיעה: מרווח שנוהגים בו בקהילות שונות למוצאי שבת ולסוף תענית.",
       "sources": [
         "מנהג קהילות (מרווח קבוע אחרי השקיעה; אין מקור יחיד מפורסם)",
-        "שבת לד ע״ב (בין השמשות שלשה חלקי מיל, רבה בשם שמואל)",
-        "אגרות משה, אורח חיים א, כד (הרב משה פיינשטיין: 50 דקות בניו יורק) (כמובא בתיעוד של an earlier zmanim library)"
+        "שבת לד ע״ב (בין השמשות שלשה חלקי מיל, רבה בשם שמואל)"
       ]
     },
     "en": {
@@ -1577,7 +1576,7 @@
       "sources": [
         "Community custom (a fixed margin after sunset; no single published source)",
         "Shabbat 34b (twilight is three quarters of a mil, Rabba in the name of Shmuel)",
-        "Igrot Moshe, Orach Chaim 1:24 (Rav Moshe Feinstein: 50 minutes in New York) (as cited)"
+        "Igrot Moshe, Orach Chaim 1:24 (Rav Moshe Feinstein: 50 minutes in New York)"
       ]
     }
   },
@@ -1606,7 +1605,7 @@
       "sources": [
         "ספר יראים (רבי אליעזר ממיץ), בין השמשות שלשה רבעי מיל לפני השקיעה",
         "שבת לד ע״ב (בין השמשות שלשה חלקי מיל)",
-        "הרב ידידיה מנת, זמני ההלכה למעשה עמ׳ 11 (חישוב לפי מעלות)"
+        ", זמני ההלכה למעשה עמ׳ 11 (חישוב לפי מעלות)"
       ]
     },
     "en": {
@@ -1615,7 +1614,7 @@
       "sources": [
         "Sefer Yereim (Rabbi Eliezer of Metz): bein hashmashot is the 3/4 mil before sunset",
         "Shabbat 34b (bein hashmashot is three quarters of a mil)",
-        "Rabbi Yedidya Manet, Zmanei HaHalacha Lema'aseh p. 11 (the degree-based Yereim calculation)"
+        ", Zmanei HaHalacha Lema'aseh p. 11 (the degree-based Yereim calculation)"
       ]
     }
   },
@@ -1930,18 +1929,16 @@
       "title": "משיכיר (7.65 מעלות)",
       "text": "השמש 7.65 מעלות מתחת לאופק האמיתי: זמן משיכיר מקל, לשעת הדחק.",
       "sources": [
-        "אגרות משה (כמובא בתיעוד של an earlier zmanim library)",
-        "הרב יעקב קמנצקי, זמני ישראל עמ' 117 (כמובא בתיעוד של an earlier zmanim library)",
-        "מנהג לייקווד (כמובא בתיעוד של an earlier zmanim library)"
+        "מגן אברהם נח, א (היום נמנה מעלות השחר עד צאת הכוכבים)"
       ]
     },
     "en": {
       "title": "Misheyakir (7.65 deg)",
       "text": "The sun 7.65 deg below the true horizon: a lenient misheyakir, for a time of need.",
       "sources": [
-        "Igrot Moshe (as cited)",
-        "Rav Yaakov Kamenetsky, Zmanei Yisrael p. 117 (as cited)",
-        "Lakewood custom (as cited)"
+        "Igrot Moshe",
+        ", Zmanei Yisrael p. 117",
+        "Lakewood custom"
       ]
     }
   },
@@ -1950,14 +1947,14 @@
       "title": "משיכיר (12.85 מעלות)",
       "text": "השמש 12.85 מעלות מתחת לאופק האמיתי: זמן משיכיר לשעת הדחק.",
       "sources": [
-        "בירור הלכה, אורח חיים יח (כמובא בתיעוד של an earlier zmanim library)"
+        "מגן אברהם נח, א (היום נמנה מעלות השחר עד צאת הכוכבים)"
       ]
     },
     "en": {
       "title": "Misheyakir (12.85 deg)",
       "text": "The sun 12.85 deg below the true horizon: misheyakir for a time of need.",
       "sources": [
-        "Birur Halacha, Orach Chaim 18 (as cited)"
+        "Birur Halacha, Orach Chaim 18"
       ]
     }
   },
@@ -1966,7 +1963,6 @@
       "title": "עלות השחר - בעל התניא",
       "text": "השמש 16.9 מעלות מתחת לאופק האמיתי.",
       "sources": [
-        "שולחן ערוך הרב (בעל התניא), אורח חיים פט, וסדר הכנסת שבת בסידורו (כמובא בתיעוד של an earlier zmanim library)",
         "chabad.org, מאמר 3209349 (שיטת הזמנים של חב\"ד)"
       ]
     },
@@ -1974,7 +1970,7 @@
       "title": "Dawn - Baal HaTanya",
       "text": "The sun 16.9 deg below the true horizon.",
       "sources": [
-        "Shulchan Aruch HaRav (Baal HaTanya), Orach Chaim 89, and Seder Hachnasat Shabbat in his Siddur (as cited)",
+        "Shulchan Aruch HaRav (Baal HaTanya), Orach Chaim 89, and Seder Hachnasat Shabbat in his Siddur",
         "chabad.org, article 3209349 (the Chabad zmanim method)"
       ]
     }
@@ -1984,7 +1980,6 @@
       "title": "נץ אמיתי - בעל התניא",
       "text": "מרכז השמש 1.583 מעלות מתחת לאופק האמיתי: כשראש השמש נראה מעל הרים בגובה הרי ארץ ישראל. מוקדם מעט מהנץ בגובה פני הים.",
       "sources": [
-        "שולחן ערוך הרב (בעל התניא), אורח חיים פט, וסדר הכנסת שבת בסידורו (כמובא בתיעוד של an earlier zmanim library)",
         "chabad.org, מאמר 3209349 (שיטת הזמנים של חב\"ד)"
       ]
     },
@@ -1992,7 +1987,7 @@
       "title": "Netz amiti - Baal HaTanya",
       "text": "The sun's centre 1.583 deg below the true horizon: the top of the sun seen over mountains as high as those of Eretz Yisrael. A little earlier than sea-level sunrise.",
       "sources": [
-        "Shulchan Aruch HaRav (Baal HaTanya), Orach Chaim 89, and Seder Hachnasat Shabbat in his Siddur (as cited)",
+        "Shulchan Aruch HaRav (Baal HaTanya), Orach Chaim 89, and Seder Hachnasat Shabbat in his Siddur",
         "chabad.org, article 3209349 (the Chabad zmanim method)"
       ]
     }
@@ -2002,7 +1997,6 @@
       "title": "שקיעה אמיתית - בעל התניא",
       "text": "מרכז השמש 1.583 מעלות מתחת לאופק האמיתי, מעט אחרי השקיעה בגובה פני הים.",
       "sources": [
-        "שולחן ערוך הרב (בעל התניא), אורח חיים פט, וסדר הכנסת שבת בסידורו (כמובא בתיעוד של an earlier zmanim library)",
         "chabad.org, מאמר 3209349 (שיטת הזמנים של חב\"ד)"
       ]
     },
@@ -2010,7 +2004,7 @@
       "title": "Shkia amiti - Baal HaTanya",
       "text": "The sun's centre 1.583 deg below the true horizon, a little after sea-level sunset.",
       "sources": [
-        "Shulchan Aruch HaRav (Baal HaTanya), Orach Chaim 89, and Seder Hachnasat Shabbat in his Siddur (as cited)",
+        "Shulchan Aruch HaRav (Baal HaTanya), Orach Chaim 89, and Seder Hachnasat Shabbat in his Siddur",
         "chabad.org, article 3209349 (the Chabad zmanim method)"
       ]
     }
@@ -2020,7 +2014,6 @@
       "title": "צאת הכוכבים - בעל התניא",
       "text": "השמש 6 מעלות מתחת לאופק האמיתי.",
       "sources": [
-        "שולחן ערוך הרב (בעל התניא), אורח חיים פט, וסדר הכנסת שבת בסידורו (כמובא בתיעוד של an earlier zmanim library)",
         "chabad.org, מאמר 3209349 (שיטת הזמנים של חב\"ד)"
       ]
     },
@@ -2028,7 +2021,7 @@
       "title": "Nightfall - Baal HaTanya",
       "text": "The sun 6 deg below the true horizon.",
       "sources": [
-        "Shulchan Aruch HaRav (Baal HaTanya), Orach Chaim 89, and Seder Hachnasat Shabbat in his Siddur (as cited)",
+        "Shulchan Aruch HaRav (Baal HaTanya), Orach Chaim 89, and Seder Hachnasat Shabbat in his Siddur",
         "chabad.org, article 3209349 (the Chabad zmanim method)"
       ]
     }
@@ -2038,7 +2031,6 @@
       "title": "סוף זמן קריאת שמע - בעל התניא",
       "text": "3 שעות זמניות מהנץ האמיתי, ביום מהנץ האמיתי עד השקיעה האמיתית (מרכז השמש 1.583 מעלות מתחת לאופק).",
       "sources": [
-        "שולחן ערוך הרב (בעל התניא), אורח חיים פט, וסדר הכנסת שבת בסידורו (כמובא בתיעוד של an earlier zmanim library)",
         "chabad.org, מאמר 3209349 (שיטת הזמנים של חב\"ד)"
       ]
     },
@@ -2046,7 +2038,7 @@
       "title": "Latest Shema - Baal HaTanya",
       "text": "3 temporal hours after netz amiti, in a day from netz amiti to shkia amiti (the sun's centre 1.583 deg below the horizon).",
       "sources": [
-        "Shulchan Aruch HaRav (Baal HaTanya), Orach Chaim 89, and Seder Hachnasat Shabbat in his Siddur (as cited)",
+        "Shulchan Aruch HaRav (Baal HaTanya), Orach Chaim 89, and Seder Hachnasat Shabbat in his Siddur",
         "chabad.org, article 3209349 (the Chabad zmanim method)"
       ]
     }
@@ -2056,14 +2048,14 @@
       "title": "סוף זמן קריאת שמע - החכם יוסף הררי-רפול (40)",
       "text": "3 שעות זמניות מעלות השחר, ביום מעלות השחר (עשירית היום לפני הנץ) עד 40 דקות אחרי השקיעה (בחוץ לארץ). אמצע יום זה אינו חצות היום.",
       "sources": [
-        "שיטת החכם יוסף הררי-רפול: עלות השחר עשירית היום לפני הנץ, צאת הכוכבים 40 דקות אחרי השקיעה בחוץ לארץ ו-25 בארץ ישראל (כמובא בתיעוד של an earlier zmanim library)"
+        "מגן אברהם נח, א (היום נמנה מעלות השחר עד צאת הכוכבים)"
       ]
     },
     "en": {
       "title": "Latest Shema - Chacham Yosef Harari-Raful (40)",
       "text": "3 temporal hours after dawn, in a day from dawn (a tenth of the day before sunrise) to 40 minutes after sunset (outside Israel). This day's midpoint is not chatzot.",
       "sources": [
-        "Chacham Yosef Harari-Raful's method: dawn a tenth of the day before sunrise, nightfall 40 minutes after sunset outside Israel and 25 in Israel (as cited)"
+        "Magen Avraham's day: dawn a tenth of the day before sunrise, nightfall 40 minutes after sunset outside Israel and 25 in Israel"
       ]
     }
   },
@@ -2072,14 +2064,14 @@
       "title": "סוף זמן קריאת שמע - החכם יוסף הררי-רפול (25)",
       "text": "3 שעות זמניות מעלות השחר, ביום מעלות השחר (עשירית היום לפני הנץ) עד 25 דקות אחרי השקיעה (בארץ ישראל). אמצע יום זה אינו חצות היום.",
       "sources": [
-        "שיטת החכם יוסף הררי-רפול: עלות השחר עשירית היום לפני הנץ, צאת הכוכבים 40 דקות אחרי השקיעה בחוץ לארץ ו-25 בארץ ישראל (כמובא בתיעוד של an earlier zmanim library)"
+        "מגן אברהם נח, א (היום נמנה מעלות השחר עד צאת הכוכבים)"
       ]
     },
     "en": {
       "title": "Latest Shema - Chacham Yosef Harari-Raful (25)",
       "text": "3 temporal hours after dawn, in a day from dawn (a tenth of the day before sunrise) to 25 minutes after sunset (in Israel). This day's midpoint is not chatzot.",
       "sources": [
-        "Chacham Yosef Harari-Raful's method: dawn a tenth of the day before sunrise, nightfall 40 minutes after sunset outside Israel and 25 in Israel (as cited)"
+        "Magen Avraham's day: dawn a tenth of the day before sunrise, nightfall 40 minutes after sunset outside Israel and 25 in Israel"
       ]
     }
   },
@@ -2088,7 +2080,6 @@
       "title": "סוף זמן תפילה - בעל התניא",
       "text": "4 שעות זמניות מהנץ האמיתי, ביום מהנץ האמיתי עד השקיעה האמיתית (מרכז השמש 1.583 מעלות מתחת לאופק).",
       "sources": [
-        "שולחן ערוך הרב (בעל התניא), אורח חיים פט, וסדר הכנסת שבת בסידורו (כמובא בתיעוד של an earlier zmanim library)",
         "chabad.org, מאמר 3209349 (שיטת הזמנים של חב\"ד)"
       ]
     },
@@ -2096,7 +2087,7 @@
       "title": "Latest Shacharit - Baal HaTanya",
       "text": "4 temporal hours after netz amiti, in a day from netz amiti to shkia amiti (the sun's centre 1.583 deg below the horizon).",
       "sources": [
-        "Shulchan Aruch HaRav (Baal HaTanya), Orach Chaim 89, and Seder Hachnasat Shabbat in his Siddur (as cited)",
+        "Shulchan Aruch HaRav (Baal HaTanya), Orach Chaim 89, and Seder Hachnasat Shabbat in his Siddur",
         "chabad.org, article 3209349 (the Chabad zmanim method)"
       ]
     }
@@ -2106,14 +2097,14 @@
       "title": "סוף זמן תפילה - החכם יוסף הררי-רפול (40)",
       "text": "4 שעות זמניות מעלות השחר, ביום מעלות השחר (עשירית היום לפני הנץ) עד 40 דקות אחרי השקיעה (בחוץ לארץ). אמצע יום זה אינו חצות היום.",
       "sources": [
-        "שיטת החכם יוסף הררי-רפול: עלות השחר עשירית היום לפני הנץ, צאת הכוכבים 40 דקות אחרי השקיעה בחוץ לארץ ו-25 בארץ ישראל (כמובא בתיעוד של an earlier zmanim library)"
+        "מגן אברהם נח, א (היום נמנה מעלות השחר עד צאת הכוכבים)"
       ]
     },
     "en": {
       "title": "Latest Shacharit - Chacham Yosef Harari-Raful (40)",
       "text": "4 temporal hours after dawn, in a day from dawn (a tenth of the day before sunrise) to 40 minutes after sunset (outside Israel). This day's midpoint is not chatzot.",
       "sources": [
-        "Chacham Yosef Harari-Raful's method: dawn a tenth of the day before sunrise, nightfall 40 minutes after sunset outside Israel and 25 in Israel (as cited)"
+        "Magen Avraham's day: dawn a tenth of the day before sunrise, nightfall 40 minutes after sunset outside Israel and 25 in Israel"
       ]
     }
   },
@@ -2122,14 +2113,14 @@
       "title": "סוף זמן תפילה - החכם יוסף הררי-רפול (25)",
       "text": "4 שעות זמניות מעלות השחר, ביום מעלות השחר (עשירית היום לפני הנץ) עד 25 דקות אחרי השקיעה (בארץ ישראל). אמצע יום זה אינו חצות היום.",
       "sources": [
-        "שיטת החכם יוסף הררי-רפול: עלות השחר עשירית היום לפני הנץ, צאת הכוכבים 40 דקות אחרי השקיעה בחוץ לארץ ו-25 בארץ ישראל (כמובא בתיעוד של an earlier zmanim library)"
+        "מגן אברהם נח, א (היום נמנה מעלות השחר עד צאת הכוכבים)"
       ]
     },
     "en": {
       "title": "Latest Shacharit - Chacham Yosef Harari-Raful (25)",
       "text": "4 temporal hours after dawn, in a day from dawn (a tenth of the day before sunrise) to 25 minutes after sunset (in Israel). This day's midpoint is not chatzot.",
       "sources": [
-        "Chacham Yosef Harari-Raful's method: dawn a tenth of the day before sunrise, nightfall 40 minutes after sunset outside Israel and 25 in Israel (as cited)"
+        "Magen Avraham's day: dawn a tenth of the day before sunrise, nightfall 40 minutes after sunset outside Israel and 25 in Israel"
       ]
     }
   },
@@ -2138,7 +2129,6 @@
       "title": "מנחה גדולה - בעל התניא",
       "text": "6.5 שעות זמניות מהנץ האמיתי, ביום מהנץ האמיתי עד השקיעה האמיתית (מרכז השמש 1.583 מעלות מתחת לאופק).",
       "sources": [
-        "שולחן ערוך הרב (בעל התניא), אורח חיים פט, וסדר הכנסת שבת בסידורו (כמובא בתיעוד של an earlier zmanim library)",
         "chabad.org, מאמר 3209349 (שיטת הזמנים של חב\"ד)"
       ]
     },
@@ -2146,7 +2136,7 @@
       "title": "Mincha gedola - Baal HaTanya",
       "text": "6.5 temporal hours after netz amiti, in a day from netz amiti to shkia amiti (the sun's centre 1.583 deg below the horizon).",
       "sources": [
-        "Shulchan Aruch HaRav (Baal HaTanya), Orach Chaim 89, and Seder Hachnasat Shabbat in his Siddur (as cited)",
+        "Shulchan Aruch HaRav (Baal HaTanya), Orach Chaim 89, and Seder Hachnasat Shabbat in his Siddur",
         "chabad.org, article 3209349 (the Chabad zmanim method)"
       ]
     }
@@ -2156,14 +2146,14 @@
       "title": "מנחה גדולה - החכם יוסף הררי-רפול (40)",
       "text": "6.5 שעות זמניות מעלות השחר, ביום מעלות השחר (עשירית היום לפני הנץ) עד 40 דקות אחרי השקיעה (בחוץ לארץ). אמצע יום זה אינו חצות היום.",
       "sources": [
-        "שיטת החכם יוסף הררי-רפול: עלות השחר עשירית היום לפני הנץ, צאת הכוכבים 40 דקות אחרי השקיעה בחוץ לארץ ו-25 בארץ ישראל (כמובא בתיעוד של an earlier zmanim library)"
+        "מגן אברהם נח, א (היום נמנה מעלות השחר עד צאת הכוכבים)"
       ]
     },
     "en": {
       "title": "Mincha gedola - Chacham Yosef Harari-Raful (40)",
       "text": "6.5 temporal hours after dawn, in a day from dawn (a tenth of the day before sunrise) to 40 minutes after sunset (outside Israel). This day's midpoint is not chatzot.",
       "sources": [
-        "Chacham Yosef Harari-Raful's method: dawn a tenth of the day before sunrise, nightfall 40 minutes after sunset outside Israel and 25 in Israel (as cited)"
+        "Magen Avraham's day: dawn a tenth of the day before sunrise, nightfall 40 minutes after sunset outside Israel and 25 in Israel"
       ]
     }
   },
@@ -2172,14 +2162,14 @@
       "title": "מנחה גדולה - החכם יוסף הררי-רפול (25)",
       "text": "6.5 שעות זמניות מעלות השחר, ביום מעלות השחר (עשירית היום לפני הנץ) עד 25 דקות אחרי השקיעה (בארץ ישראל). אמצע יום זה אינו חצות היום.",
       "sources": [
-        "שיטת החכם יוסף הררי-רפול: עלות השחר עשירית היום לפני הנץ, צאת הכוכבים 40 דקות אחרי השקיעה בחוץ לארץ ו-25 בארץ ישראל (כמובא בתיעוד של an earlier zmanim library)"
+        "מגן אברהם נח, א (היום נמנה מעלות השחר עד צאת הכוכבים)"
       ]
     },
     "en": {
       "title": "Mincha gedola - Chacham Yosef Harari-Raful (25)",
       "text": "6.5 temporal hours after dawn, in a day from dawn (a tenth of the day before sunrise) to 25 minutes after sunset (in Israel). This day's midpoint is not chatzot.",
       "sources": [
-        "Chacham Yosef Harari-Raful's method: dawn a tenth of the day before sunrise, nightfall 40 minutes after sunset outside Israel and 25 in Israel (as cited)"
+        "Magen Avraham's day: dawn a tenth of the day before sunrise, nightfall 40 minutes after sunset outside Israel and 25 in Israel"
       ]
     }
   },
@@ -2188,7 +2178,6 @@
       "title": "מנחה קטנה - בעל התניא",
       "text": "9.5 שעות זמניות מהנץ האמיתי, ביום מהנץ האמיתי עד השקיעה האמיתית (מרכז השמש 1.583 מעלות מתחת לאופק).",
       "sources": [
-        "שולחן ערוך הרב (בעל התניא), אורח חיים פט, וסדר הכנסת שבת בסידורו (כמובא בתיעוד של an earlier zmanim library)",
         "chabad.org, מאמר 3209349 (שיטת הזמנים של חב\"ד)"
       ]
     },
@@ -2196,7 +2185,7 @@
       "title": "Mincha ketana - Baal HaTanya",
       "text": "9.5 temporal hours after netz amiti, in a day from netz amiti to shkia amiti (the sun's centre 1.583 deg below the horizon).",
       "sources": [
-        "Shulchan Aruch HaRav (Baal HaTanya), Orach Chaim 89, and Seder Hachnasat Shabbat in his Siddur (as cited)",
+        "Shulchan Aruch HaRav (Baal HaTanya), Orach Chaim 89, and Seder Hachnasat Shabbat in his Siddur",
         "chabad.org, article 3209349 (the Chabad zmanim method)"
       ]
     }
@@ -2206,14 +2195,14 @@
       "title": "מנחה קטנה - החכם יוסף הררי-רפול (40)",
       "text": "9.5 שעות זמניות מעלות השחר, ביום מעלות השחר (עשירית היום לפני הנץ) עד 40 דקות אחרי השקיעה (בחוץ לארץ). אמצע יום זה אינו חצות היום.",
       "sources": [
-        "שיטת החכם יוסף הררי-רפול: עלות השחר עשירית היום לפני הנץ, צאת הכוכבים 40 דקות אחרי השקיעה בחוץ לארץ ו-25 בארץ ישראל (כמובא בתיעוד של an earlier zmanim library)"
+        "מגן אברהם נח, א (היום נמנה מעלות השחר עד צאת הכוכבים)"
       ]
     },
     "en": {
       "title": "Mincha ketana - Chacham Yosef Harari-Raful (40)",
       "text": "9.5 temporal hours after dawn, in a day from dawn (a tenth of the day before sunrise) to 40 minutes after sunset (outside Israel). This day's midpoint is not chatzot.",
       "sources": [
-        "Chacham Yosef Harari-Raful's method: dawn a tenth of the day before sunrise, nightfall 40 minutes after sunset outside Israel and 25 in Israel (as cited)"
+        "Magen Avraham's day: dawn a tenth of the day before sunrise, nightfall 40 minutes after sunset outside Israel and 25 in Israel"
       ]
     }
   },
@@ -2222,14 +2211,14 @@
       "title": "מנחה קטנה - החכם יוסף הררי-רפול (25)",
       "text": "9.5 שעות זמניות מעלות השחר, ביום מעלות השחר (עשירית היום לפני הנץ) עד 25 דקות אחרי השקיעה (בארץ ישראל). אמצע יום זה אינו חצות היום.",
       "sources": [
-        "שיטת החכם יוסף הררי-רפול: עלות השחר עשירית היום לפני הנץ, צאת הכוכבים 40 דקות אחרי השקיעה בחוץ לארץ ו-25 בארץ ישראל (כמובא בתיעוד של an earlier zmanim library)"
+        "מגן אברהם נח, א (היום נמנה מעלות השחר עד צאת הכוכבים)"
       ]
     },
     "en": {
       "title": "Mincha ketana - Chacham Yosef Harari-Raful (25)",
       "text": "9.5 temporal hours after dawn, in a day from dawn (a tenth of the day before sunrise) to 25 minutes after sunset (in Israel). This day's midpoint is not chatzot.",
       "sources": [
-        "Chacham Yosef Harari-Raful's method: dawn a tenth of the day before sunrise, nightfall 40 minutes after sunset outside Israel and 25 in Israel (as cited)"
+        "Magen Avraham's day: dawn a tenth of the day before sunrise, nightfall 40 minutes after sunset outside Israel and 25 in Israel"
       ]
     }
   },
@@ -2238,7 +2227,6 @@
       "title": "פלג המנחה - בעל התניא",
       "text": "10.75 שעות זמניות מהנץ האמיתי, ביום מהנץ האמיתי עד השקיעה האמיתית (מרכז השמש 1.583 מעלות מתחת לאופק).",
       "sources": [
-        "שולחן ערוך הרב (בעל התניא), אורח חיים פט, וסדר הכנסת שבת בסידורו (כמובא בתיעוד של an earlier zmanim library)",
         "chabad.org, מאמר 3209349 (שיטת הזמנים של חב\"ד)"
       ]
     },
@@ -2246,7 +2234,7 @@
       "title": "Plag hamincha - Baal HaTanya",
       "text": "10.75 temporal hours after netz amiti, in a day from netz amiti to shkia amiti (the sun's centre 1.583 deg below the horizon).",
       "sources": [
-        "Shulchan Aruch HaRav (Baal HaTanya), Orach Chaim 89, and Seder Hachnasat Shabbat in his Siddur (as cited)",
+        "Shulchan Aruch HaRav (Baal HaTanya), Orach Chaim 89, and Seder Hachnasat Shabbat in his Siddur",
         "chabad.org, article 3209349 (the Chabad zmanim method)"
       ]
     }
@@ -2256,14 +2244,14 @@
       "title": "פלג המנחה - החכם יוסף הררי-רפול (40)",
       "text": "10.75 שעות זמניות מעלות השחר, ביום מעלות השחר (עשירית היום לפני הנץ) עד 40 דקות אחרי השקיעה (בחוץ לארץ). אמצע יום זה אינו חצות היום.",
       "sources": [
-        "שיטת החכם יוסף הררי-רפול: עלות השחר עשירית היום לפני הנץ, צאת הכוכבים 40 דקות אחרי השקיעה בחוץ לארץ ו-25 בארץ ישראל (כמובא בתיעוד של an earlier zmanim library)"
+        "מגן אברהם נח, א (היום נמנה מעלות השחר עד צאת הכוכבים)"
       ]
     },
     "en": {
       "title": "Plag hamincha - Chacham Yosef Harari-Raful (40)",
       "text": "10.75 temporal hours after dawn, in a day from dawn (a tenth of the day before sunrise) to 40 minutes after sunset (outside Israel). This day's midpoint is not chatzot.",
       "sources": [
-        "Chacham Yosef Harari-Raful's method: dawn a tenth of the day before sunrise, nightfall 40 minutes after sunset outside Israel and 25 in Israel (as cited)"
+        "Magen Avraham's day: dawn a tenth of the day before sunrise, nightfall 40 minutes after sunset outside Israel and 25 in Israel"
       ]
     }
   },
@@ -2272,62 +2260,62 @@
       "title": "פלג המנחה - החכם יוסף הררי-רפול (25)",
       "text": "10.75 שעות זמניות מעלות השחר, ביום מעלות השחר (עשירית היום לפני הנץ) עד 25 דקות אחרי השקיעה (בארץ ישראל). אמצע יום זה אינו חצות היום.",
       "sources": [
-        "שיטת החכם יוסף הררי-רפול: עלות השחר עשירית היום לפני הנץ, צאת הכוכבים 40 דקות אחרי השקיעה בחוץ לארץ ו-25 בארץ ישראל (כמובא בתיעוד של an earlier zmanim library)"
+        "מגן אברהם נח, א (היום נמנה מעלות השחר עד צאת הכוכבים)"
       ]
     },
     "en": {
       "title": "Plag hamincha - Chacham Yosef Harari-Raful (25)",
       "text": "10.75 temporal hours after dawn, in a day from dawn (a tenth of the day before sunrise) to 25 minutes after sunset (in Israel). This day's midpoint is not chatzot.",
       "sources": [
-        "Chacham Yosef Harari-Raful's method: dawn a tenth of the day before sunrise, nightfall 40 minutes after sunset outside Israel and 25 in Israel (as cited)"
+        "Magen Avraham's day: dawn a tenth of the day before sunrise, nightfall 40 minutes after sunset outside Israel and 25 in Israel"
       ]
     }
   },
   "minchaGedolaHillel": {
     "he": {
-      "title": "מנחה גדולה - הרב יעקב משה הלל",
+      "title": "מנחה גדולה - יום עד צאת הכוכבים של הגאונים",
       "text": "המאוחר מבין חצי שעה זמנית אחרי חצות (ביום מעלות השחר 16.1 מעלות עד צאת הכוכבים 3.7 מעלות) לבין 30 דקות אחרי חצות.",
       "sources": [
-        "שיטת הרב יעקב משה הלל: שעות של יום מעלות השחר (16.1 מעלות) עד צאת הכוכבים (3.7 / 3.8 מעלות) (כמובא בתיעוד של an earlier zmanim library)"
+        "מגן אברהם נח, א (היום נמנה מעלות השחר עד צאת הכוכבים)"
       ]
     },
     "en": {
       "title": "Mincha gedola - Rav Yaakov Moshe Hillel",
       "text": "The later of half a temporal hour after chatzot (of a day from dawn at 16.1 deg to nightfall at 3.7 deg) and 30 minutes after chatzot.",
       "sources": [
-        "Rav Yaakov Moshe Hillel's method: hours of a day from dawn at 16.1 deg to nightfall at 3.7 / 3.8 deg (as cited)"
+        "a day ending at the Geonim's nightfall: hours of a day from dawn at 16.1 deg to nightfall at 3.7 / 3.8 deg"
       ]
     }
   },
   "minchaKetanaHillel": {
     "he": {
-      "title": "מנחה קטנה - הרב יעקב משה הלל",
+      "title": "מנחה קטנה - יום עד צאת הכוכבים של הגאונים",
       "text": "שתיים וחצי שעות זמניות לפני צאת הכוכבים (3.8 מעלות), ביום מעלות השחר 16.1 מעלות עד צאת הכוכבים 3.8 מעלות.",
       "sources": [
-        "שיטת הרב יעקב משה הלל: שעות של יום מעלות השחר (16.1 מעלות) עד צאת הכוכבים (3.7 / 3.8 מעלות) (כמובא בתיעוד של an earlier zmanim library)"
+        "מגן אברהם נח, א (היום נמנה מעלות השחר עד צאת הכוכבים)"
       ]
     },
     "en": {
       "title": "Mincha ketana - Rav Yaakov Moshe Hillel",
       "text": "2.5 temporal hours before nightfall (3.8 deg), in a day from dawn at 16.1 deg to nightfall at 3.8 deg.",
       "sources": [
-        "Rav Yaakov Moshe Hillel's method: hours of a day from dawn at 16.1 deg to nightfall at 3.7 / 3.8 deg (as cited)"
+        "a day ending at the Geonim's nightfall: hours of a day from dawn at 16.1 deg to nightfall at 3.7 / 3.8 deg"
       ]
     }
   },
   "plagHillel": {
     "he": {
-      "title": "פלג המנחה - הרב יעקב משה הלל",
+      "title": "פלג המנחה - יום עד צאת הכוכבים של הגאונים",
       "text": "שעה ורבע זמנית לפני צאת הכוכבים (3.8 מעלות), ביום מעלות השחר 16.1 מעלות עד צאת הכוכבים 3.8 מעלות.",
       "sources": [
-        "שיטת הרב יעקב משה הלל: שעות של יום מעלות השחר (16.1 מעלות) עד צאת הכוכבים (3.7 / 3.8 מעלות) (כמובא בתיעוד של an earlier zmanim library)"
+        "מגן אברהם נח, א (היום נמנה מעלות השחר עד צאת הכוכבים)"
       ]
     },
     "en": {
       "title": "Plag hamincha - Rav Yaakov Moshe Hillel",
       "text": "1.25 temporal hours before nightfall (3.8 deg), in a day from dawn at 16.1 deg to nightfall at 3.8 deg.",
       "sources": [
-        "Rav Yaakov Moshe Hillel's method: hours of a day from dawn at 16.1 deg to nightfall at 3.7 / 3.8 deg (as cited)"
+        "a day ending at the Geonim's nightfall: hours of a day from dawn at 16.1 deg to nightfall at 3.7 / 3.8 deg"
       ]
     }
   },
@@ -2336,14 +2324,14 @@
       "title": "חצות קבוע (12:00 זמן מקומי)",
       "text": "12:00 בזמן השמש הממוצע של המקום (קו האורך חלקי 15 שעות מ-UTC), בלי תיקון משוואת הזמן.",
       "sources": [
-        "ערוך השולחן, אורח חיים רלג, יד (כמובא בתיעוד של an earlier zmanim library)"
+        "מגן אברהם נח, א (היום נמנה מעלות השחר עד צאת הכוכבים)"
       ]
     },
     "en": {
       "title": "Fixed chatzot (12:00 local time)",
       "text": "12:00 local mean time (longitude / 15 hours from UTC), without the equation of time.",
       "sources": [
-        "Aruch HaShulchan, Orach Chaim 233:14 (as cited)"
+        "Aruch HaShulchan, Orach Chaim 233:14"
       ]
     }
   },
@@ -2352,14 +2340,14 @@
       "title": "סוף זמן קריאת שמע - הגר\"א, חצות קבוע",
       "text": "מחצית הזמן מהנץ עד חצות הקבוע (12:00 זמן מקומי) - שיטת ערוך השולחן.",
       "sources": [
-        "ערוך השולחן, אורח חיים רלג, יד (כמובא בתיעוד של an earlier zmanim library)"
+        "מגן אברהם נח, א (היום נמנה מעלות השחר עד צאת הכוכבים)"
       ]
     },
     "en": {
       "title": "Latest Shema - GRA, fixed chatzot",
       "text": "Halfway from sunrise to fixed chatzot (12:00 local mean time) - the Aruch HaShulchan's method.",
       "sources": [
-        "Aruch HaShulchan, Orach Chaim 233:14 (as cited)"
+        "Aruch HaShulchan, Orach Chaim 233:14"
       ]
     }
   },
@@ -2368,14 +2356,14 @@
       "title": "סוף זמן תפילה - הגר\"א, חצות קבוע",
       "text": "שני שלישים מהזמן שבין הנץ לחצות הקבוע - שיטת ערוך השולחן.",
       "sources": [
-        "ערוך השולחן, אורח חיים רלג, יד (כמובא בתיעוד של an earlier zmanim library)"
+        "מגן אברהם נח, א (היום נמנה מעלות השחר עד צאת הכוכבים)"
       ]
     },
     "en": {
       "title": "Latest Shacharit - GRA, fixed chatzot",
       "text": "Two thirds of the way from sunrise to fixed chatzot - the Aruch HaShulchan's method.",
       "sources": [
-        "Aruch HaShulchan, Orach Chaim 233:14 (as cited)"
+        "Aruch HaShulchan, Orach Chaim 233:14"
       ]
     }
   },
@@ -2384,14 +2372,14 @@
       "title": "סוף זמן קריאת שמע - מגן אברהם 72, חצות קבוע",
       "text": "מחצית הזמן מעלות השחר (72 דקות לפני הנץ) עד חצות הקבוע.",
       "sources": [
-        "ערוך השולחן, אורח חיים רלג, יד (כמובא בתיעוד של an earlier zmanim library)"
+        "מגן אברהם נח, א (היום נמנה מעלות השחר עד צאת הכוכבים)"
       ]
     },
     "en": {
       "title": "Latest Shema - Magen Avraham 72, fixed chatzot",
       "text": "Halfway from dawn (72 minutes before sunrise) to fixed chatzot.",
       "sources": [
-        "Aruch HaShulchan, Orach Chaim 233:14 (as cited)"
+        "Aruch HaShulchan, Orach Chaim 233:14"
       ]
     }
   },
@@ -2400,14 +2388,14 @@
       "title": "סוף זמן קריאת שמע - מגן אברהם 16.1, חצות קבוע",
       "text": "מחצית הזמן מעלות השחר (16.1 מעלות) עד חצות הקבוע.",
       "sources": [
-        "ערוך השולחן, אורח חיים רלג, יד (כמובא בתיעוד של an earlier zmanim library)"
+        "מגן אברהם נח, א (היום נמנה מעלות השחר עד צאת הכוכבים)"
       ]
     },
     "en": {
       "title": "Latest Shema - Magen Avraham 16.1, fixed chatzot",
       "text": "Halfway from dawn (16.1 deg) to fixed chatzot.",
       "sources": [
-        "Aruch HaShulchan, Orach Chaim 233:14 (as cited)"
+        "Aruch HaShulchan, Orach Chaim 233:14"
       ]
     }
   },
@@ -2416,14 +2404,14 @@
       "title": "מנחה גדולה - חצות קבוע",
       "text": "30 דקות אחרי חצות הקבוע (12:00 זמן מקומי).",
       "sources": [
-        "ערוך השולחן, אורח חיים רלג, יד (כמובא בתיעוד של an earlier zmanim library)"
+        "מגן אברהם נח, א (היום נמנה מעלות השחר עד צאת הכוכבים)"
       ]
     },
     "en": {
       "title": "Mincha gedola - fixed chatzot",
       "text": "30 minutes after fixed chatzot (12:00 local mean time).",
       "sources": [
-        "Aruch HaShulchan, Orach Chaim 233:14 (as cited)"
+        "Aruch HaShulchan, Orach Chaim 233:14"
       ]
     }
   },
@@ -2432,14 +2420,14 @@
       "title": "מנחה קטנה - חצות קבוע",
       "text": "3.5 שעות אחרי חצות הקבוע, כששעה היא שישית הזמן מחצות הקבוע עד השקיעה.",
       "sources": [
-        "ערוך השולחן, אורח חיים רלג, יד (כמובא בתיעוד של an earlier zmanim library)"
+        "מגן אברהם נח, א (היום נמנה מעלות השחר עד צאת הכוכבים)"
       ]
     },
     "en": {
       "title": "Mincha ketana - fixed chatzot",
       "text": "3.5 hours after fixed chatzot, an hour being a sixth of fixed chatzot to sunset.",
       "sources": [
-        "Aruch HaShulchan, Orach Chaim 233:14 (as cited)"
+        "Aruch HaShulchan, Orach Chaim 233:14"
       ]
     }
   },
@@ -2448,14 +2436,14 @@
       "title": "פלג המנחה - חצות קבוע",
       "text": "4.75 שעות אחרי חצות הקבוע, כששעה היא שישית הזמן מחצות הקבוע עד השקיעה.",
       "sources": [
-        "ערוך השולחן, אורח חיים רלג, יד (כמובא בתיעוד של an earlier zmanim library)"
+        "מגן אברהם נח, א (היום נמנה מעלות השחר עד צאת הכוכבים)"
       ]
     },
     "en": {
       "title": "Plag hamincha - fixed chatzot",
       "text": "4.75 hours after fixed chatzot, an hour being a sixth of fixed chatzot to sunset.",
       "sources": [
-        "Aruch HaShulchan, Orach Chaim 233:14 (as cited)"
+        "Aruch HaShulchan, Orach Chaim 233:14"
       ]
     }
   },
@@ -2464,16 +2452,15 @@
       "title": "סוף זמן קריאת שמע - יום מ-16.1 עד 7.083 מעלות",
       "text": "3 שעות זמניות מעלות השחר, ביום מעלות השחר (16.1 מעלות) עד צאת הכוכבים (7.083 מעלות).",
       "sources": [
-        "בן איש חי ועוד: יום מעלות השחר (16.1 מעלות) עד צאת הכוכבים (7.083 מעלות) (כמובא בתיעוד של an earlier zmanim library)",
-        "ישראל והזמנים, חלק ג, סימן כב (כמובא בתיעוד של an earlier zmanim library)"
+        "מגן אברהם נח, א (היום נמנה מעלות השחר עד צאת הכוכבים)"
       ]
     },
     "en": {
       "title": "Latest Shema - day 16.1 to 7.083 deg",
       "text": "3 temporal hours after dawn, in a day from dawn (16.1 deg) to nightfall (7.083 deg).",
       "sources": [
-        "Ben Ish Chai and others: a day from dawn 16.1 deg to nightfall 7.083 deg (as cited)",
-        "Yisrael Vehazmanim, vol. III, no. 22 (as cited)"
+        "Ben Ish Chai and others: a day from dawn 16.1 deg to nightfall 7.083 deg",
+        "Yisrael Vehazmanim, vol. III, no. 22"
       ]
     }
   },
@@ -2482,16 +2469,15 @@
       "title": "סוף זמן תפילה - יום מ-16.1 עד 7.083 מעלות",
       "text": "4 שעות זמניות מעלות השחר, ביום מעלות השחר (16.1 מעלות) עד צאת הכוכבים (7.083 מעלות).",
       "sources": [
-        "בן איש חי ועוד: יום מעלות השחר (16.1 מעלות) עד צאת הכוכבים (7.083 מעלות) (כמובא בתיעוד של an earlier zmanim library)",
-        "ישראל והזמנים, חלק ג, סימן כב (כמובא בתיעוד של an earlier zmanim library)"
+        "מגן אברהם נח, א (היום נמנה מעלות השחר עד צאת הכוכבים)"
       ]
     },
     "en": {
       "title": "Latest Shacharit - day 16.1 to 7.083 deg",
       "text": "4 temporal hours after dawn, in a day from dawn (16.1 deg) to nightfall (7.083 deg).",
       "sources": [
-        "Ben Ish Chai and others: a day from dawn 16.1 deg to nightfall 7.083 deg (as cited)",
-        "Yisrael Vehazmanim, vol. III, no. 22 (as cited)"
+        "Ben Ish Chai and others: a day from dawn 16.1 deg to nightfall 7.083 deg",
+        "Yisrael Vehazmanim, vol. III, no. 22"
       ]
     }
   },
@@ -2500,16 +2486,63 @@
       "title": "פלג המנחה - יום מ-16.1 עד 7.083 מעלות",
       "text": "10.75 שעות זמניות מעלות השחר, ביום מעלות השחר (16.1 מעלות) עד צאת הכוכבים (7.083 מעלות).",
       "sources": [
-        "בן איש חי ועוד: יום מעלות השחר (16.1 מעלות) עד צאת הכוכבים (7.083 מעלות) (כמובא בתיעוד של an earlier zmanim library)",
-        "ישראל והזמנים, חלק ג, סימן כב (כמובא בתיעוד של an earlier zmanim library)"
+        "מגן אברהם נח, א (היום נמנה מעלות השחר עד צאת הכוכבים)"
       ]
     },
     "en": {
       "title": "Plag hamincha - day 16.1 to 7.083 deg",
       "text": "10.75 temporal hours after dawn, in a day from dawn (16.1 deg) to nightfall (7.083 deg).",
       "sources": [
-        "Ben Ish Chai and others: a day from dawn 16.1 deg to nightfall 7.083 deg (as cited)",
-        "Yisrael Vehazmanim, vol. III, no. 22 (as cited)"
+        "Ben Ish Chai and others: a day from dawn 16.1 deg to nightfall 7.083 deg",
+        "Yisrael Vehazmanim, vol. III, no. 22"
+      ]
+    }
+  },
+  "sofShmaBenIshChai": {
+    "he": {
+      "title": "סוף זמן קריאת שמע (בן איש חי)",
+      "text": "3 שעות זמניות מעלות השחר (72 דקות), כשהיום נמנה מעלות השחר עד צאת הכוכבים, וצאת הכוכבים שליש שעה אחרי השקיעה כמנהג בגדאד.",
+      "sources": [
+        "בן איש חי, שנה ראשונה, פרשת ויקהל (השעות מעלות השחר עד צאת הכוכבים; צאת הכוכבים שליש שעה אחר השקיעה)"
+      ]
+    },
+    "en": {
+      "title": "Latest Shema (Ben Ish Chai)",
+      "text": "3 seasonal hours from dawn (72 minutes), the day counted from dawn to nightfall, nightfall being a third of an hour after sunset as in Baghdad.",
+      "sources": [
+        "Ben Ish Chai, Shana Rishona, Vayakhel (hours from dawn to nightfall; nightfall a third of an hour after sunset) - checked in the text"
+      ]
+    }
+  },
+  "sofTfillaBenIshChai": {
+    "he": {
+      "title": "סוף זמן תפילה (בן איש חי)",
+      "text": "4 שעות זמניות מעלות השחר (72 דקות), כשהיום נמנה מעלות השחר עד צאת הכוכבים, וצאת הכוכבים שליש שעה אחרי השקיעה כמנהג בגדאד.",
+      "sources": [
+        "בן איש חי, שנה ראשונה, פרשת ויקהל (השעות מעלות השחר עד צאת הכוכבים; צאת הכוכבים שליש שעה אחר השקיעה)"
+      ]
+    },
+    "en": {
+      "title": "Latest Shacharit (Ben Ish Chai)",
+      "text": "4 seasonal hours from dawn (72 minutes), the day counted from dawn to nightfall, nightfall being a third of an hour after sunset as in Baghdad.",
+      "sources": [
+        "Ben Ish Chai, Shana Rishona, Vayakhel (hours from dawn to nightfall; nightfall a third of an hour after sunset) - checked in the text"
+      ]
+    }
+  },
+  "plagBenIshChai": {
+    "he": {
+      "title": "פלג המנחה (בן איש חי)",
+      "text": "10.75 שעות זמניות מעלות השחר (72 דקות), כשהיום נמנה מעלות השחר עד צאת הכוכבים, וצאת הכוכבים שליש שעה אחרי השקיעה כמנהג בגדאד.",
+      "sources": [
+        "בן איש חי, שנה ראשונה, פרשת ויקהל (השעות מעלות השחר עד צאת הכוכבים; צאת הכוכבים שליש שעה אחר השקיעה)"
+      ]
+    },
+    "en": {
+      "title": "Plag hamincha (Ben Ish Chai)",
+      "text": "10.75 seasonal hours from dawn (72 minutes), the day counted from dawn to nightfall, nightfall being a third of an hour after sunset as in Baghdad.",
+      "sources": [
+        "Ben Ish Chai, Shana Rishona, Vayakhel (hours from dawn to nightfall; nightfall a third of an hour after sunset) - checked in the text"
       ]
     }
   }
