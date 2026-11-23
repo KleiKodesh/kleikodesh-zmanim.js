@@ -860,3 +860,172 @@ By Rabbeinu Tam twilight begins 3.25 mil after sunset, 58.5 minutes at 18 minute
 - Tosafot Shabbat 35a and Pesachim 94a (Rabbeinu Tam: four mil from the start of sunset to night; twilight is the last three quarters of a mil)
 - Shulchan Aruch OC 261:2 (from sunset to twilight 3.25 mil; twilight three quarters of a mil)
 - Shulchan Aruch OC 459:2; Mishna Berura 459:15 (a mil = 18 minutes)
+
+<a id="sofAchilatChametzMga"></a>
+
+## Latest time to eat chametz (MGA, 72 minutes)
+
+On erev Pesach chametz may be eaten until the end of the fourth hour of the day. The day runs from 72 minutes before sunrise to 72 minutes after sunset.
+
+**Sources:**
+
+- Mishna Pesachim 1:4 (Rabbi Yehuda: eat all of the fourth hour, suspend during the fifth, burn at the start of the sixth)
+- Pesachim 11b-12b (the halacha follows Rabbi Yehuda)
+- Shulchan Aruch OC 443:1 (chametz forbidden from the sixth hour; the Sages forbade it from the start of the fifth)
+- Magen Avraham 58:1 and Mishna Berura 58:4 (Magen Avraham counts the day from dawn; the Vilna Gaon from sunrise)
+- Pesachim 94a; Shulchan Aruch OC 459:2 (four mil of 18 minutes = 72 minutes)
+
+<a id="sofBiurChametzMga"></a>
+
+## Latest time to burn chametz (MGA, 72 minutes)
+
+On erev Pesach chametz must be burnt and nullified by the end of the fifth hour of the day. The day runs from 72 minutes before sunrise to 72 minutes after sunset.
+
+**Sources:**
+
+- Mishna Pesachim 1:4 (Rabbi Yehuda: eat all of the fourth hour, suspend during the fifth, burn at the start of the sixth)
+- Pesachim 11b-12b (the halacha follows Rabbi Yehuda)
+- Shulchan Aruch OC 443:1 (chametz forbidden from the sixth hour; the Sages forbade it from the start of the fifth)
+- Magen Avraham 58:1 and Mishna Berura 58:4 (Magen Avraham counts the day from dawn; the Vilna Gaon from sunrise)
+- Pesachim 94a; Shulchan Aruch OC 459:2 (four mil of 18 minutes = 72 minutes)
+
+<a id="sofAchilatChametzMga16"></a>
+
+## Latest time to eat chametz (MGA, 16.1 degrees)
+
+On erev Pesach chametz may be eaten until the end of the fourth hour of the day. The day runs from dawn (sun 16.1 degrees below the horizon) to the sun at the same depth in the evening.
+
+**Sources:**
+
+- Mishna Pesachim 1:4 (Rabbi Yehuda: eat all of the fourth hour, suspend during the fifth, burn at the start of the sixth)
+- Pesachim 11b-12b (the halacha follows Rabbi Yehuda)
+- Shulchan Aruch OC 443:1 (chametz forbidden from the sixth hour; the Sages forbade it from the start of the fifth)
+- Magen Avraham 58:1 and Mishna Berura 58:4 (Magen Avraham counts the day from dawn; the Vilna Gaon from sunrise)
+- Astronomy: in Jerusalem at the equinox the sun is 16.1 degrees below the horizon 72 minutes before sunrise
+
+<a id="sofBiurChametzMga16"></a>
+
+## Latest time to burn chametz (MGA, 16.1 degrees)
+
+On erev Pesach chametz must be burnt and nullified by the end of the fifth hour of the day. The day runs from dawn (sun 16.1 degrees below the horizon) to the sun at the same depth in the evening.
+
+**Sources:**
+
+- Mishna Pesachim 1:4 (Rabbi Yehuda: eat all of the fourth hour, suspend during the fifth, burn at the start of the sixth)
+- Pesachim 11b-12b (the halacha follows Rabbi Yehuda)
+- Shulchan Aruch OC 443:1 (chametz forbidden from the sixth hour; the Sages forbade it from the start of the fifth)
+- Magen Avraham 58:1 and Mishna Berura 58:4 (Magen Avraham counts the day from dawn; the Vilna Gaon from sunrise)
+- Astronomy: in Jerusalem at the equinox the sun is 16.1 degrees below the horizon 72 minutes before sunrise
+
+<a id="sofAchilatChametzGra"></a>
+
+## Latest time to eat chametz (GRA)
+
+On erev Pesach chametz may be eaten until the end of the fourth hour of the day. A temporal hour is a twelfth of sunrise to sunset.
+
+**Sources:**
+
+- Mishna Pesachim 1:4 (Rabbi Yehuda: eat all of the fourth hour, suspend during the fifth, burn at the start of the sixth)
+- Pesachim 11b-12b (the halacha follows Rabbi Yehuda)
+- Shulchan Aruch OC 443:1 (chametz forbidden from the sixth hour; the Sages forbade it from the start of the fifth)
+- Mishna Berura 58:4 (the Vilna Gaon counts from sunrise)
+- Rema OC 233:1 (temporal hours: the day is divided into 12 hours)
+
+<a id="sofBiurChametzGra"></a>
+
+## Latest time to burn chametz (GRA)
+
+On erev Pesach chametz must be burnt and nullified by the end of the fifth hour of the day. A temporal hour is a twelfth of sunrise to sunset.
+
+**Sources:**
+
+- Mishna Pesachim 1:4 (Rabbi Yehuda: eat all of the fourth hour, suspend during the fifth, burn at the start of the sixth)
+- Pesachim 11b-12b (the halacha follows Rabbi Yehuda)
+- Shulchan Aruch OC 443:1 (chametz forbidden from the sixth hour; the Sages forbade it from the start of the fifth)
+- Mishna Berura 58:4 (the Vilna Gaon counts from sunrise)
+- Rema OC 233:1 (temporal hours: the day is divided into 12 hours)
+
+<a id="fastStart90"></a>
+
+## Start of the fast (90 minutes)
+
+A minor fast begins at dawn. Here dawn is 90 fixed minutes before sunrise (five mil of 18 minutes).
+
+**Sources:**
+
+- Shulchan Aruch OC 564:1 (on a fast with eating the night before, one may eat and drink until dawn)
+- Pesachim 94a (from dawn to sunrise five mil, in Rabbi Yochanan's statement)
+- Shulchan Aruch OC 459:2; Mishna Berura 459:15 (a mil = 18 minutes)
+
+<a id="fastStart72"></a>
+
+## Start of the fast (72 minutes)
+
+A minor fast begins at dawn. Here dawn is 72 fixed minutes before sunrise (four mil of 18 minutes).
+
+**Sources:**
+
+- Shulchan Aruch OC 564:1 (on a fast with eating the night before, one may eat and drink until dawn)
+- Pesachim 94a (Rabbi Yehuda: from dawn to sunrise four mil)
+- Shulchan Aruch OC 459:2; Mishna Berura 459:15 (a mil = 18 minutes)
+
+<a id="fastStart16"></a>
+
+## Start of the fast (16.1 degrees)
+
+A minor fast begins at dawn. Here dawn is the sun 16.1 degrees below the horizon.
+
+**Sources:**
+
+- Shulchan Aruch OC 564:1 (on a fast with eating the night before, one may eat and drink until dawn)
+- Pesachim 94a (Rabbi Yehuda: from dawn to sunrise four mil)
+- Astronomy: in Jerusalem at the equinox the sun is 16.1 degrees below the horizon 72 minutes before sunrise
+
+<a id="kiddushLevanaStart3"></a>
+
+## Earliest kiddush levana (3 days)
+
+Three full days (72 hours) after the molad, the view of most later authorities.
+
+**Sources:**
+
+- Mishna Berura 426:20 (most later authorities: after three full days from the molad)
+- Rambam, Kiddush HaChodesh 6:2-3 (an hour is 1080 chalakim; the mean month is 29 days 12 hours 793 chalakim)
+- Rambam, Kiddush HaChodesh 6:8 (the first molad: Monday night, 5 hours 204 chalakim)
+
+<a id="kiddushLevanaStart7"></a>
+
+## Earliest kiddush levana (7 days)
+
+Seven full days after the molad, the view of the Shulchan Aruch.
+
+**Sources:**
+
+- Shulchan Aruch OC 426:4 (not until seven days have passed)
+- Rambam, Kiddush HaChodesh 6:2-3 (an hour is 1080 chalakim; the mean month is 29 days 12 hours 793 chalakim)
+- Rambam, Kiddush HaChodesh 6:8 (the first molad: Monday night, 5 hours 204 chalakim)
+
+<a id="kiddushLevanaEndHalf"></a>
+
+## Latest kiddush levana (half the month)
+
+Until half of 29 days 12 hours 793 chalakim after the molad: 14 days 18 hours 22 minutes and about 2 seconds.
+
+**Sources:**
+
+- Rema OC 426:3 (only until half of 29 days 12 hours 793 chalakim from the molad; Teshuvot Maharil)
+- Rambam, Kiddush HaChodesh 6:2-3 (an hour is 1080 chalakim; the mean month is 29 days 12 hours 793 chalakim)
+- Rambam, Kiddush HaChodesh 6:8 (the first molad: Monday night, 5 hours 204 chalakim)
+
+<a id="kiddushLevanaEnd15"></a>
+
+## Latest kiddush levana (15 days)
+
+Until fifteen full days (24 hours each) after the molad, the view of the Shulchan Aruch.
+
+**Sources:**
+
+- Shulchan Aruch OC 426:3 (until the 16th day from the molad, not including it)
+- Mishna Berura 426:17 (fifteen full days counted from the hour of the molad)
+- Rambam, Kiddush HaChodesh 6:2-3 (an hour is 1080 chalakim; the mean month is 29 days 12 hours 793 chalakim)
+- Rambam, Kiddush HaChodesh 6:8 (the first molad: Monday night, 5 hours 204 chalakim)

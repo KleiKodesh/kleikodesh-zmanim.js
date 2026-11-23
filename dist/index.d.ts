@@ -19,3 +19,5 @@ export { defaultDeltaT, julianDay, spa, spaDay, spaEvent, spaSunTimes, SUNRISE_S
 export type { SpaDay, SpaEventOptions, SpaInput, SpaResult } from './spa.js';
 export { defaultCandlesFor, defaultCommunityFor, getCommunity, listCommunities, primaryZmanim, ZMAN_GROUPS } from './communities.js';
 export type { Community, ZmanGroup } from './communities.js';
+export { MOLAD_INTERVAL_MS, moladIndexAtOrBefore, moladMs, SPECIAL_KINDS, SPECIAL_ROUNDING, SPECIAL_ZMAN_NAMES, specialZmanim, specialZmanInstants } from './special.js';
+export type { SpecialKind, SpecialZmanName } from './special.js';

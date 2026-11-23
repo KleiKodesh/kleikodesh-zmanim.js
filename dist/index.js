@@ -14,3 +14,4 @@ export { computeZmanim, HORIZON_ZMANIM, horizonDip, NO_TERRAIN, TERRAIN_BINS, TE
 export { horizonRefractionArcmin, INVERSION_C, inversionFactor, refractionArcmin, standardPressure, standardTemperature } from './refraction.js';
 export { defaultDeltaT, julianDay, spa, spaDay, spaEvent, spaSunTimes, SUNRISE_SUNSET_H0, zenithToH0 } from './spa.js';
 export { defaultCandlesFor, defaultCommunityFor, getCommunity, listCommunities, primaryZmanim, ZMAN_GROUPS } from './communities.js';
+export { MOLAD_INTERVAL_MS, moladIndexAtOrBefore, moladMs, SPECIAL_KINDS, SPECIAL_ROUNDING, SPECIAL_ZMAN_NAMES, specialZmanim, specialZmanInstants } from './special.js';

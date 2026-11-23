@@ -107,6 +107,36 @@ temperature, about 34'). So the sun's centre is at zenith 90 + R0 + depression (
 convention of the standard sunrise altitude h0 = -0 deg 34' (Meeus, Astronomical Algorithms, 2nd ed., ch. 15)
 extended below the horizon. The Visible lines come out about 2-4 minutes beyond the geometric ones.
 
+### Special days: specialZmanim(place, date, kind)
+
+The library has no Hebrew calendar; the caller says which kind of day it is (`SPECIAL_KINDS`), and only that kind's
+lines are computed. `specialZmanInstants` gives the exact instants; `specialZmanim` prints HH:MM with `SPECIAL_ROUNDING`.
+The end of a fast and of Shabbat/Yom Tov are the existing tzeit lines above (no duplicates).
+
+```js
+specialZmanim(await getPlace(1), { year: 2026, month: 4, day: 1 }, 'erevPesach')  // { sofAchilatChametzGra: '09:..', ... }
+specialZmanInstants(place, date, 'kiddushLevana')   // instants; may fall on other days, the caller prints their dates
+moladMs(moladIndexAtOrBefore(Date.now()))           // the last molad, epoch ms UTC
+```
+
+| kind | name | definition | rounding | sources |
+|---|---|---|---|---|
+| erevPesach | sofAchilatChametzMga | end of 4th temporal hour, day 72 min before sunrise .. 72 min after sunset | down | Mishna Pesachim 1:4; Pesachim 11b-12b; SA OC 443:1; Magen Avraham 58:1, MB 58:4 |
+| erevPesach | sofAchilatChametzMga16 | the same, day from alot 16.1 deg to 16.1 deg in the evening | down | as above |
+| erevPesach | sofAchilatChametzGra | end of 4th temporal hour, sunrise .. sunset | down | as above; MB 58:4 |
+| erevPesach | sofBiurChametzMga / Mga16 / Gra | end of the 5th hour, same three days | down | as above |
+| fastDay | fastStart90 | 90 fixed minutes before sunrise (5 mil) | down | SA OC 564:1; Pesachim 94a; SA OC 459:2, MB 459:15 |
+| fastDay | fastStart72 | 72 fixed minutes before sunrise (4 mil) | down | as above |
+| fastDay | fastStart16 | sun 16.1 deg below the horizon (= alot) | down | SA OC 564:1; Pesachim 94a |
+| kiddushLevana | kiddushLevanaStart3 | molad + 3 full days | up | MB 426:20 |
+| kiddushLevana | kiddushLevanaStart7 | molad + 7 full days | up | SA OC 426:4 |
+| kiddushLevana | kiddushLevanaEndHalf | molad + half of 29 d 12 h 793 chalakim (14 d 18 h 22 min 1.7 s) | down | Rema OC 426:3 (Maharil) |
+| kiddushLevana | kiddushLevanaEnd15 | molad + 15 full days | down | SA OC 426:3; MB 426:17 |
+
+The molad: BaHaRaD (Monday night 5 h 204 chalakim, Rambam Kiddush HaChodesh 6:8) plus whole mean months of
+29 d 12 h 793 chalakim (6:2-3), in Jerusalem mean local time (UT + 2:20:56); the epoch day R.D. -1373427 is from
+Reingold and Dershowitz, Calendrical Calculations. Tested against published molads of Tishrei 5786 and 5787.
+
 ### Explanations
 
 What each zman is, its method and its sources are documentation only, not shipped data: see
