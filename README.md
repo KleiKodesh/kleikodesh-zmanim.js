@@ -174,8 +174,8 @@ until then a new place uses the standard-atmosphere temperature (-128 in climate
 
 ### Terrain horizon (horizon-NN.bin)
 
-`assets/horizon-NN.bin` (NN = id / 64, two digits): 64 places per file (row = id % 64), 242 bytes per place =
-the apparent altitude of the terrain horizon, uint8 = tenths of a degree + 30 (-3.0 .. +22.4 deg), 255 = no data;
+`assets/horizon-NN.bin` (NN = id / 64, two digits): 64 places per file (row = id % 64), 242 int16 LE (484 bytes) per place =
+the apparent altitude of the terrain horizon, hundredths of a degree, -32768 = no data;
 bins: azimuth 30..150 then 210..330 (from north, eastward), one per degree. 15,488 bytes per file. Only the chosen
 place's file loads, and only when sunriseTerrain/sunsetTerrain is asked for (`getTerrainHorizon(id)`); a place
 added after the last data run has no row (its chunk may be missing) and those lines are null. The full-precision

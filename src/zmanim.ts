@@ -58,13 +58,11 @@ export function terrainAltitude(profile: ArrayLike<number>, azimuth: number): nu
   const v0 = profile[base + i]!
   const v1 = profile[base + i + 1]!
   if (v0 === NO_TERRAIN || v1 === NO_TERRAIN) return NaN
-  return (v0 + (v1 - v0) * f) / 10 - TERRAIN_OFFSET
+  return (v0 + (v1 - v0) * f) / 100
 }
 
-/** Missing value in a terrain horizon (uint8: tenths of a degree + TERRAIN_OFFSET * 10). */
-export const NO_TERRAIN = 255
-/** Degrees added before storing, so -3.0 .. +22.4 fits a byte. */
-export const TERRAIN_OFFSET = 3
+/** Missing value in a terrain horizon (int16: hundredths of a degree). */
+export const NO_TERRAIN = -32768
 
 /** A civil date; month 1-12. */
 export interface CivilDate { year: number, month: number, day: number }
@@ -85,8 +83,8 @@ export interface Coordinates {
    */
   monthlyTemperatureC?: readonly number[] | 'standard'
   /**
-   * Terrain horizon for sunriseTerrain/sunsetTerrain: TERRAIN_BINS uint8 values, apparent altitude in tenths
-   * of a degree plus 30 (NO_TERRAIN = none), as zmanim() attaches from horizon-NN.bin. Without it those lines are null.
+   * Terrain horizon for sunriseTerrain/sunsetTerrain: TERRAIN_BINS int16 values, apparent altitude in
+   * hundredths of a degree (NO_TERRAIN = none), as zmanim() attaches from horizon-NN.bin. Without it those lines are null.
    */
   terrainHorizon?: ArrayLike<number> | null
 }

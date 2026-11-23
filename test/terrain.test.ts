@@ -47,9 +47,9 @@ describe('terrain sunrise/sunset', () => {
     const place = await getPlace(JERUSALEM)
     const t = zmanInstants({ ...place, terrainHorizon: null }, summer, ['sunriseTerrain', 'sunsetTerrain'])
     expect(t).toEqual({ sunriseTerrain: null, sunsetTerrain: null })
-    const empty = new Uint8Array(TERRAIN_BINS).fill(NO_TERRAIN)
+    const empty = new Int16Array(TERRAIN_BINS).fill(NO_TERRAIN)
     expect(terrainAltitude(empty, 90)).toBeNaN()
-    expect(terrainAltitude(new Uint8Array(TERRAIN_BINS), 180)).toBeNaN()
+    expect(terrainAltitude(new Int16Array(TERRAIN_BINS), 180)).toBeNaN()
   })
 
   it('only the own horizon chunk of the place loads, only for a terrain line, once', async () => {
