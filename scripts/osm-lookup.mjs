@@ -24,10 +24,22 @@ const inBox = (b, lat, lng) => lat >= b.s && lat <= b.n && lng >= b.w && lng <= 
     try { res = await (await fetch(ep, { method: 'POST', headers: { 'User-Agent': UA, 'Content-Type': 'application/x-www-form-urlencoded' }, body: 'data=' + encodeURIComponent(q) })).json(); break; }
     catch (err) { console.log(`overpass ${ep} failed: ${err.message}`); }
   }
-  for (const e of res.elements) console.log(`MI-AREA ${e.type}/${e.id} ${e.tags.place} ${(e.lat ?? e.center.lat).toFixed(5)},${(e.lon ?? e.center.lon).toFixed(5)} he=${e.tags['name:he'] ?? e.tags.name} en=${e.tags['name:en'] ?? ''}`);
+  for (const e of res.elements) {
+    const lat = e.lat ?? e.center.lat, lng = e.lon ?? e.center.lon;
+    const he = (e.tags['name:he'] ?? e.tags.name ?? '').replace(/^מודיעין עילית - /, '');
+    const p = PLACES.find((x) => x.box === MI && x.he.includes(he.replace(/['\s]/g, '')));
+    if (p) {
+      const el = await (await fetch(`https://api.open-meteo.com/v1/elevation?latitude=${lat.toFixed(5)}&longitude=${lng.toFixed(5)}`)).json();
+      const elev = Math.round(el.elevation[0]);
+      console.log(`${p.key}: PICK ${e.type}/${e.id} ${lat.toFixed(5)},${lng.toFixed(5)} elev ${elev}`);
+      p.found = [p.key, he, e.tags['name:en'] ?? '', lat.toFixed(5), lng.toFixed(5), elev, 'Asia/Jerusalem', `OSM:${e.type}/${e.id}`].join('	');
+    }
+    console.log(`MI-AREA ${e.type}/${e.id} ${e.tags.place} ${(e.lat ?? e.center.lat).toFixed(5)},${(e.lon ?? e.center.lon).toFixed(5)} he=${e.tags['name:he'] ?? e.tags.name} en=${e.tags['name:en'] ?? ''}`);
+  }
 }
 const rows = ['key\the\ten\tlat\tlng\televation\ttzid\tsource'];
 for (const p of PLACES) {
+  if (p.found) { rows.push(p.found); continue; }
   let best = null;
   for (const q of p.q) {
     const u = `https://nominatim.openstreetmap.org/search?format=jsonv2&namedetails=1&limit=10&bounded=1&viewbox=${p.box.w},${p.box.n},${p.box.e},${p.box.s}&q=${encodeURIComponent(q)}`;
