@@ -1,6 +1,6 @@
 # kleikodesh-zmanim.js
 
-Offline zmanim and a compact list of 1802 places, as framework-agnostic ES modules (TypeScript source, `.d.ts` shipped).
+Offline zmanim and a compact list of 1803 places, as framework-agnostic ES modules (TypeScript source, `.d.ts` shipped).
 No network access ever: the data files ship beside your code and are read through a pluggable loader.
 Importing the library loads nothing; each data file is read on first need, once.
 
@@ -87,14 +87,14 @@ Ids are stable: new places get new ids, an id is never reused (a removed place l
 | climate.bin | 12 bytes per id at offset id*12 (record 0 unused): monthly mean temperature, int8 C, -128 = unknown |
 | tz.json | `{ ids: [IANA zone...], rawOffsetMinutes: [...] }` (standard offset, for the antimeridian rule only) |
 
-Sizes: names-he 9074 B, names-en 9322 B, places.bin 6215 B, tz.json 1028 B, climate.bin 6780 B.
+Sizes (1803 places): names-he 27436 B, names-en 23595 B, places.bin 19844 B, tz.json 2023 B, climate.bin 21648 B.
 
 `data/climate.tsv` (id, 12 monthly means, 0.1 C) is made once by `node scripts/fetch-climate.mjs`: mean of the
 daily mean 2 m temperature 2016-2025 from the Open-Meteo Historical Weather API at each place's elevation
 (sequential, paused, resumable). It is not refetched by the normal build.
-Known gap: the fetch stopped at the Open-Meteo hourly limit, so only ids 1-190 have temperatures; the other places
-(-128 in climate.bin) use the standard-atmosphere temperature until `node scripts/fetch-climate.mjs` is rerun
-(it resumes from the rows already in data/climate.tsv) and the assets are rebuilt.
+Known gap: ids 1-564 have temperatures; ids 565-1803 (added later) do not yet and use the standard-atmosphere
+temperature (-128 in climate.bin) until the fetch-climate workflow (or `node scripts/fetch-climate.mjs`, which resumes
+from the rows already in data/climate.tsv) is run for them and the assets are rebuilt.
 
 `scripts/import-from-app.mjs` created places.tsv from the app's city list once; edit the TSV from now on.
 

@@ -7,7 +7,7 @@ on:
       branch:
         description: Branch to fetch for and commit to
         required: true
-        default: refraction
+        default: master
   push:
     branches: [refraction]
     paths: [.github/workflows/fetch-climate.yml]
