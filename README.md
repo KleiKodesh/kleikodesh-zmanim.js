@@ -104,8 +104,8 @@ Also exported: `zmanInstants` (exact instants as BigInt epoch nanoseconds), `for
 | sofShmaHarari40/25, sofTfillaHarari40/25, minchaGedolaHarari40/25, minchaKetanaHarari40/25, plagHarari40/25 | Chacham Yosef Harari-Raful's method: 3 / 4 / 6.5 / 9.5 / 10.75 temporal hours of a day from alot72z to sunset + 40 min (outside Israel) / + 25 min (Israel); its midpoint is not chatzot | down / down / up / up / up |
 | minchaGedolaHillel | Rav Yaakov Moshe Hillel's method: the later of chatzot + half a temporal hour of a day 16.1 deg..3.7 deg and chatzot + 30 min | up |
 | minchaKetanaHillel / plagHillel | Rav Yaakov Moshe Hillel's method: 2.5 / 1.25 temporal hours (of a day 16.1 deg..3.8 deg) before the sun is 3.8 deg below | up |
-| chatzotFixedLocal | 12:00 local mean time (longitude / 15 hours from UTC); Aruch HaShulchan OC 233:14, Igrot Moshe OC 1:24, 2:20 | nearest |
-| sofShmaGraFixed / sofTfillaGraFixed | Rav Moshe Feinstein: sunrise + 1/2 / 2/3 of (chatzotFixedLocal - sunrise) | down |
+| chatzotFixedLocal | 12:00 local mean time (longitude / 15 hours from UTC); Aruch HaShulchan OC 233:14 (checked in the text) | nearest |
+| sofShmaGraFixed / sofTfillaGraFixed | half and two thirds of the morning to the fixed chatzot: sunrise + 1/2 / 2/3 of (chatzotFixedLocal - sunrise) | down |
 | sofShmaMga72Fixed / sofShmaMga16Fixed | dawn (72 min before sunrise / 16.1 deg) + half of (chatzotFixedLocal - dawn) | down |
 | minchaGedolaFixed / minchaKetanaFixed / plagFixed | chatzotFixedLocal + 30 min / + 3.5 / + 4.75 hours of (sunset - chatzotFixedLocal) / 6 | up |
 | sofShmaAsym / sofTfillaAsym / plagAsym | 3 / 4 / 10.75 temporal hours of a day from dawn 16.1 deg to nightfall 7.083 deg (Ben Ish Chai and others; Yisrael Vehazmanim vol. III no. 22) | down / down / up |

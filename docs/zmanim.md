@@ -1409,29 +1409,26 @@ The later of half a temporal hour after chatzot (of a day from dawn at 16.1 deg 
 **Sources:**
 
 - Aruch HaShulchan, Orach Chaim 233:14 (as cited)
-- Igrot Moshe, Orach Chaim 1:24 and 2:20 (as cited)
 
 <a id="sofShmaGraFixed"></a>
 
 ## Latest Shema - GRA, fixed chatzot
 
-Halfway from sunrise to fixed chatzot (12:00 local mean time) - Rav Moshe Feinstein's method.
+Halfway from sunrise to fixed chatzot (12:00 local mean time) - the Aruch HaShulchan's method.
 
 **Sources:**
 
 - Aruch HaShulchan, Orach Chaim 233:14 (as cited)
-- Igrot Moshe, Orach Chaim 1:24 and 2:20 (as cited)
 
 <a id="sofTfillaGraFixed"></a>
 
 ## Latest Shacharit - GRA, fixed chatzot
 
-Two thirds of the way from sunrise to fixed chatzot - Rav Moshe Feinstein's method.
+Two thirds of the way from sunrise to fixed chatzot - the Aruch HaShulchan's method.
 
 **Sources:**
 
 - Aruch HaShulchan, Orach Chaim 233:14 (as cited)
-- Igrot Moshe, Orach Chaim 1:24 and 2:20 (as cited)
 
 <a id="sofShmaMga72Fixed"></a>
 
@@ -1442,7 +1439,6 @@ Halfway from dawn (72 minutes before sunrise) to fixed chatzot.
 **Sources:**
 
 - Aruch HaShulchan, Orach Chaim 233:14 (as cited)
-- Igrot Moshe, Orach Chaim 1:24 and 2:20 (as cited)
 
 <a id="sofShmaMga16Fixed"></a>
 
@@ -1453,7 +1449,6 @@ Halfway from dawn (16.1 deg) to fixed chatzot.
 **Sources:**
 
 - Aruch HaShulchan, Orach Chaim 233:14 (as cited)
-- Igrot Moshe, Orach Chaim 1:24 and 2:20 (as cited)
 
 <a id="minchaGedolaFixed"></a>
 
@@ -1464,7 +1459,6 @@ Halfway from dawn (16.1 deg) to fixed chatzot.
 **Sources:**
 
 - Aruch HaShulchan, Orach Chaim 233:14 (as cited)
-- Igrot Moshe, Orach Chaim 1:24 and 2:20 (as cited)
 
 <a id="minchaKetanaFixed"></a>
 
@@ -1475,7 +1469,6 @@ Halfway from dawn (16.1 deg) to fixed chatzot.
 **Sources:**
 
 - Aruch HaShulchan, Orach Chaim 233:14 (as cited)
-- Igrot Moshe, Orach Chaim 1:24 and 2:20 (as cited)
 
 <a id="plagFixed"></a>
 
@@ -1486,7 +1479,6 @@ Halfway from dawn (16.1 deg) to fixed chatzot.
 **Sources:**
 
 - Aruch HaShulchan, Orach Chaim 233:14 (as cited)
-- Igrot Moshe, Orach Chaim 1:24 and 2:20 (as cited)
 
 <a id="sofShmaAsym"></a>
 

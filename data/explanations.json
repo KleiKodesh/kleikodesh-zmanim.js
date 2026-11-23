@@ -2336,52 +2336,46 @@
       "title": "חצות קבוע (12:00 זמן מקומי)",
       "text": "12:00 בזמן השמש הממוצע של המקום (קו האורך חלקי 15 שעות מ-UTC), בלי תיקון משוואת הזמן.",
       "sources": [
-        "ערוך השולחן, אורח חיים רלג, יד (כמובא בתיעוד של an earlier zmanim library)",
-        "אגרות משה, אורח חיים א, כד; ב, כ (כמובא בתיעוד של an earlier zmanim library)"
+        "ערוך השולחן, אורח חיים רלג, יד (כמובא בתיעוד של an earlier zmanim library)"
       ]
     },
     "en": {
       "title": "Fixed chatzot (12:00 local time)",
       "text": "12:00 local mean time (longitude / 15 hours from UTC), without the equation of time.",
       "sources": [
-        "Aruch HaShulchan, Orach Chaim 233:14 (as cited)",
-        "Igrot Moshe, Orach Chaim 1:24 and 2:20 (as cited)"
+        "Aruch HaShulchan, Orach Chaim 233:14 (as cited)"
       ]
     }
   },
   "sofShmaGraFixed": {
     "he": {
       "title": "סוף זמן קריאת שמע - הגר\"א, חצות קבוע",
-      "text": "מחצית הזמן מהנץ עד חצות הקבוע (12:00 זמן מקומי) - שיטת הרב משה פיינשטיין.",
+      "text": "מחצית הזמן מהנץ עד חצות הקבוע (12:00 זמן מקומי) - שיטת ערוך השולחן.",
       "sources": [
-        "ערוך השולחן, אורח חיים רלג, יד (כמובא בתיעוד של an earlier zmanim library)",
-        "אגרות משה, אורח חיים א, כד; ב, כ (כמובא בתיעוד של an earlier zmanim library)"
+        "ערוך השולחן, אורח חיים רלג, יד (כמובא בתיעוד של an earlier zmanim library)"
       ]
     },
     "en": {
       "title": "Latest Shema - GRA, fixed chatzot",
-      "text": "Halfway from sunrise to fixed chatzot (12:00 local mean time) - Rav Moshe Feinstein's method.",
+      "text": "Halfway from sunrise to fixed chatzot (12:00 local mean time) - the Aruch HaShulchan's method.",
       "sources": [
-        "Aruch HaShulchan, Orach Chaim 233:14 (as cited)",
-        "Igrot Moshe, Orach Chaim 1:24 and 2:20 (as cited)"
+        "Aruch HaShulchan, Orach Chaim 233:14 (as cited)"
       ]
     }
   },
   "sofTfillaGraFixed": {
     "he": {
       "title": "סוף זמן תפילה - הגר\"א, חצות קבוע",
-      "text": "שני שלישים מהזמן שבין הנץ לחצות הקבוע - שיטת הרב משה פיינשטיין.",
+      "text": "שני שלישים מהזמן שבין הנץ לחצות הקבוע - שיטת ערוך השולחן.",
       "sources": [
-        "ערוך השולחן, אורח חיים רלג, יד (כמובא בתיעוד של an earlier zmanim library)",
-        "אגרות משה, אורח חיים א, כד; ב, כ (כמובא בתיעוד של an earlier zmanim library)"
+        "ערוך השולחן, אורח חיים רלג, יד (כמובא בתיעוד של an earlier zmanim library)"
       ]
     },
     "en": {
       "title": "Latest Shacharit - GRA, fixed chatzot",
-      "text": "Two thirds of the way from sunrise to fixed chatzot - Rav Moshe Feinstein's method.",
+      "text": "Two thirds of the way from sunrise to fixed chatzot - the Aruch HaShulchan's method.",
       "sources": [
-        "Aruch HaShulchan, Orach Chaim 233:14 (as cited)",
-        "Igrot Moshe, Orach Chaim 1:24 and 2:20 (as cited)"
+        "Aruch HaShulchan, Orach Chaim 233:14 (as cited)"
       ]
     }
   },
@@ -2390,16 +2384,14 @@
       "title": "סוף זמן קריאת שמע - מגן אברהם 72, חצות קבוע",
       "text": "מחצית הזמן מעלות השחר (72 דקות לפני הנץ) עד חצות הקבוע.",
       "sources": [
-        "ערוך השולחן, אורח חיים רלג, יד (כמובא בתיעוד של an earlier zmanim library)",
-        "אגרות משה, אורח חיים א, כד; ב, כ (כמובא בתיעוד של an earlier zmanim library)"
+        "ערוך השולחן, אורח חיים רלג, יד (כמובא בתיעוד של an earlier zmanim library)"
       ]
     },
     "en": {
       "title": "Latest Shema - Magen Avraham 72, fixed chatzot",
       "text": "Halfway from dawn (72 minutes before sunrise) to fixed chatzot.",
       "sources": [
-        "Aruch HaShulchan, Orach Chaim 233:14 (as cited)",
-        "Igrot Moshe, Orach Chaim 1:24 and 2:20 (as cited)"
+        "Aruch HaShulchan, Orach Chaim 233:14 (as cited)"
       ]
     }
   },
@@ -2408,16 +2400,14 @@
       "title": "סוף זמן קריאת שמע - מגן אברהם 16.1, חצות קבוע",
       "text": "מחצית הזמן מעלות השחר (16.1 מעלות) עד חצות הקבוע.",
       "sources": [
-        "ערוך השולחן, אורח חיים רלג, יד (כמובא בתיעוד של an earlier zmanim library)",
-        "אגרות משה, אורח חיים א, כד; ב, כ (כמובא בתיעוד של an earlier zmanim library)"
+        "ערוך השולחן, אורח חיים רלג, יד (כמובא בתיעוד של an earlier zmanim library)"
       ]
     },
     "en": {
       "title": "Latest Shema - Magen Avraham 16.1, fixed chatzot",
       "text": "Halfway from dawn (16.1 deg) to fixed chatzot.",
       "sources": [
-        "Aruch HaShulchan, Orach Chaim 233:14 (as cited)",
-        "Igrot Moshe, Orach Chaim 1:24 and 2:20 (as cited)"
+        "Aruch HaShulchan, Orach Chaim 233:14 (as cited)"
       ]
     }
   },
@@ -2426,16 +2416,14 @@
       "title": "מנחה גדולה - חצות קבוע",
       "text": "30 דקות אחרי חצות הקבוע (12:00 זמן מקומי).",
       "sources": [
-        "ערוך השולחן, אורח חיים רלג, יד (כמובא בתיעוד של an earlier zmanim library)",
-        "אגרות משה, אורח חיים א, כד; ב, כ (כמובא בתיעוד של an earlier zmanim library)"
+        "ערוך השולחן, אורח חיים רלג, יד (כמובא בתיעוד של an earlier zmanim library)"
       ]
     },
     "en": {
       "title": "Mincha gedola - fixed chatzot",
       "text": "30 minutes after fixed chatzot (12:00 local mean time).",
       "sources": [
-        "Aruch HaShulchan, Orach Chaim 233:14 (as cited)",
-        "Igrot Moshe, Orach Chaim 1:24 and 2:20 (as cited)"
+        "Aruch HaShulchan, Orach Chaim 233:14 (as cited)"
       ]
     }
   },
@@ -2444,16 +2432,14 @@
       "title": "מנחה קטנה - חצות קבוע",
       "text": "3.5 שעות אחרי חצות הקבוע, כששעה היא שישית הזמן מחצות הקבוע עד השקיעה.",
       "sources": [
-        "ערוך השולחן, אורח חיים רלג, יד (כמובא בתיעוד של an earlier zmanim library)",
-        "אגרות משה, אורח חיים א, כד; ב, כ (כמובא בתיעוד של an earlier zmanim library)"
+        "ערוך השולחן, אורח חיים רלג, יד (כמובא בתיעוד של an earlier zmanim library)"
       ]
     },
     "en": {
       "title": "Mincha ketana - fixed chatzot",
       "text": "3.5 hours after fixed chatzot, an hour being a sixth of fixed chatzot to sunset.",
       "sources": [
-        "Aruch HaShulchan, Orach Chaim 233:14 (as cited)",
-        "Igrot Moshe, Orach Chaim 1:24 and 2:20 (as cited)"
+        "Aruch HaShulchan, Orach Chaim 233:14 (as cited)"
       ]
     }
   },
@@ -2462,16 +2448,14 @@
       "title": "פלג המנחה - חצות קבוע",
       "text": "4.75 שעות אחרי חצות הקבוע, כששעה היא שישית הזמן מחצות הקבוע עד השקיעה.",
       "sources": [
-        "ערוך השולחן, אורח חיים רלג, יד (כמובא בתיעוד של an earlier zmanim library)",
-        "אגרות משה, אורח חיים א, כד; ב, כ (כמובא בתיעוד של an earlier zmanim library)"
+        "ערוך השולחן, אורח חיים רלג, יד (כמובא בתיעוד של an earlier zmanim library)"
       ]
     },
     "en": {
       "title": "Plag hamincha - fixed chatzot",
       "text": "4.75 hours after fixed chatzot, an hour being a sixth of fixed chatzot to sunset.",
       "sources": [
-        "Aruch HaShulchan, Orach Chaim 233:14 (as cited)",
-        "Igrot Moshe, Orach Chaim 1:24 and 2:20 (as cited)"
+        "Aruch HaShulchan, Orach Chaim 233:14 (as cited)"
       ]
     }
   },

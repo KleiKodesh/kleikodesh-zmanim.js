@@ -114,16 +114,15 @@
       "en": "America / Lakewood (Rav Moshe Feinstein)",
       "groups": {
         "misheyakir": "misheyakir7p65",
-        "sofShma": "sofShmaGraFixed",
-        "sofTfilla": "sofTfillaGraFixed",
-        "minchaGedola": "minchaGedolaFixed",
-        "plag": "plagFixed",
+        "sofShma": "sofShmaGra",
+        "sofTfilla": "sofTfillaGra",
+        "plag": "plag",
         "tzeit": "tzeit50",
         "tzeitShabbat": "tzeit50"
       },
       "sources": [
-        " (Igrot Moshe OC 1:24, 2:20; Aruch HaShulchan OC 233:14; Zmanei Yisrael p. 117 (Rav Yaakov Kamenetsky); as cited)",
-        "https://hebrewbooks.org/home.aspx?search=Igrot%20Moshe (Igrot Moshe OC 4:6 misheyakir about 35-40 min; OC 4:62 end of Shabbat in New York not less than 50 min - checked in the text)"
+        "https://hebrewbooks.org/home.aspx?search=Igrot%20Moshe (Igrot Moshe OC 4:6 misheyakir about 35-40 min; OC 4:62 end of Shabbat in New York not less than 50 min - checked in the text)",
+        "https://hebrewbooks.org/home.aspx?search=Igrot%20Moshe (Igrot Moshe OC 1:24: shema from netz like the Gra, chatzot at true solar noon; OC 2:20: hours are always seasonal - checked in the text)"
       ]
     }
   ],
