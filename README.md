@@ -90,6 +90,7 @@ Also exported: `zmanInstants` (exact instants as BigInt epoch nanoseconds), `for
 | tzeit13p5 / tzeit18 | 13.5 / 18 fixed minutes after sunset: 3/4 mil (Shabbat 34b; SA OC 261:2) at 18 / 24 min a mil (SA OC 459:2; Rambam on Mishna Pesachim 3:2) | up |
 | tzeit18Sun | 18 minutes (3/4 mil at 24 min a mil) by the sun's position: the sun 4.66 deg below the true horizon, its depth 18 minutes after sunset in Jerusalem at the equinox (computed with this library's SPA) | up |
 | tzeit645 | Rav Y. M. Tucazinsky's nightfall: the sun 6.45 deg below the true horizon (Birur Halacha, Yoreh De'ah 262) | up |
+| beinHashmashotYereim | start of bein hashmashot per the Yereim: 3/4 mil (18 min) before sunset, as the sun 2.99 deg above the true horizon (its height 18 minutes before sunset in Jerusalem at the equinox); degree-based method per Rabbi Yedidya Manet, Zmanei HaHalacha Lema'aseh p. 11 | down |
 | plagAlot90Tzeit645 / plagAlot72Tzeit645 | plag (10.75 seasonal hours) of a day from dawn (19.8 / 16.1 deg) to tzeit645 - the Magen Avraham's day from dawn to nightfall (Magen Avraham 58:1; SA OC 233:1) | up |
 | tzeit20 / tzeit24 / tzeit30 / tzeit40 / tzeit50 | 20 / 24 / 30 / 40 / 50 fixed minutes after sunset, by community custom | up |
 | beinHashmashotRt | start of twilight per Rabbeinu Tam: sunset + 58.5 min (3.25 mil of 18 min; Tosafot Shabbat 35a, Pesachim 94a; SA OC 261:2). Twilight ends at tzeitRt72; by the Geonim it is sunset..tzeitGeonim | down |

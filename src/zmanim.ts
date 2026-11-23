@@ -13,7 +13,7 @@ export const ZMAN_NAMES = [
   'chatzot', 'minchaGedola', 'minchaGedola30', 'minchaKetana', 'plag', 'plagMga', 'plagMga72z', 'plagMga19', 'plagMga90z', 'plagMga90', 'plagMga120', 'plagAlot90Tzeit645', 'plagAlot72Tzeit645',
   'candles40', 'candles30', 'candles22', 'candles20', 'candles18', 'sunsetTerrain', 'sunset', 'sunsetElevated',
   'tzeitGeonim', 'tzeitGeonimVisible', 'tzeit13p5', 'tzeit18', 'tzeit18Sun', 'tzeit20', 'tzeit645', 'tzeit7083', 'tzeit', 'tzeitVisible', 'tzeit24', 'tzeit30',
-  'tzeit40', 'tzeit50', 'beinHashmashotRt', 'tzeitRt72', 'tzeitRt72Zmanis', 'tzeitRt16', 'tzeit90z',
+  'tzeit40', 'tzeit50', 'beinHashmashotYereim', 'beinHashmashotRt', 'tzeitRt72', 'tzeitRt72Zmanis', 'tzeitRt16', 'tzeit90z',
 ] as const
 
 export type ZmanName = typeof ZMAN_NAMES[number]
@@ -38,7 +38,7 @@ export const ROUNDING: Readonly<Record<ZmanName, Rounding>> = {
   plagMga120: 'up', plagAlot90Tzeit645: 'up', plagAlot72Tzeit645: 'up', tzeit645: 'up', plagMga90: 'up', plagMga19: 'up', plagMga90z: 'up', plagMga72z: 'up',
   tzeit13p5: 'up', tzeit18: 'up', tzeit20: 'up', tzeit24: 'up', tzeit30: 'up', tzeit40: 'up', tzeit50: 'up',
   // The start of Rabbeinu Tam's twilight ends the time that is surely day (work before Shabbat): a deadline.
-  beinHashmashotRt: 'down',
+  beinHashmashotYereim: 'down', beinHashmashotRt: 'down',
 }
 
 /**
@@ -154,6 +154,12 @@ const TZEIT_7083 = 7.083
 const TZEIT_GEONIM = 3.7
 /** Rav Y. M. Tucazinsky's tzeit (Birur Halacha, Yoreh De'ah 262): the sun 6.45 deg below the true horizon. */
 const TZEIT_645 = 6.45
+/**
+ * The Yereim's bein hashmashot: 3/4 mil (24 minutes a mil = 18 minutes) before sunset, by the sun's position: its
+ * height above the true horizon 18 minutes before sea-level sunset in Jerusalem at the equinox, computed with this
+ * library's own SPA (2.990 deg in March, 2.995 deg in September 2026).
+ */
+const BH_YEREIM = 2.99
 /**
  * 18 minutes (3/4 mil at 24 minutes a mil) expressed by the sun's position: how far the sun is below
  * the true horizon 18 minutes after sea-level sunset in Jerusalem at the equinox, computed with this
@@ -404,6 +410,7 @@ export function zmanInstants(place: Coordinates, date: CivilDate, which: readonl
       case 'plagMga19': ms = today.mga19(10.75); break
       case 'plagAlot90Tzeit645': ms = today.alotToTzeit645(ALOT_90, 10.75); break
       case 'plagAlot72Tzeit645': ms = today.alotToTzeit645(ALOT, 10.75); break
+      case 'beinHashmashotYereim': ms = today.set(G - BH_YEREIM); break
       case 'tzeit645': ms = today.set(G + TZEIT_645); break
       case 'sofShmaMga90z': ms = today.mgaSeasonal(1 / 8, 3); break
       case 'sofTfillaMga90z': ms = today.mgaSeasonal(1 / 8, 4); break

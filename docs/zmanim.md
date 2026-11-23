@@ -898,6 +898,18 @@ Nightfall by Rav Yechiel Michel Tucazinsky's calculation: the sun 6.45 degrees b
 - Community custom (a fixed margin after sunset; no single published source)
 - Shabbat 34b (twilight is three quarters of a mil, Rabba in the name of Shmuel)
 
+<a id="beinHashmashotYereim"></a>
+
+## Start of bein hashmashot (Yereim)
+
+By the Yereim, bein hashmashot begins three quarters of a mil (18 minutes, at 24 minutes a mil) before sunset; measured here by the sun's position: its height above the horizon 18 minutes before sunset in Jerusalem at the equinox.
+
+**Sources:**
+
+- Sefer Yereim (Rabbi Eliezer of Metz): bein hashmashot is the 3/4 mil before sunset
+- Shabbat 34b (bein hashmashot is three quarters of a mil)
+- Rabbi Yedidya Manet, Zmanei HaHalacha Lema'aseh p. 11 (the degree-based Yereim calculation)
+
 <a id="beinHashmashotRt"></a>
 
 ## Start of twilight (Rabbeinu Tam)

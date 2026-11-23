@@ -1503,6 +1503,26 @@
       ]
     }
   },
+  "beinHashmashotYereim": {
+    "he": {
+      "title": "תחילת בין השמשות (יראים)",
+      "text": "לדעת היראים בין השמשות מתחיל שלשה רבעי מיל (18 דקות, במיל של 24 דקות) לפני השקיעה, ונמדד כאן לפי מצב השמש: גובהה מעל האופק 18 דקות לפני השקיעה בירושלים בימי השוויון.",
+      "sources": [
+        "ספר יראים (רבי אליעזר ממיץ), בין השמשות שלשה רבעי מיל לפני השקיעה",
+        "שבת לד ע״ב (בין השמשות שלשה חלקי מיל)",
+        "הרב ידידיה מנת, זמני ההלכה למעשה עמ׳ 11 (חישוב לפי מעלות)"
+      ]
+    },
+    "en": {
+      "title": "Start of bein hashmashot (Yereim)",
+      "text": "By the Yereim, bein hashmashot begins three quarters of a mil (18 minutes, at 24 minutes a mil) before sunset; measured here by the sun's position: its height above the horizon 18 minutes before sunset in Jerusalem at the equinox.",
+      "sources": [
+        "Sefer Yereim (Rabbi Eliezer of Metz): bein hashmashot is the 3/4 mil before sunset",
+        "Shabbat 34b (bein hashmashot is three quarters of a mil)",
+        "Rabbi Yedidya Manet, Zmanei HaHalacha Lema'aseh p. 11 (the degree-based Yereim calculation)"
+      ]
+    }
+  },
   "beinHashmashotRt": {
     "he": {
       "title": "תחילת בין השמשות (רבנו תם)",
