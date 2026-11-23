@@ -32,8 +32,8 @@
     },
     {
       "id": "chabad",
-      "he": "חב\"ד (שיטת אדמו\"ר הזקן)",
-      "en": "Chabad (Alter Rebbe)",
+      "he": "חב״ד (סידור אדמו״ר הזקן)",
+      "en": "Chabad (the Alter Rebbe's Siddur)",
       "groups": {
         "alot": "alotBaalHatanya",
         "sunrise": "sunriseBaalHatanya",
@@ -49,6 +49,21 @@
         "https://he.wikipedia.org/wiki/%D7%96%D7%9E%D7%A0%D7%99_%D7%94%D7%99%D7%95%D7%9D_%D7%91%D7%94%D7%9C%D7%9B%D7%94 (section: sha'ah zmanit - Rabbi Shneur Zalman of Liadi ruled by the Gra method)",
         " (Shulchan Aruch HaRav / Siddur of the Baal HaTanya; chabad.org aid 3209349; as cited)",
         "https://www.sefaria.org/search?q=Shulchan%20Arukh%20HaRav (OC 261:5 rules like Rabbeinu Tam; OC 459:10 mil of 24 minutes the main view; OC 89:1 dawn 4 mil before netz - checked in the text)"
+      ]
+    },
+    {
+      "id": "chabadSah",
+      "he": "חב״ד (שולחן ערוך הרב)",
+      "en": "Chabad (Shulchan Aruch HaRav)",
+      "groups": {
+        "alot": "alot96",
+        "sofShma": "sofShmaGra",
+        "sofTfilla": "sofTfillaGra",
+        "plag": "plag",
+        "tzeitShabbat": "tzeitRt96"
+      },
+      "sources": [
+        "https://www.sefaria.org/search?q=Shulchan%20Arukh%20HaRav (OC 89:1 dawn 4 mil before netz; OC 459:10 a mil of 24 min the main view; OC 261:5 Rabbeinu Tam - checked in the text; Siddur Torah Or: hours like the Gra, per HaMichlol \"Zmanei HaYom BaHalacha\" note 39)"
       ]
     },
     {
@@ -122,6 +137,12 @@
     },
     "78": {
       "candles": "candles40"
+    },
+    "85": {
+      "candles": "candles22"
+    },
+    "45": {
+      "candles": "candles22"
     }
   },
   "countries": {

@@ -1335,6 +1335,42 @@
       ]
     }
   },
+  "alot96": {
+    "he": {
+      "title": "עלות השחר (96 דקות)",
+      "text": "ארבעה מילין לפני הנץ במיל של 24 דקות, כשולחן ערוך הרב.",
+      "sources": [
+        "שולחן ערוך הרב או״ח פט, א (עלות השחר מהלך ד׳ מילין קודם הנץ)",
+        "שולחן ערוך הרב או״ח תנט, י (מיל 24 דקות העיקר)"
+      ]
+    },
+    "en": {
+      "title": "Dawn (96 minutes)",
+      "text": "Four mil before sunrise at 24 minutes a mil, per the Shulchan Aruch HaRav.",
+      "sources": [
+        "Shulchan Aruch HaRav OC 89:1 (dawn 4 mil before netz)",
+        "Shulchan Aruch HaRav OC 459:10 (a mil of 24 minutes is the main view)"
+      ]
+    }
+  },
+  "alot120": {
+    "he": {
+      "title": "עלות השחר (120 דקות)",
+      "text": "חמישה מילין לפני הנץ במיל של 24 דקות; כך יש שקראו בשולחן ערוך הרב.",
+      "sources": [
+        "פסחים צג ע״ב (חמשה מילין)",
+        "המכלול, ערך עלות השחר, הערה 3 (שיטת שולחן ערוך הרב כפי שנדפסה)"
+      ]
+    },
+    "en": {
+      "title": "Dawn (120 minutes)",
+      "text": "Five mil before sunrise at 24 minutes a mil; one reading of the Shulchan Aruch HaRav.",
+      "sources": [
+        "Pesachim 93b (five mil)",
+        "HaMichlol, \"Alot HaShachar\", note 3"
+      ]
+    }
+  },
   "alot90z": {
     "he": {
       "title": "עלות השחר (90 דקות זמניות)",

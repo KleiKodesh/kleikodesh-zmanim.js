@@ -796,6 +796,28 @@ Dawn four mil before sunrise, counted in seasonal minutes: a tenth of the sunris
 - Shulchan Aruch OC 459:2; Mishna Berura 459:15 (a mil = 18 minutes)
 - Shulchan Aruch OC 58:1 (hours of the day are a twelfth of the day, longer or shorter by season); here the minutes of dawn are counted the same way
 
+<a id="alot96"></a>
+
+## Dawn (96 minutes)
+
+Four mil before sunrise at 24 minutes a mil, per the Shulchan Aruch HaRav.
+
+**Sources:**
+
+- Shulchan Aruch HaRav OC 89:1 (dawn 4 mil before netz)
+- Shulchan Aruch HaRav OC 459:10 (a mil of 24 minutes is the main view)
+
+<a id="alot120"></a>
+
+## Dawn (120 minutes)
+
+Five mil before sunrise at 24 minutes a mil; one reading of the Shulchan Aruch HaRav.
+
+**Sources:**
+
+- Pesachim 93b (five mil)
+- HaMichlol, "Alot HaShachar", note 3
+
 <a id="alot90z"></a>
 
 ## Dawn (90 seasonal minutes)

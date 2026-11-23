@@ -6,7 +6,7 @@ import { julianDayFromUtcMs, spa, spaDay, spaEvent, zenithToH0, type SpaDay } fr
 
 /** Every zman the library computes, in the order of the day. Each is computed only when requested. */
 export const ZMAN_NAMES = [
-  'chatzotNight', 'alot90Visible', 'alot90', 'alot90Chatzot', 'alot90z', 'alotVisible', 'alot', 'alotChatzot', 'alot72z', 'misheyakirVisible',
+  'chatzotNight', 'alot90Visible', 'alot90', 'alot90Chatzot', 'alot90z', 'alotVisible', 'alot', 'alotChatzot', 'alot72z', 'alot96', 'alot120', 'misheyakirVisible',
   'misheyakir', 'misheyakirChatzot', 'misheyakir11', 'misheyakir10p2', 'misheyakir7p65', 'misheyakir12p85', 'alotBaalHatanya', 'sunriseBaalHatanya', 'sunriseElevated', 'sunrise', 'sunriseTerrain',
   'sofShmaMga120', 'sofShmaMga90', 'sofShmaMga19', 'sofShmaMga90z', 'sofShmaMga', 'sofShmaMga16', 'sofShmaMga72z', 'sofShmaMga72Fixed', 'sofShmaMga16Fixed', 'sofShmaHarari40', 'sofShmaHarari25', 'sofShmaAsym', 'sofShmaBaalHatanya', 'sofShmaGra', 'sofShmaGraFixed',
   'sofTfillaMga120', 'sofTfillaMga90', 'sofTfillaMga19', 'sofTfillaMga90z', 'sofTfillaMga', 'sofTfillaMga16', 'sofTfillaMga72z', 'sofTfillaHarari40', 'sofTfillaHarari25', 'sofTfillaAsym', 'sofTfillaBaalHatanya', 'sofTfillaGra', 'sofTfillaGraFixed',
@@ -34,7 +34,7 @@ export const ROUNDING: Readonly<Record<ZmanName, Rounding>> = {
   sunset: 'down', sunsetElevated: 'down', sunsetTerrain: 'down', tzeitGeonim: 'up', tzeitGeonimVisible: 'up', tzeit7083: 'up', tzeit18Sun: 'up', tzeit: 'up', tzeitVisible: 'up',
   candles40: 'down', candles30: 'down', candles22: 'down', candles20: 'down', candles18: 'down',
   tzeitRt72: 'up', tzeitRt72Zmanis: 'up', tzeitRt16: 'up', tzeitRt90: 'up', tzeitRt96: 'up', tzeit13p5z: 'up',
-  alot90z: 'up', alot72z: 'up', tzeit90z: 'up',
+  alot90z: 'up', alot72z: 'up', alot96: 'up', alot120: 'up', tzeit90z: 'up',
   sofShmaMga120: 'down', sofShmaMga90: 'down', sofShmaMga19: 'down', sofShmaMga90z: 'down', sofShmaMga72z: 'down',
   sofTfillaMga120: 'down', sofTfillaMga90: 'down', sofTfillaMga19: 'down', sofTfillaMga90z: 'down', sofTfillaMga72z: 'down',
   plagMga120: 'up', plagAlot90Tzeit645: 'up', plagAlot72Tzeit645: 'up', tzeit645: 'up', plagMga90: 'up', plagMga19: 'up', plagMga90z: 'up', plagMga72z: 'up',
@@ -60,7 +60,7 @@ export const HORIZON_ZMANIM: ReadonlySet<ZmanName> = new Set<ZmanName>(['sunrise
   'sofShmaMga', 'sofShmaGra', 'sofTfillaMga', 'sofTfillaGra', 'minchaGedola', 'minchaGedola30', 'minchaKetana', 'plag', 'plagMga',
   'alot90Visible', 'alotVisible', 'misheyakirVisible', 'tzeitGeonimVisible', 'tzeitVisible',
   'candles40', 'candles30', 'candles22', 'candles20', 'candles18', 'tzeitRt72', 'tzeitRt72Zmanis', 'tzeitRt90', 'tzeitRt96', 'tzeit13p5z', 'sunriseTerrain', 'sunsetTerrain',
-  'alot90z', 'alot72z', 'tzeit90z', 'sofShmaMga120', 'sofShmaMga90', 'sofShmaMga90z', 'sofShmaMga72z', 'sofTfillaMga120', 'sofTfillaMga90',
+  'alot90z', 'alot72z', 'alot96', 'alot120', 'tzeit90z', 'sofShmaMga120', 'sofShmaMga90', 'sofShmaMga90z', 'sofShmaMga72z', 'sofTfillaMga120', 'sofTfillaMga90',
   'sofTfillaMga90z', 'sofTfillaMga72z', 'plagMga120', 'plagMga90', 'plagMga90z', 'plagMga72z',
   'tzeit13p5', 'tzeit18', 'tzeit20', 'tzeit24', 'tzeit30', 'tzeit40', 'tzeit50', 'beinHashmashotRt',
   'sofShmaHarari40', 'sofShmaHarari25', 'sofTfillaHarari40', 'sofTfillaHarari25', 'minchaGedolaHarari40', 'minchaGedolaHarari25',
@@ -476,6 +476,11 @@ export function zmanInstants(place: Coordinates, date: CivilDate, which: readonl
       case 'plagMga72z': ms = today.mgaSeasonal(1 / 10, 10.75); break
       // Seasonal-minute dawn and nightfall: a tenth (72) or an eighth (90) of the sunrise..sunset day.
       case 'alot72z': ms = today.gra(-1.2); break
+      // Shulchan Aruch HaRav OC 89:1 (dawn 4 mil before netz) with OC 459:10 (a mil of 24 min is the main view):
+      // 96 minutes - checked in the text. Some read the Shulchan Aruch HaRav as 5 mil = 120 minutes (HaMichlol,
+      // "Alot HaShachar" note 3, citing R. A. L. Kaplan and R. Elashvili for the 96-minute reading).
+      case 'alot96': ms = today.sunrise() - 96 * MINUTE_MS; break
+      case 'alot120': ms = today.sunrise() - 120 * MINUTE_MS; break
       case 'alot90z': ms = today.gra(-1.5); break
       case 'tzeit90z': ms = today.gra(13.5); break
       // Nightfall in fixed minutes after sunset (13.5 = 3/4 mil of 18; 18 = 3/4 mil of 24; the rest community customs).
