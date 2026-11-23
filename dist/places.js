@@ -18,13 +18,36 @@ export function configure(options) {
     names.clear();
     bin = null;
     tz = null;
+    climate = null;
     placeCache.clear();
 }
 // Caches: two name lists, one binary table, one zone table, and a few recent places.
 const names = new Map();
 let bin = null;
 let tz = null;
+let climate = null;
 const placeCache = new Map();
+/** Bytes per record in climate.bin: 12 monthly mean temperatures, int8 C; -128 = unknown. */
+export const CLIMATE_RECORD_SIZE = 12;
+const NO_TEMPERATURE = -128;
+/** Zmanim that depend on sunrise/sunset (and so on refraction); only these load climate.bin. */
+const HORIZON_ZMANIM = new Set(['sunrise', 'sunset', 'sofShmaMga', 'sofShmaGra',
+    'sofTfillaMga', 'sofTfillaGra', 'minchaGedola', 'minchaKetana', 'plag']);
+function climateTable() {
+    if (!climate) {
+        climate = loader('climate.bin').then((buffer) => new Int8Array(buffer));
+        climate.catch(() => { climate = null; });
+    }
+    return climate;
+}
+/** A place's 12 monthly mean temperatures (C; NaN where unknown). Loads climate.bin once. */
+export async function getMonthlyTemperatures(id) {
+    const t = await climateTable();
+    const o = id * CLIMATE_RECORD_SIZE;
+    if (o + CLIMATE_RECORD_SIZE > t.length)
+        return new Array(12).fill(NaN);
+    return Array.from(t.subarray(o, o + CLIMATE_RECORD_SIZE), (v) => (v === NO_TEMPERATURE ? NaN : v));
+}
 const PLACE_CACHE_SIZE = 16;
 const text = async (file) => new TextDecoder().decode(await loader(file));
 /** Every place name in [lang]; the index is the place id (index 0 is empty). Loads only that names file. */
@@ -100,5 +123,7 @@ export function toCivilDate(date) {
 /** Only the requested zmanim, printed HH:MM in the place's zone with the library's rounding. */
 export async function zmanim(place, date, which = ZMAN_NAMES) {
     const p = typeof place === 'number' ? await getPlace(place) : place;
-    return computeZmanim(p, toCivilDate(date), which);
+    if (!which.some((n) => HORIZON_ZMANIM.has(n)))
+        return computeZmanim(p, toCivilDate(date), which);
+    return computeZmanim({ ...p, monthlyTemperatureC: await getMonthlyTemperatures(p.id) }, toCivilDate(date), which);
 }

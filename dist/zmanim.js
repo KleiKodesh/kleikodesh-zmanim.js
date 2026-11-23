@@ -3,6 +3,7 @@
 // Instants are BigInt epoch nanoseconds, as Kotlin's Instant keeps them: solar midnight halves a nanosecond
 // distance before anything is cut to milliseconds, so the precision decides some printed minutes.
 import { GEOMETRIC_ZENITH, julianDay, utcNoon, utcSunrise, utcSunset } from './noaa.js';
+import { horizonRefractionArcmin, standardPressure, standardTemperature, temperatureOn } from './refraction.js';
 /** Every zman the library computes, in the order of the day. */
 export const ZMAN_NAMES = [
     'chatzotNight', 'alot', 'misheyakir', 'sunrise',
@@ -18,6 +19,19 @@ export const ROUNDING = {
     sofShmaGra: 'down', sofShmaMga: 'down', sofTfillaGra: 'down', sofTfillaMga: 'down',
     chatzot: 'nearest', minchaGedola: 'up', minchaKetana: 'up', plag: 'up', sunset: 'down', tzeit: 'up',
 };
+/** Solar semidiameter used for sunrise/sunset, degrees (16'). */
+const SOLAR_RADIUS = 16 / 60;
+/**
+ * Zenith of sea-level sunrise/sunset for [place] on [date]: 90 + radius + refraction at the apparent horizon,
+ * with pressure from the elevation and temperature from the monthly means (see refraction.ts).
+ */
+export function horizonZenith(place, date) {
+    const elevation = place.elevation ?? 0;
+    let temperature = place.monthlyTemperatureC ? temperatureOn(place.monthlyTemperatureC, date.month, date.day) : NaN;
+    if (Number.isNaN(temperature))
+        temperature = standardTemperature(elevation);
+    return GEOMETRIC_ZENITH + SOLAR_RADIUS + horizonRefractionArcmin(standardPressure(elevation), temperature) / 60;
+}
 const ALOT = GEOMETRIC_ZENITH + 16.1;
 const MISHEYAKIR = GEOMETRIC_ZENITH + 11.5;
 const TZEIT = GEOMETRIC_ZENITH + 8.5;
@@ -41,7 +55,9 @@ export function addDays(d, days) {
 class Day {
     constructor(place, date) {
         this.place = place;
+        this.date = date;
         this.cache = new Map();
+        this.horizon = NaN;
         // Zones across the antimeridian (local mean time 20+ hours off the zone) roll the date, as an earlier zmanim library does.
         let d = date;
         if (place.rawOffsetMinutes !== undefined) {
@@ -85,6 +101,14 @@ class Day {
         return BigInt(cal) * MS + BigInt(hours) * 3600000000000n + BigInt(minutes) * 60000000000n +
             BigInt(seconds) * 1000000000n + BigInt(nanos);
     }
+    /** The sunrise/sunset zenith, computed only when a sunrise/sunset-based zman is asked for. */
+    get z() {
+        if (Number.isNaN(this.horizon))
+            this.horizon = horizonZenith(this.place, this.date);
+        return this.horizon;
+    }
+    sunrise() { return this.rise(this.z); }
+    sunset() { return this.set(this.z); }
     rise(zenith) {
         return this.memo(`r${zenith}`, () => this.fromUtcHours(utcSunrise(this.jd, this.place.lat, this.place.lng, zenith), true));
     }
@@ -103,12 +127,12 @@ class Day {
     }
     /** Day from sea-level sunrise to sea-level sunset (GRA). */
     gra(hours) {
-        return Day.shaahBased(this.rise(GEOMETRIC_ZENITH), this.set(GEOMETRIC_ZENITH), hours);
+        return Day.shaahBased(this.sunrise(), this.sunset(), hours);
     }
     /** Day from 72 minutes before sunrise to 72 minutes after sunset (MGA). */
     mga(hours) {
-        const sunrise = this.rise(GEOMETRIC_ZENITH);
-        const sunset = this.set(GEOMETRIC_ZENITH);
+        const sunrise = this.sunrise();
+        const sunset = this.sunset();
         const offset = BigInt(72 * MINUTE_MS) * MS;
         return Day.shaahBased(sunrise === null ? null : sunrise - offset, sunset === null ? null : sunset + offset, hours);
     }
@@ -138,7 +162,7 @@ export function zmanInstants(place, date, which = ZMAN_NAMES) {
                 out[name] = today.rise(MISHEYAKIR);
                 break;
             case 'sunrise':
-                out[name] = today.rise(GEOMETRIC_ZENITH);
+                out[name] = today.sunrise();
                 break;
             case 'sofShmaGra':
                 out[name] = today.gra(3);
@@ -165,7 +189,7 @@ export function zmanInstants(place, date, which = ZMAN_NAMES) {
                 out[name] = today.gra(10.75);
                 break;
             case 'sunset':
-                out[name] = today.set(GEOMETRIC_ZENITH);
+                out[name] = today.sunset();
                 break;
             case 'tzeit':
                 out[name] = today.set(TZEIT);
