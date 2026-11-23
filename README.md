@@ -60,6 +60,24 @@ Sizes: names-he 9100 B, names-en 9322 B, places.bin 6215 B, tz.json 1028 B.
 
 `scripts/import-from-app.mjs` created places.tsv from the app's city list once; edit the TSV from now on.
 
+## Solar Position Algorithm (src/spa.ts, standalone)
+
+`src/spa.ts` is a standalone implementation of the Solar Position Algorithm, not yet used by the
+zmanim. Source: Ibrahim Reda and Afshin Andreas, "Solar Position Algorithm for Solar Radiation Applications", National Renewable Energy Laboratory, Technical Report NREL/TP-560-34302, revised January 2008, https://docs.nlr.gov/docs/fy08osti/34302.pdf.
+
+Written from scratch solely from this paper on 2026-11-23 by Claude Code (AI assistant) for
+KleiKodesh; no other implementation was consulted. The code comments cite the paper's section
+and equation numbers; see PROVENANCE.md.
+
+- `spa(input)`: full position for one instant (sections 3.1-3.16 and A.1): apparent declination,
+  right ascension, topocentric right ascension / declination / hour angle, zenith, azimuth,
+  surface incidence, equation of time.
+- `spaDay(y, m, d, deltaT?)` + `spaEvent(day, lat, lng, h0, kind, options?)`: section A.2 sun
+  transit, rise and set for any sun-centre elevation (`zenithToH0(zenith, upperLimb)`), as a UT
+  fraction of the day. One `spaDay` per date serves every place and angle.
+- `defaultDeltaT(year)`: Espenak & Meeus polynomial (NASA/TP-2006-214141); pass your own deltaT
+  for better accuracy.
+
 ## Build and test
 
 ```
