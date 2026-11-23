@@ -5,8 +5,8 @@
  */
 /** One-sentence disclaimer that apps should show beside any zmanim they display. */
 export const DISCLAIMER = {
-    en: 'Times are approximate and may be slightly inaccurate; check a reliable luach.',
-    he: 'הזמנים משוערים ועשויים להיות לא מדויקים מעט; יש לבדוק בלוח אמין.',
+    en: 'Times are approximate and may be slightly inaccurate.',
+    he: 'הזמנים משוערים ועשויים להיות לא מדויקים מעט.',
 };
 export { CLIMATE_RECORD_SIZE, configure, getMonthlyLapseRates, getMonthlyTemperatures, getPlace, getTerrainHorizon, HORIZON_CHUNK, LAPSE_SCALE, listPlaces, nearestPlaceId, placeCount, RECORD_SIZE, searchPlaces, toCivilDate, zmanim } from './places.js';
 export { GEO_RECORD_SIZE, listPlaceGeo, placeTree } from './geo.js';
