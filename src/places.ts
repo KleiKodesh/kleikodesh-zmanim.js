@@ -11,7 +11,7 @@ export interface Place {
   id: number
   lat: number
   lng: number
-  /** Meters (the zmanim are sea-level; kept for consumers). */
+  /** Meters. The zmanim are sea-level; elevation only sets the air pressure for sunrise/sunset refraction. */
   elevation: number
   tzid: string
   rawOffsetMinutes: number
@@ -35,6 +35,7 @@ export function configure(options: { baseUrl?: string | URL, loader?: AssetLoade
   names.clear()
   bin = null
   tz = null
+  climate = null
   placeCache.clear()
 }
 
@@ -42,7 +43,31 @@ export function configure(options: { baseUrl?: string | URL, loader?: AssetLoade
 const names = new Map<Lang, Promise<readonly string[]>>()
 let bin: Promise<DataView> | null = null
 let tz: Promise<{ ids: string[], rawOffsetMinutes: number[] }> | null = null
+let climate: Promise<Int8Array> | null = null
 const placeCache = new Map<number, Place>()
+
+/** Bytes per record in climate.bin: 12 monthly mean temperatures, int8 C; -128 = unknown. */
+export const CLIMATE_RECORD_SIZE = 12
+const NO_TEMPERATURE = -128
+/** Zmanim that depend on sunrise/sunset (and so on refraction); only these load climate.bin. */
+const HORIZON_ZMANIM: ReadonlySet<ZmanName> = new Set<ZmanName>(['sunrise', 'sunset', 'sofShmaMga', 'sofShmaGra',
+  'sofTfillaMga', 'sofTfillaGra', 'minchaGedola', 'minchaKetana', 'plag'])
+
+function climateTable(): Promise<Int8Array> {
+  if (!climate) {
+    climate = loader('climate.bin').then((buffer) => new Int8Array(buffer))
+    climate.catch(() => { climate = null })
+  }
+  return climate
+}
+
+/** A place's 12 monthly mean temperatures (C; NaN where unknown). Loads climate.bin once. */
+export async function getMonthlyTemperatures(id: number): Promise<number[]> {
+  const t = await climateTable()
+  const o = id * CLIMATE_RECORD_SIZE
+  if (o + CLIMATE_RECORD_SIZE > t.length) return new Array<number>(12).fill(NaN)
+  return Array.from(t.subarray(o, o + CLIMATE_RECORD_SIZE), (v) => (v === NO_TEMPERATURE ? NaN : v))
+}
 const PLACE_CACHE_SIZE = 16
 
 const text = async (file: string): Promise<string> => new TextDecoder().decode(await loader(file))
@@ -130,5 +155,6 @@ export async function zmanim(
   which: readonly ZmanName[] = ZMAN_NAMES,
 ): Promise<Partial<Record<ZmanName, string | null>>> {
   const p = typeof place === 'number' ? await getPlace(place) : place
-  return computeZmanim(p, toCivilDate(date), which)
+  if (!which.some((n) => HORIZON_ZMANIM.has(n))) return computeZmanim(p, toCivilDate(date), which)
+  return computeZmanim({ ...p, monthlyTemperatureC: await getMonthlyTemperatures(p.id) }, toCivilDate(date), which)
 }

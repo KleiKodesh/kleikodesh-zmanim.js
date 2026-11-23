@@ -3,6 +3,7 @@
 // Instants are BigInt epoch nanoseconds, as Kotlin's Instant keeps them: solar midnight halves a nanosecond
 // distance before anything is cut to milliseconds, so the precision decides some printed minutes.
 import { GEOMETRIC_ZENITH, julianDay, utcNoon, utcSunrise, utcSunset } from './noaa.js'
+import { horizonRefractionArcmin, standardPressure, standardTemperature, temperatureOn } from './refraction.js'
 
 /** Every zman the library computes, in the order of the day. */
 export const ZMAN_NAMES = [
@@ -34,6 +35,24 @@ export interface Coordinates {
   tzid: string
   /** Standard (raw) UTC offset of the zone in minutes; only used for zones across the antimeridian. */
   rawOffsetMinutes?: number
+  /** Meters; sets the air pressure for refraction (sunrise/sunset stay sea-level, at the geometric horizon). Default 0. */
+  elevation?: number
+  /** 12 monthly mean air temperatures in C (NaN = unknown); default: standard atmosphere at [elevation]. */
+  monthlyTemperatureC?: readonly number[]
+}
+
+/** Solar semidiameter used for sunrise/sunset, degrees (16'). */
+const SOLAR_RADIUS = 16 / 60
+
+/**
+ * Zenith of sea-level sunrise/sunset for [place] on [date]: 90 + radius + refraction at the apparent horizon,
+ * with pressure from the elevation and temperature from the monthly means (see refraction.ts).
+ */
+export function horizonZenith(place: Coordinates, date: CivilDate): number {
+  const elevation = place.elevation ?? 0
+  let temperature = place.monthlyTemperatureC ? temperatureOn(place.monthlyTemperatureC, date.month, date.day) : NaN
+  if (Number.isNaN(temperature)) temperature = standardTemperature(elevation)
+  return GEOMETRIC_ZENITH + SOLAR_RADIUS + horizonRefractionArcmin(standardPressure(elevation), temperature) / 60
 }
 
 const ALOT = GEOMETRIC_ZENITH + 16.1
@@ -64,8 +83,9 @@ class Day {
   private readonly jd: number
   private readonly midnightMs: number
   private readonly cache = new Map<string, bigint | null>()
+  private horizon = NaN
 
-  constructor(private readonly place: Coordinates, date: CivilDate) {
+  constructor(private readonly place: Coordinates, private readonly date: CivilDate) {
     // Zones across the antimeridian (local mean time 20+ hours off the zone) roll the date, as an earlier zmanim library does.
     let d = date
     if (place.rawOffsetMinutes !== undefined) {
@@ -107,6 +127,15 @@ class Day {
       BigInt(seconds) * 1_000_000_000n + BigInt(nanos)
   }
 
+  /** The sunrise/sunset zenith, computed only when a sunrise/sunset-based zman is asked for. */
+  private get z(): number {
+    if (Number.isNaN(this.horizon)) this.horizon = horizonZenith(this.place, this.date)
+    return this.horizon
+  }
+
+  sunrise(): bigint | null { return this.rise(this.z) }
+  sunset(): bigint | null { return this.set(this.z) }
+
   rise(zenith: number): bigint | null {
     return this.memo(`r${zenith}`, () => this.fromUtcHours(utcSunrise(this.jd, this.place.lat, this.place.lng, zenith), true))
   }
@@ -128,13 +157,13 @@ class Day {
 
   /** Day from sea-level sunrise to sea-level sunset (GRA). */
   gra(hours: number): bigint | null {
-    return Day.shaahBased(this.rise(GEOMETRIC_ZENITH), this.set(GEOMETRIC_ZENITH), hours)
+    return Day.shaahBased(this.sunrise(), this.sunset(), hours)
   }
 
   /** Day from 72 minutes before sunrise to 72 minutes after sunset (MGA). */
   mga(hours: number): bigint | null {
-    const sunrise = this.rise(GEOMETRIC_ZENITH)
-    const sunset = this.set(GEOMETRIC_ZENITH)
+    const sunrise = this.sunrise()
+    const sunset = this.sunset()
     const offset = BigInt(72 * MINUTE_MS) * MS
     return Day.shaahBased(sunrise === null ? null : sunrise - offset, sunset === null ? null : sunset + offset, hours)
   }
@@ -158,7 +187,7 @@ export function zmanInstants(place: Coordinates, date: CivilDate, which: readonl
       case 'chatzotNight': out[name] = solarMidnightBetween(new Day(place, addDays(date, -1)), today); break
       case 'alot': out[name] = today.rise(ALOT); break
       case 'misheyakir': out[name] = today.rise(MISHEYAKIR); break
-      case 'sunrise': out[name] = today.rise(GEOMETRIC_ZENITH); break
+      case 'sunrise': out[name] = today.sunrise(); break
       case 'sofShmaGra': out[name] = today.gra(3); break
       case 'sofShmaMga': out[name] = today.mga(3); break
       case 'sofTfillaGra': out[name] = today.gra(4); break
@@ -167,7 +196,7 @@ export function zmanInstants(place: Coordinates, date: CivilDate, which: readonl
       case 'minchaGedola': out[name] = today.gra(6.5); break
       case 'minchaKetana': out[name] = today.gra(9.5); break
       case 'plag': out[name] = today.gra(10.75); break
-      case 'sunset': out[name] = today.set(GEOMETRIC_ZENITH); break
+      case 'sunset': out[name] = today.sunset(); break
       case 'tzeit': out[name] = today.set(TZEIT); break
       default: throw new Error(`Unknown zman '${String(name)}'`)
     }
