@@ -89,6 +89,15 @@ temperature, about 34'). So the sun's centre is at zenith 90 + R0 + depression (
 convention of the standard sunrise altitude h0 = -0 deg 34' (Meeus, Astronomical Algorithms, 2nd ed., ch. 15)
 extended below the horizon. The Visible lines come out about 2-4 minutes beyond the geometric ones.
 
+### Explanations (getExplanation)
+
+`getExplanation(name, lang)` resolves `{ title, text, sources }` for any `ZMAN_NAMES` entry in Hebrew (`he`) or
+English (`en`): what the zman is, the method of that line (degrees or minutes, from which horizon), and its sources
+(Talmud, Shulchan Aruch, Mishna Berura, Rambam, Biur HaGra, and the astronomical basis of the degree figure). The first
+call for a language loads only `assets/explanations-<lang>.json`, once. Source of truth: `data/explanations.json`,
+compacted by `scripts/build-explanations.mjs` (part of `npm run build`). Every halachic reference was checked against
+the text on Sefaria; degree figures with no verified attribution are described as estimates, without a name.
+
 ### Sunrise/sunset refraction (pressure and temperature)
 
 Sunrise and sunset are when the upper limb of the sun touches the apparent sea-level horizon: zenith =
