@@ -38,3 +38,7 @@ NO HEBREW: Buffalo Grove Q4985742
 NO HEBREW: Owings Mills Q7114806
 NO HEBREW: Villiers-le-Bel Q236136
 NO HEBREW: Lucerne Q189926
+NO HEBREW: Lodz Q471231
+NO HEBREW: Lezajsk Q2461030
+NOT FOUND: Dubai | United Arab Emirates | city
+NO HEBREW: Curitiba Q10343969
