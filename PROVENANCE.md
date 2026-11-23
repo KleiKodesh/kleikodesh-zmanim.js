@@ -51,9 +51,9 @@ Report NREL/TP-560-34302, revised January 2008.
 
 No other implementation or data was opened, read, searched or fetched: no git history or files
 of KleiKodesh/KleiKodeshProject's hebrew-calendar folder (spaCalculator.ts, spaTables.ts,
-solarPosition.ts, horizonRefraction.ts, atmosphere*), nothing under a local folder, no
+solarPosition.ts, horizonRefraction.ts, atmosphere*), no
 an earlier zmanim library /  / hebcal source, no SPA port in any language (npm, GitHub,
-Stack Overflow, the NREL SPA C code mentioned in the paper's A.6), no a luach site or data. No
+Stack Overflow, the NREL SPA C code mentioned in the paper's A.6), no luach or zmanim website or data. No
 web browsing was done.
 
 Disclosure: while learning this repository's API for the NOAA comparison test, the AI viewed the
