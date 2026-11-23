@@ -563,3 +563,1241 @@ id	key	he	en	lat	lng	elevation	tzid
 562	singapore	סינגפור	Singapore	1.28967	103.85007	23	Asia/Singapore
 563	hongKong	הונג קונג	Hong Kong	22.27832	114.17469	60	Asia/Hong_Kong
 564	midLevels	מיד-לוולס	Mid-Levels (Hong Kong)	22.28399	114.14958	50	Asia/Hong_Kong
+565	ganSorek	גן שורק	Gan Sorek	31.94420	34.75990	38	Asia/Jerusalem
+566	ganeiYohanan	גני יוחנן	Ganei Yohanan	31.85850	34.83850	63	Asia/Jerusalem
+567	nirAkiva	ניר עקיבא	Nir Akiva	31.46990	34.64670	159	Asia/Jerusalem
+568	givatYeshayahu	גבעת ישעיהו	Givat Yeshayahu	31.66970	34.95060	323	Asia/Jerusalem
+569	sharsheret	שרשרת	Sharsheret	31.40450	34.60330	148	Asia/Jerusalem
+570	shoresh	שורש	Shoresh	31.79660	35.06530	693	Asia/Jerusalem
+571	mishmarAyalon	משמר איילון	Mishmar Ayalon	31.87450	34.94600	136	Asia/Jerusalem
+572	nirMoshe	ניר משה	Nir Moshe	31.47770	34.63120	146	Asia/Jerusalem
+573	kahal	כחל	Kahal	32.89180	35.50960	122	Asia/Jerusalem
+574	masuotYitzhak	משואות יצחק	Masu'ot Yitzhak	31.70330	34.68950	71	Asia/Jerusalem
+575	shafir	שפיר	Shafir	31.69667	34.72861	57	Asia/Jerusalem
+576	nirYafeh	ניר יפה	Nir Yafeh	32.57050	35.24590	63	Asia/Jerusalem
+577	zavdiel	זבדיאל	Zavdiel	31.65870	34.76030	88	Asia/Jerusalem
+578	gadish	גדיש	Gadish	32.55960	35.24480	65	Asia/Jerusalem
+579	magenShaul	מגן שאול	Magen Shaul	32.52140	35.30690	84	Asia/Jerusalem
+580	yoshivia	יושיביה	Yoshivia	31.44310	34.61010	140	Asia/Jerusalem
+581	shomera	שומרה	Shomera	33.08286	35.28424	556	Asia/Jerusalem
+582	lakhish	לכיש	Lakhish	31.56160	34.84290	256	Asia/Jerusalem
+583	beitHanania	בית חנניה	Beit Hanania	32.52880	34.92670	20	Asia/Jerusalem
+584	aderet	אדרת	Aderet	31.66020	34.99510	428	Asia/Jerusalem
+585	barGiora	בר גיורא	Bar Giora	31.72950	35.07210	700	Asia/Jerusalem
+586	hibatTzion	חיבת ציון	Hibat Tzion	32.39870	34.91370	46	Asia/Jerusalem
+587	ometz	אומץ	Ometz	32.36950	34.99390	38	Asia/Jerusalem
+588	shaarEfraim	שער אפרים	Sha'ar Efraim	32.28860	34.99810	45	Asia/Jerusalem
+589	geuleiTeiman	גאולי תימן	Geulei Teiman	32.39230	34.90170	9	Asia/Jerusalem
+590	hadarAm	הדר עם	Hadar Am	32.34970	34.89820	35	Asia/Jerusalem
+591	beitHalevi	בית הלוי	Beit HaLevi	32.35361	34.93139	24	Asia/Jerusalem
+592	eshtaol	אשתאול	Eshtaol	31.78110	35.01010	294	Asia/Jerusalem
+593	azriel	עזריאל	Azri'el	32.26230	34.97100	53	Asia/Jerusalem
+594	neotHakikar	נאות הכיכר	Neot HaKikar	30.93310	35.37670	-342	Asia/Jerusalem
+595	einTamar	עין תמר	Ein Tamar	30.94200	35.37190	-351	Asia/Jerusalem
+596	neveAtiv	נווה אטי״ב	Neve Ativ	33.26167	35.74111	988	Asia/Jerusalem
+597	ganeiYehuda	גני יהודה	Ganei Yehuda	32.03920	34.87630	48	Asia/Jerusalem
+598	bneiNetzarim	בני נצרים	Bnei Netzarim	31.16198	34.32989	94	Asia/Jerusalem
+599	nahalatJabotinsky	נחלת ז'בוטינסקי	Nahalat Jabotinsky	32.52611	34.94818	13	Asia/Jerusalem
+600	talmeiMenashe	תלמי מנשה	Talmei Menashe	31.94503	34.84894	62	Asia/Jerusalem
+601	tiratShalom	טירת שלום	Tirat Shalom	31.91130	34.78520	52	Asia/Jerusalem
+602	kfarHoshen	כפר חושן	Kfar Hoshen	33.01233	35.44149	736	Asia/Jerusalem
+603	tzofar	צופר	Tzofar	30.56063	35.18131	-4	Asia/Jerusalem
+604	shadmotMehola	שדמות מחולה	Shadmot Mehola	32.34827	35.53325	-165	Asia/Jerusalem
+605	amnun	אמנון	Amnun	32.90450	35.57090	28	Asia/Jerusalem
+606	paameiTashaz	פעמי תש״ז	Pa'amei Tashaz	31.43920	34.69270	178	Asia/Jerusalem
+607	arbel	ארבל	Arbel	32.81222	35.48250	44	Asia/Jerusalem
+608	ahuzam	אחוזם	Ahuzam	31.55400	34.76980	170	Asia/Jerusalem
+609	batShlomo	בת שלמה	Bat Shlomo	32.59690	35.00320	79	Asia/Jerusalem
+610	haon	האון	HaOn	32.72473	35.62184	-203	Asia/Jerusalem
+611	beitHagadi	בית הגדי	Beit HaGadi	31.42450	34.60620	156	Asia/Jerusalem
+612	kfarKisch	כפר קיש	Kfar Kisch	32.66722	35.44861	89	Asia/Jerusalem
+613	dvora	דבורה	Dvora	32.55320	35.26370	67	Asia/Jerusalem
+614	maor	מאור	Maor	32.38333	35.00000	39	Asia/Jerusalem
+615	barak	ברק	Barak	32.54210	35.26470	71	Asia/Jerusalem
+616	keremMaharal	כרם מהר\"ל	Kerem Maharal	32.64910	34.99200	84	Asia/Jerusalem
+617	adirim	אדירים	Adirim	32.54920	35.27160	68	Asia/Jerusalem
+618	beitZaid	בית זייד	Beit Zaid	32.70240	35.13160	127	Asia/Jerusalem
+619	keremBenZimra	כרם בן זמרה	Kerem Ben Zimra	33.03820	35.46860	838	Asia/Jerusalem
+620	kfarZeitim	כפר זיתים	Kfar Zeitim	32.81167	35.46250	47	Asia/Jerusalem
+621	talmeiElazar	תלמי אלעזר	Talmei Elazar	32.44530	34.97800	27	Asia/Jerusalem
+622	bekaot	בקעות	Beka'ot	32.24213	35.45267	100	Asia/Jerusalem
+623	dishon	דישון	Dishon	33.08157	35.51686	437	Asia/Jerusalem
+624	mehola	מחולה	Mehola	32.36611	35.51500	-175	Asia/Jerusalem
+625	sdeEliezer	שדה אליעזר	Sde Eliezer	33.04520	35.56400	160	Asia/Jerusalem
+626	ramotNaftali	רמות נפתלי	Ramot Naftali	33.10170	35.55340	434	Asia/Jerusalem
+627	bitha	בטחה	Bitha	31.33440	34.63240	120	Asia/Jerusalem
+628	talmeiBilu	תלמי ביל\"ו	Talmei Bilu	31.43800	34.64520	185	Asia/Jerusalem
+629	idan	עידן	Idan	30.80556	35.30028	-175	Asia/Jerusalem
+630	masua	משואה	Masua	32.11300	35.49080	-249	Asia/Jerusalem
+631	peduim	פדויים	Peduim	31.32730	34.61120	114	Asia/Jerusalem
+632	brosh	ברוש	Brosh	31.37080	34.63300	129	Asia/Jerusalem
+633	ramotMeir	רמות מאיר	Ramot Meir	31.87410	34.85530	93	Asia/Jerusalem
+634	maslul	מסלול	Maslul	31.32430	34.58840	109	Asia/Jerusalem
+635	bnaya	בניה	Bnaya	31.84330	34.75220	36	Asia/Jerusalem
+636	azaria	עזריה	Azaria	31.88910	34.90980	99	Asia/Jerusalem
+637	tidhar	תדהר	Tidhar	31.37930	34.62940	116	Asia/Jerusalem
+638	mishmarHayarden	משמר הירדן	Mishmar HaYarden	33.00500	35.59890	230	Asia/Jerusalem
+639	bneiDarom	בני דרום	Bnei Darom	31.82040	34.69200	42	Asia/Jerusalem
+640	keshet	קשת	Keshet, Golan Heights	32.98028	35.80833	705	Asia/Jerusalem
+641	klahim	קלחים	Klahim	31.44611	34.67778	175	Asia/Jerusalem
+642	hodaya	הודיה	Hodaya	31.67310	34.64030	51	Asia/Jerusalem
+643	tzelafon	צלפון	Tzelafon	31.80360	34.93280	164	Asia/Jerusalem
+644	kfarBilu	כפר ביל\"ו	Kfar Bilu	31.87120	34.82870	60	Asia/Jerusalem
+645	luzit	לוזית	Luzit	31.68490	34.88650	192	Asia/Jerusalem
+646	taoz	תעוז	Ta'oz	31.80150	34.97120	208	Asia/Jerusalem
+647	beitNekofa	בית נקופה	Beit Nekofa	31.80276	35.12530	664	Asia/Jerusalem
+648	nirYisrael	ניר ישראל	Nir Yisrael	31.68770	34.63650	39	Asia/Jerusalem
+649	pedaya	פדיה	Pedaya	31.85750	34.88370	100	Asia/Jerusalem
+650	sgula	סגולה	Sgula	31.67030	34.77970	103	Asia/Jerusalem
+651	bekoa	בקוע	Beko'a	31.82890	34.92620	159	Asia/Jerusalem
+652	kfarHasidim	כפר חסידים	Kfar Hasidim	32.74320	35.09350	11	Asia/Jerusalem
+653	zarit	זרעית	Zar'it	33.09999	35.28854	641	Asia/Jerusalem
+654	ganHashomron	גן השומרון	Gan HaShomron	32.46333	34.99750	45	Asia/Jerusalem
+655	zekharia	זכריה	Zekharia	31.70980	34.94510	257	Asia/Jerusalem
+656	sdeWarburg	שדה ורבורג	Sde Warburg	32.20361	34.90722	58	Asia/Jerusalem
+657	tzrufa	צרופה	Tzrufa	32.64870	34.94510	17	Asia/Jerusalem
+658	hasolelim	הסוללים	Hasolelim	31.86140	34.95320	152	Asia/Jerusalem
+659	liman	לימן	Liman	33.05900	35.11290	20	Asia/Jerusalem
+660	beitYatir	בית יתיר	Beit Yatir	31.36556	35.11222	874	Asia/Jerusalem
+661	avivim	אביבים	Avivim	33.08922	35.47206	742	Asia/Jerusalem
+662	yadRambam	יד רמב״ם	Yad Rambam	31.89980	34.89970	92	Asia/Jerusalem
+663	ramatRaziel	רמת רזיאל	Ramat Raziel	31.77380	35.07290	741	Asia/Jerusalem
+664	argaman	ארגמן	Argaman	32.17250	35.52190	-180	Asia/Jerusalem
+665	givolim	גבעולים	Givolim	31.39670	34.59150	121	Asia/Jerusalem
+666	yatzitz	יציץ	Yatzitz	31.86050	34.86080	67	Asia/Jerusalem
+667	nirTzvi	ניר צבי	Nir Tzvi	31.95100	34.86220	59	Asia/Jerusalem
+668	mahseya	מחסיה	Mahseya	31.74830	35.00650	244	Asia/Jerusalem
+669	nahala	נחלה	Nahala	31.65920	34.79420	127	Asia/Jerusalem
+670	yagel	יגל	Yagel	31.98780	34.87900	38	Asia/Jerusalem
+671	ganot	גנות	Ganot	32.01630	34.83280	26	Asia/Jerusalem
+672	mesilatZion	מסילת ציון	Mesilat Zion	31.80180	35.01150	292	Asia/Jerusalem
+673	shdema	שדמה	Shdema	31.83030	34.74120	44	Asia/Jerusalem
+674	nahalal	נהלל	Nahalal	32.69000	35.19667	99	Asia/Jerusalem
+675	nirBanim	ניר בנים	Nir Banim	31.67230	34.75430	80	Asia/Jerusalem
+676	orot	אורות	Orot	31.74180	34.73450	54	Asia/Jerusalem
+677	talmeiYehiel	תלמי יחיאל	Talmei Yehiel	31.75370	34.76310	51	Asia/Jerusalem
+678	givatNili	גבעת ניל\"י	Givat Nili	32.54694	35.04111	145	Asia/Jerusalem
+679	givati	גבעתי	Giv'ati	31.73220	34.68000	34	Asia/Jerusalem
+680	shtulim	שתולים	Shtulim	31.77343	34.68384	25	Asia/Jerusalem
+681	timorim	תימורים	Timorim	31.71530	34.76010	81	Asia/Jerusalem
+682	lapidot	לפידות	Lapidot	32.95934	35.26167	482	Asia/Jerusalem
+683	tefahot	טפחות	Tefahot	32.86910	35.42250	85	Asia/Jerusalem
+684	manot	מנות	Manot	33.03870	35.19540	259	Asia/Jerusalem
+685	ofer	עופר	Ofer	32.62270	34.98230	147	Asia/Jerusalem
+686	ramatTzvi	רמת צבי	Ramat Tzvi	32.59030	35.41450	66	Asia/Jerusalem
+687	shoeva	שואבה	Sho'eva	31.79830	35.07810	611	Asia/Jerusalem
+688	reihan	ריחן	Reihan	32.46890	35.13500	378	Asia/Jerusalem
+689	mavkiim	מבקיעים	Mavki'im	31.62160	34.57800	67	Asia/Jerusalem
+690	talmeiYaffe	תלמי יפה	Talmei Yaffe	31.61740	34.61340	78	Asia/Jerusalem
+691	yaara	יערה	Ya'ara	33.06700	35.18480	166	Asia/Jerusalem
+692	zeitan	זיתן	Zeitan	31.97490	34.88770	43	Asia/Jerusalem
+693	givatYearim	גבעת יערים	Giv'at Ye'arim	31.78735	35.08896	713	Asia/Jerusalem
+694	yishi	ישעי	Yish'i	31.75070	34.96680	185	Asia/Jerusalem
+695	yashresh	ישרש	Yashresh	31.91530	34.84680	84	Asia/Jerusalem
+696	beitHanan	בית-חנן	Beit Hanan	31.93450	34.77280	34	Asia/Jerusalem
+697	ranen	רנן	Ranen	31.33800	34.60110	107	Asia/Jerusalem
+698	einAyala	עין אילה	Ein Ayala	32.62910	34.94550	17	Asia/Jerusalem
+699	avihayil	אביחיל	Avihayil	32.35040	34.87210	42	Asia/Jerusalem
+700	heletz	חלץ	Heletz	31.57810	34.65800	88	Asia/Jerusalem
+701	agur	עגור	Agur	31.69856	34.91075	215	Asia/Jerusalem
+702	aloneiAbba	אלוני אבא	Alonei Abba	32.72950	35.17180	167	Asia/Jerusalem
+703	gea	גיאה	Ge'a	31.62700	34.60390	51	Asia/Jerusalem
+704	tlamim	תלמים	Tlamim	31.56312	34.66942	98	Asia/Jerusalem
+705	netivHashayara	נתיב השיירה	Netiv HaShayara	32.99470	35.13680	38	Asia/Jerusalem
+706	shadmotDvora	שדמות דבורה	Shadmot Dvora	32.69722	35.43389	163	Asia/Jerusalem
+707	sharona	שרונה	Sharona	32.72667	35.46667	267	Asia/Jerusalem
+708	sdeYitzhak	שדה יצחק	Sde Yitzhak	32.40390	34.99450	39	Asia/Jerusalem
+709	bethlehemOfGalilee	בית לחם הגלילית	Bethlehem of Galilee	32.73556	35.19056	180	Asia/Jerusalem
+710	ksalon	כסלון	Ksalon	31.77390	35.04940	613	Asia/Jerusalem
+711	kmehin	כמהין	Kmehin	30.90000	34.41667	219	Asia/Jerusalem
+712	hazon	חזון	Hazon	32.90610	35.39370	428	Asia/Jerusalem
+713	hemed	חמ״ד	Hemed	32.01820	34.84150	29	Asia/Jerusalem
+714	elkosh	אלקוש	Elkosh	33.03323	35.32273	643	Asia/Jerusalem
+715	hatzeva	חצבה	Hatzeva	30.76770	35.28020	-153	Asia/Jerusalem
+716	almagor	אלמגור	Almagor	32.91250	35.60210	-2	Asia/Jerusalem
+717	sdeTzvi	שדה צבי	Sde Tzvi	31.44880	34.71260	205	Asia/Jerusalem
+718	einYahav	עין יהב	Ein Yahav	30.65850	35.23680	-85	Asia/Jerusalem
+719	nehora	נהורה	Nehora	31.62260	34.70490	107	Asia/Jerusalem
+720	hatzav	חצב	Hatzav	31.77990	34.76990	54	Asia/Jerusalem
+721	amatzia	אמציה	Amatzia	31.53260	34.91360	360	Asia/Jerusalem
+722	benZakai	בן זכאי	Ben Zakai	31.85580	34.72990	32	Asia/Jerusalem
+723	kidron	קדרון	Kidron	31.81230	34.80030	61	Asia/Jerusalem
+724	odem	אודם	Odem	33.19444	35.74833	1069	Asia/Jerusalem
+725	alma	עלמה	Alma	33.05120	35.49990	683	Asia/Jerusalem
+726	avdon	עבדון	Avdon	33.04830	35.18050	171	Asia/Jerusalem
+727	goren	גורן	Goren	33.05660	35.23920	374	Asia/Jerusalem
+728	einIron	עין עירון	Ein Iron	32.48240	35.00930	68	Asia/Jerusalem
+729	hosen	חוסן	Hosen	32.99820	35.29750	465	Asia/Jerusalem
+730	gibton	גבתון	Gibton	31.88743	34.80015	44	Asia/Jerusalem
+731	midrakhOz	מדרך עוז	Midrakh Oz	32.59530	35.15830	128	Asia/Jerusalem
+732	yardena	ירדנה	Yardena	32.56670	35.56380	-233	Asia/Jerusalem
+733	netua	נטועה	Netu'a	33.06479	35.32277	604	Asia/Jerusalem
+734	kfarYehoshua	כפר יהושע	Kfar Yehoshua	32.68360	35.15390	52	Asia/Jerusalem
+735	aloneiHabashan	אלוני הבשן	Alonei HaBashan	33.04310	35.83790	973	Asia/Jerusalem
+736	avneiEitan	אבני איתן	Avnei Eitan	32.82472	35.76667	392	Asia/Jerusalem
+737	nitzaneiOz	ניצני עוז	Nitzanei Oz	32.30680	35.00510	44	Asia/Jerusalem
+738	einVered	עין ורד	Ein Vered	32.26550	34.93340	75	Asia/Jerusalem
+739	einSarid	עין שריד	Ein Sarid	32.27420	34.93400	67	Asia/Jerusalem
+740	elishama	אלישמע	Elishama	32.15270	34.92900	28	Asia/Jerusalem
+741	nordia	נורדיה	Nordia	32.31472	34.89611	44	Asia/Jerusalem
+742	mishmeret	משמרת	Mishmeret	32.22870	34.92150	62	Asia/Jerusalem
+743	ganHaim	גן חיים	Gan Haim	32.19600	34.90789	65	Asia/Jerusalem
+744	givatHen	גבעת ח\"ן	Givat Hen	32.16710	34.87610	79	Asia/Jerusalem
+745	herut	חרות	Herut	32.23920	34.91680	68	Asia/Jerusalem
+746	shearYashuv	שאר ישוב	She'ar Yashuv	33.22630	35.64660	132	Asia/Jerusalem
+747	berekhya	ברכיה	Berekhya	31.67060	34.62320	40	Asia/Jerusalem
+748	beitGamliel	בית גמליאל	Beit Gamliel	31.85770	34.76070	26	Asia/Jerusalem
+749	shibolim	שיבולים	Shibolim	31.39590	34.60770	138	Asia/Jerusalem
+750	dekel	דקל	Dekel	31.19470	34.34850	105	Asia/Jerusalem
+751	dovev	דוב״ב	Dovev	33.05220	35.40760	774	Asia/Jerusalem
+752	kfarShmuel	כפר שמואל	Kfar Shmuel	31.88950	34.93170	115	Asia/Jerusalem
+753	yaad	יעד	Ya'ad	32.87888	35.24258	260	Asia/Jerusalem
+754	dalton	דלתון	Dalton	33.01610	35.48750	826	Asia/Jerusalem
+755	givatShapira	גבעת שפירא	Givat Shapira	32.35780	34.87510	39	Asia/Jerusalem
+756	rishpon	רשפון	Rishpon	32.20184	34.82323	31	Asia/Jerusalem
+757	ilaniya	אילניה	Ilaniya	32.75833	35.40194	269	Asia/Jerusalem
+758	pekiinHahadasha	פקיעין החדשה	Peki'in HaHadasha	32.98274	35.32694	530	Asia/Jerusalem
+759	neveYamin	נווה ימין	Neve Yamin	32.17100	34.93800	32	Asia/Jerusalem
+760	kfarHittim	כפר חיטים	Kfar Hittim	32.80028	35.50250	43	Asia/Jerusalem
+761	burgata	בורגתא	Burgata	32.32660	34.96230	27	Asia/Jerusalem
+762	ganHadarom	גן הדרום	Gan HaDarom	31.80420	34.70110	44	Asia/Jerusalem
+763	magshimim	מגשימים	Magshimim	32.04630	34.90060	48	Asia/Jerusalem
+764	kfarSirkin	כפר סירקין	Kfar Sirkin	32.07674	34.92374	43	Asia/Jerusalem
+765	mata	מטע	Mata	31.71770	35.06230	605	Asia/Jerusalem
+766	haniel	חניאל	Haniel	32.33220	34.95010	31	Asia/Jerusalem
+767	nofekh	נופך	Nofekh	32.04444	34.92028	62	Asia/Jerusalem
+768	ginaton	גנתון	Ginaton	31.96250	34.91417	67	Asia/Jerusalem
+769	kfarDaniel	כפר דניאל	Kfar Daniel	31.93306	34.93389	101	Asia/Jerusalem
+770	givatKoah	גבעת כ\"ח	Giv'at Ko'ah	32.03000	34.93611	69	Asia/Jerusalem
+771	mazor	מזור	Mazor	32.05250	34.92611	50	Asia/Jerusalem
+772	nehalim	נחלים	Nehalim	32.05861	34.91361	55	Asia/Jerusalem
+773	keremBenShemen	כרם בן שמן	Kerem Ben Shemen	31.95833	34.93472	82	Asia/Jerusalem
+774	kfarTruman	כפר טרומן	Kfar Truman	31.97972	34.92222	56	Asia/Jerusalem
+775	petzael	פצאל	Petza'el	32.04417	35.44222	-231	Asia/Jerusalem
+776	zohar	זוהר	Zohar	31.59535	34.69225	121	Asia/Jerusalem
+777	beitYosef	בית יוסף	Beit Yosef	32.55860	35.55170	-228	Asia/Jerusalem
+778	tzurMoshe	צור משה	Tzur Moshe	32.29800	34.91390	64	Asia/Jerusalem
+779	benAmi	בן עמי	Ben Ami	33.00650	35.12460	26	Asia/Jerusalem
+780	noga	נוגה	Noga	31.62390	34.69530	109	Asia/Jerusalem
+781	beerotayim	בארותיים	Be'erotayim	32.32139	34.98417	30	Asia/Jerusalem
+782	bustanHagalil	בוסתן הגליל	Bustan HaGalil	32.95120	35.08280	4	Asia/Jerusalem
+783	yadNatan	יד נתן	Yad Natan	31.65583	34.70417	73	Asia/Jerusalem
+784	naamah	נעמה	Na'amah	31.90630	35.46720	-188	Asia/Jerusalem
+785	menuha	מנוחה	Menuha	31.65750	34.77750	105	Asia/Jerusalem
+786	aviezer	אביעזר	Aviezer	31.68160	35.01680	381	Asia/Jerusalem
+787	betzet	בצת	Betzet	33.07070	35.13590	27	Asia/Jerusalem
+788	evenMenachem	אבן מנחם	Even Menachem	33.07383	35.29494	624	Asia/Jerusalem
+789	avital	אביטל	Avital	32.55797	35.30570	71	Asia/Jerusalem
+790	hazorim	הזורעים	HaZor'im	32.74639	35.50111	-65	Asia/Jerusalem
+791	elyashiv	אלישיב	Elyashiv	32.37990	34.90970	20	Asia/Jerusalem
+792	naham	נחם	Naham	31.76670	35.00390	286	Asia/Jerusalem
+793	zrua	זרועה	Zru'a	31.45820	34.62460	140	Asia/Jerusalem
+794	netaim	נטעים	Neta'im	31.94550	34.77340	46	Asia/Jerusalem
+795	nov	נוב	Nov, Golan Heights	32.83250	35.78310	412	Asia/Jerusalem
+796	shekef	שקף	Shekef	31.51540	34.93600	416	Asia/Jerusalem
+797	nirGalim	ניר גלים	Nir Galim	31.82470	34.68330	26	Asia/Jerusalem
+798	beitHillel	בית הלל	Beit Hillel	33.20750	35.60570	86	Asia/Jerusalem
+799	regba	רגבה	Regba	32.97660	35.09900	21	Asia/Jerusalem
+800	taashur	תְּאַשּׁוּר	Ta'ashur	31.37220	34.64390	138	Asia/Jerusalem
+801	ganeiAm	גני עם	Ganei Am	32.15080	34.90122	32	Asia/Jerusalem
+802	telAdashim	תל עדשים	Tel Adashim	32.65520	35.30110	107	Asia/Jerusalem
+803	hamra	חמרה	Hamra	32.19900	35.43490	-34	Asia/Jerusalem
+804	ramOn	רם און	Ram-On	32.52650	35.25950	77	Asia/Jerusalem
+805	batzra	בצרה	Batzra	32.21280	34.87790	29	Asia/Jerusalem
+806	talShahar	טל שחר	Tal Shahar	31.80620	34.90360	127	Asia/Jerusalem
+807	neveIlan	נווה אילן	Neve Ilan	31.80840	35.07930	653	Asia/Jerusalem
+808	hagor	חגור	Hagor	32.13892	34.94871	39	Asia/Jerusalem
+809	bitzaron	ביצרון	Bitzaron	31.79570	34.72440	56	Asia/Jerusalem
+810	margaliot	מַרְגָּלִיּוֹת	Margaliot	33.21444	35.54472	677	Asia/Jerusalem
+811	sdeYaakov	שדה יעקב	Sde Ya'akov	32.69680	35.14110	79	Asia/Jerusalem
+812	beitEzra	בית עזרא	Beit Ezra	31.73660	34.65570	45	Asia/Jerusalem
+813	matzliah	מצליח	Matzliah	31.90780	34.87400	87	Asia/Jerusalem
+814	sdeiHemed	שדי חמד	Sdei Hemed	32.15990	34.94270	41	Asia/Jerusalem
+815	megadim	מגדים	Megadim	32.72930	34.95920	13	Asia/Jerusalem
+816	beerMilka	באר מילכה	Be'er Milka	30.93231	34.40768	235	Asia/Jerusalem
+817	noam	נועם	No'am	31.56724	34.78890	169	Asia/Jerusalem
+818	tzafririm	צפרירים	Tzafririm	31.66040	34.94250	328	Asia/Jerusalem
+819	beitUziel	בית עוזיאל	Beit Uziel	31.86981	34.90411	129	Asia/Jerusalem
+820	sdotMicha	שדות מיכה	Sdot Micha	31.72140	34.92090	219	Asia/Jerusalem
+821	petahya	פתחיה	Petahya	31.86740	34.88730	104	Asia/Jerusalem
+822	shilat	שילת	Shilat	31.92028	35.01861	261	Asia/Jerusalem
+823	hadid	חדיד	Hadid	31.96778	34.93361	74	Asia/Jerusalem
+824	mevoModiim	מבוא מודיעים	Mevo Modi'im	31.93333	34.98694	214	Asia/Jerusalem
+825	tiratYehuda	טירת יהודה	Tirat Yehuda	32.01333	34.93250	59	Asia/Jerusalem
+826	azrikam	עזריקם	Azrikam	31.75040	34.69590	38	Asia/Jerusalem
+827	gilat	גילת	Gilat	31.32850	34.65000	134	Asia/Jerusalem
+828	gitit	גיתית	Gitit	32.10106	35.39600	313	Asia/Jerusalem
+829	neveMivtah	נווה מבטח	Neve Mivtah	31.80530	34.74100	59	Asia/Jerusalem
+830	shtula	שתולה	Shtula	33.08554	35.31316	666	Asia/Jerusalem
+831	bneiZion	בני ציון	Bnei Zion	32.21810	34.86820	44	Asia/Jerusalem
+832	evenSapir	אבן ספיר	Even Sapir	31.76300	35.13460	632	Asia/Jerusalem
+833	beitShearim	בית שערים	Beit She'arim	32.69620	35.17730	77	Asia/Jerusalem
+834	kfarWarburg	כפר ורבורג	Kfar Warburg	31.71960	34.72320	54	Asia/Jerusalem
+835	carmel	כרמל	Carmel, Har Hebron	31.43167	35.18361	745	Asia/Jerusalem
+836	misgavDov	משגב דב	Misgav Dov	31.82010	34.74030	52	Asia/Jerusalem
+837	sitria	סתריה	Sitria	31.88830	34.84590	87	Asia/Jerusalem
+838	tzafria	צפריה	Tzafria	32.00320	34.85580	34	Asia/Jerusalem
+839	kfarHaroeh	כפר הרא״ה	Kfar Haroeh	32.39070	34.91210	28	Asia/Jerusalem
+840	mevoBeitar	מבוא ביתר	Mevo Beitar	31.72240	35.10670	760	Asia/Jerusalem
+841	neveYarak	נווה ירק	Neve Yarak	32.13230	34.92450	30	Asia/Jerusalem
+842	adanim	עדנים	Adanim	32.14070	34.90710	23	Asia/Jerusalem
+843	beitHerut	בית חרות	Beit Herut	32.37778	34.86889	27	Asia/Jerusalem
+844	beitShikma	בית שקמה	Beit Shikma	31.63670	34.60720	50	Asia/Jerusalem
+845	ganYoshiya	גן יאשיה	Gan Yoshiya	32.34960	34.99060	30	Asia/Jerusalem
+846	kfarHarif	כפר הרי״ף	Kfar HaRif	31.74410	34.79560	72	Asia/Jerusalem
+847	hogla	חגלה	Hogla	32.38640	34.92680	20	Asia/Jerusalem
+848	kfarYavetz	כפר יעבץ	Kfar Yavetz	32.27500	34.96460	54	Asia/Jerusalem
+849	olesh	עולש	Olesh	32.33250	34.98540	38	Asia/Jerusalem
+850	yarhiv	ירחיב	Yarhiv	32.15230	34.96780	53	Asia/Jerusalem
+851	tnuvot	תנובות	Tnuvot	32.30550	34.96270	35	Asia/Jerusalem
+852	havatzeletHasharon	חבצלת השרון	Havatzelet HaSharon	32.36015	34.86180	26	Asia/Jerusalem
+853	yanuv	ינוב	Yanuv	32.30650	34.94920	53	Asia/Jerusalem
+854	gatRimon	גת רימון	Gat Rimon	32.06770	34.88030	78	Asia/Jerusalem
+855	beitYitzhakShaarHefer	בית יצחק-שער חפר	Beit Yitzhak-Sha'ar Hefer	32.32767	34.88869	34	Asia/Jerusalem
+856	sdeiTrumot	שדי תרומות	Sdei Trumot	32.44020	35.48600	-127	Asia/Jerusalem
+857	kfarMonash	כפר מונש	Kfar Monash	32.34710	34.91560	22	Asia/Jerusalem
+858	yuval	יובל	Yuval	33.24670	35.59820	266	Asia/Jerusalem
+859	yevul	יבול	Yevul	31.18920	34.31930	86	Asia/Jerusalem
+860	kfarYehezkel	כפר יחזקאל	Kfar Yehezkel	32.56720	35.35900	8	Asia/Jerusalem
+861	veredYeriho	ורד יריחו	Vered Yeriho	31.82640	35.43170	-138	Asia/Jerusalem
+862	hayogev	היוגב	HaYogev	32.61180	35.20470	99	Asia/Jerusalem
+863	aniam	אניעם	Aniam	32.95780	35.74020	423	Asia/Jerusalem
+864	benShemen	בן שמן	Ben Shemen	31.95400	34.92490	68	Asia/Jerusalem
+865	beitYehoshua	בית יהושע	Beit Yehoshua	32.26110	34.86300	16	Asia/Jerusalem
+866	meiAmi	מי עמי	Mei Ami	32.50480	35.14800	479	Asia/Jerusalem
+867	kfarBaruch	כפר ברוך	Kfar Baruch	32.64650	35.18950	59	Asia/Jerusalem
+868	revaya	רוויה	Revaya	32.44900	35.47330	-108	Asia/Jerusalem
+869	dor	דור	Dor	32.60740	34.92200	3	Asia/Jerusalem
+870	einYaakov	עין יעקב	Ein Ya'akov	33.01020	35.22920	429	Asia/Jerusalem
+871	elifelet	אליפלט	Elifelet	32.94740	35.54890	330	Asia/Jerusalem
+872	tzuriel	צוריאל	Tzuriel	33.00710	35.31306	628	Asia/Jerusalem
+873	mashen	משען	Mash'en	31.65710	34.62330	49	Asia/Jerusalem
+874	prazon	פרזון	Prazon	32.54480	35.31160	76	Asia/Jerusalem
+875	kokhavMichael	כוכב מיכאל	Kokhav Michael	31.63333	34.66667	89	Asia/Jerusalem
+876	shahar	שחר	Shahar	31.61860	34.72430	107	Asia/Jerusalem
+877	sdeMoshe	שדה משה	Sde Moshe	31.61060	34.80220	146	Asia/Jerusalem
+878	roi	רועי	Ro'i	32.24718	35.48897	34	Asia/Jerusalem
+879	eshbol	אשבול	Eshbol	31.44650	34.66710	173	Asia/Jerusalem
+880	nirHen	ניר ח״ן	Nir Hen	31.60980	34.71530	112	Asia/Jerusalem
+881	yakhini	יכיני	Yakhini	31.48333	34.60000	138	Asia/Jerusalem
+882	mekhora	מכורה	Mekhora	32.16470	35.42370	231	Asia/Jerusalem
+883	yitav	ייט\"ב	Yitav	31.94810	35.42330	-108	Asia/Jerusalem
+884	yafit	יפית	Yafit	32.06148	35.47408	-243	Asia/Jerusalem
+885	shefer	שפר	Shefer	32.94400	35.43610	606	Asia/Jerusalem
+886	shezor	שזור	Shezor	32.93320	35.35280	283	Asia/Jerusalem
+887	beitOved	בית עובד	Beit Oved	31.92180	34.77360	47	Asia/Jerusalem
+888	sdeIlan	שדה אילן	Sde Ilan	32.74833	35.42333	187	Asia/Jerusalem
+889	meitav	מיטב	Meitav	32.54680	35.30060	69	Asia/Jerusalem
+890	beitElazari	בית אלעזרי	Beit Elazari	31.84360	34.80430	43	Asia/Jerusalem
+891	zrahia	זרחיה	Zrahia	31.68190	34.74540	73	Asia/Jerusalem
+892	gevaCarmel	גבע כרמל	Geva Carmel	32.66200	34.95450	21	Asia/Jerusalem
+893	kfarGidon	כפר גדעון	Kfar Gidon	32.64340	35.29100	93	Asia/Jerusalem
+894	tarum	תרום	Tarum	31.78278	34.98222	277	Asia/Jerusalem
+895	gefen	גפן	Gefen	31.74080	34.87820	168	Asia/Jerusalem
+896	kfarMordechai	כפר מרדכי	Kfar Mordechai	31.83118	34.75693	48	Asia/Jerusalem
+897	tirosh	תירוש	Tirosh	31.74960	34.88650	157	Asia/Jerusalem
+898	mishmarHashiva	משמר השבעה	Mishmar HaShiv'a	32.00950	34.82360	29	Asia/Jerusalem
+899	tzurNatan	צור נתן	Tzur Natan	32.24020	35.01170	179	Asia/Jerusalem
+900	mlea	מלאה	Mle'a	32.56320	35.23730	67	Asia/Jerusalem
+901	neveMichael	נווה מיכאל	Neve Michael	31.67350	35.00760	350	Asia/Jerusalem
+902	udim	אודים	Udim	32.26630	34.85130	8	Asia/Jerusalem
+903	nesHarim	נס הרים	Nes Harim	31.74480	35.05830	690	Asia/Jerusalem
+904	bitanAharon	ביתן אהרן	Bitan Aharon	32.36550	34.86960	24	Asia/Jerusalem
+905	meishar	מישר	Meishar	31.81820	34.75410	46	Asia/Jerusalem
+906	ahiezer	אחיעזר	Ahi'ezer	31.98000	34.87220	39	Asia/Jerusalem
+907	ahituv	אחיטוב	Ahituv	32.38972	34.98917	38	Asia/Jerusalem
+908	mikhmoret	מכמורת	Mikhmoret	32.40580	34.87160	8	Asia/Jerusalem
+909	einHatzeva	עין חצבה	Ein Hatzeva	30.79861	35.24611	-144	Asia/Jerusalem
+910	kfarAzar	כפר אז״ר	Kfar Azar	32.06500	34.83667	43	Asia/Jerusalem
+911	ganeiTal	גני טל	Ganei Tal	31.78859	34.79177	85	Asia/Jerusalem
+912	kfarHanagid	כפר הנגיד	Kfar HaNagid	31.88710	34.74910	19	Asia/Jerusalem
+913	ahihud	אחיהוד	Ahihud	32.90780	35.17210	25	Asia/Jerusalem
+914	nehusha	נחושה	Nehusha	31.63000	34.95440	418	Asia/Jerusalem
+915	mlilot	מלילות	Mlilot	31.38900	34.59480	114	Asia/Jerusalem
+916	kfarAviv	כפר אביב	Kfar Aviv	31.83140	34.72150	44	Asia/Jerusalem
+917	ramot	רמות	Ramot, Golan Heights	32.84944	35.66750	1	Asia/Jerusalem
+918	netivHagdud	נתיב הגדוד	Netiv HaGdud	31.98822	35.44483	-217	Asia/Jerusalem
+919	salit	סלעית	Sal'it	32.24260	35.05190	275	Asia/Jerusalem
+920	tkuma	תקומה	Tkuma	31.45141	34.59112	122	Asia/Jerusalem
+921	balfouria	בלפוריה	Balfouria	32.63020	35.29630	95	Asia/Jerusalem
+922	kfarVitkin	כפר ויתקין	Kfar Vitkin	32.38180	34.87690	28	Asia/Jerusalem
+923	aviel	אביאל	Aviel	32.53028	34.99333	57	Asia/Jerusalem
+924	avigdor	אביגדור	Avigdor	31.70940	34.74400	63	Asia/Jerusalem
+925	maaleGamla	מעלה גמלא	Ma'ale Gamla	32.88800	35.68520	108	Asia/Jerusalem
+926	beitNehemia	בית נחמיה	Beit Nehemia	31.97722	34.95472	80	Asia/Jerusalem
+927	bareket	ברקת	Bareket	32.01500	34.94417	80	Asia/Jerusalem
+928	beitArif	בית עריף	Beit Arif	31.99472	34.93333	58	Asia/Jerusalem
+929	ahisamakh	אחיסמך	Ahisamakh	31.93500	34.90722	77	Asia/Jerusalem
+930	porat	פורת	Porat	32.27790	34.94890	58	Asia/Jerusalem
+931	uza	עוזה	Uza	31.59248	34.76495	147	Asia/Jerusalem
+932	bneiReem	בני ראם	Bnei Re'em	31.76990	34.79060	57	Asia/Jerusalem
+933	shalva	שלווה	Shalva	31.56361	34.76806	170	Asia/Jerusalem
+934	revaha	רווחה	Revaha	31.64880	34.73310	85	Asia/Jerusalem
+935	gealya	גאליה	Ge'alya	31.88490	34.76610	22	Asia/Jerusalem
+936	matityahu	מתתיהו	Matityahu	31.92972	35.03444	290	Asia/Jerusalem
+937	eitan	איתן	Eitan	31.57200	34.74840	161	Asia/Jerusalem
+938	mitzpa	מצפה	Mitzpa	32.79056	35.50944	68	Asia/Jerusalem
+939	kanaf	כנף	Kanaf	32.86980	35.70050	285	Asia/Jerusalem
+940	yonatan	יונתן	Yonatan	32.93630	35.79450	551	Asia/Jerusalem
+941	nurit	נורית	Nurit	32.54177	35.35614	126	Asia/Jerusalem
+942	rehov	רחוב	Rehov	32.45100	35.48840	-121	Asia/Jerusalem
+943	kfarNetter	כפר נטר	Kfar Netter	32.27139	34.87028	26	Asia/Jerusalem
+944	beerTuvia	באר טוביה	Be'er Tuvia	31.73605	34.72384	55	Asia/Jerusalem
+945	kfarAhim	כפר אחים	Kfar Ahim	31.74460	34.75750	55	Asia/Jerusalem
+946	yinon	ינון	Yinon	31.74090	34.78260	61	Asia/Jerusalem
+947	emunim	אמונים	Emunim	31.74360	34.67550	30	Asia/Jerusalem
+948	sdeUziyahu	שדה עוזיהו	Sde Uziyahu	31.75616	34.67703	28	Asia/Jerusalem
+949	amikam	עמיקם	Amikam	32.56361	35.02083	77	Asia/Jerusalem
+950	sdeDavid	שדה דוד	Sde David	31.57686	34.68387	97	Asia/Jerusalem
+951	arugot	ערוגות	Arugot	31.73470	34.77070	64	Asia/Jerusalem
+952	nimrod	נמרוד	Nimrod, Golan Heights	33.24528	35.75111	1103	Asia/Jerusalem
+953	nevatim	נבטים	Nevatim	31.22361	34.88278	320	Asia/Jerusalem
+954	bneiAtarot	בני עטרות	Bnei Atarot	32.02333	34.91361	53	Asia/Jerusalem
+955	tsofit	צופית	Tsofit	32.19310	34.92140	71	Asia/Jerusalem
+956	tzippori	ציפורי	Tzippori	32.74650	35.27790	258	Asia/Jerusalem
+957	shaal	שעל	Sha'al	33.11670	35.71840	772	Asia/Jerusalem
+958	kidmatTzvi	קדמת צבי	Kidmat Tzvi	33.03030	35.69880	472	Asia/Jerusalem
+959	neotGolan	נאות גולן	Neot Golan	32.78740	35.69350	332	Asia/Jerusalem
+960	givatYoav	גבעת יואב	Givat Yoav	32.79810	35.68070	318	Asia/Jerusalem
+961	bneiYehuda	בני יהודה	Bnei Yehuda	32.79860	35.68960	366	Asia/Jerusalem
+962	eliAd	אלי-עד	Eli-ad	32.80506	35.73413	372	Asia/Jerusalem
+963	smadar	סמדר	Smadar	32.71880	35.49181	22	Asia/Jerusalem
+964	kfarMenahem	כפר מנחם	Kfar Menahem	31.73170	34.83600	130	Asia/Jerusalem
+965	mahanayim	מחניים	Mahanayim	32.98930	35.57030	264	Asia/Jerusalem
+966	kfarGlikson	כפר גליקסון	Kfar Glikson	32.50520	35.00540	71	Asia/Jerusalem
+967	galOn	גלאון	Gal On	31.63278	34.84778	213	Asia/Jerusalem
+968	einGedi	עין גדי	Ein Gedi	31.45000	35.38333	-288	Asia/Jerusalem
+969	givatHashlosha	גבעת השלושה	Givat HaShlosha	32.09830	34.92100	31	Asia/Jerusalem
+970	elifaz	אליפז	Elifaz	29.79730	35.01140	120	Asia/Jerusalem
+971	beitZera	בית זרע	Beit Zera	32.68890	35.57340	-198	Asia/Jerusalem
+972	zikim	זיקים	Zikim	31.60790	34.52180	32	Asia/Jerusalem
+973	kramim	כרמים	Kramim	31.33360	34.91850	410	Asia/Jerusalem
+974	hahotrim	החותרים	Hahotrim	32.75130	34.95620	14	Asia/Jerusalem
+975	afik	אפיק	Afik	32.77972	35.70139	333	Asia/Jerusalem
+976	ketura	קטורה	Ketura	29.93417	35.07083	90	Asia/Jerusalem
+977	beerotYitzhak	בארות יצחק	Be'erot Yitzhak	32.04278	34.90889	48	Asia/Jerusalem
+978	ramatYohanan	רמת יוחנן	Ramat Yohanan	32.79290	35.12130	56	Asia/Jerusalem
+979	alonim	אלונים	Alonim	32.71972	35.14417	138	Asia/Jerusalem
+980	lotan	לוטן	Lotan	29.98550	35.08830	115	Asia/Jerusalem
+981	lahavotHabashan	להבות הבשן	Lahavot HaBashan	33.14150	35.64660	85	Asia/Jerusalem
+982	misgavAm	משגב עם	Misgav Am	33.24778	35.54833	830	Asia/Jerusalem
+983	irOvot	עיר אובות	Ir Ovot	30.80880	35.24580	-138	Asia/Jerusalem
+984	hukok	חוקוק	Hukok	32.87990	35.49580	7	Asia/Jerusalem
+985	shaarHaamakim	שער העמקים	Sha'ar HaAmakim	32.72194	35.11167	66	Asia/Jerusalem
+986	kadarim	קדרים	Kadarim	32.89840	35.47410	131	Asia/Jerusalem
+987	ganSamuel	גן שמואל	Gan Samuel	32.45000	34.95000	29	Asia/Jerusalem
+988	einShemer	עין שמר	Ein Shemer	32.46130	35.00670	42	Asia/Jerusalem
+989	shoval	שובל	Shoval	31.41278	34.74278	205	Asia/Jerusalem
+990	givatOz	גבעת עוז	Givat Oz	32.55542	35.20030	109	Asia/Jerusalem
+991	bahan	בחן	Bahan	32.35083	35.01917	62	Asia/Jerusalem
+992	gazit	גזית	Gazit	32.63750	35.44710	137	Asia/Jerusalem
+993	moran	מורן	Moran	32.91940	35.39550	342	Asia/Jerusalem
+994	gaaton	געתון	Ga'aton	33.00620	35.21450	347	Asia/Jerusalem
+995	maaleHahamisha	מעלה החמישה	Ma'ale HaHamisha	31.81730	35.11070	798	Asia/Jerusalem
+996	nirAm	ניר עם	Nir Am	31.51940	34.58090	127	Asia/Jerusalem
+997	beitAlfa	בית אלפא	Beit Alfa	32.51611	35.43028	-71	Asia/Jerusalem
+998	inbar	ענבר	Inbar	32.91030	35.42300	323	Asia/Jerusalem
+999	amiad	עמיעד	Ami'ad	32.92825	35.54070	249	Asia/Jerusalem
+1000	yahad	יחד	Yahad	32.84570	35.36190	481	Asia/Jerusalem
+1001	shefayim	שפיים	Shefayim	32.21690	34.82460	56	Asia/Jerusalem
+1002	roshHanikra	ראש הנקרה	Rosh HaNikra	33.08611	35.11361	47	Asia/Jerusalem
+1003	kiryatAnavim	קריית ענבים	Kiryat Anavim	31.81070	35.11990	677	Asia/Jerusalem
+1004	sarid	שריד	Sarid	32.66310	35.22570	129	Asia/Jerusalem
+1005	yasur	יסעור	Yas'ur	32.90050	35.16620	18	Asia/Jerusalem
+1006	snir	שניר	Snir	33.24040	35.67780	307	Asia/Jerusalem
+1007	beitHaarava	בית הערבה	Beit HaArava	31.80820	35.47580	-286	Asia/Jerusalem
+1008	zivon	צבעון	Ziv'on	33.02610	35.41590	764	Asia/Jerusalem
+1009	hanaton	חנתון	Hanaton	32.78570	35.24400	193	Asia/Jerusalem
+1010	parod	פרוד	Parod	32.93230	35.43380	451	Asia/Jerusalem
+1011	kvutzatShiller	קבוצת שילר	Kvutzat Shiller	31.87790	34.79880	46	Asia/Jerusalem
+1012	revivim	רביבים	Revivim	31.04361	34.72122	284	Asia/Jerusalem
+1013	ruhama	רוחמה	Ruhama	31.49668	34.70564	167	Asia/Jerusalem
+1014	beitGuvrin	בית גוברין	Beit Guvrin	31.61310	34.89830	266	Asia/Jerusalem
+1015	ramatDavid	רמת דוד	Ramat David	32.67860	35.20380	91	Asia/Jerusalem
+1016	ramatHakovesh	רמת הכובש	Ramat HaKovesh	32.21629	34.93773	69	Asia/Jerusalem
+1017	regavim	רגבים	Regavim	32.52390	35.03440	103	Asia/Jerusalem
+1018	beitKeshet	בית קשת	Beit Keshet	32.71833	35.39444	201	Asia/Jerusalem
+1019	yahel	יהל	Yahel	30.08410	35.12910	197	Asia/Jerusalem
+1020	evron	עברון	Evron	32.99139	35.10028	32	Asia/Jerusalem
+1021	lotem	לוטם	Lotem	32.88260	35.35730	309	Asia/Jerusalem
+1022	neveHarif	נווה חריף	Neve Harif	30.03650	35.03870	437	Asia/Jerusalem
+1023	naaran	נערן	Na'aran	31.96687	35.45434	-168	Asia/Jerusalem
+1024	gvaram	גברעם	Gvar'am	31.59220	34.61270	89	Asia/Jerusalem
+1025	einTzurim	עין צורים	Ein Tzurim	31.69470	34.71860	57	Asia/Jerusalem
+1026	dvir	דביר	Dvir	31.41230	34.82570	316	Asia/Jerusalem
+1027	lahav	להב	Lahav	31.37830	34.87040	451	Asia/Jerusalem
+1028	baram	ברעם	Bar'am	33.05833	35.43333	748	Asia/Jerusalem
+1029	netzerSereni	נצר סרני	Netzer Sereni	31.92610	34.82950	76	Asia/Jerusalem
+1030	revadim	רבדים	Revadim	31.77370	34.81690	95	Asia/Jerusalem
+1031	galed	גלעד	Gal'ed	32.55640	35.07700	195	Asia/Jerusalem
+1032	shomrat	שמרת	Shomrat	32.95120	35.09560	22	Asia/Jerusalem
+1033	saar	סער	Sa'ar	33.02850	35.10960	29	Asia/Jerusalem
+1034	gevim	גבים	Gevim	31.50750	34.59861	126	Asia/Jerusalem
+1035	shomria	שומריה	Shomria	31.43190	34.88510	394	Asia/Jerusalem
+1036	beitOren	בית אורן	Beit Oren	32.73140	35.00550	360	Asia/Jerusalem
+1037	dorot	דורות	Dorot	31.50640	34.64540	110	Asia/Jerusalem
+1038	shamir	שמיר	Shamir	33.16540	35.66070	207	Asia/Jerusalem
+1039	hasolelim2	הסוללים	HaSolelim	32.75040	35.23780	188	Asia/Jerusalem
+1040	einHarodMeuhad	עין חרוד מאוחד	Ein Harod Meuhad	32.55680	35.39300	-3	Asia/Jerusalem
+1041	mishmarot	משמרות	Mishmarot	32.48611	34.98361	61	Asia/Jerusalem
+1042	nirEliyahu	ניר אליהו	Nir Eliyahu	32.19670	34.94980	58	Asia/Jerusalem
+1043	shuaffat	מזרע	shuaffat	32.65070	35.28780	109	Asia/Jerusalem
+1044	gadot	גדות	Gadot	33.01800	35.61720	118	Asia/Jerusalem
+1045	tzova	צובה	Tzova	31.78430	35.11960	715	Asia/Jerusalem
+1046	haogen	העוגן	HaOgen	32.36361	34.92361	22	Asia/Jerusalem
+1047	gaash	געש	Ga'ash	32.22930	34.82590	26	Asia/Jerusalem
+1048	telYitzhak	תל יצחק	Tel Yitzhak	32.25240	34.86910	36	Asia/Jerusalem
+1049	yiron	יראון	Yir'on	33.07700	35.45490	686	Asia/Jerusalem
+1050	grofit	גרופית	Grofit	29.94360	35.06870	91	Asia/Jerusalem
+1051	maozHaim	מעוז חיים	Maoz Haim	32.49304	35.55064	-236	Asia/Jerusalem
+1052	roshTzurim	ראש צורים	Rosh Tzurim	31.66708	35.12569	947	Asia/Jerusalem
+1053	harduf	הרדוף	Harduf	32.76350	35.17380	217	Asia/Jerusalem
+1054	hulda	חולדה	Hulda	31.83230	34.88340	126	Asia/Jerusalem
+1055	meirav	מירב	Meirav	32.45180	35.42170	438	Asia/Jerusalem
+1056	mishmarHaemek	משמר העמק	Mishmar HaEmek	32.60972	35.14167	113	Asia/Jerusalem
+1057	einHanatziv	עין הנצי\"ב	Ein HaNatziv	32.47020	35.50240	-128	Asia/Jerusalem
+1058	kfarHanassi	כפר הנשיא	Kfar HaNassi	32.97500	35.60389	266	Asia/Jerusalem
+1059	maaleGilboa	מעלה גלבוע	Ma'ale Gilboa	32.47630	35.42040	436	Asia/Jerusalem
+1060	kfarEtzion	כפר עציון	Kfar Etzion	31.65000	35.11667	937	Asia/Jerusalem
+1061	adamit	אדמית	Adamit	33.07841	35.21100	470	Asia/Jerusalem
+1062	afikim	אפיקים	Afikim	32.67960	35.57780	-196	Asia/Jerusalem
+1063	beitKama	בית קמה	Beit Kama	31.44559	34.76054	238	Asia/Jerusalem
+1064	amir	עמיר	Amir	33.17833	35.62056	78	Asia/Jerusalem
+1065	givatBrenner	גבעת ברנר	Givat Brenner	31.86444	34.80028	69	Asia/Jerusalem
+1066	hamadia	חמדיה	Hamadia	32.52020	35.51980	-160	Asia/Jerusalem
+1067	gonen	גונן	Gonen	33.12240	35.64640	96	Asia/Jerusalem
+1068	kfarHahoresh	כפר החורש	Kfar HaḤoresh	32.70210	35.27430	427	Asia/Jerusalem
+1069	maanit	מענית	Ma'anit	32.45000	35.03333	47	Asia/Jerusalem
+1070	yiftah	יפתח	Yiftah	33.12770	35.55170	437	Asia/Jerusalem
+1071	almog	אלמוג	Almog	31.78970	35.46110	-262	Asia/Jerusalem
+1072	hulata	חולתה	Hulata	33.05170	35.60970	84	Asia/Jerusalem
+1073	sdeNehemia	שדה נחמיה	Sde Nehemia	33.18680	35.62240	80	Asia/Jerusalem
+1074	kalya	קלי\"ה	Kalya	31.74864	35.46623	-354	Asia/Jerusalem
+1075	kvutzatKinneret	קבוצת כנרת	Kvutzat Kinneret	32.71340	35.56250	-164	Asia/Jerusalem
+1076	kabri	כברי	Kabri	33.02090	35.14900	100	Asia/Jerusalem
+1077	deganiaAlef	דגניה א	Degania Alef	32.70810	35.57490	-197	Asia/Jerusalem
+1078	lohameiHagetaot	לוחמי הגטאות	Lohamei HaGeta'ot	32.96306	35.09750	17	Asia/Jerusalem
+1079	dafna	דפנה	Dafna	33.23000	35.63861	147	Asia/Jerusalem
+1080	tiratZvi	טירת צבי	Tirat Zvi	32.42194	35.52833	-220	Asia/Jerusalem
+1081	ayeletHashahar	איילת השחר	Ayelet HaShahar	33.02280	35.57760	179	Asia/Jerusalem
+1082	yagur	יגור	Yagur	32.74150	35.07720	26	Asia/Jerusalem
+1083	hatzor	חצור אשדוד	Hatzor	31.77210	34.72040	58	Asia/Jerusalem
+1084	hatzerim	חצרים	Hatzerim	31.24028	34.71389	246	Asia/Jerusalem
+1085	negba	נגבה	Negba	31.66090	34.68310	91	Asia/Jerusalem
+1086	kfarBlum	כפר בלום	Kfar Blum	33.17222	35.60972	76	Asia/Jerusalem
+1087	nahshon	נחשון	Nahshon	31.83040	34.95540	182	Asia/Jerusalem
+1088	magal	מגל	Magal	32.38550	35.03560	73	Asia/Jerusalem
+1089	einat	עינת	Einat	32.08240	34.93920	56	Asia/Jerusalem
+1090	merhavia	מרחביה	Merhavia	32.60585	35.30725	76	Asia/Jerusalem
+1091	kvutzatYavne	קבוצת יבנה	Kvutzat Yavne	31.81530	34.72040	58	Asia/Jerusalem
+1092	eyal	אייל	Eyal	32.21010	34.97960	77	Asia/Jerusalem
+1093	einZeitim	עין זיתים	Ein Zeitim	32.99720	35.48590	759	Asia/Jerusalem
+1094	kiryatShlomo	קריית שלמה	Kiryat Shlomo	32.23417	34.86139	28	Asia/Jerusalem
+1095	ravid	רביד	Ravid	32.85060	35.46270	185	Asia/Jerusalem
+1096	maayanBaruch	מעיין ברוך	Ma'ayan Baruch	33.24110	35.60880	213	Asia/Jerusalem
+1097	beitRimon	בית רימון	Beit Rimon	32.78194	35.32972	400	Asia/Jerusalem
+1098	yehiam	יחיעם	Yehiam	32.99570	35.22050	370	Asia/Jerusalem
+1099	sdeEliyahu	שדה אליהו	Sde Eliyahu	32.44020	35.51500	-190	Asia/Jerusalem
+1100	neveYam	נווה ים	Neve Yam	32.67830	34.93120	3	Asia/Jerusalem
+1101	horshim	חורשים	Horshim	32.13850	34.97070	73	Asia/Jerusalem
+1102	lehavotHaviva	להבות חביבה	Lehavot Haviva	32.39370	35.01000	51	Asia/Jerusalem
+1103	einHahoresh	עין החורש	Ein HaHoresh	32.38822	34.94051	24	Asia/Jerusalem
+1104	yakum	יקום	Yakum	32.24750	34.84250	20	Asia/Jerusalem
+1105	einDor	עין דור	Ein Dor	32.65620	35.41710	134	Asia/Jerusalem
+1106	givatHaimIhud	גבעת חיים איחוד	Givat Haim (Ihud)	32.39808	34.93180	29	Asia/Jerusalem
+1107	afek	אפק	Afek	32.83880	35.12800	23	Asia/Jerusalem
+1108	maagan	מעגן	Ma'agan	32.70630	35.59990	-194	Asia/Jerusalem
+1109	telKatzir	תל קציר	Tel Katzir	32.70580	35.61800	-122	Asia/Jerusalem
+1110	neotMordechai	נאות מרדכי	Neot Mordechai	33.15994	35.59669	76	Asia/Jerusalem
+1111	sdeYoav	שדה יואב	Sde Yoav	31.64350	34.68140	104	Asia/Jerusalem
+1112	dovrat	דברת	Dovrat	32.64720	35.34940	177	Asia/Jerusalem
+1113	sdeBoker	שדה בוקר	Sde Boker	30.86889	34.79250	470	Asia/Jerusalem
+1114	mishmarHanegev	משמר הנגב	Mishmar HaNegev	31.36444	34.71889	197	Asia/Jerusalem
+1115	orHaner	אור הנר	Or HaNer	31.55750	34.60200	64	Asia/Jerusalem
+1116	naan	נען	Na'an	31.88500	34.85861	91	Asia/Jerusalem
+1117	manara	מנרה	Manara	33.19583	35.54444	863	Asia/Jerusalem
+1118	barkai	ברקאי	Barkai	32.46667	35.01667	40	Asia/Jerusalem
+1119	kishor	כישור	Kishor	32.94762	35.24989	482	Asia/Jerusalem
+1120	beitNir	בית ניר	Beit Nir	31.64780	34.87390	249	Asia/Jerusalem
+1121	pelekh	פלך	Pelekh	32.93400	35.23370	497	Asia/Jerusalem
+1122	tlalim	טללים	Tlalim	30.99210	34.77200	366	Asia/Jerusalem
+1123	neveUr	נווה אור	Neve Ur	32.59000	35.55278	-221	Asia/Jerusalem
+1124	eshbal	אשבל	Eshbal	32.87680	35.30610	271	Asia/Jerusalem
+1125	harel	הראל	Harel	31.80950	34.95010	207	Asia/Jerusalem
+1126	ortal	אורטל	Ortal	33.08500	35.76139	903	Asia/Jerusalem
+1127	einHashofet	עין השופט	Ein HaShofet	32.59590	35.10110	270	Asia/Jerusalem
+1128	tuval	תובל	Tuval	32.92880	35.24570	526	Asia/Jerusalem
+1129	beitHashita	בית השיטה	Beit HaShita	32.55417	35.43750	-39	Asia/Jerusalem
+1130	ramatHashofet	רמת השופט	Ramat HaShofet	32.61080	35.09490	252	Asia/Jerusalem
+1131	sdotYam	שדות ים	Sdot Yam	32.49070	34.89290	7	Asia/Jerusalem
+1132	einGev	עין גב	Ein Gev	32.78276	35.63965	-201	Asia/Jerusalem
+1133	mesilot	מסילות	Mesilot	32.49520	35.47440	-110	Asia/Jerusalem
+1134	reshafim	רשפים	Reshafim	32.48139	35.47722	-111	Asia/Jerusalem
+1135	shluhot	שלוחות	Shluhot	32.47190	35.48120	-117	Asia/Jerusalem
+1136	kfarRuppin	כפר רופין	Kfar Ruppin	32.45750	35.55583	-237	Asia/Jerusalem
+1137	mishmarHasharon	משמר השרון	Mishmar HaSharon	32.35861	34.90306	25	Asia/Jerusalem
+1138	beitHaemek	בית העמק	Beit HaEmek	32.97110	35.14490	51	Asia/Jerusalem
+1139	yotvata	יטבתה	Yotvata	29.89556	35.06000	84	Asia/Jerusalem
+1140	nahshonim	נחשונים	Nahshonim	32.06010	34.94770	82	Asia/Jerusalem
+1141	mashabeiSadeh	משאבי שדה	Mashabei Sadeh	31.00380	34.78820	351	Asia/Jerusalem
+1142	shaarHagolan	שער הגולן	Sha'ar HaGolan	32.68650	35.60330	-186	Asia/Jerusalem
+1143	kfarGiladi	כפר גלעדי	Kfar Giladi	33.24250	35.57500	353	Asia/Jerusalem
+1144	ginosar	גינוסר	Ginosar	32.84750	35.52278	-201	Asia/Jerusalem
+1145	palmachim	פלמחים	Palmachim	31.93333	34.70639	25	Asia/Jerusalem
+1146	migdalOz	מגדל עוז	Migdal Oz	31.64070	35.14390	932	Asia/Jerusalem
+1147	ashdotYaakovIhud	אשדות יעקב איחוד	Ashdot Ya'akov Ihud	32.65940	35.58160	-197	Asia/Jerusalem
+1148	maaganMichael	מעגן מיכאל	Ma'agan Michael	32.55690	34.91700	18	Asia/Jerusalem
+1149	hanita	חניתה	Hanita	33.08760	35.17350	347	Asia/Jerusalem
+1150	metzer	מצר	Metzer	32.44179	35.04355	60	Asia/Jerusalem
+1151	eilon	אילון	Eilon	33.06360	35.22050	324	Asia/Jerusalem
+1152	kfarMasaryk	כפר מסריק	Kfar Masaryk	32.89080	35.09970	7	Asia/Jerusalem
+1153	gat	גת	Gat	31.62720	34.79410	150	Asia/Jerusalem
+1154	hagoshrim	הגושרים	HaGoshrim	33.22083	35.62361	110	Asia/Jerusalem
+1155	hamaapil	המעפיל	HaMa'apil	32.37778	34.98333	41	Asia/Jerusalem
+1156	metzar	מיצר	Metzar	32.76806	35.73694	368	Asia/Jerusalem
+1157	karmia	כרמיה	Karmia	31.60410	34.54250	27	Asia/Jerusalem
+1158	alumot	אלומות	Alumot	32.70680	35.54600	41	Asia/Jerusalem
+1159	gesherHaziv	גשר הזיו	Gesher HaZiv	33.03900	35.11130	33	Asia/Jerusalem
+1160	neveEitan	נווה איתן	Neve Eitan	32.49113	35.53107	-224	Asia/Jerusalem
+1161	maayanTzvi	מעיין צבי	Ma'ayan Tzvi	32.56630	34.94000	105	Asia/Jerusalem
+1162	lavi	לביא	Lavi	32.78806	35.44194	303	Asia/Jerusalem
+1163	einHamifratz	עין המפרץ	Ein HaMifratz	32.90260	35.09630	5	Asia/Jerusalem
+1164	matzuva	מצובה	Matzuva	33.06330	35.15820	107	Asia/Jerusalem
+1165	gvat	גבת	Gvat	32.67520	35.21160	110	Asia/Jerusalem
+1166	netivHalamedHeh	נתיב הל״ה	Netiv HaLamed-Heh	31.68792	34.98367	319	Asia/Jerusalem
+1167	nirDavid	ניר דוד (תל עמל)	Nir David	32.50361	35.45722	-106	Asia/Jerusalem
+1168	megiddo	מגידו	Megiddo	32.57889	35.18056	159	Asia/Jerusalem
+1169	gesher	גשר	Gesher	32.62130	35.55210	-187	Asia/Jerusalem
+1170	gezer	גזר	Gezer	31.87528	34.92139	124	Asia/Jerusalem
+1171	brorHayil	ברור חיל	Bror Hayil	31.55770	34.64700	79	Asia/Jerusalem
+1172	dan	דן	Dan	33.24028	35.65306	174	Asia/Jerusalem
+1173	hazorea	הזורע	HaZore'a	32.64472	35.12083	58	Asia/Jerusalem
+1174	yifat	יפעת	Yifat	32.67650	35.22440	137	Asia/Jerusalem
+1175	geva	גבע	Geva	32.56649	35.37156	18	Asia/Jerusalem
+1176	einCarmel	עין כרמל	Ein Carmel	32.67590	34.95330	24	Asia/Jerusalem
+1177	dalia	דליה	Dalia	32.59028	35.07750	210	Asia/Jerusalem
+1178	kfarSzold	כפר סאלד	Kfar Szold	33.19528	35.65750	129	Asia/Jerusalem
+1179	neotSemadar	נאות סמדר	Neot Semadar	30.04830	35.02540	400	Asia/Jerusalem
+1180	malkia	מלכיה	Malkia	33.09820	35.51110	685	Asia/Jerusalem
+1181	sdeNahum	שדה נחום	Sde Nahum	32.52530	35.48180	-76	Asia/Jerusalem
+1182	ramotMenashe	רמות מנשה	Ramot Menashe	32.59670	35.05720	186	Asia/Jerusalem
+1183	eilot	אילות	Eilot	29.58140	34.96300	76	Asia/Jerusalem
+1184	tzora	צרעה	Tzora	31.76430	34.96720	229	Asia/Jerusalem
+1185	yizreel	יזרעאל	Yizre'el	32.56160	35.32220	102	Asia/Jerusalem
+1186	nitzanim	ניצנים	Nitzanim	31.71660	34.63380	44	Asia/Jerusalem
+1187	glilYam	גליל ים	Glil Yam	32.15660	34.83090	50	Asia/Jerusalem
+1188	einHayam	עין הים	Ein HaYam	32.69059	34.94652	13	Asia/Jerusalem
+1189	tsabbar	צבר	Tsabbar	31.28130	35.16049	498	Asia/Jerusalem
+1190	ginegar	גניגר	Ginegar	32.66262	35.25887	102	Asia/Jerusalem
+1191	ofarim	עופרים	Ofarim	32.01780	35.04450	338	Asia/Jerusalem
+1192	betArye	בית אריה	Bet Arye	32.03710	35.04972	339	Asia/Jerusalem
+1193	maaleLevona	מעלה לבונה	Ma'ale Levona	32.05444	35.24083	771	Asia/Jerusalem
+1194	givonHahadasha	גבעון החדשה	Giv'on HaHadasha	31.84874	35.15759	803	Asia/Jerusalem
+1195	hinanit	חיננית	Hinanit	32.48030	35.17210	392	Asia/Jerusalem
+1196	batHadar	בת הדר	Bat Hadar	31.64760	34.59640	62	Asia/Jerusalem
+1197	eliav	אליאב	Eliav	31.53158	34.93300	345	Asia/Jerusalem
+1198	klil	כליל	Klil	32.98230	35.19710	160	Asia/Jerusalem
+1199	poriaKfarAvoda	פוריה - כפר עבודה	Poria – Kfar Avoda	32.71994	35.54631	48	Asia/Jerusalem
+1200	poriaNeveOved	פוריה - נווה עובד	Poria – Neve Oved	32.74431	35.53894	147	Asia/Jerusalem
+1201	mabuim	מבועים	Mabu'im	31.44920	34.65350	173	Asia/Jerusalem
+1202	givotBar	גבעות בר	Giv'ot Bar	31.35660	34.75620	230	Asia/Jerusalem
+1203	shaharut	שחרות	Shaharut	29.90460	34.99970	528	Asia/Jerusalem
+1204	timrat	תמרת	Timrat	32.70340	35.22490	245	Asia/Jerusalem
+1205	moreshet	מורשת	Moreshet	32.82790	35.23520	310	Asia/Jerusalem
+1206	yuvalim	יובלים	Yuvalim	32.87780	35.27200	271	Asia/Jerusalem
+1207	ahuzatBarak	אחוזת ברק	Ahuzat Barak	32.64210	35.33850	155	Asia/Jerusalem
+1208	harHalutz	הר חלוץ	Har Halutz	32.95055	35.31228	735	Asia/Jerusalem
+1209	midreshetBenGurion	מדרשת בן-גוריון	Midreshet Ben-Gurion	30.85230	34.78340	477	Asia/Jerusalem
+1210	tzurYitzhak	צור יצחק	Tzur Yitzhak	32.24105	34.99738	106	Asia/Jerusalem
+1211	gita	גיתה	Gita	32.96656	35.23920	384	Asia/Jerusalem
+1212	alonHagalil	אלון הגליל	Alon HaGalil	32.75710	35.22060	216	Asia/Jerusalem
+1213	merhavAm	מרחב עם	Merhav Am	30.88728	34.82876	516	Asia/Jerusalem
+1214	gidona	גדעונה	Gidona	32.54930	35.35770	-22	Asia/Jerusalem
+1215	barYohai	בר יוחאי	Bar Yohai	32.99789	35.44894	708	Asia/Jerusalem
+1216	ganNer	גן נר	Gan Ner	32.53140	35.33850	142	Asia/Jerusalem
+1217	givatAvni	גבעת אבני	Giv'at Avni	32.77528	35.43861	291	Asia/Jerusalem
+1218	neveZiv	נווה זיו	Neve Ziv	33.02700	35.18460	215	Asia/Jerusalem
+1219	massad	מסד	Massad	32.84389	35.42278	279	Asia/Jerusalem
+1220	einHaemek	עין העמק	Ein HaEmek	32.62960	35.08410	245	Asia/Jerusalem
+1221	beitHoron	בית חורון	Beit Horon	31.87670	35.12870	627	Asia/Jerusalem
+1222	nitzaneiSinai	ניצני סיני	Nitzanei Sinai	30.90365	34.39652	239	Asia/Jerusalem
+1223	nofeiPrat	נופי פרת	Nofei Prat	31.82400	35.32010	436	Asia/Jerusalem
+1224	kfarHasidimBet	כפר חסידים ב'	Kfar Hasidim Bet	32.74990	35.08990	9	Asia/Jerusalem
+1225	livna	ליבנה	Livna	31.35580	35.07010	696	Asia/Jerusalem
+1226	tenehOmarim	טנא עומרים	Teneh Omarim	31.37528	34.95694	575	Asia/Jerusalem
+1227	mikhmanim	מכמנים	Mikhmanim	32.90583	35.32722	494	Asia/Jerusalem
+1228	elazar	אלעזר	Elazar	31.66004	35.14201	918	Asia/Jerusalem
+1229	mitzpeHila	מצפה הילה	Mitzpe Hila	33.03504	35.24501	511	Asia/Jerusalem
+1230	nataf	נטף	Nataf	31.83230	35.06790	495	Asia/Jerusalem
+1231	mitzpeAviv	מצפה אבי\"ב	Mitzpe Aviv	32.83720	35.20050	122	Asia/Jerusalem
+1232	ovnat	אבנת	Ovnat	31.67920	35.43680	-323	Asia/Jerusalem
+1233	aluma	אלומה	Aluma	31.65130	34.74370	86	Asia/Jerusalem
+1234	shimshit	שמשית	Shimshit	32.73320	35.24680	232	Asia/Jerusalem
+1235	karmeiYosef	כרמי יוסף	Karmei Yosef	31.84830	34.92040	240	Asia/Jerusalem
+1236	srigim	שריגים	Srigim	31.67750	34.93530	331	Asia/Jerusalem
+1237	mishmarDavid	משמר דוד	Mishmar David	31.82270	34.90220	160	Asia/Jerusalem
+1238	shoshanatHaamakim	שושנת העמקים	Shoshanat HaAmakim	32.35380	34.85680	18	Asia/Jerusalem
+1239	nitzan	ניצן	Nitzan	31.73550	34.62480	22	Asia/Jerusalem
+1240	carmit	כרמית	Carmit	31.33593	34.90022	391	Asia/Jerusalem
+1241	beerGanim	באר גנים	Be'er Ganim	31.70027	34.60772	26	Asia/Jerusalem
+1242	bneiDekalim	בני דקלים	Bnei Dekalim	31.51772	34.91735	401	Asia/Jerusalem
+1243	katzir	קציר (יישוב)	Katzir	32.48810	35.10190	373	Asia/Jerusalem
+1244	poria	פוריה	Poria	32.73333	35.53333	40	Asia/Jerusalem
+1245	neta	נטע	Neta	31.47833	34.92652	403	Asia/Jerusalem
+1246	tzoran	צורן	Tzoran	32.28786	34.94422	64	Asia/Jerusalem
+1247	shezaf	שיזף	Shezaf	31.00167	34.76556	343	Asia/Jerusalem
+1248	dror	דרור	Dror	31.32047	34.99694	493	Asia/Jerusalem
+1249	meital	מיטל	Meital	32.43900	35.41690	490	Asia/Jerusalem
+1250	migron	מגרון	Migron, Israel	31.87461	35.25906	604	Asia/Jerusalem
+1251	givotHaroeh	גבעות הרואה	Giv'ot HaRoeh	32.05886	35.27324	703	Asia/Jerusalem
+1252	shalem	שלם	Shalem	32.20122	35.34609	564	Asia/Jerusalem
+1253	peduel	פדואל	Peduel	32.06240	35.05190	368	Asia/Jerusalem
+1254	avtalion	אבטליון	Avtalion	32.83695	35.34711	337	Asia/Jerusalem
+1255	nitzana	ניצנה	Nitzana	30.88598	34.42257	238	Asia/Jerusalem
+1256	hoshaya	הושעיה	Hoshaya	32.75820	35.29340	235	Asia/Jerusalem
+1257	rakefet	רקפת	Rakefet	32.85460	35.26550	330	Asia/Jerusalem
+1258	gilon	גילון	Gilon	32.90310	35.23570	303	Asia/Jerusalem
+1259	batHefer	בת חפר	Bat Hefer	32.33290	35.01390	56	Asia/Jerusalem
+1260	maaleTzviya	מעלה צביה	Ma'ale Tzviya	32.88940	35.33140	271	Asia/Jerusalem
+1261	dolev	דולב	Dolev	31.92593	35.13518	618	Asia/Jerusalem
+1262	givatEla	גבעת אלה	Givat Ela	32.72180	35.24360	246	Asia/Jerusalem
+1263	mevootYeriho	מבואות יריחו	Mevo'ot Yeriho	31.90778	35.41694	-108	Asia/Jerusalem
+1264	oshrat	אשרת	Oshrat	32.97160	35.15540	72	Asia/Jerusalem
+1265	nitzanBet	ניצן ב׳	Nitzan Bet	31.73540	34.63500	35	Asia/Jerusalem
+1266	hadNes	חד נס	Had Nes	32.92760	35.64230	-22	Asia/Jerusalem
+1267	haspin	חיספין	Haspin	32.84490	35.79260	423	Asia/Jerusalem
+1268	korazim	כורזים	Korazim	32.91030	35.55070	174	Asia/Jerusalem
+1269	eliakim	אליקים	Eliakim	32.63240	35.06650	235	Asia/Jerusalem
+1270	shima	שמעה	Shim'a	31.38778	35.01278	631	Asia/Jerusalem
+1271	beitHagai	בית חגי	Beit Hagai	31.49306	35.08083	856	Asia/Jerusalem
+1272	shilo	שילה	Shilo	32.05389	35.29889	790	Asia/Jerusalem
+1273	psagot	פסגות	Psagot	31.89930	35.22390	903	Asia/Jerusalem
+1274	harBrakha	הר ברכה	Har Brakha	32.19280	35.26530	863	Asia/Jerusalem
+1275	otniel	עתניאל	Otniel	31.43972	35.02889	713	Asia/Jerusalem
+1276	hemdat	חמדת	Hemdat	32.25140	35.52632	157	Asia/Jerusalem
+1277	rotem	רותם	Rotem, Bik'at HaYarden	32.33333	35.51667	-45	Asia/Jerusalem
+1278	harAdar	הר אדר	Har Adar	31.82611	35.12972	841	Asia/Jerusalem
+1279	tekoa	תקוע	Tekoa	31.65302	35.22903	673	Asia/Jerusalem
+1280	harGilo	הר גילה	Har Gilo	31.72206	35.17149	916	Asia/Jerusalem
+1281	noa	נעה	Noa	32.40611	35.31778	359	Asia/Jerusalem
+1282	maaleArugot	מעלה ערוגות	Ma'ale Arugot	31.64611	35.17750	892	Asia/Jerusalem
+1283	kelaAlon	קלע אלון	Kela Alon	33.13194	35.68639	641	Asia/Jerusalem
+1284	shvutRachel	שבות רחל	Shvut Rachel	32.05420	35.31116	749	Asia/Jerusalem
+1285	kedar	קידר	Kedar	31.75552	35.30941	463	Asia/Jerusalem
+1286	neveDaniel	נווה דניאל	Neve Daniel	31.67789	35.14329	978	Asia/Jerusalem
+1287	bikatHayardenRegionalCouncil	מועצה אזורית ערבות הירדן	Bik'at HaYarden Regional Council	32.10014	35.49305	-250	Asia/Jerusalem
+1288	shaveiShomron	שבי שומרון	Shavei Shomron	32.26406	35.18494	352	Asia/Jerusalem
+1289	kfarTapuach	כפר תפוח	Kfar Tapuach	32.11806	35.25000	674	Asia/Jerusalem
+1290	maaleMikhmas	מעלה מכמש	Ma'ale Mikhmas	31.87894	35.30637	602	Asia/Jerusalem
+1291	einav	ענב	Einav	32.28441	35.12604	306	Asia/Jerusalem
+1292	karmeiTzur	כרמי צור	Karmei Tzur	31.60922	35.10144	951	Asia/Jerusalem
+1293	telem	תלם	Telem, Har Hebron	31.56417	35.03111	678	Asia/Jerusalem
+1294	maaleHever	מעלה חבר	Ma'ale Hever	31.48611	35.16611	806	Asia/Jerusalem
+1295	adora	אדורה	Adora	31.55222	35.01889	665	Asia/Jerusalem
+1296	sansana	סנסנה	Sansana	31.36190	34.90290	530	Asia/Jerusalem
+1297	eshkolot	אשכולות	Eshkolot	31.39083	34.90472	587	Asia/Jerusalem
+1298	shaked	שקד	Shaked	32.47320	35.16900	417	Asia/Jerusalem
+1299	avneiHefetz	אבני חפץ	Avnei Hefetz	32.28463	35.07398	194	Asia/Jerusalem
+1300	brukhin	ברוכין	Brukhin	32.08043	35.08613	381	Asia/Jerusalem
+1301	gvaot	גבעות	Gva'ot	31.67855	35.10128	715	Asia/Jerusalem
+1302	maaleEfrayim	מעלה אפרים	Ma'ale Efrayim	32.07043	35.40361	209	Asia/Jerusalem
+1303	tomer	תומר	Tomer	32.01870	35.43889	-213	Asia/Jerusalem
+1304	asael	עשהאל	Asa'el	31.37372	35.04381	672	Asia/Jerusalem
+1305	avigayil	אביגיל	Avigayil	31.40361	35.14056	827	Asia/Jerusalem
+1306	harasha	חרשה	Harasha	31.94450	35.14932	767	Asia/Jerusalem
+1307	beitYonatan	בית יהונתן	Beit Yonatan	31.76759	35.23707	650	Asia/Jerusalem
+1308	asif	אסיף	Asif	32.09811	35.23584	614	Asia/Jerusalem
+1309	nofZion	נוף ציון	Nof Zion	31.75324	35.24278	726	Asia/Jerusalem
+1310	shahakIndustrialPark	אזור התעשייה שח\"ק	Shahak Industrial Park	32.47445	35.18022	342	Asia/Jerusalem
+1311	shimonHatzadik	שכונת שמעון הצדיק	Shimon HaTzadik	31.79239	35.23096	760	Asia/Jerusalem
+1312	elisha	אלישע	Elisha	31.87390	35.47780	-270	Asia/Jerusalem
+1313	keremReim	כרם רעים	Kerem Reim	31.95804	35.13796	541	Asia/Jerusalem
+1314	yairFarm	חוות יאיר	Yair Farm	32.14450	35.10410	352	Asia/Jerusalem
+1315	susya	סוסיא	Susya, Har Hebron	31.39185	35.11235	804	Asia/Jerusalem
+1316	amichai	עמיחי	Amichai	32.04650	35.32330	781	Asia/Jerusalem
+1317	gushAriel	גוש אריאל	Gush Ariel	32.10747	35.10700	462	Asia/Jerusalem
+1318	kfarAdumim	כפר אדומים	Kfar Adumim	31.82400	35.33500	320	Asia/Jerusalem
+1319	nokdim	נוקדים	Nokdim	31.64389	35.24472	604	Asia/Jerusalem
+1320	katzrin	קצרין	Katzrin	32.99250	35.69056	322	Asia/Jerusalem
+1321	alfeiMenashe	אלפי מנשה	Alfei Menashe	32.17167	35.01500	256	Asia/Jerusalem
+1322	oranit	אורנית	Oranit	32.12931	34.99521	128	Asia/Jerusalem
+1323	nofim	נופים	Nofim	32.15389	35.10278	407	Asia/Jerusalem
+1324	ofra	עפרה	Ofra	31.95551	35.26023	818	Asia/Jerusalem
+1325	kfarRuth	כפר רות	Kfar Ruth	31.91000	35.03556	298	Asia/Jerusalem
+1326	tzofim	צופים	Tzofim	32.19806	35.00917	147	Asia/Jerusalem
+1327	neria	נריה	Neria	31.95320	35.12570	569	Asia/Jerusalem
+1328	naale	נעלה	Na'ale	31.96250	35.06410	374	Asia/Jerusalem
+1329	alon	אלון	Alon, Mateh Binyamin	31.83279	35.35375	248	Asia/Jerusalem
+1330	kiryatNetafim	קריית נטפים	Kiryat Netafim	32.11600	35.11350	444	Asia/Jerusalem
+1331	maaleShomron	מעלה שומרון	Ma'ale Shomron	32.16470	35.07114	333	Asia/Jerusalem
+1332	mevoDotan	מבוא דותן	Mevo Dotan	32.42011	35.16951	278	Asia/Jerusalem
+1333	talMenashe	טל מנשה	Tal Menashe	32.48278	35.16056	410	Asia/Jerusalem
+1334	shaareiTikva	שערי תקווה	Sha'arei Tikva	32.12287	35.02692	165	Asia/Jerusalem
+1335	almon	עלמון	Almon	31.83170	35.29540	476	Asia/Jerusalem
+1336	nahalGinat	נח\"ל גינת	Nahal Ginat	32.47437	35.27353	204	Asia/Jerusalem
+1337	givatHaroe	גבעת הרוא\"ה	Giv'at HaRo'e	32.05440	35.26240	747	Asia/Jerusalem
+1338	betElBarakeh	בית ברכה	Bet el-Barakeh	31.63279	35.13197	851	Asia/Jerusalem
+1339	mahaneGivon	מחנה גבעון	Mahane Givon	31.84925	35.17104	752	Asia/Jerusalem
+1340	rimonim	רימונים	Rimonim	31.93417	35.34000	691	Asia/Jerusalem
+1341	nili	ניל\"י	Nili	31.96396	35.04853	352	Asia/Jerusalem
+1342	etzEfraim	עץ אפרים	Etz Efraim	32.11890	35.04660	210	Asia/Jerusalem
+1343	yakir	יקיר	Yakir	32.15033	35.11539	392	Asia/Jerusalem
+1344	hermesh	חרמש	Hermesh	32.42330	35.11920	247	Asia/Jerusalem
+1345	aleiZahav	עלי זהב	Alei Zahav	32.07170	35.06424	371	Asia/Jerusalem
+1346	rehelim	רחלים	Rehelim	32.10289	35.25717	555	Asia/Jerusalem
+1347	kfarHaoranim	כפר האורנים	Kfar HaOranim	31.91930	35.03820	303	Asia/Jerusalem
+1348	kiryatTivon2	קריית טבעון	Kiryat Tiv'on	32.72389	35.12722	181	Asia/Jerusalem
+1349	kfarShmaryahu	כפר שמריהו	Kfar Shmaryahu	32.18556	34.82194	35	Asia/Jerusalem
+1350	pardesHannaKarkur	פרדס חנה-כרכור	Pardes Hanna-Karkur	32.47111	34.96750	65	Asia/Jerusalem
+1351	azor	אזור	Azor	32.01667	34.81667	26	Asia/Jerusalem
+1352	savyon	סביון	Savyon	32.04726	34.87571	65	Asia/Jerusalem
+1353	meitar	מיתר	Meitar	31.32639	34.94000	420	Asia/Jerusalem
+1354	tzurHadassah	צור הדסה	Tzur Hadassah	31.71921	35.09763	751	Asia/Jerusalem
+1355	evenYehuda	אבן יהודה	Even Yehuda	32.27002	34.88743	45	Asia/Jerusalem
+1356	elyakhin	אליכין	Elyakhin	32.40852	34.92466	35	Asia/Jerusalem
+1357	kokhavYairTzurYigal	כוכב יאיר צור יגאל	Kokhav Ya'ir-Tzur Yig'al	32.22810	35.00060	78	Asia/Jerusalem
+1358	modiinMaccabimReut	מודיעין־מכבים־רעות	Modi'in-Maccabim-Re'ut	31.90765	35.00764	266	Asia/Jerusalem
+1359	shaarMenashe	המרכז לבריאות הנפש שער מנשה	Sha'ar Menashe	32.45000	35.01667	42	Asia/Jerusalem
+1360	livnim	ליבנים	Livnim	32.86410	35.49640	-46	Asia/Jerusalem
+1361	ibim	איבים	Ibim	31.53360	34.60970	88	Asia/Jerusalem
+1362	kedma	קדמה	Kedma	31.70139	34.77556	99	Asia/Jerusalem
+1363	ezer	עזר	Ezer	31.73670	34.67080	40	Asia/Jerusalem
+1364	adiNegevNahalatEran	עדי נגב נחלת ערן	ADI Negev - Nahalat Eran	31.31406	34.59476	127	Asia/Jerusalem
+1365	retamim	רתמים	Retamim	31.05361	34.69000	261	Asia/Jerusalem
+1366	sulam	סולם	Sulam	32.60606	35.33408	117	Asia/Jerusalem
+1367	eshhar	אשחר	Eshhar	32.88487	35.30135	372	Asia/Jerusalem
+1368	avshalom	אבשלום	Avshalom	31.19540	34.33163	89	Asia/Jerusalem
+1369	evenShmuel	אבן שמואל	Even Shmuel	31.57540	34.76290	160	Asia/Jerusalem
+1370	nirit	נירית	Nirit	32.14390	34.98300	116	Asia/Jerusalem
+1371	atzmon	עצמון-שגב	Atzmon	32.86643	35.25131	352	Asia/Jerusalem
+1372	ezuz	עזוז	Ezuz	30.79176	34.47252	339	Asia/Jerusalem
+1373	kamon	כמון	Kamon	32.91100	35.36070	555	Asia/Jerusalem
+1374	sapir	ספיר	Sapir	30.61390	35.18430	-12	Asia/Jerusalem
+1375	atlit	עתלית	Atlit	32.68722	34.93833	5	Asia/Jerusalem
+1376	talEl	טל-אל	Tal El	32.92700	35.17920	120	Asia/Jerusalem
+1377	kfarVradim	כפר ורדים	Kfar Vradim	32.99601	35.27521	599	Asia/Jerusalem
+1378	karkom	כרכום	Karkom	32.93050	35.60810	115	Asia/Jerusalem
+1379	ahva	אחווה	Ahva	31.74343	34.76916	62	Asia/Jerusalem
+1380	kannot	כנות	Kannot	31.80230	34.75240	74	Asia/Jerusalem
+1381	kfarSilver	כפר סילבר	Kfar Silver	31.67567	34.61231	63	Asia/Jerusalem
+1382	habonim	הבונים	HaBonim	32.63590	34.93260	27	Asia/Jerusalem
+1383	abirim	אבירים	Abirim	33.03957	35.28741	563	Asia/Jerusalem
+1384	einHod	עין הוד	Ein Hod	32.70146	34.98001	125	Asia/Jerusalem
+1385	koranit	קורנית	Koranit	32.84420	35.25220	464	Asia/Jerusalem
+1386	ashalim	אשלים	Ashalim	30.96250	34.70150	324	Asia/Jerusalem
+1387	kfarUria	כפר אוריה	Kfar Uria	31.79360	34.94840	205	Asia/Jerusalem
+1388	otzem	עוצם	Otzem	31.63584	34.70298	100	Asia/Jerusalem
+1389	eshelHanasi	אשל הנשיא	Eshel HaNasi	31.32683	34.69750	198	Asia/Jerusalem
+1390	nofit	נופית	Nofit	32.75970	35.14640	184	Asia/Jerusalem
+1391	lavon	לבון	Lavon	32.94150	35.28740	565	Asia/Jerusalem
+1392	manof	מנוף	Manof	32.85250	35.23940	392	Asia/Jerusalem
+1393	shorashim	שורשים	Shorashim	32.89234	35.25741	113	Asia/Jerusalem
+1394	tzukim	צוקים	Tzukim	30.49090	35.16670	44	Asia/Jerusalem
+1395	yokneamMoshava	יקנעם	Yokneam Moshava	32.65390	35.10030	167	Asia/Jerusalem
+1396	harashim	חרשים	Harashim	32.95640	35.32820	819	Asia/Jerusalem
+1397	shlomit	שלומית	Shlomit	31.16906	34.30536	87	Asia/Jerusalem
+1398	lehavim	להבים	Lehavim	31.36861	34.81472	308	Asia/Jerusalem
+1399	amuka	עמוקה	Amuka	32.99772	35.52384	697	Asia/Jerusalem
+1400	kfarAvoda	כפר עבודה	Kfar Avoda	32.25573	34.93967	67	Asia/Jerusalem
+1401	beitDagan	בית דגן	Beit Dagan	32.00269	34.82925	35	Asia/Jerusalem
+1402	kfarHess	כפר הס	Kfar Hess	32.24650	34.93480	80	Asia/Jerusalem
+1403	ramotHashavim	רמות השבים	Ramot HaShavim	32.16880	34.88740	67	Asia/Jerusalem
+1404	ayanot	עיינות	Ayanot	31.91580	34.76810	27	Asia/Jerusalem
+1405	roshPinna	ראש פינה	Rosh Pinna	32.96909	35.54246	397	Asia/Jerusalem
+1406	bneiDror	בני דרור	Bnei Dror	32.26180	34.90130	35	Asia/Jerusalem
+1407	motzaIllit	מוצא עילית	Motza Illit	31.79306	35.15786	647	Asia/Jerusalem
+1408	moledet	מולדת	Moledet	32.58583	35.44222	73	Asia/Jerusalem
+1409	kalanit	כלנית	Kalanit	32.87395	35.45509	20	Asia/Jerusalem
+1410	gornotHagalil	גורנות הגליל	Gornot HaGalil	33.06033	35.24888	392	Asia/Jerusalem
+1411	harAmasa	הר עמשא	Har Amasa	31.34330	35.10170	839	Asia/Jerusalem
+1412	tzoranKadima	קדימה-צורן	Tzoran-Kadima	32.27778	34.91528	46	Asia/Jerusalem
+1413	adi	עדי	Adi	32.78340	35.17400	158	Asia/Jerusalem
+1414	merkazShapira	מרכז שפירא	Merkaz Shapira	31.69680	34.70680	50	Asia/Jerusalem
+1415	neveZohar	נווה זוהר	Neve Zohar	31.15209	35.36516	-377	Asia/Jerusalem
+1416	aloneiShilo	אלוני שילה	Alonei Shilo	32.16300	35.12000	335	Asia/Jerusalem
+1417	birya	ביריה	Birya	32.97988	35.49890	814	Asia/Jerusalem
+1418	ramatYishai	רמת ישי	Ramat Yishai	32.70333	35.16500	93	Asia/Jerusalem
+1419	beerOra	באר אורה	Be'er Ora	29.71110	34.97910	136	Asia/Jerusalem
+1420	telTeomim	תל תאומים	Tel Te'omim	32.44250	35.49550	-132	Asia/Jerusalem
+1421	poriaIllit	פוריה עילית	Poria Illit	32.73640	35.54360	143	Asia/Jerusalem
+1422	kfarTzviSitrin	כפר צבי סיטרין	Kfar Tzvi Sitrin	32.71928	34.96924	39	Asia/Jerusalem
+1423	mitzpeIlan	מצפה אילן	Mitzpe Ilan	32.46110	35.06920	148	Asia/Jerusalem
+1424	kfarZoharim	כפר זוהרים	Kfar Zoharim	31.62263	34.92567	324	Asia/Jerusalem
+1425	menahemia	מנחמיה	Menahemia	32.66770	35.55400	-201	Asia/Jerusalem
+1426	yehudMonosson2	יהוד-מונוסון	Yehud-Monosson	32.02838	34.87962	37	Asia/Jerusalem
+1427	ruahMidbar	רוח מדבר	Ruah Midbar	30.98167	34.73333	325	Asia/Jerusalem
+1428	shalvaBamidbar	שלווה במדבר	Shalva BaMidbar	30.83328	34.73656	511	Asia/Jerusalem
+1429	kinneret	כנרת	Kinneret	32.72250	35.56430	-153	Asia/Jerusalem
+1430	shaveDarom	שבי דרום	Shave Darom	31.46593	34.63866	148	Asia/Jerusalem
+1431	maozTzor	מעוז צור	Ma'oz Tzor	31.89803	35.11982	613	Asia/Jerusalem
+1432	kedarDarom	קידר דרום	Kedar Darom	31.74604	35.30173	532	Asia/Jerusalem
+1433	hemdatYamim	חמדת ימים (נקודת יישוב)	Hemdat Yamim	32.94840	35.42449	763	Asia/Jerusalem
+1434	tzahar	צח\"ר	Tzahar	32.96990	35.52570	686	Asia/Jerusalem
+1435	mattat	מתת	Mattat	33.04041	35.35485	799	Asia/Jerusalem
+1436	tzurit	צורית	Tzurit	32.90196	35.25064	352	Asia/Jerusalem
+1437	kfarTavor	כפר תבור	Kfar Tavor	32.68714	35.42022	121	Asia/Jerusalem
+1438	metula	מטולה	Metula	33.27889	35.57667	505	Asia/Jerusalem
+1439	omer	עומר	Omer	31.26833	34.84889	327	Asia/Jerusalem
+1440	ramotSapirHaifa	רמת ספיר	Ramot Sapir (Haifa)	32.78735	35.00518	234	Asia/Jerusalem
+1441	rovaBneyDanTelAviv	רובע בני דן	Rova Bney Dan (Tel Aviv)	32.08556	34.78333	16	Asia/Jerusalem
+1442	telBaruchNorth	תל ברוך צפון	Tel Baruch North	32.12278	34.82111	45	Asia/Jerusalem
+1443	stellaMarisHaifa	סטלה מאריס	Stella Maris (Haifa)	32.82778	34.96972	141	Asia/Jerusalem
+1444	ramatHasharonTelAviv	רמת השרון (שכונה)	Ramat HaSharon (Tel Aviv)	32.06175	34.77575	27	Asia/Jerusalem
+1445	orHaHayimBneiBrak	אור החיים (בני ברק)	Or ha-Hayim (Bnei Brak)	32.08652	34.84379	51	Asia/Jerusalem
+1446	mahanehYehudahPetahTikva	מחנה יהודה (פתח תקווה)	Maḥaneh Yehudah (Petah Tikva)	32.08156	34.89594	40	Asia/Jerusalem
+1447	telNordauTelAviv	תל נורדאו	Tel Nordau (Tel Aviv)	32.07953	34.77172	18	Asia/Jerusalem
+1448	givatOranimHaifa	גבעת אורנים (חיפה)	Giv'at Oranim (Haifa)	32.78597	34.99610	216	Asia/Jerusalem
+1449	kfarAharonNessZiona	כפר אהרון	Kfar Aharon (Ness Ziona)	31.91767	34.79517	39	Asia/Jerusalem
+1450	meahShearimTelAviv	מאה שערים (תל אביב)	Me'ah She'arim (Tel Aviv)	32.06999	34.76478	7	Asia/Jerusalem
+1451	kiryatMatalonPetahTikva	קריית מטלון	Kiryat Matalon (Petah Tikva)	32.08969	34.85539	36	Asia/Jerusalem
+1452	mahlulNeighborhoodTelAviv	שכונת מחלול	Mahlul neighborhood (Tel Aviv)	32.08556	34.76944	10	Asia/Jerusalem
+1453	tahanatHacarmelHaifa	תחנת הכרמל	Tahanat HaCarmel (Haifa)	32.82806	34.98750	8	Asia/Jerusalem
+1454	ramatHanasiHaifa	רמת הנשיא	Ramat Hanasi (Haifa)	32.81268	34.96209	39	Asia/Jerusalem
+1455	givatOlgaHadera	גבעת אולגה	Givat Olga (Hadera)	32.44083	34.88361	16	Asia/Jerusalem
+1456	givatRokachBneiBrak	גבעת רוקח	Givat Rokach (Bnei Brak)	32.09000	34.82870	51	Asia/Jerusalem
+1457	neveTzahalTelAviv	נווה צה\"ל	Neve Tzahal (Tel Aviv)	32.05164	34.79801	24	Asia/Jerusalem
+1458	shaarayimRehovotRehovot	שעריים (רחובות)	Shaʻarayim (Reḥovot) (Rehovot)	31.88833	34.81333	52	Asia/Jerusalem
+1459	ramatGoldaHaifa	דניה (חיפה)	Ramat Golda (Haifa)	32.77302	35.00287	372	Asia/Jerusalem
+1460	nofeiYamTelAviv	הגוש הגדול	Nofei Yam (Tel Aviv)	32.11583	34.78778	21	Asia/Jerusalem
+1461	newNorth	הצפון החדש	New North, Tel Aviv	32.08822	34.78997	20	Asia/Jerusalem
+1462	halisaHaifa	חליסה	Halisa (Haifa)	32.80151	35.00676	57	Asia/Jerusalem
+1463	mishkenotShaananimJerusalem	משכנות שאננים	Mishkenot Sha'ananim (Jerusalem)	31.77140	35.22435	766	Asia/Jerusalem
+1464	ramatAvivTelAviv	רמת אביב	Ramat Aviv (Tel Aviv)	32.11417	34.79694	19	Asia/Jerusalem
+1465	givatRamJerusalem	גבעת רם	Givat Ram (Jerusalem)	31.78000	35.20000	789	Asia/Jerusalem
+1466	kiryatChaimHaifa	קריית חיים	Kiryat Chaim (Haifa)	32.82833	35.06722	8	Asia/Jerusalem
+1467	neveDanTelAviv	נוה דן	Neve Dan (Tel Aviv)	32.11182	34.82909	41	Asia/Jerusalem
+1468	hadarYosefTelAviv	הדר יוסף	Hadar Yosef (Tel Aviv)	32.11028	34.82044	24	Asia/Jerusalem
+1469	herzliyaPituah	הרצליה פיתוח	Herzliya Pituah	32.17420	34.80280	20	Asia/Jerusalem
+1470	neveAmalHerzliya	נווה עמל	Neve Amal (Herzliya)	32.16806	34.85417	77	Asia/Jerusalem
+1471	tsukeiAvivTelAviv	צוקי אביב	Tsukei Aviv (Tel Aviv)	32.13233	34.78817	12	Asia/Jerusalem
+1472	yadHatishaHerzliya	יד התשעה	Yad HaTisha (Herzliya)	32.17472	34.85361	59	Asia/Jerusalem
+1473	shikunAliyahKfarSaba	שיכון עליה	Shikun Aliyah (Kfar Saba)	32.19031	34.90058	48	Asia/Jerusalem
+1474	jaffaDTelAviv	יפו ד'	Jaffa D (Tel Aviv)	32.03456	34.75537	21	Asia/Jerusalem
+1475	remezNeighborhoodRishonLezion	שכונת רמז	Remez neighborhood (Rishon LeZion)	31.96126	34.79580	66	Asia/Jerusalem
+1476	telGanimRamatGan	תל גנים	Tel Ganim (Ramat Gan)	32.06637	34.81841	51	Asia/Jerusalem
+1477	jaffaATelAviv	יפו א' (דקר)	Jaffa A (Tel Aviv)	32.04217	34.75888	15	Asia/Jerusalem
+1478	rovaHeAshdod	רובע ה'	Rova He (Ashdod)	31.79716	34.64855	28	Asia/Jerusalem
+1479	rovaVavAshdod	רובע ו'	Rova Vav (Ashdod)	31.79460	34.65440	21	Asia/Jerusalem
+1480	rovaTethAshdod	רובע ט'	Rova Teth (Ashdod)	31.78330	34.66093	24	Asia/Jerusalem
+1481	rovaYodAshdod	רובע י'	Rova Yod (Ashdod)	31.78190	34.65326	27	Asia/Jerusalem
+1482	rovaYodBeitAshdod	רובע י\"ב	Rova Yod Beit (Ashdod)	31.77930	34.63754	24	Asia/Jerusalem
+1483	rovaYodGimmelAshdod	רובע י\"ג	Rova Yod Gimmel (Ashdod)	31.77522	34.64298	21	Asia/Jerusalem
+1484	rovaYodDaletAshdod	רובע י\"ד	Rova Yod Dalet (Ashdod)	31.77386	34.64956	31	Asia/Jerusalem
+1485	rovaTeitZeinAshdod	רובע ט\"ז	Rova Teit Zein (Ashdod)	31.77029	34.63663	21	Asia/Jerusalem
+1486	rovaYudZeinAshdod	רובע י\"ז	Rova Yud Zein (Ashdod)	31.76831	34.62406	23	Asia/Jerusalem
+1487	rovaHamarinaAshdod	רובע המרינה (אשדוד)	Rova HaMarina (Ashdod)	31.79334	34.63212	5	Asia/Jerusalem
+1488	rovaParkLakhishAshdod	רובע פארק לכיש	Rova Park Lakhish (Ashdod)	31.81478	34.65270	15	Asia/Jerusalem
+1489	motzaJerusalem	מוצא	Motza (Jerusalem)	31.79392	35.16846	581	Asia/Jerusalem
+1490	greekColonyJerusalem	המושבה היוונית	Greek Colony (Jerusalem)	31.76129	35.21354	734	Asia/Jerusalem
+1491	nahalatShivaJerusalem	נחלת שבעה	Nahalat Shiv'a (Jerusalem)	31.78037	35.21927	792	Asia/Jerusalem
+1492	yisgavTelAviv	ישגב	Yisgav (Tel Aviv)	32.11120	34.83410	31	Asia/Jerusalem
+1493	azoreiHenTelAviv	אזורי חן	Azorei Hen (Tel Aviv)	32.12920	34.79409	6	Asia/Jerusalem
+1494	givatMassuahJerusalem	גבעת משואה	Givat Massuah (Jerusalem)	31.74991	35.16766	774	Asia/Jerusalem
+1495	hatikvaQuarterTelAviv	שכונת התקווה	Hatikva Quarter (Tel Aviv)	32.05000	34.78333	21	Asia/Jerusalem
+1496	nahalatYitzhakTelAviv	נחלת יצחק	Nahalat Yitzhak (Tel Aviv)	32.07556	34.79861	23	Asia/Jerusalem
+1497	levTelAviv	לב תל אביב	Lev Tel Aviv	32.06858	34.77765	32	Asia/Jerusalem
+1498	kfarShalemTelAviv	כפר שלם	Kfar Shalem (Tel Aviv)	32.05177	34.80593	42	Asia/Jerusalem
+1499	neotAfekaTelAviv	נאות אפקה	Ne'ot Afeka (Tel Aviv)	32.11706	34.82138	31	Asia/Jerusalem
+1500	vardiaHaifa	ורדיה	Vardia (Haifa)	32.79380	34.99710	245	Asia/Jerusalem
+1501	ganeiTzahalaTelAviv	גני צהלה	Ganei Tzahala (Tel Aviv)	32.12438	34.82874	46	Asia/Jerusalem
+1502	ramotTzahalaTelAviv	רמות צהלה	Ramot Tzahala (Tel Aviv)	32.12086	34.83241	55	Asia/Jerusalem
+1503	arzeiHabiraJerusalem	ארזי הבירה	Arzei HaBira (Jerusalem)	31.79308	35.22373	766	Asia/Jerusalem
+1504	americangermanColonyTelAviv	המושבה האמריקאית-גרמנית ביפו	American–German Colony (Tel Aviv)	32.05664	34.76280	16	Asia/Jerusalem
+1505	givatHerzlTelAviv	גבעת הרצל	Giv'at Herzl (Tel Aviv)	32.05000	34.76667	12	Asia/Jerusalem
+1506	neveYisraelHerzliya	נווה ישראל	Neve Yisrael (Herzliya)	32.15972	34.83944	51	Asia/Jerusalem
+1507	jessiCohenHolon	ג'סי כהן	Jessi Cohen (Holon)	32.00357	34.76452	27	Asia/Jerusalem
+1508	harYonaNofHagalil	הר יונה	Har Yona (Nof HaGalil)	32.72498	35.33730	523	Asia/Jerusalem
+1509	kfarSavaHayerukaKfarSaba	כפר סבא הירוקה	Kfar Sava HaYeruka (Kfar Saba)	32.18694	34.89625	58	Asia/Jerusalem
+1510	kiryatSharetHolon	קריית שרת	Kiryat Sharet (Holon)	32.00797	34.79164	49	Asia/Jerusalem
+1511	ganeyAyalonLod	גני איילון	Ganey Ayalon (Lod)	31.93761	34.89710	58	Asia/Jerusalem
+1512	beitOrotJerusalem	בית אורות	Beit Orot (Jerusalem)	31.78556	35.24639	777	Asia/Jerusalem
+1513	ramatTiomkinNetanya	רמת טיומקין	Ramat Tiomkin (Netanya)	32.32192	34.86219	26	Asia/Jerusalem
+1514	shikunKaplanKfarSaba	שיכון קפלן	Shikun Kaplan (Kfar Saba)	32.18583	34.93806	53	Asia/Jerusalem
+1515	kiryatBenGurionHolon	קריית בן-גוריון (חולון)	Kiryat Ben Gurion (Holon)	31.99838	34.77079	35	Asia/Jerusalem
+1516	mishkenotZevulun	משכנות זבולון, נתניה	Mishkenot Zevulun, Netanya	32.30935	34.87884	27	Asia/Jerusalem
+1517	kiryatHasharonNetanya	קריית השרון	Kiryat Hasharon (Netanya)	32.30442	34.87323	20	Asia/Jerusalem
+1518	kiryatHaroshetKiryatTivon	קריית חרושת	Kiryat Haroshet (Kiryat Tiv'on)	32.69250	35.10950	62	Asia/Jerusalem
+1519	rimonNeighborhoodKiryatOno	שכונת רימון	Rimon neighborhood (Kiryat Ono)	32.04800	34.86700	52	Asia/Jerusalem
+1520	nofYamHerzliya	נוף ים	Nof Yam (Herzliya)	32.18610	34.80980	19	Asia/Jerusalem
+1521	tzahalaTelAviv	צהלה	Tzahala (Tel Aviv)	32.12260	34.83690	47	Asia/Jerusalem
+1522	neveAvivimTelAviv	נווה אביבים	Neve Avivim (Tel Aviv)	32.11771	34.79797	23	Asia/Jerusalem
+1523	afekaTelAviv	אפקה	Afeka (Tel Aviv)	32.12259	34.80656	30	Asia/Jerusalem
+1524	tokhnitLamedTelAviv	שכונת למד	Tokhnit Lamed (Tel Aviv)	32.10797	34.79014	14	Asia/Jerusalem
+1525	telBaruchTelAviv	תל ברוך	Tel Baruch (Tel Aviv)	32.11670	34.81670	29	Asia/Jerusalem
+1526	tzahalon	צהלון	Tzahalon	32.04470	34.75530	15	Asia/Jerusalem
+1527	kiryatShalom	קריית שלום	Kiryat Shalom	32.04439	34.77675	27	Asia/Jerusalem
+1528	frenchCarmelHakarmel	כרמל צרפתי	French Carmel (HaKarmel)	32.81891	34.97358	171	Asia/Jerusalem
+1529	montefioreTelAviv	שכונת מונטיפיורי	Montefiore (Tel Aviv)	32.06694	34.78917	16	Asia/Jerusalem
+1530	ramatEfalRamatGan	רמת אפעל	Ramat Ef'al (Ramat Gan)	32.04389	34.83472	38	Asia/Jerusalem
+1531	telHashomerRamatGan	תל השומר	Tel HaShomer (Ramat Gan)	32.04195	34.85623	46	Asia/Jerusalem
+1532	zikhronYosefJerusalem	זכרון יוסף	Zikhron Yosef (Jerusalem)	31.78370	35.21000	794	Asia/Jerusalem
+1533	zivHaifa	שכונת זיו	Ziv (Haifa)	32.78046	35.01700	204	Asia/Jerusalem
+1534	alroyNeighborhood	אלרואי	Alroy (neighborhood)	32.71067	35.10472	35	Asia/Jerusalem
+1535	yafoDaromTelAviv	יפו ג'	Yafo Darom (Tel Aviv)	32.03300	34.74920	11	Asia/Jerusalem
+1536	shapiraTelAviv	שכונת שפירא	Shapira (Tel Aviv)	32.05084	34.77662	20	Asia/Jerusalem
+1537	neveOferTelAviv	נווה עופר	Neve Ofer (Tel Aviv)	32.04079	34.76512	22	Asia/Jerusalem
+1538	ramatAvivGimelTelAviv	רמת אביב ג'	Ramat Aviv Gimel (Tel Aviv)	32.12694	34.79972	37	Asia/Jerusalem
+1539	oldNorthTelAviv	הצפון הישן	Old North (Tel Aviv)	32.08723	34.77615	15	Asia/Jerusalem
+1540	herzliyaHayeruka	הרצליה הירוקה	Herzliya HaYeruka	32.17440	34.84560	48	Asia/Jerusalem
+1541	carmeliyaCarmeliyaVardiya	כרמליה	Carmeliya (Carmeliya-Vardiya)	32.79742	34.97520	255	Asia/Jerusalem
+1542	kfarSamirHaifa	כפר סמיר	Kfar Samir (Haifa)	32.79971	34.95956	9	Asia/Jerusalem
+1543	neveYosefHaifa	נווה יוסף	Neve Yosef (Haifa)	32.79227	35.02076	114	Asia/Jerusalem
+1544	nevePazHaifa	נווה פז	Neve Paz (Haifa)	32.79724	35.01761	24	Asia/Jerusalem
+1545	neveGranotJerusalem	נוה גרנות	Neve Granot (Jerusalem)	31.76968	35.20436	769	Asia/Jerusalem
+1546	tsurShalomKiryatBialik	צור שלום חיפה	Tsur Shalom (Kiryat Bialik)	32.86083	35.09778	10	Asia/Jerusalem
+1547	givatHaraqafotKiryatBialik	גבעת הרקפות	Giv'at HaRaqafot (Kiryat Bialik)	32.83456	35.10308	23	Asia/Jerusalem
+1548	kiryatAvodaHolon	קריית עבודה	Kiryat Avoda (Holon)	32.01961	34.76909	22	Asia/Jerusalem
+1549	neveEliezerTelAviv	נווה אליעזר	Neve Eliezer (Tel Aviv)	32.04833	34.80833	26	Asia/Jerusalem
+1550	ramatVerberPetahTikva	רמת ורבר	Ramat Verber (Petah Tikva)	32.08717	34.87751	41	Asia/Jerusalem
+1551	neveGanPetahTikva	נווה גן	Neve Gan (Petah Tikva)	32.09207	34.87314	32	Asia/Jerusalem
+1552	ramatYadinNetanya	רמת ידין	Ramat Yadin (Netanya)	32.29739	34.85702	37	Asia/Jerusalem
+1553	einHayamHaifaDistrict	עין הים (חיפה)	Ein HaYam (Haifa District)	32.82639	34.96250	19	Asia/Jerusalem
+1554	shlafimValleyOfSpringsRegionalCouncil	שלפים	Shlafim (Valley of Springs Regional Council)	32.47610	35.47673	-117	Asia/Jerusalem
+1555	ramatTivonKiryatTivon	שכונת רמת טבעון	Ramat Tivon (Kiryat Tiv'on)	32.73553	35.14546	206	Asia/Jerusalem
+1556	meozAvivTelAviv	מעוז אביב	Me'oz Aviv (Tel Aviv)	32.11211	34.81608	22	Asia/Jerusalem
+1557	haargazimTelAviv	שכונת הארגזים	HaArgazim (Tel Aviv)	32.04590	34.79705	20	Asia/Jerusalem
+1558	ramatYisraelTelAviv	רמת ישראל	Ramat Yisrael (Tel Aviv)	32.06802	34.80110	29	Asia/Jerusalem
+1559	kfarBrandeisHadera	ברנדייס	Kfar Brandeis (Hadera)	32.42388	34.92215	42	Asia/Jerusalem
+1560	harShalomBneiBrak	הר שלום (בני ברק)	Har Shalom (Bnei Brak)	32.08481	34.82813	58	Asia/Jerusalem
+1561	neveRabinOrYehuda	נווה רבין	Neve Rabin (Or Yehuda)	32.02686	34.87006	36	Asia/Jerusalem
+1562	afridarAshkelon	שכונת אפרידר	Afridar (Ashkelon)	31.67666	34.56684	34	Asia/Jerusalem
+1563	neveNoyBeersheba	נווה נוי	Neve Noy (Beersheba)	31.23144	34.78456	253	Asia/Jerusalem
+1564	ramatPinkasOrYehuda	רמת פנקס	Ramat Pinkas (Or Yehuda)	32.03350	34.84190	35	Asia/Jerusalem
+1565	givatWolfson	גבעת וולפסון	Givat Wolfson	32.72050	35.01555	362	Asia/Jerusalem
+1566	maaleDavidJerusalem	מעלה דוד	Ma'ale David (Jerusalem)	31.77289	35.24176	721	Asia/Jerusalem
+1567	ramatayimHodHasharon	רמתיים	Ramatayim (Hod HaSharon)	32.15811	34.88587	56	Asia/Jerusalem
+1568	nordiaNeighborhood	נורדיה (שכונה)	Nordia (neighborhood)	32.07444	34.77500	20	Asia/Jerusalem
+1569	kiryatShprintzakHaifa	קריית שפרינצק	Kiryat Shprintzak (Haifa)	32.82125	34.96198	62	Asia/Jerusalem
+1570	etzChaimJerusalem	עץ חיים	Etz Chaim (Jerusalem)	31.78827	35.20075	804	Asia/Jerusalem
+1571	karmelMaaraviHaifa	כרמל מערבי	Karmel Ma'aravi (Haifa)	32.81029	34.97452	189	Asia/Jerusalem
+1572	kiryatAmalKiryatTivon	קריית עמל	Kiryat Amal (Kiryat Tivon)	32.70753	35.13075	152	Asia/Jerusalem
+1573	ramatBeginHaifa	רמת בגין	Ramat Begin (Haifa)	32.77371	34.98990	266	Asia/Jerusalem
+1574	ramatVizhnitzHaifa	רמת ויז'ניץ	Ramat Vizhnitz (Haifa)	32.79883	35.00374	112	Asia/Jerusalem
+1575	givatNesher	גבעת נשר	Givat Nesher	32.76075	35.04544	128	Asia/Jerusalem
+1576	kfarHadarHodHasharon	כפר הדר	Kfar Hadar (Hod HaSharon)	32.15244	34.88784	42	Asia/Jerusalem
+1577	kiryatBorochovRamatGan	שכונת בורוכוב	Kiryat Borochov (Ramat Gan)	32.07886	34.80728	35	Asia/Jerusalem
+1578	ramotBeersheba	רמות	Ramot (Beersheba)	31.27300	34.81117	329	Asia/Jerusalem
+1579	nahalAshanBeersheba	נחל עשן	Nahal Ashan (Beersheba)	31.26701	34.76208	242	Asia/Jerusalem
+1580	neotPeresHaifa	נאות פרס	Neot Peres (Haifa)	32.78318	34.96813	26	Asia/Jerusalem
+1581	maromNaveRamatGan	מרום נווה	Marom Nave (Ramat Gan)	32.07175	34.83067	56	Asia/Jerusalem
+1582	qiryatKrinitziRamatGan	קרית קריניצי	Qiryat Krinitzi (Ramat Gan)	32.05600	34.84967	63	Asia/Jerusalem
+1583	kironKiryatOno	קיראון	Kiron (Kiryat Ono)	32.05317	34.86308	67	Asia/Jerusalem
+1584	telGiborimHolon	תל גיבורים	Tel Giborim (Holon)	32.03092	34.76458	39	Asia/Jerusalem
+1585	havatzeletRehovot	שכונת חבצלת	Havatzelet (Rehovot)	31.87461	34.81392	71	Asia/Jerusalem
+1586	harHamenuchot	הר המנוחות	Har HaMenuchot	31.79813	35.17773	734	Asia/Jerusalem
+1587	kiryatMattersdorf	קריית מטרסדורף	Kiryat Mattersdorf	31.79582	35.20187	778	Asia/Jerusalem
+1588	woodmere	וודמר	Woodmere	40.63611	-73.71944	6	America/New_York
+1589	hewlett	יולט	Hewlett	40.64190	-73.69420	12	America/New_York
+1590	inwood	אינווד	Inwood	40.86744	-73.92151	19	America/New_York
+1591	longBeach	לונג ביץ'	Long Beach	40.58605	-73.66775	6	America/New_York
+1592	valleyStream	ואלי סטרים	Valley Stream	40.66470	-73.70330	11	America/New_York
+1593	hillcrest	הילקרסט	Hillcrest	40.72110	-73.79730	26	America/New_York
+1594	springValley	ספרינג ואלי	Spring Valley	41.11440	-74.04780	145	America/New_York
+1595	wesleyHills	ווסלי הילס	Wesley Hills	41.15580	-74.07530	169	America/New_York
+1596	suffern	סאפרן	Suffern	41.11190	-74.14580	97	America/New_York
+1597	chestnutRidge	צ'סטנט רידג'	Chestnut Ridge	41.08194	-74.05139	135	America/New_York
+1598	southFallsburg	סאות' פלסבורג	South Fallsburg	41.72065	-74.63433	403	America/New_York
+1599	woodridge	וודריג'	Woodridge	41.70940	-74.57140	349	America/New_York
+1600	ellenville	אלנוויל	Ellenville	41.71694	-74.39333	104	America/New_York
+1601	newRochelle	ניו רושל	New Rochelle	40.90861	-73.78194	34	America/New_York
+1602	albany	אולבני	Albany	42.65000	-73.76667	62	America/New_York
+1603	rochester	רוצ'סטר	Rochester	43.16556	-77.61139	154	America/New_York
+1604	buffalo	באפלו	Buffalo	42.88639	-78.87806	183	America/New_York
+1605	syracuse	סירקיוז	Syracuse	43.04690	-76.14442	126	America/New_York
+1606	jackson	ג'קסון	Jackson	40.09310	-74.35620	46	America/New_York
+1607	highlandPark	היילנד פארק	Highland Park	40.50080	-74.42790	28	America/New_York
+1608	edison	אדיסון	Edison	40.52740	-74.39330	36	America/New_York
+1609	clifton	קליפטון	Clifton	40.86210	-74.16040	48	America/New_York
+1610	fairLawn	פייר לואן	Fair Lawn	40.93580	-74.11750	30	America/New_York
+1611	bergenfield	ברגנפילד	Bergenfield	40.92361	-73.99889	21	America/New_York
+1612	livingston	ליווינגסטון	Livingston	40.78333	-74.32639	99	America/New_York
+1613	westOrange	וסט אורנג'	West Orange	40.79861	-74.23917	146	America/New_York
+1614	deal	דיל	Deal	40.24306	-74.00056	11	America/New_York
+1615	longBranch	לונג ברנץ'	Long Branch	40.29540	-73.98990	12	America/New_York
+1616	linden	לינדן (ניו ג'רזי)	Linden	40.62520	-74.23780	4	America/New_York
+1617	newark	ניוארק	Newark	40.73556	-74.17222	14	America/New_York
+1618	stamford	סטמפורד	Stamford	41.09667	-73.55222	43	America/New_York
+1619	newHaven	ניו הייבן	New Haven	41.30833	-72.92500	15	America/New_York
+1620	westHartford	מערב הרטפורד	West Hartford	41.76778	-72.75389	45	America/New_York
+1621	providence	פרובידנס	Providence	41.82399	-71.41283	10	America/New_York
+1622	sunnyIslesBeach	סאני איילס ביץ'	Sunny Isles Beach	25.94167	-80.12500	5	America/New_York
+1623	fortLauderdale	פורט לודרדייל	Fort Lauderdale	26.13583	-80.14194	2	America/New_York
+1624	orlando	אורלנדו	Orlando	28.53361	-81.38667	35	America/New_York
+1625	tampa	טמפה	Tampa	27.94750	-82.45861	10	America/New_York
+1626	memphis	ממפיס	Memphis	35.14611	-90.05194	86	America/Chicago
+1627	nashville	נאשוויל	Nashville	36.16222	-86.77444	137	America/Chicago
+1628	columbus	קולומבוס	Columbus	39.96222	-83.00056	231	America/New_York
+1629	milwaukee	מילווקי	Milwaukee	43.05000	-87.95000	208	America/Chicago
+1630	kansasCity	קנזס סיטי	Kansas City	39.05000	-94.58333	289	America/Chicago
+1631	omaha	אומהה	Omaha	41.25861	-95.93750	320	America/Chicago
+1632	indianapolis	אינדיאנפוליס	Indianapolis	39.76861	-86.15806	214	America/Indiana/Indianapolis
+1633	louisville	לואיוויל	Louisville	38.25611	-85.75139	137	America/Kentucky/Louisville
+1634	richmond2	ריצ'מונד	Richmond	37.54083	-77.43667	65	America/New_York
+1635	norfolk	נורפוק	Norfolk	36.84694	-76.28528	7	America/New_York
+1636	savannah	סוואנה	Savannah	32.05083	-81.10389	12	America/New_York
+1637	charlotte	שארלוט	Charlotte	35.22694	-80.84333	254	America/New_York
+1638	newOrleans	ניו אורלינס	New Orleans	29.97611	-90.07833	3	America/Chicago
+1639	sacramento	סקרמנטו	Sacramento	38.58111	-121.49389	16	America/Los_Angeles
+1640	oakland	אוקלנד	Oakland	37.80000	-122.25000	12	America/Los_Angeles
+1641	paloAlto	פאלו אלטו	Palo Alto	37.44444	-122.16000	21	America/Los_Angeles
+1642	portland	פורטלנד	Portland	45.51500	-122.67917	25	America/Los_Angeles
+1643	saltLakeCity	סולט לייק סיטי	Salt Lake City	40.75000	-111.88333	1298	America/Denver
+1644	tucson	טוסון	Tucson	32.22167	-110.92639	758	America/Phoenix
+1645	albuquerque	אלבקרקי	Albuquerque	35.08444	-106.65028	1515	America/Denver
+1646	highlandPark2	היילנד פארק	Highland Park	42.18250	-87.80694	203	America/Chicago
+1647	bethesda	בת'סדה	Bethesda	38.98483	-77.09465	110	America/New_York
+1648	vaughan	ווהן	Vaughan	43.83333	-79.50000	218	America/Toronto
+1649	hamilton	המילטון	Hamilton	43.25667	-79.86917	100	America/Toronto
+1650	halifax	הליפקס	Halifax	44.64778	-63.57139	5	America/Halifax
+1651	victoria	ויקטוריה	Victoria	28.81694	-96.99333	33	America/Vancouver
+1652	saintBriceSousForet	סן-בריס-סו-פורה	Saint-Brice-sous-Forêt	48.99861	2.35694	92	Europe/Paris
+1653	lesLilas	לה לילה	Les Lilas	48.88000	2.41694	125	Europe/Paris
+1654	joinvilleLePont	ז'ואנויל-לה-פו	Joinville-le-Pont	48.82139	2.47278	39	Europe/Paris
+1655	clichy	קלישי	Clichy	48.90361	2.30556	36	Europe/Paris
+1656	courbevoie	קורבוואה	Courbevoie	48.89722	2.25222	52	Europe/Paris
+1657	montrouge	מונרוז'	Montrouge	48.81639	2.32111	83	Europe/Paris
+1658	massy	מאסי	Massy	48.73056	2.27639	89	Europe/Paris
+1659	epinaySurSeine	אפינה-סור-סן	Épinay-sur-Seine	48.95472	2.30833	42	Europe/Paris
+1660	aubervilliers	אוברווילייה	Aubervilliers	48.91111	2.38250	43	Europe/Paris
+1661	cannes	קאן	Cannes	43.55250	7.02139	13	Europe/Paris
+1662	nancy	נאנסי	Nancy	48.69278	6.18361	205	Europe/Paris
+1663	metz	מץ	Metz	49.11972	6.17694	190	Europe/Paris
+1664	mulhouse	מילוז	Mulhouse	47.74861	7.33917	245	Europe/Paris
+1665	toulon	טולון	Toulon	43.12500	5.93056	11	Europe/Paris
+1666	avignon	אביניון	Avignon	43.94861	4.80833	31	Europe/Paris
+1667	dresden	דרזדן	Dresden	51.04933	13.73814	114	Europe/Berlin
+1668	rotterdam	רוטרדם	Rotterdam	51.92000	4.48000	8	Europe/Amsterdam
+1669	theHague	האג	The Hague	52.08000	4.31000	12	Europe/Amsterdam
+1670	liege	לייז'	Liège	50.63972	5.57056	65	Europe/Brussels
+1671	knokkeHeist	קנוקה-הייסט	Knokke-Heist	51.34139	3.28694	6	Europe/Brussels
+1672	baden	באדן	Baden	47.47291	8.30799	394	Europe/Zurich
+1673	davos	דאבוס	Davos	46.80906	9.83983	1574	Europe/Zurich
+1674	salzburg	זלצבורג	Salzburg	47.80000	13.04500	414	Europe/Vienna
+1675	melilla	מלייה	Melilla	35.28250	-2.94750	27	Africa/Ceuta
+1676	lisbon	ליסבון	Lisbon	38.70804	-9.13902	16	Europe/Lisbon
+1677	porto	פורטו	Porto	41.15000	-8.61083	89	Europe/Lisbon
+1678	thessaloniki	סלוניקי	Thessaloniki	40.64028	22.93556	7	Europe/Athens
+1679	djerba	ג'רבה	Djerba	33.78370	10.88330	28	Africa/Tunis
+1680	tehran	טהראן	Tehran	35.68889	51.38972	1169	Asia/Tehran
+1681	isfahan	אספהאן	Isfahan	32.65250	51.67472	1579	Asia/Tehran
+1682	shiraz	שיראז	Shiraz	29.61028	52.53111	1541	Asia/Tehran
+1683	samarkand	סמרקנד	Samarkand	39.65472	66.97583	715	Asia/Samarkand
+1684	yekaterinburg	יקטרינבורג	Yekaterinburg	56.83556	60.61278	251	Asia/Yekaterinburg
+1685	novosibirsk	נובוסיבירסק	Novosibirsk	55.03333	82.91667	156	Asia/Novosibirsk
+1686	rostovOnDon	רוסטוב על הדון	Rostov-on-Don	47.22250	39.71000	39	Europe/Moscow
+1687	kazan	קאזאן	Kazan	55.79083	49.11444	63	Europe/Moscow
+1688	berdychiv	ברדיצ'ב	Berdychiv	49.89194	28.60000	249	Europe/Kyiv
+1689	medzhybizh	מז'יבוז'	Medzhybizh	49.43600	27.39500	305	Europe/Kyiv
+1690	bratslav	ברסלב (עיר)	Bratslav	48.81472	28.94472	215	Europe/Kyiv
+1691	zaporizhzhia	זפוריז'יה	Zaporizhzhia	47.85000	35.11750	57	Europe/Kyiv
+1692	mykolaiv	מיקולאייב	Mykolaiv	46.97500	31.99500	20	Europe/Kyiv
+1693	chisinau	קישינב	Chișinău	47.02278	28.83528	90	Europe/Chisinau
+1694	debrecen	דברצן	Debrecen	47.53000	21.63917	126	Europe/Budapest
+1695	satuMare	סאטו מארה	Satu Mare	47.79000	22.89000	127	Europe/Bucharest
+1696	sighetuMarmatiei	סיגט	Sighetu Marmației	47.93094	23.89469	273	Europe/Bucharest
+1697	mumbai	מומבאי	Mumbai	19.07583	72.87750	6	Asia/Kolkata
+1698	bangkok	בנגקוק	Bangkok	13.75000	100.51667	12	Asia/Bangkok
+1699	shanghai	שאנגחאי	Shanghai	31.23250	121.46917	5	Asia/Shanghai
+1700	beijing	בייג'ינג	Beijing	39.90403	116.40753	50	Asia/Shanghai
+1701	tokyo	טוקיו	Tokyo	35.68944	139.69167	36	Asia/Tokyo
+1702	adelaide	אדלייד	Adelaide	-34.92750	138.60000	55	Australia/Adelaide
+1703	pretoria	פרטוריה	Pretoria	-25.74639	28.18806	1325	Africa/Johannesburg
+1704	gqeberha	פורט אליזבת	Gqeberha	-33.95806	25.60000	91	Africa/Johannesburg
+1705	nairobi	ניירובי	Nairobi	-1.28639	36.81722	1671	Africa/Nairobi
+1706	portoAlegre	פורטו אלגרה	Porto Alegre	-30.03278	-51.23000	38	America/Sao_Paulo
+1707	rosario	רוסאריו	Rosario	-32.95750	-60.63944	31	America/Argentina/Cordoba
+1708	cordoba	קורדובה	Córdoba	-31.41667	-64.18333	399	America/Argentina/Cordoba
+1709	caracas	קראקס	Caracas	10.50611	-66.91444	929	America/Caracas
+1710	bogota	בוגוטה	Bogotá	4.60971	-74.08175	2582	America/Bogota
+1711	lima	לימה	Lima	-12.06000	-77.03750	143	America/Lima
+1712	quito	קיטו	Quito	-0.22000	-78.51250	2831	America/Guayaquil
+1713	asuncion	אסונסיון	Asunción	-25.28000	-57.63444	77	America/Asuncion
+1714	havana	הוואנה	Havana	23.13667	-82.35889	15	America/Havana
+1715	oslo	אוסלו	Oslo	59.91333	10.73889	23	Europe/Oslo
+1716	zagreb	זאגרב	Zagreb	45.81306	15.97722	131	Europe/Zagreb
+1717	sarajevo	סרייבו	Sarajevo	43.85639	18.41306	543	Europe/Sarajevo
+1718	ljubljana	ליובליאנה	Ljubljana	46.05139	14.50611	299	Europe/Ljubljana
+1719	yerevan	ירוואן	Yerevan	40.18139	44.51444	999	Asia/Yerevan
+1720	almaty	אלמטי	Almaty	43.24000	76.91500	819	Asia/Almaty
+1721	wellington	ולינגטון	Wellington	-41.28889	174.77722	12	Pacific/Auckland
+1722	ramatEshkol	רמת אשכול	Ramat Eshkol (Jerusalem)	31.80260	35.22346	740	Asia/Jerusalem
+1723	arnona	ארנונה	Arnona (Jerusalem)	31.75000	35.22000	776	Asia/Jerusalem
+1724	oceanside	אושיינסייד	Oceanside, New York	40.63640	-73.63750	4	America/New_York
+1725	westHempstead	ווסט המפסטד	West Hempstead, New York	40.69640	-73.65250	23	America/New_York
+1726	kaser	כתר (ניו יורק)	Kaser, New York	41.11667	-74.06667	156	America/New_York
+1727	newHempstead	ניו המפסטד	New Hempstead, New York	41.14580	-74.04670	158	America/New_York
+1728	monticello	מונטיסלו	Monticello, New York	41.65360	-74.69060	465	America/New_York
+1729	liberty	ליברטי	Liberty, New York	41.79780	-74.74280	453	America/New_York
+1730	scarsdale	סקרסדייל	Scarsdale, New York	40.99222	-73.78694	87	America/New_York
+1731	yonkers	יונקרס	Yonkers, New York	40.94139	-73.86444	52	America/New_York
+1732	whitePlains	וייט פליינס	White Plains, New York	41.03250	-73.76667	67	America/New_York
+1733	howellTownship	האוול	Howell Township, New Jersey	40.18210	-74.19850	27	America/New_York
+1734	brickTownship	בריק	Brick Township, New Jersey	40.06170	-74.10960	15	America/New_York
+1735	elizabeth	אליזבת	Elizabeth, New Jersey	40.66222	-74.20917	10	America/New_York
+1736	oceanTownship	אושיין	Ocean Township, New Jersey	40.25440	-74.03190	25	America/New_York
+1737	rockville	רוקוויל	Rockville, Maryland	39.08400	-77.15276	141	America/New_York
+1738	potomac	פוטומק	Potomac, Maryland	39.01806	-77.20861	109	America/New_York
+1739	boyntonBeach	בוינטון ביץ'	Boynton Beach, Florida	26.52806	-80.07639	7	America/New_York
+1740	westPalmBeach	וסט פאלם ביץ'	West Palm Beach, Florida	26.70972	-80.06417	3	America/New_York
+1741	calgary	קלגרי	Calgary	51.04750	-114.06250	1051	America/Edmonton
+1742	edmonton	אדמונטון	Edmonton	53.53333	-113.50000	636	America/Edmonton
+1743	boisbriand	בואבריאן	Boisbriand	45.61667	-73.83333	32	America/Toronto
+1744	atlanticBeach	אטלנטיק ביץ'	Atlantic Beach, New York	40.59000	-73.73167	3	America/New_York
+1745	belleHarbor	בל הארבור	Belle Harbor (Queens)	40.57590	-73.84820	5	America/New_York
+1746	airmont	איירמונט	Airmont, New York	41.09889	-74.10000	160	America/New_York
+1747	pomona	פומונה	Pomona, New York	41.18333	-74.05000	140	America/New_York
+1748	montebello	מונטבלו	Montebello, New York	41.12750	-74.11920	115	America/New_York
+1749	bloomingburg	בלומינגבורג	Bloomingburg, New York	41.55420	-74.43940	166	America/New_York
+1750	woodbourne	וודבורן	Woodbourne, New York	41.76667	-74.60000	426	America/New_York
+1751	deerfield	דירפילד	Deerfield, Illinois	42.16833	-87.85139	208	America/Chicago
+1752	buffaloGrove	באפלו גרוב	Buffalo Grove, Illinois	42.16640	-87.96330	209	America/Chicago
+1753	owingsMills	אוינגס מילס	Owings Mills, Maryland	39.41054	-76.79170	178	America/New_York
+1754	charentonLePont	שרנטון-לה-פון	Charenton-le-Pont	48.82139	2.41194	51	Europe/Paris
+1755	nogentSurMarne	נוז'אן-סור-מארן	Nogent-sur-Marne	48.83667	2.48250	86	Europe/Paris
+1756	saintMaurDesFosses	סן-מור-דה-פוסה	Saint-Maur-des-Fossés	48.80250	2.48556	43	Europe/Paris
+1757	pantin	פונטאן	Pantin	48.89806	2.40722	49	Europe/Paris
+1758	bondy	בונדי (צרפת)	Bondy	48.90278	2.48361	52	Europe/Paris
+1759	villiersLeBel	וילייה-לה-בל	Villiers-le-Bel	49.00889	2.39028	96	Europe/Paris
+1760	bordeaux	בורדו	Bordeaux	44.83778	-0.57944	16	Europe/Paris
+1761	lille	ליל	Lille	50.63194	3.05750	27	Europe/Paris
+1762	grenoble	גרנובל	Grenoble	45.18694	5.72639	216	Europe/Paris
+1763	montpellier	מונפלייה	Montpellier	43.61092	3.87723	58	Europe/Paris
+1764	hamburg	המבורג	Hamburg	53.55000	10.00000	27	Europe/Berlin
+1765	cologne	קלן	Cologne	50.94222	6.95778	55	Europe/Berlin
+1766	dusseldorf	דיסלדורף	Düsseldorf	51.22556	6.77667	40	Europe/Berlin
+1767	leipzig	לייפציג	Leipzig	51.34063	12.37473	127	Europe/Berlin
+1768	bern	ברן	Bern	46.94798	7.44743	554	Europe/Zurich
+1769	lausanne	לוזאן	Lausanne	46.53333	6.63333	591	Europe/Zurich
+1770	venice	ונציה	Venice	45.43972	12.33194	13	Europe/Rome
+1771	turin	טורינו	Turin	45.07917	7.67611	241	Europe/Rome
+1772	livorno	ליבורנו	Livorno	43.55000	10.31667	14	Europe/Rome
+1773	malaga	מאלגה	Málaga	36.71667	-4.41667	0	Europe/Madrid
+1774	marbella	מרבייה	Marbella	36.51136	-4.88344	33	Europe/Madrid
+1775	ceuta	סאוטה	Ceuta	35.88667	-5.30000	15	Africa/Ceuta
+1776	lviv	לבוב	Lviv	49.84195	24.03159	290	Europe/Kyiv
+1777	vilnius	וילנה	Vilnius	54.68722	25.28000	103	Europe/Vilnius
+1778	riga	ריגה	Riga	56.94750	24.10694	15	Europe/Riga
+1779	tallinn	טאלין	Tallinn	59.43722	24.74500	22	Europe/Tallinn
+1780	lodz	לודז'	Łódź	51.75000	19.46667	197	Europe/Warsaw
+1781	lezajsk	ליז'נסק	Leżajsk	50.26550	22.41860	179	Europe/Warsaw
+1782	lublin	לובלין	Lublin	51.25000	22.56667	179	Europe/Warsaw
+1783	wroclaw	ורוצלב	Wrocław	51.11000	17.03250	128	Europe/Warsaw
+1784	bratislava	ברטיסלאבה	Bratislava	48.15170	17.10931	163	Europe/Bratislava
+1785	helsinki	הלסינקי	Helsinki	60.17083	24.93750	12	Europe/Helsinki
+1786	dublin	דבלין	Dublin	53.34972	-6.26028	11	Europe/Dublin
+1787	sofia	סופיה	Sofia	42.69789	23.32173	548	Europe/Sofia
+1788	belgrade	בלגרד	Belgrade	44.81778	20.45694	130	Europe/Belgrade
+1789	tunis	תוניס	Tunis	36.80083	10.18000	9	Africa/Tunis
+1790	florence	פירנצה	Florence	43.77139	11.25417	62	Europe/Rome
+1791	laPaz	לה פאס	La Paz	-16.49583	-68.13333	3646	America/La_Paz
+1792	casablanca	קזבלנקה	Casablanca	33.59917	-7.62000	23	Africa/Casablanca
+1793	marrakesh	מרקש	Marrakech	31.62947	-7.98108	469	Africa/Casablanca
+1794	baku	באקו	Baku	40.36666	49.83518	6	Asia/Baku
+1795	tashkent	טשקנט	Tashkent	41.31111	69.27972	449	Asia/Tashkent
+1796	bukhara	בוכרה	Bukhara	39.77472	64.42861	230	Asia/Tashkent
+1797	brisbane	בריזבן	Brisbane	-27.46778	153.02778	27	Australia/Brisbane
+1798	goldCoast	גולד קוסט	Gold Coast	-28.01667	153.40000	0	Australia/Brisbane
+1799	dubai	דובאי	Dubai	25.26972	55.30944	12	Asia/Dubai
+1800	recife	רסיפה	Recife	-8.05389	-34.88083	5	America/Recife
+1801	curitiba	קוריטיבה	Curitiba	-25.42972	-49.27194	913	America/Sao_Paulo
+1802	beloHorizonte	בלו הוריזונטה	Belo Horizonte	-19.92806	-43.94194	860	America/Sao_Paulo

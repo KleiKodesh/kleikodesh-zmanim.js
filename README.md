@@ -1,6 +1,6 @@
 # kleikodesh-zmanim.js
 
-Offline zmanim and a compact list of 564 places, as framework-agnostic ES modules (TypeScript source, `.d.ts` shipped).
+Offline zmanim and a compact list of 1802 places, as framework-agnostic ES modules (TypeScript source, `.d.ts` shipped).
 No network access ever: the data files ship beside your code and are read through a pluggable loader.
 Importing the library loads nothing; each data file is read on first need, once.
 
