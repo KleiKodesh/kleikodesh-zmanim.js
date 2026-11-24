@@ -173,7 +173,11 @@ const MISHEYAKIR_11 = 11
 const MISHEYAKIR_10_2 = 10.2
 /** Three small stars (about 36 min): Biur Halacha OC 293:2 ("three small stars") - checked in the text; the angle is an estimate. */
 const TZEIT = 8.5
-/** Three medium stars (an observational estimate), 7.083 deg. */
+/**
+ * Three medium stars (an observational estimate), 7.083 deg (7 deg 5 min). Hebcal uses this angle for three medium stars
+ * (end of Tisha B'Av; hebcal.com/home/4463). Attributed to Dr. Berthold (Baruch) Cohn's 1899 Strasbourg twilight tables -
+ * not checked in the tables themselves.
+ */
 const TZEIT_7083 = 7.083
 /**
  * The Geonim: 3/4 mil (13.5 min) after sunset. Shabbat 34b; SA OC 261:2. Rav Ovadia Yosef rules 13.5 seasonal minutes after

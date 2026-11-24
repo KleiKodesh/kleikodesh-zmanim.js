@@ -25,8 +25,14 @@ Page numbers are PDF page numbers of the HebrewBooks scans.
 | tzeitGeonim, beinHashmashotRt | Birur Zmanim 2, pp.11-14 | the Minchat Kohen's reading of Rabbeinu Tam: nightfall when three stars are seen, bein hashmashot the quarter hour before |
 | plag | Birur Zmanim 1, pp.320-321; Birur Zmanim 2, pp.257-268 | plag is 1.25 hours before the end of the day |
 | `TZEIT_18_SUN`: tzeit18, tzeit18Sun | Bein Hashmashot, pp.71-72 | Jerusalem batei midrash pray maariv 17-18 minutes after sunset, per R. Shmuel Salant |
+| `TZEIT_7083`: tzeit7083 | Hebcal, "Candle-lighting, Havdalah and fast times" (hebcal.com/home/4463) | three medium stars at the sun 7.083 deg below the horizon; used for the end of Tisha B'Av |
 
 ## Not confirmed
 
 The lines described only by their definition (the Harari 25 / 40, Hillel and asymmetric day lines) stay unnamed:
 these books do not support those attributions.
+
+Tzeit7083 is usually attributed to Dr. Berthold (Baruch) Cohn, "Tabellen enthaltend die Zeitangaben fuer den Beginn der Nacht
+und des Tages", Strasbourg 1899. Cohn was an astronomer at the Strasbourg observatory who published twilight tables
+(Encyclopaedia Judaica, "Cohn, Berthold"), but the tables were not seen, so the line is not named after him.
+No public source was found for a 12 deg dawn or a day from it to 7.083 deg (UK calendars); those lines are not added.

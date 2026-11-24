@@ -427,6 +427,7 @@ When three medium stars appear and night begins. Here: the sun 7.083 degrees (7 
 
 - Shabbat 35b (one star is day, two twilight, three night; not large or small stars but medium ones)
 - Biur HaGra OC 261:2 (nightfall is at three medium stars)
+- Hebcal, Candle-lighting, Havdalah and fast times (three medium stars at 7.083 deg, end of Tisha B'Av); attributed to Dr. Berthold (Baruch) Cohn's twilight tables, Strasbourg 1899
 
 <a id="tzeit"></a>
 
