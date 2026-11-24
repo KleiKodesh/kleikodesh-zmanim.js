@@ -1006,6 +1006,17 @@ Nightfall by Rav Yechiel Michel Tucazinsky's calculation: the sun 6.45 degrees b
 - Shabbat 34b (twilight is three quarters of a mil, Rabba in the name of Shmuel)
 - Birur Zmanim vol 2 p.18 (Chazon Ish: Yom Kippur ends 40 min, Shabbat 45, a brit 35)
 
+<a id="tzeit45"></a>
+
+## Nightfall (Chazon Ish, 45 minutes)
+
+45 fixed minutes after sunset: the time the Chazon Ish kept for the end of Shabbat. In a letter he explains that in Eretz Yisrael this already includes Rabbeinu Tam's nightfall.
+
+**Sources:**
+
+- Birur Zmanim vol 2 (R. Yaakov Beyer) p.18 (a letter of the Chazon Ish: his 45 minutes at the end of Shabbat include Rabbeinu Tam, as R. D. Frankel reports)
+- Shabbat 34b-35a (twilight and nightfall)
+
 <a id="tzeit50"></a>
 
 ## Nightfall (50 minutes)
@@ -1246,6 +1257,40 @@ The sun 12.85 deg below the true horizon: misheyakir for a time of need.
 **Sources:**
 
 - Birur Halacha, Orach Chaim 18
+
+<a id="misheyakir66"></a>
+
+## Misheyakir (Pri Megadim)
+
+The earliest time for tallit and tefillin, 66 fixed minutes before sunrise: by one reckoning of the Pri Megadim, 6 minutes after a dawn of 72 minutes.
+
+**Sources:**
+
+- Pri Megadim, Eshel Avraham OC 58:2
+- OU Kosher Halacha Yomis, "The Earliest Time for Birkas Tzitzis" (outorah.org/p/78963)
+
+<a id="misheyakir60"></a>
+
+## Misheyakir (Rav Henkin)
+
+The earliest time for tallit and tefillin, about an hour before sunrise: Rav Yosef Eliyahu Henkin allowed tallit and tefillin then. Here: 60 fixed minutes before sunrise.
+
+**Sources:**
+
+- Rav Y. E. Henkin, Ezras Torah luach; Teshuvot Ivra siman 3
+- OU Kosher Halacha Yomis, "The Earliest Time for Birkas Tzitzis" (outorah.org/p/78963)
+
+<a id="misheyakir40"></a>
+
+## Misheyakir (Rav Chaim Kanievsky)
+
+The earliest time for tallit and tefillin, 40 fixed minutes before sunrise: Rav Chaim Kanievsky wrote that he himself waits until then. Igrot Moshe estimates misheyakir at about 35-40 minutes before sunrise.
+
+**Sources:**
+
+- Rav Chaim Kanievsky (as cited by OU Kosher)
+- Igrot Moshe OC 4:6 (about 35-40 minutes before sunrise)
+- OU Kosher Halacha Yomis, "The Earliest Time for Birkas Tzitzis" (outorah.org/p/78963)
 
 <a id="alotBaalHatanya"></a>
 

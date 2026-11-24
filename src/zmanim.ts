@@ -6,8 +6,8 @@ import { julianDayFromUtcMs, spa, spaDay, spaEvent, zenithToH0, type SpaDay } fr
 
 /** Every zman the library computes, in the order of the day. Each is computed only when requested. */
 export const ZMAN_NAMES = [
-  'chatzotNight', 'alot90Visible', 'alot90', 'alot90Chatzot', 'alot90z', 'alotVisible', 'alot', 'alotChatzot', 'alot72z', 'alot96', 'alot120', 'alot12', 'misheyakirVisible',
-  'misheyakir', 'misheyakirChatzot', 'misheyakir11', 'misheyakir10p2', 'misheyakir7p65', 'misheyakir12p85', 'alotBaalHatanya', 'sunriseBaalHatanya', 'sunriseElevated', 'sunrise', 'sunriseTerrain',
+  'chatzotNight', 'alot90Visible', 'alot90', 'alot90Chatzot', 'alot90z', 'alotVisible', 'alot', 'alotChatzot', 'alot72z', 'alot96', 'alot120', 'alot12', 'misheyakir66', 'misheyakir60', 'misheyakirVisible',
+  'misheyakir', 'misheyakirChatzot', 'misheyakir11', 'misheyakir10p2', 'misheyakir7p65', 'misheyakir12p85', 'misheyakir40', 'alotBaalHatanya', 'sunriseBaalHatanya', 'sunriseElevated', 'sunrise', 'sunriseTerrain',
   'sofShmaMga120', 'sofShmaMga90', 'sofShmaMga19', 'sofShmaMga90z', 'sofShmaMga', 'sofShmaMga16', 'sofShmaMga72z', 'sofShmaMga72Fixed', 'sofShmaMga16Fixed', 'sofShmaHarari40', 'sofShmaHarari25', 'sofShmaAsym', 'sofShmaBaalHatanya', 'sofShmaBenIshChai', 'sofShmaGra', 'sofShmaGraFixed',
   'sofTfillaMga120', 'sofTfillaMga90', 'sofTfillaMga19', 'sofTfillaMga90z', 'sofTfillaMga', 'sofTfillaMga16', 'sofTfillaMga72z', 'sofTfillaHarari40', 'sofTfillaHarari25', 'sofTfillaAsym', 'sofTfillaBaalHatanya', 'sofTfillaBenIshChai', 'sofTfillaGra', 'sofTfillaGraFixed',
   'chatzot', 'chatzotFixedLocal', 'minchaGedola', 'minchaGedola30', 'minchaGedolaFixed', 'minchaGedolaHillel', 'minchaGedolaBaalHatanya',
@@ -15,7 +15,7 @@ export const ZMAN_NAMES = [
   'minchaKetanaHarari40', 'minchaKetanaHarari25', 'plag', 'plagFixed', 'plagHillel', 'plagBaalHatanya', 'plagHarari40', 'plagHarari25', 'plagAsym', 'plagBenIshChai', 'plagMga', 'plagMga72z', 'plagMga19', 'plagMga90z', 'plagMga90', 'plagMga120', 'plagAlot90Tzeit645', 'plagAlot72Tzeit645', 'plagAlot12Tzeit7083',
   'candles40', 'candles30', 'candles22', 'candles20', 'candles18', 'sunsetTerrain', 'sunset', 'sunsetElevated', 'sunsetBaalHatanya',
   'tzeitGeonim', 'tzeitGeonimVisible', 'tzeitBaalHatanya', 'tzeit13p5', 'tzeit18', 'tzeit18Sun', 'tzeit20', 'tzeit645', 'tzeit7083', 'tzeit', 'tzeitVisible', 'tzeit24', 'tzeit30',
-  'tzeit40', 'tzeit50', 'tzeit13p5z', 'beinHashmashotYereim', 'beinHashmashotRt', 'tzeitRt72', 'tzeitRt72Zmanis', 'tzeitRt16', 'tzeitRt90', 'tzeitRt96', 'tzeit90z',
+  'tzeit40', 'tzeit45', 'tzeit50', 'tzeit13p5z', 'beinHashmashotYereim', 'beinHashmashotRt', 'tzeitRt72', 'tzeitRt72Zmanis', 'tzeitRt16', 'tzeitRt90', 'tzeitRt96', 'tzeit90z',
 ] as const
 
 export type ZmanName = typeof ZMAN_NAMES[number]
@@ -38,7 +38,8 @@ export const ROUNDING: Readonly<Record<ZmanName, Rounding>> = {
   sofShmaMga120: 'down', sofShmaMga90: 'down', sofShmaMga19: 'down', sofShmaMga90z: 'down', sofShmaMga72z: 'down',
   sofTfillaMga120: 'down', sofTfillaMga90: 'down', sofTfillaMga19: 'down', sofTfillaMga90z: 'down', sofTfillaMga72z: 'down',
   plagMga120: 'up', plagAlot90Tzeit645: 'up', plagAlot72Tzeit645: 'up', alot12: 'up', plagAlot12Tzeit7083: 'up', tzeit645: 'up', plagMga90: 'up', plagMga19: 'up', plagMga90z: 'up', plagMga72z: 'up',
-  tzeit13p5: 'up', tzeit18: 'up', tzeit20: 'up', tzeit24: 'up', tzeit30: 'up', tzeit40: 'up', tzeit50: 'up',
+  tzeit13p5: 'up', tzeit18: 'up', tzeit20: 'up', tzeit24: 'up', tzeit30: 'up', tzeit40: 'up', tzeit45: 'up', tzeit50: 'up',
+  misheyakir66: 'up', misheyakir60: 'up', misheyakir40: 'up',
   // The start of Rabbeinu Tam's twilight ends the time that is surely day (work before Shabbat): a deadline.
   beinHashmashotYereim: 'down', beinHashmashotRt: 'down',
   misheyakir7p65: 'up', misheyakir12p85: 'up', chatzotFixedLocal: 'nearest',
@@ -62,7 +63,7 @@ export const HORIZON_ZMANIM: ReadonlySet<ZmanName> = new Set<ZmanName>(['sunrise
   'candles40', 'candles30', 'candles22', 'candles20', 'candles18', 'tzeitRt72', 'tzeitRt72Zmanis', 'tzeitRt90', 'tzeitRt96', 'tzeit13p5z', 'sunriseTerrain', 'sunsetTerrain',
   'alot90z', 'alot72z', 'alot96', 'alot120', 'tzeit90z', 'sofShmaMga120', 'sofShmaMga90', 'sofShmaMga90z', 'sofShmaMga72z', 'sofTfillaMga120', 'sofTfillaMga90',
   'sofTfillaMga90z', 'sofTfillaMga72z', 'plagMga120', 'plagMga90', 'plagMga90z', 'plagMga72z',
-  'tzeit13p5', 'tzeit18', 'tzeit20', 'tzeit24', 'tzeit30', 'tzeit40', 'tzeit50', 'beinHashmashotRt',
+  'tzeit13p5', 'tzeit18', 'tzeit20', 'tzeit24', 'tzeit30', 'tzeit40', 'tzeit45', 'tzeit50', 'beinHashmashotRt', 'misheyakir66', 'misheyakir60', 'misheyakir40',
   'sofShmaHarari40', 'sofShmaHarari25', 'sofTfillaHarari40', 'sofTfillaHarari25', 'minchaGedolaHarari40', 'minchaGedolaHarari25',
   'minchaKetanaHarari40', 'minchaKetanaHarari25', 'plagHarari40', 'plagHarari25',
   'sofShmaBenIshChai', 'sofTfillaBenIshChai', 'plagBenIshChai', 'sofShmaGraFixed', 'sofTfillaGraFixed', 'sofShmaMga72Fixed', 'minchaKetanaFixed', 'plagFixed'])
@@ -518,6 +519,7 @@ export function zmanInstants(place: Coordinates, date: CivilDate, which: readonl
       case 'tzeit30': ms = today.sunset() + 30 * MINUTE_MS; break
       // Chazon Ish: Yom Kippur ends 40 min after sunset, Shabbat 45, a brit 35 - Birur Zmanim vol 2 p.18.
       case 'tzeit40': ms = today.sunset() + 40 * MINUTE_MS; break
+      case 'tzeit45': ms = today.sunset() + 45 * MINUTE_MS; break
       // New York: "not less than 50 minutes" for the end of Shabbat - Igrot Moshe OC 4:62, checked in the text.
       case 'tzeit50': ms = today.sunset() + 50 * MINUTE_MS; break
       // Rav Ovadia Yosef: 13.5 seasonal minutes (3/4 mil) after sunset - Kitzur Yalkut Yosef OC, checked in the text.
@@ -527,6 +529,9 @@ export function zmanInstants(place: Coordinates, date: CivilDate, which: readonl
       case 'beinHashmashotRt': ms = today.sunset() + 58.5 * MINUTE_MS; break
       case 'misheyakir7p65': ms = today.rise(G + MISHEYAKIR_7_65); break
       case 'misheyakir12p85': ms = today.rise(G + MISHEYAKIR_12_85); break
+      case 'misheyakir66': ms = today.sunrise() - 66 * MINUTE_MS; break
+      case 'misheyakir60': ms = today.sunrise() - 60 * MINUTE_MS; break
+      case 'misheyakir40': ms = today.sunrise() - 40 * MINUTE_MS; break
       // Baal HaTanya: a day from netz amiti to shkia amiti, the sun's centre 1.583 deg below the true horizon.
       case 'alotBaalHatanya': ms = today.rise(G + ALOT_BAAL_HATANYA); break
       case 'sunriseBaalHatanya': ms = today.rise(G + BAAL_HATANYA_HORIZON); break

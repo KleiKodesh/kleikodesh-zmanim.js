@@ -103,7 +103,8 @@ describe('more MGA days, seasonal and fixed-minute lines', () => {
       const M = 60000
       const day = ms(t.sunset) - ms(t.sunrise)
       for (const [n, m] of [['tzeit13p5', 13.5], ['tzeit18', 18], ['tzeit20', 20], ['tzeit24', 24], ['tzeit30', 30], ['tzeit40', 40],
-        ['tzeit50', 50], ['beinHashmashotRt', 58.5]] as const) expect(ms(t[n]) - ms(t.sunset), n).toBe(m * M)
+        ['tzeit45', 45], ['tzeit50', 50], ['beinHashmashotRt', 58.5]] as const) expect(ms(t[n]) - ms(t.sunset), n).toBe(m * M)
+      for (const [n, m] of [['misheyakir66', 66], ['misheyakir60', 60], ['misheyakir40', 40]] as const) expect(ms(t.sunrise) - ms(t[n]), n).toBe(m * M)
       expect(ms(t.sunrise) - ms(t.alot72z)).toBeCloseTo(day / 10, -1)
       expect(ms(t.sunrise) - ms(t.alot90z)).toBeCloseTo(day / 8, -1)
       expect(ms(t.tzeit90z) - ms(t.sunset)).toBeCloseTo(day / 8, -1)

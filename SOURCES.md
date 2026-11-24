@@ -5,10 +5,14 @@ Page numbers are PDF page numbers of the HebrewBooks scans.
 
 ## Books
 
-- **Birur Zmanim**, part 1 - R. Yaakov Beyer, 5776 edition. HebrewBooks 69317 (also uploaded as 65509 and 67371, which are copies of the same part 1).
-- **Birur Zmanim**, part 2 - R. Yaakov Beyer. HebrewBooks 69318.
+- **Birur Zmanim**, part 1 - R. Yaakov Beyer, Bnei Brak 5776. HebrewBooks 69317.
+- **Birur Zmanim**, part 2 - R. Yaakov Beyer, Bnei Brak. HebrewBooks 69318.
 - **Bein Hashmashot** - R. Yechiel Michel Tukachinsky, Jerusalem 1929. HebrewBooks 6656.
 - **Shu"t Melamed LeHo'il**, part 1 (Orach Chaim) - R. David Zvi Hoffmann. Read in the Otzaria library text (by siman).
+
+Not cited here, and not Birur Zmanim (earlier notes had them as copies of part 1): HebrewBooks 67371 is
+*Achuzat Sadeh* on the times of the day, R. Shmuel David HaLevi Siegel, Baltimore 1980; HebrewBooks 65509 is a
+2017 Monroe NY wedding booklet on the times and festivals of the year (Shabbat, Rosh Chodesh, Chanuka, Purim).
 
 ## Lines and constants
 
@@ -23,6 +27,8 @@ Page numbers are PDF page numbers of the HebrewBooks scans.
 | `BH_YEREIM`: beinHashmashotYereim | Bein Hashmashot, p.33; Birur Zmanim 2, pp.228-231 | the Yereim puts bein hashmashot before sunset; some were strict for it |
 | sunriseElevated, sunsetElevated | Bein Hashmashot, p.105 | on Mount Carmel sunrise is under 3 minutes earlier and sunset 2-3 minutes later |
 | tzeit40 | Birur Zmanim 2, p.18 | Chazon Ish: Yom Kippur ends 40 minutes after sunset, Shabbat 45, a brit 35 |
+| tzeit45 | Birur Zmanim 2, p.18 | a Chazon Ish letter: his 45 minutes at the end of Shabbat include Rabbeinu Tam (via R. D. Frankel) |
+| misheyakir66, misheyakir60, misheyakir40 | OU Kosher Halacha Yomis, outorah.org/p/78963 | 66 min: Pri Megadim, Eshel Avraham 58:2; about an hour: Rav Henkin (Ezras Torah luach, Teshuvot Ivra 3); 40 min: Rav Chaim Kanievsky (Igrot Moshe OC 4:6: 35-40) |
 | tzeitGeonim, beinHashmashotRt | Birur Zmanim 2, pp.11-14 | the Minchat Kohen's reading of Rabbeinu Tam: nightfall when three stars are seen, bein hashmashot the quarter hour before |
 | plag | Birur Zmanim 1, pp.320-321; Birur Zmanim 2, pp.257-268 | plag is 1.25 hours before the end of the day |
 | `TZEIT_18_SUN`: tzeit18, tzeit18Sun | Bein Hashmashot, pp.71-72 | Jerusalem batei midrash pray maariv 17-18 minutes after sunset, per R. Shmuel Salant |
