@@ -79,7 +79,9 @@ Also exported: `zmanInstants` (exact instants as BigInt epoch nanoseconds), `for
 | sunsetElevated | sunset below the horizon seen from the place's own elevation | down |
 | tzeitGeonim | sun 3.7 deg below, evening (Geonim, about 13.5 minutes) | up |
 | tzeitGeonimVisible | sun 3.7 deg below the visible horizon, evening | up |
-| tzeit7083 | sun 7.083 deg below, evening: three medium stars (an observational estimate) | up |
+| tzeit7083 | sun 7.083 deg below, evening: three medium stars (Dr. Baruch Cohn, Melamed LeHo'il 1:30) | up |
+| alot12 | sun 12 deg below, morning: the light spreads over the whole east (Dr. Baruch Cohn, Melamed LeHo'il 1:30) | up |
+| plagAlot12Tzeit7083 | plag (10.75 seasonal hours) of a day from alot12 to tzeit7083 | up |
 | tzeit | sun 8.5 deg below, evening | up |
 | tzeitVisible | sun 8.5 deg below the visible horizon, evening | up |
 | tzeitRt72 | Rabbeinu Tam: 72 fixed minutes after sunset (4 mil of 18 min; Tosafot Shabbat 35a, from Pesachim 94a; SA OC 261:2 with Rema) | up |

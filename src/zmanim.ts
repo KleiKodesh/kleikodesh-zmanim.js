@@ -6,13 +6,13 @@ import { julianDayFromUtcMs, spa, spaDay, spaEvent, zenithToH0, type SpaDay } fr
 
 /** Every zman the library computes, in the order of the day. Each is computed only when requested. */
 export const ZMAN_NAMES = [
-  'chatzotNight', 'alot90Visible', 'alot90', 'alot90Chatzot', 'alot90z', 'alotVisible', 'alot', 'alotChatzot', 'alot72z', 'alot96', 'alot120', 'misheyakirVisible',
+  'chatzotNight', 'alot90Visible', 'alot90', 'alot90Chatzot', 'alot90z', 'alotVisible', 'alot', 'alotChatzot', 'alot72z', 'alot96', 'alot120', 'alot12', 'misheyakirVisible',
   'misheyakir', 'misheyakirChatzot', 'misheyakir11', 'misheyakir10p2', 'misheyakir7p65', 'misheyakir12p85', 'alotBaalHatanya', 'sunriseBaalHatanya', 'sunriseElevated', 'sunrise', 'sunriseTerrain',
   'sofShmaMga120', 'sofShmaMga90', 'sofShmaMga19', 'sofShmaMga90z', 'sofShmaMga', 'sofShmaMga16', 'sofShmaMga72z', 'sofShmaMga72Fixed', 'sofShmaMga16Fixed', 'sofShmaHarari40', 'sofShmaHarari25', 'sofShmaAsym', 'sofShmaBaalHatanya', 'sofShmaBenIshChai', 'sofShmaGra', 'sofShmaGraFixed',
   'sofTfillaMga120', 'sofTfillaMga90', 'sofTfillaMga19', 'sofTfillaMga90z', 'sofTfillaMga', 'sofTfillaMga16', 'sofTfillaMga72z', 'sofTfillaHarari40', 'sofTfillaHarari25', 'sofTfillaAsym', 'sofTfillaBaalHatanya', 'sofTfillaBenIshChai', 'sofTfillaGra', 'sofTfillaGraFixed',
   'chatzot', 'chatzotFixedLocal', 'minchaGedola', 'minchaGedola30', 'minchaGedolaFixed', 'minchaGedolaHillel', 'minchaGedolaBaalHatanya',
   'minchaGedolaHarari40', 'minchaGedolaHarari25', 'minchaKetana', 'minchaKetanaFixed', 'minchaKetanaHillel', 'minchaKetanaBaalHatanya',
-  'minchaKetanaHarari40', 'minchaKetanaHarari25', 'plag', 'plagFixed', 'plagHillel', 'plagBaalHatanya', 'plagHarari40', 'plagHarari25', 'plagAsym', 'plagBenIshChai', 'plagMga', 'plagMga72z', 'plagMga19', 'plagMga90z', 'plagMga90', 'plagMga120', 'plagAlot90Tzeit645', 'plagAlot72Tzeit645',
+  'minchaKetanaHarari40', 'minchaKetanaHarari25', 'plag', 'plagFixed', 'plagHillel', 'plagBaalHatanya', 'plagHarari40', 'plagHarari25', 'plagAsym', 'plagBenIshChai', 'plagMga', 'plagMga72z', 'plagMga19', 'plagMga90z', 'plagMga90', 'plagMga120', 'plagAlot90Tzeit645', 'plagAlot72Tzeit645', 'plagAlot12Tzeit7083',
   'candles40', 'candles30', 'candles22', 'candles20', 'candles18', 'sunsetTerrain', 'sunset', 'sunsetElevated', 'sunsetBaalHatanya',
   'tzeitGeonim', 'tzeitGeonimVisible', 'tzeitBaalHatanya', 'tzeit13p5', 'tzeit18', 'tzeit18Sun', 'tzeit20', 'tzeit645', 'tzeit7083', 'tzeit', 'tzeitVisible', 'tzeit24', 'tzeit30',
   'tzeit40', 'tzeit50', 'tzeit13p5z', 'beinHashmashotYereim', 'beinHashmashotRt', 'tzeitRt72', 'tzeitRt72Zmanis', 'tzeitRt16', 'tzeitRt90', 'tzeitRt96', 'tzeit90z',
@@ -37,7 +37,7 @@ export const ROUNDING: Readonly<Record<ZmanName, Rounding>> = {
   alot90z: 'up', alot72z: 'up', alot96: 'up', alot120: 'up', tzeit90z: 'up',
   sofShmaMga120: 'down', sofShmaMga90: 'down', sofShmaMga19: 'down', sofShmaMga90z: 'down', sofShmaMga72z: 'down',
   sofTfillaMga120: 'down', sofTfillaMga90: 'down', sofTfillaMga19: 'down', sofTfillaMga90z: 'down', sofTfillaMga72z: 'down',
-  plagMga120: 'up', plagAlot90Tzeit645: 'up', plagAlot72Tzeit645: 'up', tzeit645: 'up', plagMga90: 'up', plagMga19: 'up', plagMga90z: 'up', plagMga72z: 'up',
+  plagMga120: 'up', plagAlot90Tzeit645: 'up', plagAlot72Tzeit645: 'up', alot12: 'up', plagAlot12Tzeit7083: 'up', tzeit645: 'up', plagMga90: 'up', plagMga19: 'up', plagMga90z: 'up', plagMga72z: 'up',
   tzeit13p5: 'up', tzeit18: 'up', tzeit20: 'up', tzeit24: 'up', tzeit30: 'up', tzeit40: 'up', tzeit50: 'up',
   // The start of Rabbeinu Tam's twilight ends the time that is surely day (work before Shabbat): a deadline.
   beinHashmashotYereim: 'down', beinHashmashotRt: 'down',
@@ -174,11 +174,17 @@ const MISHEYAKIR_10_2 = 10.2
 /** Three small stars (about 36 min): Biur Halacha OC 293:2 ("three small stars") - checked in the text; the angle is an estimate. */
 const TZEIT = 8.5
 /**
- * Three medium stars (an observational estimate), 7.083 deg (7 deg 5 min). Hebcal uses this angle for three medium stars
- * (end of Tisha B'Av; hebcal.com/home/4463). Attributed to Dr. Berthold (Baruch) Cohn's 1899 Strasbourg twilight tables -
- * not checked in the tables themselves.
+ * Three medium stars (an observational estimate), 7.083 deg (7 deg 5 min). Dr. Baruch (Berthold) Cohn's letter in Shu"t
+ * Melamed LeHo'il (R. D. Z. Hoffmann) part 1, siman 30: he set the sun 7 deg 5 min below the horizon for three medium
+ * stars - checked in the text. Hebcal uses the same angle (end of Tisha B'Av; hebcal.com/home/4463).
  */
 const TZEIT_7083 = 7.083
+/**
+ * Dawn when the light spreads over the whole face of the east, the sun 12 deg below the horizon: Dr. Baruch (Berthold)
+ * Cohn's letters in Shu"t Melamed LeHo'il part 1, siman 30 (he says his tables should also give this time, which in his
+ * view is dawn) - checked in the text. With TZEIT_7083 it bounds the plagAlot12Tzeit7083 day.
+ */
+const ALOT_12 = 12
 /**
  * The Geonim: 3/4 mil (13.5 min) after sunset. Shabbat 34b; SA OC 261:2. Rav Ovadia Yosef rules 13.5 seasonal minutes after
  * the visible sunset (Kitzur Yalkut Yosef OC, Hilchot Shabbat) - checked in the text; that is the tzeit13p5z line.
@@ -482,6 +488,9 @@ export function zmanInstants(place: Coordinates, date: CivilDate, which: readonl
       case 'plagMga19': ms = today.mga19(10.75); break
       case 'plagAlot90Tzeit645': ms = today.alotToTzeit645(ALOT_90, 10.75); break
       case 'plagAlot72Tzeit645': ms = today.alotToTzeit645(ALOT, 10.75); break
+      // Dr. Baruch Cohn (Melamed LeHo'il 1:30): dawn at 12 deg, nightfall at 7 deg 5 min.
+      case 'alot12': ms = today.rise(G + ALOT_12); break
+      case 'plagAlot12Tzeit7083': ms = Day.shaahBased(today.rise(G + ALOT_12), today.set(G + TZEIT_7083), 10.75); break
       case 'beinHashmashotYereim': ms = today.set(G - BH_YEREIM); break
       case 'tzeit645': ms = today.set(G + TZEIT_645); break
       case 'sofShmaMga90z': ms = today.mgaSeasonal(1 / 8, 3); break

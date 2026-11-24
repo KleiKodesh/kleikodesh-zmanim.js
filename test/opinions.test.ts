@@ -43,7 +43,7 @@ describe('opinion lines', () => {
 describe('high latitudes in June: null or a correct time, never garbage', () => {
   const tsv = tsvByKey()
   const lines: Array<[ZmanName, number]> = [['alot90', 19.8], ['alot', 16.1], ['misheyakir', 11.5], ['misheyakir11', 11],
-    ['misheyakir10p2', 10.2], ['tzeitGeonim', 3.7], ['tzeit7083', 7.083], ['tzeit', 8.5]]
+    ['misheyakir10p2', 10.2], ['alot12', 12], ['tzeitGeonim', 3.7], ['tzeit7083', 7.083], ['tzeit', 8.5]]
   for (const key of ['london', 'manchester', 'amsterdam']) {
     it(key, async () => {
       useFileAssets()
@@ -125,6 +125,9 @@ describe('more MGA days, seasonal and fixed-minute lines', () => {
       expect(ms(t.plagMga19)).toBeGreaterThan(ms(t.plag))
       expect(ms(t.tzeitRt72Zmanis) - ms(t.plagMga72z)).toBeCloseTo((ms(t.tzeitRt72Zmanis) - ms(t.alot72z)) / 12 * 1.25, -1)
       expect(ms(t.beinHashmashotRt)).toBeLessThan(ms(t.tzeitRt72))
+      // Dr. Baruch Cohn's day: dawn at 12 deg (between alot and misheyakir), plag 1.25 of its hours before tzeit7083.
+      expect(ms(t.alot12)).toBeGreaterThan(ms(t.alot)); expect(ms(t.alot12)).toBeLessThan(ms(t.misheyakir))
+      expect(ms(t.tzeit7083) - ms(t.plagAlot12Tzeit7083)).toBeCloseTo((ms(t.tzeit7083) - ms(t.alot12)) / 12 * 1.25, -1)
     }
     for (const n of ['sofShmaMga90', 'sofTfillaMga120', 'sofShmaMga19', 'sofShmaMga72z', 'beinHashmashotRt'] as const) expect(ROUNDING[n]).toBe('down')
     for (const n of ['plagMga90', 'alot72z', 'alot90z', 'tzeit90z', 'tzeit13p5', 'tzeit50'] as const) expect(ROUNDING[n]).toBe('up')

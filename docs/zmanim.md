@@ -421,13 +421,14 @@ Like the Geonim's nightfall (3.7 degrees), but the degrees are measured from the
 
 ## Nightfall (7.083 degrees)
 
-When three medium stars appear and night begins. Here: the sun 7.083 degrees (7 degrees 5 arcminutes) below the horizon in the evening, about 29 minutes after sunset in Jerusalem at the equinox. The degree figure is an estimate from observation, not from the Talmud.
+When three medium stars appear and night begins. Here: the sun 7.083 degrees (7 degrees 5 arcminutes) below the horizon in the evening, about 29 minutes after sunset in Jerusalem at the equinox. The degree figure is Dr. Baruch Cohn's estimate from observation, not from the Talmud.
 
 **Sources:**
 
 - Shabbat 35b (one star is day, two twilight, three night; not large or small stars but medium ones)
 - Biur HaGra OC 261:2 (nightfall is at three medium stars)
-- Hebcal, Candle-lighting, Havdalah and fast times (three medium stars at 7.083 deg, end of Tisha B'Av); attributed to Dr. Berthold (Baruch) Cohn's twilight tables, Strasbourg 1899
+- Shu"t Melamed LeHo'il (R. D. Z. Hoffmann) part 1, siman 30 (letter of Dr. Baruch Cohn): the sun 7 deg 5 min below the horizon when three medium stars appear
+- Hebcal, Candle-lighting, Havdalah and fast times (the same angle, end of Tisha B'Av)
 
 <a id="tzeit"></a>
 
@@ -734,6 +735,18 @@ Ten and three-quarter seasonal hours of a day counted from dawn (72 minutes) to 
 - Birur Halacha, Yoreh De'ah 262 (nightfall at 6.45 deg)
 - Bein Hashmashot (R. Y. M. Tukachinsky) p.50, 67, 72 (three medium stars in Jerusalem 22-28 min, average 25)
 
+<a id="plagAlot12Tzeit7083"></a>
+
+## Plag hamincha (Rav Baruch Kahn, Strasbourg)
+
+Ten and three-quarter seasonal hours of a day counted from dawn (the whole east lit) to three medium stars, both by Dr. Baruch Cohn's measures.
+
+**Sources:**
+
+- Mishna Berachot 4:1 (plag hamincha)
+- Magen Avraham 58:1 (the day counted from dawn to nightfall)
+- Shu"t Melamed LeHo'il (R. D. Z. Hoffmann) part 1, siman 30 (letter of Dr. Baruch Cohn)
+
 <a id="sofShmaMga72z"></a>
 
 ## Latest Shema (Magen Avraham, 72 seasonal minutes)
@@ -859,6 +872,18 @@ Five mil before sunrise at 24 minutes a mil; one reading of the Shulchan Aruch H
 - HaMichlol, "Alot HaShachar", note 3
 - Birur Zmanim vol 2 p.33-35 (mil of 18 (Gra), 22.5 (most Rishonim), 24 (Rambam))
 - Bein Hashmashot (R. Y. M. Tukachinsky) p.18-19 (three views of a mil: 18, 22.5, 24 min)
+
+<a id="alot12"></a>
+
+## Dawn (Rav Baruch Kahn, Strasbourg)
+
+Dawn when the light spreads over the whole face of the east, the sun 12 degrees below the horizon. This is Dr. Baruch Cohn's view; he wrote that his tables should give this time too. R. David Zvi Hoffmann answered there that dawn is mainly as the Rambam, the sun about 18 degrees below.
+
+**Sources:**
+
+- Pesachim 93b-94a (dawn)
+- Yerushalmi Berachot 1:1 (the whole face of the east lit)
+- Shu"t Melamed LeHo'il (R. D. Z. Hoffmann) part 1, siman 30 (letter of Dr. Baruch Cohn)
 
 <a id="alot90z"></a>
 
