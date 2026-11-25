@@ -6,9 +6,11 @@
 // - Elsewhere: the AFGL standard profiles (Anderson et al. 1986, AFGL-TR-86-0110): tropical within 23.5 deg of the
 //   equator, midlatitude summer/winter to 52 deg, subarctic summer/winter beyond, blended over the year by season.
 // - Without the profile table (bare coordinates): the U.S. Standard Atmosphere 1976.
-// The profile is moved to the place's own climate: the anomaly T_place - T_profile at the observer's height (the
-// place's monthly mean temperature against the profile's daily mean there) is applied at the ground and tapered off
-// over the boundary layer (atmosphere.ts). Deep-angle lines do not use any of this (they are geometric).
+// The profile is moved to the place's own climate: the anomaly T_place - T_profile at the observer's height is
+// applied at the ground and tapered off over the boundary layer (atmosphere.ts). T_place is the monthly mean daily
+// minimum for sunrise (near the coldest hour) and the mean daily maximum for sunset, measured against the profile
+// actually traced (Bet Dagan 00 / 12 UTC, or the daily-mean AFGL profile); where those are unknown, the monthly mean
+// against the profile's daily mean. Deep-angle lines do not use any of this (they are geometric).
 import { Atmosphere, levelAt, usStandard1976, type Level } from './atmosphere.js'
 
 /** Parsed assets/atmosphere.bin: AFGL t, ms, mw, ss, sw, then Bet Dagan month 1..12 x {00, 12 UTC}. */
@@ -59,9 +61,12 @@ function profiles(table: AtmosphereTable | null | undefined, lat: number, lng: n
 
 const levelsOf = (table: AtmosphereTable | null | undefined, i: number): readonly Level[] => (i < 0 || !table ? US1976 : table[i]!)
 
-/** Temperature (K) the anomaly is measured from: the profile's daily mean at [z] (Bet Dagan: mean of 00 and 12 UTC). */
-function referenceT(table: AtmosphereTable | null | undefined, i: number, z: number): number {
-  if (i >= BET_DAGAN && table) {
+/**
+ * Temperature (K) the anomaly is measured from: the profile's daily mean at [z] (Bet Dagan: mean of 00 and 12 UTC);
+ * [diurnal] (a daily minimum/maximum is applied): the traced profile's own temperature there.
+ */
+function referenceT(table: AtmosphereTable | null | undefined, i: number, z: number, diurnal = false): number {
+  if (i >= BET_DAGAN && table && !diurnal) {
     const base = BET_DAGAN + Math.floor((i - BET_DAGAN) / 2) * 2
     return (levelAt(table[base]!, z).t + levelAt(table[base + 1]!, z).t) / 2
   }
@@ -92,8 +97,13 @@ export interface HorizonAir {
   height: number
   month: number
   day: number
-  /** The place's mean air temperature (C) for the day; NaN = use the profile as it is. */
+  /** The place's air temperature (C) for the day; NaN = use the profile as it is. */
   temperatureC: number
+  /**
+   * true: temperatureC is the day's minimum (sunrise) or maximum (sunset), so the anomaly is measured from the traced
+   * profile's own temperature; false/missing: it is the daily mean, measured from the profile's daily mean.
+   */
+  diurnal?: boolean
 }
 
 /** Sum over the place's profiles of weight x f(atmosphere), the anomaly interpolated on its grid. */
@@ -101,7 +111,7 @@ function traced(air: HorizonAir, hour: 0 | 12 | -1, f: (a: Atmosphere) => number
   let total = 0
   for (const [i, w] of profiles(air.table, air.lat, air.lng, air.month, air.day, hour)) {
     if (w === 0) continue
-    const anomaly = Number.isNaN(air.temperatureC) ? 0 : air.temperatureC + 273.15 - referenceT(air.table, i, air.height)
+    const anomaly = Number.isNaN(air.temperatureC) ? 0 : air.temperatureC + 273.15 - referenceT(air.table, i, air.height, air.diurnal)
     const g = anomaly / ANOMALY_STEP, lo = Math.floor(g), frac = g - lo
     const a = f(atmosphere(air.table, i, air.height, lo * ANOMALY_STEP))
     const b = frac > 1e-9 ? f(atmosphere(air.table, i, air.height, (lo + 1) * ANOMALY_STEP)) : a

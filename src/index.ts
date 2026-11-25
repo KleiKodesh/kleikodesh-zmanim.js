@@ -9,7 +9,7 @@ export const DISCLAIMER = {
   he: 'הזמנים משוערים ועשויים להיות לא מדויקים מעט.',
 } as const
 
-export { CLIMATE_RECORD_SIZE, configure, getAtmospheres, getMonthlyTemperatures, getPlace, getTerrainHorizon, HORIZON_CHUNK, listPlaces, nearestPlaceId, placeCount, RECORD_SIZE, searchPlaces, toCivilDate, zmanim } from './places.js'
+export { CLIMATE_MINMAX_RECORD_SIZE, CLIMATE_RECORD_SIZE, configure, getAtmospheres, getMonthlyMinMaxTemperatures, getMonthlyTemperatures, getPlace, getTerrainHorizon, HORIZON_CHUNK, listPlaces, nearestPlaceId, placeCount, RECORD_SIZE, searchPlaces, toCivilDate, zmanim } from './places.js'
 export type { AssetLoader, DateInput, Lang, Place } from './places.js'
 export { GEO_RECORD_SIZE, listPlaceGeo, placeTree } from './geo.js'
 export type { PlaceGeo, PlaceOption, PlaceTree } from './geo.js'

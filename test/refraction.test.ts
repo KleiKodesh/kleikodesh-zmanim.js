@@ -56,11 +56,11 @@ describe('lazy climate.bin', () => {
   it('getPlace attaches the climate (climate.bin loaded once, with places.bin and tz.json)', async () => {
     const reads = useFileAssets()
     await zmanim(1, new Date(2026, 0, 1), ['alot', 'tzeit', 'chatzot'])
-    expect(reads.sort()).toEqual(['climate.bin', 'places.bin', 'tz.json'])
+    expect(reads.sort()).toEqual(['climate-minmax.bin', 'climate.bin', 'places.bin', 'tz.json'])
     expect((await getPlace(1)).monthlyTemperatureC).toEqual(await getMonthlyTemperatures(1))
     await zmanim(1, new Date(2026, 0, 1), ['sunrise'])
     await zmanim(2, new Date(2026, 0, 1), ['plag'])
-    expect(reads.sort()).toEqual(['atmosphere.bin', 'climate.bin', 'places.bin', 'tz.json'])
+    expect(reads.sort()).toEqual(['atmosphere.bin', 'climate-minmax.bin', 'climate.bin', 'places.bin', 'tz.json'])
   })
   it('bare coordinates throw for climate zmanim; explicit standard atmosphere works', () => {
     const bare = { lat: 31.77, lng: 35.22, tzid: 'Asia/Jerusalem', elevation: 786 }

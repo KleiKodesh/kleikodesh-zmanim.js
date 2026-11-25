@@ -18,6 +18,10 @@ export interface Place {
   rawOffsetMinutes: number
   /** 12 monthly mean temperatures in C (NaN = unknown), for refraction; attached by getPlace(). */
   monthlyTemperatureC: readonly number[]
+  /** 12 monthly means of the daily minimum temperature in C (NaN = unknown), for sunrise refraction; attached by getPlace(). */
+  monthlyMinTemperatureC: readonly number[]
+  /** 12 monthly means of the daily maximum temperature in C (NaN = unknown), for sunset refraction; attached by getPlace(). */
+  monthlyMaxTemperatureC: readonly number[]
   /** Terrain horizon for sunriseTerrain/sunsetTerrain; not set by getPlace() (see getTerrainHorizon). */
   terrainHorizon?: ArrayLike<number> | null
 }
@@ -49,6 +53,7 @@ export function configure(options: { baseUrl?: string | URL, loader?: AssetLoade
   bin = null
   tz = null
   climate = null
+  climateMinMax = null
   horizon.clear()
   atmospheres = null
   placeCache.clear()
@@ -59,6 +64,7 @@ const names = new Map<Lang, Promise<readonly string[]>>()
 let bin: Promise<DataView> | null = null
 let tz: Promise<{ ids: string[], rawOffsetMinutes: number[] }> | null = null
 let climate: Promise<Int8Array> | null = null
+let climateMinMax: Promise<Int8Array | null> | null = null
 const horizon = new Map<number, Promise<Int16Array | null>>()
 let atmospheres: Promise<AtmosphereTable> | null = null
 const placeCache = new Map<number, Place>()
@@ -73,6 +79,17 @@ function climateTable(): Promise<Int8Array> {
     climate.catch(() => { climate = null })
   }
   return climate
+}
+
+/** Bytes per record in climate-minmax.bin: 12 monthly mean daily minima then 12 maxima, int8 C; -128 = unknown. */
+export const CLIMATE_MINMAX_RECORD_SIZE = 24
+
+function climateMinMaxTable(): Promise<Int8Array | null> {
+  if (!climateMinMax) {
+    // Optional asset: without it the horizon lines fall back to the monthly mean.
+    climateMinMax = loader('climate-minmax.bin').then((buffer) => new Int8Array(buffer), () => null)
+  }
+  return climateMinMax
 }
 
 /** Places per horizon chunk file (assets/horizon-NN.bin, NN = id / HORIZON_CHUNK). */
@@ -105,6 +122,18 @@ export async function getMonthlyTemperatures(id: number): Promise<number[]> {
   const o = id * CLIMATE_RECORD_SIZE
   if (o + CLIMATE_RECORD_SIZE > t.length) return new Array<number>(12).fill(NaN)
   return Array.from(t.subarray(o, o + CLIMATE_RECORD_SIZE), (v) => (v === NO_TEMPERATURE ? NaN : v))
+}
+
+/**
+ * A place's 12 monthly means of the daily minimum and of the daily maximum temperature (C; NaN where unknown).
+ * Loads climate-minmax.bin once; all NaN when it is missing.
+ */
+export async function getMonthlyMinMaxTemperatures(id: number): Promise<{ min: number[], max: number[] }> {
+  const t = await climateMinMaxTable()
+  const o = id * CLIMATE_MINMAX_RECORD_SIZE
+  if (!t || o + CLIMATE_MINMAX_RECORD_SIZE > t.length) return { min: new Array<number>(12).fill(NaN), max: new Array<number>(12).fill(NaN) }
+  const v = Array.from(t.subarray(o, o + CLIMATE_MINMAX_RECORD_SIZE), (x) => (x === NO_TEMPERATURE ? NaN : x))
+  return { min: v.slice(0, 12), max: v.slice(12) }
 }
 
 /** The model atmospheres for ray-traced horizon refraction (atmosphere.bin, 25 KB), loaded once on first need. */
@@ -198,7 +227,7 @@ export async function nearestPlaceId(lat: number, lng: number): Promise<number> 
 export async function getPlace(id: number): Promise<Place> {
   const cached = placeCache.get(id)
   if (cached) return cached
-  const [view, zoneTable, temps] = await Promise.all([table(), zones(), getMonthlyTemperatures(id)])
+  const [view, zoneTable, temps, minMax] = await Promise.all([table(), zones(), getMonthlyTemperatures(id), getMonthlyMinMaxTemperatures(id)])
   const offset = id * RECORD_SIZE
   if (!Number.isInteger(id) || id < 1 || offset + RECORD_SIZE > view.byteLength) throw new RangeError(`No place with id ${id}`)
   const zone = view.getUint8(offset + 10)
@@ -210,6 +239,8 @@ export async function getPlace(id: number): Promise<Place> {
     tzid: zoneTable.ids[zone]!,
     rawOffsetMinutes: zoneTable.rawOffsetMinutes[zone]!,
     monthlyTemperatureC: Object.freeze(temps),
+    monthlyMinTemperatureC: Object.freeze(minMax.min),
+    monthlyMaxTemperatureC: Object.freeze(minMax.max),
   })
   if (placeCache.size >= PLACE_CACHE_SIZE) placeCache.delete(placeCache.keys().next().value!)
   placeCache.set(id, place)

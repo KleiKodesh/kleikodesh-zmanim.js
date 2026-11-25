@@ -195,7 +195,9 @@ ray through a spherically stratified atmosphere (src/atmosphere.ts, src/horizon.
   00 UTC for sunrise and 12 UTC for sunset, blended between months. Elsewhere: AFGL standard profiles
   (Anderson et al. 1986: tropical; midlatitude or subarctic summer/winter blended by season). Bare coordinates:
   U.S. Standard Atmosphere 1976. The profile is moved to the place's own climate: T_place - T_profile at the
-  observer's height applied at the ground and tapered off over 1.5 km.
+  observer's height applied at the ground and tapered off over 1.5 km. T_place is the monthly mean daily
+  minimum for sunrise-side lines (sunrise comes near the coldest hour) and the mean daily maximum for sunset-side
+  lines, against the traced profile itself; the monthly mean (against the profile's daily mean) where they are unknown.
 
 Lines: sunrise/sunset = A 0 from the place's own height (a level plain at that height); Elevated = A = -dip to
 the sea-level horizon (none at or below sea level); Terrain = A = the terrain horizon toward the sun (its altitudes
@@ -219,6 +221,7 @@ Ids are stable: new places get new ids, an id is never reused (a removed place l
 | names-he.txt, names-en.txt | one name per line; line index = id (line 0 empty) |
 | places.bin | record of 11 bytes per id at offset id*11 (record 0 unused), little endian: lat int32, lng int32 (degrees x 1e5), elevation int16 (m), tz index uint8 |
 | climate.bin | 12 bytes per id at offset id*12 (record 0 unused): monthly mean temperature, int8 C, -128 = unknown |
+| climate-minmax.bin | 24 bytes per id at offset id*24 (record 0 unused): 12 monthly mean daily minima, then 12 maxima, int8 C, -128 = unknown; loaded with climate.bin, optional (missing = mean) |
 | atmosphere.bin | model atmospheres (scripts/build-atmosphere.mjs, workflow build-atmosphere): uint16 count, then per profile uint16 levels + float32 z m, T K, p hPa, e hPa; AFGL t, ms, mw, ss, sw, then Bet Dagan month 1..12 x {00, 12 UTC} |
 | tz.json | `{ ids: [IANA zone...], rawOffsetMinutes: [...] }` (standard offset, for the antimeridian rule only) |
 
@@ -230,6 +233,9 @@ daily mean 2 m temperature 2016-2025 from the Open-Meteo Historical Weather API 
 Every place has temperatures. For newly added places, run the fetch-climate-parallel workflow (or
 `node scripts/fetch-climate.mjs`, which resumes from the rows already in data/climate.tsv), then rebuild the assets;
 until then a new place uses the standard-atmosphere temperature (-128 in climate.bin).
+`data/climate-minmax.tsv` (id, 12 monthly mean daily minima, 12 maxima, 0.1 C) is made the same way by
+`scripts/fetch-climate-minmax.mjs` (workflow fetch-climate-minmax): daily minimum and maximum 2 m temperature 2016-2025,
+same API and licence. climate-minmax.bin is 46536 B.
 
 `data/atmosphere.tsv` / `assets/atmosphere.bin` come from `scripts/build-atmosphere.mjs`, run by the
 build-atmosphere workflow (it downloads the IGRA v2 station file and the AFGL profiles, both public domain).
@@ -294,7 +300,7 @@ npm test          # vitest
   Defence and Space GmbH 2014-2018, provided under COPERNICUS by the European Union and ESA; all rights reserved.
   Free use under the Copernicus DEM licence (https://spacedata.copernicus.eu/documents/20123/121286/CSCDA_ESA_Mission-specific+Annex_31_Oct_22.pdf);
   tiles from the AWS Open Data registry (https://registry.opendata.aws/copernicus-dem/).
-- Climate data (climate.bin): weather data by Open-Meteo.com (https://open-meteo.com/), CC BY 4.0, from the
+- Climate data (climate.bin, climate-minmax.bin): weather data by Open-Meteo.com (https://open-meteo.com/), CC BY 4.0, from the
   ERA5 / ERA5-Land reanalysis by the Copernicus Climate Change Service (Hersbach et al. 2018, Munoz Sabater 2019).
 - Model atmospheres (atmosphere.bin): NOAA NCEI IGRA v2 (Durre et al. 2016), station ISM00040179 Bet Dagan, public
   domain; AFGL atmospheric constituent profiles (Anderson et al. 1986, AFGL-TR-86-0110), public domain.

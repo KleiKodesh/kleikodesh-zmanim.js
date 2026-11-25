@@ -1,4 +1,4 @@
-// data/places.tsv + data/climate.tsv -> assets/: climate.bin, names-he.txt, names-en.txt (line index = id), places.bin (11-byte records), tz.json.
+// data/places.tsv + data/climate.tsv -> assets/: climate.bin, climate-minmax.bin, names-he.txt, names-en.txt (line index = id), places.bin (11-byte records), tz.json.
 import { existsSync, mkdirSync, readFileSync, writeFileSync } from 'node:fs'
 
 const RECORD_SIZE = 11
@@ -52,5 +52,14 @@ for (const line of readFileSync('data/climate.tsv', 'utf8').trim().split(/\r?\n/
   months.forEach((v, m) => { if (v !== '' && v !== undefined) climate[Number(id) * 12 + m] = Math.max(-127, Math.min(127, Math.round(Number(v)))) })
 }
 writeFileSync('assets/climate.bin', climate)
+
+// climate-minmax.bin: per id at offset id*24, 12 int8 monthly mean daily minima then 12 maxima (C); -128 = unknown
+// (data/climate-minmax.tsv, scripts/fetch-climate-minmax.mjs).
+const minMax = new Int8Array((maxId + 1) * 24).fill(-128)
+for (const line of readFileSync('data/climate-minmax.tsv', 'utf8').trim().split(/\r?\n/).slice(1)) {
+  const [id, ...values] = line.split('\t')
+  values.forEach((v, k) => { if (v !== '' && v !== undefined && k < 24) minMax[Number(id) * 24 + k] = Math.max(-127, Math.min(127, Math.round(Number(v)))) })
+}
+writeFileSync('assets/climate-minmax.bin', minMax)
 writeFileSync('assets/tz.json', JSON.stringify({ ids: zones, rawOffsetMinutes: zones.map(rawOffsetMinutes) }))
 console.log(`${rows.length} places, ${zones.length} zones`)

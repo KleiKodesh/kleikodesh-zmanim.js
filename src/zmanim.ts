@@ -110,6 +110,14 @@ export interface Coordinates {
    */
   monthlyTemperatureC?: readonly number[] | 'standard'
   /**
+   * 12 monthly means of the daily MINIMUM air temperature in C (NaN = unknown), as getPlace() attaches them: sunrise
+   * comes near the coldest hour, so the sunrise-side horizon lines (sunrise level, elevated and terrain) refract through
+   * these. Missing or NaN: monthlyTemperatureC.
+   */
+  monthlyMinTemperatureC?: readonly number[]
+  /** As monthlyMinTemperatureC, the daily MAXIMUM: used for the sunset-side horizon lines. */
+  monthlyMaxTemperatureC?: readonly number[]
+  /**
    * Terrain horizon for sunriseTerrain/sunsetTerrain: TERRAIN_BINS int16 values, apparent altitude in
    * hundredths of a degree (NO_TERRAIN = none), as zmanim() attaches from horizon-NN.bin. Without it those lines are null.
    */
@@ -129,16 +137,26 @@ const SOLAR_RADIUS = 16 / 60
 /** Dip of the horizon with standard terrestrial refraction, arcminutes per sqrt(meter) (Nautical Almanac / Bowditch). */
 const DIP_ARCMIN_PER_SQRT_M = 1.76
 
-/** What the refraction tracer needs of [place] on [date]; temperature NaN ('standard' or unknown) keeps the profile's own. */
-function airOf(place: Coordinates, date: CivilDate): HorizonAir {
+/**
+ * What the refraction tracer needs of [place] on [date]; temperature NaN ('standard' or unknown) keeps the profile's own.
+ * [hour] 0 (sunrise side) uses the mean daily minimum, 12 (sunset side) the mean daily maximum, each falling back to
+ * the mean; -1 the mean. 'standard' stays standard on both sides.
+ */
+function airOf(place: Coordinates, date: CivilDate, hour: 0 | 12 | -1 = -1): HorizonAir {
   const m = place.monthlyTemperatureC
-  const t = Array.isArray(m) ? temperatureOn(m as readonly number[], date.month, date.day) : NaN
-  return { table: place.atmospheres, lat: place.lat, lng: place.lng, height: place.elevation ?? 0, month: date.month, day: date.day, temperatureC: t }
+  let t = Array.isArray(m) ? temperatureOn(m as readonly number[], date.month, date.day) : NaN
+  const side = m === 'standard' ? undefined : hour === 0 ? place.monthlyMinTemperatureC : hour === 12 ? place.monthlyMaxTemperatureC : undefined
+  let diurnal = false
+  if (side) {
+    const v = temperatureOn(side, date.month, date.day)
+    if (!Number.isNaN(v)) { t = v; diurnal = true }
+  }
+  return { table: place.atmospheres, lat: place.lat, lng: place.lng, height: place.elevation ?? 0, month: date.month, day: date.day, temperatureC: t, diurnal }
 }
 
 /** Ray-traced horizon refraction (arcmin) at [apparent] degrees for [place] on [date]; [hour] 0 sunrise, 12 sunset, -1 mean. */
 function horizonRefraction(place: Coordinates, date: CivilDate, apparent = 0, hour: 0 | 12 | -1 = -1): number {
-  return tracedRefraction(airOf(place, date), apparent, hour)
+  return tracedRefraction(airOf(place, date, hour), apparent, hour)
 }
 
 /**
@@ -162,7 +180,7 @@ export function horizonDip(elevation: number): number {
  */
 export function horizonZenith(place: Coordinates, date: CivilDate, fromHeight = false, hour: 0 | 12 | -1 = -1): number {
   if (fromHeight && (place.elevation ?? 0) > 0) {
-    const { dip, refraction } = tracedDipAndRefraction(airOf(place, date), hour)
+    const { dip, refraction } = tracedDipAndRefraction(airOf(place, date, hour), hour)
     return GEOMETRIC_ZENITH + SOLAR_RADIUS + dip + refraction / 60
   }
   return GEOMETRIC_ZENITH + SOLAR_RADIUS + horizonRefraction(place, date, 0, hour) / 60
