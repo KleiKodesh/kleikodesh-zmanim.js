@@ -1,0 +1,103 @@
+# Monthly mean 2 m temperature AT sunrise and AT sunset per place (scripts/fetch-climate-sunevent.mjs, hourly
+# Open-Meteo ERA5), split across parallel runners (own IP each, so the per-IP limit applies per shard). Each shard
+# uploads its rows; the merge job folds them into data/climate-sunevent.tsv and commits once. Reruns resume.
+# The igra-hours job prints how many Bet Dagan soundings exist per launch hour and year (IGRA v2), to decide whether
+# sunrise/sunset-hour profiles can be built from 06/18 UTC launches.
+# Start: gh workflow run fetch-climate-sunevent.yml -f shards=20
+name: fetch-climate-sunevent
+on:
+  workflow_dispatch:
+    inputs:
+      branch:
+        description: Branch to fetch for and commit to
+        default: master
+      shards:
+        description: Number of parallel runners (max 20)
+        default: '20'
+permissions:
+  contents: write
+jobs:
+  plan:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    outputs:
+      list: ${{ steps.m.outputs.list }}
+    steps:
+      - id: m
+        env:
+          SHARDS: ${{ inputs.shards }}
+        run: echo "list=[$(seq -s, 0 $((SHARDS - 1)))]" >> "$GITHUB_OUTPUT"
+  igra-hours:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - name: Bet Dagan soundings per launch hour and year (IGRA v2 ISM00040179)
+        run: |
+          curl -sSfL --retry 3 -o igra.zip https://www.ncei.noaa.gov/data/integrated-global-radiosonde-archive/access/data-por/ISM00040179-data.txt.zip
+          unzip -o -q igra.zip
+          echo "year  h00 h03 h06 h09 h12 h15 h18 h21 other"
+          grep '^#' ISM00040179-data.txt | awk '{ y = substr($0, 14, 4) + 0; h = substr($0, 25, 2) + 0
+              if (y < 1990) next; b = (h == 99) ? "x" : int((h + 1) % 24 / 3) * 3; c[y, b]++; ys[y] = 1 }
+            END { for (y in ys) { line = y; for (b = 0; b < 24; b += 3) line = line sprintf(" %3d", c[y, b] + 0); print line sprintf(" %3d", c[y, "x"] + 0) } }' | sort
+  fetch:
+    needs: plan
+    runs-on: ubuntu-latest
+    timeout-minutes: 150
+    strategy:
+      fail-fast: false
+      matrix:
+        shard: ${{ fromJson(needs.plan.outputs.list) }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ inputs.branch }}
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - name: Fetch shard ${{ matrix.shard }} of ${{ inputs.shards }}
+        timeout-minutes: 140
+        env:
+          SHARD: ${{ matrix.shard }}
+          SHARDS: ${{ inputs.shards }}
+          OUT: data/sunevent-part.tsv
+          STALL_MS: '3600000'
+        run: |
+          node scripts/fetch-climate-sunevent.mjs
+          echo "rows in part: $(($(grep -c . data/sunevent-part.tsv) - 1))"
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: sunevent-part-${{ matrix.shard }}
+          path: data/sunevent-part.tsv
+          if-no-files-found: ignore
+  merge:
+    needs: fetch
+    if: always()
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ inputs.branch }}
+      - uses: actions/download-artifact@v4
+        with:
+          path: parts
+      - name: Merge parts into data/climate-sunevent.tsv
+        run: |
+          f=data/climate-sunevent.tsv
+          head -1 parts/*/sunevent-part.tsv | grep '^id' | head -1 > header.tsv
+          { cat header.tsv
+            { [ -f "$f" ] && tail -n +2 "$f"; for p in parts/*/sunevent-part.tsv; do tail -n +2 "$p"; done; } |
+              awk -F'\t' '!seen[$1]++' | sort -n -k1,1; } > merged.tsv
+          mv merged.tsv "$f"
+          echo "rows with data: $(($(grep -c . "$f") - 1)) of $(($(grep -c . data/places.tsv) - 1))"
+          awk -F'\t' 'NR>1 { e=0; for (i=2;i<=25;i++) if ($i=="") e++; if (e) print "id " $1 ": " e " empty months" }' "$f" | head -50
+          awk -F'\t' '$1==1 || $1==109 { print "id " $1 " Jan rise " $2 " set " $14 "; Jul rise " $8 " set " $20 }' "$f"
+      - name: Commit
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898283+github-actions[bot]@users.noreply.github.com"
+          git add data/climate-sunevent.tsv
+          git diff --cached --quiet && echo "no change" && exit 0
+          git commit -m "data: climate-sunevent.tsv, monthly mean temperature at sunrise and at sunset from Open-Meteo ERA5 hourly (parallel CI fetch)" -m "User-facing: none"
+          git pull --rebase -q && git push
