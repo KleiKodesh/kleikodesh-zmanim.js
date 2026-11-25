@@ -7,7 +7,7 @@ const MIN = 60_000
 const names: ZmanName[] = ['alot', 'alot72z', 'alotBaalHatanya', 'misheyakir7p65', 'misheyakir12p85', 'misheyakir', 'sunrise',
   'sunriseBaalHatanya', 'sunset', 'sunsetBaalHatanya', 'chatzot', 'chatzotFixedLocal', 'tzeitGeonim', 'tzeitBaalHatanya', 'tzeit50',
   'sofShmaGra', 'sofShmaBaalHatanya', 'sofTfillaBaalHatanya', 'minchaGedolaBaalHatanya', 'minchaKetanaBaalHatanya', 'plagBaalHatanya',
-  'sofShmaHarari40', 'sofShmaHarari25', 'plagHarari40', 'plagHarari25', 'minchaGedolaHillel', 'minchaKetanaHillel', 'plagHillel',
+  'sofShmaHarari40', 'sofShmaHarari25', 'plagHarari40', 'plagHarari25', 'minchaGedolaHillel', 'minchaKetanaHillel', 'plagHillel', 'plagAlotTzeitGeonim',
   'sofShmaGraFixed', 'sofTfillaGraFixed', 'sofShmaMga72Fixed', 'sofShmaMga16Fixed', 'minchaGedolaFixed', 'minchaKetanaFixed', 'plagFixed',
   'sofShmaAsym', 'sofTfillaAsym', 'plagAsym', 'minchaGedola', 'plag']
 const dates = [{ year: 2026, month: 3, day: 20 }, { year: 2026, month: 6, day: 21 }, { year: 2026, month: 12, day: 21 }]
@@ -35,6 +35,8 @@ async function check(id: number): Promise<void> {
     expect(t.minchaGedolaHillel).toBeGreaterThanOrEqual(t.chatzot + 30 * MIN - 1)
     expect(t.minchaKetanaHillel).toBeLessThan(t.plagHillel)
     expect(t.plagHillel).toBeLessThan(t.sunset)
+    expect(t.plagAlotTzeitGeonim).toBeLessThan(t.plagHillel)
+    expect(t.plagAlotTzeitGeonim).toBeGreaterThan(t.plag)
     expect(Math.abs(t.sofShmaGraFixed - (t.sunrise + t.chatzotFixedLocal) / 2)).toBeLessThan(2)
     expect(Math.abs(t.sofTfillaGraFixed - (t.sunrise + (t.chatzotFixedLocal - t.sunrise) * 2 / 3))).toBeLessThan(2)
     expect(t.sofShmaMga72Fixed).toBeLessThan(t.sofShmaGraFixed)

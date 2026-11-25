@@ -12,7 +12,7 @@ export const ZMAN_NAMES = [
   'sofTfillaMga120', 'sofTfillaMga90', 'sofTfillaMga19', 'sofTfillaMga90z', 'sofTfillaMga', 'sofTfillaMga16', 'sofTfillaMga72z', 'sofTfillaHarari40', 'sofTfillaHarari25', 'sofTfillaAsym', 'sofTfillaBaalHatanya', 'sofTfillaBenIshChai', 'sofTfillaGra', 'sofTfillaGraFixed',
   'chatzot', 'chatzotFixedLocal', 'minchaGedola', 'minchaGedola30', 'minchaGedolaFixed', 'minchaGedolaHillel', 'minchaGedolaBaalHatanya',
   'minchaGedolaHarari40', 'minchaGedolaHarari25', 'minchaKetana', 'minchaKetanaFixed', 'minchaKetanaHillel', 'minchaKetanaBaalHatanya',
-  'minchaKetanaHarari40', 'minchaKetanaHarari25', 'plag', 'plagFixed', 'plagHillel', 'plagBaalHatanya', 'plagHarari40', 'plagHarari25', 'plagAsym', 'plagBenIshChai', 'plagMga', 'plagMga72z', 'plagMga19', 'plagMga90z', 'plagMga90', 'plagMga120', 'plagAlot90Tzeit645', 'plagAlot72Tzeit645', 'plagAlot12Tzeit7083',
+  'minchaKetanaHarari40', 'minchaKetanaHarari25', 'plag', 'plagFixed', 'plagHillel', 'plagAlotTzeitGeonim', 'plagBaalHatanya', 'plagHarari40', 'plagHarari25', 'plagAsym', 'plagBenIshChai', 'plagMga', 'plagMga72z', 'plagMga19', 'plagMga90z', 'plagMga90', 'plagMga120', 'plagAlot90Tzeit645', 'plagAlot72Tzeit645', 'plagAlot12Tzeit7083',
   'candles40', 'candles30', 'candles22', 'candles20', 'candles18', 'sunsetTerrain', 'sunset', 'sunsetElevated', 'sunsetBaalHatanya',
   'tzeitGeonim', 'tzeitGeonimVisible', 'tzeitBaalHatanya', 'tzeit13p5', 'tzeit18', 'tzeit18Sun', 'tzeit20', 'tzeit645', 'tzeit7083', 'tzeit', 'tzeitVisible', 'tzeit24', 'tzeit30',
   'tzeit40', 'tzeit45', 'tzeit50', 'tzeit13p5z', 'beinHashmashotYereim', 'beinHashmashotRt', 'tzeitRt72', 'tzeitRt72Zmanis', 'tzeitRt16', 'tzeitRt90', 'tzeitRt96', 'tzeit90z',
@@ -47,7 +47,7 @@ export const ROUNDING: Readonly<Record<ZmanName, Rounding>> = {
   minchaGedolaBaalHatanya: 'up', minchaKetanaBaalHatanya: 'up', plagBaalHatanya: 'up', sunsetBaalHatanya: 'down', tzeitBaalHatanya: 'up',
   sofShmaHarari40: 'down', sofShmaHarari25: 'down', sofTfillaHarari40: 'down', sofTfillaHarari25: 'down',
   minchaGedolaHarari40: 'up', minchaGedolaHarari25: 'up', minchaKetanaHarari40: 'up', minchaKetanaHarari25: 'up', plagHarari40: 'up', plagHarari25: 'up',
-  minchaGedolaHillel: 'up', minchaKetanaHillel: 'up', plagHillel: 'up',
+  minchaGedolaHillel: 'up', minchaKetanaHillel: 'up', plagHillel: 'up', plagAlotTzeitGeonim: 'up',
   sofShmaGraFixed: 'down', sofTfillaGraFixed: 'down', sofShmaMga72Fixed: 'down', sofShmaMga16Fixed: 'down',
   minchaGedolaFixed: 'up', minchaKetanaFixed: 'up', plagFixed: 'up',
   sofShmaAsym: 'down', sofTfillaAsym: 'down', plagAsym: 'up', plagBenIshChai: 'up', sofShmaBenIshChai: 'down', sofTfillaBenIshChai: 'down',
@@ -420,6 +420,8 @@ export function zmanInstants(place: Coordinates, date: CivilDate, which: readonl
   const harari = (after: number, h: number): number => Day.shaahBased(today.gra(-1.2), today.sunset() + after * MINUTE_MS, h)
   const hillelEnd = (): number => today.set(G + TZEIT_HILLEL)
   const hillelHour = (): number => (hillelEnd() - today.rise(G + ALOT)) / 12
+  const geonimEnd = (): number => today.set(G + TZEIT_GEONIM)
+  const geonimHour = (): number => (geonimEnd() - today.rise(G + ALOT)) / 12
   // [part] of the way from [start] to fixed local chatzot.
   const halfTo = (start: number, part: number): number => start + (today.chatzotFixed - start) * part
   const asym = (h: number): number => Day.shaahBased(today.rise(G + ALOT), today.set(G + TZEIT_7083), h)
@@ -565,6 +567,8 @@ export function zmanInstants(place: Coordinates, date: CivilDate, which: readonl
         today.chatzot + (today.set(G + TZEIT_GEONIM) - today.rise(G + ALOT)) / 24); break
       case 'minchaKetanaHillel': ms = hillelEnd() - hillelHour() * 2.5; break
       case 'plagHillel': ms = hillelEnd() - hillelHour() * 1.25; break
+      // Hours from dawn 16.1 deg, the day ending at the Geonim's nightfall 3.7 deg (secondary source, not checked in the text).
+      case 'plagAlotTzeitGeonim': ms = geonimEnd() - geonimHour() * 1.25; break
       // Fixed local chatzot (12:00 local mean time; Aruch HaShulchan OC 233:14, Igrot Moshe OC 1:24, 2:20).
       case 'chatzotFixedLocal': ms = today.chatzotFixed; break
       case 'sofShmaGraFixed': ms = halfTo(today.sunrise(), 1 / 2); break

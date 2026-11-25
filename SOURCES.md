@@ -41,6 +41,10 @@ Not cited here, and not Birur Zmanim (earlier notes had them as copies of part 1
 The lines described only by their definition (the Harari 25 / 40, Hillel and asymmetric day lines) stay unnamed:
 these books do not support those attributions.
 
+| Line | Source (secondary, not checked in the text) | What it supports |
+|---|---|---|
+| plagAlotTzeitGeonim | Zemaneh Yosef website (github.com/Zemaneh-Yosef/royzmanimwebsite, _includes/zmanDescription/plagHamincha.md; no license file, so facts and citations only, no text copied) | contemporary authorities count the seasonal hours from dawn but end the day at the Geonim's 13.5-minute nightfall (Ben Ish Chai year 1, Vayakhel 8; Or LeTzion vol. 2 p.147; Ma'amar Mordechai vol. 4 siman 12); it suggests plag at the 10.75th hour of that day as a stringency |
+
 Dr. Cohn's letter in Melamed LeHo'il is signed from Rawitsch; he later worked at the Strasbourg observatory, where his
 1899 tables ("Tabellen enthaltend die Zeitangaben fuer den Beginn der Nacht und des Tages") appeared. The siman does not
 name those tables or a Strasbourg custom; the tables themselves were not seen.

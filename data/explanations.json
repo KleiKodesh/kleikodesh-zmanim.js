@@ -2559,6 +2559,22 @@
       ]
     }
   },
+  "plagAlotTzeitGeonim": {
+    "he": {
+      "title": "פלג המנחה - מעלות השחר עד צאת הכוכבים של הגאונים (לחומרא)",
+      "text": "שעה ורביע זמנית לפני צאת הכוכבים של הגאונים (3.7 מעלות), ביום מעלות השחר (16.1 מעלות) עד צאת הכוכבים של הגאונים. לחומרא.",
+      "sources": [
+        "בן איש חי שנה א ויקהל ח; אור לציון ח\"ב עמוד 147; מאמר מרדכי ח\"ד סימן יב - מתוך אתר זמני יוסף, לא נבדק במקור"
+      ]
+    },
+    "en": {
+      "title": "Plag hamincha - from dawn to the Geonim's nightfall (stringent)",
+      "text": "1.25 temporal hours before the Geonim's nightfall (3.7 deg), in a day from dawn at 16.1 deg to that nightfall: the 10.75th hour of that day, a stringency.",
+      "sources": [
+        "Ben Ish Chai year 1, Vayakhel 8; Or LeTzion vol. 2 p.147; Ma'amar Mordechai vol. 4 siman 12 - as cited by the Zemaneh Yosef website, not checked in the text"
+      ]
+    }
+  },
   "chatzotFixedLocal": {
     "he": {
       "title": "חצות קבוע (12:00 זמן מקומי)",

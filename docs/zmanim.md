@@ -1534,6 +1534,16 @@ The later of half a temporal hour after chatzot (of a day from dawn at 16.1 deg 
 
 - a day ending at the Geonim's nightfall: hours of a day from dawn at 16.1 deg to nightfall at 3.7 / 3.8 deg
 
+<a id="plagAlotTzeitGeonim"></a>
+
+## Plag hamincha - from dawn to the Geonim's nightfall (stringent)
+
+1.25 temporal hours before the Geonim's nightfall (3.7 deg), in a day from dawn at 16.1 deg to that nightfall: the 10.75th hour of that day, a stringency.
+
+**Sources:**
+
+- Ben Ish Chai year 1, Vayakhel 8; Or LeTzion vol. 2 p.147; Ma'amar Mordechai vol. 4 siman 12 - as cited by the Zemaneh Yosef website, not checked in the text
+
 <a id="chatzotFixedLocal"></a>
 
 ## Fixed chatzot (12:00 local time)
