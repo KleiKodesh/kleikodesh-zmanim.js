@@ -125,7 +125,8 @@ export const GEOMETRIC_ZENITH = 90
 /** Solar semidiameter used for sunrise/sunset, degrees (16'). */
 const SOLAR_RADIUS = 16 / 60
 /** Mean Earth radius, meters. */
-const EARTH_RADIUS = 6_371_000
+/** Dip of the horizon with standard terrestrial refraction, arcminutes per sqrt(meter) (Nautical Almanac / Bowditch). */
+const DIP_ARCMIN_PER_SQRT_M = 1.76
 
 function temperatureAt(place: Coordinates, date: CivilDate): number {
   const m = place.monthlyTemperatureC
@@ -140,9 +141,15 @@ function horizonRefraction(place: Coordinates, date: CivilDate, apparent = 0): n
   return horizonRefractionArcmin(standardPressure(place.elevation ?? 0), temperatureAt(place, date), apparent) * factor
 }
 
-/** Geometric dip of the sea horizon seen from [elevation] meters, degrees: arccos(R / (R + h)). None below sea level. */
+/**
+ * Dip of the visible sea/plain horizon seen from [elevation] meters, degrees: D = 1.76' * sqrt(h m), the standard
+ * dip with terrestrial refraction (the line of sight to the horizon bends down with the Earth, so the horizon looks
+ * higher than the purely geometric arccos(R / (R + h)) = 1.93' * sqrt(h)). Sources: Nautical Almanac, "Dip" table
+ * and its explanation; N. Bowditch, The American Practical Navigator (Pub. 9), chapter "Sight reduction", dip
+ * correction D = 1.76' sqrt(h); A. T. Young, "Dip of the horizon" (aty.sdsu.edu). None below sea level.
+ */
 export function horizonDip(elevation: number): number {
-  return elevation > 0 ? Math.acos(EARTH_RADIUS / (EARTH_RADIUS + elevation)) * 180 / Math.PI : 0
+  return elevation > 0 ? DIP_ARCMIN_PER_SQRT_M * Math.sqrt(elevation) / 60 : 0
 }
 
 /**

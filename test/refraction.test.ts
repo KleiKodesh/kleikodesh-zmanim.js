@@ -77,7 +77,10 @@ describe('sunrise/sunset from the place height', () => {
   it('dip grows with height; elevated sunset is later, sunrise earlier', () => {
     expect(horizonDip(0)).toBe(0)
     expect(horizonDip(-400)).toBe(0)
-    expect(horizonDip(800)).toBeCloseTo(0.908, 2)
+    // Nautical Almanac / Bowditch dip with terrestrial refraction, 1.76' sqrt(h): 750 m -> 48.2', smaller than the geometric 52.7'.
+    expect(horizonDip(750) * 60).toBeCloseTo(48.2, 1)
+    expect(horizonDip(30) * 60).toBeCloseTo(9.64, 1)
+    expect(horizonDip(750) * 60).toBeLessThan(Math.acos(6_371_000 / (6_371_000 + 750)) * 180 / Math.PI * 60 - 4)
     const place = { lat: 31.77, lng: 35.22, tzid: 'Asia/Jerusalem', elevation: 800, monthlyTemperatureC: 'standard' as const }
     const date = { year: 2026, month: 6, day: 21 }
     const t = zmanInstants(place, date, ['sunrise', 'sunriseElevated', 'sunset', 'sunsetElevated'])
@@ -94,5 +97,20 @@ describe('sunrise/sunset from the place height', () => {
     expect(r.alot90! < r.alot!).toBe(true)
     expect(r.plag! < r.plagMga!).toBe(true)
     expect(r.sunset! < r.tzeitGeonim! && r.tzeitGeonim! < r.tzeit!).toBe(true)
+  })
+})
+
+describe('elevated sunset with the standard dip', () => {
+  it('Jerusalem 750 m / Bnei Brak 30 m, 21 Jun and 21 Dec: dip with terrestrial refraction', () => {
+    const cases = [
+      [31.778, 35.235, 750, 6, 4.9, 5.2], [31.778, 35.235, 750, 12, 4.8, 5.1],
+      [32.084, 34.834, 30, 6, 0.95, 1.1], [32.084, 34.834, 30, 12, 0.95, 1.1],
+    ] as const
+    for (const [lat, lng, elevation, month, lo, hi] of cases) {
+      const t = zmanInstants({ lat, lng, tzid: 'Asia/Jerusalem', elevation, monthlyTemperatureC: 'standard' }, { year: 2026, month, day: 21 }, ['sunset', 'sunsetElevated'])
+      const later = (Number(t.sunsetElevated!) - Number(t.sunset!)) / 6e10
+      expect(later).toBeGreaterThan(lo)
+      expect(later).toBeLessThan(hi)
+    }
   })
 })

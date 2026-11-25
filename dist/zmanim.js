@@ -5,16 +5,16 @@ import { horizonRefractionArcmin, inversionFactor, standardPressure, standardTem
 import { julianDayFromUtcMs, spa, spaDay, spaEvent, zenithToH0 } from './spa.js';
 /** Every zman the library computes, in the order of the day. Each is computed only when requested. */
 export const ZMAN_NAMES = [
-    'chatzotNight', 'alot90Visible', 'alot90', 'alot90Chatzot', 'alot90z', 'alotVisible', 'alot', 'alotChatzot', 'alot72z', 'alot96', 'alot120', 'misheyakirVisible',
-    'misheyakir', 'misheyakirChatzot', 'misheyakir11', 'misheyakir10p2', 'misheyakir7p65', 'misheyakir12p85', 'alotBaalHatanya', 'sunriseBaalHatanya', 'sunriseElevated', 'sunrise', 'sunriseTerrain',
+    'chatzotNight', 'alot90Visible', 'alot90', 'alot90Chatzot', 'alot90z', 'alotVisible', 'alot', 'alotChatzot', 'alot72z', 'alot96', 'alot120', 'alot12', 'misheyakir66', 'misheyakir60', 'misheyakirVisible',
+    'misheyakir', 'misheyakirChatzot', 'misheyakir11', 'misheyakirLechumra', 'misheyakir10p2', 'misheyakir7p65', 'misheyakir12p85', 'misheyakir40', 'alotBaalHatanya', 'sunriseBaalHatanya', 'sunriseElevated', 'sunrise', 'sunriseTerrain',
     'sofShmaMga120', 'sofShmaMga90', 'sofShmaMga19', 'sofShmaMga90z', 'sofShmaMga', 'sofShmaMga16', 'sofShmaMga72z', 'sofShmaMga72Fixed', 'sofShmaMga16Fixed', 'sofShmaHarari40', 'sofShmaHarari25', 'sofShmaAsym', 'sofShmaBaalHatanya', 'sofShmaBenIshChai', 'sofShmaGra', 'sofShmaGraFixed',
     'sofTfillaMga120', 'sofTfillaMga90', 'sofTfillaMga19', 'sofTfillaMga90z', 'sofTfillaMga', 'sofTfillaMga16', 'sofTfillaMga72z', 'sofTfillaHarari40', 'sofTfillaHarari25', 'sofTfillaAsym', 'sofTfillaBaalHatanya', 'sofTfillaBenIshChai', 'sofTfillaGra', 'sofTfillaGraFixed',
     'chatzot', 'chatzotFixedLocal', 'minchaGedola', 'minchaGedola30', 'minchaGedolaFixed', 'minchaGedolaHillel', 'minchaGedolaBaalHatanya',
     'minchaGedolaHarari40', 'minchaGedolaHarari25', 'minchaKetana', 'minchaKetanaFixed', 'minchaKetanaHillel', 'minchaKetanaBaalHatanya',
-    'minchaKetanaHarari40', 'minchaKetanaHarari25', 'plag', 'plagFixed', 'plagHillel', 'plagBaalHatanya', 'plagHarari40', 'plagHarari25', 'plagAsym', 'plagBenIshChai', 'plagMga', 'plagMga72z', 'plagMga19', 'plagMga90z', 'plagMga90', 'plagMga120', 'plagAlot90Tzeit645', 'plagAlot72Tzeit645',
+    'minchaKetanaHarari40', 'minchaKetanaHarari25', 'plag', 'plagFixed', 'plagHillel', 'plagAlotTzeitGeonim', 'plagBaalHatanya', 'plagHarari40', 'plagHarari25', 'plagAsym', 'plagBenIshChai', 'plagMga', 'plagMga72z', 'plagMga19', 'plagMga90z', 'plagMga90', 'plagMga120', 'plagAlot90Tzeit645', 'plagAlot72Tzeit645', 'plagAlot12Tzeit7083',
     'candles40', 'candles30', 'candles22', 'candles20', 'candles18', 'sunsetTerrain', 'sunset', 'sunsetElevated', 'sunsetBaalHatanya',
     'tzeitGeonim', 'tzeitGeonimVisible', 'tzeitBaalHatanya', 'tzeit13p5', 'tzeit18', 'tzeit18Sun', 'tzeit20', 'tzeit645', 'tzeit7083', 'tzeit', 'tzeitVisible', 'tzeit24', 'tzeit30',
-    'tzeit40', 'tzeit50', 'tzeit13p5z', 'beinHashmashotYereim', 'beinHashmashotRt', 'tzeitRt72', 'tzeitRt72Zmanis', 'tzeitRt16', 'tzeitRt90', 'tzeitRt96', 'tzeit90z',
+    'tzeit40', 'tzeit45', 'tzeit50', 'tzeit13p5z', 'beinHashmashotYereim', 'beinHashmashotRt', 'tzeitRt72', 'tzeitRt72Zmanis', 'tzeitRt16', 'tzeitRt90', 'tzeitRt96', 'tzeit90z',
 ];
 /**
  * How each printed minute is rounded, the stringent way: a zman that starts something rounds UP, a deadline
@@ -23,7 +23,7 @@ export const ZMAN_NAMES = [
 export const ROUNDING = {
     alot90Chatzot: 'up', alotChatzot: 'up', misheyakirChatzot: 'up',
     chatzotNight: 'up', alot90Visible: 'up', alot90: 'up', alotVisible: 'up', alot: 'up', misheyakirVisible: 'up',
-    misheyakir: 'up', misheyakir11: 'up', misheyakir10p2: 'up', sunriseElevated: 'up', sunrise: 'up', sunriseTerrain: 'up',
+    misheyakir: 'up', misheyakir11: 'up', misheyakir10p2: 'up', misheyakirLechumra: 'up', sunriseElevated: 'up', sunrise: 'up', sunriseTerrain: 'up',
     sofShmaGra: 'down', sofShmaMga: 'down', sofShmaMga16: 'down', sofTfillaGra: 'down', sofTfillaMga: 'down', sofTfillaMga16: 'down',
     chatzot: 'nearest', minchaGedola: 'up', minchaGedola30: 'up', minchaKetana: 'up', plag: 'up', plagMga: 'up',
     sunset: 'down', sunsetElevated: 'down', sunsetTerrain: 'down', tzeitGeonim: 'up', tzeitGeonimVisible: 'up', tzeit7083: 'up', tzeit18Sun: 'up', tzeit: 'up', tzeitVisible: 'up',
@@ -32,8 +32,9 @@ export const ROUNDING = {
     alot90z: 'up', alot72z: 'up', alot96: 'up', alot120: 'up', tzeit90z: 'up',
     sofShmaMga120: 'down', sofShmaMga90: 'down', sofShmaMga19: 'down', sofShmaMga90z: 'down', sofShmaMga72z: 'down',
     sofTfillaMga120: 'down', sofTfillaMga90: 'down', sofTfillaMga19: 'down', sofTfillaMga90z: 'down', sofTfillaMga72z: 'down',
-    plagMga120: 'up', plagAlot90Tzeit645: 'up', plagAlot72Tzeit645: 'up', tzeit645: 'up', plagMga90: 'up', plagMga19: 'up', plagMga90z: 'up', plagMga72z: 'up',
-    tzeit13p5: 'up', tzeit18: 'up', tzeit20: 'up', tzeit24: 'up', tzeit30: 'up', tzeit40: 'up', tzeit50: 'up',
+    plagMga120: 'up', plagAlot90Tzeit645: 'up', plagAlot72Tzeit645: 'up', alot12: 'up', plagAlot12Tzeit7083: 'up', tzeit645: 'up', plagMga90: 'up', plagMga19: 'up', plagMga90z: 'up', plagMga72z: 'up',
+    tzeit13p5: 'up', tzeit18: 'up', tzeit20: 'up', tzeit24: 'up', tzeit30: 'up', tzeit40: 'up', tzeit45: 'up', tzeit50: 'up',
+    misheyakir66: 'up', misheyakir60: 'up', misheyakir40: 'up',
     // The start of Rabbeinu Tam's twilight ends the time that is surely day (work before Shabbat): a deadline.
     beinHashmashotYereim: 'down', beinHashmashotRt: 'down',
     misheyakir7p65: 'up', misheyakir12p85: 'up', chatzotFixedLocal: 'nearest',
@@ -41,7 +42,7 @@ export const ROUNDING = {
     minchaGedolaBaalHatanya: 'up', minchaKetanaBaalHatanya: 'up', plagBaalHatanya: 'up', sunsetBaalHatanya: 'down', tzeitBaalHatanya: 'up',
     sofShmaHarari40: 'down', sofShmaHarari25: 'down', sofTfillaHarari40: 'down', sofTfillaHarari25: 'down',
     minchaGedolaHarari40: 'up', minchaGedolaHarari25: 'up', minchaKetanaHarari40: 'up', minchaKetanaHarari25: 'up', plagHarari40: 'up', plagHarari25: 'up',
-    minchaGedolaHillel: 'up', minchaKetanaHillel: 'up', plagHillel: 'up',
+    minchaGedolaHillel: 'up', minchaKetanaHillel: 'up', plagHillel: 'up', plagAlotTzeitGeonim: 'up',
     sofShmaGraFixed: 'down', sofTfillaGraFixed: 'down', sofShmaMga72Fixed: 'down', sofShmaMga16Fixed: 'down',
     minchaGedolaFixed: 'up', minchaKetanaFixed: 'up', plagFixed: 'up',
     sofShmaAsym: 'down', sofTfillaAsym: 'down', plagAsym: 'up', plagBenIshChai: 'up', sofShmaBenIshChai: 'down', sofTfillaBenIshChai: 'down',
@@ -56,7 +57,7 @@ export const HORIZON_ZMANIM = new Set(['sunrise', 'sunset', 'sunriseElevated', '
     'candles40', 'candles30', 'candles22', 'candles20', 'candles18', 'tzeitRt72', 'tzeitRt72Zmanis', 'tzeitRt90', 'tzeitRt96', 'tzeit13p5z', 'sunriseTerrain', 'sunsetTerrain',
     'alot90z', 'alot72z', 'alot96', 'alot120', 'tzeit90z', 'sofShmaMga120', 'sofShmaMga90', 'sofShmaMga90z', 'sofShmaMga72z', 'sofTfillaMga120', 'sofTfillaMga90',
     'sofTfillaMga90z', 'sofTfillaMga72z', 'plagMga120', 'plagMga90', 'plagMga90z', 'plagMga72z',
-    'tzeit13p5', 'tzeit18', 'tzeit20', 'tzeit24', 'tzeit30', 'tzeit40', 'tzeit50', 'beinHashmashotRt',
+    'tzeit13p5', 'tzeit18', 'tzeit20', 'tzeit24', 'tzeit30', 'tzeit40', 'tzeit45', 'tzeit50', 'beinHashmashotRt', 'misheyakir66', 'misheyakir60', 'misheyakir40',
     'sofShmaHarari40', 'sofShmaHarari25', 'sofTfillaHarari40', 'sofTfillaHarari25', 'minchaGedolaHarari40', 'minchaGedolaHarari25',
     'minchaKetanaHarari40', 'minchaKetanaHarari25', 'plagHarari40', 'plagHarari25',
     'sofShmaBenIshChai', 'sofTfillaBenIshChai', 'plagBenIshChai', 'sofShmaGraFixed', 'sofTfillaGraFixed', 'sofShmaMga72Fixed', 'minchaKetanaFixed', 'plagFixed']);
@@ -93,7 +94,8 @@ export const GEOMETRIC_ZENITH = 90;
 /** Solar semidiameter used for sunrise/sunset, degrees (16'). */
 const SOLAR_RADIUS = 16 / 60;
 /** Mean Earth radius, meters. */
-const EARTH_RADIUS = 6371000;
+/** Dip of the horizon with standard terrestrial refraction, arcminutes per sqrt(meter) (Nautical Almanac / Bowditch). */
+const DIP_ARCMIN_PER_SQRT_M = 1.76;
 function temperatureAt(place, date) {
     const m = place.monthlyTemperatureC;
     const t = Array.isArray(m) ? temperatureOn(m, date.month, date.day) : NaN;
@@ -105,9 +107,15 @@ function horizonRefraction(place, date, apparent = 0) {
     const factor = l ? inversionFactor(temperatureOn(l, date.month, date.day)) : 1;
     return horizonRefractionArcmin(standardPressure(place.elevation ?? 0), temperatureAt(place, date), apparent) * factor;
 }
-/** Geometric dip of the sea horizon seen from [elevation] meters, degrees: arccos(R / (R + h)). None below sea level. */
+/**
+ * Dip of the visible sea/plain horizon seen from [elevation] meters, degrees: D = 1.76' * sqrt(h m), the standard
+ * dip with terrestrial refraction (the line of sight to the horizon bends down with the Earth, so the horizon looks
+ * higher than the purely geometric arccos(R / (R + h)) = 1.93' * sqrt(h)). Sources: Nautical Almanac, "Dip" table
+ * and its explanation; N. Bowditch, The American Practical Navigator (Pub. 9), chapter "Sight reduction", dip
+ * correction D = 1.76' sqrt(h); A. T. Young, "Dip of the horizon" (aty.sdsu.edu). None below sea level.
+ */
 export function horizonDip(elevation) {
-    return elevation > 0 ? Math.acos(EARTH_RADIUS / (EARTH_RADIUS + elevation)) * 180 / Math.PI : 0;
+    return elevation > 0 ? DIP_ARCMIN_PER_SQRT_M * Math.sqrt(elevation) / 60 : 0;
 }
 /**
  * Zenith of the sun's centre at sunrise/sunset for [place] on [date]: 90 + radius + dip + refraction at the
@@ -135,10 +143,26 @@ const ALOT_90 = 19.8;
 const MISHEYAKIR = 11.5;
 const MISHEYAKIR_11 = 11;
 const MISHEYAKIR_10_2 = 10.2;
+/**
+ * Stringent (later) misheyakir, 10.5 deg: when one recognises an acquaintance at 4 amot / tells tchelet from lavan
+ * (SA OC 18:3, 30:1, 58:1). Published angles span about 10.2-11.5 deg (en.wikipedia.org/wiki/Zmanim); 10.5 waits until
+ * it is clearly light enough.
+ */
+const MISHEYAKIR_LECHUMRA = 10.5;
 /** Three small stars (about 36 min): Biur Halacha OC 293:2 ("three small stars") - checked in the text; the angle is an estimate. */
 const TZEIT = 8.5;
-/** Three medium stars (an observational estimate), 7.083 deg. */
+/**
+ * Three medium stars (an observational estimate), 7.083 deg (7 deg 5 min). Dr. Baruch (Berthold) Cohn's letter in Shu"t
+ * Melamed LeHo'il (R. D. Z. Hoffmann) part 1, siman 30: he set the sun 7 deg 5 min below the horizon for three medium
+ * stars - checked in the text. Hebcal uses the same angle (end of Tisha B'Av; hebcal.com/home/4463).
+ */
 const TZEIT_7083 = 7.083;
+/**
+ * Dawn when the light spreads over the whole face of the east, the sun 12 deg below the horizon: Dr. Baruch (Berthold)
+ * Cohn's letters in Shu"t Melamed LeHo'il part 1, siman 30 (he says his tables should also give this time, which in his
+ * view is dawn) - checked in the text. With TZEIT_7083 it bounds the plagAlot12Tzeit7083 day.
+ */
+const ALOT_12 = 12;
 /**
  * The Geonim: 3/4 mil (13.5 min) after sunset. Shabbat 34b; SA OC 261:2. Rav Ovadia Yosef rules 13.5 seasonal minutes after
  * the visible sunset (Kitzur Yalkut Yosef OC, Hilchot Shabbat) - checked in the text; that is the tzeit13p5z line.
@@ -355,6 +379,8 @@ export function zmanInstants(place, date, which = ZMAN_NAMES) {
     const harari = (after, h) => Day.shaahBased(today.gra(-1.2), today.sunset() + after * MINUTE_MS, h);
     const hillelEnd = () => today.set(G + TZEIT_HILLEL);
     const hillelHour = () => (hillelEnd() - today.rise(G + ALOT)) / 12;
+    const geonimEnd = () => today.set(G + TZEIT_GEONIM);
+    const geonimHour = () => (geonimEnd() - today.rise(G + ALOT)) / 12;
     // [part] of the way from [start] to fixed local chatzot.
     const halfTo = (start, part) => start + (today.chatzotFixed - start) * part;
     const asym = (h) => Day.shaahBased(today.rise(G + ALOT), today.set(G + TZEIT_7083), h);
@@ -397,6 +423,9 @@ export function zmanInstants(place, date, which = ZMAN_NAMES) {
                 break;
             case 'misheyakir10p2':
                 ms = today.rise(G + MISHEYAKIR_10_2);
+                break;
+            case 'misheyakirLechumra':
+                ms = today.rise(G + MISHEYAKIR_LECHUMRA);
                 break;
             case 'sunriseElevated':
                 ms = today.sunrise(true);
@@ -542,6 +571,13 @@ export function zmanInstants(place, date, which = ZMAN_NAMES) {
             case 'plagAlot72Tzeit645':
                 ms = today.alotToTzeit645(ALOT, 10.75);
                 break;
+            // Dr. Baruch Cohn (Melamed LeHo'il 1:30): dawn at 12 deg, nightfall at 7 deg 5 min.
+            case 'alot12':
+                ms = today.rise(G + ALOT_12);
+                break;
+            case 'plagAlot12Tzeit7083':
+                ms = Day.shaahBased(today.rise(G + ALOT_12), today.set(G + TZEIT_7083), 10.75);
+                break;
             case 'beinHashmashotYereim':
                 ms = today.set(G - BH_YEREIM);
                 break;
@@ -609,6 +645,9 @@ export function zmanInstants(place, date, which = ZMAN_NAMES) {
             case 'tzeit40':
                 ms = today.sunset() + 40 * MINUTE_MS;
                 break;
+            case 'tzeit45':
+                ms = today.sunset() + 45 * MINUTE_MS;
+                break;
             // New York: "not less than 50 minutes" for the end of Shabbat - Igrot Moshe OC 4:62, checked in the text.
             case 'tzeit50':
                 ms = today.sunset() + 50 * MINUTE_MS;
@@ -627,6 +666,15 @@ export function zmanInstants(place, date, which = ZMAN_NAMES) {
                 break;
             case 'misheyakir12p85':
                 ms = today.rise(G + MISHEYAKIR_12_85);
+                break;
+            case 'misheyakir66':
+                ms = today.sunrise() - 66 * MINUTE_MS;
+                break;
+            case 'misheyakir60':
+                ms = today.sunrise() - 60 * MINUTE_MS;
+                break;
+            case 'misheyakir40':
+                ms = today.sunrise() - 40 * MINUTE_MS;
                 break;
             // Baal HaTanya: a day from netz amiti to shkia amiti, the sun's centre 1.583 deg below the true horizon.
             case 'alotBaalHatanya':
@@ -696,6 +744,10 @@ export function zmanInstants(place, date, which = ZMAN_NAMES) {
                 break;
             case 'plagHillel':
                 ms = hillelEnd() - hillelHour() * 1.25;
+                break;
+            // Hours from dawn 16.1 deg, the day ending at the Geonim's nightfall 3.7 deg (secondary source, not checked in the text).
+            case 'plagAlotTzeitGeonim':
+                ms = geonimEnd() - geonimHour() * 1.25;
                 break;
             // Fixed local chatzot (12:00 local mean time; Aruch HaShulchan OC 233:14, Igrot Moshe OC 1:24, 2:20).
             case 'chatzotFixedLocal':
