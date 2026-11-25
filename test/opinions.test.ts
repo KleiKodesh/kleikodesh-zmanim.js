@@ -17,7 +17,7 @@ describe('opinion lines', () => {
     const p = await getPlace(1)
     for (const date of [{ year: 2026, month: 3, day: 20 }, { year: 2026, month: 6, day: 21 }, { year: 2026, month: 12, day: 21 }]) {
       const t = zmanInstants(p, date)
-      const order: ZmanName[] = ['alot90Visible', 'alot90', 'alotVisible', 'alot', 'misheyakirVisible', 'misheyakir', 'misheyakir11',
+      const order: ZmanName[] = ['alot90Visible', 'alot90', 'alotVisible', 'alot', 'misheyakirVisible', 'misheyakir', 'misheyakir11', 'misheyakirLechumra',
         'misheyakir10p2', 'sunrise', 'chatzot', 'sunset', 'tzeitGeonim', 'tzeitGeonimVisible', 'tzeit7083', 'tzeit', 'tzeitVisible']
       for (let i = 1; i < order.length; i++) expect(ms(t[order[i]!]), order[i]).toBeGreaterThan(ms(t[order[i - 1]!]))
       // Visible lines: R0 (~0.5 deg) deeper, so 2-4 minutes beyond the geometric line.
@@ -43,7 +43,7 @@ describe('opinion lines', () => {
 describe('high latitudes in June: null or a correct time, never garbage', () => {
   const tsv = tsvByKey()
   const lines: Array<[ZmanName, number]> = [['alot90', 19.8], ['alot', 16.1], ['misheyakir', 11.5], ['misheyakir11', 11],
-    ['misheyakir10p2', 10.2], ['alot12', 12], ['tzeitGeonim', 3.7], ['tzeit7083', 7.083], ['tzeit', 8.5]]
+    ['misheyakir10p2', 10.2], ['misheyakirLechumra', 10.5], ['alot12', 12], ['tzeitGeonim', 3.7], ['tzeit7083', 7.083], ['tzeit', 8.5]]
   for (const key of ['london', 'manchester', 'amsterdam']) {
     it(key, async () => {
       useFileAssets()

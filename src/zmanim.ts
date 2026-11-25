@@ -7,7 +7,7 @@ import { julianDayFromUtcMs, spa, spaDay, spaEvent, zenithToH0, type SpaDay } fr
 /** Every zman the library computes, in the order of the day. Each is computed only when requested. */
 export const ZMAN_NAMES = [
   'chatzotNight', 'alot90Visible', 'alot90', 'alot90Chatzot', 'alot90z', 'alotVisible', 'alot', 'alotChatzot', 'alot72z', 'alot96', 'alot120', 'alot12', 'misheyakir66', 'misheyakir60', 'misheyakirVisible',
-  'misheyakir', 'misheyakirChatzot', 'misheyakir11', 'misheyakir10p2', 'misheyakir7p65', 'misheyakir12p85', 'misheyakir40', 'alotBaalHatanya', 'sunriseBaalHatanya', 'sunriseElevated', 'sunrise', 'sunriseTerrain',
+  'misheyakir', 'misheyakirChatzot', 'misheyakir11', 'misheyakirLechumra', 'misheyakir10p2', 'misheyakir7p65', 'misheyakir12p85', 'misheyakir40', 'alotBaalHatanya', 'sunriseBaalHatanya', 'sunriseElevated', 'sunrise', 'sunriseTerrain',
   'sofShmaMga120', 'sofShmaMga90', 'sofShmaMga19', 'sofShmaMga90z', 'sofShmaMga', 'sofShmaMga16', 'sofShmaMga72z', 'sofShmaMga72Fixed', 'sofShmaMga16Fixed', 'sofShmaHarari40', 'sofShmaHarari25', 'sofShmaAsym', 'sofShmaBaalHatanya', 'sofShmaBenIshChai', 'sofShmaGra', 'sofShmaGraFixed',
   'sofTfillaMga120', 'sofTfillaMga90', 'sofTfillaMga19', 'sofTfillaMga90z', 'sofTfillaMga', 'sofTfillaMga16', 'sofTfillaMga72z', 'sofTfillaHarari40', 'sofTfillaHarari25', 'sofTfillaAsym', 'sofTfillaBaalHatanya', 'sofTfillaBenIshChai', 'sofTfillaGra', 'sofTfillaGraFixed',
   'chatzot', 'chatzotFixedLocal', 'minchaGedola', 'minchaGedola30', 'minchaGedolaFixed', 'minchaGedolaHillel', 'minchaGedolaBaalHatanya',
@@ -28,7 +28,7 @@ export type Rounding = 'up' | 'down' | 'nearest'
 export const ROUNDING: Readonly<Record<ZmanName, Rounding>> = {
   alot90Chatzot: 'up', alotChatzot: 'up', misheyakirChatzot: 'up',
   chatzotNight: 'up', alot90Visible: 'up', alot90: 'up', alotVisible: 'up', alot: 'up', misheyakirVisible: 'up',
-  misheyakir: 'up', misheyakir11: 'up', misheyakir10p2: 'up', sunriseElevated: 'up', sunrise: 'up', sunriseTerrain: 'up',
+  misheyakir: 'up', misheyakir11: 'up', misheyakir10p2: 'up', misheyakirLechumra: 'up', sunriseElevated: 'up', sunrise: 'up', sunriseTerrain: 'up',
   sofShmaGra: 'down', sofShmaMga: 'down', sofShmaMga16: 'down', sofTfillaGra: 'down', sofTfillaMga: 'down', sofTfillaMga16: 'down',
   chatzot: 'nearest', minchaGedola: 'up', minchaGedola30: 'up', minchaKetana: 'up', plag: 'up', plagMga: 'up',
   sunset: 'down', sunsetElevated: 'down', sunsetTerrain: 'down', tzeitGeonim: 'up', tzeitGeonimVisible: 'up', tzeit7083: 'up', tzeit18Sun: 'up', tzeit: 'up', tzeitVisible: 'up',
@@ -172,6 +172,12 @@ const ALOT_90 = 19.8
 const MISHEYAKIR = 11.5
 const MISHEYAKIR_11 = 11
 const MISHEYAKIR_10_2 = 10.2
+/**
+ * Stringent (later) misheyakir, 10.5 deg: when one recognises an acquaintance at 4 amot / tells tchelet from lavan
+ * (SA OC 18:3, 30:1, 58:1). Published angles span about 10.2-11.5 deg (en.wikipedia.org/wiki/Zmanim); 10.5 waits until
+ * it is clearly light enough.
+ */
+const MISHEYAKIR_LECHUMRA = 10.5
 /** Three small stars (about 36 min): Biur Halacha OC 293:2 ("three small stars") - checked in the text; the angle is an estimate. */
 const TZEIT = 8.5
 /**
@@ -433,6 +439,7 @@ export function zmanInstants(place: Coordinates, date: CivilDate, which: readonl
       case 'misheyakir': ms = today.rise(G + MISHEYAKIR); break
       case 'misheyakir11': ms = today.rise(G + MISHEYAKIR_11); break
       case 'misheyakir10p2': ms = today.rise(G + MISHEYAKIR_10_2); break
+      case 'misheyakirLechumra': ms = today.rise(G + MISHEYAKIR_LECHUMRA); break
       case 'sunriseElevated': ms = today.sunrise(true); break
       case 'sunrise': ms = today.sunrise(); break
       case 'sunriseTerrain': ms = today.terrain(-1); break

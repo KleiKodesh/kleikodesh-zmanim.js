@@ -154,6 +154,19 @@ Misheyakir by a later estimate: the sun 10.2 degrees below the horizon in the mo
 - Shulchan Aruch OC 18:3
 - Shulchan Aruch OC 58:1
 
+<a id="misheyakirLechumra"></a>
+
+## Misheyakir (stringent)
+
+A later, stringent misheyakir for those who wait until it is clearly light enough to recognise an acquaintance at 4 amot or tell tchelet from white: the sun 10.5 degrees below the horizon in the morning. Poskim give a range of angles for this time (about 10.2 to 11.5 degrees).
+
+**Sources:**
+
+- Berachot 9b
+- Shulchan Aruch OC 18:3
+- Shulchan Aruch OC 58:1
+- Shulchan Aruch OC 30:1
+
 <a id="sunriseElevated"></a>
 
 ## Sunrise (from the place's elevation)

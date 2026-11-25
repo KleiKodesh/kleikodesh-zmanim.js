@@ -58,6 +58,7 @@ Also exported: `zmanInstants` (exact instants as BigInt epoch nanoseconds), `for
 | misheyakirVisible | sun 11.5 deg below the visible horizon | up |
 | misheyakirChatzot | misheyakir, or chatzotNight on nights the sun never gets 11.5 deg down (1) | up |
 | misheyakir11 / misheyakir10p2 | sun 11 / 10.2 deg below, morning (other published misheyakir angles) | up |
+| misheyakirLechumra | sun 10.5 deg below, morning: a later, stringent misheyakir (SA OC 18:3, 30:1, 58:1; published angles span 10.2-11.5 deg) | up |
 | sunriseElevated | sunrise over the horizon seen from the place's own elevation (dip + refraction) | up |
 | sunrise | sea-level sunrise | up |
 | sunriseTerrain | the sun's upper limb clears the real terrain horizon at its azimuth (horizon-NN.bin; null without data) | up |
