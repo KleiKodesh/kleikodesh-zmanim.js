@@ -42,7 +42,7 @@ describe('opinion lines', () => {
 
 describe('high latitudes in June: null or a correct time, never garbage', () => {
   const tsv = tsvByKey()
-  const lines: Array<[ZmanName, number]> = [['alot90', 19.8], ['alot', 16.1], ['misheyakir', 11.5], ['misheyakir11', 11],
+  const lines: Array<[ZmanName, number]> = [['alot90', 19.8], ['alot', 16.05], ['misheyakir', 11.5], ['misheyakir11', 11],
     ['misheyakir10p2', 10.2], ['misheyakirLechumra', 10.5], ['alot12', 12], ['tzeitGeonim', 3.7], ['tzeit7083', 7.083], ['tzeit', 8.5]]
   for (const key of ['london', 'manchester', 'amsterdam']) {
     it(key, async () => {
@@ -86,7 +86,7 @@ describe('candle lighting and Rabbeinu Tam', () => {
       expect(ms(t.sunset) - ms(t.candles40)).toBe(40 * 60000)
       expect(ms(t.tzeitRt72) - ms(t.sunset)).toBe(72 * 60000)
       expect(ms(t.tzeitRt72Zmanis) - ms(t.sunset)).toBeCloseTo((ms(t.sunset) - ms(t.sunrise)) / 10, -1)
-      // 16.1 deg is roughly 72 minutes after sunset in Jerusalem (more in summer).
+      // 16.05 deg is roughly 72 minutes after sunset in Jerusalem (more in summer).
       const rt16 = (ms(t.tzeitRt16) - ms(t.sunset)) / 60000
       expect(rt16).toBeGreaterThan(65); expect(rt16).toBeLessThan(95)
     }

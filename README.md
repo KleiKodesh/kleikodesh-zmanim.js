@@ -51,9 +51,9 @@ Also exported: `zmanInstants` (exact instants as BigInt epoch nanoseconds), `for
 | alot90 | sun 19.8 deg below the horizon, morning (the "90 minutes" opinion) | up |
 | alot90Visible | sun 19.8 deg below the visible horizon (see below) | up |
 | alot90Chatzot | alot90, or chatzotNight on nights the sun never gets 19.8 deg down (1) | up |
-| alot | sun 16.1 deg below the horizon, morning | up |
-| alotVisible | sun 16.1 deg below the visible horizon | up |
-| alotChatzot | alot, or chatzotNight on nights the sun never gets 16.1 deg down (1) | up |
+| alot | sun 16.05 deg below the horizon, morning | up |
+| alotVisible | sun 16.05 deg below the visible horizon | up |
+| alotChatzot | alot, or chatzotNight on nights the sun never gets 16.05 deg down (1) | up |
 | misheyakir | sun 11.5 deg below, morning | up |
 | misheyakirVisible | sun 11.5 deg below the visible horizon | up |
 | misheyakirChatzot | misheyakir, or chatzotNight on nights the sun never gets 11.5 deg down (1) | up |
@@ -63,7 +63,7 @@ Also exported: `zmanInstants` (exact instants as BigInt epoch nanoseconds), `for
 | sunrise | sea-level sunrise | up |
 | sunriseTerrain | the sun's upper limb clears the real terrain horizon at its azimuth (horizon-NN.bin; null without data) | up |
 | sofShmaMga / sofTfillaMga | 3 / 4 temporal hours of the day from 72 min before sunrise to 72 min after sunset | down |
-| sofShmaMga16 / sofTfillaMga16 | 3 / 4 temporal hours of the MGA day by degrees: alot 16.1 deg to the sun 16.1 deg below in the evening | down |
+| sofShmaMga16 / sofTfillaMga16 | 3 / 4 temporal hours of the MGA day by degrees: alot 16.05 deg to the sun 16.05 deg below in the evening | down |
 | sofShmaGra / sofTfillaGra | 3 / 4 temporal hours of sunrise..sunset | down |
 | chatzot | solar noon | nearest |
 | minchaGedola / minchaKetana / plag | 6.5 / 9.5 / 10.75 temporal hours (GRA) | up |
@@ -87,7 +87,7 @@ Also exported: `zmanInstants` (exact instants as BigInt epoch nanoseconds), `for
 | tzeitVisible | sun 8.5 deg below the visible horizon, evening | up |
 | tzeitRt72 | Rabbeinu Tam: 72 fixed minutes after sunset (4 mil of 18 min; Tosafot Shabbat 35a, from Pesachim 94a; SA OC 261:2 with Rema) | up |
 | tzeitRt72Zmanis | Rabbeinu Tam in seasonal minutes: sunset plus a tenth of the sunrise..sunset day | up |
-| tzeitRt16 | Rabbeinu Tam by degrees: sun 16.1 deg below, evening (the depth 72 minutes after sunset at the Jerusalem equinox) | up |
+| tzeitRt16 | Rabbeinu Tam by degrees: sun 16.05 deg below, evening (the depth 72 minutes after sunset at the Jerusalem equinox) | up |
 | alot72z / alot90z | dawn in seasonal minutes: a tenth / an eighth of the sunrise..sunset day before sunrise (4 mil, Pesachim 94a; 5 mil, Pesachim 93b) | up |
 | tzeit90z | nightfall in seasonal minutes: an eighth of the sunrise..sunset day after sunset (5 mil, Pesachim 93b) | up |
 | tzeit13p5 / tzeit18 | 13.5 / 18 fixed minutes after sunset: 3/4 mil (Shabbat 34b; SA OC 261:2) at 18 / 24 min a mil (SA OC 459:2; Rambam on Mishna Pesachim 3:2) | up |
@@ -98,7 +98,7 @@ Also exported: `zmanInstants` (exact instants as BigInt epoch nanoseconds), `for
 | alot96 / alot120 | dawn 4 / 5 mil of 24 min before sunrise (96 / 120 fixed minutes) - Shulchan Aruch HaRav OC 89:1 with OC 459:10 (checked in the text); the 120-minute reading per HaMichlol, Alot HaShachar note 3 | up |
 | tzeitRt90 / tzeitRt96 | Rabbeinu Tam: 4 mil of 22.5 / 24 min after sunset (90 / 96 fixed minutes) - Igrot Moshe OC 4:62; Shulchan Aruch HaRav OC 261:5 with OC 459:10 (checked in the text) | up |
 | beinHashmashotYereim | start of bein hashmashot per the Yereim: 3/4 mil (18 min) before sunset, as the sun 2.99 deg above the true horizon (its height 18 minutes before sunset in Jerusalem at the equinox); degree-based method per Rabbi Yedidya Manet, Zmanei HaHalacha Lema'aseh p. 11 | down |
-| plagAlot90Tzeit645 / plagAlot72Tzeit645 | plag (10.75 seasonal hours) of a day from dawn (19.8 / 16.1 deg) to tzeit645 - the Magen Avraham's day from dawn to nightfall (Magen Avraham 58:1; SA OC 233:1) | up |
+| plagAlot90Tzeit645 / plagAlot72Tzeit645 | plag (10.75 seasonal hours) of a day from dawn (19.8 / 16.05 deg) to tzeit645 - the Magen Avraham's day from dawn to nightfall (Magen Avraham 58:1; SA OC 233:1) | up |
 | tzeit20 / tzeit24 / tzeit30 / tzeit40 / tzeit50 | 20 / 24 / 30 / 40 / 50 fixed minutes after sunset, by community custom (50: Rav Moshe Feinstein, Igrot Moshe OC 1:24) | up |
 | tzeit45 | 45 fixed minutes after sunset - the Chazon Ish's end of Shabbat, which already includes Rabbeinu Tam (Birur Zmanim vol 2 p.18) | up |
 | beinHashmashotRt | start of twilight per Rabbeinu Tam: sunset + 58.5 min (3.25 mil of 18 min; Tosafot Shabbat 35a, Pesachim 94a; SA OC 261:2). Twilight ends at tzeitRt72; by the Geonim it is sunset..tzeitGeonim | down |
@@ -108,14 +108,14 @@ Also exported: `zmanInstants` (exact instants as BigInt epoch nanoseconds), `for
 | sunriseBaalHatanya / sunsetBaalHatanya | Baal HaTanya's netz / shkia amiti: the sun's centre 1.583 deg below the true horizon (a few minutes before sea-level sunrise / after sea-level sunset) | up / down |
 | sofShmaBaalHatanya / sofTfillaBaalHatanya / minchaGedolaBaalHatanya / minchaKetanaBaalHatanya / plagBaalHatanya | 3 / 4 / 6.5 / 9.5 / 10.75 temporal hours of the day netz amiti..shkia amiti | down / down / up / up / up |
 | sofShmaHarari40/25, sofTfillaHarari40/25, minchaGedolaHarari40/25, minchaKetanaHarari40/25, plagHarari40/25 | Magen Avraham's day: 3 / 4 / 6.5 / 9.5 / 10.75 temporal hours of a day from alot72z to sunset + 40 min (outside Israel) / + 25 min (Israel); its midpoint is not chatzot | down / down / up / up / up |
-| minchaGedolaHillel | a day ending at the Geonim's nightfall: the later of chatzot + half a temporal hour of a day 16.1 deg..3.7 deg and chatzot + 30 min | up |
-| plagAlotTzeitGeonim | 10.75 temporal hours into a day from dawn 16.1 deg to the Geonim's nightfall 3.7 deg (a stringency) | up |
-| minchaKetanaHillel / plagHillel | a day ending at the Geonim's nightfall: 2.5 / 1.25 temporal hours (of a day 16.1 deg..3.8 deg) before the sun is 3.8 deg below | up |
+| minchaGedolaHillel | a day ending at the Geonim's nightfall: the later of chatzot + half a temporal hour of a day 16.05 deg..3.7 deg and chatzot + 30 min | up |
+| plagAlotTzeitGeonim | 10.75 temporal hours into a day from dawn 16.05 deg to the Geonim's nightfall 3.7 deg (a stringency) | up |
+| minchaKetanaHillel / plagHillel | a day ending at the Geonim's nightfall: 2.5 / 1.25 temporal hours (of a day 16.05 deg..3.8 deg) before the sun is 3.8 deg below | up |
 | chatzotFixedLocal | 12:00 local mean time (longitude / 15 hours from UTC); Aruch HaShulchan OC 233:14 (checked in the text) | nearest |
 | sofShmaGraFixed / sofTfillaGraFixed | half and two thirds of the morning to the fixed chatzot: sunrise + 1/2 / 2/3 of (chatzotFixedLocal - sunrise) | down |
-| sofShmaMga72Fixed / sofShmaMga16Fixed | dawn (72 min before sunrise / 16.1 deg) + half of (chatzotFixedLocal - dawn) | down |
+| sofShmaMga72Fixed / sofShmaMga16Fixed | dawn (72 min before sunrise / 16.05 deg) + half of (chatzotFixedLocal - dawn) | down |
 | minchaGedolaFixed / minchaKetanaFixed / plagFixed | chatzotFixedLocal + 30 min / + 3.5 / + 4.75 hours of (sunset - chatzotFixedLocal) / 6 | up |
-| sofShmaAsym / sofTfillaAsym / plagAsym | 3 / 4 / 10.75 temporal hours of a day from dawn 16.1 deg to nightfall 7.083 deg (Ben Ish Chai and others; Yisrael Vehazmanim vol. III no. 22) | down / down / up |
+| sofShmaAsym / sofTfillaAsym / plagAsym | 3 / 4 / 10.75 temporal hours of a day from dawn 16.05 deg to nightfall 7.083 deg (Ben Ish Chai and others; Yisrael Vehazmanim vol. III no. 22) | down / down / up |
 
 Degree lines return null on days the sun never gets that low (high latitudes in summer); no rule is invented for
 them, except the explicit `...Chatzot` fallback lines:
@@ -148,12 +148,12 @@ moladMs(moladIndexAtOrBefore(Date.now()))           // the last molad, epoch ms 
 | kind | name | definition | rounding | sources |
 |---|---|---|---|---|
 | erevPesach | sofAchilatChametzMga | end of 4th temporal hour, day 72 min before sunrise .. 72 min after sunset | down | Mishna Pesachim 1:4; Pesachim 11b-12b; SA OC 443:1; Magen Avraham 58:1, MB 58:4 |
-| erevPesach | sofAchilatChametzMga16 | the same, day from alot 16.1 deg to 16.1 deg in the evening | down | as above |
+| erevPesach | sofAchilatChametzMga16 | the same, day from alot 16.05 deg to 16.05 deg in the evening | down | as above |
 | erevPesach | sofAchilatChametzGra | end of 4th temporal hour, sunrise .. sunset | down | as above; MB 58:4 |
 | erevPesach | sofBiurChametzMga / Mga16 / Gra | end of the 5th hour, same three days | down | as above |
 | fastDay | fastStart90 | 90 fixed minutes before sunrise (5 mil) | down | SA OC 564:1; Pesachim 94a; SA OC 459:2, MB 459:15 |
 | fastDay | fastStart72 | 72 fixed minutes before sunrise (4 mil) | down | as above |
-| fastDay | fastStart16 | sun 16.1 deg below the horizon (= alot) | down | SA OC 564:1; Pesachim 94a |
+| fastDay | fastStart16 | sun 16.05 deg below the horizon (= alot) | down | SA OC 564:1; Pesachim 94a |
 | kiddushLevana | kiddushLevanaStart3 | molad + 3 full days | up | MB 426:20 |
 | kiddushLevana | kiddushLevanaStart7 | molad + 7 full days | up | SA OC 426:4 |
 | kiddushLevana | kiddushLevanaEndHalf | molad + half of 29 d 12 h 793 chalakim (14 d 18 h 22 min 1.7 s) | down | Rema OC 426:3 (Maharil) |

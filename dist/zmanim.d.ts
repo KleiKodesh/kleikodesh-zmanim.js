@@ -68,6 +68,17 @@ export declare function horizonDip(elevation: number): number;
  * [fromHeight] false: the sea-level horizon (no dip); true: the horizon seen from the place's own elevation.
  */
 export declare function horizonZenith(place: Coordinates, date: CivilDate, fromHeight?: boolean): number;
+/** Jerusalem latitude for the equinox conversions: Har HaBayit (the Temple Mount, Old City), 31.778 N. */
+export declare const JERUSALEM_LAT = 31.778;
+/**
+ * The exact degree form of "N minutes before visible sunrise / after visible sunset in Jerusalem at the equinox":
+ * the sun's depression below the geometric horizon at hour angle H0 + N * 0.25 deg, where H0 is the hour angle of
+ * visible sea-level sunset (centre at -0.833 deg) at declination 0 and latitude [lat] (Har HaBayit, 31.778 N).
+ * With declination 0: cos H0 = -sin(0.833) / cos(lat) and sin(altitude) = cos(lat) * cos(H). Negative [minutes]
+ * gives the time before sunset (a negative depression = height above the horizon).
+ * 72 -> 16.050, 90 -> 19.798, 13.5 -> 3.701, 18 -> 4.6565, -18 -> -2.992.
+ */
+export declare function equinoxDepression(minutes: number, lat?: number): number;
 export declare function addDays(d: CivilDate, days: number): CivilDate;
 /**
  * Epoch ms of a sun event (kind -1 rise, 0 transit, +1 set, the sun's centre at [zenith]) on the local mean solar

@@ -128,17 +128,36 @@ export function horizonZenith(place, date, fromHeight = false) {
     const r = horizonRefraction(place, date, -dip);
     return GEOMETRIC_ZENITH + SOLAR_RADIUS + dip + r / 60;
 }
+/** Jerusalem latitude for the equinox conversions: Har HaBayit (the Temple Mount, Old City), 31.778 N. */
+export const JERUSALEM_LAT = 31.778;
+/** Visible sea-level sunrise/sunset: the sun's centre 0.833 deg below the geometric horizon (34' refraction + 16' radius). */
+const VISIBLE_HORIZON_DEPRESSION = 34 / 60 + 16 / 60;
+/**
+ * The exact degree form of "N minutes before visible sunrise / after visible sunset in Jerusalem at the equinox":
+ * the sun's depression below the geometric horizon at hour angle H0 + N * 0.25 deg, where H0 is the hour angle of
+ * visible sea-level sunset (centre at -0.833 deg) at declination 0 and latitude [lat] (Har HaBayit, 31.778 N).
+ * With declination 0: cos H0 = -sin(0.833) / cos(lat) and sin(altitude) = cos(lat) * cos(H). Negative [minutes]
+ * gives the time before sunset (a negative depression = height above the horizon).
+ * 72 -> 16.050, 90 -> 19.798, 13.5 -> 3.701, 18 -> 4.6565, -18 -> -2.992.
+ */
+export function equinoxDepression(minutes, lat = JERUSALEM_LAT) {
+    const r = Math.PI / 180;
+    const h0 = Math.acos(-Math.sin(VISIBLE_HORIZON_DEPRESSION * r) / Math.cos(lat * r));
+    return -Math.asin(Math.cos(lat * r) * Math.cos(h0 + minutes * 0.25 * r)) / r;
+}
 // Depressions of the sun's centre below the geometric horizon, degrees.
 /**
  * Dawn 72 minutes (4 mil of 18 min) before sunrise, as the sun's depth at that time in Jerusalem at the equinox.
  * Pesachim 94a (4 mil, R. Yehuda); Biur Halacha OC 89:1 ("sha'a vechomesh sha'a" before netz, per the Rambam) - checked in the text.
  * Birur Zmanim vol 1 p.66: 72 min in Eretz Yisrael at the equinox is about 16 deg (see SOURCES.md).
+ * Exact by equinoxDepression: 16.050 deg (was the rounded 16.1).
  */
-const ALOT = 16.1;
+const ALOT = equinoxDepression(72);
 /** Dawn 90 minutes (5 mil of 18 min). Pesachim 93b; SA OC 459:2 and Mishna Berura 459:15 (mil = 18 min).
  * Birur Zmanim vol 1 p.66: 90 min is about 19.75 deg; Bein Hashmashot (Tukachinsky) p.105: dawn 1.5 hours before sunrise;
- * Birur Zmanim vol 2 pp.209-239: calendars rightly use 90, MGA hours run dawn to nightfall. */
-const ALOT_90 = 19.8;
+ * Birur Zmanim vol 2 pp.209-239: calendars rightly use 90, MGA hours run dawn to nightfall.
+ * Exact by equinoxDepression: 19.798 deg (was the rounded 19.8). */
+const ALOT_90 = equinoxDepression(90);
 /** Misheyakir (earliest tallit and tefillin): Berachot 9b; SA OC 18:3. The angles are accepted estimates (about 50 / 48 / 44 min). */
 const MISHEYAKIR = 11.5;
 const MISHEYAKIR_11 = 11;
@@ -166,8 +185,9 @@ const ALOT_12 = 12;
 /**
  * The Geonim: 3/4 mil (13.5 min) after sunset. Shabbat 34b; SA OC 261:2. Rav Ovadia Yosef rules 13.5 seasonal minutes after
  * the visible sunset (Kitzur Yalkut Yosef OC, Hilchot Shabbat) - checked in the text; that is the tzeit13p5z line.
+ * By degrees: the depth 13.5 min after sunset in Jerusalem at the equinox, exact by equinoxDepression: 3.701 deg (was 3.7).
  */
-const TZEIT_GEONIM = 3.7;
+const TZEIT_GEONIM = equinoxDepression(13.5);
 /** Rav Yaakov Moshe Hillel's nightfall for the afternoon zmanim, 3.8 deg. */
 const TZEIT_HILLEL = 3.8;
 /**
@@ -191,17 +211,17 @@ const TZEIT_645 = 6.45;
 /**
  * The Yereim's bein hashmashot: 3/4 mil (24 minutes a mil = 18 minutes) before sunset, by the sun's position: its
  * height above the true horizon 18 minutes before sea-level sunset in Jerusalem at the equinox, computed with this
- * library's own SPA (2.990 deg in March, 2.995 deg in September 2026). Sefer Yereim: bein hashmashot is 3/4 mil, beginning
+ * library's own SPA (2.990 deg in March, 2.995 deg in September 2026); now exact by equinoxDepression(-18): 2.992 deg. Sefer Yereim: bein hashmashot is 3/4 mil, beginning
  * before Ulla's sunset - checked in the text. Bein Hashmashot (Tukachinsky) p.33; Birur Zmanim vol 2 pp.228-231.
  */
-const BH_YEREIM = 2.99;
+const BH_YEREIM = -equinoxDepression(-18);
 /**
  * 18 minutes (3/4 mil at 24 minutes a mil) expressed by the sun's position: how far the sun is below
  * the true horizon 18 minutes after sea-level sunset in Jerusalem at the equinox, computed with this
- * library's own SPA (4.655 deg in March, 4.661 deg in September 2026). Jerusalem maariv 17-18 min after sunset per
+ * library's own SPA (4.655 deg in March, 4.661 deg in September 2026); now exact by equinoxDepression(18): 4.6565 deg. Jerusalem maariv 17-18 min after sunset per
  * R. Shmuel Salant: Bein Hashmashot (Tukachinsky) pp.71-72.
  */
-const TZEIT_18_SUN = 4.66;
+const TZEIT_18_SUN = equinoxDepression(18);
 const MINUTE_MS = 60000;
 const DAY_MS = 86400000;
 /** SPA A.2 correction step repeats (the paper does 1; 3 converges well under a second). */
@@ -354,7 +374,7 @@ class Day {
     mga19(hours) {
         return Day.shaahBased(this.rise(GEOMETRIC_ZENITH + ALOT_90), this.set(GEOMETRIC_ZENITH + ALOT_90), hours);
     }
-    /** MGA day by degrees: from alot (16.1 deg) to tzeit at 16.1 deg in the evening. */
+    /** MGA day by degrees: from alot (16.05 deg) to tzeit at 16.05 deg in the evening. */
     mga16(hours) {
         return Day.shaahBased(this.rise(GEOMETRIC_ZENITH + ALOT), this.set(GEOMETRIC_ZENITH + ALOT), hours);
     }
@@ -532,7 +552,7 @@ export function zmanInstants(place, date, which = ZMAN_NAMES) {
             case 'tzeitRt72Zmanis':
                 ms = today.gra(13.2);
                 break;
-            // The same by degrees: the sun 16.1 deg below, its depth 72 minutes after sunset at the Jerusalem equinox.
+            // The same by degrees: the sun 16.05 deg below, its depth 72 minutes after sunset at the Jerusalem equinox.
             case 'tzeitRt16':
                 ms = today.set(G + ALOT);
                 break;
@@ -735,7 +755,7 @@ export function zmanInstants(place, date, which = ZMAN_NAMES) {
             case 'plagHarari25':
                 ms = harari(25, 10.75);
                 break;
-            // Rav Yaakov Moshe Hillel's method: hours of a day from dawn 16.1 deg to nightfall 3.7 / 3.8 deg.
+            // Rav Yaakov Moshe Hillel's method: hours of a day from dawn 16.05 deg to nightfall 3.7 / 3.8 deg.
             case 'minchaGedolaHillel':
                 ms = Math.max(today.chatzot + 30 * MINUTE_MS, today.chatzot + (today.set(G + TZEIT_GEONIM) - today.rise(G + ALOT)) / 24);
                 break;
@@ -745,7 +765,7 @@ export function zmanInstants(place, date, which = ZMAN_NAMES) {
             case 'plagHillel':
                 ms = hillelEnd() - hillelHour() * 1.25;
                 break;
-            // Hours from dawn 16.1 deg, the day ending at the Geonim's nightfall 3.7 deg (secondary source, not checked in the text).
+            // Hours from dawn 16.05 deg, the day ending at the Geonim's nightfall 3.7 deg (secondary source, not checked in the text).
             case 'plagAlotTzeitGeonim':
                 ms = geonimEnd() - geonimHour() * 1.25;
                 break;
@@ -774,7 +794,7 @@ export function zmanInstants(place, date, which = ZMAN_NAMES) {
             case 'plagFixed':
                 ms = today.chatzotFixed + (today.sunset() - today.chatzotFixed) / 6 * 4.75;
                 break;
-            // An asymmetric day: dawn 16.1 deg to nightfall 7.083 deg (Ben Ish Chai and others).
+            // An asymmetric day: dawn 16.05 deg to nightfall 7.083 deg (Ben Ish Chai and others).
             case 'sofShmaAsym':
                 ms = asym(3);
                 break;

@@ -60,21 +60,21 @@ The 90-minute dawn (19.8 degrees). On summer nights in northern lands where the 
 
 ## Dawn (alot hashachar)
 
-The first light in the east. From this time one fulfils, after the fact, the morning prayer and the daytime mitzvos. Here: the sun 16.1 degrees below the horizon in the morning, which is 72 minutes (four mil of 18 minutes) before sunrise in Jerusalem at the equinox.
+The first light in the east. From this time one fulfils, after the fact, the morning prayer and the daytime mitzvos. Here: the sun 16.05 degrees below the horizon in the morning, which is 72 minutes (four mil of 18 minutes) before sunrise in Jerusalem at the equinox.
 
 **Sources:**
 
 - Pesachim 94a (Rabbi Yehuda: from dawn to sunrise four mil)
 - Shulchan Aruch OC 459:2; Mishna Berura 459:15 (a mil = 18 minutes)
 - Shulchan Aruch OC 89:1; Mishna Berura 89:2 (what dawn is; prayer from dawn after the fact)
-- Astronomy: in Jerusalem at the equinox the sun is 16.1 degrees below the horizon 72 minutes before sunrise
+- Astronomy: in Jerusalem at the equinox the sun is 16.05 degrees below the horizon 72 minutes before sunrise
 - Birur Zmanim vol 1 p.66 (72 min in Eretz Yisrael at the equinox is about 16 deg)
 
 <a id="alotVisible"></a>
 
 ## Dawn (from the visible horizon)
 
-Like dawn (16.1 degrees), but the degrees are measured from the visible horizon, which refraction in the air lifts. It comes out about 2 to 4 minutes earlier.
+Like dawn (16.05 degrees), but the degrees are measured from the visible horizon, which refraction in the air lifts. It comes out about 2 to 4 minutes earlier.
 
 **Sources:**
 
@@ -87,7 +87,7 @@ Like dawn (16.1 degrees), but the degrees are measured from the visible horizon,
 
 ## Dawn (or midnight)
 
-Dawn (16.1 degrees). On summer nights in northern lands where the sun never gets that low, it gives midnight instead, following the Vilna Gaon.
+Dawn (16.05 degrees). On summer nights in northern lands where the sun never gets that low, it gives midnight instead, following the Vilna Gaon.
 
 **Sources:**
 
@@ -224,7 +224,7 @@ The morning Shema may be read until the end of three temporal hours. By the Mage
 
 ## Latest Shema (Magen Avraham, by degrees)
 
-Like the Magen Avraham's latest Shema, but the day is measured by degrees: from dawn (sun 16.1 degrees below the horizon in the morning) to the sun 16.1 degrees below the horizon in the evening. So the length follows the season and the place.
+Like the Magen Avraham's latest Shema, but the day is measured by degrees: from dawn (sun 16.05 degrees below the horizon in the morning) to the sun 16.05 degrees below the horizon in the evening. So the length follows the season and the place.
 
 **Sources:**
 
@@ -232,7 +232,7 @@ Like the Magen Avraham's latest Shema, but the day is measured by degrees: from 
 - Shulchan Aruch OC 58:1
 - Magen Avraham 58:1
 - Mishna Berura 58:4
-- Astronomy: 16.1 degrees = 72 minutes in Jerusalem at the equinox
+- Astronomy: 16.05 degrees = 72 minutes in Jerusalem at the equinox
 - Birur Zmanim vol 1 p.66 (72 min in Eretz Yisrael at the equinox is about 16 deg)
 
 <a id="sofShmaGra"></a>
@@ -267,14 +267,14 @@ The morning prayer may be said until the end of four temporal hours. By the Mage
 
 ## Latest morning prayer (Magen Avraham, by degrees)
 
-Four temporal hours of a day measured by degrees: from the sun 16.1 degrees below the horizon in the morning to 16.1 degrees below in the evening.
+Four temporal hours of a day measured by degrees: from the sun 16.05 degrees below the horizon in the morning to 16.05 degrees below in the evening.
 
 **Sources:**
 
 - Mishna Berachot 4:1
 - Shulchan Aruch OC 89:1
 - Magen Avraham 58:1
-- Astronomy: 16.1 degrees = 72 minutes in Jerusalem at the equinox
+- Astronomy: 16.05 degrees = 72 minutes in Jerusalem at the equinox
 - Birur Zmanim vol 1 p.66 (72 min in Eretz Yisrael at the equinox is about 16 deg)
 
 <a id="sofTfillaGra"></a>
@@ -547,9 +547,9 @@ The same 72 minutes as seasonal minutes: sunset plus a tenth of the day from sun
 
 <a id="tzeitRt16"></a>
 
-## Nightfall of Rabbeinu Tam (16.1 degrees)
+## Nightfall of Rabbeinu Tam (16.05 degrees)
 
-The sun 16.1 degrees below the horizon in the evening, its depth 72 minutes after sunset in Jerusalem at the equinox. The degree figure is a calculation, not from the Talmud.
+The sun 16.05 degrees below the horizon in the evening, its depth 72 minutes after sunset in Jerusalem at the equinox. The degree figure is a calculation, not from the Talmud.
 
 **Sources:**
 
@@ -1110,9 +1110,9 @@ On erev Pesach chametz must be burnt and nullified by the end of the fifth hour 
 
 <a id="sofAchilatChametzMga16"></a>
 
-## Latest time to eat chametz (MGA, 16.1 degrees)
+## Latest time to eat chametz (MGA, 16.05 degrees)
 
-On erev Pesach chametz may be eaten until the end of the fourth hour of the day. The day runs from dawn (sun 16.1 degrees below the horizon) to the sun at the same depth in the evening.
+On erev Pesach chametz may be eaten until the end of the fourth hour of the day. The day runs from dawn (sun 16.05 degrees below the horizon) to the sun at the same depth in the evening.
 
 **Sources:**
 
@@ -1120,13 +1120,13 @@ On erev Pesach chametz may be eaten until the end of the fourth hour of the day.
 - Pesachim 11b-12b (the halacha follows Rabbi Yehuda)
 - Shulchan Aruch OC 443:1 (chametz forbidden from the sixth hour; the Sages forbade it from the start of the fifth)
 - Magen Avraham 58:1 and Mishna Berura 58:4 (Magen Avraham counts the day from dawn; the Vilna Gaon from sunrise)
-- Astronomy: in Jerusalem at the equinox the sun is 16.1 degrees below the horizon 72 minutes before sunrise
+- Astronomy: in Jerusalem at the equinox the sun is 16.05 degrees below the horizon 72 minutes before sunrise
 
 <a id="sofBiurChametzMga16"></a>
 
-## Latest time to burn chametz (MGA, 16.1 degrees)
+## Latest time to burn chametz (MGA, 16.05 degrees)
 
-On erev Pesach chametz must be burnt and nullified by the end of the fifth hour of the day. The day runs from dawn (sun 16.1 degrees below the horizon) to the sun at the same depth in the evening.
+On erev Pesach chametz must be burnt and nullified by the end of the fifth hour of the day. The day runs from dawn (sun 16.05 degrees below the horizon) to the sun at the same depth in the evening.
 
 **Sources:**
 
@@ -1134,7 +1134,7 @@ On erev Pesach chametz must be burnt and nullified by the end of the fifth hour 
 - Pesachim 11b-12b (the halacha follows Rabbi Yehuda)
 - Shulchan Aruch OC 443:1 (chametz forbidden from the sixth hour; the Sages forbade it from the start of the fifth)
 - Magen Avraham 58:1 and Mishna Berura 58:4 (Magen Avraham counts the day from dawn; the Vilna Gaon from sunrise)
-- Astronomy: in Jerusalem at the equinox the sun is 16.1 degrees below the horizon 72 minutes before sunrise
+- Astronomy: in Jerusalem at the equinox the sun is 16.05 degrees below the horizon 72 minutes before sunrise
 
 <a id="sofAchilatChametzGra"></a>
 
@@ -1190,15 +1190,15 @@ A minor fast begins at dawn. Here dawn is 72 fixed minutes before sunrise (four 
 
 <a id="fastStart16"></a>
 
-## Start of the fast (16.1 degrees)
+## Start of the fast (16.05 degrees)
 
-A minor fast begins at dawn. Here dawn is the sun 16.1 degrees below the horizon.
+A minor fast begins at dawn. Here dawn is the sun 16.05 degrees below the horizon.
 
 **Sources:**
 
 - Shulchan Aruch OC 564:1 (on a fast with eating the night before, one may eat and drink until dawn)
 - Pesachim 94a (Rabbi Yehuda: from dawn to sunrise four mil)
-- Astronomy: in Jerusalem at the equinox the sun is 16.1 degrees below the horizon 72 minutes before sunrise
+- Astronomy: in Jerusalem at the equinox the sun is 16.05 degrees below the horizon 72 minutes before sunrise
 
 <a id="kiddushLevanaStart3"></a>
 
@@ -1508,37 +1508,37 @@ The sun 6 deg below the true horizon.
 
 ## Mincha gedola - Rav Yaakov Moshe Hillel
 
-The later of half a temporal hour after chatzot (of a day from dawn at 16.1 deg to nightfall at 3.7 deg) and 30 minutes after chatzot.
+The later of half a temporal hour after chatzot (of a day from dawn at 16.05 deg to nightfall at 3.7 deg) and 30 minutes after chatzot.
 
 **Sources:**
 
-- a day ending at the Geonim's nightfall: hours of a day from dawn at 16.1 deg to nightfall at 3.7 / 3.8 deg
+- a day ending at the Geonim's nightfall: hours of a day from dawn at 16.05 deg to nightfall at 3.7 / 3.8 deg
 
 <a id="minchaKetanaHillel"></a>
 
 ## Mincha ketana - Rav Yaakov Moshe Hillel
 
-2.5 temporal hours before nightfall (3.8 deg), in a day from dawn at 16.1 deg to nightfall at 3.8 deg.
+2.5 temporal hours before nightfall (3.8 deg), in a day from dawn at 16.05 deg to nightfall at 3.8 deg.
 
 **Sources:**
 
-- a day ending at the Geonim's nightfall: hours of a day from dawn at 16.1 deg to nightfall at 3.7 / 3.8 deg
+- a day ending at the Geonim's nightfall: hours of a day from dawn at 16.05 deg to nightfall at 3.7 / 3.8 deg
 
 <a id="plagHillel"></a>
 
 ## Plag hamincha - Rav Yaakov Moshe Hillel
 
-1.25 temporal hours before nightfall (3.8 deg), in a day from dawn at 16.1 deg to nightfall at 3.8 deg.
+1.25 temporal hours before nightfall (3.8 deg), in a day from dawn at 16.05 deg to nightfall at 3.8 deg.
 
 **Sources:**
 
-- a day ending at the Geonim's nightfall: hours of a day from dawn at 16.1 deg to nightfall at 3.7 / 3.8 deg
+- a day ending at the Geonim's nightfall: hours of a day from dawn at 16.05 deg to nightfall at 3.7 / 3.8 deg
 
 <a id="plagAlotTzeitGeonim"></a>
 
 ## Plag hamincha - from dawn to the Geonim's nightfall (stringent)
 
-1.25 temporal hours before the Geonim's nightfall (3.7 deg), in a day from dawn at 16.1 deg to that nightfall: the 10.75th hour of that day, a stringency.
+1.25 temporal hours before the Geonim's nightfall (3.7 deg), in a day from dawn at 16.05 deg to that nightfall: the 10.75th hour of that day, a stringency.
 
 **Sources:**
 
@@ -1586,9 +1586,9 @@ Halfway from dawn (72 minutes before sunrise) to fixed chatzot.
 
 <a id="sofShmaMga16Fixed"></a>
 
-## Latest Shema - Magen Avraham 16.1, fixed chatzot
+## Latest Shema - Magen Avraham 16.05, fixed chatzot
 
-Halfway from dawn (16.1 deg) to fixed chatzot.
+Halfway from dawn (16.05 deg) to fixed chatzot.
 
 **Sources:**
 
@@ -1626,35 +1626,35 @@ Halfway from dawn (16.1 deg) to fixed chatzot.
 
 <a id="sofShmaAsym"></a>
 
-## Latest Shema - day 16.1 to 7.083 deg
+## Latest Shema - day 16.05 to 7.083 deg
 
-3 temporal hours after dawn, in a day from dawn (16.1 deg) to nightfall (7.083 deg).
+3 temporal hours after dawn, in a day from dawn (16.05 deg) to nightfall (7.083 deg).
 
 **Sources:**
 
-- Ben Ish Chai and others: a day from dawn 16.1 deg to nightfall 7.083 deg
+- Ben Ish Chai and others: a day from dawn 16.05 deg to nightfall 7.083 deg
 - Yisrael Vehazmanim, vol. III, no. 22
 
 <a id="sofTfillaAsym"></a>
 
-## Latest Shacharit - day 16.1 to 7.083 deg
+## Latest Shacharit - day 16.05 to 7.083 deg
 
-4 temporal hours after dawn, in a day from dawn (16.1 deg) to nightfall (7.083 deg).
+4 temporal hours after dawn, in a day from dawn (16.05 deg) to nightfall (7.083 deg).
 
 **Sources:**
 
-- Ben Ish Chai and others: a day from dawn 16.1 deg to nightfall 7.083 deg
+- Ben Ish Chai and others: a day from dawn 16.05 deg to nightfall 7.083 deg
 - Yisrael Vehazmanim, vol. III, no. 22
 
 <a id="plagAsym"></a>
 
-## Plag hamincha - day 16.1 to 7.083 deg
+## Plag hamincha - day 16.05 to 7.083 deg
 
-10.75 temporal hours after dawn, in a day from dawn (16.1 deg) to nightfall (7.083 deg).
+10.75 temporal hours after dawn, in a day from dawn (16.05 deg) to nightfall (7.083 deg).
 
 **Sources:**
 
-- Ben Ish Chai and others: a day from dawn 16.1 deg to nightfall 7.083 deg
+- Ben Ish Chai and others: a day from dawn 16.05 deg to nightfall 7.083 deg
 - Yisrael Vehazmanim, vol. III, no. 22
 
 <a id="sofShmaBenIshChai"></a>

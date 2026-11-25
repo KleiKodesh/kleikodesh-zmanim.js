@@ -12,7 +12,7 @@ export { CLIMATE_RECORD_SIZE, configure, getMonthlyLapseRates, getMonthlyTempera
 export type { AssetLoader, DateInput, Lang, Place } from './places.js';
 export { GEO_RECORD_SIZE, listPlaceGeo, placeTree } from './geo.js';
 export type { PlaceGeo, PlaceOption, PlaceTree } from './geo.js';
-export { computeZmanim, HORIZON_ZMANIM, horizonDip, NO_TERRAIN, TERRAIN_BINS, TERRAIN_ZMANIM, terrainAltitude, horizonZenith, sunEventMs, epochMs, formatTime, ROUNDING, ZMAN_NAMES, zmanInstants } from './zmanim.js';
+export { computeZmanim, HORIZON_ZMANIM, horizonDip, equinoxDepression, JERUSALEM_LAT, NO_TERRAIN, TERRAIN_BINS, TERRAIN_ZMANIM, terrainAltitude, horizonZenith, sunEventMs, epochMs, formatTime, ROUNDING, ZMAN_NAMES, zmanInstants } from './zmanim.js';
 export type { CivilDate, Coordinates, Rounding, ZmanName } from './zmanim.js';
 export { horizonRefractionArcmin, INVERSION_C, inversionFactor, refractionArcmin, standardPressure, standardTemperature } from './refraction.js';
 export { defaultDeltaT, julianDay, spa, spaDay, spaEvent, spaSunTimes, SUNRISE_SUNSET_H0, zenithToH0 } from './spa.js';

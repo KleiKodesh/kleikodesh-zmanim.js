@@ -18,8 +18,9 @@ Not cited here, and not Birur Zmanim (earlier notes had them as copies of part 1
 
 | Line / constant | Book and page | What it supports |
 |---|---|---|
-| `ALOT` (16.1 deg): alot, alotVisible, alotChatzot, tzeitRt16, sofShmaMga16, sofTfillaMga16 | Birur Zmanim 1, p.66 | 72 minutes in Eretz Yisrael at the equinox is about 16 deg below the horizon, not 18 |
-| `ALOT_90` (19.8 deg): alot90, alot90Visible, alot90Chatzot, sofShmaMga19, sofTfillaMga19, plagMga19 | Birur Zmanim 1, p.66 | 90 minutes is about 19.75 deg |
+| `ALOT` (16.05 deg = equinoxDepression(72), exact): alot, alotVisible, alotChatzot, tzeitRt16, sofShmaMga16, sofTfillaMga16 | Birur Zmanim 1, p.66 | 72 minutes in Eretz Yisrael at the equinox is about 16 deg below the horizon, not 18 |
+| `ALOT_90` (19.798 deg = equinoxDepression(90), exact): alot90, alot90Visible, alot90Chatzot, sofShmaMga19, sofTfillaMga19, plagMga19 | Birur Zmanim 1, p.66 | 90 minutes is about 19.75 deg |
+| `TZEIT_GEONIM` (3.701), `TZEIT_18_SUN` (4.6565), `BH_YEREIM` (2.992 above) | this library, `equinoxDepression` | the exact depth N minutes from visible sea-level sunset (sun centre -0.833 deg) at declination 0, Har HaBayit 31.778 N |
 | alot90 and plagAlot90Tzeit645 | Bein Hashmashot, p.105 | his tables put dawn about an hour and a half before sunrise |
 | sofShmaMga, sofTfillaMga, plagMga, sofShmaMga90, sofTfillaMga90, plagMga90 | Birur Zmanim 2, pp.209-239 | calendars rightly use a 90-minute dawn; "MGA" hours run from dawn to nightfall |
 | Mil of 18 / 22.5 / 24 min: tzeitRt72, tzeitRt90, tzeitRt96, alot96, alot120, tzeit13p5 | Bein Hashmashot, pp.18-19; Birur Zmanim 2, pp.33-35 | 18 (Gra / Terumat HaDeshen line), 22.5 (Rashi, R. Chananel, most Rishonim), 24 (Ulla and Rava; Rambam) |

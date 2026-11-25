@@ -94,23 +94,23 @@
   "alot": {
     "he": {
       "title": "עלות השחר",
-      "text": "תחילת האור הראשון במזרח. מזמן זה בדיעבד יוצאים בתפילת שחרית ובמצוות היום. כאן: כשהשמש 16.1 מעלות מתחת לאופק בבוקר, שהוא 72 דקות (ארבעה מילין של 18 דקות) לפני הנץ בירושלים בימי ניסן ותשרי.",
+      "text": "תחילת האור הראשון במזרח. מזמן זה בדיעבד יוצאים בתפילת שחרית ובמצוות היום. כאן: כשהשמש 16.05 מעלות מתחת לאופק בבוקר, שהוא 72 דקות (ארבעה מילין של 18 דקות) לפני הנץ בירושלים בימי ניסן ותשרי.",
       "sources": [
         "פסחים צד ע״א (רבי יהודה: מעלות השחר עד הנץ החמה ארבעת מילין)",
         "שו״ע או״ח תנט, ב; משנה ברורה תנט, טו (מיל = 18 דקות)",
         "שו״ע או״ח פט, א; משנה ברורה פט, ב (מה עלות השחר, ותפילה מעלות השחר בדיעבד)",
-        "חישוב אסטרונומי: בירושלים בימי השוויון השמש נמצאת 16.1 מעלות מתחת לאופק 72 דקות לפני הנץ",
+        "חישוב אסטרונומי: בירושלים בימי השוויון השמש נמצאת 16.05 מעלות מתחת לאופק 72 דקות לפני הנץ",
         "בירור זמנים ח״א עמ׳ 66 (72 דקות בארץ ישראל בשוויון הן כ־16 מעלות)"
       ]
     },
     "en": {
       "title": "Dawn (alot hashachar)",
-      "text": "The first light in the east. From this time one fulfils, after the fact, the morning prayer and the daytime mitzvos. Here: the sun 16.1 degrees below the horizon in the morning, which is 72 minutes (four mil of 18 minutes) before sunrise in Jerusalem at the equinox.",
+      "text": "The first light in the east. From this time one fulfils, after the fact, the morning prayer and the daytime mitzvos. Here: the sun 16.05 degrees below the horizon in the morning, which is 72 minutes (four mil of 18 minutes) before sunrise in Jerusalem at the equinox.",
       "sources": [
         "Pesachim 94a (Rabbi Yehuda: from dawn to sunrise four mil)",
         "Shulchan Aruch OC 459:2; Mishna Berura 459:15 (a mil = 18 minutes)",
         "Shulchan Aruch OC 89:1; Mishna Berura 89:2 (what dawn is; prayer from dawn after the fact)",
-        "Astronomy: in Jerusalem at the equinox the sun is 16.1 degrees below the horizon 72 minutes before sunrise",
+        "Astronomy: in Jerusalem at the equinox the sun is 16.05 degrees below the horizon 72 minutes before sunrise",
         "Birur Zmanim vol 1 p.66 (72 min in Eretz Yisrael at the equinox is about 16 deg)"
       ]
     }
@@ -118,7 +118,7 @@
   "alotVisible": {
     "he": {
       "title": "עלות השחר (מהאופק הנראה)",
-      "text": "כמו עלות השחר (16.1 מעלות), אלא שהמעלות נמדדות מהאופק הנראה לעין, שהשבירה באוויר מגביהה אותו. יוצא כ־2 עד 4 דקות מוקדם יותר.",
+      "text": "כמו עלות השחר (16.05 מעלות), אלא שהמעלות נמדדות מהאופק הנראה לעין, שהשבירה באוויר מגביהה אותו. יוצא כ־2 עד 4 דקות מוקדם יותר.",
       "sources": [
         "פסחים צד ע״א",
         "שו״ע או״ח פט, א",
@@ -128,7 +128,7 @@
     },
     "en": {
       "title": "Dawn (from the visible horizon)",
-      "text": "Like dawn (16.1 degrees), but the degrees are measured from the visible horizon, which refraction in the air lifts. It comes out about 2 to 4 minutes earlier.",
+      "text": "Like dawn (16.05 degrees), but the degrees are measured from the visible horizon, which refraction in the air lifts. It comes out about 2 to 4 minutes earlier.",
       "sources": [
         "Pesachim 94a",
         "Shulchan Aruch OC 89:1",
@@ -140,7 +140,7 @@
   "alotChatzot": {
     "he": {
       "title": "עלות השחר (או חצות)",
-      "text": "עלות השחר (16.1 מעלות). בלילות קיץ בארצות הצפוניות שבהם השמש אינה יורדת כל כך נמוך, נותן חצות הלילה, כדברי הגר״א.",
+      "text": "עלות השחר (16.05 מעלות). בלילות קיץ בארצות הצפוניות שבהם השמש אינה יורדת כל כך נמוך, נותן חצות הלילה, כדברי הגר״א.",
       "sources": [
         "פסחים צד ע״א",
         "ביאור הגר״א או״ח רסא, ב (במדינות הנוטין לצפון שעלות השחר מתחיל בקיץ בחצי הלילה)",
@@ -149,7 +149,7 @@
     },
     "en": {
       "title": "Dawn (or midnight)",
-      "text": "Dawn (16.1 degrees). On summer nights in northern lands where the sun never gets that low, it gives midnight instead, following the Vilna Gaon.",
+      "text": "Dawn (16.05 degrees). On summer nights in northern lands where the sun never gets that low, it gives midnight instead, following the Vilna Gaon.",
       "sources": [
         "Pesachim 94a",
         "Biur HaGra OC 261:2 (in northern lands dawn begins in summer at midnight)",
@@ -370,25 +370,25 @@
   "sofShmaMga16": {
     "he": {
       "title": "סוף זמן קריאת שמע (מגן אברהם, במעלות)",
-      "text": "כמו סוף זמן קריאת שמע לשיטת המגן אברהם, אלא שהיום נמדד במעלות: מעלות השחר (השמש 16.1 מעלות מתחת לאופק בבוקר) עד שהשמש 16.1 מעלות מתחת לאופק בערב. כך אורך היום משתנה לפי העונה והמקום.",
+      "text": "כמו סוף זמן קריאת שמע לשיטת המגן אברהם, אלא שהיום נמדד במעלות: מעלות השחר (השמש 16.05 מעלות מתחת לאופק בבוקר) עד שהשמש 16.05 מעלות מתחת לאופק בערב. כך אורך היום משתנה לפי העונה והמקום.",
       "sources": [
         "משנה ברכות א, ב",
         "שו״ע או״ח נח, א",
         "מגן אברהם נח, א",
         "משנה ברורה נח, ד",
-        "חישוב אסטרונומי: 16.1 מעלות = 72 דקות בירושלים בימי השוויון",
+        "חישוב אסטרונומי: 16.05 מעלות = 72 דקות בירושלים בימי השוויון",
         "בירור זמנים ח״א עמ׳ 66 (72 דקות בארץ ישראל בשוויון הן כ־16 מעלות)"
       ]
     },
     "en": {
       "title": "Latest Shema (Magen Avraham, by degrees)",
-      "text": "Like the Magen Avraham's latest Shema, but the day is measured by degrees: from dawn (sun 16.1 degrees below the horizon in the morning) to the sun 16.1 degrees below the horizon in the evening. So the length follows the season and the place.",
+      "text": "Like the Magen Avraham's latest Shema, but the day is measured by degrees: from dawn (sun 16.05 degrees below the horizon in the morning) to the sun 16.05 degrees below the horizon in the evening. So the length follows the season and the place.",
       "sources": [
         "Mishna Berachot 1:2",
         "Shulchan Aruch OC 58:1",
         "Magen Avraham 58:1",
         "Mishna Berura 58:4",
-        "Astronomy: 16.1 degrees = 72 minutes in Jerusalem at the equinox",
+        "Astronomy: 16.05 degrees = 72 minutes in Jerusalem at the equinox",
         "Birur Zmanim vol 1 p.66 (72 min in Eretz Yisrael at the equinox is about 16 deg)"
       ]
     }
@@ -444,23 +444,23 @@
   "sofTfillaMga16": {
     "he": {
       "title": "סוף זמן תפילה (מגן אברהם, במעלות)",
-      "text": "ארבע שעות זמניות של יום שנמדד במעלות: מהשמש 16.1 מעלות מתחת לאופק בבוקר עד 16.1 מעלות מתחת לאופק בערב.",
+      "text": "ארבע שעות זמניות של יום שנמדד במעלות: מהשמש 16.05 מעלות מתחת לאופק בבוקר עד 16.05 מעלות מתחת לאופק בערב.",
       "sources": [
         "משנה ברכות ד, א",
         "שו״ע או״ח פט, א",
         "מגן אברהם נח, א",
-        "חישוב אסטרונומי: 16.1 מעלות = 72 דקות בירושלים בימי השוויון",
+        "חישוב אסטרונומי: 16.05 מעלות = 72 דקות בירושלים בימי השוויון",
         "בירור זמנים ח״א עמ׳ 66 (72 דקות בארץ ישראל בשוויון הן כ־16 מעלות)"
       ]
     },
     "en": {
       "title": "Latest morning prayer (Magen Avraham, by degrees)",
-      "text": "Four temporal hours of a day measured by degrees: from the sun 16.1 degrees below the horizon in the morning to 16.1 degrees below in the evening.",
+      "text": "Four temporal hours of a day measured by degrees: from the sun 16.05 degrees below the horizon in the morning to 16.05 degrees below in the evening.",
       "sources": [
         "Mishna Berachot 4:1",
         "Shulchan Aruch OC 89:1",
         "Magen Avraham 58:1",
-        "Astronomy: 16.1 degrees = 72 minutes in Jerusalem at the equinox",
+        "Astronomy: 16.05 degrees = 72 minutes in Jerusalem at the equinox",
         "Birur Zmanim vol 1 p.66 (72 min in Eretz Yisrael at the equinox is about 16 deg)"
       ]
     }
@@ -915,8 +915,8 @@
   },
   "tzeitRt16": {
     "he": {
-      "title": "צאת הכוכבים לרבינו תם (16.1 מעלות)",
-      "text": "כשהשמש 16.1 מעלות מתחת לאופק בערב, עומקה 72 דקות אחרי השקיעה בירושלים בימי השוויון. מספר המעלות הוא חשבון, ואינו מן הגמרא.",
+      "title": "צאת הכוכבים לרבינו תם (16.05 מעלות)",
+      "text": "כשהשמש 16.05 מעלות מתחת לאופק בערב, עומקה 72 דקות אחרי השקיעה בירושלים בימי השוויון. מספר המעלות הוא חשבון, ואינו מן הגמרא.",
       "sources": [
         "תוספות שבת לה ע״א",
         "שו״ע או״ח רסא, ב וברמ״א",
@@ -924,8 +924,8 @@
       ]
     },
     "en": {
-      "title": "Nightfall of Rabbeinu Tam (16.1 degrees)",
-      "text": "The sun 16.1 degrees below the horizon in the evening, its depth 72 minutes after sunset in Jerusalem at the equinox. The degree figure is a calculation, not from the Talmud.",
+      "title": "Nightfall of Rabbeinu Tam (16.05 degrees)",
+      "text": "The sun 16.05 degrees below the horizon in the evening, its depth 72 minutes after sunset in Jerusalem at the equinox. The degree figure is a calculation, not from the Talmud.",
       "sources": [
         "Tosafot Shabbat 35a",
         "Shulchan Aruch OC 261:2 with Rema",
@@ -1872,49 +1872,49 @@
   },
   "sofAchilatChametzMga16": {
     "he": {
-      "title": "סוף זמן אכילת חמץ (מג״א, 16.1 מעלות)",
-      "text": "בערב פסח אוכלים חמץ עד סוף השעה הרביעית של היום. היום נמנה מעלות השחר (השמש 16.1 מעלות מתחת לאופק) ועד שהשמש באותו עומק בערב.",
+      "title": "סוף זמן אכילת חמץ (מג״א, 16.05 מעלות)",
+      "text": "בערב פסח אוכלים חמץ עד סוף השעה הרביעית של היום. היום נמנה מעלות השחר (השמש 16.05 מעלות מתחת לאופק) ועד שהשמש באותו עומק בערב.",
       "sources": [
         "משנה פסחים א, ד (רבי יהודה: אוכלין כל ארבע, תולין כל חמש, ושורפין בתחלת שש)",
         "פסחים יא ע״ב - יב ע״ב (הלכה כרבי יהודה)",
         "שו״ע או״ח תמג, א (חמץ אסור משש שעות ולמעלה, וחכמים אסרו משעה חמישית)",
         "מגן אברהם נח, א; משנה ברורה נח, ד (המ״א מונה מעמוד השחר, ודעת הגר״א משעת הנץ)",
-        "חישוב אסטרונומי: בירושלים בימי השוויון השמש נמצאת 16.1 מעלות מתחת לאופק 72 דקות לפני הנץ"
+        "חישוב אסטרונומי: בירושלים בימי השוויון השמש נמצאת 16.05 מעלות מתחת לאופק 72 דקות לפני הנץ"
       ]
     },
     "en": {
-      "title": "Latest time to eat chametz (MGA, 16.1 degrees)",
-      "text": "On erev Pesach chametz may be eaten until the end of the fourth hour of the day. The day runs from dawn (sun 16.1 degrees below the horizon) to the sun at the same depth in the evening.",
+      "title": "Latest time to eat chametz (MGA, 16.05 degrees)",
+      "text": "On erev Pesach chametz may be eaten until the end of the fourth hour of the day. The day runs from dawn (sun 16.05 degrees below the horizon) to the sun at the same depth in the evening.",
       "sources": [
         "Mishna Pesachim 1:4 (Rabbi Yehuda: eat all of the fourth hour, suspend during the fifth, burn at the start of the sixth)",
         "Pesachim 11b-12b (the halacha follows Rabbi Yehuda)",
         "Shulchan Aruch OC 443:1 (chametz forbidden from the sixth hour; the Sages forbade it from the start of the fifth)",
         "Magen Avraham 58:1 and Mishna Berura 58:4 (Magen Avraham counts the day from dawn; the Vilna Gaon from sunrise)",
-        "Astronomy: in Jerusalem at the equinox the sun is 16.1 degrees below the horizon 72 minutes before sunrise"
+        "Astronomy: in Jerusalem at the equinox the sun is 16.05 degrees below the horizon 72 minutes before sunrise"
       ]
     }
   },
   "sofBiurChametzMga16": {
     "he": {
-      "title": "סוף זמן שריפת חמץ (מג״א, 16.1 מעלות)",
-      "text": "בערב פסח שורפים ומבטלים את החמץ עד סוף השעה החמישית של היום. היום נמנה מעלות השחר (השמש 16.1 מעלות מתחת לאופק) ועד שהשמש באותו עומק בערב.",
+      "title": "סוף זמן שריפת חמץ (מג״א, 16.05 מעלות)",
+      "text": "בערב פסח שורפים ומבטלים את החמץ עד סוף השעה החמישית של היום. היום נמנה מעלות השחר (השמש 16.05 מעלות מתחת לאופק) ועד שהשמש באותו עומק בערב.",
       "sources": [
         "משנה פסחים א, ד (רבי יהודה: אוכלין כל ארבע, תולין כל חמש, ושורפין בתחלת שש)",
         "פסחים יא ע״ב - יב ע״ב (הלכה כרבי יהודה)",
         "שו״ע או״ח תמג, א (חמץ אסור משש שעות ולמעלה, וחכמים אסרו משעה חמישית)",
         "מגן אברהם נח, א; משנה ברורה נח, ד (המ״א מונה מעמוד השחר, ודעת הגר״א משעת הנץ)",
-        "חישוב אסטרונומי: בירושלים בימי השוויון השמש נמצאת 16.1 מעלות מתחת לאופק 72 דקות לפני הנץ"
+        "חישוב אסטרונומי: בירושלים בימי השוויון השמש נמצאת 16.05 מעלות מתחת לאופק 72 דקות לפני הנץ"
       ]
     },
     "en": {
-      "title": "Latest time to burn chametz (MGA, 16.1 degrees)",
-      "text": "On erev Pesach chametz must be burnt and nullified by the end of the fifth hour of the day. The day runs from dawn (sun 16.1 degrees below the horizon) to the sun at the same depth in the evening.",
+      "title": "Latest time to burn chametz (MGA, 16.05 degrees)",
+      "text": "On erev Pesach chametz must be burnt and nullified by the end of the fifth hour of the day. The day runs from dawn (sun 16.05 degrees below the horizon) to the sun at the same depth in the evening.",
       "sources": [
         "Mishna Pesachim 1:4 (Rabbi Yehuda: eat all of the fourth hour, suspend during the fifth, burn at the start of the sixth)",
         "Pesachim 11b-12b (the halacha follows Rabbi Yehuda)",
         "Shulchan Aruch OC 443:1 (chametz forbidden from the sixth hour; the Sages forbade it from the start of the fifth)",
         "Magen Avraham 58:1 and Mishna Berura 58:4 (Magen Avraham counts the day from dawn; the Vilna Gaon from sunrise)",
-        "Astronomy: in Jerusalem at the equinox the sun is 16.1 degrees below the horizon 72 minutes before sunrise"
+        "Astronomy: in Jerusalem at the equinox the sun is 16.05 degrees below the horizon 72 minutes before sunrise"
       ]
     }
   },
@@ -2008,21 +2008,21 @@
   },
   "fastStart16": {
     "he": {
-      "title": "תחילת התענית (16.1 מעלות)",
-      "text": "תענית ציבור קלה מתחילה בעלות השחר. כאן עלות השחר כשהשמש 16.1 מעלות מתחת לאופק.",
+      "title": "תחילת התענית (16.05 מעלות)",
+      "text": "תענית ציבור קלה מתחילה בעלות השחר. כאן עלות השחר כשהשמש 16.05 מעלות מתחת לאופק.",
       "sources": [
         "שו״ע או״ח תקסד, א (בכל תענית שאוכלים בלילה, מותר לאכול ולשתות עד שיעלה עמוד השחר)",
         "פסחים צד ע״א (רבי יהודה: מעלות השחר עד הנץ החמה ארבעת מילין)",
-        "חישוב אסטרונומי: בירושלים בימי השוויון השמש נמצאת 16.1 מעלות מתחת לאופק 72 דקות לפני הנץ"
+        "חישוב אסטרונומי: בירושלים בימי השוויון השמש נמצאת 16.05 מעלות מתחת לאופק 72 דקות לפני הנץ"
       ]
     },
     "en": {
-      "title": "Start of the fast (16.1 degrees)",
-      "text": "A minor fast begins at dawn. Here dawn is the sun 16.1 degrees below the horizon.",
+      "title": "Start of the fast (16.05 degrees)",
+      "text": "A minor fast begins at dawn. Here dawn is the sun 16.05 degrees below the horizon.",
       "sources": [
         "Shulchan Aruch OC 564:1 (on a fast with eating the night before, one may eat and drink until dawn)",
         "Pesachim 94a (Rabbi Yehuda: from dawn to sunrise four mil)",
-        "Astronomy: in Jerusalem at the equinox the sun is 16.1 degrees below the horizon 72 minutes before sunrise"
+        "Astronomy: in Jerusalem at the equinox the sun is 16.05 degrees below the horizon 72 minutes before sunrise"
       ]
     }
   },
@@ -2514,62 +2514,62 @@
   "minchaGedolaHillel": {
     "he": {
       "title": "מנחה גדולה - יום עד צאת הכוכבים של הגאונים",
-      "text": "המאוחר מבין חצי שעה זמנית אחרי חצות (ביום מעלות השחר 16.1 מעלות עד צאת הכוכבים 3.7 מעלות) לבין 30 דקות אחרי חצות.",
+      "text": "המאוחר מבין חצי שעה זמנית אחרי חצות (ביום מעלות השחר 16.05 מעלות עד צאת הכוכבים 3.7 מעלות) לבין 30 דקות אחרי חצות.",
       "sources": [
         "מגן אברהם נח, א (היום נמנה מעלות השחר עד צאת הכוכבים)"
       ]
     },
     "en": {
       "title": "Mincha gedola - Rav Yaakov Moshe Hillel",
-      "text": "The later of half a temporal hour after chatzot (of a day from dawn at 16.1 deg to nightfall at 3.7 deg) and 30 minutes after chatzot.",
+      "text": "The later of half a temporal hour after chatzot (of a day from dawn at 16.05 deg to nightfall at 3.7 deg) and 30 minutes after chatzot.",
       "sources": [
-        "a day ending at the Geonim's nightfall: hours of a day from dawn at 16.1 deg to nightfall at 3.7 / 3.8 deg"
+        "a day ending at the Geonim's nightfall: hours of a day from dawn at 16.05 deg to nightfall at 3.7 / 3.8 deg"
       ]
     }
   },
   "minchaKetanaHillel": {
     "he": {
       "title": "מנחה קטנה - יום עד צאת הכוכבים של הגאונים",
-      "text": "שתיים וחצי שעות זמניות לפני צאת הכוכבים (3.8 מעלות), ביום מעלות השחר 16.1 מעלות עד צאת הכוכבים 3.8 מעלות.",
+      "text": "שתיים וחצי שעות זמניות לפני צאת הכוכבים (3.8 מעלות), ביום מעלות השחר 16.05 מעלות עד צאת הכוכבים 3.8 מעלות.",
       "sources": [
         "מגן אברהם נח, א (היום נמנה מעלות השחר עד צאת הכוכבים)"
       ]
     },
     "en": {
       "title": "Mincha ketana - Rav Yaakov Moshe Hillel",
-      "text": "2.5 temporal hours before nightfall (3.8 deg), in a day from dawn at 16.1 deg to nightfall at 3.8 deg.",
+      "text": "2.5 temporal hours before nightfall (3.8 deg), in a day from dawn at 16.05 deg to nightfall at 3.8 deg.",
       "sources": [
-        "a day ending at the Geonim's nightfall: hours of a day from dawn at 16.1 deg to nightfall at 3.7 / 3.8 deg"
+        "a day ending at the Geonim's nightfall: hours of a day from dawn at 16.05 deg to nightfall at 3.7 / 3.8 deg"
       ]
     }
   },
   "plagHillel": {
     "he": {
       "title": "פלג המנחה - יום עד צאת הכוכבים של הגאונים",
-      "text": "שעה ורבע זמנית לפני צאת הכוכבים (3.8 מעלות), ביום מעלות השחר 16.1 מעלות עד צאת הכוכבים 3.8 מעלות.",
+      "text": "שעה ורבע זמנית לפני צאת הכוכבים (3.8 מעלות), ביום מעלות השחר 16.05 מעלות עד צאת הכוכבים 3.8 מעלות.",
       "sources": [
         "מגן אברהם נח, א (היום נמנה מעלות השחר עד צאת הכוכבים)"
       ]
     },
     "en": {
       "title": "Plag hamincha - Rav Yaakov Moshe Hillel",
-      "text": "1.25 temporal hours before nightfall (3.8 deg), in a day from dawn at 16.1 deg to nightfall at 3.8 deg.",
+      "text": "1.25 temporal hours before nightfall (3.8 deg), in a day from dawn at 16.05 deg to nightfall at 3.8 deg.",
       "sources": [
-        "a day ending at the Geonim's nightfall: hours of a day from dawn at 16.1 deg to nightfall at 3.7 / 3.8 deg"
+        "a day ending at the Geonim's nightfall: hours of a day from dawn at 16.05 deg to nightfall at 3.7 / 3.8 deg"
       ]
     }
   },
   "plagAlotTzeitGeonim": {
     "he": {
       "title": "פלג המנחה - מעלות השחר עד צאת הכוכבים של הגאונים (לחומרא)",
-      "text": "שעה ורביע זמנית לפני צאת הכוכבים של הגאונים (3.7 מעלות), ביום מעלות השחר (16.1 מעלות) עד צאת הכוכבים של הגאונים. לחומרא.",
+      "text": "שעה ורביע זמנית לפני צאת הכוכבים של הגאונים (3.7 מעלות), ביום מעלות השחר (16.05 מעלות) עד צאת הכוכבים של הגאונים. לחומרא.",
       "sources": [
         "בן איש חי שנה א ויקהל ח; אור לציון ח\"ב עמוד 147; מאמר מרדכי ח\"ד סימן יב - מתוך אתר זמני יוסף, לא נבדק במקור"
       ]
     },
     "en": {
       "title": "Plag hamincha - from dawn to the Geonim's nightfall (stringent)",
-      "text": "1.25 temporal hours before the Geonim's nightfall (3.7 deg), in a day from dawn at 16.1 deg to that nightfall: the 10.75th hour of that day, a stringency.",
+      "text": "1.25 temporal hours before the Geonim's nightfall (3.7 deg), in a day from dawn at 16.05 deg to that nightfall: the 10.75th hour of that day, a stringency.",
       "sources": [
         "Ben Ish Chai year 1, Vayakhel 8; Or LeTzion vol. 2 p.147; Ma'amar Mordechai vol. 4 siman 12 - as cited by the Zemaneh Yosef website, not checked in the text"
       ]
@@ -2641,15 +2641,15 @@
   },
   "sofShmaMga16Fixed": {
     "he": {
-      "title": "סוף זמן קריאת שמע - מגן אברהם 16.1, חצות קבוע",
-      "text": "מחצית הזמן מעלות השחר (16.1 מעלות) עד חצות הקבוע.",
+      "title": "סוף זמן קריאת שמע - מגן אברהם 16.05, חצות קבוע",
+      "text": "מחצית הזמן מעלות השחר (16.05 מעלות) עד חצות הקבוע.",
       "sources": [
         "מגן אברהם נח, א (היום נמנה מעלות השחר עד צאת הכוכבים)"
       ]
     },
     "en": {
-      "title": "Latest Shema - Magen Avraham 16.1, fixed chatzot",
-      "text": "Halfway from dawn (16.1 deg) to fixed chatzot.",
+      "title": "Latest Shema - Magen Avraham 16.05, fixed chatzot",
+      "text": "Halfway from dawn (16.05 deg) to fixed chatzot.",
       "sources": [
         "Aruch HaShulchan, Orach Chaim 233:14"
       ]
@@ -2705,51 +2705,51 @@
   },
   "sofShmaAsym": {
     "he": {
-      "title": "סוף זמן קריאת שמע - יום מ-16.1 עד 7.083 מעלות",
-      "text": "3 שעות זמניות מעלות השחר, ביום מעלות השחר (16.1 מעלות) עד צאת הכוכבים (7.083 מעלות).",
+      "title": "סוף זמן קריאת שמע - יום מ-16.05 עד 7.083 מעלות",
+      "text": "3 שעות זמניות מעלות השחר, ביום מעלות השחר (16.05 מעלות) עד צאת הכוכבים (7.083 מעלות).",
       "sources": [
         "מגן אברהם נח, א (היום נמנה מעלות השחר עד צאת הכוכבים)"
       ]
     },
     "en": {
-      "title": "Latest Shema - day 16.1 to 7.083 deg",
-      "text": "3 temporal hours after dawn, in a day from dawn (16.1 deg) to nightfall (7.083 deg).",
+      "title": "Latest Shema - day 16.05 to 7.083 deg",
+      "text": "3 temporal hours after dawn, in a day from dawn (16.05 deg) to nightfall (7.083 deg).",
       "sources": [
-        "Ben Ish Chai and others: a day from dawn 16.1 deg to nightfall 7.083 deg",
+        "Ben Ish Chai and others: a day from dawn 16.05 deg to nightfall 7.083 deg",
         "Yisrael Vehazmanim, vol. III, no. 22"
       ]
     }
   },
   "sofTfillaAsym": {
     "he": {
-      "title": "סוף זמן תפילה - יום מ-16.1 עד 7.083 מעלות",
-      "text": "4 שעות זמניות מעלות השחר, ביום מעלות השחר (16.1 מעלות) עד צאת הכוכבים (7.083 מעלות).",
+      "title": "סוף זמן תפילה - יום מ-16.05 עד 7.083 מעלות",
+      "text": "4 שעות זמניות מעלות השחר, ביום מעלות השחר (16.05 מעלות) עד צאת הכוכבים (7.083 מעלות).",
       "sources": [
         "מגן אברהם נח, א (היום נמנה מעלות השחר עד צאת הכוכבים)"
       ]
     },
     "en": {
-      "title": "Latest Shacharit - day 16.1 to 7.083 deg",
-      "text": "4 temporal hours after dawn, in a day from dawn (16.1 deg) to nightfall (7.083 deg).",
+      "title": "Latest Shacharit - day 16.05 to 7.083 deg",
+      "text": "4 temporal hours after dawn, in a day from dawn (16.05 deg) to nightfall (7.083 deg).",
       "sources": [
-        "Ben Ish Chai and others: a day from dawn 16.1 deg to nightfall 7.083 deg",
+        "Ben Ish Chai and others: a day from dawn 16.05 deg to nightfall 7.083 deg",
         "Yisrael Vehazmanim, vol. III, no. 22"
       ]
     }
   },
   "plagAsym": {
     "he": {
-      "title": "פלג המנחה - יום מ-16.1 עד 7.083 מעלות",
-      "text": "10.75 שעות זמניות מעלות השחר, ביום מעלות השחר (16.1 מעלות) עד צאת הכוכבים (7.083 מעלות).",
+      "title": "פלג המנחה - יום מ-16.05 עד 7.083 מעלות",
+      "text": "10.75 שעות זמניות מעלות השחר, ביום מעלות השחר (16.05 מעלות) עד צאת הכוכבים (7.083 מעלות).",
       "sources": [
         "מגן אברהם נח, א (היום נמנה מעלות השחר עד צאת הכוכבים)"
       ]
     },
     "en": {
-      "title": "Plag hamincha - day 16.1 to 7.083 deg",
-      "text": "10.75 temporal hours after dawn, in a day from dawn (16.1 deg) to nightfall (7.083 deg).",
+      "title": "Plag hamincha - day 16.05 to 7.083 deg",
+      "text": "10.75 temporal hours after dawn, in a day from dawn (16.05 deg) to nightfall (7.083 deg).",
       "sources": [
-        "Ben Ish Chai and others: a day from dawn 16.1 deg to nightfall 7.083 deg",
+        "Ben Ish Chai and others: a day from dawn 16.05 deg to nightfall 7.083 deg",
         "Yisrael Vehazmanim, vol. III, no. 22"
       ]
     }

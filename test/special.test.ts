@@ -32,7 +32,7 @@ describe('specialZmanim', () => {
     expect(s.sofBiurChametzGra! < z.chatzot!).toBe(true)
     expect(Object.keys(specialZmanim(JLM, date, 'erevPesach')).sort()).toEqual([...SPECIAL_KINDS.erevPesach].sort())
   })
-  it('fast day: 90 < 72 fixed, 16.1 deg = alot', () => {
+  it('fast day: 90 < 72 fixed, 16.05 deg = alot', () => {
     const date = { year: 2026, month: 7, day: 2 }
     const s = specialZmanInstants(JLM, date, 'fastDay')
     expect(s.fastStart16).toBe(zmanInstants(JLM, date, ['alot']).alot)
