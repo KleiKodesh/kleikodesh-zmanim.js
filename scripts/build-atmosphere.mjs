@@ -10,13 +10,16 @@
 //    Format: igra2-data-format.txt (header '#' record: year 14-17, month 19-20, hour 25-26; data record: LVLTYP2 col 2
 //    (1 = surface), PRESS 10-15 Pa, GPH 17-21 m, TEMP 23-27 0.1 C, RH 29-33 0.1 %, DPDP 35-39 0.1 C; -8888/-9999
 //    missing).
-//    Every 00 UTC and 12 UTC sounding of YEARS is put on a fixed height grid (T linear in height, ln p linear,
+//    Every 00, 06, 12 and 18 UTC sounding of YEARS is put on a fixed height grid (T linear in height, ln p linear,
 //    vapour pressure linear; heights of levels without GPH by the hypsometric equation from the level below),
-//    then averaged per calendar month and hour: 24 mean profiles. 00 UTC (02 local) is the night profile used for
-//    sunrise, 12 UTC (14-15 local) the afternoon profile used for sunset. Above the top of the grid the AFGL
-//    midlatitude profile of the season continues it (pressure scaled to join).
+//    then averaged per calendar month and launch hour: 48 mean profiles. Bet Dagan launched at all four hours almost
+//    daily until early 2010 (the record holds about 340-365 soundings a year at each hour 1995-2009), so the
+//    sunrise (02:30-04:50 UTC) and sunset (14:30-17:00 UTC) hours are bracketed by launches 6 hours apart and the
+//    library blends the two in time (src/horizon.ts). Where a 06/18 UTC mean profile is shallower than the month's
+//    00/12 UTC profiles, their mean continues it; above the top of the grid the AFGL midlatitude profile of the
+//    season continues it (pressure scaled to join each time).
 //
-// Output profile order (assets/atmosphere.bin): AFGL t, ms, mw, ss, sw, then Bet Dagan month 1..12 x {00, 12 UTC}.
+// Output profile order (assets/atmosphere.bin): AFGL t, ms, mw, ss, sw, then Bet Dagan month 1..12 x {00, 06, 12, 18 UTC}.
 // Binary: uint16 profile count; per profile uint16 level count, then per level float32 z (geometric m above sea
 // level), T (K), p (hPa), e (water-vapour pressure, hPa). Little-endian.
 import { readFileSync, writeFileSync } from 'node:fs'
@@ -83,8 +86,8 @@ function readIgra() {
   const text = readFileSync(IGRA_FILE, 'utf8')
   const lines = text.split(/\r?\n/)
   log(`IGRA: ${lines.length} lines`)
-  const sums = Array.from({ length: 24 }, () => GRID.map(() => ({ n: 0, t: 0, t2: 0, lp: 0, ne: 0, e: 0 })))
-  const counts = new Array(24).fill(0)
+  const sums = Array.from({ length: 48 }, () => GRID.map(() => ({ n: 0, t: 0, t2: 0, lp: 0, ne: 0, e: 0 })))
+  const counts = new Array(48).fill(0)
   let cur = null, used = 0, seen = 0
   const flush = () => {
     if (!cur) return
@@ -107,9 +110,10 @@ function readIgra() {
       flush()
       const year = Number(l.slice(13, 17)), month = Number(l.slice(18, 20)), hour = Number(l.slice(24, 26))
       if (year < YEARS[0] || year > YEARS[1]) continue
-      const h = hour >= 22 || hour <= 2 ? 0 : hour >= 10 && hour <= 14 ? 12 : -1
-      if (h < 0) continue
-      cur = { slot: (month - 1) * 2 + (h ? 1 : 0), levels: [] }
+      // Launch hour 00/06/12/18 UTC within +-2 h (nominal hours, 99 = unknown is skipped).
+      const k = hour >= 22 || hour <= 2 ? 0 : hour >= 4 && hour <= 8 ? 1 : hour >= 10 && hour <= 14 ? 2 : hour >= 16 && hour <= 20 ? 3 : -1
+      if (k < 0) continue
+      cur = { slot: (month - 1) * 4 + k, levels: [] }
       continue
     }
     if (!cur || l.length < 39) continue
@@ -124,7 +128,7 @@ function readIgra() {
     cur.levels.push({ p: p / 100, gph: Number.isFinite(gph) ? gph : NaN, t: tc, e })
   }
   flush()
-  log(`IGRA: ${seen} soundings in ${YEARS.join('-')} at 00/12 UTC, ${used} used; per slot: ${counts.join(' ')}`)
+  log(`IGRA: ${seen} soundings in ${YEARS.join('-')} at 00/06/12/18 UTC, ${used} used; per month x hour: ${counts.join(' ')}`)
   return sums.map((slot) => slot.map((s, i) => s.n < 20 ? null : {
     z: GRID[i], t: s.t / s.n, p: Math.exp(s.lp / s.n), e: s.ne >= 20 ? s.e / s.ne : 0,
     sd: Math.sqrt(Math.max(0, s.t2 / s.n - (s.t / s.n) ** 2)),
@@ -133,8 +137,23 @@ function readIgra() {
 
 const afgl = ['afglt', 'afglms', 'afglmw', 'afglss', 'afglsw'].map(readAfgl)
 const [, ms, mw] = afgl
-const il = readIgra().map((levels, slot) => {
-  const month = Math.floor(slot / 2) + 1
+const HOURS = ['00', '06', '12', '18']
+const raw = readIgra()
+// 06/18 UTC profiles shallower than the month's 00/12 UTC ones: continued by the mean of those (pressure joined).
+for (let slot = 0; slot < 48; slot++) {
+  if (slot % 2 === 0) continue
+  const levels = raw[slot], a = raw[slot - 1], b = raw[(slot + 1) % 4 === 0 ? slot - 3 : slot + 1]
+  const top = levels[levels.length - 1]
+  const ref = a.filter((l) => l.z > top.z).map((l) => ({ l, m: b.find((x) => x.z === l.z) })).filter(({ m }) => m)
+    .map(({ l, m }) => ({ z: l.z, t: (l.t + m.t) / 2, p: Math.sqrt(l.p * m.p), e: (l.e + m.e) / 2 }))
+  if (!ref.length) continue
+  const pa = a.find((l) => l.z === top.z), pb = b.find((l) => l.z === top.z)
+  const scale = pa && pb ? top.p / Math.sqrt(pa.p * pb.p) : 1
+  levels.push(...ref.map((l) => ({ ...l, p: l.p * scale })))
+  log(`Bet Dagan m${Math.floor(slot / 4) + 1} ${HOURS[slot % 4]}Z: own levels to ${top.z} m, continued by the 00/12 UTC mean to ${ref[ref.length - 1].z} m`)
+}
+const il = raw.map((levels, slot) => {
+  const month = Math.floor(slot / 4) + 1
   // Season weight of the AFGL continuation: 0 mid-January, 1 mid-July.
   const w = (1 - Math.cos(2 * Math.PI * (month - 1) / 12)) / 2
   const top = levels[levels.length - 1]
@@ -147,16 +166,17 @@ const il = readIgra().map((levels, slot) => {
   const mixAt = (z) => { const s = lerpAt(ms, z), wi = lerpAt(mw, z); return { t: s.t * w + wi.t * (1 - w), p: s.p * w + wi.p * (1 - w), e: s.e * w + wi.e * (1 - w) } }
   const scale = top.p / mixAt(top.z).p
   const above = ms.filter((l) => l.z > top.z + 1000).map((l) => { const m = mixAt(l.z); return { z: l.z, t: m.t, p: m.p * scale, e: m.e } })
-  const hh = slot % 2 ? '12' : '00'
+  const hh = HOURS[slot % 4]
   const s = levels[0], k1 = levels.find((l) => l.z === 1000), k3 = levels.find((l) => l.z === 3000)
-  log(`Bet Dagan m${month} ${hh}Z: ${levels.length} grid levels to ${top.z} m (+${above.length} AFGL); 50 m T ${(s.t - 273.15).toFixed(1)} C ` +
-    `(sd ${s.sd.toFixed(1)}) p ${s.p.toFixed(1)} e ${s.e.toFixed(1)}; 1 km ${(k1.t - 273.15).toFixed(1)} C; 3 km ${(k3.t - 273.15).toFixed(1)} C`)
+  const c = (l) => (l ? (l.t - 273.15).toFixed(1) : '?')
+  log(`Bet Dagan m${month} ${hh}Z: ${levels.length} grid levels to ${top.z} m (+${above.length} AFGL); 50 m T ${c(s)} C ` +
+    `(sd ${s.sd?.toFixed(1) ?? '?'}) p ${s.p.toFixed(1)} e ${s.e.toFixed(1)}; 1 km ${c(k1)} C; 3 km ${c(k3)} C`)
   return [...levels.map(({ z, t, p, e }) => ({ z, t, p, e })), ...above]
 })
-if (il.length !== 24) throw new Error('expected 24 Bet Dagan profiles')
+if (il.length !== 48) throw new Error('expected 48 Bet Dagan profiles')
 
 const profiles = [...afgl, ...il]
-const names = ['afglt', 'afglms', 'afglmw', 'afglss', 'afglsw', ...il.map((_, s) => `betdagan-m${Math.floor(s / 2) + 1}-${s % 2 ? '12' : '00'}z`)]
+const names = ['afglt', 'afglms', 'afglmw', 'afglss', 'afglsw', ...il.map((_, s) => `betdagan-m${Math.floor(s / 4) + 1}-${HOURS[s % 4]}z`)]
 let tsv = 'profile\tz_m\tT_K\tp_hPa\te_hPa\n'
 profiles.forEach((pr, i) => { for (const l of pr) tsv += `${names[i]}\t${l.z.toFixed(0)}\t${l.t.toFixed(2)}\t${l.p.toPrecision(6)}\t${l.e.toPrecision(4)}\n` })
 writeFileSync('data/atmosphere.tsv', tsv)
