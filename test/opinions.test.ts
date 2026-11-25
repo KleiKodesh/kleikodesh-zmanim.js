@@ -17,14 +17,9 @@ describe('opinion lines', () => {
     const p = await getPlace(1)
     for (const date of [{ year: 2026, month: 3, day: 20 }, { year: 2026, month: 6, day: 21 }, { year: 2026, month: 12, day: 21 }]) {
       const t = zmanInstants(p, date)
-      const order: ZmanName[] = ['alot90Visible', 'alot90', 'alotVisible', 'alot', 'misheyakirVisible', 'misheyakir', 'misheyakir11', 'misheyakirLechumra',
-        'misheyakir10p2', 'sunrise', 'chatzot', 'sunset', 'tzeitGeonim', 'tzeitGeonimVisible', 'tzeit7083', 'tzeit', 'tzeitVisible']
+      const order: ZmanName[] = ['alot90', 'alot', 'misheyakir', 'misheyakir11', 'misheyakirLechumra',
+        'misheyakir10p2', 'sunrise', 'chatzot', 'sunset', 'tzeitGeonim', 'tzeit7083', 'tzeit']
       for (let i = 1; i < order.length; i++) expect(ms(t[order[i]!]), order[i]).toBeGreaterThan(ms(t[order[i - 1]!]))
-      // Visible lines: R0 (~0.5 deg) deeper, so 2-4 minutes beyond the geometric line.
-      for (const [a, b] of [['alotVisible', 'alot'], ['tzeitVisible', 'tzeit']] as const) {
-        const d = Math.abs(ms(t[a]) - ms(t[b])) / 60000
-        expect(d).toBeGreaterThan(1.5); expect(d).toBeLessThan(5)
-      }
       expect(ms(t.sofShmaMga16)).toBeLessThan(ms(t.sofShmaGra))
       expect(ms(t.sofTfillaMga16)).toBeLessThan(ms(t.sofTfillaGra))
       expect(ms(t.minchaGedola30)).toBe(Math.max(ms(t.chatzot) + 1_800_000, ms(t.minchaGedola)))

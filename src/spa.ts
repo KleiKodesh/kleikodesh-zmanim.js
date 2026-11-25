@@ -45,13 +45,26 @@ function limit180(x: number): number {
 // ---------------------------------------------------------------- delta T default
 
 /**
- * Default deltaT = TT - UT in seconds (eq 2), for a decimal year.
- * Polynomial expressions of F. Espenak and J. Meeus, "Five Millennium Canon of Solar Eclipses:
- * -1999 to +3000", NASA Technical Publication NASA/TP-2006-214141 (2006), section "Polynomial
- * expressions for Delta T". Implemented here only for 1986..2150, the long-term parabola outside.
- * Callers needing better accuracy should pass an observed/predicted value instead.
+ * Observed Delta T = TT - UT1 in seconds on 1 January of each year, 2000..2025, rounded to 0.01 s, from the
+ * IERS Rapid Service/Prediction Center (USNO), https://maia.usno.navy.mil/ser7/deltat.data (published also in
+ * IERS Bulletin A, https://www.iers.org). 2026..2028 are the USNO long-term predictions,
+ * https://maia.usno.navy.mil/ser7/deltat.preds (0.1 s). Linear between entries.
  */
-export function defaultDeltaT(decimalYear: number): number {
+const DELTA_T_FIRST_YEAR = 2000
+const DELTA_T_TABLE = [
+  63.83, 64.09, 64.30, 64.47, 64.57, 64.69, 64.85, 65.15, 65.46, 65.78, // 2000-2009
+  66.07, 66.32, 66.60, 66.91, 67.28, 67.64, 68.10, 68.59, 68.97, 69.22, // 2010-2019
+  69.36, 69.36, 69.29, 69.20, 69.18, 69.14, // 2020-2025 observed
+  69.1, 69.2, 69.3, // 2026-2028 predicted
+]
+const DELTA_T_LAST_YEAR = DELTA_T_FIRST_YEAR + DELTA_T_TABLE.length - 1
+
+/**
+ * Long-term Delta T in seconds (eq 2), for a decimal year. Polynomial expressions of F. Espenak and J. Meeus,
+ * "Five Millennium Canon of Solar Eclipses: -1999 to +3000", NASA Technical Publication NASA/TP-2006-214141 (2006),
+ * section "Polynomial expressions for Delta T". Implemented here only for 1986..2150, the long-term parabola outside.
+ */
+export function polynomialDeltaT(decimalYear: number): number {
   const y = decimalYear
   if (y >= 1986 && y < 2005) {
     const t = y - 2000
@@ -64,6 +77,23 @@ export function defaultDeltaT(decimalYear: number): number {
   const u = (y - 1820) / 100
   if (y >= 2050 && y < 2150) return -20 + 32 * u * u - 0.5628 * (2150 - y)
   return -20 + 32 * u * u
+}
+
+/**
+ * Default deltaT = TT - UT in seconds, for a decimal year: the observed/predicted table above inside 2000..2028;
+ * before it the polynomial; after it the polynomial plus the table's last offset from it, fading out over 100 years
+ * so the value stays continuous. Callers needing better accuracy should pass an observed value instead.
+ */
+export function defaultDeltaT(decimalYear: number): number {
+  const y = decimalYear
+  if (y < DELTA_T_FIRST_YEAR) return polynomialDeltaT(y)
+  if (y <= DELTA_T_LAST_YEAR) {
+    const i = Math.min(Math.floor(y - DELTA_T_FIRST_YEAR), DELTA_T_TABLE.length - 2)
+    const f = y - DELTA_T_FIRST_YEAR - i
+    return DELTA_T_TABLE[i]! + (DELTA_T_TABLE[i + 1]! - DELTA_T_TABLE[i]!) * f
+  }
+  const offset = DELTA_T_TABLE[DELTA_T_TABLE.length - 1]! - polynomialDeltaT(DELTA_T_LAST_YEAR)
+  return polynomialDeltaT(y) + offset * Math.max(0, 1 - (y - DELTA_T_LAST_YEAR) / 100)
 }
 
 // ---------------------------------------------------------------- 3.1 Julian day

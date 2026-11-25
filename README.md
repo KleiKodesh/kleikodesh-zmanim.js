@@ -32,7 +32,7 @@ computeZmanim(await getPlace(1), { year, month, day })  // synchronous core
 computeZmanim({ lat, lng, tzid, monthlyTemperatureC: 'standard' }, date) // bare coordinates: standard atmosphere, explicitly
 ```
 
-Climate safety: the zmanim in `HORIZON_ZMANIM` (sunrise/sunset, everything built from them, the `Visible` lines) need
+Climate safety: the zmanim in `HORIZON_ZMANIM` (sunrise/sunset, everything built from them) need
 the place's monthly temperatures. Pass a `getPlace()` result (it carries them). A place object without
 `monthlyTemperatureC` throws for those zmanim instead of silently using the standard atmosphere; pass 12 values or
 `'standard'` to choose. Pure degree zmanim (alot, tzeit...) and chatzot need no temperatures.
@@ -50,13 +50,10 @@ Also exported: `zmanInstants` (exact instants as BigInt epoch nanoseconds), `for
 |---|---|---|
 | chatzotNight | solar midnight between yesterday's and today's chatzot | down |
 | alot90 | sun 19.798 deg below the horizon, morning (the "90 minutes" opinion) | down |
-| alot90Visible | sun 19.798 deg below the visible horizon (see below) | down |
 | alot90Chatzot | alot90, or chatzotNight on nights the sun never gets 19.798 deg down (1) | down |
 | alot | sun 16.05 deg below the horizon, morning | down |
-| alotVisible | sun 16.05 deg below the visible horizon | down |
 | alotChatzot | alot, or chatzotNight on nights the sun never gets 16.05 deg down (1) | down |
 | misheyakir | sun 11.5 deg below, morning | up |
-| misheyakirVisible | sun 11.5 deg below the visible horizon | up |
 | misheyakirChatzot | misheyakir, or chatzotNight on nights the sun never gets 11.5 deg down (1) | up |
 | misheyakir11 / misheyakir10p2 | sun 11 / 10.2 deg below, morning (other published misheyakir angles) | up |
 | misheyakirLechumra | sun 10.5 deg below, morning: a later, stringent misheyakir (SA OC 18:3, 30:1, 58:1; published angles span 10.2-11.5 deg) | up |
@@ -80,12 +77,10 @@ Also exported: `zmanInstants` (exact instants as BigInt epoch nanoseconds), `for
 | candles40 / candles30 / candles22 / candles20 / candles18 | candle lighting 40 / 30 / 22 / 20 / 18 minutes before sea-level sunset, by community custom (adding to Shabbat before sunset: SA OC 261:2) | down |
 | sunsetElevated | sunset below the horizon seen from the place's own elevation | down |
 | tzeitGeonim | sun 3.701 deg below, evening (Geonim, about 13.5 minutes) | up |
-| tzeitGeonimVisible | sun 3.701 deg below the visible horizon, evening | up |
 | tzeit7083 | sun 7.083 deg below, evening: three medium stars (Dr. Baruch Cohn, Melamed LeHo'il 1:30) | up |
 | alot12 | sun 12 deg below, morning: the light spreads over the whole east (Dr. Baruch Cohn, Melamed LeHo'il 1:30) | down |
 | plagAlot12Tzeit7083 | plag (10.75 seasonal hours) of a day from alot12 to tzeit7083 | up |
 | tzeit | sun 8.5 deg below, evening | up |
-| tzeitVisible | sun 8.5 deg below the visible horizon, evening | up |
 | tzeitRt72 | Rabbeinu Tam: 72 fixed minutes after sunset (4 mil of 18 min; Tosafot Shabbat 35a, from Pesachim 94a; SA OC 261:2 with Rema) | up |
 | tzeitRt72Zmanis | Rabbeinu Tam in seasonal minutes: sunset plus a tenth of the sunrise..sunset day | up |
 | tzeitRt16 | Rabbeinu Tam by degrees: sun 16.05 deg below, evening (the depth 72 minutes after sunset at the Jerusalem equinox) | up |
@@ -126,12 +121,6 @@ Beur HaGra, Orach Chaim 261:2 ("in lands leaning north, dawn begins in summer at
 https://www.sefaria.org/Beur_HaGra_on_Shulchan_Arukh,_Orach_Chayim.261.2); STAR-K, Rabbi Dovid Heber with
 Rav Moshe Heinemann, https://www.star-k.org/articles/?p=515 (notes 14, 15, 21, 23), which also cites
 Moadim U'Zmanim 2:155 (glosses) and Sefer Bein Hashmashos p. 55.
-
-"Visible" lines measure the depression from the apparent (refracted) sea-level horizon instead of the geometric one.
-Refraction lifts the image of the horizon line: a point that appears on the horizon is geometrically R0 below it,
-where R0 is the horizon refraction (ray-traced like sunrise, at apparent altitude 0 from the place's height, about 33-35'). So the sun's centre is at zenith 90 + R0 + depression (no solar radius); this is the
-convention of the standard sunrise altitude h0 = -0 deg 34' (Meeus, Astronomical Algorithms, 2nd ed., ch. 15)
-extended below the horizon. The Visible lines come out about 2-4 minutes beyond the geometric ones.
 
 ### Special days: specialZmanim(place, date, kind)
 
@@ -210,7 +199,7 @@ ray through a spherically stratified atmosphere (src/atmosphere.ts, src/horizon.
 
 Lines: sunrise/sunset = A 0 from the place's own height (a level plain at that height); Elevated = A = -dip to
 the sea-level horizon (none at or below sea level); Terrain = A = the terrain horizon toward the sun (its altitudes
-use the standard terrestrial refraction k = 0.13 of the horizon build); Visible lines use R(0). Degree lines
+use the standard terrestrial refraction k = 0.13 of the horizon build). Degree lines
 (alot, misheyakir, tzeit) and chatzot are geometric. Checks (test/raytrace.test.ts): the refraction constant
 (60.4" at 0 C) within 0.6%, Bennett within 0.12' from 5 to 60 deg, an independent step-by-step ray integration
 within 0.05', the dip formula within 3%. A month of every zman for one place takes about 60 ms.

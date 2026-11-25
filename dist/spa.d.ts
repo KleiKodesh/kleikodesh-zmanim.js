@@ -1,9 +1,13 @@
 /**
- * Default deltaT = TT - UT in seconds (eq 2), for a decimal year.
- * Polynomial expressions of F. Espenak and J. Meeus, "Five Millennium Canon of Solar Eclipses:
- * -1999 to +3000", NASA Technical Publication NASA/TP-2006-214141 (2006), section "Polynomial
- * expressions for Delta T". Implemented here only for 1986..2150, the long-term parabola outside.
- * Callers needing better accuracy should pass an observed/predicted value instead.
+ * Long-term Delta T in seconds (eq 2), for a decimal year. Polynomial expressions of F. Espenak and J. Meeus,
+ * "Five Millennium Canon of Solar Eclipses: -1999 to +3000", NASA Technical Publication NASA/TP-2006-214141 (2006),
+ * section "Polynomial expressions for Delta T". Implemented here only for 1986..2150, the long-term parabola outside.
+ */
+export declare function polynomialDeltaT(decimalYear: number): number;
+/**
+ * Default deltaT = TT - UT in seconds, for a decimal year: the observed/predicted table above inside 2000..2028;
+ * before it the polynomial; after it the polynomial plus the table's last offset from it, fading out over 100 years
+ * so the value stays continuous. Callers needing better accuracy should pass an observed value instead.
  */
 export declare function defaultDeltaT(decimalYear: number): number;
 /** 3.1.1 Julian Day for a UTC instant (milliseconds since 1970-01-01T00:00Z). */

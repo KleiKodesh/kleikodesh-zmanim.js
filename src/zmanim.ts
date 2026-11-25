@@ -7,7 +7,7 @@ import { julianDayFromUtcMs, spa, spaDay, spaEvent, zenithToH0, type SpaDay } fr
 
 /** Every zman the library computes, in the order of the day. Each is computed only when requested. */
 export const ZMAN_NAMES = [
-  'chatzotNight', 'alot90Visible', 'alot90', 'alot90Chatzot', 'alot90z', 'alotVisible', 'alot', 'alotChatzot', 'alot72z', 'alot96', 'alot120', 'alot12', 'misheyakir66', 'misheyakir60', 'misheyakirVisible',
+  'chatzotNight', 'alot90', 'alot90Chatzot', 'alot90z', 'alot', 'alotChatzot', 'alot72z', 'alot96', 'alot120', 'alot12', 'misheyakir66', 'misheyakir60',
   'misheyakir', 'misheyakirChatzot', 'misheyakir11', 'misheyakirLechumra', 'misheyakir10p2', 'misheyakir7p65', 'misheyakir12p85', 'misheyakir40', 'alotBaalHatanya', 'sunriseBaalHatanya', 'sunriseElevated', 'sunrise', 'sunriseTerrain',
   'sofShmaMga120', 'sofShmaMga90', 'sofShmaMga19', 'sofShmaMga90z', 'sofShmaMga', 'sofShmaMga16', 'sofShmaMga72z', 'sofShmaMga72Fixed', 'sofShmaMga16Fixed', 'sofShmaHarari40', 'sofShmaHarari25', 'sofShmaAsym', 'sofShmaBaalHatanya', 'sofShmaBenIshChai', 'sofShmaGra', 'sofShmaGraFixed',
   'sofTfillaMga120', 'sofTfillaMga90', 'sofTfillaMga19', 'sofTfillaMga90z', 'sofTfillaMga', 'sofTfillaMga16', 'sofTfillaMga72z', 'sofTfillaHarari40', 'sofTfillaHarari25', 'sofTfillaAsym', 'sofTfillaBaalHatanya', 'sofTfillaBenIshChai', 'sofTfillaGra', 'sofTfillaGraFixed',
@@ -15,7 +15,7 @@ export const ZMAN_NAMES = [
   'minchaGedolaHarari40', 'minchaGedolaHarari25', 'minchaKetana', 'minchaKetanaFixed', 'minchaKetanaHillel', 'minchaKetanaBaalHatanya',
   'minchaKetanaHarari40', 'minchaKetanaHarari25', 'plag', 'plagFixed', 'plagHillel', 'plagAlotTzeitGeonim', 'plagBaalHatanya', 'plagHarari40', 'plagHarari25', 'plagAsym', 'plagBenIshChai', 'plagMga', 'plagMga72z', 'plagMga19', 'plagMga90z', 'plagMga90', 'plagMga120', 'plagAlot90Tzeit645', 'plagAlot72Tzeit645', 'plagAlot12Tzeit7083',
   'candles40', 'candles30', 'candles22', 'candles20', 'candles18', 'sunsetTerrain', 'sunset', 'sunsetElevated', 'sunsetBaalHatanya',
-  'tzeitGeonim', 'tzeitGeonimVisible', 'tzeitBaalHatanya', 'tzeit13p5', 'tzeit18', 'tzeit18Sun', 'tzeit20', 'tzeit645', 'tzeit7083', 'tzeit', 'tzeitVisible', 'tzeit24', 'tzeit30',
+  'tzeitGeonim', 'tzeitBaalHatanya', 'tzeit13p5', 'tzeit18', 'tzeit18Sun', 'tzeit20', 'tzeit645', 'tzeit7083', 'tzeit', 'tzeit24', 'tzeit30',
   'tzeit40', 'tzeit45', 'tzeit50', 'tzeit13p5z', 'beinHashmashotYereim', 'beinHashmashotRt', 'tzeitRt72', 'tzeitRt72Zmanis', 'tzeitRt16', 'tzeitRt90', 'tzeitRt96', 'tzeit90z',
 ] as const
 
@@ -28,11 +28,11 @@ export type Rounding = 'up' | 'down' | 'nearest'
  */
 export const ROUNDING: Readonly<Record<ZmanName, Rounding>> = {
   alot90Chatzot: 'down', alotChatzot: 'down', misheyakirChatzot: 'up',
-  chatzotNight: 'down', alot90Visible: 'down', alot90: 'down', alotVisible: 'down', alot: 'down', misheyakirVisible: 'up',
+  chatzotNight: 'down', alot90: 'down', alot: 'down',
   misheyakir: 'up', misheyakir11: 'up', misheyakir10p2: 'up', misheyakirLechumra: 'up', sunriseElevated: 'up', sunrise: 'up', sunriseTerrain: 'up',
   sofShmaGra: 'down', sofShmaMga: 'down', sofShmaMga16: 'down', sofTfillaGra: 'down', sofTfillaMga: 'down', sofTfillaMga16: 'down',
   chatzot: 'down', minchaGedola: 'up', minchaGedola30: 'up', minchaKetana: 'up', plag: 'up', plagMga: 'up',
-  sunset: 'down', sunsetElevated: 'down', sunsetTerrain: 'down', tzeitGeonim: 'up', tzeitGeonimVisible: 'up', tzeit7083: 'up', tzeit18Sun: 'up', tzeit: 'up', tzeitVisible: 'up',
+  sunset: 'down', sunsetElevated: 'down', sunsetTerrain: 'down', tzeitGeonim: 'up', tzeit7083: 'up', tzeit18Sun: 'up', tzeit: 'up',
   candles40: 'down', candles30: 'down', candles22: 'down', candles20: 'down', candles18: 'down',
   tzeitRt72: 'up', tzeitRt72Zmanis: 'up', tzeitRt16: 'up', tzeitRt90: 'up', tzeitRt96: 'up', tzeit13p5z: 'up',
   alot90z: 'down', alot72z: 'down', alot96: 'down', alot120: 'down', tzeit90z: 'up',
@@ -56,11 +56,11 @@ export const ROUNDING: Readonly<Record<ZmanName, Rounding>> = {
 
 /**
  * Zmanim that depend on refraction at the horizon, and so on the place's monthly temperatures: sunrise/sunset,
- * everything built from them, and the Visible degree lines. A place without `monthlyTemperatureC` throws for these.
+ * and everything built from them. A place without `monthlyTemperatureC` throws for these.
  */
 export const HORIZON_ZMANIM: ReadonlySet<ZmanName> = new Set<ZmanName>(['sunrise', 'sunset', 'sunriseElevated', 'sunsetElevated',
   'sofShmaMga', 'sofShmaGra', 'sofTfillaMga', 'sofTfillaGra', 'minchaGedola', 'minchaGedola30', 'minchaKetana', 'plag', 'plagMga',
-  'alot90Visible', 'alotVisible', 'misheyakirVisible', 'tzeitGeonimVisible', 'tzeitVisible',
+ 
   'candles40', 'candles30', 'candles22', 'candles20', 'candles18', 'tzeitRt72', 'tzeitRt72Zmanis', 'tzeitRt90', 'tzeitRt96', 'tzeit13p5z', 'sunriseTerrain', 'sunsetTerrain',
   'alot90z', 'alot72z', 'alot96', 'alot120', 'tzeit90z', 'sofShmaMga120', 'sofShmaMga90', 'sofShmaMga90z', 'sofShmaMga72z', 'sofTfillaMga120', 'sofTfillaMga90',
   'sofTfillaMga90z', 'sofTfillaMga72z', 'plagMga120', 'plagMga90', 'plagMga90z', 'plagMga72z',
@@ -347,17 +347,6 @@ class Day {
     return this.memo(`${fromHeight ? 'hh' : 'h'}${kind}`, () => horizonZenith(this.place, this.date, fromHeight, hour))
   }
 
-  /**
-   * Zenith of a sun [depression] degrees below the apparent (refracted) sea-level horizon rather than the geometric
-   * one: the visible horizon lies R0 (horizon refraction at this place's pressure/temperature) below the geometric
-   * horizon, so zenith = 90 + R0 + depression. No solar radius: degree lines refer to the sun's centre.
-   */
-  visible(depression: number): number {
-    return this.memo(`v${depression}`, () => {
-      return GEOMETRIC_ZENITH + depression + horizonRefraction(this.place, this.date) / 60
-    })
-  }
-
   rise(zenith: number): number { return this.event(zenith, -1) }
   set(zenith: number): number { return this.event(zenith, 1) }
   sunrise(fromHeight = false): number { return this.rise(this.horizon(fromHeight, -1)) }
@@ -466,11 +455,8 @@ export function zmanInstants(place: Coordinates, date: CivilDate, which: readonl
       case 'alot90Chatzot': ms = orNight(today.rise(G + ALOT_90)); break
       case 'alotChatzot': ms = orNight(today.rise(G + ALOT)); break
       case 'misheyakirChatzot': ms = orNight(today.rise(G + MISHEYAKIR)); break
-      case 'alot90Visible': ms = today.rise(today.visible(ALOT_90)); break
       case 'alot90': ms = today.rise(G + ALOT_90); break
-      case 'alotVisible': ms = today.rise(today.visible(ALOT)); break
       case 'alot': ms = today.rise(G + ALOT); break
-      case 'misheyakirVisible': ms = today.rise(today.visible(MISHEYAKIR)); break
       case 'misheyakir': ms = today.rise(G + MISHEYAKIR); break
       case 'misheyakir11': ms = today.rise(G + MISHEYAKIR_11); break
       case 'misheyakir10p2': ms = today.rise(G + MISHEYAKIR_10_2); break
@@ -497,10 +483,8 @@ export function zmanInstants(place: Coordinates, date: CivilDate, which: readonl
       // Height: on Mount Carmel sunrise under 3 min earlier, sunset 2-3 min later - Bein Hashmashot (Tukachinsky) p.105.
       case 'sunsetElevated': ms = today.sunset(true); break
       case 'tzeitGeonim': ms = today.set(G + TZEIT_GEONIM); break
-      case 'tzeitGeonimVisible': ms = today.set(today.visible(TZEIT_GEONIM)); break
       case 'tzeit7083': ms = today.set(G + TZEIT_7083); break
       case 'tzeit': ms = today.set(G + TZEIT); break
-      case 'tzeitVisible': ms = today.set(today.visible(TZEIT)); break
       // Candle lighting: a fixed number of minutes before sunset, by community custom (SA OC 261:2, 263).
       case 'candles40': ms = today.sunset() - 40 * MINUTE_MS; break
       case 'candles30': ms = today.sunset() - 30 * MINUTE_MS; break

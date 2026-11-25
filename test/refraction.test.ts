@@ -66,7 +66,7 @@ describe('lazy climate.bin', () => {
     const bare = { lat: 31.77, lng: 35.22, tzid: 'Asia/Jerusalem', elevation: 786 }
     const day = { year: 2026, month: 6, day: 21 }
     expect(() => computeZmanim(bare, day, ['sunrise'])).toThrow(/temperatures/)
-    expect(() => zmanInstants(bare, day, ['tzeitVisible'])).toThrow(/temperatures/)
+    expect(() => zmanInstants(bare, day, ['sunset'])).toThrow(/temperatures/)
     expect(computeZmanim(bare, day, ['alot', 'tzeit']).alot).toMatch(/^\d\d:\d\d$/)
     const r = computeZmanim({ ...bare, monthlyTemperatureC: 'standard' }, { year: 2026, month: 6, day: 21 }, ['sunrise'])
     expect(r.sunrise).toMatch(/^05:3\d$/)

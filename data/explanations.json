@@ -45,30 +45,6 @@
       ]
     }
   },
-  "alot90Visible": {
-    "he": {
-      "title": "עלות השחר (90 דקות, מהאופק הנראה)",
-      "text": "כמו עלות השחר של 90 דקות (19.8 מעלות), אלא שהמעלות נמדדות מהאופק הנראה לעין, שהשבירה באוויר מגביהה אותו. יוצא כ־2 עד 4 דקות מוקדם יותר.",
-      "sources": [
-        "פסחים צד ע״א",
-        "שו״ע או״ח תנט, ב; משנה ברורה תנט, טו",
-        "חישוב אסטרונומי: שבירת האור באופק לפי לחץ האוויר והטמפרטורה של המקום (Hohenkerk & Sinclair 1985; Auer & Standish 2000; Keller & Hall 2022)",
-        "בירור זמנים ח״א עמ׳ 66 (90 דקות הן כ־19.75 מעלות)",
-        "בין השמשות (ר׳ י״מ טוקצינסקי) עמ׳ 105 (עלות השחר שעה וחצי לפני הנץ)"
-      ]
-    },
-    "en": {
-      "title": "Dawn (90 minutes, from the visible horizon)",
-      "text": "Like the 90-minute dawn (19.8 degrees), but the degrees are measured from the visible horizon, which refraction in the air lifts. It comes out about 2 to 4 minutes earlier.",
-      "sources": [
-        "Pesachim 94a",
-        "Shulchan Aruch OC 459:2; Mishna Berura 459:15",
-        "Astronomy: horizon refraction ray-traced through a layered model atmosphere (Hohenkerk & Sinclair 1985; Auer & Standish 2000)",
-        "Birur Zmanim vol 1 p.66 (90 min is about 19.75 deg)",
-        "Bein Hashmashot (R. Y. M. Tukachinsky) p.105 (dawn an hour and a half before sunrise)"
-      ]
-    }
-  },
   "alot90Chatzot": {
     "he": {
       "title": "עלות השחר (90 דקות, או חצות)",
@@ -115,28 +91,6 @@
       ]
     }
   },
-  "alotVisible": {
-    "he": {
-      "title": "עלות השחר (מהאופק הנראה)",
-      "text": "כמו עלות השחר (16.05 מעלות), אלא שהמעלות נמדדות מהאופק הנראה לעין, שהשבירה באוויר מגביהה אותו. יוצא כ־2 עד 4 דקות מוקדם יותר.",
-      "sources": [
-        "פסחים צד ע״א",
-        "שו״ע או״ח פט, א",
-        "חישוב אסטרונומי: שבירת האור באופק לפי לחץ האוויר והטמפרטורה של המקום (Hohenkerk & Sinclair 1985; Auer & Standish 2000; Keller & Hall 2022)",
-        "בירור זמנים ח״א עמ׳ 66 (72 דקות בארץ ישראל בשוויון הן כ־16 מעלות)"
-      ]
-    },
-    "en": {
-      "title": "Dawn (from the visible horizon)",
-      "text": "Like dawn (16.05 degrees), but the degrees are measured from the visible horizon, which refraction in the air lifts. It comes out about 2 to 4 minutes earlier.",
-      "sources": [
-        "Pesachim 94a",
-        "Shulchan Aruch OC 89:1",
-        "Astronomy: horizon refraction ray-traced through a layered model atmosphere (Hohenkerk & Sinclair 1985; Auer & Standish 2000)",
-        "Birur Zmanim vol 1 p.66 (72 min in Eretz Yisrael at the equinox is about 16 deg)"
-      ]
-    }
-  },
   "alotChatzot": {
     "he": {
       "title": "עלות השחר (או חצות)",
@@ -174,26 +128,6 @@
         "Berachot 9b (when one can tell blue from white)",
         "Shulchan Aruch OC 18:3 (blessing on tzitzis from when one can tell its blue from its white)",
         "Shulchan Aruch OC 58:1 (when one sees a friend four amos away and recognizes him)"
-      ]
-    }
-  },
-  "misheyakirVisible": {
-    "he": {
-      "title": "משיכיר (מהאופק הנראה)",
-      "text": "כמו משיכיר (11.5 מעלות), אלא שהמעלות נמדדות מהאופק הנראה לעין. יוצא כ־2 עד 4 דקות מוקדם יותר.",
-      "sources": [
-        "ברכות ט ע״ב",
-        "שו״ע או״ח יח, ג",
-        "חישוב אסטרונומי: שבירת האור באופק (Hohenkerk & Sinclair 1985; Auer & Standish 2000; Keller & Hall 2022)"
-      ]
-    },
-    "en": {
-      "title": "Misheyakir (from the visible horizon)",
-      "text": "Like misheyakir (11.5 degrees), but the degrees are measured from the visible horizon. It comes out about 2 to 4 minutes earlier.",
-      "sources": [
-        "Berachot 9b",
-        "Shulchan Aruch OC 18:3",
-        "Astronomy: horizon refraction (ray tracing: Hohenkerk & Sinclair 1985; Auer & Standish 2000; Keller & Hall 2022)"
       ]
     }
   },
@@ -703,26 +637,6 @@
       ]
     }
   },
-  "tzeitGeonimVisible": {
-    "he": {
-      "title": "צאת הכוכבים (גאונים, מהאופק הנראה)",
-      "text": "כמו צאת הכוכבים לשיטת הגאונים (3.7 מעלות), אלא שהמעלות נמדדות מהאופק הנראה לעין. יוצא כ־2 עד 4 דקות מאוחר יותר.",
-      "sources": [
-        "שבת לד ע״ב",
-        "שו״ע או״ח רסא, ב",
-        "חישוב אסטרונומי: שבירת האור באופק (Hohenkerk & Sinclair 1985; Auer & Standish 2000; Keller & Hall 2022)"
-      ]
-    },
-    "en": {
-      "title": "Nightfall (Geonim, from the visible horizon)",
-      "text": "Like the Geonim's nightfall (3.7 degrees), but the degrees are measured from the visible horizon. It comes out about 2 to 4 minutes later.",
-      "sources": [
-        "Shabbat 34b",
-        "Shulchan Aruch OC 261:2",
-        "Astronomy: horizon refraction (ray tracing: Hohenkerk & Sinclair 1985; Auer & Standish 2000; Keller & Hall 2022)"
-      ]
-    }
-  },
   "tzeit7083": {
     "he": {
       "title": "צאת הכוכבים (7.083 מעלות)",
@@ -762,24 +676,6 @@
         "Shabbat 35b (three medium stars - night)",
         "Shulchan Aruch OC 235:3 (evening Shema right at nightfall)",
         "Biur HaGra OC 261:2"
-      ]
-    }
-  },
-  "tzeitVisible": {
-    "he": {
-      "title": "צאת הכוכבים (מהאופק הנראה)",
-      "text": "כמו צאת הכוכבים (8.5 מעלות), אלא שהמעלות נמדדות מהאופק הנראה לעין. יוצא כ־2 עד 4 דקות מאוחר יותר.",
-      "sources": [
-        "שבת לה ע״ב",
-        "חישוב אסטרונומי: שבירת האור באופק (Hohenkerk & Sinclair 1985; Auer & Standish 2000; Keller & Hall 2022)"
-      ]
-    },
-    "en": {
-      "title": "Nightfall (from the visible horizon)",
-      "text": "Like nightfall (8.5 degrees), but the degrees are measured from the visible horizon. It comes out about 2 to 4 minutes later.",
-      "sources": [
-        "Shabbat 35b",
-        "Astronomy: horizon refraction (ray tracing: Hohenkerk & Sinclair 1985; Auer & Standish 2000; Keller & Hall 2022)"
       ]
     }
   },

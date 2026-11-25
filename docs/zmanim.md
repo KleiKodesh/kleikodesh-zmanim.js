@@ -29,20 +29,6 @@ The first light of morning, by the longer measure of the time from dawn to sunri
 - Birur Zmanim vol 1 p.66 (90 min is about 19.75 deg)
 - Bein Hashmashot (R. Y. M. Tukachinsky) p.105 (dawn an hour and a half before sunrise)
 
-<a id="alot90Visible"></a>
-
-## Dawn (90 minutes, from the visible horizon)
-
-Like the 90-minute dawn (19.8 degrees), but the degrees are measured from the visible horizon, which refraction in the air lifts. It comes out about 2 to 4 minutes earlier.
-
-**Sources:**
-
-- Pesachim 94a
-- Shulchan Aruch OC 459:2; Mishna Berura 459:15
-- Astronomy: horizon refraction ray-traced through a layered model atmosphere (Hohenkerk & Sinclair 1985; Auer & Standish 2000)
-- Birur Zmanim vol 1 p.66 (90 min is about 19.75 deg)
-- Bein Hashmashot (R. Y. M. Tukachinsky) p.105 (dawn an hour and a half before sunrise)
-
 <a id="alot90Chatzot"></a>
 
 ## Dawn (90 minutes, or midnight)
@@ -70,19 +56,6 @@ The first light in the east. From this time one fulfils, after the fact, the mor
 - Astronomy: in Jerusalem at the equinox the sun is 16.05 degrees below the horizon 72 minutes before sunrise
 - Birur Zmanim vol 1 p.66 (72 min in Eretz Yisrael at the equinox is about 16 deg)
 
-<a id="alotVisible"></a>
-
-## Dawn (from the visible horizon)
-
-Like dawn (16.05 degrees), but the degrees are measured from the visible horizon, which refraction in the air lifts. It comes out about 2 to 4 minutes earlier.
-
-**Sources:**
-
-- Pesachim 94a
-- Shulchan Aruch OC 89:1
-- Astronomy: horizon refraction ray-traced through a layered model atmosphere (Hohenkerk & Sinclair 1985; Auer & Standish 2000)
-- Birur Zmanim vol 1 p.66 (72 min in Eretz Yisrael at the equinox is about 16 deg)
-
 <a id="alotChatzot"></a>
 
 ## Dawn (or midnight)
@@ -106,18 +79,6 @@ When there is enough light to tell blue from white, and to recognize a familiar 
 - Berachot 9b (when one can tell blue from white)
 - Shulchan Aruch OC 18:3 (blessing on tzitzis from when one can tell its blue from its white)
 - Shulchan Aruch OC 58:1 (when one sees a friend four amos away and recognizes him)
-
-<a id="misheyakirVisible"></a>
-
-## Misheyakir (from the visible horizon)
-
-Like misheyakir (11.5 degrees), but the degrees are measured from the visible horizon. It comes out about 2 to 4 minutes earlier.
-
-**Sources:**
-
-- Berachot 9b
-- Shulchan Aruch OC 18:3
-- Astronomy: horizon refraction (ray tracing: Hohenkerk & Sinclair 1985; Auer & Standish 2000; Keller & Hall 2022)
 
 <a id="misheyakirChatzot"></a>
 
@@ -418,18 +379,6 @@ The end of twilight by the Geonim: three quarters of a mil after sunset, about 1
 - Astronomy: 3.7 degrees = 13.5 minutes in Jerusalem at the equinox
 - Birur Zmanim vol 2 p.11-14 (Rabbeinu Tam per the Minchat Kohen: nightfall when three stars are seen)
 
-<a id="tzeitGeonimVisible"></a>
-
-## Nightfall (Geonim, from the visible horizon)
-
-Like the Geonim's nightfall (3.7 degrees), but the degrees are measured from the visible horizon. It comes out about 2 to 4 minutes later.
-
-**Sources:**
-
-- Shabbat 34b
-- Shulchan Aruch OC 261:2
-- Astronomy: horizon refraction (ray tracing: Hohenkerk & Sinclair 1985; Auer & Standish 2000; Keller & Hall 2022)
-
 <a id="tzeit7083"></a>
 
 ## Nightfall (7.083 degrees)
@@ -454,17 +403,6 @@ When three medium stars appear: night begins, and Shabbos and fasts end. Here: t
 - Shabbat 35b (three medium stars - night)
 - Shulchan Aruch OC 235:3 (evening Shema right at nightfall)
 - Biur HaGra OC 261:2
-
-<a id="tzeitVisible"></a>
-
-## Nightfall (from the visible horizon)
-
-Like nightfall (8.5 degrees), but the degrees are measured from the visible horizon. It comes out about 2 to 4 minutes later.
-
-**Sources:**
-
-- Shabbat 35b
-- Astronomy: horizon refraction (ray tracing: Hohenkerk & Sinclair 1985; Auer & Standish 2000; Keller & Hall 2022)
 
 <a id="candles40"></a>
 
