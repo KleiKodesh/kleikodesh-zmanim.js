@@ -174,10 +174,18 @@ function horizonRefraction(place: Coordinates, date: CivilDate, apparent = 0, ho
  * view angle of 0.01 deg or less where the sun rose (radiative cooling of long clear nights builds a surface inversion
  * that bends near-horizontal rays down); subtracting 15 s on those days brought both Jerusalem sites to about 14 s
  * RMS. Bnei Brak (horizon about +1 deg) showed no such lean. Applied where it was observed (the Bet Dagan region).
+ *
+ * CAVEAT: this is an EMPIRICAL correction fitted to observations, not modelled physics. It stands in for the ground
+ * temperature inversion of long winter nights, which the ray tracer does not model. It was validated only at the
+ * Jerusalem observation sites (not Bnei Brak, not any other terrain), so applying it elsewhere in the region is an
+ * extrapolation. On by default; turn it off with configure({ empiricalInversionCorrection: false }).
  */
 const INVERSION_NIGHT_MS = 13 * 3_600_000
 const INVERSION_MAX_ALTITUDE = 0.01
 const INVERSION_ADVANCE_MS = 15_000
+let empiricalInversionCorrection = true
+/** Set by configure({ empiricalInversionCorrection }): applies the winter-inversion lean above (default true). */
+export function setEmpiricalInversionCorrection(on: boolean): void { empiricalInversionCorrection = on }
 
 /**
  * Reference only (the zmanim trace the dip in the model atmosphere, see horizonZenith): the navigators' dip of the
@@ -418,7 +426,7 @@ class Day {
         altitude = a
         if (done) break
       }
-      if (kind < 0 && !Number.isNaN(t) && altitude <= INVERSION_MAX_ALTITUDE && inBetDaganRegion(this.place.lat, this.place.lng)
+      if (empiricalInversionCorrection && kind < 0 && !Number.isNaN(t) && altitude <= INVERSION_MAX_ALTITUDE && inBetDaganRegion(this.place.lat, this.place.lng)
         && DAY_MS - (this.sunset() - this.sunrise()) > INVERSION_NIGHT_MS) t -= INVERSION_ADVANCE_MS
       return t
     })

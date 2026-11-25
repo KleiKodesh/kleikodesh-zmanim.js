@@ -70,6 +70,8 @@ export interface Coordinates {
 }
 /** The geometric horizon. */
 export declare const GEOMETRIC_ZENITH = 90;
+/** Set by configure({ empiricalInversionCorrection }): applies the winter-inversion lean above (default true). */
+export declare function setEmpiricalInversionCorrection(on: boolean): void;
 /**
  * Reference only (the zmanim trace the dip in the model atmosphere, see horizonZenith): the navigators' dip of the
  * visible sea/plain horizon seen from [elevation] meters, degrees: D = 1.76' * sqrt(h m), the standard

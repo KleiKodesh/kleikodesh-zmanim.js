@@ -67,6 +67,10 @@ Ray-traced through a layered model atmosphere (src/atmosphere.ts, src/horizon.ts
   https://doi.org/10.1016/j.cageo.2022.105044 (open access) - observer height, dip, terrestrial refraction to the
   terrain (Bomford's formula), standard column at the minimum temperature, the winter low-inversion lean (15 s after
   nights over 13 h on a level horizon), all checked against observed sunrises in Jerusalem and Bnei Brak.
+  Caveat: the 15 s lean is an EMPIRICAL correction from those observations (section 3), not modelled physics; it
+  stands in for the unmodelled ground temperature inversion of long winter nights, is validated only at the
+  Jerusalem observation sites (not Bnei Brak or other terrain), so applying it elsewhere is an extrapolation. On by
+  default; configure({ empiricalInversionCorrection: false }) turns it off.
 - G. Bomford, Geodesy, Clarendon Press, Oxford (1952) p. 158 - coefficient of terrestrial refraction from P, T, dT/dh.
 - U.S. Standard Atmosphere 1976 (NOAA/NASA/USAF); G. P. Anderson et al., AFGL atmospheric constituent profiles
   (0-120 km), AFGL-TR-86-0110 (1986).

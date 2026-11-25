@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest'
-import { epochMs, getAtmospheres, getPlace, getTerrainHorizon, NO_TERRAIN, TERRAIN_BINS, terrainAltitude, zmanInstants, zmanim } from '../src/index'
+import { configure, epochMs, getAtmospheres, getPlace, getTerrainHorizon, NO_TERRAIN, TERRAIN_BINS, terrainAltitude, zmanInstants, zmanim } from '../src/index'
 import { useFileAssets } from './helpers'
 
 const JERUSALEM = 1, TEL_AVIV = 45, EILAT = 97, SAFED = 98, BEIT_SHEMESH = 188
@@ -79,6 +79,20 @@ describe('terrain sunrise/sunset', () => {
     expect(await step(JERUSALEM, jan) - await step(JERUSALEM, jul)).toBeCloseTo(15, -0.5)
     const LONDON = 109 // long winter nights too, but not where it was observed
     expect(Math.abs(await step(LONDON, jan) - await step(LONDON, jul))).toBeLessThan(3)
+  })
+
+  it('winter inversion can be switched off from code, and is on by default', async () => {
+    const jan = { year: 2026, month: 1, day: 15 }, jul = { year: 2026, month: 7, day: 15 }
+    const step = async (d: typeof jan) => (await terrainRise(JERUSALEM, d, flat(2)) - await terrainRise(JERUSALEM, d, flat(0))) / 1000
+    try {
+      configure({ empiricalInversionCorrection: false })
+      useFileAssets()
+      expect(Math.abs(await step(jan) - await step(jul))).toBeLessThan(3)
+    } finally {
+      configure({ empiricalInversionCorrection: true })
+      useFileAssets()
+    }
+    expect(await step(jan) - await step(jul)).toBeCloseTo(15, -0.5)
   })
 
   it('terrain lines in Israel trace the standard column, not the coastal soundings', async () => {

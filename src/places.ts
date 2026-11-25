@@ -1,6 +1,6 @@
 // The place list: loaded lazily from the compact asset files, each at most once.
 import type { CivilDate, Coordinates, ZmanName } from './zmanim.js'
-import { computeZmanim, HORIZON_ZMANIM, NO_TERRAIN, TERRAIN_BINS, TERRAIN_ZMANIM, ZMAN_NAMES } from './zmanim.js'
+import { computeZmanim, HORIZON_ZMANIM, setEmpiricalInversionCorrection, NO_TERRAIN, TERRAIN_BINS, TERRAIN_ZMANIM, ZMAN_NAMES } from './zmanim.js'
 import { parseAtmospheres, type AtmosphereTable } from './horizon.js'
 
 export type Lang = 'he' | 'en'
@@ -50,8 +50,13 @@ export let assetGeneration = 0
 /** Reads one asset file through the configured loader. */
 export const readAsset = (file: string): Promise<ArrayBuffer> => loader(file)
 
-/** Where the asset files are: a base URL for the default fetch loader, or a loader of your own. */
-export function configure(options: { baseUrl?: string | URL, loader?: AssetLoader }): void {
+/**
+ * Where the asset files are: a base URL for the default fetch loader, or a loader of your own.
+ * empiricalInversionCorrection (default true): the 15 s winter-inversion lean on terrain sunrise in Israel, an
+ * empirical correction from the Jerusalem observations of Keller & Hall (2022), not modelled physics; false turns it off.
+ */
+export function configure(options: { baseUrl?: string | URL, loader?: AssetLoader, empiricalInversionCorrection?: boolean }): void {
+  if (options.empiricalInversionCorrection !== undefined) setEmpiricalInversionCorrection(options.empiricalInversionCorrection)
   if (options.baseUrl !== undefined) baseUrl = options.baseUrl
   if (options.loader !== undefined) loader = options.loader
   assetGeneration++

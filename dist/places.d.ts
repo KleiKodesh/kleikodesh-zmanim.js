@@ -33,10 +33,15 @@ export declare const RECORD_SIZE = 11;
 export declare let assetGeneration: number;
 /** Reads one asset file through the configured loader. */
 export declare const readAsset: (file: string) => Promise<ArrayBuffer>;
-/** Where the asset files are: a base URL for the default fetch loader, or a loader of your own. */
+/**
+ * Where the asset files are: a base URL for the default fetch loader, or a loader of your own.
+ * empiricalInversionCorrection (default true): the 15 s winter-inversion lean on terrain sunrise in Israel, an
+ * empirical correction from the Jerusalem observations of Keller & Hall (2022), not modelled physics; false turns it off.
+ */
 export declare function configure(options: {
     baseUrl?: string | URL;
     loader?: AssetLoader;
+    empiricalInversionCorrection?: boolean;
 }): void;
 /** Bytes per record in climate.bin: 12 monthly mean temperatures, int8 C; -128 = unknown. */
 export declare const CLIMATE_RECORD_SIZE = 12;

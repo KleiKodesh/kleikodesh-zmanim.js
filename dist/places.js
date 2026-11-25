@@ -1,4 +1,4 @@
-import { computeZmanim, HORIZON_ZMANIM, NO_TERRAIN, TERRAIN_BINS, TERRAIN_ZMANIM, ZMAN_NAMES } from './zmanim.js';
+import { computeZmanim, HORIZON_ZMANIM, setEmpiricalInversionCorrection, NO_TERRAIN, TERRAIN_BINS, TERRAIN_ZMANIM, ZMAN_NAMES } from './zmanim.js';
 import { parseAtmospheres } from './horizon.js';
 /** Bytes per record in places.bin: lat int32, lng int32 (degrees x 1e5), elevation int16, tz index uint8. */
 export const RECORD_SIZE = 11;
@@ -14,8 +14,14 @@ let loader = async (file) => {
 export let assetGeneration = 0;
 /** Reads one asset file through the configured loader. */
 export const readAsset = (file) => loader(file);
-/** Where the asset files are: a base URL for the default fetch loader, or a loader of your own. */
+/**
+ * Where the asset files are: a base URL for the default fetch loader, or a loader of your own.
+ * empiricalInversionCorrection (default true): the 15 s winter-inversion lean on terrain sunrise in Israel, an
+ * empirical correction from the Jerusalem observations of Keller & Hall (2022), not modelled physics; false turns it off.
+ */
 export function configure(options) {
+    if (options.empiricalInversionCorrection !== undefined)
+        setEmpiricalInversionCorrection(options.empiricalInversionCorrection);
     if (options.baseUrl !== undefined)
         baseUrl = options.baseUrl;
     if (options.loader !== undefined)

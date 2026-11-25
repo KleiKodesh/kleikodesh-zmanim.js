@@ -19,6 +19,7 @@ import { configure, listPlaces, searchPlaces, getPlace, zmanim, computeZmanim, Z
 
 configure({ baseUrl: '/zmanim-assets/' })            // optional; default: ../assets/ next to dist/ (import.meta.url)
 configure({ loader: async (file) => arrayBuffer })   // or bring your own reader (Node fs, a cache, a bundle...)
+configure({ empiricalInversionCorrection: false })   // optional; drop the empirical winter-inversion 15 s (see Lines)
 
 await listPlaces('he')            // string[]; index = place id (index 0 empty). Loads names-he.txt only.
 await searchPlaces('jeru', 'en')  // [{ id, name }]; prefix matches first; ignores case, accents, Hebrew points
@@ -212,7 +213,11 @@ carry the place's terrestrial refraction, see Terrain horizon). Terrain lines in
 Standard Atmosphere 1976 moved to the event-hour temperature, not the coastal soundings, and sunrise there is 15 s
 earlier after a night over 13 h when the horizon at the sun is within 0.01 deg of level: the model and the
 low-inversion lean that Keller & Hall (2022) checked against years of observed sunrises in Jerusalem and Bnei Brak
-(about 15 s; the unchanged coastal soundings did worst at the Jerusalem site). Degree lines
+(about 15 s; the unchanged coastal soundings did worst at the Jerusalem site). Caveat: the 15 s is an EMPIRICAL
+correction from those observations (Computers & Geosciences 161 (2022) 105044, section 3), not modelled physics; it
+stands in for the ground temperature inversion of long winter nights, which is not modelled. It was validated only at
+the Jerusalem observation sites (not Bnei Brak or other terrain), so elsewhere it is an extrapolation. It is on by
+default; `configure({ empiricalInversionCorrection: false })` turns it off. Degree lines
 (alot, misheyakir, tzeit) and chatzot are geometric. Checks (test/raytrace.test.ts): the refraction constant
 (60.4" at 0 C) within 0.6%, Bennett within 0.12' from 5 to 60 deg, an independent step-by-step ray integration
 within 0.05', the dip formula within 3%. A month of every zman for one place takes about 60 ms.
