@@ -48,13 +48,13 @@ Also exported: `zmanInstants` (exact instants as BigInt epoch nanoseconds), `for
 
 | name | definition | rounding |
 |---|---|---|
-| chatzotNight | solar midnight between yesterday's and today's chatzot | up |
-| alot90 | sun 19.8 deg below the horizon, morning (the "90 minutes" opinion) | up |
-| alot90Visible | sun 19.8 deg below the visible horizon (see below) | up |
-| alot90Chatzot | alot90, or chatzotNight on nights the sun never gets 19.8 deg down (1) | up |
-| alot | sun 16.05 deg below the horizon, morning | up |
-| alotVisible | sun 16.05 deg below the visible horizon | up |
-| alotChatzot | alot, or chatzotNight on nights the sun never gets 16.05 deg down (1) | up |
+| chatzotNight | solar midnight between yesterday's and today's chatzot | down |
+| alot90 | sun 19.798 deg below the horizon, morning (the "90 minutes" opinion) | down |
+| alot90Visible | sun 19.798 deg below the visible horizon (see below) | down |
+| alot90Chatzot | alot90, or chatzotNight on nights the sun never gets 19.798 deg down (1) | down |
+| alot | sun 16.05 deg below the horizon, morning | down |
+| alotVisible | sun 16.05 deg below the visible horizon | down |
+| alotChatzot | alot, or chatzotNight on nights the sun never gets 16.05 deg down (1) | down |
 | misheyakir | sun 11.5 deg below, morning | up |
 | misheyakirVisible | sun 11.5 deg below the visible horizon | up |
 | misheyakirChatzot | misheyakir, or chatzotNight on nights the sun never gets 11.5 deg down (1) | up |
@@ -66,53 +66,53 @@ Also exported: `zmanInstants` (exact instants as BigInt epoch nanoseconds), `for
 | sofShmaMga / sofTfillaMga | 3 / 4 temporal hours of the day from 72 min before sunrise to 72 min after sunset | down |
 | sofShmaMga16 / sofTfillaMga16 | 3 / 4 temporal hours of the MGA day by degrees: alot 16.05 deg to the sun 16.05 deg below in the evening | down |
 | sofShmaGra / sofTfillaGra | 3 / 4 temporal hours of sunrise..sunset | down |
-| chatzot | solar noon | nearest |
+| chatzot | solar noon | down |
 | minchaGedola / minchaKetana / plag | 6.5 / 9.5 / 10.75 temporal hours (GRA) | up |
 | minchaGedola30 | the later of 30 minutes after chatzot and minchaGedola (half a GRA temporal hour after chatzot) | up |
 | plagMga | 10.75 temporal hours of the same MGA day as sofShmaMga (72 min before sunrise .. 72 min after sunset) | up |
 | sofShmaMga90 / sofTfillaMga90 / plagMga90 | 3 / 4 / 10.75 temporal hours of the MGA day from 90 fixed min before sunrise to 90 after sunset (5 mil of 18 min: Pesachim 93b; SA OC 459:2) | down / down / up |
 | sofShmaMga120 / sofTfillaMga120 / plagMga120 | the same for a day of 120 fixed min each side (5 mil of 24 min: Pesachim 93b; Rambam on Mishna Pesachim 3:2) | down / down / up |
-| sofShmaMga19 / sofTfillaMga19 / plagMga19 | the same for the day from the sun 19.8 deg below in the morning to 19.8 deg below in the evening | down / down / up |
+| sofShmaMga19 / sofTfillaMga19 / plagMga19 | the same for the day from the sun 19.798 deg below in the morning to 19.798 deg below in the evening | down / down / up |
 | sofShmaMga72z / sofTfillaMga72z / plagMga72z | the same for the day from alot72z to tzeitRt72Zmanis (a tenth of the GRA day each side) | down / down / up |
 | sofShmaMga90z / sofTfillaMga90z / plagMga90z | the same for the day from alot90z to tzeit90z (an eighth of the GRA day each side) | down / down / up |
 | sunsetTerrain | the sun's upper limb sinks below the real terrain horizon at its azimuth (horizon-NN.bin; null without data) | down |
 | sunset | sea-level sunset | down |
 | candles40 / candles30 / candles22 / candles20 / candles18 | candle lighting 40 / 30 / 22 / 20 / 18 minutes before sea-level sunset, by community custom (adding to Shabbat before sunset: SA OC 261:2) | down |
 | sunsetElevated | sunset below the horizon seen from the place's own elevation | down |
-| tzeitGeonim | sun 3.7 deg below, evening (Geonim, about 13.5 minutes) | up |
-| tzeitGeonimVisible | sun 3.7 deg below the visible horizon, evening | up |
+| tzeitGeonim | sun 3.701 deg below, evening (Geonim, about 13.5 minutes) | up |
+| tzeitGeonimVisible | sun 3.701 deg below the visible horizon, evening | up |
 | tzeit7083 | sun 7.083 deg below, evening: three medium stars (Dr. Baruch Cohn, Melamed LeHo'il 1:30) | up |
-| alot12 | sun 12 deg below, morning: the light spreads over the whole east (Dr. Baruch Cohn, Melamed LeHo'il 1:30) | up |
+| alot12 | sun 12 deg below, morning: the light spreads over the whole east (Dr. Baruch Cohn, Melamed LeHo'il 1:30) | down |
 | plagAlot12Tzeit7083 | plag (10.75 seasonal hours) of a day from alot12 to tzeit7083 | up |
 | tzeit | sun 8.5 deg below, evening | up |
 | tzeitVisible | sun 8.5 deg below the visible horizon, evening | up |
 | tzeitRt72 | Rabbeinu Tam: 72 fixed minutes after sunset (4 mil of 18 min; Tosafot Shabbat 35a, from Pesachim 94a; SA OC 261:2 with Rema) | up |
 | tzeitRt72Zmanis | Rabbeinu Tam in seasonal minutes: sunset plus a tenth of the sunrise..sunset day | up |
 | tzeitRt16 | Rabbeinu Tam by degrees: sun 16.05 deg below, evening (the depth 72 minutes after sunset at the Jerusalem equinox) | up |
-| alot72z / alot90z | dawn in seasonal minutes: a tenth / an eighth of the sunrise..sunset day before sunrise (4 mil, Pesachim 94a; 5 mil, Pesachim 93b) | up |
+| alot72z / alot90z | dawn in seasonal minutes: a tenth / an eighth of the sunrise..sunset day before sunrise (4 mil, Pesachim 94a; 5 mil, Pesachim 93b) | down |
 | tzeit90z | nightfall in seasonal minutes: an eighth of the sunrise..sunset day after sunset (5 mil, Pesachim 93b) | up |
 | tzeit13p5 / tzeit18 | 13.5 / 18 fixed minutes after sunset: 3/4 mil (Shabbat 34b; SA OC 261:2) at 18 / 24 min a mil (SA OC 459:2; Rambam on Mishna Pesachim 3:2) | up |
-| tzeit18Sun | 18 minutes (3/4 mil at 24 min a mil) by the sun's position: the sun 4.66 deg below the true horizon, its depth 18 minutes after sunset in Jerusalem at the equinox (computed with this library's SPA) | up |
+| tzeit18Sun | 18 minutes (3/4 mil at 24 min a mil) by the sun's position: the sun 4.657 deg below the true horizon, its depth 18 minutes after sunset in Jerusalem at the equinox (computed with this library's SPA) | up |
 | tzeit645 | Rav Y. M. Tucazinsky's nightfall: the sun 6.45 deg below the true horizon (Birur Halacha, Yoreh De'ah 262) | up |
 | tzeit13p5z | 13.5 seasonal minutes (3/4 mil) after sunset - Rav Ovadia Yosef, Kitzur Yalkut Yosef OC, Hilchot Shabbat (checked in the text) | up |
 | sofShmaBenIshChai / sofTfillaBenIshChai / plagBenIshChai | 3 / 4 / 10.75 seasonal hours of a day from dawn (72 min) to nightfall a third of an hour after sunset - Ben Ish Chai, Shana Rishona, Vayakhel (checked in the text) | down / down / up |
-| alot96 / alot120 | dawn 4 / 5 mil of 24 min before sunrise (96 / 120 fixed minutes) - Shulchan Aruch HaRav OC 89:1 with OC 459:10 (checked in the text); the 120-minute reading per HaMichlol, Alot HaShachar note 3 | up |
+| alot96 / alot120 | dawn 4 / 5 mil of 24 min before sunrise (96 / 120 fixed minutes) - Shulchan Aruch HaRav OC 89:1 with OC 459:10 (checked in the text); the 120-minute reading per HaMichlol, Alot HaShachar note 3 | down |
 | tzeitRt90 / tzeitRt96 | Rabbeinu Tam: 4 mil of 22.5 / 24 min after sunset (90 / 96 fixed minutes) - Igrot Moshe OC 4:62; Shulchan Aruch HaRav OC 261:5 with OC 459:10 (checked in the text) | up |
-| beinHashmashotYereim | start of bein hashmashot per the Yereim: 3/4 mil (18 min) before sunset, as the sun 2.99 deg above the true horizon (its height 18 minutes before sunset in Jerusalem at the equinox); degree-based method per Rabbi Yedidya Manet, Zmanei HaHalacha Lema'aseh p. 11 | down |
-| plagAlot90Tzeit645 / plagAlot72Tzeit645 | plag (10.75 seasonal hours) of a day from dawn (19.8 / 16.05 deg) to tzeit645 - the Magen Avraham's day from dawn to nightfall (Magen Avraham 58:1; SA OC 233:1) | up |
+| beinHashmashotYereim | start of bein hashmashot per the Yereim: 3/4 mil (18 min) before sunset, as the sun 2.992 deg above the true horizon (its height 18 minutes before sunset in Jerusalem at the equinox); degree-based method per Rabbi Yedidya Manet, Zmanei HaHalacha Lema'aseh p. 11 | down |
+| plagAlot90Tzeit645 / plagAlot72Tzeit645 | plag (10.75 seasonal hours) of a day from dawn (19.798 / 16.05 deg) to tzeit645 - the Magen Avraham's day from dawn to nightfall (Magen Avraham 58:1; SA OC 233:1) | up |
 | tzeit20 / tzeit24 / tzeit30 / tzeit40 / tzeit50 | 20 / 24 / 30 / 40 / 50 fixed minutes after sunset, by community custom (50: Rav Moshe Feinstein, Igrot Moshe OC 1:24) | up |
 | tzeit45 | 45 fixed minutes after sunset - the Chazon Ish's end of Shabbat, which already includes Rabbeinu Tam (Birur Zmanim vol 2 p.18) | up |
 | beinHashmashotRt | start of twilight per Rabbeinu Tam: sunset + 58.5 min (3.25 mil of 18 min; Tosafot Shabbat 35a, Pesachim 94a; SA OC 261:2). Twilight ends at tzeitRt72; by the Geonim it is sunset..tzeitGeonim | down |
 | misheyakir7p65 / misheyakir12p85 | sun 7.65 deg below (Igrot Moshe; Rav Yaakov Kamenetsky, Zmanei Yisrael p. 117; Lakewood custom) / 12.85 deg below (Birur Halacha OC 18, time of need), morning | up |
 | misheyakir66 / misheyakir60 / misheyakir40 | 66 / 60 / 40 fixed minutes before sunrise - Pri Megadim, Eshel Avraham 58:2 (6 min after a 72-min dawn) / Rav Henkin (Ezras Torah luach; Teshuvot Ivra 3) / Rav Chaim Kanievsky; per OU Kosher Halacha Yomis, outorah.org/p/78963 | up |
-| alotBaalHatanya / tzeitBaalHatanya | Baal HaTanya: sun 16.9 deg below, morning / 6 deg below, evening (Shulchan Aruch HaRav; chabad.org 3209349) | up |
+| alotBaalHatanya / tzeitBaalHatanya | Baal HaTanya: sun 16.9 deg below, morning / 6 deg below, evening (Shulchan Aruch HaRav; chabad.org 3209349) | down / up |
 | sunriseBaalHatanya / sunsetBaalHatanya | Baal HaTanya's netz / shkia amiti: the sun's centre 1.583 deg below the true horizon (a few minutes before sea-level sunrise / after sea-level sunset) | up / down |
 | sofShmaBaalHatanya / sofTfillaBaalHatanya / minchaGedolaBaalHatanya / minchaKetanaBaalHatanya / plagBaalHatanya | 3 / 4 / 6.5 / 9.5 / 10.75 temporal hours of the day netz amiti..shkia amiti | down / down / up / up / up |
 | sofShmaHarari40/25, sofTfillaHarari40/25, minchaGedolaHarari40/25, minchaKetanaHarari40/25, plagHarari40/25 | Magen Avraham's day: 3 / 4 / 6.5 / 9.5 / 10.75 temporal hours of a day from alot72z to sunset + 40 min (outside Israel) / + 25 min (Israel); its midpoint is not chatzot | down / down / up / up / up |
-| minchaGedolaHillel | a day ending at the Geonim's nightfall: the later of chatzot + half a temporal hour of a day 16.05 deg..3.7 deg and chatzot + 30 min | up |
-| plagAlotTzeitGeonim | 10.75 temporal hours into a day from dawn 16.05 deg to the Geonim's nightfall 3.7 deg (a stringency) | up |
+| minchaGedolaHillel | a day ending at the Geonim's nightfall: the later of chatzot + half a temporal hour of a day 16.05 deg..3.701 deg and chatzot + 30 min | up |
+| plagAlotTzeitGeonim | 10.75 temporal hours into a day from dawn 16.05 deg to the Geonim's nightfall 3.701 deg (a stringency) | up |
 | minchaKetanaHillel / plagHillel | a day ending at the Geonim's nightfall: 2.5 / 1.25 temporal hours (of a day 16.05 deg..3.8 deg) before the sun is 3.8 deg below | up |
-| chatzotFixedLocal | 12:00 local mean time (longitude / 15 hours from UTC); Aruch HaShulchan OC 233:14 (checked in the text) | nearest |
+| chatzotFixedLocal | 12:00 local mean time (longitude / 15 hours from UTC); Aruch HaShulchan OC 233:14 (checked in the text) | down |
 | sofShmaGraFixed / sofTfillaGraFixed | half and two thirds of the morning to the fixed chatzot: sunrise + 1/2 / 2/3 of (chatzotFixedLocal - sunrise) | down |
 | sofShmaMga72Fixed / sofShmaMga16Fixed | dawn (72 min before sunrise / 16.05 deg) + half of (chatzotFixedLocal - dawn) | down |
 | minchaGedolaFixed / minchaKetanaFixed / plagFixed | chatzotFixedLocal + 30 min / + 3.5 / + 4.75 hours of (sunset - chatzotFixedLocal) / 6 | up |
@@ -215,7 +215,7 @@ use the standard terrestrial refraction k = 0.13 of the horizon build); Visible 
 (60.4" at 0 C) within 0.6%, Bennett within 0.12' from 5 to 60 deg, an independent step-by-step ray integration
 within 0.05', the dip formula within 3%. A month of every zman for one place takes about 60 ms.
 
-Stringent rounding: a start rounds up, a deadline rounds down, chatzot to the nearest minute.
+Stringent rounding: a start rounds up, a deadline rounds down; dawn and chatzot round down (earlier).
 Accuracy: sunrise, sunset, solar noon and civil twilight agree with the US Naval Observatory's published times
 within their whole-minute rounding (no bias); the sun position reproduces the NREL paper's worked example.
 

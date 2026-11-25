@@ -14,6 +14,21 @@
       ]
     },
     {
+      "id": "northern",
+      "he": "אנגליה / צפון אירופה",
+      "en": "England / Northern Europe",
+      "groups": {
+        "sofShma": "sofShmaGra",
+        "sofTfilla": "sofTfillaGra",
+        "alot": "alot12",
+        "plag": "plagAlot12Tzeit7083",
+        "tzeit": "tzeit7083"
+      },
+      "sources": [
+        "https://en.wikipedia.org/wiki/David_Zvi_Hoffmann (author of Shu\"t Melamed LeHo'il; part 1 (OC), siman 30 - letters of Dr. Baruch Cohn: dawn at the sun 12 deg below the horizon, three medium stars at 7 deg 5 min (7.083 deg) below; for northern places where the 16.1 and 19.8 deg lines are not reached in summer - see SOURCES.md)"
+      ]
+    },
+    {
       "id": "mizrach",
       "he": "ספרד ועדות המזרח",
       "en": "Sephardi and Edot HaMizrach",

@@ -19,27 +19,27 @@ export const ZMAN_NAMES = [
 ];
 /**
  * How each printed minute is rounded, the stringent way: a zman that starts something rounds UP, a deadline
- * rounds DOWN, chatzot (end of morning and start of afternoon) to the nearest minute.
+ * rounds DOWN. Dawn and chatzot (day and night) round DOWN (earlier).
  */
 export const ROUNDING = {
-    alot90Chatzot: 'up', alotChatzot: 'up', misheyakirChatzot: 'up',
-    chatzotNight: 'up', alot90Visible: 'up', alot90: 'up', alotVisible: 'up', alot: 'up', misheyakirVisible: 'up',
+    alot90Chatzot: 'down', alotChatzot: 'down', misheyakirChatzot: 'up',
+    chatzotNight: 'down', alot90Visible: 'down', alot90: 'down', alotVisible: 'down', alot: 'down', misheyakirVisible: 'up',
     misheyakir: 'up', misheyakir11: 'up', misheyakir10p2: 'up', misheyakirLechumra: 'up', sunriseElevated: 'up', sunrise: 'up', sunriseTerrain: 'up',
     sofShmaGra: 'down', sofShmaMga: 'down', sofShmaMga16: 'down', sofTfillaGra: 'down', sofTfillaMga: 'down', sofTfillaMga16: 'down',
-    chatzot: 'nearest', minchaGedola: 'up', minchaGedola30: 'up', minchaKetana: 'up', plag: 'up', plagMga: 'up',
+    chatzot: 'down', minchaGedola: 'up', minchaGedola30: 'up', minchaKetana: 'up', plag: 'up', plagMga: 'up',
     sunset: 'down', sunsetElevated: 'down', sunsetTerrain: 'down', tzeitGeonim: 'up', tzeitGeonimVisible: 'up', tzeit7083: 'up', tzeit18Sun: 'up', tzeit: 'up', tzeitVisible: 'up',
     candles40: 'down', candles30: 'down', candles22: 'down', candles20: 'down', candles18: 'down',
     tzeitRt72: 'up', tzeitRt72Zmanis: 'up', tzeitRt16: 'up', tzeitRt90: 'up', tzeitRt96: 'up', tzeit13p5z: 'up',
-    alot90z: 'up', alot72z: 'up', alot96: 'up', alot120: 'up', tzeit90z: 'up',
+    alot90z: 'down', alot72z: 'down', alot96: 'down', alot120: 'down', tzeit90z: 'up',
     sofShmaMga120: 'down', sofShmaMga90: 'down', sofShmaMga19: 'down', sofShmaMga90z: 'down', sofShmaMga72z: 'down',
     sofTfillaMga120: 'down', sofTfillaMga90: 'down', sofTfillaMga19: 'down', sofTfillaMga90z: 'down', sofTfillaMga72z: 'down',
-    plagMga120: 'up', plagAlot90Tzeit645: 'up', plagAlot72Tzeit645: 'up', alot12: 'up', plagAlot12Tzeit7083: 'up', tzeit645: 'up', plagMga90: 'up', plagMga19: 'up', plagMga90z: 'up', plagMga72z: 'up',
+    plagMga120: 'up', plagAlot90Tzeit645: 'up', plagAlot72Tzeit645: 'up', alot12: 'down', plagAlot12Tzeit7083: 'up', tzeit645: 'up', plagMga90: 'up', plagMga19: 'up', plagMga90z: 'up', plagMga72z: 'up',
     tzeit13p5: 'up', tzeit18: 'up', tzeit20: 'up', tzeit24: 'up', tzeit30: 'up', tzeit40: 'up', tzeit45: 'up', tzeit50: 'up',
     misheyakir66: 'up', misheyakir60: 'up', misheyakir40: 'up',
     // The start of Rabbeinu Tam's twilight ends the time that is surely day (work before Shabbat): a deadline.
     beinHashmashotYereim: 'down', beinHashmashotRt: 'down',
-    misheyakir7p65: 'up', misheyakir12p85: 'up', chatzotFixedLocal: 'nearest',
-    alotBaalHatanya: 'up', sunriseBaalHatanya: 'up', sofShmaBaalHatanya: 'down', sofTfillaBaalHatanya: 'down',
+    misheyakir7p65: 'up', misheyakir12p85: 'up', chatzotFixedLocal: 'down',
+    alotBaalHatanya: 'down', sunriseBaalHatanya: 'up', sofShmaBaalHatanya: 'down', sofTfillaBaalHatanya: 'down',
     minchaGedolaBaalHatanya: 'up', minchaKetanaBaalHatanya: 'up', plagBaalHatanya: 'up', sunsetBaalHatanya: 'down', tzeitBaalHatanya: 'up',
     sofShmaHarari40: 'down', sofShmaHarari25: 'down', sofTfillaHarari40: 'down', sofTfillaHarari25: 'down',
     minchaGedolaHarari40: 'up', minchaGedolaHarari25: 'up', minchaKetanaHarari40: 'up', minchaKetanaHarari25: 'up', plagHarari40: 'up', plagHarari25: 'up',
@@ -371,7 +371,7 @@ class Day {
         const p = 12 * part;
         return Day.shaahBased(this.gra(-p), this.gra(12 + p), hours);
     }
-    /** MGA day by 19.8 deg: from alot90 to the sun 19.8 deg below in the evening. */
+    /** MGA day by 19.798 deg: from alot90 to the sun 19.798 deg below in the evening. */
     /** Magen Avraham's day from alot (degrees below the horizon) to Rav Tucazinsky's tzeit (6.45 deg). */
     alotToTzeit645(alotDeg, hours) {
         return Day.shaahBased(this.rise(GEOMETRIC_ZENITH + alotDeg), this.set(GEOMETRIC_ZENITH + TZEIT_645), hours);

@@ -130,7 +130,7 @@ describe('more MGA days, seasonal and fixed-minute lines', () => {
       expect(ms(t.alot12)).toBeGreaterThan(ms(t.alot)); expect(ms(t.alot12)).toBeLessThan(ms(t.misheyakir))
       expect(ms(t.tzeit7083) - ms(t.plagAlot12Tzeit7083)).toBeCloseTo((ms(t.tzeit7083) - ms(t.alot12)) / 12 * 1.25, -1)
     }
-    for (const n of ['sofShmaMga90', 'sofTfillaMga120', 'sofShmaMga19', 'sofShmaMga72z', 'beinHashmashotRt'] as const) expect(ROUNDING[n]).toBe('down')
-    for (const n of ['plagMga90', 'alot72z', 'alot90z', 'tzeit90z', 'tzeit13p5', 'tzeit50'] as const) expect(ROUNDING[n]).toBe('up')
+    for (const n of ['sofShmaMga90', 'sofTfillaMga120', 'sofShmaMga19', 'sofShmaMga72z', 'beinHashmashotRt', 'alot72z', 'alot90z', 'alot12', 'chatzot', 'chatzotNight'] as const) expect(ROUNDING[n]).toBe('down')
+    for (const n of ['plagMga90', 'tzeit90z', 'tzeit13p5', 'tzeit50'] as const) expect(ROUNDING[n]).toBe('up')
   })
 })

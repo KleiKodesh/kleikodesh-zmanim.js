@@ -5,7 +5,7 @@ export type ZmanName = typeof ZMAN_NAMES[number];
 export type Rounding = 'up' | 'down' | 'nearest';
 /**
  * How each printed minute is rounded, the stringent way: a zman that starts something rounds UP, a deadline
- * rounds DOWN, chatzot (end of morning and start of afternoon) to the nearest minute.
+ * rounds DOWN. Dawn and chatzot (day and night) round DOWN (earlier).
  */
 export declare const ROUNDING: Readonly<Record<ZmanName, Rounding>>;
 /**
