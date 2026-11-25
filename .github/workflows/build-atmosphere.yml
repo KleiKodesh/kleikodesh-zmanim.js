@@ -1,0 +1,46 @@
+# Model atmospheres for ray-traced horizon refraction (scripts/build-atmosphere.mjs): downloads the NOAA IGRA v2
+# Bet Dagan radiosonde record and the AFGL standard profiles, builds data/atmosphere.tsv + assets/atmosphere.bin
+# and commits them. One station file: a single runner is enough (a few minutes).
+name: build-atmosphere
+on:
+  workflow_dispatch:
+    inputs:
+      branch:
+        description: Branch to build for and commit to
+        default: master
+permissions:
+  contents: write
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ inputs.branch }}
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - name: Download inputs
+        run: |
+          mkdir -p input/afgl
+          curl -sSfL --retry 3 -o input/igra.zip https://www.ncei.noaa.gov/data/integrated-global-radiosonde-archive/access/data-por/ISM00040179-data.txt.zip
+          unzip -o -q input/igra.zip -d input
+          ls -la input
+          for f in afglt afglms afglmw afglss afglsw; do
+            curl -sSfL --retry 3 -o input/afgl/$f.dat https://raw.githubusercontent.com/ashiklom/libradtran/master/data/atmmod/$f.dat
+          done
+          head -3 input/ISM00040179-data.txt
+      - name: Build
+        env:
+          AFGL_DIR: input/afgl
+          IGRA_FILE: input/ISM00040179-data.txt
+        run: node scripts/build-atmosphere.mjs
+      - name: Commit
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898283+github-actions[bot]@users.noreply.github.com"
+          git add data/atmosphere.tsv assets/atmosphere.bin
+          git diff --cached --quiet && echo "no change" && exit 0
+          git commit -m "data: model atmospheres (IGRA v2 Bet Dagan + AFGL) for ray-traced refraction" -m "User-facing: none"
+          git pull --rebase -q && git push
