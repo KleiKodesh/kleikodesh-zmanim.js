@@ -20,6 +20,11 @@ export interface HorizonAir {
      * the profile's daily mean.
      */
     diurnal?: boolean;
+    /**
+     * true (terrain lines): in the Bet Dagan region, the U.S. Standard Atmosphere 1976 moved to the place's temperature
+     * instead of the coastal soundings (see the head of this file). Elsewhere no change.
+     */
+    standardColumn?: boolean;
 }
 /** Ray-traced refraction (arcmin) at apparent altitude [apparent] deg; [hour] 0 sunrise, 12 sunset, -1 both. */
 export declare function tracedRefraction(air: HorizonAir, apparent: number, hour: 0 | 12 | -1): number;

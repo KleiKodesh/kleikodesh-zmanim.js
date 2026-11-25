@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest'
-import { epochMs, getPlace, getTerrainHorizon, NO_TERRAIN, TERRAIN_BINS, terrainAltitude, zmanInstants, zmanim } from '../src/index'
+import { epochMs, getAtmospheres, getPlace, getTerrainHorizon, NO_TERRAIN, TERRAIN_BINS, terrainAltitude, zmanInstants, zmanim } from '../src/index'
 import { useFileAssets } from './helpers'
 
 const JERUSALEM = 1, TEL_AVIV = 45, EILAT = 97, SAFED = 98, BEIT_SHEMESH = 188
@@ -62,5 +62,28 @@ describe('terrain sunrise/sunset', () => {
     await zmanim(JERUSALEM, winter, ['sunriseTerrain'])
     expect(reads.filter((f) => f.startsWith('horizon')).length).toBe(2)
     expect(out.sunriseTerrain).toMatch(/^\d\d:\d\d$/)
+  })
+
+  // Keller & Hall, Computers & Geosciences 161 (2022) 105044: terrain lines through a standard column at the place's
+  // event-hour temperature; sunrise 15 s earlier after a night over 13 h when the horizon is within 0.01 deg of level.
+  const flat = (centi: number): Int16Array => new Int16Array(TERRAIN_BINS).fill(centi)
+  async function terrainRise(id: number, date: { year: number, month: number, day: number }, horizon: Int16Array, atmospheres?: null) {
+    const place = { ...(await getPlace(id)), terrainHorizon: horizon, atmospheres: atmospheres === null ? null : await getAtmospheres() }
+    return epochMs(zmanInstants(place, date, ['sunriseTerrain']).sunriseTerrain!)
+  }
+
+  it('winter inversion: 15 s earlier over a level horizon after a long night, in Israel only', async () => {
+    const jan = { year: 2026, month: 1, day: 15 }, jul = { year: 2026, month: 7, day: 15 }
+    // A horizon 0.02 deg higher rises a few seconds later; in January the level one also gets the 15 s.
+    const step = async (id: number, d: typeof jan) => (await terrainRise(id, d, flat(2)) - await terrainRise(id, d, flat(0))) / 1000
+    expect(await step(JERUSALEM, jan) - await step(JERUSALEM, jul)).toBeCloseTo(15, -0.5)
+    const LONDON = 109 // long winter nights too, but not where it was observed
+    expect(Math.abs(await step(LONDON, jan) - await step(LONDON, jul))).toBeLessThan(3)
+  })
+
+  it('terrain lines in Israel trace the standard column, not the coastal soundings', async () => {
+    const jul = { year: 2026, month: 7, day: 15 }
+    const horizon = (await getTerrainHorizon(JERUSALEM))!
+    expect(Math.abs(await terrainRise(JERUSALEM, jul, horizon) - await terrainRise(JERUSALEM, jul, horizon, null))).toBeLessThan(1500)
   })
 })

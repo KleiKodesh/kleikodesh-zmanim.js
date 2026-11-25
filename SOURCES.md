@@ -60,8 +60,14 @@ Ray-traced through a layered model atmosphere (src/atmosphere.ts, src/horizon.ts
   Astronomical Almanac (1992), sec. 3.28 - the refraction integral in zenith angle and the optical refractive index.
 - L. H. Auer & E. M. Standish, Astronomical refraction: computational method for all zenith angles, Astronomical
   Journal 119 (2000) 2472-2474 - rays below the horizon (tangent point).
-- J. Keller & A. Hall, Computers & Geosciences 161 (2022) 105044 (open access) - sunrise/sunset from elevations,
-  observer height, negative apparent altitudes, dip with terrestrial refraction.
+- C. Keller & J. K. Hall, Using a digital terrain model to calculate visual sunrise and sunset times, Computers &
+  Geosciences 26 (2000) 991-1000 - sunrise over a terrain horizon, negative apparent altitudes.
+- C. Keller & J. K. Hall, Using a ray tracing program to calculate sunrise times over a digital terrain model based
+  visible horizon using a simplified atmospheric model, part II, Computers & Geosciences 161 (2022) 105044,
+  https://doi.org/10.1016/j.cageo.2022.105044 (open access) - observer height, dip, terrestrial refraction to the
+  terrain (Bomford's formula), standard column at the minimum temperature, the winter low-inversion lean (15 s after
+  nights over 13 h on a level horizon), all checked against observed sunrises in Jerusalem and Bnei Brak.
+- G. Bomford, Geodesy, Clarendon Press, Oxford (1952) p. 158 - coefficient of terrestrial refraction from P, T, dT/dh.
 - U.S. Standard Atmosphere 1976 (NOAA/NASA/USAF); G. P. Anderson et al., AFGL atmospheric constituent profiles
   (0-120 km), AFGL-TR-86-0110 (1986).
 - NOAA NCEI Integrated Global Radiosonde Archive v2 (I. Durre et al. 2016, doi:10.7289/V5X63K0Q), station

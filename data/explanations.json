@@ -262,7 +262,7 @@
       "sources": [
         "שו״ע או״ח נח, א (ותיקין: מסיימים קריאת שמע עם הנץ החמה)",
         "שו״ע או״ח פט, א (תפילת השחר מצותה עם הנץ החמה)",
-        "חישוב: מפת הגבהים Copernicus DEM GLO-90, שבירת אור (Hohenkerk & Sinclair 1985; Auer & Standish 2000; Keller & Hall 2022), מקדם שבירה ארצית 0.13"
+        "חישוב: מפת הגבהים Copernicus DEM GLO-90, שבירת אור (Hohenkerk & Sinclair 1985; Auer & Standish 2000; Keller & Hall 2022), מקדם שבירה ארצית (Bomford 1952)"
       ]
     },
     "en": {
@@ -271,7 +271,7 @@
       "sources": [
         "Shulchan Aruch OC 58:1 (the vasikin finish Shema at sunrise)",
         "Shulchan Aruch OC 89:1 (the morning prayer is ideally at sunrise)",
-        "Calculation: Copernicus DEM GLO-90 elevation model, refraction (ray tracing: Hohenkerk & Sinclair 1985; Auer & Standish 2000; Keller & Hall 2022), terrestrial refraction coefficient 0.13"
+        "Calculation: Copernicus DEM GLO-90 elevation model, refraction (ray tracing: Hohenkerk & Sinclair 1985; Auer & Standish 2000; Keller & Hall 2022), terrestrial refraction coefficient of the place's air (Bomford 1952), winter inversion lean (Keller & Hall 2022)"
       ]
     }
   },
@@ -554,7 +554,7 @@
       "sources": [
         "שבת לד ע״ב - לה ע״א (שקיעת החמה ובין השמשות)",
         "שו״ע או״ח רסא, א-ב",
-        "חישוב: מפת הגבהים Copernicus DEM GLO-90, שבירת אור (Hohenkerk & Sinclair 1985; Auer & Standish 2000; Keller & Hall 2022), מקדם שבירה ארצית 0.13"
+        "חישוב: מפת הגבהים Copernicus DEM GLO-90, שבירת אור (Hohenkerk & Sinclair 1985; Auer & Standish 2000; Keller & Hall 2022), מקדם שבירה ארצית (Bomford 1952)"
       ]
     },
     "en": {
@@ -563,7 +563,7 @@
       "sources": [
         "Shabbat 34b-35a (sunset and bein hashmashot)",
         "Shulchan Aruch OC 261:1-2",
-        "Calculation: Copernicus DEM GLO-90 elevation model, refraction (ray tracing: Hohenkerk & Sinclair 1985; Auer & Standish 2000; Keller & Hall 2022), terrestrial refraction coefficient 0.13"
+        "Calculation: Copernicus DEM GLO-90 elevation model, refraction (ray tracing: Hohenkerk & Sinclair 1985; Auer & Standish 2000; Keller & Hall 2022), terrestrial refraction coefficient of the place's air (Bomford 1952), winter inversion lean (Keller & Hall 2022)"
       ]
     }
   },

@@ -1,7 +1,7 @@
 // The day's zmanim. Sun positions come from src/spa.ts (NREL SPA, Reda & Andreas 2008, appendix A.2 rise/
 // transit/set); horizon refraction ray-traced through a layered model atmosphere (src/atmosphere.ts, src/horizon.ts). The zman definitions are the standard
 // halachic ones (temporal hours of a GRA or MGA day, degree depressions); see README.
-import { tracedDipAndRefraction, tracedRefraction } from './horizon.js';
+import { inBetDaganRegion, tracedDipAndRefraction, tracedRefraction } from './horizon.js';
 import { temperatureOn } from './refraction.js';
 import { julianDayFromUtcMs, spa, spaDay, spaEvent, zenithToH0 } from './spa.js';
 /** Every zman the library computes, in the order of the day. Each is computed only when requested. */
@@ -118,9 +118,20 @@ function airOf(place, date, hour = -1) {
     return { table: place.atmospheres, lat: place.lat, lng: place.lng, height: place.elevation ?? 0, month: date.month, day: date.day, temperatureC: t, diurnal };
 }
 /** Ray-traced horizon refraction (arcmin) at [apparent] degrees for [place] on [date]; [hour] 0 sunrise, 12 sunset, -1 mean. */
-function horizonRefraction(place, date, apparent = 0, hour = -1) {
-    return tracedRefraction(airOf(place, date, hour), apparent, hour);
+function horizonRefraction(place, date, apparent = 0, hour = -1, standardColumn = false) {
+    return tracedRefraction({ ...airOf(place, date, hour), standardColumn }, apparent, hour);
 }
+/**
+ * Low winter inversions: C. Keller & J. K. Hall, Computers & Geosciences 161 (2022) 105044
+ * (https://doi.org/10.1016/j.cageo.2022.105044), section 3: over years of observations in Jerusalem the sun rose over
+ * the terrain about 15 s earlier than calculated on days with (1) a night longer than 13 hours and (2) a horizon
+ * view angle of 0.01 deg or less where the sun rose (radiative cooling of long clear nights builds a surface inversion
+ * that bends near-horizontal rays down); subtracting 15 s on those days brought both Jerusalem sites to about 14 s
+ * RMS. Bnei Brak (horizon about +1 deg) showed no such lean. Applied where it was observed (the Bet Dagan region).
+ */
+const INVERSION_NIGHT_MS = 13 * 3600000;
+const INVERSION_MAX_ALTITUDE = 0.01;
+const INVERSION_ADVANCE_MS = 15000;
 /**
  * Reference only (the zmanim trace the dip in the model atmosphere, see horizonZenith): the navigators' dip of the
  * visible sea/plain horizon seen from [elevation] meters, degrees: D = 1.76' * sqrt(h m), the standard
@@ -332,6 +343,9 @@ class Day {
      * The sun's upper limb at the terrain horizon toward its own azimuth (kind -1 rise, +1 set): the horizon altitude
      * A at the sun's azimuth, refraction at apparent altitude A, so the centre's zenith is 90 - A + R(A) + radius.
      * The azimuth comes from SPA at the previous estimate, starting from sea-level sunrise/sunset; a few steps converge.
+     * As Keller & Hall (Computers & Geosciences 26 (2000) 991-1000; 161 (2022) 105044): A carries the terrestrial
+     * refraction to the terrain (scripts/compute-horizon.py), R is the whole path's refraction; in the Bet Dagan region
+     * through the standard column (horizon.ts), and sunrise 15 s earlier on long-night days over a flat horizon.
      */
     terrain(kind) {
         const profile = this.place.terrainHorizon;
@@ -339,18 +353,23 @@ class Day {
             return NaN;
         return this.memo(`t${kind}`, () => {
             let t = kind < 0 ? this.sunrise() : this.sunset();
+            let altitude = NaN;
             for (let i = 0; i < 6 && !Number.isNaN(t); i++) {
                 const azimuth = spa({ jd: julianDayFromUtcMs(t), latitude: this.place.lat, longitude: this.place.lng }).azimuth;
                 const a = terrainAltitude(profile, azimuth);
                 if (Number.isNaN(a))
                     return NaN;
-                const zenith = GEOMETRIC_ZENITH - a + horizonRefraction(this.place, this.date, a, kind < 0 ? 0 : 12) / 60 + SOLAR_RADIUS;
+                const zenith = GEOMETRIC_ZENITH - a + horizonRefraction(this.place, this.date, a, kind < 0 ? 0 : 12, true) / 60 + SOLAR_RADIUS;
                 const next = this.event(zenith, kind);
                 const done = Math.abs(next - t) < 1000;
                 t = next;
+                altitude = a;
                 if (done)
                     break;
             }
+            if (kind < 0 && !Number.isNaN(t) && altitude <= INVERSION_MAX_ALTITUDE && inBetDaganRegion(this.place.lat, this.place.lng)
+                && DAY_MS - (this.sunset() - this.sunrise()) > INVERSION_NIGHT_MS)
+                t -= INVERSION_ADVANCE_MS;
             return t;
         });
     }

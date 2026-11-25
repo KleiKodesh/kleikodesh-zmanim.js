@@ -6,9 +6,16 @@
 # Geometry: from the observer (DEM ground at the place + EYE metres) rays go out every AZ_STEP degree of azimuth to
 # MAX_KM. A terrain point at distance d and height H appears at elevation angle
 #   atan((H - h - d^2 (1 - k) / (2 R)) / d)
-# (Earth curvature lowered by standard terrestrial refraction, k = 0.13: the coefficient of the classic Gauss
-# survey of Hanover and of standard geodesy texts, e.g. W. Torge, Geodesy; A. T. Young, "Sunset science IV",
-# Astronomical Journal 127 (2004) on low-path refraction). The horizon of an azimuth is the highest such angle.
+# (Earth curvature lowered by terrestrial refraction). The horizon of an azimuth is the highest such angle.
+# The refraction coefficient k is the place's own, from G. Bomford, Geodesy (Clarendon Press, 1952) p. 158:
+#   k = 503 P / T^2 (0.0342 + dT/dh),   dT/dh = -0.0065 K/m (standard troposphere),
+# P (hPa) the standard pressure at the eye, T (K) the yearly mean of the place's monthly mean daily MINIMUM
+# temperature (horizons are seen near sunrise/sunset, close to the daily minimum). This is the terrestrial refraction
+# that C. Keller & J. K. Hall, "Using a ray tracing program to calculate sunrise times over a digital terrain model
+# based visible horizon using a simplified atmospheric model, part II", Computers & Geosciences 161 (2022) 105044,
+# https://doi.org/10.1016/j.cageo.2022.105044 (eq. 1-2) showed to match ray tracing to the terrain within 0.06' and
+# used for sunrise times that matched years of observations in Jerusalem and Bnei Brak to about 15 s.
+# (Before: one k = 0.13 everywhere; Bomford's k is 0.15-0.17 at Israeli places, a few seconds on far horizons.)
 # GLO-90 is a surface model (buildings and trees included): each tile gets a grey-scale morphological opening
 # (erosion then dilation, OPEN_CELLS x OPEN_CELLS cells, about 450 m) first, which removes features narrower than
 # that (tower blocks, tree stands) and keeps the shape of hills and ridges wider than it.
@@ -21,7 +28,6 @@ EYE = 1.6
 MAX_KM = 150
 MIN_M = 500            # the observer stands on the highest ground within this radius (see profile)
 R = 6_371_000.0
-K = 0.13
 OPEN_CELLS = 5
 AZ = list(range(30, 151)) + list(range(210, 331))
 NODATA_OUT = -32768
@@ -80,7 +86,27 @@ while x < MAX_KM * 1000:
     d.append(x); x += max(90.0, x * 0.015)
 D = np.array(d)
 
-def profile(lat, lng):
+def standard_pressure(h):
+    return 1013.25 * (1 - 0.0065 * h / 288.15) ** 5.255877
+
+def climate_min():
+    # yearly mean of the monthly mean daily minimum temperature (C) per place id; fallback the monthly means.
+    out = {}
+    for path, cols in (('data/climate.tsv', slice(1, 13)), ('data/climate-minmax.tsv', slice(1, 13))):
+        if not os.path.exists(path): continue
+        for line in open(path, encoding='utf8').read().splitlines()[1:]:
+            f = line.split('	')
+            v = [float(x) for x in f[cols] if x not in ('', 'NaN', 'nan')]
+            if v: out[f[0]] = sum(v) / len(v)
+    return out
+
+def bomford_k(h0, t_c):
+    # G. Bomford, Geodesy (1952) p. 158: k = 503 P / T^2 (0.0342 + dT/dh), standard dT/dh.
+    if t_c is None: t_c = 15 - 0.0065 * h0
+    t = t_c + 273.15
+    return 503 * standard_pressure(h0) / t ** 2 * (0.0342 - 0.0065)
+
+def profile(lat, lng, t_min=None):
     # A place is a town, not a point: look from its highest ground within MIN_M (rings every 100 m, 10 deg),
     # so a street-level bump of a few metres next to the point does not hide the real horizon.
     rr = np.arange(0, MIN_M + 1, 100.0)[:, None] / R; bb = np.radians(np.arange(0, 360, 10.0))[None, :]
@@ -88,13 +114,14 @@ def profile(lat, lng):
     q2 = np.arcsin(np.sin(q1) * np.cos(rr) + np.cos(q1) * np.sin(rr) * np.cos(bb))
     g2 = math.radians(lng) + np.arctan2(np.sin(bb) * np.sin(rr) * np.cos(q1), np.cos(rr) - np.sin(q1) * np.sin(q2))
     h0 = float(heights(np.degrees(q2).ravel(), np.degrees(g2).ravel()).max()) + EYE
+    K = bomford_k(h0, t_min)
     az = np.radians(np.array(AZ, float))[:, None]
     p1 = math.radians(lat); l1 = math.radians(lng); dd = (D / R)[None, :]
     p2 = np.arcsin(np.sin(p1) * np.cos(dd) + np.cos(p1) * np.sin(dd) * np.cos(az))
     l2 = l1 + np.arctan2(np.sin(az) * np.sin(dd) * np.cos(p1), np.cos(dd) - np.sin(p1) * np.sin(p2))
     H = heights(np.degrees(p2).ravel(), ((np.degrees(l2) + 540) % 360 - 180).ravel()).reshape(p2.shape)
     ang = np.degrees(np.arctan((H - h0 - D[None, :] ** 2 * (1 - K) / (2 * R)) / D[None, :]))
-    return np.round(ang.max(axis=1) * 100).astype(int), h0, D[ang.argmax(axis=1)]
+    return np.round(ang.max(axis=1) * 100).astype(int), h0, D[ang.argmax(axis=1)], K
 
 def main():
     shard, shards = int(os.environ.get('SHARD', 0)), int(os.environ.get('SHARDS', 1))
@@ -102,13 +129,14 @@ def main():
     rows = [r for r in rows if r and r[0]]
     rows.sort(key=lambda r: (math.floor(float(r[4])), math.floor(float(r[5])), int(r[0])))   # tile neighbours together
     n = len(rows); mine = rows[n * shard // shards: n * (shard + 1) // shards]
+    tmin = climate_min()
     with open(os.environ.get('OUT', 'horizon-part.tsv'), 'w') as f:
         for i, r in enumerate(mine):
-            v, h0, dist = profile(float(r[4]), float(r[5]))
-            if r[0] in ('1', '45', '97', '98', '188'):
-                print(f"sample id {r[0]}: eye {h0:.0f} m; az/deg/km " + ' '.join(f"{AZ[j]}:{v[j]/100:.2f}@{dist[j]/1000:.1f}" for j in range(0, len(AZ), 15)), flush=True)
+            v, h0, dist, k = profile(float(r[4]), float(r[5]), tmin.get(r[0]))
+            if r[0] in ('1', '45', '85', '97', '98', '109', '188', '968'):
+                print(f"sample id {r[0]}: eye {h0:.0f} m, k {k:.3f}; az/deg/km " + ' '.join(f"{AZ[j]}:{v[j]/100:.2f}@{dist[j]/1000:.1f}" for j in range(0, len(AZ), 15)), flush=True)
             f.write(r[0] + '\t' + '\t'.join(map(str, v)) + '\n')
             if i % 20 == 0:
-                print(f"{i + 1}/{len(mine)} id {r[0]} {r[3]}: eye {h0:.0f} m, east max {v[:121].max()/100:.2f}, west max {v[121:].max()/100:.2f}", flush=True)
+                print(f"{i + 1}/{len(mine)} id {r[0]} {r[3]}: k {k:.3f}, eye {h0:.0f} m, east max {v[:121].max()/100:.2f}, west max {v[121:].max()/100:.2f}", flush=True)
 
 main()

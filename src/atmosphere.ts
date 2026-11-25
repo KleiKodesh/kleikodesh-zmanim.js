@@ -15,8 +15,11 @@
 //   Gauss-Legendre quadrature; r(z) on a piece comes from Newton's method on n(r) r = C / sin z.
 // - Sunrise/sunset seen from an elevation, the dip of the horizon with terrestrial refraction in the same
 //   atmosphere (the ray to the sea-level horizon is tangent to it: cos(dip) = n(R_E) R_E / (n_0 r_0)), and negative
-//   apparent altitudes: J. Keller & A. Hall, "Sunrise and sunset from elevations: refraction through a layered
-//   atmosphere", Computers & Geosciences 161 (2022) 105044 (open access).
+//   apparent altitudes (ray traced down to its tangent point and back up): C. Keller & J. K. Hall, "Using a digital
+//   terrain model to calculate visual sunrise and sunset times", Computers & Geosciences 26 (2000) 991-1000; and
+//   "Using a ray tracing program to calculate sunrise times over a digital terrain model based visible horizon using
+//   a simplified atmospheric model, part II", Computers & Geosciences 161 (2022) 105044,
+//   https://doi.org/10.1016/j.cageo.2022.105044 (open access).
 // - Refractive index of moist air in the optical band (Hohenkerk & Sinclair; the formula of the IAU SOFA routine
 //   iauRefco, after Barrell & Sears 1939):
 //     n - 1 = (gamma P - 11.2684e-6 e) / T,  gamma = (287.6155 + 1.62887 / w^2 + 0.01360 / w^4) 273.15e-6 / 1013.25

@@ -17,6 +17,13 @@
 // also has 06/18 UTC launches, but few complete ones (about 100 a month at 06 UTC, 0-100 at 18 UTC, 1995-2010), too
 // uneven for event-hour profiles. Where unknown, the monthly mean against the profile's daily mean. Deep-angle lines
 // do not use any of this (they are geometric).
+// Terrain lines (sunrise/sunset over the real horizon) in the Bet Dagan region trace the U.S. Standard Atmosphere 1976
+// moved to the place's temperature at the event's hour instead (HorizonAir.standardColumn). C. Keller & J. K. Hall,
+// Computers & Geosciences 161 (2022) 105044 (https://doi.org/10.1016/j.cageo.2022.105044), compared years of observed
+// sunrises over the terrain in Jerusalem (Armon Hanatziv, Neve Yaakov) and Bnei Brak with such a column at the place's
+// minimum temperature: about 15 s all year, the only lean an earlier winter sunrise (see zmanim.ts). The Bet Dagan
+// coastal soundings used unchanged at the Jerusalem site did worst in their test (32 s mean absolute difference in
+// winter, against 12 s for the same soundings made to follow the terrain): near the ground the air follows the terrain.
 import { Atmosphere, levelAt, SURFACE_LAYER, usStandard1976, type Level } from './atmosphere.js'
 
 /** Parsed assets/atmosphere.bin: AFGL t, ms, mw, ss, sw, then Bet Dagan month 1..12 x {00, 12 UTC}. */
@@ -43,9 +50,10 @@ const US1976 = usStandard1976()
 export const inBetDaganRegion = (lat: number, lng: number): boolean => lat >= 29 && lat <= 33.6 && lng >= 34 && lng <= 36.2
 
 /** Weighted profiles for [lat, lng] on month/day; [hour] 0 sunrise, 12 sunset, -1 both (mean). */
-function profiles(table: AtmosphereTable | null | undefined, lat: number, lng: number, month: number, day: number, hour: 0 | 12 | -1): Array<[number, number]> {
+function profiles(table: AtmosphereTable | null | undefined, lat: number, lng: number, month: number, day: number, hour: 0 | 12 | -1, standardColumn = false): Array<[number, number]> {
   if (!table) return [[-1, 1]]
   if (inBetDaganRegion(lat, lng)) {
+    if (standardColumn) return [[-1, 1]]
     const m = month - 1
     const other = day >= 15.5 ? (m + 1) % 12 : (m + 11) % 12
     const f = Math.min(0.5, Math.abs(day - 15.5) / 30.44)
@@ -112,12 +120,17 @@ export interface HorizonAir {
    * the profile's daily mean.
    */
   diurnal?: boolean
+  /**
+   * true (terrain lines): in the Bet Dagan region, the U.S. Standard Atmosphere 1976 moved to the place's temperature
+   * instead of the coastal soundings (see the head of this file). Elsewhere no change.
+   */
+  standardColumn?: boolean
 }
 
 /** Sum over the place's profiles of weight x f(atmosphere), the anomaly interpolated on its grid. */
 function traced(air: HorizonAir, hour: 0 | 12 | -1, f: (a: Atmosphere) => number): number {
   let total = 0
-  for (const [i, w] of profiles(air.table, air.lat, air.lng, air.month, air.day, hour)) {
+  for (const [i, w] of profiles(air.table, air.lat, air.lng, air.month, air.day, hour, air.standardColumn)) {
     if (w === 0) continue
     const anomaly = Number.isNaN(air.temperatureC) ? 0 : air.temperatureC + 273.15 - referenceT(air.table, i, air.height, air.diurnal)
     const g = anomaly / ANOMALY_STEP, lo = Math.floor(g), frac = g - lo

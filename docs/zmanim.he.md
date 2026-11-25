@@ -166,7 +166,7 @@
 
 - שו״ע או״ח נח, א (ותיקין: מסיימים קריאת שמע עם הנץ החמה)
 - שו״ע או״ח פט, א (תפילת השחר מצותה עם הנץ החמה)
-- חישוב: מפת הגבהים Copernicus DEM GLO-90, שבירת אור (Hohenkerk & Sinclair 1985; Auer & Standish 2000; Keller & Hall 2022), מקדם שבירה ארצית 0.13
+- חישוב: מפת הגבהים Copernicus DEM GLO-90, שבירת אור (Hohenkerk & Sinclair 1985; Auer & Standish 2000; Keller & Hall 2022), מקדם שבירה ארצית (Bomford 1952)
 
 <a id="sofShmaMga"></a>
 
@@ -338,7 +338,7 @@
 
 - שבת לד ע״ב - לה ע״א (שקיעת החמה ובין השמשות)
 - שו״ע או״ח רסא, א-ב
-- חישוב: מפת הגבהים Copernicus DEM GLO-90, שבירת אור (Hohenkerk & Sinclair 1985; Auer & Standish 2000; Keller & Hall 2022), מקדם שבירה ארצית 0.13
+- חישוב: מפת הגבהים Copernicus DEM GLO-90, שבירת אור (Hohenkerk & Sinclair 1985; Auer & Standish 2000; Keller & Hall 2022), מקדם שבירה ארצית (Bomford 1952)
 
 <a id="sunset"></a>
 

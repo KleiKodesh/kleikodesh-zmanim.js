@@ -164,7 +164,7 @@ The moment the sun's upper edge appears over the actual hills and mountains to t
 
 - Shulchan Aruch OC 58:1 (the vasikin finish Shema at sunrise)
 - Shulchan Aruch OC 89:1 (the morning prayer is ideally at sunrise)
-- Calculation: Copernicus DEM GLO-90 elevation model, refraction (ray tracing: Hohenkerk & Sinclair 1985; Auer & Standish 2000; Keller & Hall 2022), terrestrial refraction coefficient 0.13
+- Calculation: Copernicus DEM GLO-90 elevation model, refraction (ray tracing: Hohenkerk & Sinclair 1985; Auer & Standish 2000; Keller & Hall 2022), terrestrial refraction coefficient of the place's air (Bomford 1952), winter inversion lean (Keller & Hall 2022)
 
 <a id="sofShmaMga"></a>
 
@@ -336,7 +336,7 @@ The moment the sun's upper edge disappears behind the actual hills and mountains
 
 - Shabbat 34b-35a (sunset and bein hashmashot)
 - Shulchan Aruch OC 261:1-2
-- Calculation: Copernicus DEM GLO-90 elevation model, refraction (ray tracing: Hohenkerk & Sinclair 1985; Auer & Standish 2000; Keller & Hall 2022), terrestrial refraction coefficient 0.13
+- Calculation: Copernicus DEM GLO-90 elevation model, refraction (ray tracing: Hohenkerk & Sinclair 1985; Auer & Standish 2000; Keller & Hall 2022), terrestrial refraction coefficient of the place's air (Bomford 1952), winter inversion lean (Keller & Hall 2022)
 
 <a id="sunset"></a>
 

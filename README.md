@@ -186,7 +186,8 @@ ray through a spherically stratified atmosphere (src/atmosphere.ts, src/horizon.
   Hohenkerk & Sinclair, NAO Technical Note 63 (1985), as in the Explanatory Supplement to the Astronomical Almanac
   (1992) sec. 3.28; below the horizon the ray descends to its tangent point and rises again (Auer & Standish,
   Astron. J. 119, 2000, 2472). Split at the layer boundaries, 8-point Gauss-Legendre per piece.
-- Observer height and dip: Keller & Hall, Computers & Geosciences 161 (2022) 105044. The observer sits at the
+- Observer height and dip: Keller & Hall, Computers & Geosciences 26 (2000) 991-1000 and 161 (2022) 105044
+  (https://doi.org/10.1016/j.cageo.2022.105044). The observer sits at the
   place's height; the dip of the sea-level horizon is traced in the same air (cos D = n(R_E) R_E / (n_0 r_0)), which
   reproduces the navigators' 1.76' sqrt(h) within 1%.
 - Refractive index (optical, 0.574 um, with water vapour): Hohenkerk & Sinclair / IAU SOFA iauRefco form.
@@ -207,7 +208,11 @@ ray through a spherically stratified atmosphere (src/atmosphere.ts, src/horizon.
 
 Lines: sunrise/sunset = A 0 from the place's own height (a level plain at that height); Elevated = A = -dip to
 the sea-level horizon (none at or below sea level); Terrain = A = the terrain horizon toward the sun (its altitudes
-use the standard terrestrial refraction k = 0.13 of the horizon build). Degree lines
+carry the place's terrestrial refraction, see Terrain horizon). Terrain lines in the Bet Dagan region trace the U.S.
+Standard Atmosphere 1976 moved to the event-hour temperature, not the coastal soundings, and sunrise there is 15 s
+earlier after a night over 13 h when the horizon at the sun is within 0.01 deg of level: the model and the
+low-inversion lean that Keller & Hall (2022) checked against years of observed sunrises in Jerusalem and Bnei Brak
+(about 15 s; the unchanged coastal soundings did worst at the Jerusalem site). Degree lines
 (alot, misheyakir, tzeit) and chatzot are geometric. Checks (test/raytrace.test.ts): the refraction constant
 (60.4" at 0 C) within 0.6%, Bennett within 0.12' from 5 to 60 deg, an independent step-by-step ray integration
 within 0.05', the dip formula within 3%. A month of every zman for one place takes about 60 ms.
@@ -264,8 +269,10 @@ bin steeper than 22.4 deg is left empty.
 Made in CI (workflow horizon-parallel, scripts/compute-horizon.py + scripts/build-horizon.mjs) from the Copernicus
 DEM GLO-90: a grey-scale opening of about 450 m removes buildings and trees from the surface model; from the highest
 ground within 500 m of the place (+ 1.6 m eye height) rays every degree of azimuth sample the terrain from 500 m to 150 km; a point at
-distance d and height H is seen at atan((H - h - d^2 (1 - k) / 2R) / d), with terrestrial refraction k = 0.13 and
-R = 6371 km; the horizon is the highest such angle. The zman: refraction (refraction.ts) at that apparent altitude,
+distance d and height H is seen at atan((H - h - d^2 (1 - k) / 2R) / d), R = 6371 km, with the place's terrestrial
+refraction coefficient k = 503 P / T^2 (0.0342 - 0.0065) (Bomford, Geodesy, 1952, p. 158; standard lapse rate; P the
+standard pressure at the eye, T the yearly mean of the monthly mean daily minimum: 0.15-0.18 in Israel), as
+Keller & Hall (2022, eq. 1-2), whose check against ray tracing to the terrain agreed within 0.06'; the horizon is the highest such angle. The zman: refraction (refraction.ts) at that apparent altitude,
 the sun's azimuth from SPA, iterated from the sea-level time.
 
 data/places.tsv is the source of truth: built from open sources (GeoNames, Wikidata, the Israeli CBS list of localities, Open-Meteo elevations, seven OpenStreetMap points); edit the TSV and rebuild.
@@ -317,5 +324,5 @@ npm test          # vitest
 - Model atmospheres (atmosphere.bin): NOAA NCEI IGRA v2 (Durre et al. 2016), station ISM00040179 Bet Dagan, public
   domain; AFGL atmospheric constituent profiles (Anderson et al. 1986, AFGL-TR-86-0110), public domain.
 - Refraction method: ray tracing after Hohenkerk & Sinclair (1985, NAO TN 63; Explanatory Supplement 1992 sec. 3.28),
-  Auer & Standish (2000, AJ 119:2472), Keller & Hall (2022, Computers & Geosciences 161:105044); U.S. Standard
+  Auer & Standish (2000, AJ 119:2472), Keller & Hall (2000, Computers & Geosciences 26:991; 2022, 161:105044), Bomford (1952, Geodesy); U.S. Standard
   Atmosphere 1976. Reference only: Saemundsson (1986), Bennett (1982), Meeus (1998) ch. 16. Written independently from these publications.
