@@ -62,6 +62,14 @@ describe('ray-traced refraction, US Standard Atmosphere 1976 at sea level', () =
     expect(a.refraction(-d / 2)).toBeGreaterThan(a.refraction(0))
     expect(a.refraction(-d / 2)).toBeLessThan(a.refraction(-d))
   })
+  it('surface layer: a hill anomaly stays over the hill; the far low horizon keeps the profile air', () => {
+    // A warm hill (anomaly +6 K) over the plain's profile: only the air near the observer changes, so the dip differs
+    // from warming the whole column below; no anomaly = the plain profile; Infinity = the full column (old way).
+    const plain = new Atmosphere(us, 800), full = new Atmosphere(us, 800, 6), layer = new Atmosphere(us, 800, 6, 200)
+    expect(layer.dip()).not.toBeCloseTo(full.dip(), 6)
+    expect(new Atmosphere(us, 800, 0, 200).dip()).toBeCloseTo(plain.dip(), 6)
+    expect(new Atmosphere(us, 800, 6, Infinity).dip()).toBe(full.dip())
+  })
   it('hydrostatic pressure at the observer: 1013.25 at 0 m, levelAt follows US 1976 at 1 km (898.7 hPa)', () => {
     expect(levelAt(us, 1000).p).toBeCloseTo(898.7, 0)
   })

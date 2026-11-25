@@ -196,7 +196,11 @@ ray through a spherically stratified atmosphere (src/atmosphere.ts, src/horizon.
   complete for event-hour profiles). Elsewhere: AFGL standard profiles
   (Anderson et al. 1986: tropical; midlatitude or subarctic summer/winter blended by season). Bare coordinates:
   U.S. Standard Atmosphere 1976. The profile is moved to the place's own climate: T_place - T_profile at the
-  observer's height applied at the ground and tapered off over 1.5 km. T_place is the monthly mean 2 m temperature
+  observer's height applied at the observer and tapered off over 1.5 km above. Below the observer, Bet Dagan (a
+  coastal-plain profile) keeps its own air under a 200 m surface layer over the observer's terrain, so the distant
+  low horizon and the grazing ray's tangent point see the plain's air, not the hill's (dip and terrestrial
+  refraction follow the eye-level vs horizon air difference: A. T. Young, aty.sdsu.edu); the generic profiles take
+  the anomaly in full. T_place is the monthly mean 2 m temperature
   AT sunrise for sunrise-side lines and AT sunset for sunset-side lines (climate-sunevent.bin), against the traced
   profile itself; where unknown, the mean daily minimum / maximum, then the monthly mean (against the profile's daily
   mean).

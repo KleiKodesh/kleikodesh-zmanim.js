@@ -2,6 +2,12 @@
 export declare const EARTH_RADIUS = 6371008.8;
 /** Depth over which a surface temperature anomaly is tapered off into the free atmosphere, m. */
 export declare const BOUNDARY_LAYER = 1500;
+/**
+ * Depth of the surface layer below the observer over which the anomaly fades in, m, for a local low-level profile
+ * (one measured over the coastal plain): below it the air is the profile's own, i.e. the air over the plain/sea at
+ * the distant horizon and the grazing ray's tangent point.
+ */
+export declare const SURFACE_LAYER = 200;
 /** One level of a model atmosphere: geometric height m, temperature K, pressure hPa, water-vapour pressure hPa. */
 export interface Level {
     z: number;
@@ -13,8 +19,12 @@ export interface Level {
 export declare function levelAt(levels: readonly Level[], z: number): Level;
 /**
  * The model atmosphere seen by an observer at [height] m: [levels] (a monthly mean profile) with a surface
- * temperature anomaly [deltaT] K (place climate minus profile) applied in full at and below the observer and
- * tapered linearly to 0 over BOUNDARY_LAYER above, pressure re-integrated hydrostatically from the profile's own
+ * temperature anomaly [deltaT] K (place climate minus profile) as a surface layer over the observer's own terrain:
+ * the profile's air below height - [surfaceLayer], rising linearly to the full anomaly at the observer, tapered
+ * linearly to 0 over BOUNDARY_LAYER above. Dip and terrestrial refraction follow the difference between the air at
+ * eye level and the air at the horizon (A. T. Young, https://aty.sdsu.edu/explain/atmos_refr/dip.html), so the
+ * distant low horizon keeps the profile's air instead of the hill's. [surfaceLayer] Infinity (a generic, non-local
+ * profile, whose anomaly is a climate correction for the whole column): the full anomaly at and below the observer. pressure re-integrated hydrostatically from the profile's own
  * pressure at the observer.
  */
 export declare class Atmosphere {
@@ -30,7 +40,7 @@ export declare class Atmosphere {
     readonly r0: number;
     readonly n0: number;
     private readonly memo;
-    constructor(levels: readonly Level[], height: number, deltaT?: number);
+    constructor(levels: readonly Level[], height: number, deltaT?: number, surfaceLayer?: number);
     /** p(top of layer i) / p(bottom of layer i). */
     private layerRatio;
     private layerPressure;

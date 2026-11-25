@@ -38,6 +38,12 @@ const TOP = 80000;
 const BELOW_LAPSE = -0.0065;
 /** Depth over which a surface temperature anomaly is tapered off into the free atmosphere, m. */
 export const BOUNDARY_LAYER = 1500;
+/**
+ * Depth of the surface layer below the observer over which the anomaly fades in, m, for a local low-level profile
+ * (one measured over the coastal plain): below it the air is the profile's own, i.e. the air over the plain/sea at
+ * the distant horizon and the grazing ray's tangent point.
+ */
+export const SURFACE_LAYER = 200;
 // 8-point Gauss-Legendre nodes/weights on [-1, 1].
 const GL_X = [-0.9602898564975363, -0.7966664774136267, -0.525532409916329, -0.1834346424956498, 0.1834346424956498, 0.525532409916329, 0.7966664774136267, 0.9602898564975363];
 const GL_W = [0.1012285362903763, 0.2223810344533745, 0.3137066458778873, 0.362683783378362, 0.362683783378362, 0.3137066458778873, 0.2223810344533745, 0.1012285362903763];
@@ -61,16 +67,22 @@ export function levelAt(levels, z) {
 }
 /**
  * The model atmosphere seen by an observer at [height] m: [levels] (a monthly mean profile) with a surface
- * temperature anomaly [deltaT] K (place climate minus profile) applied in full at and below the observer and
- * tapered linearly to 0 over BOUNDARY_LAYER above, pressure re-integrated hydrostatically from the profile's own
+ * temperature anomaly [deltaT] K (place climate minus profile) as a surface layer over the observer's own terrain:
+ * the profile's air below height - [surfaceLayer], rising linearly to the full anomaly at the observer, tapered
+ * linearly to 0 over BOUNDARY_LAYER above. Dip and terrestrial refraction follow the difference between the air at
+ * eye level and the air at the horizon (A. T. Young, https://aty.sdsu.edu/explain/atmos_refr/dip.html), so the
+ * distant low horizon keeps the profile's air instead of the hill's. [surfaceLayer] Infinity (a generic, non-local
+ * profile, whose anomaly is a climate correction for the whole column): the full anomaly at and below the observer. pressure re-integrated hydrostatically from the profile's own
  * pressure at the observer.
  */
 export class Atmosphere {
-    constructor(levels, height, deltaT = 0) {
+    constructor(levels, height, deltaT = 0, surfaceLayer = Infinity) {
         this.height = height;
         this.memo = new Map();
         const bottom = Math.min(height, 0) - 500;
         const zs = new Set([bottom, height, height + BOUNDARY_LAYER, TOP]);
+        if (height - surfaceLayer > bottom)
+            zs.add(height - surfaceLayer);
         for (const l of levels)
             if (l.z > bottom && l.z < TOP)
                 zs.add(l.z);
@@ -83,7 +95,8 @@ export class Atmosphere {
         this.e = new Float64Array(n);
         this.de = new Float64Array(n);
         this.k = new Float64Array(n);
-        const w = (h) => (h <= height ? 1 : h >= height + BOUNDARY_LAYER ? 0 : 1 - (h - height) / BOUNDARY_LAYER);
+        const w = (h) => (h <= height - surfaceLayer ? 0 : h <= height ? 1 - (height - h) / surfaceLayer
+            : h >= height + BOUNDARY_LAYER ? 0 : 1 - (h - height) / BOUNDARY_LAYER);
         const at = z.map((h) => levelAt(levels, h));
         for (let i = 0; i < n; i++) {
             this.r[i] = EARTH_RADIUS + z[i];

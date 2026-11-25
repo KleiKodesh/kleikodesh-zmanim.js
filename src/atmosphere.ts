@@ -39,6 +39,12 @@ const TOP = 80_000
 const BELOW_LAPSE = -0.0065
 /** Depth over which a surface temperature anomaly is tapered off into the free atmosphere, m. */
 export const BOUNDARY_LAYER = 1500
+/**
+ * Depth of the surface layer below the observer over which the anomaly fades in, m, for a local low-level profile
+ * (one measured over the coastal plain): below it the air is the profile's own, i.e. the air over the plain/sea at
+ * the distant horizon and the grazing ray's tangent point.
+ */
+export const SURFACE_LAYER = 200
 
 /** One level of a model atmosphere: geometric height m, temperature K, pressure hPa, water-vapour pressure hPa. */
 export interface Level { z: number, t: number, p: number, e: number }
@@ -68,8 +74,12 @@ export function levelAt(levels: readonly Level[], z: number): Level {
 
 /**
  * The model atmosphere seen by an observer at [height] m: [levels] (a monthly mean profile) with a surface
- * temperature anomaly [deltaT] K (place climate minus profile) applied in full at and below the observer and
- * tapered linearly to 0 over BOUNDARY_LAYER above, pressure re-integrated hydrostatically from the profile's own
+ * temperature anomaly [deltaT] K (place climate minus profile) as a surface layer over the observer's own terrain:
+ * the profile's air below height - [surfaceLayer], rising linearly to the full anomaly at the observer, tapered
+ * linearly to 0 over BOUNDARY_LAYER above. Dip and terrestrial refraction follow the difference between the air at
+ * eye level and the air at the horizon (A. T. Young, https://aty.sdsu.edu/explain/atmos_refr/dip.html), so the
+ * distant low horizon keeps the profile's air instead of the hill's. [surfaceLayer] Infinity (a generic, non-local
+ * profile, whose anomaly is a climate correction for the whole column): the full anomaly at and below the observer. pressure re-integrated hydrostatically from the profile's own
  * pressure at the observer.
  */
 export class Atmosphere {
@@ -85,15 +95,17 @@ export class Atmosphere {
   readonly n0: number
   private readonly memo = new Map<number, number>()
 
-  constructor(levels: readonly Level[], readonly height: number, deltaT = 0) {
+  constructor(levels: readonly Level[], readonly height: number, deltaT = 0, surfaceLayer = Infinity) {
     const bottom = Math.min(height, 0) - 500
     const zs = new Set<number>([bottom, height, height + BOUNDARY_LAYER, TOP])
+    if (height - surfaceLayer > bottom) zs.add(height - surfaceLayer)
     for (const l of levels) if (l.z > bottom && l.z < TOP) zs.add(l.z)
     const z = [...zs].sort((a, b) => a - b)
     const n = z.length
     this.r = new Float64Array(n); this.t = new Float64Array(n); this.dt = new Float64Array(n)
     this.p = new Float64Array(n); this.e = new Float64Array(n); this.de = new Float64Array(n); this.k = new Float64Array(n)
-    const w = (h: number): number => (h <= height ? 1 : h >= height + BOUNDARY_LAYER ? 0 : 1 - (h - height) / BOUNDARY_LAYER)
+    const w = (h: number): number => (h <= height - surfaceLayer ? 0 : h <= height ? 1 - (height - h) / surfaceLayer
+      : h >= height + BOUNDARY_LAYER ? 0 : 1 - (h - height) / BOUNDARY_LAYER)
     const at = z.map((h) => levelAt(levels, h))
     for (let i = 0; i < n; i++) {
       this.r[i] = EARTH_RADIUS + z[i]!
