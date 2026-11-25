@@ -1,3 +1,4 @@
+import { type AtmosphereTable } from './horizon.js';
 /** Every zman the library computes, in the order of the day. Each is computed only when requested. */
 export declare const ZMAN_NAMES: readonly ["chatzotNight", "alot90Visible", "alot90", "alot90Chatzot", "alot90z", "alotVisible", "alot", "alotChatzot", "alot72z", "alot96", "alot120", "alot12", "misheyakir66", "misheyakir60", "misheyakirVisible", "misheyakir", "misheyakirChatzot", "misheyakir11", "misheyakirLechumra", "misheyakir10p2", "misheyakir7p65", "misheyakir12p85", "misheyakir40", "alotBaalHatanya", "sunriseBaalHatanya", "sunriseElevated", "sunrise", "sunriseTerrain", "sofShmaMga120", "sofShmaMga90", "sofShmaMga19", "sofShmaMga90z", "sofShmaMga", "sofShmaMga16", "sofShmaMga72z", "sofShmaMga72Fixed", "sofShmaMga16Fixed", "sofShmaHarari40", "sofShmaHarari25", "sofShmaAsym", "sofShmaBaalHatanya", "sofShmaBenIshChai", "sofShmaGra", "sofShmaGraFixed", "sofTfillaMga120", "sofTfillaMga90", "sofTfillaMga19", "sofTfillaMga90z", "sofTfillaMga", "sofTfillaMga16", "sofTfillaMga72z", "sofTfillaHarari40", "sofTfillaHarari25", "sofTfillaAsym", "sofTfillaBaalHatanya", "sofTfillaBenIshChai", "sofTfillaGra", "sofTfillaGraFixed", "chatzot", "chatzotFixedLocal", "minchaGedola", "minchaGedola30", "minchaGedolaFixed", "minchaGedolaHillel", "minchaGedolaBaalHatanya", "minchaGedolaHarari40", "minchaGedolaHarari25", "minchaKetana", "minchaKetanaFixed", "minchaKetanaHillel", "minchaKetanaBaalHatanya", "minchaKetanaHarari40", "minchaKetanaHarari25", "plag", "plagFixed", "plagHillel", "plagAlotTzeitGeonim", "plagBaalHatanya", "plagHarari40", "plagHarari25", "plagAsym", "plagBenIshChai", "plagMga", "plagMga72z", "plagMga19", "plagMga90z", "plagMga90", "plagMga120", "plagAlot90Tzeit645", "plagAlot72Tzeit645", "plagAlot12Tzeit7083", "candles40", "candles30", "candles22", "candles20", "candles18", "sunsetTerrain", "sunset", "sunsetElevated", "sunsetBaalHatanya", "tzeitGeonim", "tzeitGeonimVisible", "tzeitBaalHatanya", "tzeit13p5", "tzeit18", "tzeit18Sun", "tzeit20", "tzeit645", "tzeit7083", "tzeit", "tzeitVisible", "tzeit24", "tzeit30", "tzeit40", "tzeit45", "tzeit50", "tzeit13p5z", "beinHashmashotYereim", "beinHashmashotRt", "tzeitRt72", "tzeitRt72Zmanis", "tzeitRt16", "tzeitRt90", "tzeitRt96", "tzeit90z"];
 export type ZmanName = typeof ZMAN_NAMES[number];
@@ -47,15 +48,16 @@ export interface Coordinates {
      */
     terrainHorizon?: ArrayLike<number> | null;
     /**
-     * 12 monthly mean near-ground temperature gradients at sunrise/sunset in K/km (NaN = unknown), as getPlace()
-     * attaches them; adds the surface-inversion term to horizon refraction (refraction.ts). Missing: no term.
+     * Model atmospheres for the ray-traced horizon refraction (assets/atmosphere.bin, parsed), as zmanim() attaches
+     * them when a horizon line is asked for. Missing: the U.S. Standard Atmosphere 1976 moved to the place's climate.
      */
-    monthlyLapseKPerKm?: readonly number[];
+    atmospheres?: AtmosphereTable | null;
 }
 /** The geometric horizon. */
 export declare const GEOMETRIC_ZENITH = 90;
 /**
- * Dip of the visible sea/plain horizon seen from [elevation] meters, degrees: D = 1.76' * sqrt(h m), the standard
+ * Reference only (the zmanim trace the dip in the model atmosphere, see horizonZenith): the navigators' dip of the
+ * visible sea/plain horizon seen from [elevation] meters, degrees: D = 1.76' * sqrt(h m), the standard
  * dip with terrestrial refraction (the line of sight to the horizon bends down with the Earth, so the horizon looks
  * higher than the purely geometric arccos(R / (R + h)) = 1.93' * sqrt(h)). Sources: Nautical Almanac, "Dip" table
  * and its explanation; N. Bowditch, The American Practical Navigator (Pub. 9), chapter "Sight reduction", dip
@@ -63,11 +65,13 @@ export declare const GEOMETRIC_ZENITH = 90;
  */
 export declare function horizonDip(elevation: number): number;
 /**
- * Zenith of the sun's centre at sunrise/sunset for [place] on [date]: 90 + radius + dip + refraction at the
- * apparent horizon, with pressure from the elevation and temperature from the monthly means (refraction.ts).
- * [fromHeight] false: the sea-level horizon (no dip); true: the horizon seen from the place's own elevation.
+ * Zenith of the sun's centre at sunrise/sunset for [place] on [date], refraction ray-traced (atmosphere.ts):
+ * [fromHeight] false: the upper limb at apparent altitude 0 seen from the place's own height (a level plain at that
+ * height): 90 + radius + R(0). true: the upper limb on the sea-level horizon seen from that height: the dip D with
+ * terrestrial refraction and R(-D), both traced in the same atmosphere: 90 + radius + D + R(-D) (Keller & Hall
+ * 2022). [hour] 0 sunrise, 12 sunset (which radiosonde profile, where there is one), -1 their mean.
  */
-export declare function horizonZenith(place: Coordinates, date: CivilDate, fromHeight?: boolean): number;
+export declare function horizonZenith(place: Coordinates, date: CivilDate, fromHeight?: boolean, hour?: 0 | 12 | -1): number;
 /** Jerusalem latitude for the equinox conversions: Har HaBayit (the Temple Mount, Old City), 31.778 N. */
 export declare const JERUSALEM_LAT = 31.778;
 /**

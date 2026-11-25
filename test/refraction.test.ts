@@ -56,11 +56,11 @@ describe('lazy climate.bin', () => {
   it('getPlace attaches the climate (climate.bin loaded once, with places.bin and tz.json)', async () => {
     const reads = useFileAssets()
     await zmanim(1, new Date(2026, 0, 1), ['alot', 'tzeit', 'chatzot'])
-    expect(reads.sort()).toEqual(['climate.bin', 'lapse.bin', 'places.bin', 'tz.json'])
+    expect(reads.sort()).toEqual(['climate.bin', 'places.bin', 'tz.json'])
     expect((await getPlace(1)).monthlyTemperatureC).toEqual(await getMonthlyTemperatures(1))
     await zmanim(1, new Date(2026, 0, 1), ['sunrise'])
     await zmanim(2, new Date(2026, 0, 1), ['plag'])
-    expect(reads.sort()).toEqual(['climate.bin', 'lapse.bin', 'places.bin', 'tz.json'])
+    expect(reads.sort()).toEqual(['atmosphere.bin', 'climate.bin', 'places.bin', 'tz.json'])
   })
   it('bare coordinates throw for climate zmanim; explicit standard atmosphere works', () => {
     const bare = { lat: 31.77, lng: 35.22, tzid: 'Asia/Jerusalem', elevation: 786 }
@@ -100,10 +100,12 @@ describe('sunrise/sunset from the place height', () => {
   })
 })
 
-describe('elevated sunset with the standard dip', () => {
+describe('elevated sunset: dip and refraction traced in one atmosphere', () => {
+  // Elevated minus level = D + R(-D) - R(0): the grazing ray crosses the denser air below the observer, so it is a
+  // little more than the old closed-form value (4.8-5.2 min at 750 m).
   it('Jerusalem 750 m / Bnei Brak 30 m, 21 Jun and 21 Dec: dip with terrestrial refraction', () => {
     const cases = [
-      [31.778, 35.235, 750, 6, 4.9, 5.2], [31.778, 35.235, 750, 12, 4.8, 5.1],
+      [31.778, 35.235, 750, 6, 4.9, 5.6], [31.778, 35.235, 750, 12, 4.8, 5.5],
       [32.084, 34.834, 30, 6, 0.95, 1.1], [32.084, 34.834, 30, 12, 0.95, 1.1],
     ] as const
     for (const [lat, lng, elevation, month, lo, hi] of cases) {

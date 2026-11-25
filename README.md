@@ -22,8 +22,9 @@ configure({ loader: async (file) => arrayBuffer })   // or bring your own reader
 
 await listPlaces('he')            // string[]; index = place id (index 0 empty). Loads names-he.txt only.
 await searchPlaces('jeru', 'en')  // [{ id, name }]; prefix matches first; ignores case, accents, Hebrew points
-await getPlace(1)                 // { id, lat, lng, elevation, tzid, rawOffsetMinutes, monthlyTemperatureC, monthlyLapseKPerKm }.
-                                  // Loads places.bin + tz.json + climate.bin + lapse.bin (23 KB each) once, together.
+await getPlace(1)                 // { id, lat, lng, elevation, tzid, rawOffsetMinutes, monthlyTemperatureC }.
+                                  // Loads places.bin + tz.json + climate.bin (23 KB each) once, together;
+                                  // zmanim() adds atmosphere.bin (25 KB) on the first sunrise/sunset-type line.
 await nearestPlaceId(lat, lng)     // id of the listed place nearest a point; reads places.bin only
 await placeTree('he')             // country > city > neighbourhood picker data; each list sorted on first ask
 await zmanim(1, new Date(), ['sunrise', 'sunset'])     // { sunrise: '06:12', sunset: '17:01' }; only these are computed
@@ -128,8 +129,7 @@ Moadim U'Zmanim 2:155 (glosses) and Sefer Bein Hashmashos p. 55.
 
 "Visible" lines measure the depression from the apparent (refracted) sea-level horizon instead of the geometric one.
 Refraction lifts the image of the horizon line: a point that appears on the horizon is geometrically R0 below it,
-where R0 is the horizon refraction (the same Saemundsson/Meeus model as sunrise, at the place's pressure and monthly
-temperature, about 34'). So the sun's centre is at zenith 90 + R0 + depression (no solar radius); this is the
+where R0 is the horizon refraction (ray-traced like sunrise, at apparent altitude 0 from the place's height, about 33-35'). So the sun's centre is at zenith 90 + R0 + depression (no solar radius); this is the
 convention of the standard sunrise altitude h0 = -0 deg 34' (Meeus, Astronomical Algorithms, 2nd ed., ch. 15)
 extended below the horizon. The Visible lines come out about 2-4 minutes beyond the geometric ones.
 
@@ -188,39 +188,32 @@ candles30; elsewhere in Israel candles20 (https://he.wikipedia.org/wiki/הדלק
 (https://www.chabad.org/library/article_cdo/aid/529865/jewish/About-Lighting-Times.htm,
 https://oukosher.org/halacha-yomis/light-shabbos-candles-eighteen-minutes-shkia-sunset).
 
-### Sunrise/sunset refraction (pressure and temperature)
+### Sunrise/sunset refraction (ray-traced through a layered model atmosphere)
 
-Sunrise and sunset are when the upper limb of the sun touches the apparent sea-level horizon: zenith =
-90 deg + solar radius 16' + horizon refraction R. R is no longer a fixed 34'; it depends on the air:
+Every horizon event is the sun's upper limb at an apparent altitude A, with refraction R(A) found by tracing the
+ray through a spherically stratified atmosphere (src/atmosphere.ts, src/horizon.ts); zenith = 90 - A + R(A) + 16'.
 
-- Refraction (arcmin) at true altitude h: R = 1.02 / tan(h + 10.3 / (h + 5.11)) at 1010 hPa and 10 C
-  (Saemundsson, Sky and Telescope 72, 1986, p. 70; inverse of Bennett, Journal of Navigation 35, 1982),
-  scaled by (P / 1010) * (283 / (273 + T)) as in Meeus, Astronomical Algorithms, 2nd ed., ch. 16.
-  At the apparent horizon the true altitude satisfies h + R(h) = 0, solved by a few fixed-point steps.
-- Pressure P from the place's elevation: U.S. Standard Atmosphere 1976 / ICAO standard atmosphere,
-  P = 1013.25 * (1 - 0.0065 H / 288.15)^5.25588 hPa.
-- Temperature T: the place's monthly mean (climate.bin), interpolated linearly between mid-month values.
-  Without data: the standard-atmosphere temperature 15 - 0.0065 H C.
-- Surface inversion: ray curvature near the horizon is proportional to (P / T^2) (0.0342 + dT/dz), dT/dz in K/m,
-  0.0342 = g / R_air (A. T. Young, Astron. J. 127, 2004, 3622-3637; Schaefer & Liller, PASP 102, 1990, 796-805).
-  The base formula is an empirical mean for ordinary air, so it is kept for any gradient up to isothermal, and a
-  mean inversion adds R' = R (1 + c max(0, dT/dz) / (0.0342 - 0.0065)) with c = 1 (the full curvature ratio, not
-  fitted; dT/dz clamped to 0..30 K/km). dT/dz is the place's monthly mean gradient at sunrise/sunset (lapse.bin),
-  interpolated like the temperature. Check against published Edmonton sunset observations (test/inversion.test.ts):
-  winter (Sampson, Lozowski & Machel 2005, 26 sunsets, 0.699 +- 0.118 deg) model 0.575 -> 0.682 deg; all year
-  (Peterson, Lozowski, Hube & Sampson 2003, 135 sunsets, 0.579 +- 0.108 deg) 0.542 -> 0.572 deg. A 1/SE^2-weighted
-  fit of c to those two means gives 1.20 +- 0.18, consistent with 1. Places whose mean sunrise/sunset air is not
-  inverted (all of Israel's coast, London, New York, Moscow, Montreal in this data) do not change; Edmonton in
-  January moves by about 54 s. Applies everywhere horizon refraction is used (sunrise/sunset, Elevated, Visible, Terrain).
+- Refraction integral R = integral of -r n' / (n + r n') dz over the ray's zenith angle z with n r sin z constant:
+  Hohenkerk & Sinclair, NAO Technical Note 63 (1985), as in the Explanatory Supplement to the Astronomical Almanac
+  (1992) sec. 3.28; below the horizon the ray descends to its tangent point and rises again (Auer & Standish,
+  Astron. J. 119, 2000, 2472). Split at the layer boundaries, 8-point Gauss-Legendre per piece.
+- Observer height and dip: Keller & Hall, Computers & Geosciences 161 (2022) 105044. The observer sits at the
+  place's height; the dip of the sea-level horizon is traced in the same air (cos D = n(R_E) R_E / (n_0 r_0)), which
+  reproduces the navigators' 1.76' sqrt(h) within 1%.
+- Refractive index (optical, 0.574 um, with water vapour): Hohenkerk & Sinclair / IAU SOFA iauRefco form.
+- Air: layers with T and water-vapour pressure linear in height, p hydrostatic (anchored at the observer).
+  Israel and neighbours: monthly mean Bet Dagan radiosonde profiles (NOAA IGRA v2, ISM00040179, 1995-2024),
+  00 UTC for sunrise and 12 UTC for sunset, blended between months. Elsewhere: AFGL standard profiles
+  (Anderson et al. 1986: tropical; midlatitude or subarctic summer/winter blended by season). Bare coordinates:
+  U.S. Standard Atmosphere 1976. The profile is moved to the place's own climate: T_place - T_profile at the
+  observer's height applied at the ground and tapered off over 1.5 km.
 
-Only sunrise, sunset and the zmanim built from them (GRA / MGA hours, mincha, plag) change, typically by
-5-35 seconds against the old fixed 34' (more at high places). Degree-based zmanim (alot, misheyakir, tzeit)
-and chatzot are geometric and unchanged. getPlace() loads climate.bin once with the place table.
-`computeZmanim` takes `elevation` and `monthlyTemperatureC` (12 values, or 'standard') in its place argument.
-
-Elevated sunrise/sunset: the horizon seen from height H lies lower by the geometric dip arccos(R / (R + H))
-(R = 6371 km mean Earth radius; no dip below sea level), and refraction is taken at that depressed apparent
-altitude with the same pressure/temperature model. Each place uses its own elevation from places.bin.
+Lines: sunrise/sunset = A 0 from the place's own height (a level plain at that height); Elevated = A = -dip to
+the sea-level horizon (none at or below sea level); Terrain = A = the terrain horizon toward the sun (its altitudes
+use the standard terrestrial refraction k = 0.13 of the horizon build); Visible lines use R(0). Degree lines
+(alot, misheyakir, tzeit) and chatzot are geometric. Checks (test/raytrace.test.ts): the refraction constant
+(60.4" at 0 C) within 0.6%, Bennett within 0.12' from 5 to 60 deg, an independent step-by-step ray integration
+within 0.05', the dip formula within 3%. A month of every zman for one place takes about 60 ms.
 
 Stringent rounding: a start rounds up, a deadline rounds down, chatzot to the nearest minute.
 Accuracy: sunrise, sunset, solar noon and civil twilight agree with the US Naval Observatory's published times
@@ -237,7 +230,7 @@ Ids are stable: new places get new ids, an id is never reused (a removed place l
 | names-he.txt, names-en.txt | one name per line; line index = id (line 0 empty) |
 | places.bin | record of 11 bytes per id at offset id*11 (record 0 unused), little endian: lat int32, lng int32 (degrees x 1e5), elevation int16 (m), tz index uint8 |
 | climate.bin | 12 bytes per id at offset id*12 (record 0 unused): monthly mean temperature, int8 C, -128 = unknown |
-| lapse.bin | 12 bytes per id at offset id*12: monthly mean near-ground temperature gradient at sunrise/sunset, int8 in 0.25 K/km, -128 = unknown |
+| atmosphere.bin | model atmospheres (scripts/build-atmosphere.mjs, workflow build-atmosphere): uint16 count, then per profile uint16 levels + float32 z m, T K, p hPa, e hPa; AFGL t, ms, mw, ss, sw, then Bet Dagan month 1..12 x {00, 12 UTC} |
 | tz.json | `{ ids: [IANA zone...], rawOffsetMinutes: [...] }` (standard offset, for the antimeridian rule only) |
 
 Sizes (1803 places): names-he 27436 B, names-en 23595 B, places.bin 19844 B, tz.json 2023 B, climate.bin 21648 B.
@@ -249,12 +242,8 @@ Every place has temperatures. For newly added places, run the fetch-climate-para
 `node scripts/fetch-climate.mjs`, which resumes from the rows already in data/climate.tsv), then rebuild the assets;
 until then a new place uses the standard-atmosphere temperature (-128 in climate.bin).
 
-`data/lapse.tsv` (id, 12 monthly means, K/km) comes from `scripts/fetch-lapse.mjs` (workflow fetch-lapse-parallel,
-sharded across runners, resumable): Open-Meteo Historical Forecast API, hourly 2 m temperature at the place's
-elevation and temperature + geopotential height of the first pressure level above the ground (925 hPa below 500 m,
-850 hPa below 1200 m, else 700 hPa), 2023-2025 (the span with pressure levels in that API). Gradient =
-(T_level - T_2m) / (Z_level - elevation - 2), taken at each day's sunrise and sunset hour and averaged per month.
-Without data a place has no inversion term.
+`data/atmosphere.tsv` / `assets/atmosphere.bin` come from `scripts/build-atmosphere.mjs`, run by the
+build-atmosphere workflow (it downloads the IGRA v2 station file and the AFGL profiles, both public domain).
 
 ### Terrain horizon (horizon-NN.bin)
 
@@ -318,7 +307,8 @@ npm test          # vitest
   tiles from the AWS Open Data registry (https://registry.opendata.aws/copernicus-dem/).
 - Climate data (climate.bin): weather data by Open-Meteo.com (https://open-meteo.com/), CC BY 4.0, from the
   ERA5 / ERA5-Land reanalysis by the Copernicus Climate Change Service (Hersbach et al. 2018, Munoz Sabater 2019).
-- Near-ground gradients (lapse.bin): weather data by Open-Meteo.com, CC BY 4.0 (Historical Forecast API).
-- Refraction method: Saemundsson (1986), Bennett (1982), Meeus, Astronomical Algorithms (1998) ch. 16;
-  U.S. Standard Atmosphere 1976 / ICAO Doc 7488; inversion term: Young (2004), Schaefer & Liller (1990),
-  checked against Peterson et al. (2003) and Sampson et al. (2005). Written independently from these publications.
+- Model atmospheres (atmosphere.bin): NOAA NCEI IGRA v2 (Durre et al. 2016), station ISM00040179 Bet Dagan, public
+  domain; AFGL atmospheric constituent profiles (Anderson et al. 1986, AFGL-TR-86-0110), public domain.
+- Refraction method: ray tracing after Hohenkerk & Sinclair (1985, NAO TN 63; Explanatory Supplement 1992 sec. 3.28),
+  Auer & Standish (2000, AJ 119:2472), Keller & Hall (2022, Computers & Geosciences 161:105044); U.S. Standard
+  Atmosphere 1976. Reference only: Saemundsson (1986), Bennett (1982), Meeus (1998) ch. 16. Written independently from these publications.

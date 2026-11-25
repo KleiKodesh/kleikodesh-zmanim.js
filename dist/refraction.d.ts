@@ -11,6 +11,3 @@ export declare function refractionArcmin(h: number, pressure: number, temperatur
 export declare function horizonRefractionArcmin(pressure: number, temperature: number, apparent?: number): number;
 /** Linear interpolation of 12 monthly means (each at mid-month) to a day of the year; NaN entries are skipped. */
 export declare function temperatureOn(monthly: readonly number[], month: number, day: number): number;
-export declare const INVERSION_C = 1;
-/** Factor on horizon refraction for a mean near-ground gradient [lapseKPerKm] (K/km); 1 for NaN or any non-inverted gradient. */
-export declare function inversionFactor(lapseKPerKm: number): number;

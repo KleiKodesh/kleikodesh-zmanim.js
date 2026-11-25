@@ -39,7 +39,7 @@ Like the 90-minute dawn (19.8 degrees), but the degrees are measured from the vi
 
 - Pesachim 94a
 - Shulchan Aruch OC 459:2; Mishna Berura 459:15
-- Astronomy: horizon refraction from the place's air pressure and temperature (Meeus, Astronomical Algorithms, ch. 16)
+- Astronomy: horizon refraction ray-traced through a layered model atmosphere (Hohenkerk & Sinclair 1985; Auer & Standish 2000)
 - Birur Zmanim vol 1 p.66 (90 min is about 19.75 deg)
 - Bein Hashmashot (R. Y. M. Tukachinsky) p.105 (dawn an hour and a half before sunrise)
 
@@ -80,7 +80,7 @@ Like dawn (16.05 degrees), but the degrees are measured from the visible horizon
 
 - Pesachim 94a
 - Shulchan Aruch OC 89:1
-- Astronomy: horizon refraction from the place's air pressure and temperature (Meeus, Astronomical Algorithms, ch. 16)
+- Astronomy: horizon refraction ray-traced through a layered model atmosphere (Hohenkerk & Sinclair 1985; Auer & Standish 2000)
 - Birur Zmanim vol 1 p.66 (72 min in Eretz Yisrael at the equinox is about 16 deg)
 
 <a id="alotChatzot"></a>
@@ -117,7 +117,7 @@ Like misheyakir (11.5 degrees), but the degrees are measured from the visible ho
 
 - Berachot 9b
 - Shulchan Aruch OC 18:3
-- Astronomy: horizon refraction (Meeus, Astronomical Algorithms, ch. 16)
+- Astronomy: horizon refraction (ray tracing: Hohenkerk & Sinclair 1985; Auer & Standish 2000; Keller & Hall 2022)
 
 <a id="misheyakirChatzot"></a>
 
@@ -177,7 +177,7 @@ Sunrise as seen from the place's own height: from a mountain or a high building 
 
 - Shulchan Aruch OC 58:1 (the vasikin finish Shema at sunrise)
 - Shulchan Aruch OC 89:1 (the morning prayer is ideally at sunrise)
-- Astronomy: horizon dip arccos(R/(R+h)) and refraction (Meeus, Astronomical Algorithms, ch. 16)
+- Astronomy: horizon dip and refraction traced through a layered atmosphere (Keller & Hall 2022)
 - Bein Hashmashot (R. Y. M. Tukachinsky) p.105 (on Mount Carmel sunrise under 3 min earlier, sunset 2-3 min later)
 
 <a id="sunrise"></a>
@@ -191,7 +191,7 @@ The moment the top edge of the sun appears on the horizon, at sea level. It is t
 - Berachot 9b (vasikin)
 - Shulchan Aruch OC 58:1 (the vasikin finish Shema at sunrise and pray right after)
 - Shulchan Aruch OC 89:1 (ideally the prayer starts at sunrise)
-- Astronomy: the upper limb of the sun on the horizon, with refraction from pressure and temperature (Meeus, Astronomical Algorithms, ch. 15-16)
+- Astronomy: the upper limb of the sun on the horizon, with ray-traced refraction (Hohenkerk & Sinclair 1985; Keller & Hall 2022)
 
 <a id="sunriseTerrain"></a>
 
@@ -203,7 +203,7 @@ The moment the sun's upper edge appears over the actual hills and mountains to t
 
 - Shulchan Aruch OC 58:1 (the vasikin finish Shema at sunrise)
 - Shulchan Aruch OC 89:1 (the morning prayer is ideally at sunrise)
-- Calculation: Copernicus DEM GLO-90 elevation model, refraction (Meeus, Astronomical Algorithms, ch. 16), terrestrial refraction coefficient 0.13
+- Calculation: Copernicus DEM GLO-90 elevation model, refraction (ray tracing: Hohenkerk & Sinclair 1985; Auer & Standish 2000; Keller & Hall 2022), terrestrial refraction coefficient 0.13
 
 <a id="sofShmaMga"></a>
 
@@ -375,7 +375,7 @@ The moment the sun's upper edge disappears behind the actual hills and mountains
 
 - Shabbat 34b-35a (sunset and bein hashmashot)
 - Shulchan Aruch OC 261:1-2
-- Calculation: Copernicus DEM GLO-90 elevation model, refraction (Meeus, Astronomical Algorithms, ch. 16), terrestrial refraction coefficient 0.13
+- Calculation: Copernicus DEM GLO-90 elevation model, refraction (ray tracing: Hohenkerk & Sinclair 1985; Auer & Standish 2000; Keller & Hall 2022), terrestrial refraction coefficient 0.13
 
 <a id="sunset"></a>
 
@@ -388,7 +388,7 @@ The moment the top edge of the sun disappears below the horizon, at sea level. T
 - Shabbat 34b (from when the sun sets)
 - Shulchan Aruch OC 261:2 (adding to Shabbos from the start of sunset)
 - Biur HaGra OC 261:2 (twilight begins right at sunset)
-- Astronomy: the upper limb of the sun on the horizon, with refraction (Meeus, Astronomical Algorithms, ch. 15-16)
+- Astronomy: the upper limb of the sun on the horizon, with refraction (ray tracing: Hohenkerk & Sinclair 1985; Keller & Hall 2022)
 
 <a id="sunsetElevated"></a>
 
@@ -400,7 +400,7 @@ Sunset as seen from the place's own height: from a mountain or a high building t
 
 - Shabbat 34b
 - Shulchan Aruch OC 261:2
-- Astronomy: horizon dip arccos(R/(R+h)) and refraction (Meeus, Astronomical Algorithms, ch. 16)
+- Astronomy: horizon dip and refraction traced through a layered atmosphere (Keller & Hall 2022)
 - Bein Hashmashot (R. Y. M. Tukachinsky) p.105 (on Mount Carmel sunrise under 3 min earlier, sunset 2-3 min later)
 
 <a id="tzeitGeonim"></a>
@@ -428,7 +428,7 @@ Like the Geonim's nightfall (3.7 degrees), but the degrees are measured from the
 
 - Shabbat 34b
 - Shulchan Aruch OC 261:2
-- Astronomy: horizon refraction (Meeus, Astronomical Algorithms, ch. 16)
+- Astronomy: horizon refraction (ray tracing: Hohenkerk & Sinclair 1985; Auer & Standish 2000; Keller & Hall 2022)
 
 <a id="tzeit7083"></a>
 
@@ -464,7 +464,7 @@ Like nightfall (8.5 degrees), but the degrees are measured from the visible hori
 **Sources:**
 
 - Shabbat 35b
-- Astronomy: horizon refraction (Meeus, Astronomical Algorithms, ch. 16)
+- Astronomy: horizon refraction (ray tracing: Hohenkerk & Sinclair 1985; Auer & Standish 2000; Keller & Hall 2022)
 
 <a id="candles40"></a>
 

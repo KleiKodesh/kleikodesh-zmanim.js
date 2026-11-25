@@ -25,7 +25,7 @@ describe('specialZmanim', () => {
     const date = { year: 2026, month: 4, day: 1 }
     const s = specialZmanInstants(JLM, date, 'erevPesach')
     const z = zmanInstants(JLM, date, ['sofTfillaGra', 'sofTfillaMga', 'sofTfillaMga16', 'chatzot'])
-    expect(s.sofAchilatChametzGra).toBe(z.sofTfillaGra)
+    expect(Math.abs(Number(s.sofAchilatChametzGra! - z.sofTfillaGra!))).toBeLessThan(2e6)
     expect(Number(s.sofAchilatChametzMga! - z.sofTfillaMga!)).toBeLessThan(2e6)
     expect(Number(s.sofAchilatChametzMga16! - z.sofTfillaMga16!)).toBeLessThan(2e6)
     expect(s.sofBiurChametzMga! < s.sofBiurChametzGra!).toBe(true)

@@ -1,7 +1,8 @@
 // The day's zmanim. Sun positions come from src/spa.ts (NREL SPA, Reda & Andreas 2008, appendix A.2 rise/
-// transit/set); sunrise/sunset refraction from src/refraction.ts. The zman definitions are the standard
+// transit/set); horizon refraction ray-traced through a layered model atmosphere (src/atmosphere.ts, src/horizon.ts). The zman definitions are the standard
 // halachic ones (temporal hours of a GRA or MGA day, degree depressions); see README.
-import { horizonRefractionArcmin, inversionFactor, standardPressure, standardTemperature, temperatureOn } from './refraction.js';
+import { tracedDipAndRefraction, tracedRefraction } from './horizon.js';
+import { temperatureOn } from './refraction.js';
 import { julianDayFromUtcMs, spa, spaDay, spaEvent, zenithToH0 } from './spa.js';
 /** Every zman the library computes, in the order of the day. Each is computed only when requested. */
 export const ZMAN_NAMES = [
@@ -96,19 +97,19 @@ const SOLAR_RADIUS = 16 / 60;
 /** Mean Earth radius, meters. */
 /** Dip of the horizon with standard terrestrial refraction, arcminutes per sqrt(meter) (Nautical Almanac / Bowditch). */
 const DIP_ARCMIN_PER_SQRT_M = 1.76;
-function temperatureAt(place, date) {
+/** What the refraction tracer needs of [place] on [date]; temperature NaN ('standard' or unknown) keeps the profile's own. */
+function airOf(place, date) {
     const m = place.monthlyTemperatureC;
     const t = Array.isArray(m) ? temperatureOn(m, date.month, date.day) : NaN;
-    return Number.isNaN(t) ? standardTemperature(place.elevation ?? 0) : t;
+    return { table: place.atmospheres, lat: place.lat, lng: place.lng, height: place.elevation ?? 0, month: date.month, day: date.day, temperatureC: t };
 }
-/** Horizon refraction (arcmin) at [apparent] degrees for [place] on [date]: pressure, temperature and inversion term. */
-function horizonRefraction(place, date, apparent = 0) {
-    const l = place.monthlyLapseKPerKm;
-    const factor = l ? inversionFactor(temperatureOn(l, date.month, date.day)) : 1;
-    return horizonRefractionArcmin(standardPressure(place.elevation ?? 0), temperatureAt(place, date), apparent) * factor;
+/** Ray-traced horizon refraction (arcmin) at [apparent] degrees for [place] on [date]; [hour] 0 sunrise, 12 sunset, -1 mean. */
+function horizonRefraction(place, date, apparent = 0, hour = -1) {
+    return tracedRefraction(airOf(place, date), apparent, hour);
 }
 /**
- * Dip of the visible sea/plain horizon seen from [elevation] meters, degrees: D = 1.76' * sqrt(h m), the standard
+ * Reference only (the zmanim trace the dip in the model atmosphere, see horizonZenith): the navigators' dip of the
+ * visible sea/plain horizon seen from [elevation] meters, degrees: D = 1.76' * sqrt(h m), the standard
  * dip with terrestrial refraction (the line of sight to the horizon bends down with the Earth, so the horizon looks
  * higher than the purely geometric arccos(R / (R + h)) = 1.93' * sqrt(h)). Sources: Nautical Almanac, "Dip" table
  * and its explanation; N. Bowditch, The American Practical Navigator (Pub. 9), chapter "Sight reduction", dip
@@ -118,15 +119,18 @@ export function horizonDip(elevation) {
     return elevation > 0 ? DIP_ARCMIN_PER_SQRT_M * Math.sqrt(elevation) / 60 : 0;
 }
 /**
- * Zenith of the sun's centre at sunrise/sunset for [place] on [date]: 90 + radius + dip + refraction at the
- * apparent horizon, with pressure from the elevation and temperature from the monthly means (refraction.ts).
- * [fromHeight] false: the sea-level horizon (no dip); true: the horizon seen from the place's own elevation.
+ * Zenith of the sun's centre at sunrise/sunset for [place] on [date], refraction ray-traced (atmosphere.ts):
+ * [fromHeight] false: the upper limb at apparent altitude 0 seen from the place's own height (a level plain at that
+ * height): 90 + radius + R(0). true: the upper limb on the sea-level horizon seen from that height: the dip D with
+ * terrestrial refraction and R(-D), both traced in the same atmosphere: 90 + radius + D + R(-D) (Keller & Hall
+ * 2022). [hour] 0 sunrise, 12 sunset (which radiosonde profile, where there is one), -1 their mean.
  */
-export function horizonZenith(place, date, fromHeight = false) {
-    const elevation = place.elevation ?? 0;
-    const dip = fromHeight ? horizonDip(elevation) : 0;
-    const r = horizonRefraction(place, date, -dip);
-    return GEOMETRIC_ZENITH + SOLAR_RADIUS + dip + r / 60;
+export function horizonZenith(place, date, fromHeight = false, hour = -1) {
+    if (fromHeight && (place.elevation ?? 0) > 0) {
+        const { dip, refraction } = tracedDipAndRefraction(airOf(place, date), hour);
+        return GEOMETRIC_ZENITH + SOLAR_RADIUS + dip + refraction / 60;
+    }
+    return GEOMETRIC_ZENITH + SOLAR_RADIUS + horizonRefraction(place, date, 0, hour) / 60;
 }
 /** Jerusalem latitude for the equinox conversions: Har HaBayit (the Temple Mount, Old City), 31.778 N. */
 export const JERUSALEM_LAT = 31.778;
@@ -299,8 +303,9 @@ class Day {
     event(zenith, kind) {
         return this.memo(`${kind}:${zenith}`, () => sunEventMs(this.place.lat, this.place.lng, this.lmtMidnight, zenith, kind));
     }
-    horizon(fromHeight) {
-        return this.memo(fromHeight ? 'hh' : 'h', () => horizonZenith(this.place, this.date, fromHeight));
+    horizon(fromHeight, kind) {
+        const hour = kind < 0 ? 0 : 12;
+        return this.memo(`${fromHeight ? 'hh' : 'h'}${kind}`, () => horizonZenith(this.place, this.date, fromHeight, hour));
     }
     /**
      * Zenith of a sun [depression] degrees below the apparent (refracted) sea-level horizon rather than the geometric
@@ -314,8 +319,8 @@ class Day {
     }
     rise(zenith) { return this.event(zenith, -1); }
     set(zenith) { return this.event(zenith, 1); }
-    sunrise(fromHeight = false) { return this.rise(this.horizon(fromHeight)); }
-    sunset(fromHeight = false) { return this.set(this.horizon(fromHeight)); }
+    sunrise(fromHeight = false) { return this.rise(this.horizon(fromHeight, -1)); }
+    sunset(fromHeight = false) { return this.set(this.horizon(fromHeight, 1)); }
     get chatzot() { return this.event(0, 0); }
     /** 12:00 local mean time (longitude / 15 hours from UTC) of this day. */
     get chatzotFixed() { return this.lmtMidnight + DAY_MS / 2 - this.place.lng * 240000; }
@@ -335,7 +340,7 @@ class Day {
                 const a = terrainAltitude(profile, azimuth);
                 if (Number.isNaN(a))
                     return NaN;
-                const zenith = GEOMETRIC_ZENITH - a + horizonRefraction(this.place, this.date, a) / 60 + SOLAR_RADIUS;
+                const zenith = GEOMETRIC_ZENITH - a + horizonRefraction(this.place, this.date, a, kind < 0 ? 0 : 12) / 60 + SOLAR_RADIUS;
                 const next = this.event(zenith, kind);
                 const done = Math.abs(next - t) < 1000;
                 t = next;

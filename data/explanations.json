@@ -52,7 +52,7 @@
       "sources": [
         "פסחים צד ע״א",
         "שו״ע או״ח תנט, ב; משנה ברורה תנט, טו",
-        "חישוב אסטרונומי: שבירת האור באופק לפי לחץ האוויר והטמפרטורה של המקום (Meeus, Astronomical Algorithms, פרק 16)",
+        "חישוב אסטרונומי: שבירת האור באופק לפי לחץ האוויר והטמפרטורה של המקום (Hohenkerk & Sinclair 1985; Auer & Standish 2000; Keller & Hall 2022)",
         "בירור זמנים ח״א עמ׳ 66 (90 דקות הן כ־19.75 מעלות)",
         "בין השמשות (ר׳ י״מ טוקצינסקי) עמ׳ 105 (עלות השחר שעה וחצי לפני הנץ)"
       ]
@@ -63,7 +63,7 @@
       "sources": [
         "Pesachim 94a",
         "Shulchan Aruch OC 459:2; Mishna Berura 459:15",
-        "Astronomy: horizon refraction from the place's air pressure and temperature (Meeus, Astronomical Algorithms, ch. 16)",
+        "Astronomy: horizon refraction ray-traced through a layered model atmosphere (Hohenkerk & Sinclair 1985; Auer & Standish 2000)",
         "Birur Zmanim vol 1 p.66 (90 min is about 19.75 deg)",
         "Bein Hashmashot (R. Y. M. Tukachinsky) p.105 (dawn an hour and a half before sunrise)"
       ]
@@ -122,7 +122,7 @@
       "sources": [
         "פסחים צד ע״א",
         "שו״ע או״ח פט, א",
-        "חישוב אסטרונומי: שבירת האור באופק לפי לחץ האוויר והטמפרטורה של המקום (Meeus, Astronomical Algorithms, פרק 16)",
+        "חישוב אסטרונומי: שבירת האור באופק לפי לחץ האוויר והטמפרטורה של המקום (Hohenkerk & Sinclair 1985; Auer & Standish 2000; Keller & Hall 2022)",
         "בירור זמנים ח״א עמ׳ 66 (72 דקות בארץ ישראל בשוויון הן כ־16 מעלות)"
       ]
     },
@@ -132,7 +132,7 @@
       "sources": [
         "Pesachim 94a",
         "Shulchan Aruch OC 89:1",
-        "Astronomy: horizon refraction from the place's air pressure and temperature (Meeus, Astronomical Algorithms, ch. 16)",
+        "Astronomy: horizon refraction ray-traced through a layered model atmosphere (Hohenkerk & Sinclair 1985; Auer & Standish 2000)",
         "Birur Zmanim vol 1 p.66 (72 min in Eretz Yisrael at the equinox is about 16 deg)"
       ]
     }
@@ -184,7 +184,7 @@
       "sources": [
         "ברכות ט ע״ב",
         "שו״ע או״ח יח, ג",
-        "חישוב אסטרונומי: שבירת האור באופק (Meeus, Astronomical Algorithms, פרק 16)"
+        "חישוב אסטרונומי: שבירת האור באופק (Hohenkerk & Sinclair 1985; Auer & Standish 2000; Keller & Hall 2022)"
       ]
     },
     "en": {
@@ -193,7 +193,7 @@
       "sources": [
         "Berachot 9b",
         "Shulchan Aruch OC 18:3",
-        "Astronomy: horizon refraction (Meeus, Astronomical Algorithms, ch. 16)"
+        "Astronomy: horizon refraction (ray tracing: Hohenkerk & Sinclair 1985; Auer & Standish 2000; Keller & Hall 2022)"
       ]
     }
   },
@@ -284,7 +284,7 @@
       "sources": [
         "שו״ע או״ח נח, א (ותיקין: מסיימים קריאת שמע עם הנץ החמה)",
         "שו״ע או״ח פט, א (תפילת השחר מצותה עם הנץ החמה)",
-        "חישוב אסטרונומי: שקיעת האופק arccos(R/(R+h)) ושבירת האור (Meeus, Astronomical Algorithms, פרק 16)",
+        "חישוב אסטרונומי: שקיעת האופק arccos(R/(R+h)) ושבירת האור (Hohenkerk & Sinclair 1985; Auer & Standish 2000; Keller & Hall 2022)",
         "בין השמשות (ר׳ י״מ טוקצינסקי) עמ׳ 105 (בהר הכרמל הזריחה פחות מ־3 דקות קודם והשקיעה 2-3 דקות אחר כך)"
       ]
     },
@@ -294,7 +294,7 @@
       "sources": [
         "Shulchan Aruch OC 58:1 (the vasikin finish Shema at sunrise)",
         "Shulchan Aruch OC 89:1 (the morning prayer is ideally at sunrise)",
-        "Astronomy: horizon dip arccos(R/(R+h)) and refraction (Meeus, Astronomical Algorithms, ch. 16)",
+        "Astronomy: horizon dip and refraction traced through a layered atmosphere (Keller & Hall 2022)",
         "Bein Hashmashot (R. Y. M. Tukachinsky) p.105 (on Mount Carmel sunrise under 3 min earlier, sunset 2-3 min later)"
       ]
     }
@@ -307,7 +307,7 @@
         "ברכות ט ע״ב (ותיקין)",
         "שו״ע או״ח נח, א (ותיקין: מסיימים קריאת שמע עם הנץ החמה וסומכים לה התפילה)",
         "שו״ע או״ח פט, א (מצותה שיתחיל עם הנץ החמה)",
-        "חישוב אסטרונומי: קצה השמש העליון באופק, עם שבירת האור לפי לחץ וטמפרטורה (Meeus, Astronomical Algorithms, פרקים 15-16)"
+        "חישוב אסטרונומי: קצה השמש העליון באופק, עם שבירת האור לפי לחץ וטמפרטורה (Hohenkerk & Sinclair 1985; Auer & Standish 2000; Keller & Hall 2022)"
       ]
     },
     "en": {
@@ -317,7 +317,7 @@
         "Berachot 9b (vasikin)",
         "Shulchan Aruch OC 58:1 (the vasikin finish Shema at sunrise and pray right after)",
         "Shulchan Aruch OC 89:1 (ideally the prayer starts at sunrise)",
-        "Astronomy: the upper limb of the sun on the horizon, with refraction from pressure and temperature (Meeus, Astronomical Algorithms, ch. 15-16)"
+        "Astronomy: the upper limb of the sun on the horizon, with ray-traced refraction (Hohenkerk & Sinclair 1985; Keller & Hall 2022)"
       ]
     }
   },
@@ -328,7 +328,7 @@
       "sources": [
         "שו״ע או״ח נח, א (ותיקין: מסיימים קריאת שמע עם הנץ החמה)",
         "שו״ע או״ח פט, א (תפילת השחר מצותה עם הנץ החמה)",
-        "חישוב: מפת הגבהים Copernicus DEM GLO-90, שבירת אור (Meeus, Astronomical Algorithms, פרק 16), מקדם שבירה ארצית 0.13"
+        "חישוב: מפת הגבהים Copernicus DEM GLO-90, שבירת אור (Hohenkerk & Sinclair 1985; Auer & Standish 2000; Keller & Hall 2022), מקדם שבירה ארצית 0.13"
       ]
     },
     "en": {
@@ -337,7 +337,7 @@
       "sources": [
         "Shulchan Aruch OC 58:1 (the vasikin finish Shema at sunrise)",
         "Shulchan Aruch OC 89:1 (the morning prayer is ideally at sunrise)",
-        "Calculation: Copernicus DEM GLO-90 elevation model, refraction (Meeus, Astronomical Algorithms, ch. 16), terrestrial refraction coefficient 0.13"
+        "Calculation: Copernicus DEM GLO-90 elevation model, refraction (ray tracing: Hohenkerk & Sinclair 1985; Auer & Standish 2000; Keller & Hall 2022), terrestrial refraction coefficient 0.13"
       ]
     }
   },
@@ -620,7 +620,7 @@
       "sources": [
         "שבת לד ע״ב - לה ע״א (שקיעת החמה ובין השמשות)",
         "שו״ע או״ח רסא, א-ב",
-        "חישוב: מפת הגבהים Copernicus DEM GLO-90, שבירת אור (Meeus, Astronomical Algorithms, פרק 16), מקדם שבירה ארצית 0.13"
+        "חישוב: מפת הגבהים Copernicus DEM GLO-90, שבירת אור (Hohenkerk & Sinclair 1985; Auer & Standish 2000; Keller & Hall 2022), מקדם שבירה ארצית 0.13"
       ]
     },
     "en": {
@@ -629,7 +629,7 @@
       "sources": [
         "Shabbat 34b-35a (sunset and bein hashmashot)",
         "Shulchan Aruch OC 261:1-2",
-        "Calculation: Copernicus DEM GLO-90 elevation model, refraction (Meeus, Astronomical Algorithms, ch. 16), terrestrial refraction coefficient 0.13"
+        "Calculation: Copernicus DEM GLO-90 elevation model, refraction (ray tracing: Hohenkerk & Sinclair 1985; Auer & Standish 2000; Keller & Hall 2022), terrestrial refraction coefficient 0.13"
       ]
     }
   },
@@ -641,7 +641,7 @@
         "שבת לד ע״ב (משתשקע החמה)",
         "שו״ע או״ח רסא, ב (תוספת שבת מתחלת השקיעה)",
         "ביאור הגר״א או״ח רסא, ב (בין השמשות מתחיל תיכף בשקיעת החמה)",
-        "חישוב אסטרונומי: קצה השמש העליון באופק, עם שבירת האור (Meeus, Astronomical Algorithms, פרקים 15-16)"
+        "חישוב אסטרונומי: קצה השמש העליון באופק, עם שבירת האור (Hohenkerk & Sinclair 1985; Auer & Standish 2000; Keller & Hall 2022)"
       ]
     },
     "en": {
@@ -651,7 +651,7 @@
         "Shabbat 34b (from when the sun sets)",
         "Shulchan Aruch OC 261:2 (adding to Shabbos from the start of sunset)",
         "Biur HaGra OC 261:2 (twilight begins right at sunset)",
-        "Astronomy: the upper limb of the sun on the horizon, with refraction (Meeus, Astronomical Algorithms, ch. 15-16)"
+        "Astronomy: the upper limb of the sun on the horizon, with refraction (ray tracing: Hohenkerk & Sinclair 1985; Keller & Hall 2022)"
       ]
     }
   },
@@ -662,7 +662,7 @@
       "sources": [
         "שבת לד ע״ב",
         "שו״ע או״ח רסא, ב",
-        "חישוב אסטרונומי: שקיעת האופק arccos(R/(R+h)) ושבירת האור (Meeus, Astronomical Algorithms, פרק 16)",
+        "חישוב אסטרונומי: שקיעת האופק arccos(R/(R+h)) ושבירת האור (Hohenkerk & Sinclair 1985; Auer & Standish 2000; Keller & Hall 2022)",
         "בין השמשות (ר׳ י״מ טוקצינסקי) עמ׳ 105 (בהר הכרמל הזריחה פחות מ־3 דקות קודם והשקיעה 2-3 דקות אחר כך)"
       ]
     },
@@ -672,7 +672,7 @@
       "sources": [
         "Shabbat 34b",
         "Shulchan Aruch OC 261:2",
-        "Astronomy: horizon dip arccos(R/(R+h)) and refraction (Meeus, Astronomical Algorithms, ch. 16)",
+        "Astronomy: horizon dip and refraction traced through a layered atmosphere (Keller & Hall 2022)",
         "Bein Hashmashot (R. Y. M. Tukachinsky) p.105 (on Mount Carmel sunrise under 3 min earlier, sunset 2-3 min later)"
       ]
     }
@@ -710,7 +710,7 @@
       "sources": [
         "שבת לד ע״ב",
         "שו״ע או״ח רסא, ב",
-        "חישוב אסטרונומי: שבירת האור באופק (Meeus, Astronomical Algorithms, פרק 16)"
+        "חישוב אסטרונומי: שבירת האור באופק (Hohenkerk & Sinclair 1985; Auer & Standish 2000; Keller & Hall 2022)"
       ]
     },
     "en": {
@@ -719,7 +719,7 @@
       "sources": [
         "Shabbat 34b",
         "Shulchan Aruch OC 261:2",
-        "Astronomy: horizon refraction (Meeus, Astronomical Algorithms, ch. 16)"
+        "Astronomy: horizon refraction (ray tracing: Hohenkerk & Sinclair 1985; Auer & Standish 2000; Keller & Hall 2022)"
       ]
     }
   },
@@ -771,7 +771,7 @@
       "text": "כמו צאת הכוכבים (8.5 מעלות), אלא שהמעלות נמדדות מהאופק הנראה לעין. יוצא כ־2 עד 4 דקות מאוחר יותר.",
       "sources": [
         "שבת לה ע״ב",
-        "חישוב אסטרונומי: שבירת האור באופק (Meeus, Astronomical Algorithms, פרק 16)"
+        "חישוב אסטרונומי: שבירת האור באופק (Hohenkerk & Sinclair 1985; Auer & Standish 2000; Keller & Hall 2022)"
       ]
     },
     "en": {
@@ -779,7 +779,7 @@
       "text": "Like nightfall (8.5 degrees), but the degrees are measured from the visible horizon. It comes out about 2 to 4 minutes later.",
       "sources": [
         "Shabbat 35b",
-        "Astronomy: horizon refraction (Meeus, Astronomical Algorithms, ch. 16)"
+        "Astronomy: horizon refraction (ray tracing: Hohenkerk & Sinclair 1985; Auer & Standish 2000; Keller & Hall 2022)"
       ]
     }
   },

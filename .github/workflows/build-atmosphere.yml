@@ -8,9 +8,6 @@ on:
       branch:
         description: Branch to build for and commit to
         default: master
-  push:
-    branches: [refraction]
-    paths: [.github/workflows/build-atmosphere.yml, scripts/build-atmosphere.mjs]
 permissions:
   contents: write
 jobs:
@@ -20,7 +17,7 @@ jobs:
     steps:
       - uses: actions/checkout@v4
         with:
-          ref: ${{ inputs.branch || github.ref_name }}
+          ref: ${{ inputs.branch }}
       - uses: actions/setup-node@v4
         with:
           node-version: 22

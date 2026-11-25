@@ -27,7 +27,7 @@ Not cited here, and not Birur Zmanim (earlier notes had them as copies of part 1
 | `TZEIT_645`: tzeit645, plagAlot72Tzeit645 | Bein Hashmashot, pp.50, 67, 72 | three medium stars in Jerusalem about 22-28 minutes after sunset by season, average 25 |
 | `BH_YEREIM`: beinHashmashotYereim | Bein Hashmashot, p.33; Birur Zmanim 2, pp.228-231 | the Yereim puts bein hashmashot before sunset; some were strict for it |
 | sunriseElevated, sunsetElevated | Bein Hashmashot, p.105 | on Mount Carmel sunrise is under 3 minutes earlier and sunset 2-3 minutes later |
-| `DIP_ARCMIN_PER_SQRT_M` (1.76'): horizon dip of sunriseElevated, sunsetElevated | Nautical Almanac dip table; Bowditch, The American Practical Navigator (Pub. 9), dip D = 1.76' sqrt(h m); A. T. Young, "Dip of the horizon" (aty.sdsu.edu/explain/atmos_refr/dip.html) | the visible horizon's dip includes terrestrial refraction; the geometric arccos(R/(R+h)) = 1.93' sqrt(h) is too large and put the elevated sunset about 0.45 min late at 750 m |
+| `DIP_ARCMIN_PER_SQRT_M` (1.76'): reference check for the traced dip of sunriseElevated, sunsetElevated | Nautical Almanac dip table; Bowditch, The American Practical Navigator (Pub. 9), dip D = 1.76' sqrt(h m); A. T. Young, "Dip of the horizon" (aty.sdsu.edu/explain/atmos_refr/dip.html) | the visible horizon's dip includes terrestrial refraction; the geometric arccos(R/(R+h)) = 1.93' sqrt(h) is too large and put the elevated sunset about 0.45 min late at 750 m |
 | tzeit40 | Birur Zmanim 2, p.18 | Chazon Ish: Yom Kippur ends 40 minutes after sunset, Shabbat 45, a brit 35 |
 | tzeit45 | Birur Zmanim 2, p.18 | a Chazon Ish letter: his 45 minutes at the end of Shabbat include Rabbeinu Tam (via R. D. Frankel) |
 | misheyakir66, misheyakir60, misheyakir40 | OU Kosher Halacha Yomis, outorah.org/p/78963 | 66 min: Pri Megadim, Eshel Avraham 58:2; about an hour: Rav Henkin (Ezras Torah luach, Teshuvot Ivra 3); 40 min: Rav Chaim Kanievsky (Igrot Moshe OC 4:6: 35-40) |
@@ -50,3 +50,20 @@ these books do not support those attributions.
 Dr. Cohn's letter in Melamed LeHo'il is signed from Rawitsch; he later worked at the Strasbourg observatory, where his
 1899 tables ("Tabellen enthaltend die Zeitangaben fuer den Beginn der Nacht und des Tages") appeared. The siman does not
 name those tables or a Strasbourg custom; the tables themselves were not seen.
+
+## Horizon refraction (all sunrise/sunset lines)
+
+Ray-traced through a layered model atmosphere (src/atmosphere.ts, src/horizon.ts). Written independently from:
+
+- C. Y. Hohenkerk & A. T. Sinclair, The computation of angular atmospheric refraction at large zenith angles, HM
+  Nautical Almanac Office, NAO Technical Note 63 (1985); P. K. Seidelmann (ed.), Explanatory Supplement to the
+  Astronomical Almanac (1992), sec. 3.28 - the refraction integral in zenith angle and the optical refractive index.
+- L. H. Auer & E. M. Standish, Astronomical refraction: computational method for all zenith angles, Astronomical
+  Journal 119 (2000) 2472-2474 - rays below the horizon (tangent point).
+- J. Keller & A. Hall, Computers & Geosciences 161 (2022) 105044 (open access) - sunrise/sunset from elevations,
+  observer height, negative apparent altitudes, dip with terrestrial refraction.
+- U.S. Standard Atmosphere 1976 (NOAA/NASA/USAF); G. P. Anderson et al., AFGL atmospheric constituent profiles
+  (0-120 km), AFGL-TR-86-0110 (1986).
+- NOAA NCEI Integrated Global Radiosonde Archive v2 (I. Durre et al. 2016, doi:10.7289/V5X63K0Q), station
+  ISM00040179 Bet Dagan, 1995-2024 (scripts/build-atmosphere.mjs).
+- Magnus formula for saturation vapour pressure: WMO-No. 8 (Guide to Instruments and Methods of Observation), annex 4.B.
