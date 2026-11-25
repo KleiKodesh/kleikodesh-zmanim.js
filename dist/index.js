@@ -8,7 +8,7 @@ export const DISCLAIMER = {
     en: 'Times are approximate and may be slightly inaccurate.',
     he: 'הזמנים משוערים ועשויים להיות לא מדויקים מעט.',
 };
-export { CLIMATE_RECORD_SIZE, configure, getAtmospheres, getMonthlyTemperatures, getPlace, getTerrainHorizon, HORIZON_CHUNK, listPlaces, nearestPlaceId, placeCount, RECORD_SIZE, searchPlaces, toCivilDate, zmanim } from './places.js';
+export { CLIMATE_MINMAX_RECORD_SIZE, CLIMATE_RECORD_SIZE, CLIMATE_SUNEVENT_RECORD_SIZE, configure, getAtmospheres, getMonthlyMinMaxTemperatures, getMonthlySunEventTemperatures, getMonthlyTemperatures, getPlace, getTerrainHorizon, HORIZON_CHUNK, listPlaces, nearestPlaceId, placeCount, RECORD_SIZE, searchPlaces, toCivilDate, zmanim } from './places.js';
 export { GEO_RECORD_SIZE, listPlaceGeo, placeTree } from './geo.js';
 export { computeZmanim, HORIZON_ZMANIM, horizonDip, equinoxDepression, JERUSALEM_LAT, NO_TERRAIN, TERRAIN_BINS, TERRAIN_ZMANIM, terrainAltitude, horizonZenith, sunEventMs, epochMs, formatTime, ROUNDING, ZMAN_NAMES, zmanInstants } from './zmanim.js';
 export { horizonRefractionArcmin, refractionArcmin, standardPressure, standardTemperature } from './refraction.js';

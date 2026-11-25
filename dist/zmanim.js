@@ -96,15 +96,30 @@ const SOLAR_RADIUS = 16 / 60;
 /** Mean Earth radius, meters. */
 /** Dip of the horizon with standard terrestrial refraction, arcminutes per sqrt(meter) (Nautical Almanac / Bowditch). */
 const DIP_ARCMIN_PER_SQRT_M = 1.76;
-/** What the refraction tracer needs of [place] on [date]; temperature NaN ('standard' or unknown) keeps the profile's own. */
-function airOf(place, date) {
+/**
+ * What the refraction tracer needs of [place] on [date]; temperature NaN ('standard' or unknown) keeps the profile's own.
+ * [hour] 0 (sunrise side) uses the mean temperature at sunrise, 12 (sunset side) the mean at sunset; each falls back to
+ * the mean daily minimum / maximum, then to the mean; -1 the mean. 'standard' stays standard on both sides.
+ */
+function airOf(place, date, hour = -1) {
     const m = place.monthlyTemperatureC;
-    const t = Array.isArray(m) ? temperatureOn(m, date.month, date.day) : NaN;
-    return { table: place.atmospheres, lat: place.lat, lng: place.lng, height: place.elevation ?? 0, month: date.month, day: date.day, temperatureC: t };
+    let t = Array.isArray(m) ? temperatureOn(m, date.month, date.day) : NaN;
+    const sides = m === 'standard' ? [] : hour === 0 ? [place.monthlySunriseTemperatureC, place.monthlyMinTemperatureC]
+        : hour === 12 ? [place.monthlySunsetTemperatureC, place.monthlyMaxTemperatureC] : [];
+    let diurnal = false;
+    for (const side of sides) {
+        const v = side ? temperatureOn(side, date.month, date.day) : NaN;
+        if (!Number.isNaN(v)) {
+            t = v;
+            diurnal = true;
+            break;
+        }
+    }
+    return { table: place.atmospheres, lat: place.lat, lng: place.lng, height: place.elevation ?? 0, month: date.month, day: date.day, temperatureC: t, diurnal };
 }
 /** Ray-traced horizon refraction (arcmin) at [apparent] degrees for [place] on [date]; [hour] 0 sunrise, 12 sunset, -1 mean. */
 function horizonRefraction(place, date, apparent = 0, hour = -1) {
-    return tracedRefraction(airOf(place, date), apparent, hour);
+    return tracedRefraction(airOf(place, date, hour), apparent, hour);
 }
 /**
  * Reference only (the zmanim trace the dip in the model atmosphere, see horizonZenith): the navigators' dip of the
@@ -126,7 +141,7 @@ export function horizonDip(elevation) {
  */
 export function horizonZenith(place, date, fromHeight = false, hour = -1) {
     if (fromHeight && (place.elevation ?? 0) > 0) {
-        const { dip, refraction } = tracedDipAndRefraction(airOf(place, date), hour);
+        const { dip, refraction } = tracedDipAndRefraction(airOf(place, date, hour), hour);
         return GEOMETRIC_ZENITH + SOLAR_RADIUS + dip + refraction / 60;
     }
     return GEOMETRIC_ZENITH + SOLAR_RADIUS + horizonRefraction(place, date, 0, hour) / 60;

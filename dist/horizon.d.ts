@@ -12,8 +12,14 @@ export interface HorizonAir {
     height: number;
     month: number;
     day: number;
-    /** The place's mean air temperature (C) for the day; NaN = use the profile as it is. */
+    /** The place's air temperature (C) for the day; NaN = use the profile as it is. */
     temperatureC: number;
+    /**
+     * true: temperatureC belongs to the event's hour (the mean at sunrise/sunset, or the day's minimum/maximum), so the
+     * anomaly is measured from the traced profile's own temperature; false/missing: it is the daily mean, measured from
+     * the profile's daily mean.
+     */
+    diurnal?: boolean;
 }
 /** Ray-traced refraction (arcmin) at apparent altitude [apparent] deg; [hour] 0 sunrise, 12 sunset, -1 both. */
 export declare function tracedRefraction(air: HorizonAir, apparent: number, hour: 0 | 12 | -1): number;

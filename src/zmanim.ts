@@ -110,9 +110,16 @@ export interface Coordinates {
    */
   monthlyTemperatureC?: readonly number[] | 'standard'
   /**
-   * 12 monthly means of the daily MINIMUM air temperature in C (NaN = unknown), as getPlace() attaches them: sunrise
-   * comes near the coldest hour, so the sunrise-side horizon lines (sunrise level, elevated and terrain) refract through
-   * these. Missing or NaN: monthlyTemperatureC.
+   * 12 monthly mean air temperatures AT sunrise in C (NaN = unknown), as getPlace() attaches them: the sunrise-side
+   * horizon lines (sunrise level, elevated and terrain) refract through the air of that moment. Missing or NaN:
+   * monthlyMinTemperatureC, then monthlyTemperatureC.
+   */
+  monthlySunriseTemperatureC?: readonly number[]
+  /** As monthlySunriseTemperatureC, AT sunset: the sunset-side horizon lines; fallback monthlyMaxTemperatureC. */
+  monthlySunsetTemperatureC?: readonly number[]
+  /**
+   * 12 monthly means of the daily MINIMUM air temperature in C (NaN = unknown): the sunrise-side fallback where the
+   * sunrise temperature is unknown (sunrise comes shortly after the coldest hour). Missing or NaN: monthlyTemperatureC.
    */
   monthlyMinTemperatureC?: readonly number[]
   /** As monthlyMinTemperatureC, the daily MAXIMUM: used for the sunset-side horizon lines. */
@@ -139,17 +146,18 @@ const DIP_ARCMIN_PER_SQRT_M = 1.76
 
 /**
  * What the refraction tracer needs of [place] on [date]; temperature NaN ('standard' or unknown) keeps the profile's own.
- * [hour] 0 (sunrise side) uses the mean daily minimum, 12 (sunset side) the mean daily maximum, each falling back to
- * the mean; -1 the mean. 'standard' stays standard on both sides.
+ * [hour] 0 (sunrise side) uses the mean temperature at sunrise, 12 (sunset side) the mean at sunset; each falls back to
+ * the mean daily minimum / maximum, then to the mean; -1 the mean. 'standard' stays standard on both sides.
  */
 function airOf(place: Coordinates, date: CivilDate, hour: 0 | 12 | -1 = -1): HorizonAir {
   const m = place.monthlyTemperatureC
   let t = Array.isArray(m) ? temperatureOn(m as readonly number[], date.month, date.day) : NaN
-  const side = m === 'standard' ? undefined : hour === 0 ? place.monthlyMinTemperatureC : hour === 12 ? place.monthlyMaxTemperatureC : undefined
+  const sides = m === 'standard' ? [] : hour === 0 ? [place.monthlySunriseTemperatureC, place.monthlyMinTemperatureC]
+    : hour === 12 ? [place.monthlySunsetTemperatureC, place.monthlyMaxTemperatureC] : []
   let diurnal = false
-  if (side) {
-    const v = temperatureOn(side, date.month, date.day)
-    if (!Number.isNaN(v)) { t = v; diurnal = true }
+  for (const side of sides) {
+    const v = side ? temperatureOn(side, date.month, date.day) : NaN
+    if (!Number.isNaN(v)) { t = v; diurnal = true; break }
   }
   return { table: place.atmospheres, lat: place.lat, lng: place.lng, height: place.elevation ?? 0, month: date.month, day: date.day, temperatureC: t, diurnal }
 }

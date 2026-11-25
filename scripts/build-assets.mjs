@@ -61,5 +61,14 @@ for (const line of readFileSync('data/climate-minmax.tsv', 'utf8').trim().split(
   values.forEach((v, k) => { if (v !== '' && v !== undefined && k < 24) minMax[Number(id) * 24 + k] = Math.max(-127, Math.min(127, Math.round(Number(v)))) })
 }
 writeFileSync('assets/climate-minmax.bin', minMax)
+
+// climate-sunevent.bin: per id at offset id*24, 12 int8 monthly mean temperatures at sunrise then 12 at sunset, in
+// half degrees C; -128 = unknown (data/climate-sunevent.tsv, scripts/fetch-climate-sunevent.mjs).
+const sunEvent = new Int8Array((maxId + 1) * 24).fill(-128)
+if (existsSync('data/climate-sunevent.tsv')) for (const line of readFileSync('data/climate-sunevent.tsv', 'utf8').trim().split(/\r?\n/).slice(1)) {
+  const [id, ...values] = line.split('\t')
+  values.forEach((v, k) => { if (v !== '' && v !== undefined && k < 24) sunEvent[Number(id) * 24 + k] = Math.max(-127, Math.min(127, Math.round(Number(v) * 2))) })
+}
+writeFileSync('assets/climate-sunevent.bin', sunEvent)
 writeFileSync('assets/tz.json', JSON.stringify({ ids: zones, rawOffsetMinutes: zones.map(rawOffsetMinutes) }))
 console.log(`${rows.length} places, ${zones.length} zones`)

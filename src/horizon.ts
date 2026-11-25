@@ -7,10 +7,14 @@
 //   equator, midlatitude summer/winter to 52 deg, subarctic summer/winter beyond, blended over the year by season.
 // - Without the profile table (bare coordinates): the U.S. Standard Atmosphere 1976.
 // The profile is moved to the place's own climate: the anomaly T_place - T_profile at the observer's height is
-// applied at the ground and tapered off over the boundary layer (atmosphere.ts). T_place is the monthly mean daily
-// minimum for sunrise (near the coldest hour) and the mean daily maximum for sunset, measured against the profile
-// actually traced (Bet Dagan 00 / 12 UTC, or the daily-mean AFGL profile); where those are unknown, the monthly mean
-// against the profile's daily mean. Deep-angle lines do not use any of this (they are geometric).
+// applied at the ground and tapered off over the boundary layer (atmosphere.ts). T_place is the monthly mean 2 m
+// temperature AT sunrise for sunrise and AT sunset for sunset (else the mean daily minimum / maximum), measured against
+// the profile actually traced (Bet Dagan 00 / 12 UTC, or the daily-mean AFGL profile) at the observer's height, so the
+// surface air is that of the event's hour while the air aloft (where the diurnal cycle is small) stays the profile's.
+// Bet Dagan 00 UTC (02-03 local) is 2.5-4.8 h before sunrise, 12 UTC (14-15 local) 2.5-5 h before sunset. The record
+// also has 06/18 UTC launches, but few complete ones (about 100 a month at 06 UTC, 0-100 at 18 UTC, 1995-2010), too
+// uneven for event-hour profiles. Where unknown, the monthly mean against the profile's daily mean. Deep-angle lines
+// do not use any of this (they are geometric).
 import { Atmosphere, levelAt, usStandard1976, type Level } from './atmosphere.js'
 
 /** Parsed assets/atmosphere.bin: AFGL t, ms, mw, ss, sw, then Bet Dagan month 1..12 x {00, 12 UTC}. */
@@ -100,8 +104,9 @@ export interface HorizonAir {
   /** The place's air temperature (C) for the day; NaN = use the profile as it is. */
   temperatureC: number
   /**
-   * true: temperatureC is the day's minimum (sunrise) or maximum (sunset), so the anomaly is measured from the traced
-   * profile's own temperature; false/missing: it is the daily mean, measured from the profile's daily mean.
+   * true: temperatureC belongs to the event's hour (the mean at sunrise/sunset, or the day's minimum/maximum), so the
+   * anomaly is measured from the traced profile's own temperature; false/missing: it is the daily mean, measured from
+   * the profile's daily mean.
    */
   diurnal?: boolean
 }

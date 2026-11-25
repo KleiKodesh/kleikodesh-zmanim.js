@@ -26,6 +26,8 @@ export function configure(options) {
     bin = null;
     tz = null;
     climate = null;
+    climateMinMax = null;
+    climateSunEvent = null;
     horizon.clear();
     atmospheres = null;
     placeCache.clear();
@@ -35,6 +37,8 @@ const names = new Map();
 let bin = null;
 let tz = null;
 let climate = null;
+let climateMinMax = null;
+let climateSunEvent = null;
 const horizon = new Map();
 let atmospheres = null;
 const placeCache = new Map();
@@ -47,6 +51,27 @@ function climateTable() {
         climate.catch(() => { climate = null; });
     }
     return climate;
+}
+/** Bytes per record in climate-minmax.bin: 12 monthly mean daily minima then 12 maxima, int8 C; -128 = unknown. */
+export const CLIMATE_MINMAX_RECORD_SIZE = 24;
+function climateMinMaxTable() {
+    if (!climateMinMax) {
+        // Optional asset: without it the horizon lines fall back to the monthly mean.
+        climateMinMax = loader('climate-minmax.bin').then((buffer) => new Int8Array(buffer), () => null);
+    }
+    return climateMinMax;
+}
+/**
+ * Bytes per record in climate-sunevent.bin: 12 monthly mean temperatures at sunrise then 12 at sunset, int8 in
+ * half degrees C (value / 2); -128 = unknown.
+ */
+export const CLIMATE_SUNEVENT_RECORD_SIZE = 24;
+function climateSunEventTable() {
+    if (!climateSunEvent) {
+        // Optional asset: without it the horizon lines fall back to the daily minimum/maximum, then the mean.
+        climateSunEvent = loader('climate-sunevent.bin').then((buffer) => new Int8Array(buffer), () => null);
+    }
+    return climateSunEvent;
 }
 /** Places per horizon chunk file (assets/horizon-NN.bin, NN = id / HORIZON_CHUNK). */
 export const HORIZON_CHUNK = 64;
@@ -79,6 +104,30 @@ export async function getMonthlyTemperatures(id) {
     if (o + CLIMATE_RECORD_SIZE > t.length)
         return new Array(12).fill(NaN);
     return Array.from(t.subarray(o, o + CLIMATE_RECORD_SIZE), (v) => (v === NO_TEMPERATURE ? NaN : v));
+}
+/**
+ * A place's 12 monthly means of the daily minimum and of the daily maximum temperature (C; NaN where unknown).
+ * Loads climate-minmax.bin once; all NaN when it is missing.
+ */
+export async function getMonthlyMinMaxTemperatures(id) {
+    const t = await climateMinMaxTable();
+    const o = id * CLIMATE_MINMAX_RECORD_SIZE;
+    if (!t || o + CLIMATE_MINMAX_RECORD_SIZE > t.length)
+        return { min: new Array(12).fill(NaN), max: new Array(12).fill(NaN) };
+    const v = Array.from(t.subarray(o, o + CLIMATE_MINMAX_RECORD_SIZE), (x) => (x === NO_TEMPERATURE ? NaN : x));
+    return { min: v.slice(0, 12), max: v.slice(12) };
+}
+/**
+ * A place's 12 monthly mean temperatures at sunrise and at sunset (C, half-degree steps; NaN where unknown).
+ * Loads climate-sunevent.bin once; all NaN when it is missing.
+ */
+export async function getMonthlySunEventTemperatures(id) {
+    const t = await climateSunEventTable();
+    const o = id * CLIMATE_SUNEVENT_RECORD_SIZE;
+    if (!t || o + CLIMATE_SUNEVENT_RECORD_SIZE > t.length)
+        return { sunrise: new Array(12).fill(NaN), sunset: new Array(12).fill(NaN) };
+    const v = Array.from(t.subarray(o, o + CLIMATE_SUNEVENT_RECORD_SIZE), (x) => (x === NO_TEMPERATURE ? NaN : x / 2));
+    return { sunrise: v.slice(0, 12), sunset: v.slice(12) };
 }
 /** The model atmospheres for ray-traced horizon refraction (atmosphere.bin, 25 KB), loaded once on first need. */
 export function getAtmospheres() {
@@ -166,7 +215,9 @@ export async function getPlace(id) {
     const cached = placeCache.get(id);
     if (cached)
         return cached;
-    const [view, zoneTable, temps] = await Promise.all([table(), zones(), getMonthlyTemperatures(id)]);
+    const [view, zoneTable, temps, sun] = await Promise.all([table(), zones(), getMonthlyTemperatures(id), getMonthlySunEventTemperatures(id)]);
+    // Fallback chain: temperature at sunrise/sunset -> daily minimum/maximum -> mean; min/max loaded only when needed.
+    const minMax = [...sun.sunrise, ...sun.sunset].some(Number.isNaN) ? await getMonthlyMinMaxTemperatures(id) : null;
     const offset = id * RECORD_SIZE;
     if (!Number.isInteger(id) || id < 1 || offset + RECORD_SIZE > view.byteLength)
         throw new RangeError(`No place with id ${id}`);
@@ -179,6 +230,9 @@ export async function getPlace(id) {
         tzid: zoneTable.ids[zone],
         rawOffsetMinutes: zoneTable.rawOffsetMinutes[zone],
         monthlyTemperatureC: Object.freeze(temps),
+        monthlySunriseTemperatureC: Object.freeze(sun.sunrise),
+        monthlySunsetTemperatureC: Object.freeze(sun.sunset),
+        ...(minMax ? { monthlyMinTemperatureC: Object.freeze(minMax.min), monthlyMaxTemperatureC: Object.freeze(minMax.max) } : {}),
     });
     if (placeCache.size >= PLACE_CACHE_SIZE)
         placeCache.delete(placeCache.keys().next().value);

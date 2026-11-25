@@ -19,16 +19,11 @@ describe('daily minimum / maximum temperature for sunrise / sunset refraction', 
     }
     expect(CLIMATE_MINMAX_RECORD_SIZE).toBe(24)
   })
-  it('getPlace attaches them', async () => {
-    useFileAssets()
-    const p = await getPlace(109)
-    expect(p.monthlyMinTemperatureC).toEqual((await getMonthlyMinMaxTemperatures(109)).min)
-    expect(p.monthlyMaxTemperatureC).toEqual((await getMonthlyMinMaxTemperatures(109)).max)
-  })
   it('colder sunrise air refracts more (earlier sunrise), warmer sunset air less (earlier sunset)', async () => {
     useFileAssets()
     const atmospheres = await getAtmospheres()
-    const place = { ...(await getPlace(109)), atmospheres } // London: AFGL profiles
+    const { min, max } = await getMonthlyMinMaxTemperatures(109)
+    const place = { ...(await getPlace(109)), atmospheres, monthlySunriseTemperatureC: undefined, monthlySunsetTemperatureC: undefined, monthlyMinTemperatureC: min, monthlyMaxTemperatureC: max } // London: AFGL profiles
     const mean = { ...place, monthlyMinTemperatureC: undefined, monthlyMaxTemperatureC: undefined }
     const d = { year: 2026, month: 7, day: 15 }
     const which = ['sunrise', 'sunset'] as const
@@ -41,7 +36,7 @@ describe('daily minimum / maximum temperature for sunrise / sunset refraction', 
   it('falls back to the mean where min/max are unknown, and ignores them for standard', async () => {
     useFileAssets()
     const atmospheres = await getAtmospheres()
-    const place = { ...(await getPlace(1)), atmospheres }
+    const place = { ...(await getPlace(1)), atmospheres, monthlySunriseTemperatureC: undefined, monthlySunsetTemperatureC: undefined }
     const d = { year: 2026, month: 1, day: 15 }
     const which = ['sunrise', 'sunset', 'sunriseElevated'] as const
     const nan = new Array(12).fill(NaN)

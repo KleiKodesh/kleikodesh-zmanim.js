@@ -13,6 +13,17 @@ export interface Place {
     rawOffsetMinutes: number;
     /** 12 monthly mean temperatures in C (NaN = unknown), for refraction; attached by getPlace(). */
     monthlyTemperatureC: readonly number[];
+    /** 12 monthly mean temperatures AT sunrise in C (NaN = unknown), for sunrise refraction; attached by getPlace(). */
+    monthlySunriseTemperatureC: readonly number[];
+    /** 12 monthly mean temperatures AT sunset in C (NaN = unknown), for sunset refraction; attached by getPlace(). */
+    monthlySunsetTemperatureC: readonly number[];
+    /**
+     * 12 monthly means of the daily minimum temperature in C, the sunrise fallback; attached by getPlace() only where a
+     * sunrise/sunset month is unknown (only then is climate-minmax.bin loaded).
+     */
+    monthlyMinTemperatureC?: readonly number[];
+    /** As monthlyMinTemperatureC, the daily maximum: the sunset fallback. */
+    monthlyMaxTemperatureC?: readonly number[];
     /** Terrain horizon for sunriseTerrain/sunsetTerrain; not set by getPlace() (see getTerrainHorizon). */
     terrainHorizon?: ArrayLike<number> | null;
 }
@@ -29,6 +40,13 @@ export declare function configure(options: {
 }): void;
 /** Bytes per record in climate.bin: 12 monthly mean temperatures, int8 C; -128 = unknown. */
 export declare const CLIMATE_RECORD_SIZE = 12;
+/** Bytes per record in climate-minmax.bin: 12 monthly mean daily minima then 12 maxima, int8 C; -128 = unknown. */
+export declare const CLIMATE_MINMAX_RECORD_SIZE = 24;
+/**
+ * Bytes per record in climate-sunevent.bin: 12 monthly mean temperatures at sunrise then 12 at sunset, int8 in
+ * half degrees C (value / 2); -128 = unknown.
+ */
+export declare const CLIMATE_SUNEVENT_RECORD_SIZE = 24;
 /** Places per horizon chunk file (assets/horizon-NN.bin, NN = id / HORIZON_CHUNK). */
 export declare const HORIZON_CHUNK = 64;
 /**
@@ -38,6 +56,22 @@ export declare const HORIZON_CHUNK = 64;
 export declare function getTerrainHorizon(id: number): Promise<Int16Array | null>;
 /** A place's 12 monthly mean temperatures (C; NaN where unknown). Loads climate.bin once. */
 export declare function getMonthlyTemperatures(id: number): Promise<number[]>;
+/**
+ * A place's 12 monthly means of the daily minimum and of the daily maximum temperature (C; NaN where unknown).
+ * Loads climate-minmax.bin once; all NaN when it is missing.
+ */
+export declare function getMonthlyMinMaxTemperatures(id: number): Promise<{
+    min: number[];
+    max: number[];
+}>;
+/**
+ * A place's 12 monthly mean temperatures at sunrise and at sunset (C, half-degree steps; NaN where unknown).
+ * Loads climate-sunevent.bin once; all NaN when it is missing.
+ */
+export declare function getMonthlySunEventTemperatures(id: number): Promise<{
+    sunrise: number[];
+    sunset: number[];
+}>;
 /** The model atmospheres for ray-traced horizon refraction (atmosphere.bin, 25 KB), loaded once on first need. */
 export declare function getAtmospheres(): Promise<AtmosphereTable>;
 /** Every place name in [lang]; the index is the place id (index 0 is empty). Loads only that names file. */

@@ -43,6 +43,21 @@ export interface Coordinates {
      */
     monthlyTemperatureC?: readonly number[] | 'standard';
     /**
+     * 12 monthly mean air temperatures AT sunrise in C (NaN = unknown), as getPlace() attaches them: the sunrise-side
+     * horizon lines (sunrise level, elevated and terrain) refract through the air of that moment. Missing or NaN:
+     * monthlyMinTemperatureC, then monthlyTemperatureC.
+     */
+    monthlySunriseTemperatureC?: readonly number[];
+    /** As monthlySunriseTemperatureC, AT sunset: the sunset-side horizon lines; fallback monthlyMaxTemperatureC. */
+    monthlySunsetTemperatureC?: readonly number[];
+    /**
+     * 12 monthly means of the daily MINIMUM air temperature in C (NaN = unknown): the sunrise-side fallback where the
+     * sunrise temperature is unknown (sunrise comes shortly after the coldest hour). Missing or NaN: monthlyTemperatureC.
+     */
+    monthlyMinTemperatureC?: readonly number[];
+    /** As monthlyMinTemperatureC, the daily MAXIMUM: used for the sunset-side horizon lines. */
+    monthlyMaxTemperatureC?: readonly number[];
+    /**
      * Terrain horizon for sunriseTerrain/sunsetTerrain: TERRAIN_BINS int16 values, apparent altitude in
      * hundredths of a degree (NO_TERRAIN = none), as zmanim() attaches from horizon-NN.bin. Without it those lines are null.
      */

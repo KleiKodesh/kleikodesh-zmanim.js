@@ -67,10 +67,10 @@ Ray-traced through a layered model atmosphere (src/atmosphere.ts, src/horizon.ts
 - NOAA NCEI Integrated Global Radiosonde Archive v2 (I. Durre et al. 2016, doi:10.7289/V5X63K0Q), station
   ISM00040179 Bet Dagan, 1995-2024 (scripts/build-atmosphere.mjs).
 - Magnus formula for saturation vapour pressure: WMO-No. 8 (Guide to Instruments and Methods of Observation), annex 4.B.
-- Place temperatures (climate.bin: monthly mean; climate-minmax.bin: monthly mean daily minimum for sunrise, maximum
-  for sunset): Open-Meteo Historical Weather API (open-meteo.com, CC BY 4.0), ERA5 / ERA5-Land reanalysis by the
+- Place temperatures (climate.bin: monthly mean; climate-sunevent.bin: monthly mean at the hour of sunrise and of
+  sunset, from hourly data; climate-minmax.bin: monthly mean daily minimum and maximum, the fallback): Open-Meteo Historical Weather API (open-meteo.com, CC BY 4.0), ERA5 / ERA5-Land reanalysis by the
   Copernicus Climate Change Service (Hersbach et al. 2018, Munoz Sabater 2019; Copernicus licence), 2016-2025, at each
-  place's own elevation (scripts/fetch-climate.mjs, scripts/fetch-climate-minmax.mjs). Chosen over WorldClim 2.1
+  place's own elevation (scripts/fetch-climate.mjs, scripts/fetch-climate-sunevent.mjs, scripts/fetch-climate-minmax.mjs). Chosen over WorldClim 2.1
   normals (CC BY 4.0, 1970-2000) and GHCN station normals (stations only, uneven coverage): recent, every place alike,
-  and consistent with the mean already used. Sunrise near the daily minimum and sunset in the warm part of the day is
-  standard refraction practice (cold, dense air refracts more).
+  and consistent with the mean already used. Cold, dense air refracts more; the air of the event's own hour is used
+  because sunset comes hours after the daily maximum, when the air near the ground has already cooled.
