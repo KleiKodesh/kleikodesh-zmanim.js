@@ -268,7 +268,8 @@ const ALOT_90 = equinoxDepression(90)
  * The angles, secondary only: R. Yaakov Goldstein, "What time in the morning may one begin to don Tefillin"
  * (shulchanaruchharav.com, 2016), main text and fn. 16 - Diaspora custom 12.9 or 11.5 deg; "11.5 degrees corresponds to
  * the opinion of 52 minutes from sunrise in Jerusalem"; 11 and 10.2 deg used by others; he cites Kovetz Otzros
- * Yerushalayim (not opened). No posek named for 11 / 10.2; primary text not checked.
+ * Yerushalayim. Reference: Kovetz Otzros Yerushalayim (11.5 deg = 52 min before sunrise in Jerusalem) - NOT VERIFIED,
+ * issue and page not yet located. No posek named for 11 / 10.2; primary text not checked.
  */
 const MISHEYAKIR = 11.5
 const MISHEYAKIR_11 = 11
@@ -280,7 +281,8 @@ const MISHEYAKIR_10_2 = 10.2
  */
 const MISHEYAKIR_LECHUMRA = 10.5
 /** Three small stars (about 36 min): Biur Halacha OC 293:2 ("three small stars") - checked in the text. The 8.5 deg
- * angle is commonly attributed to R. Yechiel Michel Tukachinsky (attribution as commonly stated; his own text not yet
+ * angle is commonly attributed to R. Yechiel Michel Tukachinsky, Bein Hashmashot / Luach Eretz Yisrael introduction - NOT
+ * VERIFIED (attribution as commonly stated; his own text not yet
  * located - local seforim search for "8.5" with "degrees" gave no match, 2026-11-26). */
 const TZEIT = 8.5
 /**
@@ -301,7 +303,8 @@ const ALOT_12 = 12
  * By degrees: the depth 13.5 min after sunset in Jerusalem at the equinox, exact by equinoxDepression: 3.701 deg (was 3.7).
  */
 const TZEIT_GEONIM = equinoxDepression(13.5)
-/** Rav Yaakov Moshe Hillel's nightfall for the afternoon zmanim, 3.8 deg. Unsourced here: no primary text was checked for this angle
+/** Rav Yaakov Moshe Hillel's nightfall for the afternoon zmanim, 3.8 deg. Reference: R. Y. M. Hillel, Vayashev Moshe /
+ * his responsa on zmanim - NOT VERIFIED, page not yet located (attribution as commonly stated). No primary text was checked for this angle
  * (local seforim search for "3.8" with "degrees" gave no match, 2026-11-26). */
 const TZEIT_HILLEL = 3.8
 /**
