@@ -1,0 +1,15 @@
+{
+ "10.1086/420806": ["temperature profile", "lapse rate", "inversion", "horizon"],
+ "10.1086/132705": ["inversion", "variab", "sunset", "standard deviation"],
+ "10.1086/378214": ["0\.669", "0\.175", "0\.579", "0\.714", "temperature"],
+ "10.1086/301325": ["all zenith", "tangent", "below the horizon", "90"],
+ "10.5194/acp-20-12177-2020": ["2 ?km", "coast", "PBL height", "Jerusalem"],
+ "10.5194/amt-9-4387-2016": ["boundary layer height", "Tel Aviv", "Beit Dagan", "m "],
+ "10.1007/s00704-021-03752-4": ["thickness", "300 m", "depth", "50"],
+ "10.1016/j.cageo.2022.105044": ["15 s", "inversion", "terrestrial refraction", "0\.0342", "lapse"],
+ "10.1002/qj.3803": ["hourly", "2 ?m temperature", "1940|1950|1979"],
+ "10.1098/rsta.1939.0004": ["refractive index", "water vapour"],
+ "10.1175/JCLI3594.1": ["radiosonde", "stations"],
+ "10.1029/2009JD013680": ["boundary layer height", "radiosonde"],
+ "10.7289/V5X63K0Q": ["radiosonde"]
+}

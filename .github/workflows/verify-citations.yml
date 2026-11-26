@@ -9,5 +9,6 @@ jobs:
         with: { node-version: 22 }
       - run: sudo apt-get install -y poppler-utils
       - run: node scripts/verify-citations.mjs
+      - run: node scripts/check-claims.mjs
       - uses: actions/upload-artifact@v4
         with: { name: citations, path: citations/ }
