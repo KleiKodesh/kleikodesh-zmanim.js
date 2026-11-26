@@ -185,7 +185,7 @@ and licenses" carries the required notices).
 | places.tsv ids 1-564 (names he/en, lat, lng, elevation, tzid) | not in this repo: imported from the KitveiHakodesh app (commit a0a2e44), whose list was built from GeoNames (app commit b4f6d2c2) | GeoNames (geonames.org) | CC BY 4.0 (geonames.org/about.html, checked) | yes: credit GeoNames + licence | GAP: build script, dump file and date not kept; per-column origin (Hebrew names, elevation) not recorded |
 | places.tsv ids 565-1802 (names, coords, elevation, tzid) | scripts/places-pass.mjs (Wikidata search :77, labels :86; Open-Meteo elevation :145) | Wikidata; Open-Meteo elevation API (Copernicus DEM GLO-90) | Wikidata CC0 (checked); Open-Meteo CC BY 4.0 (checked) | Wikidata none; Open-Meteo yes + Copernicus DEM notice | traced; tzid assignment method not stated in the script header |
 | places.tsv Lucerne and hand-picked rows | scripts/places-lookup.mjs (:28, :33 Wikidata; :42 Open-Meteo) | Wikidata; Open-Meteo | CC0; CC BY 4.0 | as above | traced (human picked from lookup output) |
-| places.tsv 128 Israeli localities (commits 929bb4d, 1bd76a4) | no script in repo (coords converted from the Israeli grid; elevation = CBS average height) | Israel Central Bureau of Statistics localities list 2025 | NOT VERIFIED: CBS terms page unreachable (404/403) | presumably credit CBS | FLAG: licence and attribution unconfirmed; no import script kept |
+| places.tsv 128 Israeli localities (commits 929bb4d, 1bd76a4) | no script in repo (coords converted from the Israeli grid; elevation = CBS average height) | Israel Central Bureau of Statistics localities list 2025 | CBS open licence v2.1 (3 Jan 2016): worldwide, royalty-free, commercial use and derivative works allowed; no implied endorsement; facts and data themselves carry no copyright | credit CBS with file name, retrieval date, link and "as is" (see README) | verified (licence text read 2026-11-26); no import script kept |
 | places.tsv ids 1804-1810 (coords, names) | scripts/osm-lookup.mjs (Overpass :23, Nominatim :45, elevation :57) | OpenStreetMap; Open-Meteo elevation | ODbL 1.0; CC BY 4.0 | yes: "(c) OpenStreetMap contributors" | traced (PROVENANCE.md); 7 features < 100 = insubstantial under OSMF guideline (checked), so no share-alike on places.tsv, provided no further OSM extracts are added |
 | places.tsv Hebrew names (spelling fixes) | scripts/check-he-names.mjs (Wikidata :11) | Wikidata labels, Hebrew Wikipedia titles | CC0 (labels); titles are facts | none | traced (check only; fixes by hand) |
 | places.tsv tzid | as for the rows above | IANA tz database zone names | public domain | none | partly traced (see gaps) |
@@ -208,8 +208,8 @@ Gaps and conflicts:
 
 - GAP: places.tsv ids 1-564 - the GeoNames import script, dump name and date were not kept in this repo; which column
   came from GeoNames (Hebrew names via alternate names? elevation via GeoNames dem/elevation?) is not recorded.
-- GAP / FLAG: the 128 CBS localities (commits 929bb4d, 1bd76a4) have no import script, and the CBS reuse terms could
-  not be confirmed online; until confirmed, their licence is unverified.
+- GAP: the 128 CBS localities (commits 929bb4d, 1bd76a4) have no import script kept. Their licence (CBS open licence
+  v2.1) allows this use with attribution, given in README.
 - No licence conflicts with LGPL-2.1 found: CC BY 4.0 and the Copernicus licences only add attribution; CC0 and public
   domain add nothing. ODbL share-alike does not apply while OSM use stays an insubstantial extract (7 features, one-off);
   adding more OSM points over time would count together and could make places.tsv an ODbL derived database.

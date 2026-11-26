@@ -317,8 +317,9 @@ npm test          # vitest
   Open-Meteo elevation API (CC BY 4.0), based on the Copernicus DEM GLO-90 (produced using Copernicus WorldDEM-90
   (c) DLR e.V. 2010-2014 and (c) Airbus Defence and Space GmbH 2014-2018, provided under COPERNICUS by the European
   Union and ESA; all rights reserved).
-- Israeli localities: some coordinates and elevations from the Israel Central Bureau of Statistics list of localities
-  (2025). Time zones: IANA tz database (public domain). Full input-by-input list: SOURCES.md, "Data inputs and licences".
+- Israeli localities: Israel Central Bureau of Statistics (CBS), list of localities 2025 (retrieved 23/11/2026),
+  https://www.cbs.gov.il - copied and distributed as is, under the CBS usage licence (v2.1). Coordinates were converted
+  from the Israeli grid and some elevations taken from it. No endorsement by the CBS or the State of Israel is implied. Time zones: IANA tz database (public domain). Full input-by-input list: SOURCES.md, "Data inputs and licences".
 - Seven neighbourhood points (Ramat Beit Shemesh Aleph, Bet and Gimel, Nofei Aviv, Kiryat Sefer, Brachfeld,
   Green Park) (c) OpenStreetMap contributors, ODbL 1.0, https://www.openstreetmap.org/copyright. Their
   elevations come from the Open-Meteo elevation API (above).
