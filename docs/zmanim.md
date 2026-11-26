@@ -79,6 +79,7 @@ When there is enough light to tell blue from white, and to recognize a familiar 
 - Berachot 9b (when one can tell blue from white)
 - Shulchan Aruch OC 18:3 (blessing on tzitzis from when one can tell its blue from its white)
 - Shulchan Aruch OC 58:1 (when one sees a friend four amos away and recognizes him)
+- R. Yaakov Goldstein, "What time in the morning may one begin to don Tefillin", shulchanaruchharav.com (2016), note 16: 11.5 degrees = 52 minutes before sunrise in Jerusalem, citing Kovetz Otzros Yerushalayim (not verified)
 
 <a id="misheyakirChatzot"></a>
 
@@ -102,6 +103,7 @@ Misheyakir by another estimate: the sun 11 degrees below the horizon in the morn
 - Berachot 9b
 - Shulchan Aruch OC 18:3
 - Shulchan Aruch OC 58:1
+- R. Yaakov Goldstein, shulchanaruchharav.com (2016), note 16: 11 degrees is used by some (no posek named)
 
 <a id="misheyakir10p2"></a>
 
@@ -114,6 +116,7 @@ Misheyakir by a later estimate: the sun 10.2 degrees below the horizon in the mo
 - Berachot 9b
 - Shulchan Aruch OC 18:3
 - Shulchan Aruch OC 58:1
+- R. Yaakov Goldstein, shulchanaruchharav.com (2016), note 16: 10.2 degrees is used by some (no posek named)
 
 <a id="misheyakirLechumra"></a>
 
