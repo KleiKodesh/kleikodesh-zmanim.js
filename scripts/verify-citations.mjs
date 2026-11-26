@@ -18,15 +18,20 @@ for (const doi of dois) {
     const o = await (await fetch(`https://api.openalex.org/works/doi:${doi}`, { headers: UA })).json()
     const inv = o.abstract_inverted_index
     if (inv) { const w = []; for (const [k, ps] of Object.entries(inv)) for (const p of ps) w[p] = k; rec.abstract = w.join(' ') }
-    rec.oa = o.best_oa_location?.pdf_url ?? o.open_access?.oa_url ?? null
-    if (rec.oa) {
-      const safe = doi.replace(/[^\w.-]/g, '_')
-      const r = await fetch(rec.oa, { headers: UA, redirect: 'follow' })
-      const buf = Buffer.from(await r.arrayBuffer())
-      if (buf.subarray(0, 4).toString() === '%PDF') {
-        writeFileSync(`citations/${safe}.pdf`, buf)
-        try { execFileSync('pdftotext', ['-layout', `citations/${safe}.pdf`, `citations/${safe}.txt`]); rec.fulltext = `citations/${safe}.txt` } catch {}
-      } else { writeFileSync(`citations/${safe}.html`, buf); rec.fulltext = `citations/${safe}.html` }
+    // Try every open-access location until one serves a real PDF; else keep the first HTML page.
+    const urls = [...new Set([o.best_oa_location?.pdf_url, ...(o.locations ?? []).map((l) => l.pdf_url), o.open_access?.oa_url,
+      ...(o.locations ?? []).map((l) => l.landing_page_url)].filter(Boolean))]
+    const safe = doi.replace(/[^\w.-]/g, '_')
+    for (const url of urls) {
+      try {
+        const buf = Buffer.from(await (await fetch(url, { headers: UA, redirect: 'follow' })).arrayBuffer())
+        if (buf.subarray(0, 4).toString() === '%PDF') {
+          writeFileSync(`citations/${safe}.pdf`, buf); rec.oa = url
+          try { execFileSync('pdftotext', ['-layout', `citations/${safe}.pdf`, `citations/${safe}.txt`]); rec.fulltext = `citations/${safe}.txt` } catch {}
+          break
+        }
+        if (!rec.fulltext) { writeFileSync(`citations/${safe}.html`, buf); rec.fulltext = `citations/${safe}.html`; rec.oa = url }
+      } catch {}
     }
   } catch (e) { rec.openalex = `failed: ${e.message}` }
   console.log(JSON.stringify(rec, null, 1))
