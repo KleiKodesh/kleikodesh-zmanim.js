@@ -317,6 +317,8 @@ npm test          # vitest
   Open-Meteo elevation API (CC BY 4.0), based on the Copernicus DEM GLO-90 (produced using Copernicus WorldDEM-90
   (c) DLR e.V. 2010-2014 and (c) Airbus Defence and Space GmbH 2014-2018, provided under COPERNICUS by the European
   Union and ESA; all rights reserved).
+- Israeli localities: some coordinates and elevations from the Israel Central Bureau of Statistics list of localities
+  (2025). Time zones: IANA tz database (public domain). Full input-by-input list: SOURCES.md, "Data inputs and licences".
 - Seven neighbourhood points (Ramat Beit Shemesh Aleph, Bet and Gimel, Nofei Aviv, Kiryat Sefer, Brachfeld,
   Green Park) (c) OpenStreetMap contributors, ODbL 1.0, https://www.openstreetmap.org/copyright. Their
   elevations come from the Open-Meteo elevation API (above).
@@ -326,6 +328,8 @@ npm test          # vitest
   tiles from the AWS Open Data registry (https://registry.opendata.aws/copernicus-dem/).
 - Climate data (climate.bin, climate-minmax.bin, climate-sunevent.bin): weather data by Open-Meteo.com (https://open-meteo.com/), CC BY 4.0, from the
   ERA5 / ERA5-Land reanalysis by the Copernicus Climate Change Service (Hersbach et al. 2018, Munoz Sabater 2019).
+  Contains modified Copernicus Climate Change Service information 2016-2025. Neither the European Commission nor ECMWF is
+  responsible for any use that may be made of the Copernicus information or data it contains.
 - Model atmospheres (atmosphere.bin): NOAA NCEI IGRA v2 (Durre et al. 2016), station ISM00040179 Bet Dagan, public
   domain; AFGL atmospheric constituent profiles (Anderson et al. 1986, AFGL-TR-86-0110), public domain.
 - Refraction method: ray tracing after Hohenkerk & Sinclair (1985, NAO TN 63; Explanatory Supplement 1992 sec. 3.28),

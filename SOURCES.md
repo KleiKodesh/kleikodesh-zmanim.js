@@ -172,3 +172,44 @@ the model was built. No choice here was made to agree with any other calendar's 
 | Terrain model | Copernicus DEM GLO-90 | registry.opendata.aws/copernicus-dem | free use with attribution | secondary only (citation as recorded in this repo; source not reachable for this check) |
 | Terrain constants | EYE 1.6 m, MAX_KM 150, MIN_M 500, OPEN_CELLS 5 | - | Modelling choice, no single published value | unsourced |
 | Numerics | 8-point Gauss-Legendre, anomaly step 0.5 K, height grid, SPA iterations 3 | Abramowitz & Stegun 1964, table 25.4 (nodes) | numerical choices | unsourced (choices) |
+
+## Data inputs and licences
+
+Every data input of the library, the script that reads it (file:line of the request or read), its upstream source and
+licence, and what attribution the licence asks for. Licence status checked online on 2026-11-26 where the page was
+reachable. The library code is LGPL-2.1; the data below is distributed with it under its own terms (README "Credits
+and licenses" carries the required notices).
+
+| Input | Built by | Upstream source | Licence | Attribution required | Status |
+|---|---|---|---|---|---|
+| places.tsv ids 1-564 (names he/en, lat, lng, elevation, tzid) | not in this repo: imported from the KitveiHakodesh app (commit a0a2e44), whose list was built from GeoNames (app commit b4f6d2c2) | GeoNames (geonames.org) | CC BY 4.0 (geonames.org/about.html, checked) | yes: credit GeoNames + licence | GAP: build script, dump file and date not kept; per-column origin (Hebrew names, elevation) not recorded |
+| places.tsv ids 565-1802 (names, coords, elevation, tzid) | scripts/places-pass.mjs (Wikidata search :77, labels :86; Open-Meteo elevation :145) | Wikidata; Open-Meteo elevation API (Copernicus DEM GLO-90) | Wikidata CC0 (checked); Open-Meteo CC BY 4.0 (checked) | Wikidata none; Open-Meteo yes + Copernicus DEM notice | traced; tzid assignment method not stated in the script header |
+| places.tsv Lucerne and hand-picked rows | scripts/places-lookup.mjs (:28, :33 Wikidata; :42 Open-Meteo) | Wikidata; Open-Meteo | CC0; CC BY 4.0 | as above | traced (human picked from lookup output) |
+| places.tsv 128 Israeli localities (commits 929bb4d, 1bd76a4) | no script in repo (coords converted from the Israeli grid; elevation = CBS average height) | Israel Central Bureau of Statistics localities list 2025 | NOT VERIFIED: CBS terms page unreachable (404/403) | presumably credit CBS | FLAG: licence and attribution unconfirmed; no import script kept |
+| places.tsv ids 1804-1810 (coords, names) | scripts/osm-lookup.mjs (Overpass :23, Nominatim :45, elevation :57) | OpenStreetMap; Open-Meteo elevation | ODbL 1.0; CC BY 4.0 | yes: "(c) OpenStreetMap contributors" | traced (PROVENANCE.md); 7 features < 100 = insubstantial under OSMF guideline (checked), so no share-alike on places.tsv, provided no further OSM extracts are added |
+| places.tsv Hebrew names (spelling fixes) | scripts/check-he-names.mjs (Wikidata :11) | Wikidata labels, Hebrew Wikipedia titles | CC0 (labels); titles are facts | none | traced (check only; fixes by hand) |
+| places.tsv tzid | as for the rows above | IANA tz database zone names | public domain | none | partly traced (see gaps) |
+| assets/tz.json (standard offsets) | scripts/build-assets.mjs:14-16, :73 (Intl.DateTimeFormat of the build Node/ICU) | IANA tz database via ICU | public domain (tzdb); ICU Unicode licence for ICU itself, not shipped | none | traced |
+| assets/places.bin, names-he.txt, names-en.txt | scripts/build-assets.mjs:5, :45-47 | data/places.tsv | as places.tsv | as places.tsv | traced |
+| assets/geo.bin, countries.json | scripts/build-geo.mjs:39, :41, :79-80 | places.tsv, data/geo-aliases.tsv (hand-written), ZONE_COUNTRY map (hand-written in the script); ISO 3166 codes | own work; ISO codes are facts | none | traced |
+| data/climate.tsv -> climate.bin | scripts/fetch-climate.mjs:37; build-assets.mjs:50, :54 | Open-Meteo Historical Weather API, ERA5/ERA5-Land (C3S), 2016-2025 | CC BY 4.0 (checked) + Copernicus C3S licence (checked) | yes: Open-Meteo credit; "Contains modified Copernicus Climate Change Service information [year]" + EC/ECMWF disclaimer | traced |
+| data/climate-minmax.tsv -> climate-minmax.bin | scripts/fetch-climate-minmax.mjs:34; build-assets.mjs:59, :63 | same | same | same | traced |
+| data/climate-sunevent.tsv -> climate-sunevent.bin | scripts/fetch-climate-sunevent.mjs:87; build-assets.mjs:68, :72 | same (hourly) | same | same | traced |
+| data/atmosphere.tsv -> atmosphere.bin | scripts/build-atmosphere.mjs:43 (AFGL), :89 (IGRA), :168, :176 | AFGL profiles (Anderson et al. 1986), read from the copies shipped with libRadtran; NOAA NCEI IGRA v2 station ISM00040179 | U.S. government works, public domain | none required (citation given) | traced; the AFGL .dat copies come from libRadtran (GPL) but are the AFGL public-domain data, no libRadtran code used |
+| U.S. Standard Atmosphere 1976 constants | src/atmosphere.ts, src/refraction.ts (constants) | NOAA-S/T 76-1562 | U.S. government work, public domain | none | traced (citation) |
+| data/horizon.bin -> horizon-NN.bin | scripts/compute-horizon.py:52 (DEM tiles), build-horizon.mjs:10, :16, build-horizon-chunks.mjs:8, :19 | Copernicus DEM GLO-90, AWS Open Data registry | Copernicus DEM licence (free use, redistribution of derived products allowed with notice) | yes: DLR/Airbus/EU-ESA notice (README) | traced; licence page not re-fetched this time |
+| Default Delta T table | src/spa.ts:49-50 (hand-entered) | IERS Rapid Service/Prediction Center (USNO) deltat data, IERS Bulletin A | USNO: U.S. government work, public domain; IERS products freely usable with citation | citation (given in spa.ts) | traced |
+| Default Delta T polynomial | src/spa.ts | Espenak & Meeus, NASA/TP-2006-214141 | U.S. government work, public domain | none | traced (PROVENANCE.md) |
+| data/communities.json -> assets/communities.json | scripts/build-communities.mjs:4, :11 | own text; facts cited from Hebrew Wikipedia, chabad.org, oukosher.org (URLs in placeSources/sources; no text copied) | own work | none (sources dropped from the asset, kept in data/) | traced |
+| data/explanations.json -> docs/zmanim*.md | scripts/build-explanations.mjs:4, :19 | own text; halachic sources in this file | own work | none | traced; documentation only, not shipped |
+| references/README.md, citations | scripts/collect-references.mjs, verify-citations.mjs, check-claims.mjs | Crossref, OpenAlex metadata (links only) | Crossref metadata CC0; OpenAlex CC0 | none | traced; not shipped |
+
+Gaps and conflicts:
+
+- GAP: places.tsv ids 1-564 - the GeoNames import script, dump name and date were not kept in this repo; which column
+  came from GeoNames (Hebrew names via alternate names? elevation via GeoNames dem/elevation?) is not recorded.
+- GAP / FLAG: the 128 CBS localities (commits 929bb4d, 1bd76a4) have no import script, and the CBS reuse terms could
+  not be confirmed online; until confirmed, their licence is unverified.
+- No licence conflicts with LGPL-2.1 found: CC BY 4.0 and the Copernicus licences only add attribution; CC0 and public
+  domain add nothing. ODbL share-alike does not apply while OSM use stays an insubstantial extract (7 features, one-off);
+  adding more OSM points over time would count together and could make places.tsv an ODbL derived database.
