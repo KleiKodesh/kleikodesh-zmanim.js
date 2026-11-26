@@ -6,7 +6,7 @@ const extra = JSON.parse(readFileSync('scripts/references-extra.json', 'utf8'))
 const UA = { 'User-Agent': 'kleikodesh-zmanim reference collector (https://github.com/KleiKodesh/kleikodesh-zmanim.js)' }
 mkdirSync('references', { recursive: true })
 const rows = []
-for (const doi of [...recs.map((r) => r.doi), ...extra.dois]) {
+for (const doi of new Set([...recs.map((r) => r.doi), ...extra.dois])) {
   let o; try { o = await (await fetch(`https://api.openalex.org/works/doi:${doi}`, { headers: UA })).json() } catch { continue }
   const loc = [o.best_oa_location, ...(o.locations ?? [])].find((l) => l?.pdf_url || l?.landing_page_url && o.open_access?.is_oa)
   const lic = loc?.license ?? o.best_oa_location?.license ?? 'none'
