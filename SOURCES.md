@@ -30,7 +30,7 @@ Not cited here, and not Birur Zmanim (earlier notes had them as copies of part 1
 | `DIP_ARCMIN_PER_SQRT_M` (1.76'): reference check for the traced dip of sunriseElevated, sunsetElevated | Nautical Almanac dip table; Bowditch, The American Practical Navigator (Pub. 9), dip D = 1.76' sqrt(h m); A. T. Young, "Dip of the horizon" (aty.sdsu.edu/explain/atmos_refr/dip.html) | the visible horizon's dip includes terrestrial refraction; the geometric arccos(R/(R+h)) = 1.93' sqrt(h) is too large and put the elevated sunset about 0.45 min late at 750 m |
 | tzeit40 | Birur Zmanim 2, p.18 | Chazon Ish: Yom Kippur ends 40 minutes after sunset, Shabbat 45, a brit 35 |
 | tzeit45 | Birur Zmanim 2, p.18 | a Chazon Ish letter: his 45 minutes at the end of Shabbat include Rabbeinu Tam (via R. D. Frankel) |
-| misheyakir66, misheyakir60, misheyakir40 | OU Kosher Halacha Yomis, outorah.org/p/78963 | 66 min: Pri Megadim, Eshel Avraham 58:2; about an hour: Rav Henkin (Ezras Torah luach, Teshuvot Ivra 3); 40 min: Rav Chaim Kanievsky (Igrot Moshe OC 4:6: 35-40) |
+| misheyakir66, misheyakir60, misheyakir40 | Igrot Moshe OC 4:6 (40 min with misheyakir - checked in the text); Pri Megadim, Eshel Avraham 58:2 and Teshuvot Ivra 3 not confirmed; see also (secondary) OU Kosher Halacha Yomis, outorah.org/p/78963 | 66 min: Pri Megadim; about an hour: Rav Henkin; 40 min: Rav Chaim Kanievsky (secondary only) |
 | `MISHEYAKIR_LECHUMRA` (10.5 deg): misheyakirLechumra | SA OC 18:3, 30:1, 58:1; en.wikipedia.org/wiki/Zmanim | misheyakir is when one recognises an acquaintance at 4 amot / tells tchelet from white; published angles span 10.2-11.5 deg, 10.5 is a later, stringent pick |
 | tzeitGeonim, beinHashmashotRt | Birur Zmanim 2, pp.11-14 | the Minchat Kohen's reading of Rabbeinu Tam: nightfall when three stars are seen, bein hashmashot the quarter hour before |
 | plag | Birur Zmanim 1, pp.320-321; Birur Zmanim 2, pp.257-268 | plag is 1.25 hours before the end of the day |
@@ -48,11 +48,58 @@ these books do not support those attributions.
 
 | Line | Source (secondary, not checked in the text) | What it supports |
 |---|---|---|
-| plagAlotTzeitGeonim | Zemaneh Yosef website (github.com/Zemaneh-Yosef/royzmanimwebsite, _includes/zmanDescription/plagHamincha.md; no license file, so facts and citations only, no text copied) | contemporary authorities count the seasonal hours from dawn but end the day at the Geonim's 13.5-minute nightfall (Ben Ish Chai year 1, Vayakhel 8; Or LeTzion vol. 2 p.147; Ma'amar Mordechai vol. 4 siman 12); it suggests plag at the 10.75th hour of that day as a stringency |
+| plagAlotTzeitGeonim | Ben Ish Chai year 1, Vayakhel (plag and dawn discussed - located in the text); Or LeTzion vol. 2 p.147; Ma'amar Mordechai vol. 4 siman 12 (not opened) | hours counted from dawn, the day ending at the Geonim's 13.5-minute nightfall; plag at its 10.75th hour as a stringency. Not confirmed in a primary text |
 
 Dr. Cohn's letter in Melamed LeHo'il is signed from Rawitsch; he later worked at the Strasbourg observatory, where his
 1899 tables ("Tabellen enthaltend die Zeitangaben fuer den Beginn der Nacht und des Tages") appeared. The siman does not
 name those tables or a Strasbourg custom; the tables themselves were not seen.
+
+## Halachic sources
+
+Checked 2026-11-26 in the local seforim library (Otzaria-based seforim.db): the cited siman / daf / perek was located and
+the key words of the statement were found in it. Sefaria could not be reached from the maintainer's network, so no row is
+"verified Sefaria". Books not in that library are marked as read earlier from the scan, or not found.
+
+| Line | Value | Primary source (exact location) | Status |
+|---|---|---|---|
+| alot, alot72z, fastStart72, MGA lines | dawn 4 mil = 72 min | Pesachim 93b-94a (R. Yehuda, 4 mil); SA OC 459:2 and MB 459:15 (mil = 18 min); Biur Halacha 89:1 (sha'a vechomesh) | verified local seforim |
+| alot90, alot90z, *Mga90, *Mga19 | dawn 5 mil = 90 min | Pesachim 93b (R. Yochanan, 5 mil); MB 459:15 | verified local seforim |
+| alot96, tzeitRt96 | 4 mil of 24 min | SA HaRav OC 89:1 (dawn 4 mil before netz); OC 261:5 (Rabbeinu Tam, 4 mil); OC 459:10 (24-min mil) | verified local seforim (89:1, 261:5); 459:10 section located, "24 minutes" wording not matched |
+| alot120, *Mga120, tzeit18 | mil of 24 min | Rambam, commentary on Mishna Pesachim 3:2 (mil = two fifths of an hour) | verified local seforim |
+| alot, alot90 (degrees) | 16.05 / 19.798 deg | Derived: depth of the sun 72 / 90 min before visible sunrise in Jerusalem at the equinox (equinoxDepression); Birur Zmanim 1 p.66 (about 16 / 19.75 deg) | derived; Birur Zmanim read earlier from the scan, not reopened |
+| sofShma*, sofTfilla* | 3 / 4 hours | Mishna Berachot 1:2, 4:1; SA OC 58:1, 89:1 | verified local seforim |
+| MGA vs Gra day | dawn-nightfall vs sunrise-sunset | Magen Avraham 58:1; Mishna Berura 58:4 | verified local seforim |
+| minchaGedola, minchaKetana, plag | 6.5 / 9.5 / 10.75 h | Rambam Tefilla 3:2, 3:4; SA OC 233:1; MB 233:1 (half hour after midday) | verified local seforim |
+| temporal hours | 1/12 of the day | SA OC 233:1 (Rema); Aruch HaShulchan OC 233:14 | verified local seforim |
+| *Fixed lines, chatzotFixedLocal | clock hours | Aruch HaShulchan OC 233:14; Igrot Moshe OC 1:24 (chatzot) | verified local seforim (keywords found; the fixed-hour reading is our summary) |
+| tzeitGeonim, tzeit13p5, beinHashmashotRt | 3/4 mil = 13.5 min | Shabbat 34b (Rabba in the name of Shmuel); SA OC 261:2 | verified local seforim |
+| tzeitGeonim (degrees) | 3.701 deg | Derived: equinoxDepression(13.5) | derived |
+| tzeitRt72, tzeitRt90 | 4 mil after sunset | Tosafot Shabbat 35a; SA OC 261:2 with Rema; Igrot Moshe OC 4:62 (72 and 96 min) | verified local seforim |
+| tzeit (8.5), tzeit7083 | three medium stars | Shabbat 35b (medium stars); Biur Halacha 293:2 (small stars) | verified local seforim |
+| tzeit 8.5 deg | 8.5 deg | none: modelling choice (about 36 min) | not found |
+| tzeit7083, alot12 | 7 deg 5 min / 12 deg | Melamed LeHo'il 1:30 (Dr. B. Cohn's letters) | verified local seforim |
+| tzeit645 | 6.45 deg | Bein Hashmashot (Tukachinsky) pp.50, 67, 72 (25 min average); the 6.45 deg angle itself: "Birur Halacha YD 262" as cited - that book is R. B. Zilber's, not R. Tukachinsky's, attribution unclear | Bein Hashmashot read earlier from the scan; angle not found |
+| tzeit18, tzeit18Sun | 18 min / 4.6565 deg | Bein Hashmashot pp.71-72 (R. Shmuel Salant); Derived: equinoxDepression(18) | read earlier from the scan; degree derived |
+| beinHashmashotYereim | 2.992 deg above | Sefer Yereim (bein hashmashot before sunset); Derived: equinoxDepression(-18) | Yereim text located (bein hashmashot passages, siman not pinned); degree derived |
+| tzeit40, tzeit45 | 40 / 45 min | Birur Zmanim 2 p.18 (Chazon Ish) | read earlier from the scan |
+| tzeit50 | 50 min | Igrot Moshe OC 4:62 ("50 minutes") | verified local seforim |
+| tzeit20, tzeit24, tzeit30 | fixed margins | community custom | not found (no single source) |
+| tzeit13p5z | 13.5 seasonal min | Kitzur Shulchan Aruch Yalkut Yosef (OC volume) | verified local seforim (statement found; siman not pinned) |
+| misheyakir (11.5 / 11 / 10.2 / 10.5 deg) | angles | Berachot 9b; SA OC 18:3, 30:1, 58:1 (criterion only) | criterion verified local seforim; angles: modelling choice, not found |
+| misheyakir7p65 | 7.65 deg | Igrot Moshe OC 4:6 (40 min found; 35 not matched); Derived: depth about 36 min before sunrise | partly verified local seforim; degree derived |
+| misheyakir12p85 | 12.85 deg | Birur Halacha (Zilber) OC 18 | not found |
+| misheyakir66 | 66 min | Pri Megadim, Eshel Avraham 58:2 | siman located, statement not confirmed |
+| misheyakir60 | 60 min | Rav Henkin, Teshuvot Ivra 3 | not found |
+| misheyakir40 | 40 min | Rav Chaim Kanievsky; Igrot Moshe OC 4:6 | Kanievsky secondary only; Igrot Moshe verified local seforim |
+| Baal HaTanya lines | 16.9 / 6 / 1.583 deg | SA HaRav OC 89:1, 261:5 (time-based only) | angles secondary only (chabad.org 3209349, no primary cited) |
+| Ben Ish Chai lines | dawn to nightfall, nightfall 20 min | Ben Ish Chai year 1, Vayakhel ("a third of an hour") | verified local seforim |
+| Harari 25 / 40, Hillel 3.8, Asym | as defined | none checked (Yisrael Vehazmanim III:22 cited for Asym) | not found |
+| chatzotNight | midnight | Berachot 3b (harp at midnight); SA OC 235:3 | verified local seforim |
+| candles18-40 | fixed minutes | SA OC 261:2, 263 (adding to Shabbat; lighting) - minutes are custom | verified local seforim (principle only) |
+| chametz times | end of 4th / 5th hour | Mishna Pesachim 1:4; SA OC 443:1 | verified local seforim |
+| fastStart | dawn | SA OC 564:1 | verified local seforim |
+| Kiddush Levana | 3 / 7 days; half month; 15 days | SA OC 426:3-4 with Rema; MB 426:17, 426:20; Rambam Kiddush HaChodesh 6:2-3, 6:8 | verified local seforim (426:4 "seven days" wording not matched) |
+| alot12 | whole east lit | Yerushalmi Berachot 1:1 | verified local seforim |
 
 ## Horizon refraction (all sunrise/sunset lines)
 

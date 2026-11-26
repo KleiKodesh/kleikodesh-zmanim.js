@@ -301,14 +301,14 @@ const TZEIT_GEONIM = equinoxDepression(13.5)
 const TZEIT_HILLEL = 3.8
 /**
  * Misheyakir 7.65 deg (about 36 min): Igrot Moshe OC 4:6 ("about 35, perhaps 40 minutes before netz") - checked in the text;
- * 12.85 deg (about 57 min): Rav Binyamin Zilber, Birur Halacha OC 18, for a time of need (cited at shulchanaruchharav.com/?p=13111).
+ * 12.85 deg (about 57 min): Rav Binyamin Zilber, Birur Halacha OC 18, for a time of need - not opened (secondary only). Derived: 12.85 deg = the depth about 57 min before sunrise.
  */
 const MISHEYAKIR_7_65 = 7.65
 const MISHEYAKIR_12_85 = 12.85
 /**
  * Baal HaTanya (Chabad): netz / shkia amiti at the sun's centre 1.583 deg below the true horizon; dawn 16.9 deg; nightfall 6 deg
- * (chabad.org, "About Our Zmanim Calculations", aid 3209349: netz/shkia amiti at the sun's centre 1.583 deg below the
- * horizon, dawn 16.9 deg, nightfall 6 deg). Note: Shulchan Aruch HaRav OC 261:5 rules like Rabbeinu Tam for the end of Shabbat (4 mil; a mil of 24 min is the
+ * Secondary only: chabad.org, "About Our Zmanim Calculations", aid 3209349 states these angles and cites no primary text;
+ * no primary text stating 16.9 / 6 / 1.583 deg was verified. Note: Shulchan Aruch HaRav OC 261:5 rules like Rabbeinu Tam for the end of Shabbat (4 mil; a mil of 24 min is the
  * main view, 18 min to be strict - OC 459:10) and OC 89:1 puts dawn 4 mil before netz - checked in the text; see tzeitRt96.
  */
 const BAAL_HATANYA_HORIZON = 1.583

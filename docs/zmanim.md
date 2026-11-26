@@ -390,7 +390,6 @@ When three medium stars appear and night begins. Here: the sun 7.083 degrees (7 
 - Shabbat 35b (one star is day, two twilight, three night; not large or small stars but medium ones)
 - Biur HaGra OC 261:2 (nightfall is at three medium stars)
 - Shu"t Melamed LeHo'il (R. D. Z. Hoffmann) part 1, siman 30 (letter of Dr. Baruch Cohn): the sun 7 deg 5 min below the horizon when three medium stars appear
-- Hebcal, Candle-lighting, Havdalah and fast times (the same angle, end of Tisha B'Av)
 
 <a id="tzeit"></a>
 
@@ -978,7 +977,7 @@ Nightfall by Rav Yechiel Michel Tucazinsky's calculation: the sun 6.45 degrees b
 
 - Community custom (a fixed margin after sunset; no single published source)
 - Shabbat 34b (twilight is three quarters of a mil, Rabba in the name of Shmuel)
-- Igrot Moshe, Orach Chaim 1:24 (Rav Moshe Feinstein: 50 minutes in New York)
+- Igrot Moshe, Orach Chaim 4:62 (Rav Moshe Feinstein: not less than 50 minutes)
 
 <a id="tzeit13p5z"></a>
 
@@ -1228,18 +1227,18 @@ The earliest time for tallit and tefillin, about an hour before sunrise: Rav Yos
 
 **Sources:**
 
-- Rav Y. E. Henkin, Ezras Torah luach; Teshuvot Ivra siman 3
+- Rav Y. E. Henkin, Teshuvot Ivra siman 3 (not opened here; as cited by OU Kosher)
 - OU Kosher Halacha Yomis, "The Earliest Time for Birkas Tzitzis" (outorah.org/p/78963)
 
 <a id="misheyakir40"></a>
 
 ## Misheyakir (Rav Chaim Kanievsky)
 
-The earliest time for tallit and tefillin, 40 fixed minutes before sunrise: Rav Chaim Kanievsky wrote that he himself waits until then. Igrot Moshe estimates misheyakir at about 35-40 minutes before sunrise.
+Earliest tallit and tefillin at a fixed 40 minutes before sunrise. Rav Chaim Kanievsky is reported to wait for this time himself; Rav Moshe Feinstein (Igrot Moshe) puts misheyakir roughly 35 to 40 minutes ahead of sunrise.
 
 **Sources:**
 
-- Rav Chaim Kanievsky (as cited by OU Kosher)
+- Rav Chaim Kanievsky (secondary only: as cited by OU Kosher; his own text not opened)
 - Igrot Moshe OC 4:6 (about 35-40 minutes before sunrise)
 - OU Kosher Halacha Yomis, "The Earliest Time for Birkas Tzitzis" (outorah.org/p/78963)
 
@@ -1252,7 +1251,7 @@ The sun 16.9 deg below the true horizon.
 **Sources:**
 
 - Shulchan Aruch HaRav (Baal HaTanya), Orach Chaim 89, and Seder Hachnasat Shabbat in his Siddur
-- chabad.org, article 3209349 (the Chabad zmanim method)
+- See also (secondary; states the angles, cites no primary text): chabad.org, article 3209349. Derived: the 16.9 / 6 / 1.583 deg angles are not stated in a primary text checked here
 
 <a id="sunriseBaalHatanya"></a>
 
@@ -1263,7 +1262,7 @@ The sun's centre 1.583 deg below the true horizon: the top of the sun seen over 
 **Sources:**
 
 - Shulchan Aruch HaRav (Baal HaTanya), Orach Chaim 89, and Seder Hachnasat Shabbat in his Siddur
-- chabad.org, article 3209349 (the Chabad zmanim method)
+- See also (secondary; states the angles, cites no primary text): chabad.org, article 3209349. Derived: the 16.9 / 6 / 1.583 deg angles are not stated in a primary text checked here
 
 <a id="sunsetBaalHatanya"></a>
 
@@ -1274,7 +1273,7 @@ The sun's centre 1.583 deg below the true horizon, a little after sea-level suns
 **Sources:**
 
 - Shulchan Aruch HaRav (Baal HaTanya), Orach Chaim 89, and Seder Hachnasat Shabbat in his Siddur
-- chabad.org, article 3209349 (the Chabad zmanim method)
+- See also (secondary; states the angles, cites no primary text): chabad.org, article 3209349. Derived: the 16.9 / 6 / 1.583 deg angles are not stated in a primary text checked here
 
 <a id="tzeitBaalHatanya"></a>
 
@@ -1285,7 +1284,7 @@ The sun 6 deg below the true horizon.
 **Sources:**
 
 - Shulchan Aruch HaRav (Baal HaTanya), Orach Chaim 89, and Seder Hachnasat Shabbat in his Siddur
-- chabad.org, article 3209349 (the Chabad zmanim method)
+- See also (secondary; states the angles, cites no primary text): chabad.org, article 3209349. Derived: the 16.9 / 6 / 1.583 deg angles are not stated in a primary text checked here
 
 <a id="sofShmaBaalHatanya"></a>
 
@@ -1296,7 +1295,7 @@ The sun 6 deg below the true horizon.
 **Sources:**
 
 - Shulchan Aruch HaRav (Baal HaTanya), Orach Chaim 89, and Seder Hachnasat Shabbat in his Siddur
-- chabad.org, article 3209349 (the Chabad zmanim method)
+- See also (secondary; states the angles, cites no primary text): chabad.org, article 3209349. Derived: the 16.9 / 6 / 1.583 deg angles are not stated in a primary text checked here
 
 <a id="sofShmaHarari40"></a>
 
@@ -1327,7 +1326,7 @@ The sun 6 deg below the true horizon.
 **Sources:**
 
 - Shulchan Aruch HaRav (Baal HaTanya), Orach Chaim 89, and Seder Hachnasat Shabbat in his Siddur
-- chabad.org, article 3209349 (the Chabad zmanim method)
+- See also (secondary; states the angles, cites no primary text): chabad.org, article 3209349. Derived: the 16.9 / 6 / 1.583 deg angles are not stated in a primary text checked here
 
 <a id="sofTfillaHarari40"></a>
 
@@ -1358,7 +1357,7 @@ The sun 6 deg below the true horizon.
 **Sources:**
 
 - Shulchan Aruch HaRav (Baal HaTanya), Orach Chaim 89, and Seder Hachnasat Shabbat in his Siddur
-- chabad.org, article 3209349 (the Chabad zmanim method)
+- See also (secondary; states the angles, cites no primary text): chabad.org, article 3209349. Derived: the 16.9 / 6 / 1.583 deg angles are not stated in a primary text checked here
 
 <a id="minchaGedolaHarari40"></a>
 
@@ -1389,7 +1388,7 @@ The sun 6 deg below the true horizon.
 **Sources:**
 
 - Shulchan Aruch HaRav (Baal HaTanya), Orach Chaim 89, and Seder Hachnasat Shabbat in his Siddur
-- chabad.org, article 3209349 (the Chabad zmanim method)
+- See also (secondary; states the angles, cites no primary text): chabad.org, article 3209349. Derived: the 16.9 / 6 / 1.583 deg angles are not stated in a primary text checked here
 
 <a id="minchaKetanaHarari40"></a>
 
@@ -1420,7 +1419,7 @@ The sun 6 deg below the true horizon.
 **Sources:**
 
 - Shulchan Aruch HaRav (Baal HaTanya), Orach Chaim 89, and Seder Hachnasat Shabbat in his Siddur
-- chabad.org, article 3209349 (the Chabad zmanim method)
+- See also (secondary; states the angles, cites no primary text): chabad.org, article 3209349. Derived: the 16.9 / 6 / 1.583 deg angles are not stated in a primary text checked here
 
 <a id="plagHarari40"></a>
 
@@ -1480,7 +1479,7 @@ The later of half a temporal hour after chatzot (of a day from dawn at 16.05 deg
 
 **Sources:**
 
-- Ben Ish Chai year 1, Vayakhel 8; Or LeTzion vol. 2 p.147; Ma'amar Mordechai vol. 4 siman 12 - as cited by the Zemaneh Yosef website, not checked in the text
+- Ben Ish Chai year 1, Vayakhel (plag and dawn discussed there - located in the text; the day ending at the Geonim's nightfall not confirmed); Or LeTzion vol. 2 p.147; Ma'amar Mordechai vol. 4 siman 12 - not opened
 
 <a id="chatzotFixedLocal"></a>
 

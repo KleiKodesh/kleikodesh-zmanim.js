@@ -644,8 +644,7 @@
       "sources": [
         "שבת לה ע״ב (כוכב אחד יום, שנים בין השמשות, שלשה לילה; לא גדולים ולא קטנים אלא בינונים)",
         "ביאור הגר״א או״ח רסא, ב (צאת הכוכבים הוא בג׳ כוכבים בינונים)",
-        "שו״ת מלמד להועיל ח״א סי׳ ל (מכתב ד״ר ברוך הכהן): השמש 7 מעלות ו־5 דקות תחת האופק בעת צאת שלושה כוכבים בינוניים",
-        "אתר Hebcal (אותה זווית, סוף תשעה באב)"
+        "שו״ת מלמד להועיל ח״א סי׳ ל (מכתב ד״ר ברוך הכהן): השמש 7 מעלות ו־5 דקות תחת האופק בעת צאת שלושה כוכבים בינוניים"
       ]
     },
     "en": {
@@ -654,8 +653,7 @@
       "sources": [
         "Shabbat 35b (one star is day, two twilight, three night; not large or small stars but medium ones)",
         "Biur HaGra OC 261:2 (nightfall is at three medium stars)",
-        "Shu\"t Melamed LeHo'il (R. D. Z. Hoffmann) part 1, siman 30 (letter of Dr. Baruch Cohn): the sun 7 deg 5 min below the horizon when three medium stars appear",
-        "Hebcal, Candle-lighting, Havdalah and fast times (the same angle, end of Tisha B'Av)"
+        "Shu\"t Melamed LeHo'il (R. D. Z. Hoffmann) part 1, siman 30 (letter of Dr. Baruch Cohn): the sun 7 deg 5 min below the horizon when three medium stars appear"
       ]
     }
   },
@@ -1650,7 +1648,7 @@
       "sources": [
         "Community custom (a fixed margin after sunset; no single published source)",
         "Shabbat 34b (twilight is three quarters of a mil, Rabba in the name of Shmuel)",
-        "Igrot Moshe, Orach Chaim 1:24 (Rav Moshe Feinstein: 50 minutes in New York)"
+        "Igrot Moshe, Orach Chaim 4:62 (Rav Moshe Feinstein: not less than 50 minutes)"
       ]
     }
   },
@@ -2069,7 +2067,7 @@
       "title": "Misheyakir (Rav Henkin)",
       "text": "The earliest time for tallit and tefillin, about an hour before sunrise: Rav Yosef Eliyahu Henkin allowed tallit and tefillin then. Here: 60 fixed minutes before sunrise.",
       "sources": [
-        "Rav Y. E. Henkin, Ezras Torah luach; Teshuvot Ivra siman 3",
+        "Rav Y. E. Henkin, Teshuvot Ivra siman 3 (not opened here; as cited by OU Kosher)",
         "OU Kosher Halacha Yomis, \"The Earliest Time for Birkas Tzitzis\" (outorah.org/p/78963)"
       ]
     }
@@ -2086,9 +2084,9 @@
     },
     "en": {
       "title": "Misheyakir (Rav Chaim Kanievsky)",
-      "text": "The earliest time for tallit and tefillin, 40 fixed minutes before sunrise: Rav Chaim Kanievsky wrote that he himself waits until then. Igrot Moshe estimates misheyakir at about 35-40 minutes before sunrise.",
+      "text": "Earliest tallit and tefillin at a fixed 40 minutes before sunrise. Rav Chaim Kanievsky is reported to wait for this time himself; Rav Moshe Feinstein (Igrot Moshe) puts misheyakir roughly 35 to 40 minutes ahead of sunrise.",
       "sources": [
-        "Rav Chaim Kanievsky (as cited by OU Kosher)",
+        "Rav Chaim Kanievsky (secondary only: as cited by OU Kosher; his own text not opened)",
         "Igrot Moshe OC 4:6 (about 35-40 minutes before sunrise)",
         "OU Kosher Halacha Yomis, \"The Earliest Time for Birkas Tzitzis\" (outorah.org/p/78963)"
       ]
@@ -2107,7 +2105,7 @@
       "text": "The sun 16.9 deg below the true horizon.",
       "sources": [
         "Shulchan Aruch HaRav (Baal HaTanya), Orach Chaim 89, and Seder Hachnasat Shabbat in his Siddur",
-        "chabad.org, article 3209349 (the Chabad zmanim method)"
+        "See also (secondary; states the angles, cites no primary text): chabad.org, article 3209349. Derived: the 16.9 / 6 / 1.583 deg angles are not stated in a primary text checked here"
       ]
     }
   },
@@ -2124,7 +2122,7 @@
       "text": "The sun's centre 1.583 deg below the true horizon: the top of the sun seen over mountains as high as those of Eretz Yisrael. A little earlier than sea-level sunrise.",
       "sources": [
         "Shulchan Aruch HaRav (Baal HaTanya), Orach Chaim 89, and Seder Hachnasat Shabbat in his Siddur",
-        "chabad.org, article 3209349 (the Chabad zmanim method)"
+        "See also (secondary; states the angles, cites no primary text): chabad.org, article 3209349. Derived: the 16.9 / 6 / 1.583 deg angles are not stated in a primary text checked here"
       ]
     }
   },
@@ -2141,7 +2139,7 @@
       "text": "The sun's centre 1.583 deg below the true horizon, a little after sea-level sunset.",
       "sources": [
         "Shulchan Aruch HaRav (Baal HaTanya), Orach Chaim 89, and Seder Hachnasat Shabbat in his Siddur",
-        "chabad.org, article 3209349 (the Chabad zmanim method)"
+        "See also (secondary; states the angles, cites no primary text): chabad.org, article 3209349. Derived: the 16.9 / 6 / 1.583 deg angles are not stated in a primary text checked here"
       ]
     }
   },
@@ -2158,7 +2156,7 @@
       "text": "The sun 6 deg below the true horizon.",
       "sources": [
         "Shulchan Aruch HaRav (Baal HaTanya), Orach Chaim 89, and Seder Hachnasat Shabbat in his Siddur",
-        "chabad.org, article 3209349 (the Chabad zmanim method)"
+        "See also (secondary; states the angles, cites no primary text): chabad.org, article 3209349. Derived: the 16.9 / 6 / 1.583 deg angles are not stated in a primary text checked here"
       ]
     }
   },
@@ -2175,7 +2173,7 @@
       "text": "3 temporal hours after netz amiti, in a day from netz amiti to shkia amiti (the sun's centre 1.583 deg below the horizon).",
       "sources": [
         "Shulchan Aruch HaRav (Baal HaTanya), Orach Chaim 89, and Seder Hachnasat Shabbat in his Siddur",
-        "chabad.org, article 3209349 (the Chabad zmanim method)"
+        "See also (secondary; states the angles, cites no primary text): chabad.org, article 3209349. Derived: the 16.9 / 6 / 1.583 deg angles are not stated in a primary text checked here"
       ]
     }
   },
@@ -2224,7 +2222,7 @@
       "text": "4 temporal hours after netz amiti, in a day from netz amiti to shkia amiti (the sun's centre 1.583 deg below the horizon).",
       "sources": [
         "Shulchan Aruch HaRav (Baal HaTanya), Orach Chaim 89, and Seder Hachnasat Shabbat in his Siddur",
-        "chabad.org, article 3209349 (the Chabad zmanim method)"
+        "See also (secondary; states the angles, cites no primary text): chabad.org, article 3209349. Derived: the 16.9 / 6 / 1.583 deg angles are not stated in a primary text checked here"
       ]
     }
   },
@@ -2273,7 +2271,7 @@
       "text": "6.5 temporal hours after netz amiti, in a day from netz amiti to shkia amiti (the sun's centre 1.583 deg below the horizon).",
       "sources": [
         "Shulchan Aruch HaRav (Baal HaTanya), Orach Chaim 89, and Seder Hachnasat Shabbat in his Siddur",
-        "chabad.org, article 3209349 (the Chabad zmanim method)"
+        "See also (secondary; states the angles, cites no primary text): chabad.org, article 3209349. Derived: the 16.9 / 6 / 1.583 deg angles are not stated in a primary text checked here"
       ]
     }
   },
@@ -2322,7 +2320,7 @@
       "text": "9.5 temporal hours after netz amiti, in a day from netz amiti to shkia amiti (the sun's centre 1.583 deg below the horizon).",
       "sources": [
         "Shulchan Aruch HaRav (Baal HaTanya), Orach Chaim 89, and Seder Hachnasat Shabbat in his Siddur",
-        "chabad.org, article 3209349 (the Chabad zmanim method)"
+        "See also (secondary; states the angles, cites no primary text): chabad.org, article 3209349. Derived: the 16.9 / 6 / 1.583 deg angles are not stated in a primary text checked here"
       ]
     }
   },
@@ -2371,7 +2369,7 @@
       "text": "10.75 temporal hours after netz amiti, in a day from netz amiti to shkia amiti (the sun's centre 1.583 deg below the horizon).",
       "sources": [
         "Shulchan Aruch HaRav (Baal HaTanya), Orach Chaim 89, and Seder Hachnasat Shabbat in his Siddur",
-        "chabad.org, article 3209349 (the Chabad zmanim method)"
+        "See also (secondary; states the angles, cites no primary text): chabad.org, article 3209349. Derived: the 16.9 / 6 / 1.583 deg angles are not stated in a primary text checked here"
       ]
     }
   },
@@ -2467,7 +2465,7 @@
       "title": "Plag hamincha - from dawn to the Geonim's nightfall (stringent)",
       "text": "1.25 temporal hours before the Geonim's nightfall (3.7 deg), in a day from dawn at 16.05 deg to that nightfall: the 10.75th hour of that day, a stringency.",
       "sources": [
-        "Ben Ish Chai year 1, Vayakhel 8; Or LeTzion vol. 2 p.147; Ma'amar Mordechai vol. 4 siman 12 - as cited by the Zemaneh Yosef website, not checked in the text"
+        "Ben Ish Chai year 1, Vayakhel (plag and dawn discussed there - located in the text; the day ending at the Geonim's nightfall not confirmed); Or LeTzion vol. 2 p.147; Ma'amar Mordechai vol. 4 siman 12 - not opened"
       ]
     }
   },
