@@ -279,8 +279,9 @@ const MISHEYAKIR_10_2 = 10.2
  * it is clearly light enough.
  */
 const MISHEYAKIR_LECHUMRA = 10.5
-/** Three small stars (about 36 min): Biur Halacha OC 293:2 ("three small stars") - checked in the text. Modelling choice, no single published value: the 8.5 deg angle is an estimate (often credited to R. Y. M. Tukachinsky in secondary
- * web text; no primary text found - local seforim search for "8.5" with "degrees" gave no match, 2026-11-26). */
+/** Three small stars (about 36 min): Biur Halacha OC 293:2 ("three small stars") - checked in the text. The 8.5 deg
+ * angle is commonly attributed to R. Yechiel Michel Tukachinsky (attribution as commonly stated; his own text not yet
+ * located - local seforim search for "8.5" with "degrees" gave no match, 2026-11-26). */
 const TZEIT = 8.5
 /**
  * Three medium stars (an observational estimate), 7.083 deg (7 deg 5 min). Dr. Baruch (Berthold) Cohn's letter in Shu"t

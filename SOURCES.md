@@ -76,7 +76,7 @@ the key words of the statement were found in it. Sefaria could not be reached fr
 | tzeitGeonim (degrees) | 3.701 deg | Derived: equinoxDepression(13.5) | derived |
 | tzeitRt72, tzeitRt90 | 4 mil after sunset | Tosafot Shabbat 35a; SA OC 261:2 with Rema; Igrot Moshe OC 4:62 (72 and 96 min) | verified local seforim |
 | tzeit (8.5), tzeit7083 | three medium stars | Shabbat 35b (medium stars); Biur Halacha 293:2 (small stars) | verified local seforim |
-| tzeit 8.5 deg | 8.5 deg | none: modelling choice (about 36 min); credited to R. Tukachinsky only in secondary web text, no primary found | not found (local seforim searched 2026-11-26) |
+| tzeit 8.5 deg | 8.5 deg | commonly attributed to R. Yechiel Michel Tukachinsky (about 36 min after sunset in Jerusalem) | attribution as commonly stated; his own text not yet located (local seforim searched 2026-11-26) |
 | tzeit7083, alot12 | 7 deg 5 min / 12 deg | Melamed LeHo'il 1:30 (Dr. B. Cohn's letters) | verified local seforim |
 | tzeit645 | 6.45 deg | Bein Hashmashot (Tukachinsky) pp.50, 67, 72 (25 min average); the 6.45 deg angle itself: "Birur Halacha YD 262" as cited - that book is R. B. Zilber's, not R. Tukachinsky's, attribution unclear | Bein Hashmashot read earlier from the scan; angle not found |
 | tzeit18, tzeit18Sun | 18 min / 4.6565 deg | Bein Hashmashot pp.71-72 (R. Shmuel Salant); Derived: equinoxDepression(18) | read earlier from the scan; degree derived |
