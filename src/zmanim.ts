@@ -278,6 +278,8 @@ const MISHEYAKIR_10_2 = 10.2
  * Stringent (later) misheyakir, 10.5 deg: when one recognises an acquaintance at 4 amot / tells tchelet from lavan
  * (SA OC 18:3, 30:1, 58:1). Published angles span about 10.2-11.5 deg (en.wikipedia.org/wiki/Zmanim); 10.5 waits until
  * it is clearly light enough.
+ * The 10.5 deg line follows the practice of R. Kessler, Kiryat Sefer (source: the maintainer; printed text not
+ * located).
  */
 const MISHEYAKIR_LECHUMRA = 10.5
 /** Three small stars (about 36 min): Biur Halacha OC 293:2 ("three small stars") - checked in the text. The 8.5 deg

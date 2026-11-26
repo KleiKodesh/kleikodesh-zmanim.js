@@ -31,7 +31,7 @@ Not cited here, and not Birur Zmanim (earlier notes had them as copies of part 1
 | tzeit40 | Birur Zmanim 2, p.18 | Chazon Ish: Yom Kippur ends 40 minutes after sunset, Shabbat 45, a brit 35 |
 | tzeit45 | Birur Zmanim 2, p.18 | a Chazon Ish letter: his 45 minutes at the end of Shabbat include Rabbeinu Tam (via R. D. Frankel) |
 | misheyakir66, misheyakir60, misheyakir40 | Igrot Moshe OC 4:6 (40 min with misheyakir - checked in the text); Pri Megadim, Eshel Avraham 58:2 and Teshuvot Ivra 3 not confirmed; see also (secondary) OU Kosher Halacha Yomis, outorah.org/p/78963 | 66 min: Pri Megadim; about an hour: Rav Henkin; 40 min: Rav Chaim Kanievsky (secondary only) |
-| `MISHEYAKIR_LECHUMRA` (10.5 deg): misheyakirLechumra | SA OC 18:3, 30:1, 58:1; en.wikipedia.org/wiki/Zmanim | misheyakir is when one recognises an acquaintance at 4 amot / tells tchelet from white; published angles span 10.2-11.5 deg, 10.5 is a later, stringent pick |
+| `MISHEYAKIR_LECHUMRA` (10.5 deg): misheyakirLechumra | SA OC 18:3, 30:1, 58:1; en.wikipedia.org/wiki/Zmanim | misheyakir is when one recognises an acquaintance at 4 amot / tells tchelet from white; published angles span 10.2-11.5 deg; 10.5 follows the practice of R. Kessler, Kiryat Sefer (source: the maintainer; printed text not located) |
 | tzeitGeonim, beinHashmashotRt | Birur Zmanim 2, pp.11-14 | the Minchat Kohen's reading of Rabbeinu Tam: nightfall when three stars are seen, bein hashmashot the quarter hour before |
 | plag | Birur Zmanim 1, pp.320-321; Birur Zmanim 2, pp.257-268 | plag is 1.25 hours before the end of the day |
 | `TZEIT_18_SUN`: tzeit18, tzeit18Sun | Bein Hashmashot, pp.71-72 | Jerusalem batei midrash pray maariv 17-18 minutes after sunset, per R. Shmuel Salant |
