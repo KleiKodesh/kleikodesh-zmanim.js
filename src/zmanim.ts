@@ -264,9 +264,11 @@ const ALOT = equinoxDepression(72)
  * Exact by equinoxDepression: 19.798 deg (was the rounded 19.8). */
 const ALOT_90 = equinoxDepression(90)
 /**
- * Misheyakir (earliest tallit and tefillin): Berachot 9b; SA OC 18:3. Modelling choice, no single published value for
- * these angles: 11.5 / 11 / 10.2 deg are estimates (about 50 / 48 / 44 min before sunrise); the sources give the
- * criterion (recognising an acquaintance), not a solar depression.
+ * Misheyakir (earliest tallit and tefillin): Berachot 9b; SA OC 18:3 - the criterion (recognising an acquaintance).
+ * The angles, secondary only: R. Yaakov Goldstein, "What time in the morning may one begin to don Tefillin"
+ * (shulchanaruchharav.com, 2016), main text and fn. 16 - Diaspora custom 12.9 or 11.5 deg; "11.5 degrees corresponds to
+ * the opinion of 52 minutes from sunrise in Jerusalem"; 11 and 10.2 deg used by others; he cites Kovetz Otzros
+ * Yerushalayim (not opened). No posek named for 11 / 10.2; primary text not checked.
  */
 const MISHEYAKIR = 11.5
 const MISHEYAKIR_11 = 11
@@ -277,7 +279,8 @@ const MISHEYAKIR_10_2 = 10.2
  * it is clearly light enough.
  */
 const MISHEYAKIR_LECHUMRA = 10.5
-/** Three small stars (about 36 min): Biur Halacha OC 293:2 ("three small stars") - checked in the text. Modelling choice, no single published value: the 8.5 deg angle is an estimate. */
+/** Three small stars (about 36 min): Biur Halacha OC 293:2 ("three small stars") - checked in the text. Modelling choice, no single published value: the 8.5 deg angle is an estimate (often credited to R. Y. M. Tukachinsky in secondary
+ * web text; no primary text found - local seforim search for "8.5" with "degrees" gave no match, 2026-11-26). */
 const TZEIT = 8.5
 /**
  * Three medium stars (an observational estimate), 7.083 deg (7 deg 5 min). Dr. Baruch (Berthold) Cohn's letter in Shu"t
@@ -297,7 +300,8 @@ const ALOT_12 = 12
  * By degrees: the depth 13.5 min after sunset in Jerusalem at the equinox, exact by equinoxDepression: 3.701 deg (was 3.7).
  */
 const TZEIT_GEONIM = equinoxDepression(13.5)
-/** Rav Yaakov Moshe Hillel's nightfall for the afternoon zmanim, 3.8 deg. Unsourced here: no primary text was checked for this angle. */
+/** Rav Yaakov Moshe Hillel's nightfall for the afternoon zmanim, 3.8 deg. Unsourced here: no primary text was checked for this angle
+ * (local seforim search for "3.8" with "degrees" gave no match, 2026-11-26). */
 const TZEIT_HILLEL = 3.8
 /**
  * Misheyakir 7.65 deg (about 36 min): Igrot Moshe OC 4:6 ("about 35, perhaps 40 minutes before netz") - checked in the text;
