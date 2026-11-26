@@ -4,7 +4,7 @@
 // Open-Meteo Historical Weather API (https://open-meteo.com/en/docs/historical-weather-api), CC BY 4.0,
 // ERA5 / ERA5-Land reanalysis (Copernicus Climate Change Service), downscaled by Open-Meteo to the place's
 // elevation - chosen over gridded station normals (e.g. WorldClim, ~1 km but 1970-2000) because it is recent
-// (2016-2025), covers every place worldwide alike and matches the mean already in climate.bin.
+// (2016-2025), covers every place worldwide alike and is consistent with the mean already in climate.bin.
 // Mean of the daily minima / maxima 2016-2025 per calendar month.
 // SHARD/SHARDS split the places across parallel CI runners; each writes its own OUT file.
 import { existsSync, readFileSync, writeFileSync } from 'node:fs'

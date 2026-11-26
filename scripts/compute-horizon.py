@@ -14,7 +14,7 @@
 # that C. Keller & J. K. Hall, "Using a ray tracing program to calculate sunrise times over a digital terrain model
 # based visible horizon using a simplified atmospheric model, part II", Computers & Geosciences 161 (2022) 105044,
 # https://doi.org/10.1016/j.cageo.2022.105044 (eq. 1-2) showed to match ray tracing to the terrain within 0.06' and
-# used for sunrise times that matched years of observations in Jerusalem and Bnei Brak to about 15 s.
+# used for sunrise times that agreed with years of their own observed sunrises in Jerusalem and Bnei Brak to about 15 s.
 # (Before: one k = 0.13 everywhere; Bomford's k is 0.15-0.17 at Israeli places, a few seconds on far horizons.)
 # GLO-90 is a surface model (buildings and trees included): each tile gets a grey-scale morphological opening
 # (erosion then dilation, OPEN_CELLS x OPEN_CELLS cells, about 450 m) first, which removes features narrower than
@@ -24,6 +24,9 @@ import numpy as np
 import rasterio
 from scipy.ndimage import grey_opening
 
+# Modelling choices, no single published value: EYE (a standing adult's eye height), MAX_KM (beyond it terrain
+# hardly rises above the curved-Earth horizon), MIN_M, OPEN_CELLS (filter width about 450 m). R: mean Earth radius
+# rounded (GRS 80 R1 = 6 371 008.8 m, Moritz 2000).
 EYE = 1.6
 MAX_KM = 150
 MIN_M = 500            # the observer stands on the highest ground within this radius (see profile)

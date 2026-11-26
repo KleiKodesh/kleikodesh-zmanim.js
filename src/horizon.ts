@@ -46,7 +46,11 @@ export function parseAtmospheres(buffer: ArrayBuffer): AtmosphereTable {
 const AFGL_T = 0, AFGL_MS = 1, AFGL_MW = 2, AFGL_SS = 3, AFGL_SW = 4, BET_DAGAN = 5
 const US1976 = usStandard1976()
 
-/** Inside the region the Bet Dagan soundings represent (Israel and its immediate neighbourhood). */
+/**
+ * Inside the region the Bet Dagan soundings represent (Israel and its immediate neighbourhood).
+ * Modelling choice, no single published value: the box 29-33.6 N, 34-36.2 E is drawn around Israel; no published
+ * representativeness radius for this station was found.
+ */
 export const inBetDaganRegion = (lat: number, lng: number): boolean => lat >= 29 && lat <= 33.6 && lng >= 34 && lng <= 36.2
 
 /** Weighted profiles for [lat, lng] on month/day; [hour] 0 sunrise, 12 sunset, -1 both (mean). */
@@ -64,6 +68,9 @@ function profiles(table: AtmosphereTable | null | undefined, lat: number, lng: n
     }
     return out
   }
+  // AFGL profiles are defined for 15 N (tropical), 45 N (midlatitude) and 60 N (subarctic) (Anderson et al. 1986).
+  // Modelling choice, no single published value: the band edges 23.5 deg (the tropic) and 52 deg (about midway
+  // between 45 and 60), and the cosine season weight below.
   const a = Math.abs(lat)
   if (a < 23.5) return [[AFGL_T, 1]]
   // Day of the year from month/day (non-leap is enough here); summer weight 0 mid-January, 1 mid-July (north).
@@ -87,7 +94,7 @@ function referenceT(table: AtmosphereTable | null | undefined, i: number, z: num
   return levelAt(levelsOf(table, i), z).t
 }
 
-/** Anomaly grid step, K: refraction is traced at grid anomalies and interpolated linearly between them. */
+/** Anomaly grid step, K: refraction is traced at grid anomalies and interpolated linearly between them. Numerical choice, not a published value. */
 const ANOMALY_STEP = 0.5
 const cache = new Map<string, Atmosphere>()
 const CACHE_SIZE = 96

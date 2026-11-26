@@ -8,7 +8,7 @@
 //   HM Nautical Almanac Office, NAO Technical Note 63 (1985); as given in P. K. Seidelmann (ed.), Explanatory
 //   Supplement to the Astronomical Almanac (1992), section 3.28. Integrating in z (not in height) keeps the
 //   integrand finite at the horizon; L. H. Auer & E. M. Standish, "Astronomical refraction: computational method
-//   for all zenith angles", Astronomical Journal 119 (2000) 2472-2474, extend it below the horizon: a ray with a
+//   for all zenith angles", Astronomical Journal 119 (2000) 2472-2474, doi:10.1086/301325, extend it below the horizon: a ray with a
 //   negative apparent altitude first descends to its tangent point (n r = const with z = 90 deg) and then rises, so
 //   R = B(tangent -> top of the atmosphere) + B(tangent -> observer), each branch integrated in z from 90 deg.
 //   The integral is split at the model's layer boundaries (where n' jumps) and each piece is done by 8-point
@@ -21,28 +21,71 @@
 //   a simplified atmospheric model, part II", Computers & Geosciences 161 (2022) 105044,
 //   https://doi.org/10.1016/j.cageo.2022.105044 (open access).
 // - Refractive index of moist air in the optical band (Hohenkerk & Sinclair; the formula of the IAU SOFA routine
-//   iauRefco, after Barrell & Sears 1939):
+//   iauRefco, IAU SOFA Board, Standards of Fundamental Astronomy, https://www.iausofa.org; after H. Barrell &
+//   J. E. Sears, "The refraction and dispersion of air for the visible spectrum", Phil. Trans. R. Soc. Lond. A 238
+//   (1939) 1-64, doi:10.1098/rsta.1939.0004). iauRefco writes the dry term as (77.53484e-6 + (4.39108e-7 +
+//   3.666e-9 / w^2) / w^2) P; the gamma below is the same numbers (287.6155 * 273.15e-6 / 1013.25 = 77.5348e-6):
 //     n - 1 = (gamma P - 11.2684e-6 e) / T,  gamma = (287.6155 + 1.62887 / w^2 + 0.01360 / w^4) 273.15e-6 / 1013.25
 //   P total pressure and e water-vapour pressure in hPa, T in K, wavelength w = 0.574 micrometres (visual).
+// - Why ray tracing and not a closed formula: near the horizon refraction depends on the whole temperature profile,
+//   not only on P and T at the observer. A. T. Young, "Sunset science. IV. Low-altitude refraction", Astronomical
+//   Journal 127 (2004) 3622-3637, doi:10.1086/420806; A. T. Young, "Why we can't predict sunset times exactly",
+//   https://aty.sdsu.edu/explain/sunset_time.html ("the refraction of the setting Sun depends on all the details of
+//   the temperature profile"); B. E. Schaefer & W. Liller, "Refraction near the horizon", PASP 102 (1990) 796-805,
+//   doi:10.1086/132705; B. D. Sampson, E. P. Lozowski, A. E. Peterson & D. P. Hube, "Variability in the
+//   astronomical refraction of the rising and setting sun", PASP 115 (2003) 1256-1261, doi:10.1086/378214 (timed
+//   sunrises/sunsets at Edmonton: mean upper-limb refraction 0.669 deg, sd 0.175 deg; sunrise mean 0.714 deg, sunset
+//   0.579 deg; both mean and spread largest in the coldest months).
 // - Layers: temperature and vapour pressure linear in height between the model's levels, pressure from the
 //   hydrostatic equation (dry-air gas constant, gravity falling as (R_E / r)^2), anchored at the observer. Above the
 //   last level (80 km) n = 1.
 
 const DEG = Math.PI / 180
-/** Mean Earth radius, m (IUGG). */
+/** Mean Earth radius, m: R1 of GRS 80 (IUGG; H. Moritz, "Geodetic Reference System 1980", Journal of Geodesy 74 (2000) 128-133). */
 export const EARTH_RADIUS = 6_371_008.8
+/** Specific gas constant of dry air, J/(kg K): ISO 2533:1975 Standard Atmosphere (287.05287). */
 const RD = 287.05287
+/** Standard acceleration of gravity, m/s^2 (3rd CGPM, 1901; U.S. Standard Atmosphere 1976). */
 const G0 = 9.80665
+/**
+ * Effective wavelength of visual observation, micrometres. Modelling choice, no single published value: iauRefco
+ * takes the wavelength as an input; 0.574 um lies near the peak of the eye's daylight response (CIE 1924 V(lambda),
+ * maximum at 0.555 um), shifted slightly red for the low, reddened sun. The dispersion term (1.62887 / w^2 against
+ * 287.6155) makes the result insensitive to this choice at the 0.1' level.
+ */
 const WAVELENGTH_UM = 0.574
 const GAMMA = (287.6155 + (1.62887 + 0.0136 / WAVELENGTH_UM ** 2) / WAVELENGTH_UM ** 2) * 273.15e-6 / 1013.25
+/** Water-vapour term of n - 1 (per hPa, times K): SOFA iauRefco, after Hohenkerk & Sinclair (1985). */
 const VAPOUR = 11.2684e-6
-/** Top of the model atmosphere, m (Hohenkerk & Sinclair integrate to 80 km). */
+/**
+ * Top of the model atmosphere, m: Hohenkerk & Sinclair (1985) integrate the refraction to 80 km, above which it is
+ * negligible. Secondary only: the 80 km figure is as described for their method in the Explanatory Supplement (1992,
+ * sec. 3.28); the technical note itself was not reachable for this check.
+ */
 const TOP = 80_000
-/** Temperature gradient used to continue a profile below its lowest level, K/m (standard troposphere). */
+/** Temperature gradient used to continue a profile below its lowest level, K/m: troposphere lapse rate, U.S. Standard Atmosphere 1976 (NOAA-S/T 76-1562), 6.5 K/km. */
 const BELOW_LAPSE = -0.0065
-/** Depth over which a surface temperature anomaly is tapered off into the free atmosphere, m. */
+/**
+ * Depth over which a surface temperature anomaly is tapered off into the free atmosphere, m.
+ * Modelling choice, no single published value: a typical daytime boundary-layer depth, above which the local surface
+ * signal is small. Supporting literature (ranges, not this number): R. B. Stull, An Introduction to Boundary Layer
+ * Meteorology, Kluwer (1988), doi:10.1007/978-94-009-3027-8, ch. 1; D. J. Seidel, C. O. Ao & K. Li, "Estimating
+ * climatological planetary boundary layer heights from radiosonde observations", J. Geophys. Res. 115 (2010) D16113,
+ * doi:10.1029/2009JD013680; for Israel (Bet Dagan included): L. Uzan, S. Egert & P. Alpert, "Ceilometer evaluation of
+ * the eastern Mediterranean summer boundary layer height - first study of two Israeli sites", Atmos. Meas. Tech. 9
+ * (2016) 4387-4398, doi:10.5194/amt-9-4387-2016; L. Uzan, S. Egert, P. Khain, Y. Levi, E. Vladislavsky & P. Alpert,
+ * "Ceilometers as planetary boundary layer height detectors and a corrective tool for COSMO and IFS models", Atmos.
+ * Chem. Phys. 20 (2020) 12177-12192, doi:10.5194/acp-20-12177-2020.
+ */
 export const BOUNDARY_LAYER = 1500
 /**
+ * Modelling choice, no single published value: a typical depth of the surface (nocturnal) inversion layer, tens to a
+ * few hundred metres (Stull 1988, ch. 12, the stable boundary layer; T. Niedzwiedz, E. B. Lupikasza, L. Malarzewski &
+ * T. Budzik, "Surface-based nocturnal air temperature inversions in southern Poland and their influence on PM10 and
+ * PM2.5 concentrations in Upper Silesia", Theor. Appl. Climatol. 146 (2021) 897-919, doi:10.1007/s00704-021-03752-4).
+ * Why the air below the observer matters: A. T. Young, https://aty.sdsu.edu/explain/atmos_refr/dip.html ("the dip
+ * depends almost entirely on the difference in temperature between the air at eye level" and at the horizon).
+ *
  * Depth of the surface layer below the observer over which the anomaly fades in, m, for a local low-level profile
  * (one measured over the coastal plain): below it the air is the profile's own, i.e. the air over the plain/sea at
  * the distant horizon and the grazing ray's tangent point.
@@ -52,7 +95,8 @@ export const SURFACE_LAYER = 200
 /** One level of a model atmosphere: geometric height m, temperature K, pressure hPa, water-vapour pressure hPa. */
 export interface Level { z: number, t: number, p: number, e: number }
 
-// 8-point Gauss-Legendre nodes/weights on [-1, 1].
+// 8-point Gauss-Legendre nodes/weights on [-1, 1] (M. Abramowitz & I. A. Stegun, Handbook of Mathematical Functions,
+// NBS Applied Mathematics Series 55 (1964), table 25.4). The point count is a numerical choice (tests check it).
 const GL_X = [-0.9602898564975363, -0.7966664774136267, -0.525532409916329, -0.1834346424956498, 0.1834346424956498, 0.525532409916329, 0.7966664774136267, 0.9602898564975363]
 const GL_W = [0.1012285362903763, 0.2223810344533745, 0.3137066458778873, 0.362683783378362, 0.362683783378362, 0.3137066458778873, 0.2223810344533745, 0.1012285362903763]
 
@@ -265,7 +309,10 @@ export class Atmosphere {
   }
 }
 
-/** U.S. Standard Atmosphere 1976 (NOAA/NASA/USAF), 0-80 km, dry: its base levels and lapse rates (geopotential). */
+/**
+ * U.S. Standard Atmosphere 1976 (NOAA/NASA/USAF), NOAA-S/T 76-1562, U.S. Government Printing Office (1976): its base
+ * geopotential heights and lapse rates (table 4) and r0 = 6 356 766 m for geopotential to geometric height; 0-80 km, dry.
+ */
 export function usStandard1976(): Level[] {
   const RE = 6_356_766
   const base: Array<[number, number]> = [[0, -0.0065], [11000, 0], [20000, 0.001], [32000, 0.0028], [47000, 0], [51000, -0.0028], [71000, -0.002], [84852, 0]]

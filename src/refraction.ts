@@ -4,12 +4,14 @@
 // - Refraction of a body at true altitude h (degrees), in arcminutes, at 1010 hPa and 10 C:
 //     R = 1.02 / tan(h + 10.3 / (h + 5.11))
 //   T. Saemundsson, Sky and Telescope 72 (1986) p. 70; the inverse of G. G. Bennett, "The calculation of
-//   astronomical refraction in marine navigation", Journal of Navigation 35 (1982) 255-259.
+//   astronomical refraction in marine navigation", Journal of Navigation 35 (1982) 255-259,
+//   doi:10.1017/S0373463300022037. Secondary only: both as given in Meeus (1998) ch. 16 (eq. 16.4 and its source note).
 //   Scaled for other conditions by (P / 1010) * (283 / (273 + T)): J. Meeus, Astronomical Algorithms,
 //   2nd ed. (1998), chapter 16, formulas 16.4 and the remark that follows.
 // - Pressure from elevation: the barometric formula of the U.S. Standard Atmosphere 1976 (NOAA/NASA/USAF)
 //   troposphere layer, equal to the ICAO Standard Atmosphere (Doc 7488) below 11 km:
 //     P = 1013.25 * (1 - 0.0065 * H / 288.15) ^ 5.25588,   T_std = 15 - 0.0065 * H.
+//   (NOAA-S/T 76-1562 (1976); exponent g0 M0 / (R* L) = 9.80665 * 0.0289644 / (8.31432 * 0.0065) = 5.25588.)
 // Sunrise is when the sun's upper limb is at apparent altitude 0, so its true altitude h satisfies
 // h + R(h) = 0; it is solved by fixed-point iteration (3-4 steps to well under 0.01').
 
@@ -42,7 +44,7 @@ export function horizonRefractionArcmin(pressure: number, temperature: number, a
   return r
 }
 
-/** Linear interpolation of 12 monthly means (each at mid-month) to a day of the year; NaN entries are skipped. */
+/** Linear interpolation of 12 monthly means (each at mid-month) to a day of the year; NaN entries are skipped. Numerical choice (mid-month = day 15.5, mean month 30.44 d). */
 export function temperatureOn(monthly: readonly number[], month: number, day: number): number {
   const m = month - 1
   const v = monthly[m]!

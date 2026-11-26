@@ -23,6 +23,8 @@ export type ZmanName = typeof ZMAN_NAMES[number]
 export type Rounding = 'up' | 'down' | 'nearest'
 
 /**
+ * Modelling choice, no single published value: the rounding convention below (round toward the stringent side) is
+ * this library's own presentation rule; no published source fixes it.
  * How each printed minute is rounded, the stringent way: a zman that starts something rounds UP, a deadline
  * rounds DOWN. Dawn and chatzot (day and night) round DOWN (earlier).
  */
@@ -138,10 +140,18 @@ export interface Coordinates {
 
 /** The geometric horizon. */
 export const GEOMETRIC_ZENITH = 90
-/** Solar semidiameter used for sunrise/sunset, degrees (16'). */
+/**
+ * Solar semidiameter used for sunrise/sunset, degrees (16'). The conventional value in the standard rise/set
+ * definition (upper limb: 16' semidiameter + 34' refraction = 50'): Explanatory Supplement to the Astronomical Almanac
+ * (P. K. Seidelmann ed., 1992), chapter 9 (rising and setting); also NREL SPA (Reda & Andreas 2008) appendix A.2,
+ * h'0 = -0.8333 deg. Secondary only for the section number (book not reopened for this check).
+ */
 const SOLAR_RADIUS = 16 / 60
-/** Mean Earth radius, meters. */
-/** Dip of the horizon with standard terrestrial refraction, arcminutes per sqrt(meter) (Nautical Almanac / Bowditch). */
+/**
+ * Dip of the horizon with standard terrestrial refraction, arcminutes per sqrt(meter): N. Bowditch, The American
+ * Practical Navigator (NGA Pub. 9), dip correction D = 1.76' sqrt(h m); A. T. Young
+ * (https://aty.sdsu.edu/explain/atmos_refr/dip.html) gives 1.75' sqrt(h m) for the same standard case. Reference check only.
+ */
 const DIP_ARCMIN_PER_SQRT_M = 1.76
 
 /**
@@ -180,6 +190,10 @@ function horizonRefraction(place: Coordinates, date: CivilDate, apparent = 0, ho
  * Jerusalem observation sites (not Bnei Brak, not any other terrain), so applying it elsewhere in the region is an
  * extrapolation. On by default; turn it off with configure({ empiricalInversionCorrection: false }).
  */
+// Values as stated in Keller & Hall (2022) section 3: night > 13 h, horizon view angle <= 0.01 deg, 15 s.
+// Secondary only: the paper's full text could not be reopened for this provenance check (publisher page not reachable
+// here); its indexed abstract confirms the method and an accuracy of about 15 s for most of the year, not these three
+// thresholds, which are as recorded in this repository when the paper was read.
 const INVERSION_NIGHT_MS = 13 * 3_600_000
 const INVERSION_MAX_ALTITUDE = 0.01
 const INVERSION_ADVANCE_MS = 15_000
@@ -216,7 +230,11 @@ export function horizonZenith(place: Coordinates, date: CivilDate, fromHeight = 
 
 /** Jerusalem latitude for the equinox conversions: Har HaBayit (the Temple Mount, Old City), 31.778 N. */
 export const JERUSALEM_LAT = 31.778
-/** Visible sea-level sunrise/sunset: the sun's centre 0.833 deg below the geometric horizon (34' refraction + 16' radius). */
+/**
+ * Visible sea-level sunrise/sunset: the sun's centre 0.833 deg below the geometric horizon (34' refraction + 16'
+ * radius): the standard rise/set definition, Explanatory Supplement (1992) chapter 9; verified in Reda & Andreas
+ * (NREL SPA, 2008) appendix A.2, h'0 = -0.8333 deg (the paper was read for src/spa.ts, see PROVENANCE.md).
+ */
 const VISIBLE_HORIZON_DEPRESSION = 34 / 60 + 16 / 60
 /**
  * The exact degree form of "N minutes before visible sunrise / after visible sunset in Jerusalem at the equinox":
@@ -245,7 +263,11 @@ const ALOT = equinoxDepression(72)
  * Birur Zmanim vol 2 pp.209-239: calendars rightly use 90, MGA hours run dawn to nightfall.
  * Exact by equinoxDepression: 19.798 deg (was the rounded 19.8). */
 const ALOT_90 = equinoxDepression(90)
-/** Misheyakir (earliest tallit and tefillin): Berachot 9b; SA OC 18:3. The angles are accepted estimates (about 50 / 48 / 44 min). */
+/**
+ * Misheyakir (earliest tallit and tefillin): Berachot 9b; SA OC 18:3. Modelling choice, no single published value for
+ * these angles: 11.5 / 11 / 10.2 deg are estimates (about 50 / 48 / 44 min before sunrise); the sources give the
+ * criterion (recognising an acquaintance), not a solar depression.
+ */
 const MISHEYAKIR = 11.5
 const MISHEYAKIR_11 = 11
 const MISHEYAKIR_10_2 = 10.2
@@ -255,12 +277,12 @@ const MISHEYAKIR_10_2 = 10.2
  * it is clearly light enough.
  */
 const MISHEYAKIR_LECHUMRA = 10.5
-/** Three small stars (about 36 min): Biur Halacha OC 293:2 ("three small stars") - checked in the text; the angle is an estimate. */
+/** Three small stars (about 36 min): Biur Halacha OC 293:2 ("three small stars") - checked in the text. Modelling choice, no single published value: the 8.5 deg angle is an estimate. */
 const TZEIT = 8.5
 /**
  * Three medium stars (an observational estimate), 7.083 deg (7 deg 5 min). Dr. Baruch (Berthold) Cohn's letter in Shu"t
  * Melamed LeHo'il (R. D. Z. Hoffmann) part 1, siman 30: he set the sun 7 deg 5 min below the horizon for three medium
- * stars - checked in the text. Hebcal uses the same angle (end of Tisha B'Av; hebcal.com/home/4463).
+ * stars - checked in the text.
  */
 const TZEIT_7083 = 7.083
 /**
@@ -275,7 +297,7 @@ const ALOT_12 = 12
  * By degrees: the depth 13.5 min after sunset in Jerusalem at the equinox, exact by equinoxDepression: 3.701 deg (was 3.7).
  */
 const TZEIT_GEONIM = equinoxDepression(13.5)
-/** Rav Yaakov Moshe Hillel's nightfall for the afternoon zmanim, 3.8 deg. */
+/** Rav Yaakov Moshe Hillel's nightfall for the afternoon zmanim, 3.8 deg. Unsourced here: no primary text was checked for this angle. */
 const TZEIT_HILLEL = 3.8
 /**
  * Misheyakir 7.65 deg (about 36 min): Igrot Moshe OC 4:6 ("about 35, perhaps 40 minutes before netz") - checked in the text;
@@ -311,7 +333,7 @@ const BH_YEREIM = -equinoxDepression(-18)
 const TZEIT_18_SUN = equinoxDepression(18)
 const MINUTE_MS = 60_000
 const DAY_MS = 86_400_000
-/** SPA A.2 correction step repeats (the paper does 1; 3 converges well under a second). */
+/** SPA A.2 correction step repeats (the paper does 1; 3 converges well under a second). Numerical choice, not a published value. */
 const ITERATIONS = 3
 
 export function addDays(d: CivilDate, days: number): CivilDate {

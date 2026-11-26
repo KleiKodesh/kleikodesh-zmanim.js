@@ -23,11 +23,17 @@ import { readFileSync, writeFileSync } from 'node:fs'
 
 const AFGL_DIR = process.env.AFGL_DIR || 'afgl'
 const IGRA_FILE = process.env.IGRA_FILE || 'ISM00040179-data.txt'
+// Modelling choice, no single published value: 30 years (a WMO climate-normal length, WMO-No. 1203 (2017)) ending
+// with the last complete year when built.
 const YEARS = [1995, 2024]
 const TOP_M = 80_000
-const K_BOLTZMANN = 1.380649e-23
+const K_BOLTZMANN = 1.380649e-23 // exact, SI 2019 (BIPM SI Brochure, 9th ed.)
+// Dry-air gas constant (ISO 2533), standard gravity, and the U.S. Standard Atmosphere 1976 r0 for geopotential height.
 const RD = 287.05, G0 = 9.80665, RE_GEOPOT = 6356766
 // Geometric heights (m) of the Bet Dagan grid: dense near the ground, where horizon refraction is decided.
+// Numerical choice, not a published value. Likewise the 4000 m sparse-gap cut, the 20-sounding minimum per level and
+// the hour windows (22-02 UTC = 00, 10-14 UTC = 12) below. Hypsometric equation: J. M. Wallace & P. V. Hobbs,
+// Atmospheric Science, 2nd ed. (2006), eq. 3.29.
 const GRID = [50, 100, 150, 200, 250, 300, 400, 500, 600, 700, 800, 900, 1000, 1200, 1400, 1600, 1800, 2000, 2500, 3000, 3500,
   4000, 5000, 6000, 7000, 8000, 9000, 10000, 11000, 12000, 13000, 14000, 15000, 16000, 17000, 18000, 20000, 22000, 24000, 26000, 28000, 30000]
 

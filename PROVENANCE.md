@@ -1,3 +1,12 @@
+# Provenance statement
+
+The refraction, atmosphere, temperature and terrain model (src/atmosphere.ts, src/horizon.ts, src/refraction.ts, the
+horizon parts of src/zmanim.ts, scripts/build-atmosphere.mjs, scripts/fetch-climate*.mjs, scripts/compute-horizon.py)
+was built from the published scientific literature and open data listed in SOURCES.md ("Refraction model - design
+choices and their sources"), each with its verification status. Values with no single published source are marked in
+the code as "Modelling choice, no single published value". No third-party calendar code, tables, settings or times
+are used in the library, and no design choice was made to agree with another calendar's output.
+
 # Provenance of src/spa.ts
 
 ## What
