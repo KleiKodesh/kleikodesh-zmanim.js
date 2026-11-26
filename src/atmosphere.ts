@@ -76,6 +76,9 @@ const BELOW_LAPSE = -0.0065
  * (2016) 4387-4398, doi:10.5194/amt-9-4387-2016; L. Uzan, S. Egert, P. Khain, Y. Levi, E. Vladislavsky & P. Alpert,
  * "Ceilometers as planetary boundary layer height detectors and a corrective tool for COSMO and IFS models", Atmos.
  * Chem. Phys. 20 (2020) 12177-12192, doi:10.5194/acp-20-12177-2020.
+ * Chosen within the published range: Uzan et al. 2020 state that "the average summer PBL height is under 2 km a.s.l."
+ * for Israel and that at the shoreline it is lower by ~250 m (full text checked 2026-11-26); 1500 m lies inside that
+ * range, which is the justification for the value.
  */
 export const BOUNDARY_LAYER = 1500
 /**
@@ -85,6 +88,9 @@ export const BOUNDARY_LAYER = 1500
  * PM2.5 concentrations in Upper Silesia", Theor. Appl. Climatol. 146 (2021) 897-919, doi:10.1007/s00704-021-03752-4).
  * Why the air below the observer matters: A. T. Young, https://aty.sdsu.edu/explain/atmos_refr/dip.html ("the dip
  * depends almost entirely on the difference in temperature between the air at eye level" and at the horizon).
+ * Chosen within the published range: Niedzwiedz et al. 2021 (abstract, checked 2026-11-26): "Annually, the depth of
+ * 81% of inversions ranged between 50 and 300 m"; 200 m lies inside that range, which is the justification for
+ * the value.
  *
  * Depth of the surface layer below the observer over which the anomaly fades in, m, for a local low-level profile
  * (one measured over the coastal plain): below it the air is the profile's own, i.e. the air over the plain/sea at
